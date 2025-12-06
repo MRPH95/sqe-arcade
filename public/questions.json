@@ -446,55 +446,2012 @@
     { "q": "Trust fails for want of trustee.", "a": false, "exp": "Equity intervenes." },
     { "q": "Perpetuity Period: 125 years.", "a": true, "exp": "2009 Act.", "isTiming": true }
   ],
-  "public": [
-    { "q": "Parliamentary Sovereignty means Parliament can make/unmake any law.", "a": true, "exp": "Dicey." },
-    { "q": "Prerogative powers are subject to Judicial Review.", "a": true, "exp": "Miller II." },
-    { "q": "HRA 1998 allows courts to strike down legislation.", "a": false, "exp": "Declaration of Incompatibility only." },
-    { "q": "Ultra Vires means acting outside power.", "a": true, "exp": "Administrative law." },
-    { "q": "Wednesbury test is for Irrationality.", "a": true, "exp": "Unreasonableness." },
-    { "q": "Supreme Court is bound by its own decisions.", "a": false, "exp": "Practice Statement 1966." },
-    { "q": "Rule of Law: No one is above the law.", "a": true, "exp": "Bingham." },
-    { "q": "Salisbury Convention: Lords won't block Manifesto bills.", "a": true, "exp": "Political convention." },
-    { "q": "Judicial Review Standing requires 'Sufficient Interest'.", "a": true, "exp": "s.31 SCA 1981." },
-    { "q": "Quashing Order voids a decision.", "a": true, "exp": "Remedy." },
-    { "q": "Ouster clauses are generally effective.", "a": false, "exp": "Anisminic (interpreted strictly)." },
-    { "q": "Article 6 ECHR: Right to Fair Trial.", "a": true, "exp": "Human Right." },
-    { "q": "Article 8 ECHR: Private and Family Life.", "a": true, "exp": "Qualified Right." },
-    { "q": "Solicitors have the 'Cab Rank Rule'.", "a": false, "exp": "Barristers only." },
-    { "q": "Separation of Powers: Executive, Legislature, Judiciary.", "a": true, "exp": "Montesquieu." },
-    { "q": "Constitutional statutes are immune to implied repeal.", "a": true, "exp": "Thoburn v Sunderland." },
-    { "q": "Conventions are legally enforceable.", "a": false, "exp": "Political only." },
-    { "q": "HRA s.2: Court must take into account Strasbourg.", "a": true, "exp": "Not bind." },
-    { "q": "HRA s.3: Read legislation compatibly.", "a": true, "exp": "Interpretative obligation." },
-    { "q": "HRA s.6: Public authorities must act compatibly.", "a": true, "exp": "Unlawful to breach." },
-    { "q": "Mandatory Order compels action.", "a": true, "exp": "JR Remedy." },
-    { "q": "Bias test: Fair minded and informed observer.", "a": true, "exp": "Porter v Magill." },
-    { "q": "Legitimate Expectation can be procedural.", "a": true, "exp": "Promise or Practice." },
-    { "q": "Retained EU Law has supremacy over pre-Brexit law.", "a": true, "exp": "Until modified." },
-    { "q": "Article 10 ECHR: Freedom of Expression.", "a": true, "exp": "Qualified." },
-    { "q": "Qualified rights allow proportional interference.", "a": true, "exp": "Balance." },
-    { "q": "Absolute rights (e.g. Torture) cannot be interfered with.", "a": true, "exp": "Art 3." },
-    { "q": "Lord Chancellor is head of Judiciary.", "a": false, "exp": "Lord Chief Justice." },
-    { "q": "Lay Magistrates are unpaid volunteers.", "a": true, "exp": "Expenses only." },
-    { "q": "Jury Equity allows acquittal against evidence.", "a": true, "exp": "Ponting's Case." },
-    { "q": "Barrister Cab Rank Rule.", "a": true, "exp": "Must accept case." },
-    { "q": "SRA regulates solicitors.", "a": true, "exp": "Solicitors Regulation Authority." },
-    { "q": "BSB regulates barristers.", "a": true, "exp": "Bar Standards Board." },
-    { "q": "Legal Ombudsman handles service complaints.", "a": true, "exp": "Not conduct." },
-    { "q": "Solicitors Disciplinary Tribunal (SDT) can strike off.", "a": true, "exp": "Serious misconduct." },
-    { "q": "Duty to Court overrides duty to client.", "a": true, "exp": "Paramount duty." },
-    { "q": "Confidentiality is absolute.", "a": false, "exp": "Exceptions exist (e.g. money laundering)." },
-    { "q": "Legal Privilege is absolute.", "a": true, "exp": "Generally (Crime/Fraud exception)." },
-    { "q": "Stare Decisis means stand by decisions.", "a": true, "exp": "Precedent." },
-    { "q": "Obiter Dicta is binding.", "a": false, "exp": "Persuasive only." },
-    { "q": "Ratio Decidendi is binding.", "a": true, "exp": "Reason for decision." },
-    { "q": "Privy Council binds High Court.", "a": false, "exp": "Persuasive (usually)." },
-    { "q": "High Court binds County Court.", "a": true, "exp": "Hierarchy." },
-    { "q": "Statute takes precedence over Case Law.", "a": true, "exp": "Sovereignty." },
-    { "q": "Royal Assent is a convention.", "a": true, "exp": "Monarch signs bills." },
-    { "q": "Devolution Acts are constitutional statutes.", "a": true, "exp": "H v Lord Advocate." },
-    { "q": "Judicial Review Time Limit: 3 months.", "a": true, "exp": "Promptly.", "isTiming": true },
-    { "q": "Parliaments duration: 5 years.", "a": true, "exp": "Max term.", "isTiming": true },
-    { "q": "FOI Response time: 20 working days.", "a": true, "exp": "Statutory limit.", "isTiming": true }
+  "public_law_1": [
+    {
+      "q": "Parliamentary Sovereignty means Parliament can make/unmake any law.",
+      "a": true,
+      "exp": "Dicey.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "Prerogative powers are subject to Judicial Review.",
+      "a": true,
+      "exp": "Miller II.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "HRA 1998 allows courts to strike down legislation.",
+      "a": false,
+      "exp": "Declaration of Incompatibility only.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "Ultra Vires means acting outside power.",
+      "a": true,
+      "exp": "Administrative law.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "Wednesbury test is for Irrationality.",
+      "a": true,
+      "exp": "Unreasonableness.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "Supreme Court is bound by its own decisions.",
+      "a": false,
+      "exp": "Practice Statement 1966.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "Rule of Law: No one is above the law.",
+      "a": true,
+      "exp": "Bingham.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "Salisbury Convention: Lords won't block Manifesto bills.",
+      "a": true,
+      "exp": "Political convention.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "Judicial Review Standing requires 'Sufficient Interest'.",
+      "a": true,
+      "exp": "s.31 SCA 1981.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "Quashing Order voids a decision.",
+      "a": true,
+      "exp": "Remedy.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "Ouster clauses are generally effective.",
+      "a": false,
+      "exp": "Anisminic (interpreted strictly).",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "Article 6 ECHR: Right to Fair Trial.",
+      "a": true,
+      "exp": "Human Right.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "Article 8 ECHR: Private and Family Life.",
+      "a": true,
+      "exp": "Qualified Right.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "Separation of Powers: Executive, Legislature, Judiciary.",
+      "a": true,
+      "exp": "Montesquieu.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "Constitutional statutes are immune to implied repeal.",
+      "a": true,
+      "exp": "Thoburn v Sunderland.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "Conventions are legally enforceable.",
+      "a": false,
+      "exp": "Political only.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "HRA s.2: Court must take into account Strasbourg.",
+      "a": true,
+      "exp": "Not bind.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "HRA s.3: Read legislation compatibly.",
+      "a": true,
+      "exp": "Interpretative obligation.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "HRA s.6: Public authorities must act compatibly.",
+      "a": true,
+      "exp": "Unlawful to breach.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "Mandatory Order compels action.",
+      "a": true,
+      "exp": "JR Remedy.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "Bias test: Fair minded and informed observer.",
+      "a": true,
+      "exp": "Porter v Magill.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "Legitimate Expectation can be procedural.",
+      "a": true,
+      "exp": "Promise or Practice.",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "Retained EU Law has supremacy over pre-Brexit law.",
+      "a": true,
+      "exp": "Until modified.",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "Article 10 ECHR: Freedom of Expression.",
+      "a": true,
+      "exp": "Qualified.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "Qualified rights allow proportional interference.",
+      "a": true,
+      "exp": "Balance.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "Absolute rights (e.g. Torture) cannot be interfered with.",
+      "a": true,
+      "exp": "Art 3.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "Lord Chancellor is head of Judiciary.",
+      "a": false,
+      "exp": "Lord Chief Justice.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "Jury Equity allows acquittal against evidence.",
+      "a": true,
+      "exp": "Ponting's Case.",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "Confidentiality is absolute.",
+      "a": false,
+      "exp": "Exceptions exist (e.g. money laundering).",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "Legal Privilege is absolute.",
+      "a": true,
+      "exp": "Generally (Crime/Fraud exception).",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "Stare Decisis means stand by decisions.",
+      "a": true,
+      "exp": "Precedent.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "Obiter Dicta is binding.",
+      "a": false,
+      "exp": "Persuasive only.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "Ratio Decidendi is binding.",
+      "a": true,
+      "exp": "Reason for decision.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "Privy Council binds High Court.",
+      "a": false,
+      "exp": "Persuasive (usually).",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "High Court binds County Court.",
+      "a": true,
+      "exp": "Hierarchy.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "Statute takes precedence over Case Law.",
+      "a": true,
+      "exp": "Sovereignty.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "Royal Assent is a convention.",
+      "a": true,
+      "exp": "Monarch signs bills.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "Devolution Acts are constitutional statutes.",
+      "a": true,
+      "exp": "H v Lord Advocate.",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "Judicial Review Time Limit: 3 months.",
+      "a": true,
+      "exp": "Promptly.",
+      "isTiming": true,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "Parliaments duration: 5 years.",
+      "a": true,
+      "exp": "Max term.",
+      "isTiming": true,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "FOI Response time: 20 working days.",
+      "a": true,
+      "exp": "Statutory limit.",
+      "isTiming": true,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "Parliamentary Sovereignty prevents Parliament from binding its successors.",
+      "a": true,
+      "exp": "Dicey's theory; confirmed in Ellen Street Estates v Minister of Health.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "The 'Enrolled Bill Rule' allows courts to question internal Parliamentary procedure.",
+      "a": false,
+      "exp": "Pickin v British Railways Board (courts will not look behind the Roll).",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "Royal Assent is legally required for a Bill to become an Act.",
+      "a": true,
+      "exp": "It is the final stage of the legislative process (Royal Assent Act 1967).",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "The literal rule gives words their ordinary, plain and natural meaning.",
+      "a": true,
+      "exp": "The primary rule of statutory interpretation.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "The 'Golden Rule' is used to avoid absurdity from a literal interpretation.",
+      "a": true,
+      "exp": "Adler v George.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "The 'Mischief Rule' looks at the common law before the Act.",
+      "a": true,
+      "exp": "Heydon's Case (1584); looks for the defect the law intended to remedy.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "Pepper v Hart allows reference to Hansard in all cases.",
+      "a": false,
+      "exp": "Only if legislation is ambiguous/obscure/absurd and statement is clear.",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "'Ejusdem generis' means 'of the same kind'.",
+      "a": true,
+      "exp": "General words following specific words are limited to the same kind.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "'Expressio unius est exclusio alterius' means mentioning one thing excludes others.",
+      "a": true,
+      "exp": "A linguistic presumption of interpretation.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "Primary legislation can be quashed by the courts.",
+      "a": false,
+      "exp": "Courts cannot invalidate Acts of Parliament (sovereignty).",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "Secondary legislation is made under powers in a 'parent' Act.",
+      "a": true,
+      "exp": "Delegated powers.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "Secondary legislation is subject to the same scrutiny as primary legislation.",
+      "a": false,
+      "exp": "Scrutiny is limited (e.g., negative/affirmative resolution procedures).",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "The Human Rights Act 1998 incorporates the ECHR into UK law.",
+      "a": true,
+      "exp": "It gives effect to Convention rights in domestic law.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "Section 3 HRA requires courts to interpret legislation compatibly with Convention rights.",
+      "a": true,
+      "exp": "So far as it is possible to do so.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "Section 4 HRA allows courts to strike down incompatible primary legislation.",
+      "a": false,
+      "exp": "Only a Declaration of Incompatibility is permitted.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "A Declaration of Incompatibility affects the validity of the law.",
+      "a": false,
+      "exp": "s.4(6) HRA; the law remains valid until Parliament amends it.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "Public authorities act unlawfully if they breach Convention rights (s.6 HRA).",
+      "a": true,
+      "exp": "Unless primary legislation mandates the breach (s.6(2)).",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "Parliament is a 'public authority' under s.6 HRA.",
+      "a": false,
+      "exp": "Parliament is expressly excluded from the definition.",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "The UK is a 'dualist' state regarding international law.",
+      "a": true,
+      "exp": "Treaties must be incorporated by statute to have domestic effect.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "EU Regulations were directly applicable in Member States (pre-Brexit).",
+      "a": true,
+      "exp": "Did not require national implementation measures.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "EU Directives are binding as to the result to be achieved.",
+      "a": true,
+      "exp": "Member States choose form and methods of implementation.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "The principle of supremacy of EU law was established in Costa v ENEL.",
+      "a": true,
+      "exp": "EU law overrides conflicting national law.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "Preliminary rulings (Art 267 TFEU) are appeals to the CJEU.",
+      "a": false,
+      "exp": "They are references on interpretation/validity from national courts.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "The European Communities Act 1972 has been repealed.",
+      "a": true,
+      "exp": "By the European Union (Withdrawal) Act 2018.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "The UK constitution is 'uncodified'.",
+      "a": true,
+      "exp": "It is not found in a single written document.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "The Bill of Rights 1689 established an absolute monarchy.",
+      "a": false,
+      "exp": "It limited royal power and established parliamentary sovereignty.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "Constitutional conventions are legally enforceable by the courts.",
+      "a": false,
+      "exp": "They are binding in operation but not in law (Miller I).",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "The Sewel Convention requires UK Parliament consent for devolved legislation.",
+      "a": false,
+      "exp": "It requires Devolved consent for UK Parliament legislation on devolved matters.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "Section 28(8) Scotland Act 1998 makes the Sewel Convention legally binding.",
+      "a": false,
+      "exp": "Miller I held it remains a political convention despite statutory recognition.",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "The Salisbury Convention relates to the House of Lords blocking financial bills.",
+      "a": false,
+      "exp": "It prevents Lords blocking manifesto commitments; financial bills are distinct convention.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "Devolved matters in Scotland include Foreign Policy.",
+      "a": false,
+      "exp": "Foreign Policy is a 'Reserved Matter' (Schedule 5 Scotland Act 1998).",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "The UK Supreme Court resolves devolution competence disputes.",
+      "a": true,
+      "exp": "Under the Scotland Act 1998 and GOWA 2006.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "The Monarch grants Royal Assent on the advice of Ministers.",
+      "a": true,
+      "exp": "A cardinal constitutional convention.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "The UK has a strict Separation of Powers.",
+      "a": false,
+      "exp": "There is significant overlap (e.g., Executive sits in Legislature).",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "Collective Ministerial Responsibility requires public unanimity.",
+      "a": true,
+      "exp": "Ministers must vote with the government or resign.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "Cabinet discussions are generally confidential.",
+      "a": true,
+      "exp": "AG v Jonathan Cape (breach of confidence action possible).",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "The Prime Minister has statutory power to appoint Ministers.",
+      "a": false,
+      "exp": "It is a Prerogative power exercised by the Monarch on PM's advice.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "Individual Ministerial Responsibility strictly requires resignation for departmental error.",
+      "a": false,
+      "exp": "Maxwell-Fyfe guidelines: resignation usually only for personal involvement/knowledge.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "The 'Carltona' principle allows civil servants to exercise Ministerial powers.",
+      "a": true,
+      "exp": "Carltona Ltd v Commissioners of Works.",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "The Ministerial Code is legally enforceable in the High Court.",
+      "a": false,
+      "exp": "R (FDA) v Prime Minister confirmed it is 'soft law' and PM is arbiter.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "Ministers must not mislead Parliament.",
+      "a": true,
+      "exp": "Para 1.3 Ministerial Code; 'knowingly misleading' is a resignation matter.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "The 'Seven Principles of Public Life' are known as the Nolan Principles.",
+      "a": true,
+      "exp": "Selflessness, Integrity, Objectivity, Accountability, Openness, Honesty, Leadership.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "Civil Servants are politically appointed.",
+      "a": false,
+      "exp": "They are permanent and politically neutral (Northcote-Trevelyan reforms).",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "Special Advisers (SpAds) are politically neutral.",
+      "a": false,
+      "exp": "They are temporary political appointees exempt from neutrality requirement.",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "The 'Crichel Down Affair' established the modern rules on IMR.",
+      "a": true,
+      "exp": "Led to the Maxwell-Fyfe guidelines on resignation.",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "A Vote of No Confidence requires the government to resign (convention).",
+      "a": true,
+      "exp": "Unless they can regain confidence within 14 days (Fixed Term Parliaments Act repealed).",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "The Cabinet Manual has the force of primary legislation.",
+      "a": false,
+      "exp": "It is a guide to laws, conventions, and rules; not a statute.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "Accounting Officers are personally responsible for departmental finance.",
+      "a": true,
+      "exp": "Usually the Permanent Secretary; answerable to Public Accounts Committee.",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "The PM must sit in the House of Commons.",
+      "a": true,
+      "exp": "A convention established since the early 20th century.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "The Speaker of the House of Commons remains a member of their political party.",
+      "a": false,
+      "exp": "They must resign from their party to maintain political neutrality.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "The Speaker can suspend an MP for deliberate disobedience ('naming').",
+      "a": true,
+      "exp": "A disciplinary power to maintain order in the House.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "Government business takes precedence in the Commons (Standing Order 14).",
+      "a": true,
+      "exp": "A key procedural presumption, unless the House votes otherwise.",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "Select Committees have powers to summon Ministers as witnesses.",
+      "a": false,
+      "exp": "They can summon civil servants/private individuals; Ministers attend by invitation (convention).",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "Hansard is a verbatim report of Parliamentary proceedings.",
+      "a": false,
+      "exp": "It is 'substantially' verbatim; repetitions/obvious mistakes are edited.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "Parliamentary Privilege (Art 9 Bill of Rights) protects freedom of speech in Parliament.",
+      "a": true,
+      "exp": "Proceedings cannot be impeached or questioned in any court.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "MPs are immune from criminal prosecution for fraud under Parliamentary Privilege.",
+      "a": false,
+      "exp": "R v Chaytor; expenses claims are not 'proceedings in Parliament'.",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "The Parliamentary Commissioner for Standards investigates complaints against Lords.",
+      "a": false,
+      "exp": "They investigate MPs; the Lords have their own Commissioner.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "An MP sentenced to over a year in prison is disqualified from the Commons.",
+      "a": true,
+      "exp": "Representation of the People Act 1981.",
+      "isTiming": true,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "The 'Recall of MPs Act 2015' allows constituents to remove an MP.",
+      "a": true,
+      "exp": "Triggered by suspension >10 days or conviction (prison sentence).",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "The Speaker controls the selection of amendments for debate.",
+      "a": true,
+      "exp": "A significant power affecting legislative scrutiny.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "Select Committee reports must be debated by the Commons.",
+      "a": false,
+      "exp": "Government must respond within 60 days, but debate is not automatic.",
+      "isTiming": true,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "Secondary legislation is subject to the 'Negative Resolution' procedure by default.",
+      "a": false,
+      "exp": "Depends on the parent Act; can be negative or affirmative.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "Public Bill Committees scrutinise legislation line-by-line.",
+      "a": true,
+      "exp": "Standard stage for Bills in the Commons.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "Montesquieu advocated for the fusion of powers.",
+      "a": false,
+      "exp": "He advocated for the Separation of Powers to protect liberty.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "The Lord Chancellor is no longer the Head of the Judiciary.",
+      "a": true,
+      "exp": "Reformed by the Constitutional Reform Act 2005 (now Lord Chief Justice).",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "The UK Executive and Legislature are completely separate.",
+      "a": false,
+      "exp": "There is a 'fusion' as Ministers sit in Parliament.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "The Supreme Court was established by the Constitutional Reform Act 2005.",
+      "a": true,
+      "exp": "Replacing the Appellate Committee of the House of Lords.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "Judges are immune from civil liability for judicial acts.",
+      "a": true,
+      "exp": "Sirros v Moore; immunity ensures judicial independence.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "The sub judice rule prevents Parliament discussing active court cases.",
+      "a": true,
+      "exp": "A convention respecting the separation of powers/fair trial.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "The House of Commons Disqualification Act 1975 bars judges from being MPs.",
+      "a": true,
+      "exp": "Ensures separation of Judiciary and Legislature.",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "The Executive can make primary legislation without Parliament.",
+      "a": false,
+      "exp": "Primary legislation (Acts) requires Parliament; Executive makes secondary legislation.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "The courts can strike down primary legislation under Separation of Powers.",
+      "a": false,
+      "exp": "Parliamentary Sovereignty prevents this (unlike the US system).",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "M v Home Office confirmed injunctions can be granted against Ministers.",
+      "a": true,
+      "exp": "Ministers are subject to the rule of law/contempt of court.",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "The Attorney General is a member of the Judiciary.",
+      "a": false,
+      "exp": "They are the government's chief legal adviser (Executive).",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "Judicial appointments are made by the Prime Minister directly.",
+      "a": false,
+      "exp": "Independent Judicial Appointments Commission (JAC) selects candidates.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "The 'Fire Brigades Union' case prevented the Executive using prerogative to frustrate statute.",
+      "a": true,
+      "exp": "Separation of powers: Executive cannot override Parliament's will.",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "Lord Bingham's 'Rule of Law' includes the protection of human rights.",
+      "a": true,
+      "exp": "He advocated a 'substantive' rather than purely 'formal' view.",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "Entick v Carrington established that state action requires legal authority.",
+      "a": true,
+      "exp": "The government cannot act without a basis in law.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "Retrospective criminal legislation is legally invalid in the UK.",
+      "a": false,
+      "exp": "Parliament is sovereign (e.g., War Crimes Act 1991), though it offends the Rule of Law.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "The 'Principle of Legality' requires courts to override statutes that breach rights.",
+      "a": false,
+      "exp": "It requires courts to assume Parliament did not intend to breach rights absent clear words (Simms).",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "Liversidge v Anderson is the leading authority on discretionary power.",
+      "a": false,
+      "exp": "It was overturned by IRC v Rossminster; objective tests now apply.",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "High court fees can be declared unlawful if they impede access to justice.",
+      "a": true,
+      "exp": "R (Unison) v Lord Chancellor.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "The Rule of Law requires that laws should generally be prospective.",
+      "a": true,
+      "exp": "Laws should not apply retrospectively (Legal Certainty).",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "The 'formal' conception of the Rule of Law ignores the moral content of law.",
+      "a": true,
+      "exp": "Joseph Raz's view (focus on procedure/clarity) vs Dworkin's substantive view.",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "Anisminic established that 'ouster clauses' are interpreted strictly.",
+      "a": true,
+      "exp": "Courts presume Parliament does not intend to exclude judicial review.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "Prerogative powers are new powers granted to the Executive by Parliament.",
+      "a": false,
+      "exp": "They are residual common law powers of the Crown.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "New prerogative powers cannot be created by the courts.",
+      "a": true,
+      "exp": "BBC v Johns: '350 years too late' to broaden the prerogative.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "If a Statute and Prerogative cover the same ground, the Prerogative prevails.",
+      "a": false,
+      "exp": "De Keyser's Hotel: Statute abridges (suspends) the Prerogative.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "The GCHQ case established that prerogative powers are immune from judicial review.",
+      "a": false,
+      "exp": "Established they ARE reviewable, subject to justiciability (subject matter).",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "National Security is generally considered a non-justiciable area of prerogative.",
+      "a": true,
+      "exp": "Courts defer to the Executive on high policy/defence.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "The Prerogative of Mercy is purely political and non-justiciable.",
+      "a": false,
+      "exp": "R v Home Secretary, ex p Bentley: court can review failure to consider options.",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "The grant of a passport is a statutory power.",
+      "a": false,
+      "exp": "It is a Prerogative power (R v Foreign Secretary, ex p Everett).",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "The Prime Minister's power to prorogue Parliament is non-justiciable.",
+      "a": false,
+      "exp": "Miller II held it is justiciable and was exercised unlawfully.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "Prerogative powers can be used to frustrate the intention of Parliament.",
+      "a": false,
+      "exp": "Fire Brigades Union case: Executive cannot undermine statutory schemes.",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "The Northumbria Police Authority case allowed prerogative to coexist with statute.",
+      "a": true,
+      "exp": "Allowed where prerogative was for the benefit/protection of the subject.",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "The Crown is bound by all statutes automatically.",
+      "a": false,
+      "exp": "Presumption that statutes do not bind the Crown unless explicitly stated.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "Treaties ratified under Prerogative automatically become UK law.",
+      "a": false,
+      "exp": "Dualist system requires incorporation by Act of Parliament.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "Miller I held Prerogative cannot be used to alter domestic rights (Article 50).",
+      "a": true,
+      "exp": "Parliamentary authority required to remove statutory rights (EU law).",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "Deployment of armed forces is a justiciable prerogative power.",
+      "a": false,
+      "exp": "Generally non-justiciable (Chandler v DPP / CND case).",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "The dissolution of Parliament is now a prerogative power.",
+      "a": true,
+      "exp": "Dissolution and Calling of Parliament Act 2022 revived the prerogative.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "Implied repeal operates if a new Act is inconsistent with a previous Act.",
+      "a": true,
+      "exp": "The later statute prevails to the extent of the inconsistency (Ellen Street Estates).",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "Parliament can bind its successors by using 'manner and form' entrenchment.",
+      "a": false,
+      "exp": "Orthodox view is no Parliament can bind a successor (Thoburn; Jackson obiter notwithstanding).",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "The 'Enrolled Bill Rule' means courts will not investigate how an Act was passed.",
+      "a": true,
+      "exp": "Pickin v British Railways Board; procedural irregularity is non-justiciable.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "Constitutional statutes are immune from implied repeal.",
+      "a": true,
+      "exp": "Thoburn v Sunderland City Council; requires express words or necessary implication.",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "The Parliament Acts 1911 and 1949 can be used to extend the life of Parliament.",
+      "a": false,
+      "exp": "Expressly excluded by s.2(1) Parliament Act 1911.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "The Jackson case confirmed the validity of the Hunting Act 2004.",
+      "a": true,
+      "exp": "The 1949 Parliament Act was validly enacted using the 1911 Act procedure.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "Dicey argued that no person or body can override an Act of Parliament.",
+      "a": true,
+      "exp": "A core tenet of Parliamentary Sovereignty.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "Lord Steyn in Jackson suggested courts might refuse to recognize 'oppressive' legislation.",
+      "a": true,
+      "exp": "Obiter dictum suggesting common law limits to sovereignty in extreme cases.",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "The European Communities Act 1972 was an example of Parliament binding itself permanently.",
+      "a": false,
+      "exp": "It was a voluntary limitation that could be repealed (and was by EUWA 2018).",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "The Factortame case suspended the operation of the Merchant Shipping Act 1988.",
+      "a": true,
+      "exp": "UK courts disapplied domestic legislation conflicting with EU law.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "The principle of 'legality' means general words can override fundamental rights.",
+      "a": false,
+      "exp": "R v Home Secretary, ex p Simms; fundamental rights require express language to be overridden.",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "Parliament can legislate contrary to international law.",
+      "a": true,
+      "exp": "Mortensen v Peters; domestic statute prevails in UK courts.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "The 'Metric Martyrs' case (Thoburn) concerned the supremacy of EU law over the Weights and Measures Act.",
+      "a": true,
+      "exp": "Established the concept of constitutional statutes.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "Retrospective legislation is unconstitutional and invalid.",
+      "a": false,
+      "exp": "Parliament can pass retrospective laws (e.g., War Damage Act 1965), though disliked.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "The ECA 1972 was repealed by the European Union (Withdrawal) Act 2018.",
+      "a": true,
+      "exp": "Repealed on 'exit day' (31 Jan 2020).",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "The Withdrawal Agreement has direct effect in UK law via s.7A EUWA 2018.",
+      "a": true,
+      "exp": "It prevails over inconsistent domestic legislation.",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "'Assimilated law' (formerly Retained EU Law) generally retains supremacy over new UK Acts.",
+      "a": false,
+      "exp": "Supremacy of EU law was abolished for assimilated law by REULA 2023 (s.5(A1) EUWA).",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "UK courts can still make preliminary references to the CJEU on assimilated law.",
+      "a": false,
+      "exp": "s.6(1)(b) EUWA 2018 ended references (except under Withdrawal Agreement specific protocols).",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "The Supreme Court is bound by pre-Brexit CJEU case law.",
+      "a": false,
+      "exp": "s.6(4) EUWA 2018 allows the Supreme Court to depart from it.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "The Withdrawal Agreement protects EU citizens' rights residing in the UK before 2021.",
+      "a": true,
+      "exp": "Part 2 of the Withdrawal Agreement.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "Directives are automatically 'assimilated law' under s.3 EUWA 2018.",
+      "a": false,
+      "exp": "Only Direct EU Legislation (Regulations/Decisions) is retained under s.3; Directives via s.2 (implementation).",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "The 'Windsor Framework' relates to the Northern Ireland Protocol.",
+      "a": true,
+      "exp": "Amended the Protocol to facilitate trade.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "Under REULA 2023, the supremacy of EU law applies to all pre-2024 domestic law.",
+      "a": false,
+      "exp": "Supremacy ended on 31 Dec 2023; domestic law now generally prevails.",
+      "isTiming": true,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "The European Union (Notification of Withdrawal) Act 2017 triggered Article 50.",
+      "a": true,
+      "exp": "Passed following the Miller I judgment requiring Parliamentary approval.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "A Minister can amend 'assimilated law' using Henry VIII powers.",
+      "a": true,
+      "exp": "s.8 EUWA 2018 and REULA 2023 grant powers to amend via secondary legislation.",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    }
   ]
+  {
+  "public_law_2": [
+    {
+      "q": "The Senior Courts Act 1981 s.31(3) requires a claimant to have 'sufficient interest' for standing.",
+      "a": true,
+      "exp": "The statutory test for standing in Judicial Review.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "A Judicial Review claim must be filed within 3 months to be automatically in time.",
+      "a": false,
+      "exp": "It must be 'promptly' AND within 3 months; claims within 3 months can still be refused for undue delay (CPR 54.5).",
+      "isTiming": true,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "The 'Exclusivity Principle' generally requires public law challenges to use Judicial Review.",
+      "a": true,
+      "exp": "O'Reilly v Mackman; procedural protection for public bodies.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "Private bodies exercising public functions are amenable to Judicial Review.",
+      "a": true,
+      "exp": "R v Panel on Take-overs and Mergers, ex p Datafin (Source of power vs Nature of function).",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "A 'mandatory order' compels a public body to perform a legal duty.",
+      "a": true,
+      "exp": "One of the prerogative orders available in JR.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "The 'Wednesbury' test applies to the ground of Illegality.",
+      "a": false,
+      "exp": "Wednesbury applies to Irrationality (Unreasonableness).",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "Decision-makers cannot delegate powers unless expressly authorized by statute.",
+      "a": true,
+      "exp": "Delegatus non potest delegare (Barnard v National Dock Labour Board).",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "The Carltona principle allows civil servants to act on behalf of Ministers.",
+      "a": true,
+      "exp": "Carltona Ltd v Commissioners of Works (implied delegation).",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "Fettering discretion involves adopting a rigid policy without considering individual cases.",
+      "a": true,
+      "exp": "British Oxygen Co v Minister of Technology.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "The test for apparent bias is whether a 'reasonable person would suspect bias'.",
+      "a": false,
+      "exp": "It is the 'fair-minded and informed observer' concluding there was a 'real possibility' of bias (Porter v Magill).",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "Section 2 HRA 1998 binds UK courts to follow Strasbourg jurisprudence.",
+      "a": false,
+      "exp": "Courts must only 'take into account' Strasbourg decisions; they are not strictly binding (R v Horncastle).",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "Section 3 HRA 1998 requires courts to interpret legislation compatibly with Convention rights 'so far as it is possible'.",
+      "a": true,
+      "exp": "A strong interpretative obligation (Ghaidan v Godin-Mendoza).",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "Courts can adopt an interpretation under s.3 HRA that contradicts the fundamental feature of the legislation.",
+      "a": false,
+      "exp": "Interpretation cannot go 'against the grain' of the legislation.",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "Only the High Court and above can issue a Declaration of Incompatibility (s.4 HRA).",
+      "a": true,
+      "exp": "Lower courts (e.g., Magistrates, County Court) cannot issue s.4 declarations.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "A 'Hybrid' public authority is liable under s.6 HRA for all its acts.",
+      "a": false,
+      "exp": "Only liable in respect of its 'public functions' (s.6(3)(b) & s.6(5) HRA).",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "Aston Cantlow established that 'Core' public authorities are liable for all acts.",
+      "a": true,
+      "exp": "Government departments/Police are core authorities.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "The limitation period for an HRA claim is 1 year.",
+      "a": true,
+      "exp": "s.7(5) HRA 1998 (unless the court extends for equity).",
+      "isTiming": true,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "Damages are the primary remedy for HRA breaches.",
+      "a": false,
+      "exp": "Damages are discretionary and a last resort (s.8 HRA); 'Just Satisfaction'.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "Article 5 ECHR (Liberty) is an absolute right.",
+      "a": false,
+      "exp": "Limited right; allows for lawful arrest/detention under specific subsections.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "Article 3 ECHR (Torture) is a qualified right.",
+      "a": false,
+      "exp": "Absolute right; never justifiable (Ireland v UK).",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "Proportionality is the test used for Qualified Rights (e.g., Art 8, 10, 11).",
+      "a": true,
+      "exp": "Bank Mellat / Huang tests for proportionality.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "Legitimate Expectation can be substantive as well as procedural.",
+      "a": true,
+      "exp": "R v North and East Devon Health Authority, ex p Coughlan.",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "Judicial Review remedies are available as of right.",
+      "a": false,
+      "exp": "They are discretionary; court may refuse even if a ground is made out.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "A 'quashing order' substitutes the court's decision for the public body's.",
+      "a": false,
+      "exp": "It voids the decision and usually remits it back to the body to decide again lawfully.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "Errors of law on the face of the record are always amenable to Judicial Review.",
+      "a": true,
+      "exp": "Anisminic Ltd v Foreign Compensation Commission.",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "The 'Anxious Scrutiny' test is used when human rights are at stake (pre-HRA context).",
+      "a": true,
+      "exp": "R v Ministry of Defence, ex p Smith; requires more than mere reasonableness.",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "The 'Super-Wednesbury' standard applies to macro-economic policy decisions.",
+      "a": true,
+      "exp": "R v Nottinghamshire CC; courts are very reluctant to intervene.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "It is unlawful for a decision-maker to follow a secret, unpublished policy.",
+      "a": true,
+      "exp": "R (Lumba) v Secretary of State for the Home Department.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "A decision-maker has a duty to apply their own published policy.",
+      "a": true,
+      "exp": "Mandalia v Home Secretary; failure to do so is unfair.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "An ultra vires promise by a public authority creates a binding legitimate expectation.",
+      "a": false,
+      "exp": "R v Dept for Education, ex p Begbie; power cannot be extended by estoppel.",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "Detrimental reliance is a strict requirement for Legitimate Expectation.",
+      "a": false,
+      "exp": "R (Bibi) v Newham LBC; reliance is relevant but not strictly essential.",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "Forfeiture cases (e.g., losing a licence) require the highest standard of fairness.",
+      "a": true,
+      "exp": "McInnes v Onslow-Fane; compared to mere application cases.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "Councillors are disqualified if they have a 'predisposition' towards a decision.",
+      "a": false,
+      "exp": "Lewis v Redcar; Predisposition is allowed, 'Predetermination' (closed mind) is not.",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "The 'fair-minded observer' in bias cases is assumed to be unduly suspicious.",
+      "a": false,
+      "exp": "Helow v Home Secretary; observer is informed but not paranoid.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "An individual has a right to know the case against them.",
+      "a": true,
+      "exp": "Kanda v Government of Malaya; core principle of natural justice.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "There is a general common law duty to give reasons for all administrative decisions.",
+      "a": false,
+      "exp": "R v Home Secretary, ex p Doody; duty arises only if fairness demands it.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "An oral hearing is required if the decision turns on the credibility of the applicant.",
+      "a": true,
+      "exp": "R (Osborn) v Parole Board.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "Prisoners have an absolute right to legal representation in disciplinary hearings.",
+      "a": false,
+      "exp": "Hone v Maze Prison Visitors; discretionary based on seriousness/complexity.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "Consultation is only lawful if done at a formative stage of proposals.",
+      "a": true,
+      "exp": "First Gunning Principle (R v Brent LBC, ex p Gunning).",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "A public body must consult on rejected options as well as the preferred one.",
+      "a": true,
+      "exp": "R (Moseley) v Haringey LBC; fairness requires context for the consultation.",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "Failure to comply with a statutory procedure always renders the decision void.",
+      "a": false,
+      "exp": "R v Soneji; courts look at the intended consequences of non-compliance.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "Substantial compliance with a procedural requirement may be sufficient.",
+      "a": true,
+      "exp": "Coney v Choyce; rigid adherence not always required if purpose achieved.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "A Minister can lawfully surrender their decision-making power to a trade union.",
+      "a": false,
+      "exp": "Lavender v Minister of Housing; unlawful delegation (acting under dictation).",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "It is unlawful for a decision-maker to surrender to a foreign threat.",
+      "a": true,
+      "exp": "R (Corner House Research) v SFO; rule of law prohibits surrendering to threats (though SFO had discretion here).",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "Punishing a rugby club for its players' views is an irrational use of power.",
+      "a": true,
+      "exp": "Wheeler v Leicester City Council; improper purpose/irrationality.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "The High Court can substitute its own decision for that of a public body in Judicial Review.",
+      "a": false,
+      "exp": "Under s.31(5A) Senior Courts Act 1981, usually only if there is 'no other decision' possible; otherwise remitted.",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "A Declaration is a coercive remedy that forces a public body to act.",
+      "a": false,
+      "exp": "Declarations state the legal position but are not coercive; Mandatory Orders are coercive.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "Under s.31(2A) SCA 1981, relief must be refused if the outcome would not be substantially different.",
+      "a": true,
+      "exp": "The 'highly likely' test makes refusal mandatory unless there are exceptional public interest reasons.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "Section 12 Public Order Act 1986 applies to static assemblies.",
+      "a": false,
+      "exp": "Section 12 applies to public processions; Section 14 applies to public assemblies.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "A 'public assembly' under POA 1986 requires 20 or more persons.",
+      "a": false,
+      "exp": "Amended by Anti-social Behaviour Act 2003 to '2 or more persons' (s.16).",
+      "isTiming": true,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "Police can ban a procession under s.13 POA 1986 without Home Secretary consent.",
+      "a": false,
+      "exp": "Chief Constable applies to Council/Home Sec; Commissioner applies to Home Sec.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "A 'breach of the peace' can occur in private premises.",
+      "a": true,
+      "exp": "R v Howell; can occur wherever harm is done or threatened.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "Police have a power of arrest for anticipated breach of the peace.",
+      "a": true,
+      "exp": "R v Howell; if a breach is imminent.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "Conditions on a procession can only be imposed by the most senior officer present at the scene.",
+      "a": true,
+      "exp": "s.12(2)(b) POA 1986; or by the Chief Officer in advance.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "'Serious disruption to the life of the community' is a ground for imposing conditions.",
+      "a": true,
+      "exp": "s.12(1)(a) / s.14(1)(a) POA 1986.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "The 'kettling' (containment) of protestors is a deprivation of liberty under Article 5 ECHR.",
+      "a": false,
+      "exp": "Austin v UK; judged as a restriction on movement if proportionate and for short duration.",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "Organisers of a procession must give 6 clear days' notice.",
+      "a": true,
+      "exp": "s.11 POA 1986.",
+      "isTiming": true,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "Spontaneous processions are exempt from the notice requirement.",
+      "a": true,
+      "exp": "s.11(1) POA 1986; notice required unless not reasonably practicable.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "The police can ban a static assembly under s.14 POA 1986.",
+      "a": false,
+      "exp": "Police can only impose conditions on assemblies; s.13 bans apply only to processions.",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "Actions for damages under the HRA must be brought within 3 months.",
+      "a": false,
+      "exp": "1 year limitation period for HRA s.7 claims (not judicial review JR time limits).",
+      "isTiming": true,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "The 'Laporte' case established that police must reasonably believe a breach of peace is imminent.",
+      "a": true,
+      "exp": "R (Laporte) v Chief Constable of Gloucestershire; preventing travel was unlawful premature intervention.",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "Trespassory assemblies can be banned under s.14A POA 1986.",
+      "a": true,
+      "exp": "Chief Officer can apply for an order prohibiting trespassory assemblies.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "Section 5 POA 1986 (Harassment, Alarm, Distress) requires intent.",
+      "a": false,
+      "exp": "Intent OR awareness that behaviour may be threatening/abusive/insulting (s.6(4)).",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "Insulting words were removed from Section 5 POA 1986.",
+      "a": true,
+      "exp": "Crime and Courts Act 2013 removed 'insulting' to protect free speech.",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "The 'reasonable belief' of the police officer imposing conditions is subjective.",
+      "a": false,
+      "exp": "It is subject to objective judicial review (though deference is shown to operational decisions).",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "Damages in Judicial Review are awarded for purely procedural errors.",
+      "a": false,
+      "exp": "No damages for maladministration alone; requires a recognized tort or HRA breach.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "A Prohibiting Order prevents a public body from acting unlawfully in the future.",
+      "a": true,
+      "exp": "Similar to a Quashing Order but prospective.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "Article 11 ECHR protects the right to a peaceful assembly.",
+      "a": true,
+      "exp": "Freedom of assembly and association.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "Any restriction on Article 11 rights must be 'prescribed by law'.",
+      "a": true,
+      "exp": "Article 11(2); restrictions must be lawful, necessary, and proportionate.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "The 'margin of appreciation' applies in domestic UK courts.",
+      "a": false,
+      "exp": "It is an international doctrine for the ECtHR; domestic courts use 'discretionary area of judgment'.",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "The 'Victim Test' under s.7 HRA is identical to 'Sufficient Interest' in Judicial Review.",
+      "a": false,
+      "exp": "Victim test (Art 34 ECHR) is narrower; applicant must be directly affected.",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "Article 34 ECHR prevents NGOs from being 'victims' unless directly affected.",
+      "a": true,
+      "exp": "Unlike JR, public interest groups cannot claim unless they are the victim of the violation.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "A 'Remedial Order' under s.10 HRA is used to amend legislation incompatible with the ECHR.",
+      "a": true,
+      "exp": "A fast-track 'Henry VIII' power for Ministers to amend primary legislation.",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "Article 2 ECHR (Life) applies to cases of medical negligence in NHS hospitals.",
+      "a": false,
+      "exp": "Powell v UK; generally Art 2 is not engaged unless there is a systemic failure.",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "Article 2 includes a 'right to die'.",
+      "a": false,
+      "exp": "Pretty v UK; Article 2 protects life, it does not confer a right to end it.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "The state has a positive obligation to protect life from real and immediate risks.",
+      "a": true,
+      "exp": "Osman v UK; the 'Osman warning' duty.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "Article 5(1)(c) permits detention for 'preventive' purposes without specific suspicion.",
+      "a": false,
+      "exp": "Ostendorf v Germany; detention must be linked to suspicion of an offence or preventing a specific offence.",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "Article 6 (Fair Trial) applies to employment disputes for civil servants.",
+      "a": true,
+      "exp": "Vilho Eskelinen v Finland; unless expressly excluded by national law with objective justification.",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "Hearsay evidence is automatically a breach of Article 6 in criminal trials.",
+      "a": false,
+      "exp": "Al-Khawaja and Tahery v UK; permissible if there are sufficient counterbalancing factors.",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "Article 8 (Privacy) protects physical and psychological integrity.",
+      "a": true,
+      "exp": "Pretty v UK; expansive interpretation of 'private life'.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "Retention of DNA profiles of unconvicted persons breaches Article 8.",
+      "a": true,
+      "exp": "S and Marper v UK; blanket retention is disproportionate.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "Article 10 (Expression) protects the right to access government information.",
+      "a": false,
+      "exp": "Kennedy v Charity Commission; Art 10 is not a general Freedom of Information act.",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "Political speech receives the highest level of protection under Article 10.",
+      "a": true,
+      "exp": "Lingens v Austria; narrow margin of appreciation for restrictions.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "Article 11 imposes a positive obligation on the state to protect demonstrations.",
+      "a": true,
+      "exp": "Plattform 'Ärzte für das Leben' v Austria; protect from counter-demonstrators.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "A 'Parochial Church Council' is a core public authority under s.6 HRA.",
+      "a": false,
+      "exp": "Aston Cantlow; it is a hybrid authority (not core because of religious nature).",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "Housing Associations are always private bodies for HRA purposes.",
+      "a": false,
+      "exp": "Weaver v London and Quadrant Housing Trust; they are hybrid authorities when performing public functions.",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "In 'Ghaidan v Godin-Mendoza', the court used s.3 HRA to interpret 'spouse' to include same-sex partners.",
+      "a": true,
+      "exp": "A leading example of strong s.3 interpretation to achieve compatibility.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "The 'mirror principle' prevents UK courts from granting more rights than Strasbourg.",
+      "a": false,
+      "exp": "R (Ullah) sets a 'floor' not a 'ceiling'; UK courts can go further (Rabone).",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "A statement of incompatibility under s.19 HRA prevents a Bill from becoming law.",
+      "a": false,
+      "exp": "Parliament can proceed with the Bill regardless (political constraint only).",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "Voluntary mental health patients are owed an operational duty under Article 2 to prevent suicide.",
+      "a": true,
+      "exp": "Rabone v Pennine Care NHS Trust; duty exists even if not detained under MHA.",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "Control orders imposing 18-hour curfews constituted a deprivation of liberty (Art 5).",
+      "a": true,
+      "exp": "Secretary of State for the Home Department v JJ; breach of Art 5.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "The 'Living Instrument' doctrine allows the ECHR to be interpreted in light of modern standards.",
+      "a": true,
+      "exp": "Tyrer v UK; ECHR is not static.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "Article 1 of the First Protocol (A1P1) protects the right to property.",
+      "a": true,
+      "exp": "Peaceful enjoyment of possessions.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "Deprivation of property under A1P1 always requires compensation.",
+      "a": false,
+      "exp": "Usually required for proportionality, but can be taken without in exceptional circumstances (Jahn v Germany).",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "The HRA 1998 has 'horizontal effect' in private litigation via s.6.",
+      "a": true,
+      "exp": "Courts as public authorities must act compatibly (Campbell v MGN).",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "A constable can stop and search without suspicion under s.60 CJPO 1994.",
+      "a": true,
+      "exp": "If authorised by a senior officer in anticipation of violence.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "Code A of PACE governs the detention of suspects.",
+      "a": false,
+      "exp": "Code A governs Stop and Search; Code C governs Detention.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "Reasonable suspicion for stop and search can be based on a person's previous convictions.",
+      "a": false,
+      "exp": "Code A 2.2B; cannot be based on personal factors alone.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "A constable must provide their name and station before a stop and search.",
+      "a": true,
+      "exp": "s.2(3) PACE; GOWISELY protocol.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "An arrest is lawful if the officer has reasonable grounds to believe it is necessary.",
+      "a": true,
+      "exp": "s.24(5) PACE necessity criteria (e.g., prompt investigation).",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "A suspect can be detained for 36 hours on the authority of a superintendent.",
+      "a": true,
+      "exp": "s.42 PACE; requires serious arrestable offence.",
+      "isTiming": true,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "The maximum detention without charge (with warrant) is 72 hours.",
+      "a": false,
+      "exp": "96 hours (s.44 PACE).",
+      "isTiming": true,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "Intimate searches can be authorized by an inspector.",
+      "a": true,
+      "exp": "s.55 PACE; for Class A drugs or harmful articles.",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "A suspect has an absolute right to legal advice upon arrest.",
+      "a": false,
+      "exp": "Can be delayed for up to 36 hours in serious cases (s.58 PACE).",
+      "isTiming": true,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "Confessions obtained by oppression are automatically excluded.",
+      "a": true,
+      "exp": "s.76(2)(a) PACE; court 'shall not allow' it.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "Section 14 of the Public Order Act 1986 applies to processions.",
+      "a": false,
+      "exp": "s.14 applies to public assemblies; s.12 applies to processions.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "The police can ban a public assembly under s.14A POA 1986.",
+      "a": false,
+      "exp": "s.14A allows banning trespassory assemblies; static assemblies can only have conditions.",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "Breach of the peace is a statutory offence.",
+      "a": false,
+      "exp": "It is a common law concept (R v Howell).",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "Aggravated trespass (s.68 CJPO 1994) requires intent to intimidate or disrupt.",
+      "a": true,
+      "exp": "Must be on land in the open air.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "Section 5 POA 1986 covers conduct that causes 'harassment, alarm or distress'.",
+      "a": true,
+      "exp": "Lowest level public order offence.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "Violent Disorder (s.2 POA 1986) requires 12 or more persons.",
+      "a": false,
+      "exp": "Requires 3 or more persons (s.1 requires 12 for Riot).",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "Affray (s.3 POA 1986) can be committed in private.",
+      "a": true,
+      "exp": "Can occur in public or private places.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "A s.60AA order allows police to require removal of face coverings.",
+      "a": true,
+      "exp": "To prevent identity concealment during disorder.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "Kettling (containment) is always a deprivation of liberty under Article 5.",
+      "a": false,
+      "exp": "Austin v UK; not a deprivation if proportionate and for a limited time to prevent breach of peace.",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "Organisers of a public procession must give 6 clear days' notice.",
+      "a": true,
+      "exp": "s.11 POA 1986.",
+      "isTiming": true,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "The Home Secretary can ban processions in London without the Commissioner's request.",
+      "a": false,
+      "exp": "Commissioner must request the ban; Home Secretary consents (s.13 POA).",
+      "isTiming": false,
+      "difficulty": "Distinction Level"
+    },
+    {
+      "q": "Reasonable force can be used to prevent a breach of the peace.",
+      "a": true,
+      "exp": "Common law power available to citizens and police.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "Evidence obtained unfairly can be excluded under s.78 PACE.",
+      "a": true,
+      "exp": "Discretionary exclusion if admission would adversely affect fairness.",
+      "isTiming": false,
+      "difficulty": "Merit Level"
+    },
+    {
+      "q": "A 'Caution' must be given upon arrest.",
+      "a": true,
+      "exp": "Code C, Para 10; 'You do not have to say anything...'",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    },
+    {
+      "q": "Failure to record an interview is a breach of Code E.",
+      "a": true,
+      "exp": "Interviews must be audio recorded.",
+      "isTiming": false,
+      "difficulty": "Passing Grade"
+    }
+  ]
+}
 }
