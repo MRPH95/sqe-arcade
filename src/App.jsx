@@ -5,7 +5,7 @@ import { getAuth, signInAnonymously, onAuthStateChanged, signInWithCustomToken }
 import { getFirestore, collection, addDoc, query, orderBy, limit, onSnapshot, serverTimestamp } from 'firebase/firestore';
 import { db, auth } from './firebase';
 
-// --- AUDIO ENGINE v19.0 (FINAL) ---
+// --- AUDIO ENGINE v20.0 ---
 class AudioEngine {
   constructor() {
     this.ctx = null;
@@ -141,22 +141,17 @@ class AudioEngine {
     gain.connect(this.ctx.destination);
     
     const harmonics = [1, 2, 3, 4];
+    const vols = [0.02, 0.015, 0.01, 0.005]; // Even lower volume for organ
+
     harmonics.forEach((h, i) => {
         const osc = this.ctx.createOscillator();
         osc.type = i % 2 === 0 ? 'square' : 'sawtooth'; 
         osc.frequency.setValueAtTime(freq * h, time);
-        
-        const filter = this.ctx.createBiquadFilter();
-        filter.type = 'lowpass';
-        filter.frequency.setValueAtTime(2000, time);
-
-        osc.connect(filter);
-        filter.connect(gain);
+        osc.connect(gain);
         osc.start(time);
         osc.stop(time + duration);
     });
 
-    // DRAMATICALLY REDUCED VOLUME
     gain.gain.setValueAtTime(0, time);
     gain.gain.linearRampToValueAtTime(0.02, time + 0.1); 
     gain.gain.setValueAtTime(0.02, time + duration - 0.1);
@@ -216,7 +211,7 @@ class AudioEngine {
     const step = this.beatCount % 16;
     const root = (Math.floor(this.beatCount / 32) % 2 === 0) ? 41.20 : 49.00; 
     
-    // Stage 1: Kick + Bass
+    // Stage 1 (Menu/Base): Just Kick + Bass
     if (step % 4 === 0) this.playDrum(time, 'kick');
     if (step % 4 === 2 || step % 4 === 3) this.playOsc(time, root, 'sawtooth', 0.15, 0.5, 600);
 
@@ -234,13 +229,14 @@ class AudioEngine {
        this.playOsc(time, arp[(step/2)%4], 'square', 0.1, 0.05, 2000);
     }
 
-    // Stage 6: CELESTIAL CHOIR
+    // Stage 6: CELESTIAL CHOIR (Replaced Hats)
     if (this.density >= 6 && step === 0 && this.beatCount % 32 === 0) {
+        // Slow majestic chords
         this.playPad(time, root * 4, 4, -5); 
         this.playPad(time, root * 6, 4, 5); 
     }
 
-    // Stage 7: Hats (Subtle)
+    // Stage 7: Hats start here (Subtle)
     if (this.density >= 7 && step % 2 === 0) this.playDrum(time, 'hat'); 
     
     // Stage 8: "Aerodynamic" Tapping Solo
@@ -257,12 +253,13 @@ class AudioEngine {
         }
     }
     
-    // Stage 10: Cosmic Shimmer
+    // Stage 10: Cosmic Shimmer (Replaced Glitch)
     if (this.density >= 10 && Math.random() > 0.90) {
+        // Very high sine ping, subtle
         this.playOsc(time, Math.random()*4000 + 200, 'sine', 0.1, 0.05, 8000, true); 
     }
 
-    // Stage 11-12: Deep Cinematic Strings
+    // Stage 11-12: Deep Cinematic Strings (Replaced Organ)
     if (this.density >= 11 && step === 0 && this.beatCount % 64 === 0) {
         this.playCinematicStack(time, root, 8); 
     }
@@ -324,6 +321,7 @@ const WormholeEffect = ({ streak, isChronos, isGameOver, failCount }) => {
     const render = () => {
       const currentStreak = streakRef.current;
       
+      // Determine Stage & Color Palette
       let baseHue = 210; 
       let sat = '80%'; 
       let light = '70%'; 
@@ -350,10 +348,9 @@ const WormholeEffect = ({ streak, isChronos, isGameOver, failCount }) => {
       let bgStyle = `rgba(10, 15, 30, 0.4)`; 
       if (isNegative) {
          // Fade from White to Black (Reset)
-         const fade = Math.min(1, (currentStreak - 60) / 10); // 0 to 1 over 10 streak points
-         // White (255,255,255) -> Black (10,15,30)
-         const r = Math.floor(255 * (1-fade) + 10 * fade);
-         const g = Math.floor(255 * (1-fade) + 15 * fade);
+         const fade = Math.min(1, (currentStreak - 60) / 10);
+         const r = Math.floor(220 * (1-fade) + 10 * fade);
+         const g = Math.floor(240 * (1-fade) + 15 * fade);
          const b = Math.floor(255 * (1-fade) + 30 * fade);
          bgStyle = `rgba(${r}, ${g}, ${b}, 0.2)`; 
       }
@@ -381,6 +378,16 @@ const WormholeEffect = ({ streak, isChronos, isGameOver, failCount }) => {
           ctx.fillRect(0,0,canvas.width, canvas.height);
       }
 
+      // Nebula Overlay
+      if (baseHue === 'nebula') {
+          const grad = ctx.createRadialGradient(canvas.width/2, canvas.height/2, 100, canvas.width/2, canvas.height/2, canvas.width * 0.8);
+          grad.addColorStop(0, "rgba(100, 0, 100, 0)");
+          grad.addColorStop(0.5, "rgba(80, 20, 120, 0.1)");
+          grad.addColorStop(1, "rgba(0, 0, 0, 0)");
+          ctx.fillStyle = grad;
+          ctx.fillRect(0,0,canvas.width, canvas.height);
+      }
+
       const cx = canvas.width / 2;
       const cy = canvas.height / 2;
       const speed = 2 + (currentStreak * 0.5) * speedMult; 
@@ -402,9 +409,9 @@ const WormholeEffect = ({ streak, isChronos, isGameOver, failCount }) => {
         
         const size = (1 - star.z / 2000) * 4; 
 
+        // Color Logic
         let starColor;
         if (isNegative) {
-             // Dark stars fading back to light
              const fade = Math.min(1, (currentStreak - 60) / 10);
              if (fade < 0.5) starColor = `rgba(0, 0, 0, 0.8)`; // Black Stars
              else starColor = `hsl(210, 80%, 70%)`; // Return to blue
@@ -487,9 +494,6 @@ const CategoryCard = ({ id, label, icon: Icon, count, onClick, isSpecial }) => (
 const CategoryGrid = ({ onSelect }) => {
   const [rawQuestions, setRawQuestions] = useState(null); 
   
-  // UI needs to be resilient if data isn't loaded yet
-  // For display purposes, we can use hardcoded counts or check state passed down
-  // To simplify, we render the grid directly
   return (
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           <CategoryCard id="business" label="Business Law" icon={Briefcase} count="55" onClick={() => onSelect('business')} />
@@ -635,7 +639,30 @@ export default function SQESpeedDemon() {
     } catch (e) { console.error(e); }
   };
 
+  const unlockAudio = () => {
+      if (!isMuted) {
+        audio.resume();
+        if (!audio.isPlaying) audio.start();
+      }
+  };
+
+  // Bind global unlock on first interaction
+  useEffect(() => {
+      const unlock = () => {
+          audio.resume();
+          window.removeEventListener('click', unlock);
+          window.removeEventListener('touchstart', unlock);
+      };
+      window.addEventListener('click', unlock);
+      window.addEventListener('touchstart', unlock);
+      return () => {
+          window.removeEventListener('click', unlock);
+          window.removeEventListener('touchstart', unlock);
+      };
+  }, []);
+
   const selectCategory = (categoryKey) => {
+    unlockAudio();
     selectCategoryWithState(categoryKey, false); 
   };
 
@@ -693,6 +720,7 @@ export default function SQESpeedDemon() {
     }
   }, [gameState, isMuted]);
 
+  // STREAK DRIVEN AUDIO & VISUALS (12 STAGES)
   useEffect(() => {
     if (gameState === 'playing') {
       let newDensity = 1;
@@ -898,6 +926,8 @@ export default function SQESpeedDemon() {
     return 'bg-rose-600 animate-pulse shadow-[0_0_20px_rgba(225,29,72,0.8)]';
   };
 
+  const timingCount = Object.values(PREPARED_BANKS).flat().filter(q => q.isTiming).length;
+
   return (
     <div className={`min-h-screen bg-slate-950 text-white font-sans flex flex-col items-center justify-center relative overflow-hidden selection:bg-rose-500 transition-all duration-300 ${timeLeft < 1.5 && gameState === 'playing' ? 'shadow-[inset_0_0_100px_rgba(220,38,38,0.5)]' : ''}`}>
       
@@ -912,24 +942,33 @@ export default function SQESpeedDemon() {
           </span>
         </div>
         <div className="flex items-center gap-4 md:gap-8">
+           {/* REPLACED PAUSE WITH TOP BAR ICON */}
            {gameState === 'playing' && (
-             <div className="flex flex-col items-end">
-                <div className="flex gap-4">
-                    <div className="hidden sm:flex flex-col items-end">
-                        <span className="text-[10px] text-slate-400 uppercase tracking-widest">Streak</span>
-                        <div className={`text-xl font-black ${streak > 4 ? 'text-cyan-400 animate-pulse' : 'text-slate-500'}`}>{streak}x</div>
-                    </div>
-                    <div className="flex flex-col items-end">
-                        <span className="text-[10px] text-slate-400 uppercase tracking-widest">Integrity</span>
-                        <div className="flex gap-0.5 mt-1 bg-slate-800 p-1 rounded">
-                            {Array.from({ length: 10 }).map((_, i) => (
-                                <div key={i} className={`w-1.5 h-3 rounded-sm transition-all duration-300 ${i < (10 - consecutiveWrongs) ? 'bg-emerald-500 shadow-[0_0_5px_rgba(16,185,129,0.5)]' : 'bg-red-900/50'}`} />
-                            ))}
+             <div className="flex gap-4 items-center">
+                 {/* Pause Button Moved to HUD */}
+                 <button onClick={togglePause} className="hover:text-emerald-400 text-slate-400 transition-colors">
+                     {gameState === 'paused' ? <Play className="w-5 h-5" /> : <Pause className="w-5 h-5" />}
+                 </button>
+             
+                 <div className="flex flex-col items-end">
+                    <div className="flex gap-4">
+                        <div className="hidden sm:flex flex-col items-end">
+                            <span className="text-[10px] text-slate-400 uppercase tracking-widest">Streak</span>
+                            <div className={`text-xl font-black ${streak > 4 ? 'text-cyan-400 animate-pulse' : 'text-slate-500'}`}>{streak}x</div>
+                        </div>
+                        <div className="flex flex-col items-end">
+                            <span className="text-[10px] text-slate-400 uppercase tracking-widest">Integrity</span>
+                            <div className="flex gap-0.5 mt-1 bg-slate-800 p-1 rounded">
+                                {Array.from({ length: 10 }).map((_, i) => (
+                                    <div key={i} className={`w-1.5 h-3 rounded-sm transition-all duration-300 ${i < (10 - consecutiveWrongs) ? 'bg-emerald-500 shadow-[0_0_5px_rgba(16,185,129,0.5)]' : 'bg-red-900/50'}`} />
+                                ))}
+                            </div>
                         </div>
                     </div>
-                </div>
+                 </div>
              </div>
            )}
+           
           <div className="font-mono text-xl font-black text-white tabular-nums tracking-widest">
             {score.toLocaleString()}
           </div>
@@ -939,7 +978,7 @@ export default function SQESpeedDemon() {
         </div>
       </div>
 
-      <div className="w-full max-w-5xl px-6 z-20 mt-16 pb-10">
+      <div className="w-full max-w-5xl px-6 z-20 mt-16 pb-10 pt-24"> {/* INCREASED PT TO 24 */}
         
         {/* MENU */}
         {gameState === 'menu' && (
@@ -1055,11 +1094,7 @@ export default function SQESpeedDemon() {
               <div className={`h-full transition-all duration-75 ease-linear ${getTimerColor()}`} style={{ width: `${(timeLeft / getLimit()) * 100}%` }} />
             </div>
 
-            <div className="absolute -top-12 right-0">
-               <button onClick={togglePause} className="text-slate-500 hover:text-white transition-colors flex items-center gap-1 text-xs font-mono uppercase tracking-wider">
-                 <Pause size={14} /> Pause
-               </button>
-            </div>
+            {/* REMOVED OLD FLOATING PAUSE BUTTON */}
 
             <div className={`relative min-h-[400px] flex items-center justify-center transition-all duration-300 ${gameState === 'paused' ? 'blur-xl opacity-50' : ''}`}>
               
