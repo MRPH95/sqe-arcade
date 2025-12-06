@@ -453,9 +453,9 @@ const WormholeEffect = ({ streak, isChronos, isGameOver, failCount }) => {
 const DifficultySelector = ({ current, onSelect }) => (
   <div className="flex gap-2 justify-center mb-6 flex-wrap">
     {[
-      { id: 'relaxed', label: 'RELAXED', time: 10.0, multi: 0.8, color: 'hover:bg-blue-600' },
-      { id: 'standard', label: 'STANDARD', time: 5.0, multi: 1.0, color: 'hover:bg-emerald-600' },
-      { id: 'demon', label: 'DEMON', time: 3.0, multi: 1.5, color: 'hover:bg-rose-600' }
+      { id: 'relaxed', label: 'RELAXED (10s)', time: 10.0, multi: 0.8, color: 'hover:bg-blue-600' },
+      { id: 'standard', label: 'STANDARD (5s)', time: 5.0, multi: 1.0, color: 'hover:bg-emerald-600' },
+      { id: 'fast', label: 'FAST (3s)', time: 3.0, multi: 1.5, color: 'hover:bg-rose-600' }
     ].map((diff) => (
       <button
         key={diff.id}
@@ -546,7 +546,7 @@ const shuffleArray = (array) => {
   return arr;
 };
 
-export default function SQESpeedDemon() {
+export default function SQEArcade() {
   const [gameState, setGameState] = useState('menu'); 
   const [activeQuestions, setActiveQuestions] = useState([]);
   const [currentQIndex, setCurrentQIndex] = useState(0);
@@ -578,7 +578,7 @@ export default function SQESpeedDemon() {
   const CONFIG = {
     relaxed: { time: 10.0, multi: 0.8 },
     standard: { time: 5.0, multi: 1.0 },
-    demon: { time: 3.0, multi: 1.5 }
+    fast: { time: 3.0, multi: 1.5 }
   };
 
   const getLimit = () => CONFIG[difficulty].time;
