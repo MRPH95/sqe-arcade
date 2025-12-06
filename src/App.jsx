@@ -584,12 +584,27 @@ export default function SQEArcade() {
   const getLimit = () => CONFIG[difficulty].time;
   const getMultiplier = () => CONFIG[difficulty].multi;
 
-  // LOAD DATA
+// LOAD DATA
   useEffect(() => {
     fetch('./questions.json')
       .then(res => res.json())
       .then(data => {
-          setRawQuestions(data);
+          // --- FIX START ---
+          // Iterate through keys and inject the category name into every question object
+          const processedData = {};
+          Object.keys(data).forEach(key => {
+            // Converts "criminalLaw" -> "Criminal Law"
+            const categoryLabel = key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase());
+            
+            processedData[key] = data[key].map(q => ({
+              ...q,
+              category: categoryLabel // Inject the missing tag
+            }));
+          });
+          
+          setRawQuestions(processedData);
+          // --- FIX END ---
+          
           setIsLoading(false);
       })
       .catch(e => {
