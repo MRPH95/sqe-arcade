@@ -5,7 +5,7 @@ import { getAuth, signInAnonymously, onAuthStateChanged, signInWithCustomToken }
 import { getFirestore, collection, addDoc, query, orderBy, limit, onSnapshot, serverTimestamp } from 'firebase/firestore';
 
 // --- FIREBASE SETUP ---
-// NOTE: Replace this with your actual config from the Firebase Console if not using env variables
+// Note: Ensure your environment variables are set in Vercel/Local env
 const firebaseConfigStr = typeof __firebase_config !== 'undefined' ? __firebase_config : JSON.stringify({
   apiKey: "YOUR_API_KEY",
   authDomain: "YOUR_PROJECT.firebaseapp.com",
@@ -21,17 +21,15 @@ const auth = getAuth(app);
 const db = getFirestore(app);
 const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
 
-// --- FALLBACK DATA ---
-// This is used ONLY if questions.json fails to load.
+// --- FALLBACK DATA (Used ONLY if JSON fetch fails) ---
 const RAW_QUESTION_BANKS = {
   business: [
     { q: "A sole trader must register with Companies House.", a: false, exp: "Only with HMRC.", difficulty: "1" },
-    { q: "Partners in a general partnership are jointly and severally liable.", a: true, exp: "Unlimited liability.", difficulty: "1" }
-  ],
-  // ... (You can keep your original fallback data here if you wish, but the JSON is primary)
+    { q: "Partners in a general partnership are jointly and severally liable.", a: true, exp: "Unlimited liability for firm debts.", difficulty: "1" }
+  ]
 };
 
-// Helper to prepare fallback data
+// Helper to flatten fallback data
 const PREPARED_BANKS = {};
 Object.keys(RAW_QUESTION_BANKS).forEach(key => {
   PREPARED_BANKS[key] = RAW_QUESTION_BANKS[key].map(q => ({
@@ -40,7 +38,7 @@ Object.keys(RAW_QUESTION_BANKS).forEach(key => {
   }));
 });
 
-// --- AUDIO ENGINE v21.0 (Refined) ---
+// --- AUDIO ENGINE v22.0 (Lazy Load Fix) ---
 class AudioEngine {
   constructor() {
     this.ctx = null;
@@ -53,6 +51,7 @@ class AudioEngine {
     this.distortionNode = null;
   }
 
+  // Initialize only on user interaction
   init() {
     if (!this.ctx) {
       this.ctx = new (window.AudioContext || window.webkitAudioContext)();
@@ -95,7 +94,7 @@ class AudioEngine {
     if (useGlitch) {
         filter.type = 'highpass';
         filter.frequency.setValueAtTime(8000, time);
-        vol = vol * 0.02; // Quiet shimmer
+        vol = vol * 0.02; 
     } else {
         filter.type = 'lowpass';
         filter.frequency.setValueAtTime(filterFreq || 1500, time);
@@ -107,9 +106,8 @@ class AudioEngine {
 
     osc.connect(filter);
     
-    // Connect logic: if glitch, route through distortion if needed, else direct
     if (useGlitch && this.distortionNode) {
-       filter.connect(gain); // Keeping it clean for now
+       filter.connect(gain); 
     } else {
        filter.connect(gain);
     }
@@ -129,10 +127,12 @@ class AudioEngine {
           const osc = this.ctx.createOscillator();
           osc.type = 'sawtooth'; 
           osc.frequency.setValueAtTime(freq * h, time);
+          
           const filter = this.ctx.createBiquadFilter();
           filter.type = 'lowpass';
           filter.frequency.setValueAtTime(200, time);
           filter.frequency.linearRampToValueAtTime(600, time + duration); 
+
           osc.connect(filter);
           filter.connect(gain);
           osc.start(time);
@@ -149,15 +149,19 @@ class AudioEngine {
       const osc = this.ctx.createOscillator();
       const gain = this.ctx.createGain();
       const filter = this.ctx.createBiquadFilter();
+      
       osc.type = 'triangle'; 
       osc.frequency.setValueAtTime(freq, time);
       osc.detune.value = detune;
+
       filter.type = 'lowpass';
       filter.frequency.setValueAtTime(200, time);
       filter.frequency.linearRampToValueAtTime(800, time + duration/2);
+      
       gain.gain.setValueAtTime(0, time);
       gain.gain.linearRampToValueAtTime(0.15, time + 1.5); 
       gain.gain.linearRampToValueAtTime(0, time + duration); 
+      
       osc.connect(filter);
       filter.connect(gain);
       gain.connect(this.ctx.destination);
@@ -169,7 +173,10 @@ class AudioEngine {
     if (!this.ctx) return;
     const gain = this.ctx.createGain();
     gain.connect(this.ctx.destination);
+    
     const harmonics = [1, 2, 3, 4];
+    const vols = [0.02, 0.015, 0.01, 0.005]; 
+
     harmonics.forEach((h, i) => {
         const osc = this.ctx.createOscillator();
         osc.type = i % 2 === 0 ? 'square' : 'sawtooth'; 
@@ -178,6 +185,7 @@ class AudioEngine {
         osc.start(time);
         osc.stop(time + duration);
     });
+
     gain.gain.setValueAtTime(0, time);
     gain.gain.linearRampToValueAtTime(0.02, time + 0.1); 
     gain.gain.setValueAtTime(0.02, time + duration - 0.1);
@@ -236,38 +244,53 @@ class AudioEngine {
     const step = this.beatCount % 16;
     const root = (Math.floor(this.beatCount / 32) % 2 === 0) ? 41.20 : 49.00; 
     
+    // Stage 1 (Menu/Base)
     if (step % 4 === 0) this.playDrum(time, 'kick');
     if (step % 4 === 2 || step % 4 === 3) this.playOsc(time, root, 'sawtooth', 0.15, 0.5, 600);
 
+    // Stage 2
     if (this.density >= 2 && (step === 4 || step === 12)) this.playDrum(time, 'snare');
-    if (this.density >= 3 && step % 4 === 0) this.playOsc(time, root * 1.5, 'triangle', 0.2, 0.1, 1000); 
+    
+    // Stage 3
+    if (this.density >= 3) {
+        if (step % 4 === 0) this.playOsc(time, root * 1.5, 'triangle', 0.2, 0.1, 1000); 
+    }
 
+    // Stage 4-5
     if (this.density >= 5 && step % 2 === 0) {
        const arp = [root*4, root*6, root*8, root*5];
        this.playOsc(time, arp[(step/2)%4], 'square', 0.1, 0.05, 2000);
     }
 
+    // Stage 6
     if (this.density >= 6 && step === 0 && this.beatCount % 32 === 0) {
         this.playPad(time, root * 4, 4, -5); 
         this.playPad(time, root * 6, 4, 5); 
     }
 
+    // Stage 7
     if (this.density >= 7 && step % 2 === 0) this.playDrum(time, 'hat'); 
     
+    // Stage 8
     if (this.density >= 8) {
         const soloNotes = [root*8, root*12, root*10, root*15, root*8, root*6, root*12, root*16];
         this.playOsc(time, soloNotes[step % 8], 'sawtooth', 0.12, 0.1, 4000);
     }
 
-    if (this.density >= 9 && step === 0 && this.beatCount % 32 === 0) {
+    // Stage 9
+    if (this.density >= 9) {
+        if (step === 0 && this.beatCount % 32 === 0) {
              this.playOsc(time, root * 2, 'sawtooth', 0.08, 0.15, 800);  
              this.playOsc(time, root * 3, 'sawtooth', 0.08, 0.15, 800); 
+        }
     }
     
+    // Stage 10
     if (this.density >= 10 && Math.random() > 0.90) {
         this.playOsc(time, Math.random()*4000 + 200, 'sine', 0.1, 0.05, 8000, true); 
     }
 
+    // Stage 11
     if (this.density >= 11 && step === 0 && this.beatCount % 64 === 0) {
         this.playCinematicStack(time, root, 8); 
     }
@@ -292,7 +315,7 @@ class AudioEngine {
 
 const audio = new AudioEngine();
 
-// --- VISUAL EFFECT ---
+// --- VISUAL EFFECT v12.0 ---
 const WormholeEffect = ({ streak, isChronos, isGameOver, failCount }) => {
   const canvasRef = useRef(null);
   const streakRef = useRef(streak); 
@@ -336,7 +359,6 @@ const WormholeEffect = ({ streak, isChronos, isGameOver, failCount }) => {
       let warpFactor = 0; 
       let isNegative = false;
 
-      // Stages
       if (currentStreak >= 60) { isNegative = true; speedMult = 6.0; warpFactor = 50; } 
       else if (currentStreak >= 50) { baseHue = 'nebula'; speedMult = 5.5; warpFactor = 45; } 
       else if (currentStreak >= 45) { baseHue = 'rainbow'; speedMult = 5.0; warpFactor = 40; } 
@@ -360,6 +382,7 @@ const WormholeEffect = ({ streak, isChronos, isGameOver, failCount }) => {
          bgStyle = `rgba(${r}, ${g}, ${b}, 0.2)`; 
       }
 
+      const failIntensity = failCount / 10; 
       if (failCount > 0) {
           let alpha = 0;
           if (failCount > 5) {
@@ -514,24 +537,11 @@ const CategoryCard = ({ id, label, icon: Icon, count, onClick, isSpecial }) => (
   </button>
 );
 
-// --- UPDATED CATEGORY GRID ---
 const CategoryGrid = ({ onSelect, data }) => {
-  // HELPER: Calculate counts based on the passed 'data' prop
   const getCount = (key) => {
-      // If data hasn't loaded yet, return 0
-      if (!data) return 0;
-      
-      // Special logic for Chaos Mode (Count everything)
-      if (key === 'mixed') {
-          return Object.values(data).flat().length;
-      }
-      
-      // Special logic for Counting Time (Filter by isTiming flag)
-      if (key === 'timing') {
-          return Object.values(data).flat().filter(q => q.isTiming).length;
-      }
-      
-      // Standard Category Count
+      if (!data) return "0";
+      if (key === 'mixed') return Object.values(data).flat().length;
+      if (key === 'timing') return Object.values(data).flat().filter(q => q.isTiming).length;
       return data[key]?.length || 0;
   };
 
@@ -614,7 +624,7 @@ export default function SQEArcade() {
   const [commentary, setCommentary] = useState('');
   const [isChronosMode, setIsChronosMode] = useState(false);
   const [currentCategory, setCurrentCategory] = useState('');
-  const [rawQuestions, setRawQuestions] = useState(null); // LOADED DATA
+  const [rawQuestions, setRawQuestions] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
   const timerRef = useRef(null);
@@ -697,7 +707,6 @@ export default function SQEArcade() {
       }
   };
 
-  // Bind global unlock on first interaction
   useEffect(() => {
       const unlock = () => {
           audio.resume();
@@ -718,7 +727,6 @@ export default function SQEArcade() {
   };
 
   const selectCategoryWithState = (categoryKey, keepState) => {
-    // FIX: FALLBACK TO PREPARED_BANKS IF RAWQUESTIONS IS NULL
     const sourceData = rawQuestions || PREPARED_BANKS;
     
     let questions = [];
@@ -736,7 +744,6 @@ export default function SQEArcade() {
       questions = sourceData[categoryKey] || [];
     }
 
-    // --- FILTER BY DIFFICULTY LEVEL ---
     const filteredQuestions = questions.filter(q => {
         const qDiff = parseInt(q.difficulty || "1");
         return qDiff <= level;
@@ -857,7 +864,6 @@ export default function SQEArcade() {
       const streakBonus = streak * 100;
       const rawScore = 1000 + (timeBonus / 10) + streakBonus;
       
-      // APPLY DIFFICULTY BONUS
       const qDiff = parseInt(currentQ.difficulty || "1");
       const diffBonus = (qDiff - 1) * 500; 
       
