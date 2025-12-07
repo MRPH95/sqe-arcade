@@ -3,40 +3,7 @@ import { Play, Pause, RefreshCw, Check, X, Volume2, VolumeX, Zap, Trophy, Award,
 import { initializeApp } from 'firebase/app';
 import { getAuth, signInAnonymously, onAuthStateChanged, signInWithCustomToken } from 'firebase/auth';
 import { getFirestore, collection, addDoc, query, orderBy, limit, onSnapshot, serverTimestamp } from 'firebase/firestore';
-
-// --- FIREBASE SETUP ---
-// Note: Ensure your environment variables are set in Vercel/Local env
-const firebaseConfigStr = typeof __firebase_config !== 'undefined' ? __firebase_config : JSON.stringify({
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT.firebaseapp.com",
-  projectId: "YOUR_PROJECT",
-  storageBucket: "YOUR_PROJECT.appspot.com",
-  messagingSenderId: "123",
-  appId: "1:123:web:123"
-});
-
-const firebaseConfig = JSON.parse(firebaseConfigStr);
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-const db = getFirestore(app);
-const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
-
-// --- FALLBACK DATA (Used ONLY if JSON fetch fails) ---
-const RAW_QUESTION_BANKS = {
-  business: [
-    { q: "A sole trader must register with Companies House.", a: false, exp: "Only with HMRC.", difficulty: "1" },
-    { q: "Partners in a general partnership are jointly and severally liable.", a: true, exp: "Unlimited liability for firm debts.", difficulty: "1" }
-  ]
-};
-
-// Helper to flatten fallback data
-const PREPARED_BANKS = {};
-Object.keys(RAW_QUESTION_BANKS).forEach(key => {
-  PREPARED_BANKS[key] = RAW_QUESTION_BANKS[key].map(q => ({
-    ...q,
-    category: key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase()) 
-  }));
-});
+import { db, auth } from './firebase';
 
 // --- AUDIO ENGINE v22.0 (Lazy Load Fix) ---
 class AudioEngine {
