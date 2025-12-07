@@ -1741,315 +1741,315 @@
   {
     "q": "A defendant found unfit to plead can be given a custodial sentence.",
     "a": false,
-    [cite_start]"exp": "The only options are a hospital order, supervision order, or absolute discharge[cite: 1088].",
+    "exp": "The only options are a hospital order, supervision order, or absolute discharge[cite: 1088].",
     "isTiming": false,
     "difficulty": 3
   },
   {
     "q": "If a defendant is unfit to plead, the jury determines if they had the mens rea.",
     "a": false,
-    [cite_start]"exp": "The jury determines if they committed the act (actus reus), not the mens rea[cite: 1087].",
+    "exp": "The jury determines if they committed the act (actus reus), not the mens rea[cite: 1087].",
     "isTiming": false,
     "difficulty": 3
   },
   {
     "q": "The prosecution must disclose material that is neutral to the case.",
     "a": false,
-    [cite_start]"exp": "Disclosure is required only if it undermines the prosecution or assists the defence[cite: 1268].",
+    "exp": "Disclosure is required only if it undermines the prosecution or assists the defence[cite: 1268].",
     "isTiming": false,
     "difficulty": 2
   },
   {
     "q": "A defence statement is mandatory in the Magistrates' Court.",
     "a": false,
-    [cite_start]"exp": "It is voluntary in the Magistrates' Court but mandatory in the Crown Court[cite: 1365].",
+    "exp": "It is voluntary in the Magistrates' Court but mandatory in the Crown Court[cite: 1365].",
     "isTiming": false,
     "difficulty": 2
   },
   {
     "q": "Failure to serve a defence statement prevents the accused from calling alibi witnesses.",
     "a": false,
-    [cite_start]"exp": "The court cannot prevent the witness being called; the sanction is adverse inferences[cite: 1435].",
+    "exp": "The court cannot prevent the witness being called; the sanction is adverse inferences[cite: 1435].",
     "isTiming": false,
     "difficulty": 3
   },
   {
     "q": "The defence statement must be served within 28 days of prosecution initial disclosure.",
     "a": true,
-    [cite_start]"exp": "CrimPR 15.4; strict time limit for Crown Court defence statements[cite: 1365].",
+    "exp": "CrimPR 15.4; strict time limit for Crown Court defence statements[cite: 1365].",
     "isTiming": true,
     "difficulty": 2
   },
   {
     "q": "A s.8 application for specific disclosure can be made without serving a defence statement.",
     "a": false,
-    [cite_start]"exp": "Service of a defence statement is a prerequisite for a s.8 application[cite: 1511].",
+    "exp": "Service of a defence statement is a prerequisite for a s.8 application[cite: 1511].",
     "isTiming": false,
     "difficulty": 3
   },
   {
     "q": "The prosecution's duty of disclosure ends once the trial begins.",
     "a": false,
-    [cite_start]"exp": "It is a continuing duty until conviction, acquittal, or discontinuation[cite: 1502].",
+    "exp": "It is a continuing duty until conviction, acquittal, or discontinuation[cite: 1502].",
     "isTiming": false,
     "difficulty": 2
   },
   {
     "q": "A s.9 statement is admissible as evidence if the other party does not object.",
     "a": true,
-    [cite_start]"exp": "s.9 CJA 1967 allows statements to be read if agreed/uncontested[cite: 1621].",
+    "exp": "s.9 CJA 1967 allows statements to be read if agreed/uncontested[cite: 1621].",
     "isTiming": false,
     "difficulty": 2
   },
   {
     "q": "Judicial notice 'on enquiry' allows a judge to research indisputable facts.",
     "a": true,
-    [cite_start]"exp": "Judges can look up generally known facts; jurors cannot research[cite: 1639].",
+    "exp": "Judges can look up generally known facts; jurors cannot research[cite: 1639].",
     "isTiming": false,
     "difficulty": 2
   },
   {
     "q": "An application to dismiss a charge must be made after arraignment.",
     "a": false,
-    [cite_start]"exp": "It must be made *before* the defendant is arraigned[cite: 1776].",
+    "exp": "It must be made *before* the defendant is arraigned[cite: 1776].",
     "isTiming": false,
     "difficulty": 3
   },
   {
     "q": "Under Galbraith, a judge must stop the case if the evidence is weak or vague.",
     "a": false,
-    [cite_start]"exp": "Only if a properly directed jury *could not* properly convict on it[cite: 1799].",
+    "exp": "Only if a properly directed jury *could not* properly convict on it[cite: 1799].",
     "isTiming": false,
     "difficulty": 3
   },
   {
     "q": "Section 78 PACE can be used to exclude defence evidence.",
     "a": false,
-    [cite_start]"exp": "s.78 applies only to evidence on which the *prosecution* proposes to rely[cite: 1821].",
+    "exp": "s.78 applies only to evidence on which the *prosecution* proposes to rely[cite: 1821].",
     "isTiming": false,
     "difficulty": 2
   },
   {
     "q": "Abuse of process can be argued if the police destroy evidence assisting the defence.",
     "a": true,
-    [cite_start]"exp": "This can undermine the integrity of the justice system[cite: 1847].",
+    "exp": "This can undermine the integrity of the justice system[cite: 1847].",
     "isTiming": false,
     "difficulty": 2
   },
   {
     "q": "A confession obtained by oppression must be excluded even if it is true.",
     "a": true,
-    [cite_start]"exp": "s.76(2)(a) PACE; the court 'shall not allow' it, regardless of truth[cite: 2132].",
+    "exp": "s.76(2)(a) PACE; the court 'shall not allow' it, regardless of truth[cite: 2132].",
     "isTiming": false,
     "difficulty": 2
   },
   {
     "q": "Facts discovered as a result of an excluded confession are inadmissible.",
     "a": false,
-    [cite_start]"exp": "s.76(4) PACE allows facts discovered to be admitted (no 'fruit of poisoned tree')[cite: 2230].",
+    "exp": "s.76(4) PACE allows facts discovered to be admitted (no 'fruit of poisoned tree')[cite: 2230].",
     "isTiming": false,
     "difficulty": 3
   },
   {
     "q": "Denying a solicitor to a vulnerable suspect renders a confession unreliable under s.76(2)(b).",
     "a": true,
-    [cite_start]"exp": "R v McGovern; breach of Code C likely renders confession unreliable[cite: 2205].",
+    "exp": "R v McGovern; breach of Code C likely renders confession unreliable[cite: 2205].",
     "isTiming": false,
     "difficulty": 3
   },
   {
     "q": "A nod or gesture can constitute a 'confession' under PACE.",
     "a": true,
-    [cite_start]"exp": "s.82(1) PACE defines confession as words 'or otherwise'[cite: 2087].",
+    "exp": "s.82(1) PACE defines confession as words 'or otherwise'[cite: 2087].",
     "isTiming": false,
     "difficulty": 2
   },
   {
     "q": "The prosecution must prove beyond reasonable doubt that a confession was not obtained by oppression.",
     "a": true,
-    [cite_start]"exp": "Once raised, the burden is on the prosecution to disprove oppression[cite: 2121].",
+    "exp": "Once raised, the burden is on the prosecution to disprove oppression[cite: 2121].",
     "isTiming": false,
     "difficulty": 2
   },
   {
     "q": "The court can raise s.76 confession issues of its own motion.",
     "a": true,
-    [cite_start]"exp": "s.76(3) PACE allows the court to require proof of admissibility[cite: 2119].",
+    "exp": "s.76(3) PACE allows the court to require proof of admissibility[cite: 2119].",
     "isTiming": false,
     "difficulty": 2
   },
   {
     "q": "A 'mixed' statement (part admission, part exculpatory) is a confession.",
     "a": true,
-    "exp": "s.82(1) PACE; [cite_start]'wholly or partly adverse'[cite: 2090].",
+    "exp": "s.82(1) PACE; 'wholly or partly adverse'[cite: 2090].",
     "isTiming": false,
     "difficulty": 2
   },
   {
     "q": "Breach of Code C automatically renders a confession inadmissible.",
     "a": false,
-    [cite_start]"exp": "Breaches must be significant/substantial to trigger exclusion under s.76 or s.78[cite: 2008].",
+    "exp": "Breaches must be significant/substantial to trigger exclusion under s.76 or s.78[cite: 2008].",
     "isTiming": false,
     "difficulty": 3
   },
   {
     "q": "A voir dire is held in the presence of the jury.",
     "a": false,
-    [cite_start]"exp": "It is a 'trial within a trial' held in the absence of the jury[cite: 2047].",
+    "exp": "It is a 'trial within a trial' held in the absence of the jury[cite: 2047].",
     "isTiming": false,
     "difficulty": 2
   },
   {
     "q": "The defence can apply to exclude a confession under both s.76 and s.78.",
     "a": true,
-    [cite_start]"exp": "They are often argued in the alternative[cite: 2292].",
+    "exp": "They are often argued in the alternative[cite: 2292].",
     "isTiming": false,
     "difficulty": 2
   },
   {
     "q": "The prosecution can tell the jury that a body was found because the defendant confessed.",
     "a": false,
-    [cite_start]"exp": "s.76(5) PACE prohibits linking the discovery to the excluded statement[cite: 2232].",
+    "exp": "s.76(5) PACE prohibits linking the discovery to the excluded statement[cite: 2232].",
     "isTiming": false,
     "difficulty": 3
   },
   {
     "q": "PTPH stands for Plea and Trial Preparation Hearing.",
     "a": true,
-    [cite_start]"exp": "The main pre-trial hearing in the Crown Court[cite: 1063].",
+    "exp": "The main pre-trial hearing in the Crown Court[cite: 1063].",
     "isTiming": false,
     "difficulty": 1
   },
   {
     "q": "'Arraignment' is the process of putting the indictment to the defendant.",
     "a": true,
-    [cite_start]"exp": "Occurs at the plea stage of the PTPH[cite: 1081].",
+    "exp": "Occurs at the plea stage of the PTPH[cite: 1081].",
     "isTiming": false,
     "difficulty": 1
   },
   {
     "q": "'Used material' is material the prosecution relies on at trial.",
     "a": true,
-    [cite_start]"exp": "Evidence served on the defence[cite: 1161].",
+    "exp": "Evidence served on the defence[cite: 1161].",
     "isTiming": false,
     "difficulty": 1
   },
   {
     "q": "'Unused material' must be recorded on a schedule.",
     "a": true,
-    [cite_start]"exp": "Usually the MG6C schedule[cite: 1235].",
+    "exp": "Usually the MG6C schedule[cite: 1235].",
     "isTiming": false,
     "difficulty": 1
   },
   {
     "q": "CPIA stands for Criminal Procedure and Investigations Act 1996.",
     "a": true,
-    [cite_start]"exp": "Primary legislation governing disclosure[cite: 1191].",
+    "exp": "Primary legislation governing disclosure[cite: 1191].",
     "isTiming": false,
     "difficulty": 1
   },
   {
     "q": "A 'Defence Statement' sets out the nature of the accused's defence.",
     "a": true,
-    [cite_start]"exp": "Defined in s.6A CPIA 1996[cite: 1343].",
+    "exp": "Defined in s.6A CPIA 1996[cite: 1343].",
     "isTiming": false,
     "difficulty": 1
   },
   {
     "q": "s.11 CPIA allows adverse inferences from disclosure failures.",
     "a": true,
-    [cite_start]"exp": "Sanction for failing to serve/inadequate defence statement[cite: 1429].",
+    "exp": "Sanction for failing to serve/inadequate defence statement[cite: 1429].",
     "isTiming": false,
     "difficulty": 1
   },
   {
     "q": "PII stands for Public Interest Immunity.",
     "a": true,
-    [cite_start]"exp": "Application to withhold sensitive material[cite: 1551].",
+    "exp": "Application to withhold sensitive material[cite: 1551].",
     "isTiming": false,
     "difficulty": 1
   },
   {
     "q": "'Facts in issue' are facts a party must prove to succeed.",
     "a": true,
-    [cite_start]"exp": "Elements of the offence or defence[cite: 1605].",
+    "exp": "Elements of the offence or defence[cite: 1605].",
     "isTiming": false,
     "difficulty": 1
   },
   {
     "q": "s.10 CJA 1967 deals with Formal Admissions.",
     "a": true,
-    [cite_start]"exp": "Agreeing facts in writing[cite: 1626].",
+    "exp": "Agreeing facts in writing[cite: 1626].",
     "isTiming": false,
     "difficulty": 1
   },
   {
     "q": "'Real evidence' refers to material objects produced for inspection.",
     "a": true,
-    [cite_start]"exp": "e.g., the knife used in an attack[cite: 1657].",
+    "exp": "e.g., the knife used in an attack[cite: 1657].",
     "isTiming": false,
     "difficulty": 1
   },
   {
     "q": "The jury is the 'Tribunal of Fact' in the Crown Court.",
     "a": true,
-    [cite_start]"exp": "They determine the facts; the judge determines the law[cite: 1694].",
+    "exp": "They determine the facts; the judge determines the law[cite: 1694].",
     "isTiming": false,
     "difficulty": 1
   },
   {
     "q": "'Admissibility' is a question of law for the judge.",
     "a": true,
-    [cite_start]"exp": "Determined by the Tribunal of Law[cite: 1696].",
+    "exp": "Determined by the Tribunal of Law[cite: 1696].",
     "isTiming": false,
     "difficulty": 1
   },
   {
     "q": "Galbraith provides the test for 'No Case to Answer'.",
     "a": true,
-    [cite_start]"exp": "R v Galbraith [1981][cite: 1796].",
+    "exp": "R v Galbraith [1981][cite: 1796].",
     "isTiming": false,
     "difficulty": 1
   },
   {
     "q": "s.78 PACE relates to the exclusion of unfair evidence.",
     "a": true,
-    [cite_start]"exp": "Discretionary exclusion power[cite: 1918].",
+    "exp": "Discretionary exclusion power[cite: 1918].",
     "isTiming": false,
     "difficulty": 1
   },
   {
     "q": "s.82(1) PACE defines a 'confession'.",
     "a": true,
-    [cite_start]"exp": "Includes statements wholly or partly adverse[cite: 2087].",
+    "exp": "Includes statements wholly or partly adverse[cite: 2087].",
     "isTiming": false,
     "difficulty": 1
   },
   {
     "q": "A purely exculpatory statement is a confession.",
     "a": false,
-    [cite_start]"exp": "Must be wholly or partly adverse to the maker[cite: 2093].",
+    "exp": "Must be wholly or partly adverse to the maker[cite: 2093].",
     "isTiming": false,
     "difficulty": 1
   },
   {
     "q": "s.76(2)(a) PACE deals with exclusion for oppression.",
     "a": true,
-    [cite_start]"exp": "Mandatory exclusion if oppression proved[cite: 2100].",
+    "exp": "Mandatory exclusion if oppression proved[cite: 2100].",
     "isTiming": false,
     "difficulty": 1
   },
   {
     "q": "s.76(2)(b) PACE deals with exclusion for unreliability.",
     "a": true,
-    [cite_start]"exp": "Mandatory exclusion if unreliability proved[cite: 2101].",
+    "exp": "Mandatory exclusion if unreliability proved[cite: 2101].",
     "isTiming": false,
     "difficulty": 1
   },
   {
     "q": "'Oppression' includes torture or inhuman treatment.",
     "a": true,
-    [cite_start]"exp": "Defined in s.76(8) PACE[cite: 2113].",
+    "exp": "Defined in s.76(8) PACE[cite: 2113].",
     "isTiming": false,
     "difficulty": 1
   },
