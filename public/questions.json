@@ -696,7 +696,7 @@
     "exp": "A fixed fee is a set amount regardless of time; a capped fee records time but will not exceed a limit.",
     "isTiming": false,
     "difficulty": 1
-  }
+  },
   {
     "q": "Does the succession estate include property passing by survivorship?",
     "a": false,
