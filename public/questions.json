@@ -346,12 +346,7 @@
     { "q": "Search warrant valid for 3 months.", "a": true, "exp": "Duration.", "isTiming": true },
     { "q": "Suspended sentence max length: 2 years.", "a": true, "exp": "Prison term.", "isTiming": true }
   ],
-
-
-
-  
   "willsAdmin": [
-
   {
     "q": "Can you act where there is a significant risk of an own interest conflict?",
     "a": false,
@@ -1053,7 +1048,6 @@
     "isTiming": false,
     "difficulty": 2
   }
-
   {
     "q": "If a testator lacks capacity at execution but had it at instruction, the will is always invalid.",
     "a": false,
@@ -1404,7 +1398,6 @@
     "isTiming": false,
     "difficulty": 2
   }
-
   {
     "q": "Does the intestacy rule for spouses require them to survive the deceased by 28 days?",
     "a": true,
@@ -1755,7 +1748,6 @@
     "isTiming": false,
     "difficulty": 1
   }
-
   {
     "q": "An executor who has intermeddled in an estate may subsequently renounce their position.",
     "a": false,
@@ -2105,32 +2097,7 @@
     "exp": "Section 25 Administration of Estates Act 1925 imposes a duty to collect and get in the estate.",
     "isTiming": false,
     "difficulty": 1
-  }
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-    
-
-
-
-    
+  } 
   ],
   "trusts": [
   {
@@ -2476,9 +2443,7 @@
     "isTiming": false,
     "difficulty": 1
   }
-
-
-    {
+  {
     "q": "The 'complete list' test applies to discretionary trusts.",
     "a": false,
     "exp": "McPhail v Doulton; the 'is or is not' test applies to discretionary trusts.",
@@ -3179,8 +3144,7 @@
     "isTiming": false,
     "difficulty": 1
   }
-
-    {
+  {
     "q": "A trustee sells trust property to a company in which they are the sole shareholder. This transaction is automatically void.",
     "a": false,
     "exp": "Self-dealing transactions are voidable by the beneficiaries, not automatically void.",
@@ -3530,8 +3494,7 @@
     "isTiming": false,
     "difficulty": 1
   }
-
-    {
+  {
     "q": "Beneficiaries can trace into the hands of a bona fide purchaser for value without notice.",
     "a": false,
     "exp": "Foskett v McKeown; a BFP takes the property free of equitable interests, extinguishing the proprietary claim.",
@@ -3881,8 +3844,7 @@
     "isTiming": false,
     "difficulty": 1
   }
-
-    {
+  {
     "q": "A trust of land can be validly declared orally.",
     "a": false,
     "exp": "s.53(1)(b) LPA 1925; a declaration of trust respecting land must be manifested and proved in signed writing.",
@@ -4232,8 +4194,7 @@
     "isTiming": false,
     "difficulty": 1
   }
-
-    {
+  {
     "q": "A trust for 'the relief of poverty' fails if it does not benefit the public.",
     "a": false,
     "exp": "Dingle v Turner; trusts for the relief of poverty are an exception to the strict public benefit rule (personal nexus allowed).",
@@ -4583,8 +4544,7 @@
     "isTiming": false,
     "difficulty": 1
   }
-
-    {
+  {
     "q": "An oral declaration of a trust of land is void ab initio.",
     "a": false,
     "exp": "s.53(1)(b) LPA 1925; it is valid but unenforceable until manifested and proved in signed writing.",
@@ -4934,8 +4894,7 @@
     "isTiming": false,
     "difficulty": 1
   }
-
-    {
+  {
     "q": "The presumption of advancement applies to determine beneficial ownership of a family home between cohabitants.",
     "a": false,
     "exp": "Jones v Kernott; resulting trusts/presumptions of advancement are displaced by the common intention constructive trust.",
@@ -5285,8 +5244,7 @@
     "isTiming": false,
     "difficulty": 1
   }
-
-    {
+  {
     "q": "Under s.32 TA 1925 (post-2014), trustees can advance up to 100% of a beneficiary's prospective share.",
     "a": true,
     "exp": "The Inheritance and Trustees' Powers Act 2014 removed the 50% cap for trusts created after 1 Oct 2014.",
@@ -5636,13 +5594,7 @@
     "isTiming": false,
     "difficulty": 1
   }
-
   ],
-
-
-
-
-  
   "public_law_1": [
     {
       "q": "Parliamentary Sovereignty means Parliament can make/unmake any law.",
