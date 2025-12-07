@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { Play, Pause, Volume2, VolumeX, Zap, Trophy, Hexagon, Briefcase, Gavel, Home, ScrollText, AlertTriangle, Tag, FastForward, Eye, BrainCircuit, MessageSquare, Clock, ShieldAlert, Activity, Scale, Landmark } from 'lucide-react';
+import { Play, Pause, RefreshCw, Check, X, Volume2, VolumeX, Zap, Trophy, Award, Hexagon, Briefcase, Gavel, Home, ScrollText, AlertTriangle, Tag, FastForward, Eye, BrainCircuit, MessageSquare, Clock, ShieldAlert, ArrowRight, Activity, Scale, Landmark, BookOpen, Shield } from 'lucide-react';
 import { initializeApp } from 'firebase/app';
 import { getAuth, signInAnonymously, onAuthStateChanged, signInWithCustomToken } from 'firebase/auth';
 import { getFirestore, collection, addDoc, query, orderBy, limit, onSnapshot, serverTimestamp } from 'firebase/firestore';
 
 // --- FIREBASE SETUP ---
-// Note: Ensure your environment variables are set in Vercel/Local env
+// NOTE: Replace this with your actual config from the Firebase Console if not using env variables
 const firebaseConfigStr = typeof __firebase_config !== 'undefined' ? __firebase_config : JSON.stringify({
   apiKey: "YOUR_API_KEY",
   authDomain: "YOUR_PROJECT.firebaseapp.com",
@@ -21,16 +21,17 @@ const auth = getAuth(app);
 const db = getFirestore(app);
 const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
 
-// --- FALLBACK DATA (Used if JSON fetch fails) ---
+// --- FALLBACK DATA ---
+// This is used ONLY if questions.json fails to load.
 const RAW_QUESTION_BANKS = {
   business: [
     { q: "A sole trader must register with Companies House.", a: false, exp: "Only with HMRC.", difficulty: "1" },
-    { q: "Directors must avoid conflicts of interest (s.175).", a: true, exp: "Strict fiduciary duty.", difficulty: "1" },
+    { q: "Partners in a general partnership are jointly and severally liable.", a: true, exp: "Unlimited liability.", difficulty: "1" }
   ],
-  // ... (Minimal fallback set to prevent crash)
+  // ... (You can keep your original fallback data here if you wish, but the JSON is primary)
 };
 
-// Helper to flatten
+// Helper to prepare fallback data
 const PREPARED_BANKS = {};
 Object.keys(RAW_QUESTION_BANKS).forEach(key => {
   PREPARED_BANKS[key] = RAW_QUESTION_BANKS[key].map(q => ({
@@ -39,7 +40,7 @@ Object.keys(RAW_QUESTION_BANKS).forEach(key => {
   }));
 });
 
-// --- AUDIO ENGINE v20.0 (FINAL) ---
+// --- AUDIO ENGINE v21.0 (Refined) ---
 class AudioEngine {
   constructor() {
     this.ctx = null;
@@ -106,8 +107,9 @@ class AudioEngine {
 
     osc.connect(filter);
     
+    // Connect logic: if glitch, route through distortion if needed, else direct
     if (useGlitch && this.distortionNode) {
-       filter.connect(gain); // Bypassed distortion for cleanliness based on v18 feedback
+       filter.connect(gain); // Keeping it clean for now
     } else {
        filter.connect(gain);
     }
@@ -234,53 +236,38 @@ class AudioEngine {
     const step = this.beatCount % 16;
     const root = (Math.floor(this.beatCount / 32) % 2 === 0) ? 41.20 : 49.00; 
     
-    // Stage 1 (Menu/Base)
     if (step % 4 === 0) this.playDrum(time, 'kick');
     if (step % 4 === 2 || step % 4 === 3) this.playOsc(time, root, 'sawtooth', 0.15, 0.5, 600);
 
-    // Stage 2
     if (this.density >= 2 && (step === 4 || step === 12)) this.playDrum(time, 'snare');
-    
-    // Stage 3
-    if (this.density >= 3) {
-        if (step % 4 === 0) this.playOsc(time, root * 1.5, 'triangle', 0.2, 0.1, 1000); 
-    }
+    if (this.density >= 3 && step % 4 === 0) this.playOsc(time, root * 1.5, 'triangle', 0.2, 0.1, 1000); 
 
-    // Stage 4-5
     if (this.density >= 5 && step % 2 === 0) {
        const arp = [root*4, root*6, root*8, root*5];
        this.playOsc(time, arp[(step/2)%4], 'square', 0.1, 0.05, 2000);
     }
 
-    // Stage 6: CELESTIAL CHOIR
     if (this.density >= 6 && step === 0 && this.beatCount % 32 === 0) {
         this.playPad(time, root * 4, 4, -5); 
         this.playPad(time, root * 6, 4, 5); 
     }
 
-    // Stage 7: Hats
     if (this.density >= 7 && step % 2 === 0) this.playDrum(time, 'hat'); 
     
-    // Stage 8: "Aerodynamic"
     if (this.density >= 8) {
         const soloNotes = [root*8, root*12, root*10, root*15, root*8, root*6, root*12, root*16];
         this.playOsc(time, soloNotes[step % 8], 'sawtooth', 0.12, 0.1, 4000);
     }
 
-    // Stage 9: Reduced Super Saws
-    if (this.density >= 9) {
-        if (step === 0 && this.beatCount % 32 === 0) {
+    if (this.density >= 9 && step === 0 && this.beatCount % 32 === 0) {
              this.playOsc(time, root * 2, 'sawtooth', 0.08, 0.15, 800);  
              this.playOsc(time, root * 3, 'sawtooth', 0.08, 0.15, 800); 
-        }
     }
     
-    // Stage 10: Cosmic Shimmer
     if (this.density >= 10 && Math.random() > 0.90) {
         this.playOsc(time, Math.random()*4000 + 200, 'sine', 0.1, 0.05, 8000, true); 
     }
 
-    // Stage 11-12: Deep Cinematic Strings
     if (this.density >= 11 && step === 0 && this.beatCount % 64 === 0) {
         this.playCinematicStack(time, root, 8); 
     }
@@ -305,7 +292,7 @@ class AudioEngine {
 
 const audio = new AudioEngine();
 
-// --- VISUAL EFFECT v12.0 ---
+// --- VISUAL EFFECT ---
 const WormholeEffect = ({ streak, isChronos, isGameOver, failCount }) => {
   const canvasRef = useRef(null);
   const streakRef = useRef(streak); 
@@ -341,6 +328,7 @@ const WormholeEffect = ({ streak, isChronos, isGameOver, failCount }) => {
 
     const render = () => {
       const currentStreak = streakRef.current;
+      
       let baseHue = 210; 
       let sat = '80%'; 
       let light = '70%'; 
@@ -348,7 +336,7 @@ const WormholeEffect = ({ streak, isChronos, isGameOver, failCount }) => {
       let warpFactor = 0; 
       let isNegative = false;
 
-      // Visual Progression
+      // Stages
       if (currentStreak >= 60) { isNegative = true; speedMult = 6.0; warpFactor = 50; } 
       else if (currentStreak >= 50) { baseHue = 'nebula'; speedMult = 5.5; warpFactor = 45; } 
       else if (currentStreak >= 45) { baseHue = 'rainbow'; speedMult = 5.0; warpFactor = 40; } 
@@ -492,7 +480,6 @@ const DifficultySelector = ({ current, onSelect }) => (
   </div>
 );
 
-// LEVEL SELECTOR (NEW)
 const LevelSelector = ({ current, onSelect }) => (
   <div className="flex gap-2 justify-center mb-6 flex-wrap">
     {[
@@ -515,7 +502,6 @@ const LevelSelector = ({ current, onSelect }) => (
   </div>
 );
 
-
 const CategoryCard = ({ id, label, icon: Icon, count, onClick, isSpecial }) => (
   <button 
     onClick={onClick}
@@ -528,24 +514,34 @@ const CategoryCard = ({ id, label, icon: Icon, count, onClick, isSpecial }) => (
   </button>
 );
 
-const CategoryGrid = ({ onSelect }) => {
+// --- REVISED CATEGORY GRID (Dynamic Counts) ---
+const CategoryGrid = ({ onSelect, data }) => {
+  
+  // Calculate counts based on passed data
+  const getCount = (key) => {
+      if (!data) return "0";
+      if (key === 'mixed') return Object.values(data).flat().length;
+      if (key === 'timing') return Object.values(data).flat().filter(q => q.isTiming).length;
+      return data[key]?.length || 0;
+  };
+
   return (
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          <CategoryCard id="business" label="Business Law" icon={Briefcase} count="55" onClick={() => onSelect('business')} />
-          <CategoryCard id="dispute" label="Dispute Resolution" icon={Gavel} count="50" onClick={() => onSelect('dispute')} />
-          <CategoryCard id="contract" label="Contract Law" icon={ScrollText} count="50" onClick={() => onSelect('contract')} />
-          <CategoryCard id="tort" label="Tort Law" icon={AlertTriangle} count="50" onClick={() => onSelect('tort')} />
-          <CategoryCard id="public" label="Public Law" icon={Landmark} count="50" onClick={() => onSelect('public')} />
-          <CategoryCard id="criminalLaw" label="Criminal Law" icon={Scale} count="35" onClick={() => onSelect('criminalLaw')} />
-          <CategoryCard id="criminalPractice" label="Criminal Practice" icon={AlertTriangle} count="30" onClick={() => onSelect('criminalPractice')} />
-          <CategoryCard id="landLaw" label="Land Law" icon={Home} count="50" onClick={() => onSelect('landLaw')} />
-          <CategoryCard id="propertyPractice" label="Property Practice" icon={Briefcase} count="15" onClick={() => onSelect('propertyPractice')} />
-          <CategoryCard id="willsAdmin" label="Wills & Admin" icon={ScrollText} count="50" onClick={() => onSelect('willsAdmin')} />
-          <CategoryCard id="trusts" label="Trusts & Equity" icon={BrainCircuit} count="50" onClick={() => onSelect('trusts')} />
+          <CategoryCard id="business" label="Business Law" icon={Briefcase} count={getCount('business')} onClick={() => onSelect('business')} />
+          <CategoryCard id="dispute" label="Dispute Resolution" icon={Gavel} count={getCount('dispute')} onClick={() => onSelect('dispute')} />
+          <CategoryCard id="contract" label="Contract Law" icon={ScrollText} count={getCount('contract')} onClick={() => onSelect('contract')} />
+          <CategoryCard id="tort" label="Tort Law" icon={AlertTriangle} count={getCount('tort')} onClick={() => onSelect('tort')} />
+          <CategoryCard id="public" label="Public Law" icon={Landmark} count={getCount('public')} onClick={() => onSelect('public')} />
+          <CategoryCard id="criminalLaw" label="Criminal Law" icon={Scale} count={getCount('criminalLaw')} onClick={() => onSelect('criminalLaw')} />
+          <CategoryCard id="criminalPractice" label="Criminal Practice" icon={AlertTriangle} count={getCount('criminalPractice')} onClick={() => onSelect('criminalPractice')} />
+          <CategoryCard id="landLaw" label="Land Law" icon={Home} count={getCount('landLaw')} onClick={() => onSelect('landLaw')} />
+          <CategoryCard id="propertyPractice" label="Property Practice" icon={Briefcase} count={getCount('propertyPractice')} onClick={() => onSelect('propertyPractice')} />
+          <CategoryCard id="willsAdmin" label="Wills & Admin" icon={ScrollText} count={getCount('willsAdmin')} onClick={() => onSelect('willsAdmin')} />
+          <CategoryCard id="trusts" label="Trusts & Equity" icon={BrainCircuit} count={getCount('trusts')} onClick={() => onSelect('trusts')} />
           
           <div className="col-span-full grid grid-cols-2 gap-4 mt-4">
-              <CategoryCard id="mixed" label="CHAOS MODE (ALL)" icon={Hexagon} count="485" onClick={() => onSelect('mixed')} />
-              <CategoryCard id="timing" label="COUNTING TIME" icon={Clock} count="80+" onClick={() => onSelect('timing')} isSpecial={true} />
+              <CategoryCard id="mixed" label="CHAOS MODE (ALL)" icon={Hexagon} count={getCount('mixed')} onClick={() => onSelect('mixed')} />
+              <CategoryCard id="timing" label="COUNTING TIME" icon={Clock} count={getCount('timing')} onClick={() => onSelect('timing')} isSpecial={true} />
           </div>
       </div>
   );
@@ -597,7 +593,7 @@ export default function SQEArcade() {
   const [feedback, setFeedback] = useState(null);
   const [isMuted, setIsMuted] = useState(false);
   const [difficulty, setDifficulty] = useState('standard');
-  const [level, setLevel] = useState(2); // NEW: Merit default
+  const [level, setLevel] = useState(2); 
   const [leaderboard, setLeaderboard] = useState([]);
   const [user, setUser] = useState(null);
   const [userName, setUserName] = useState('');
@@ -608,7 +604,7 @@ export default function SQEArcade() {
   const [commentary, setCommentary] = useState('');
   const [isChronosMode, setIsChronosMode] = useState(false);
   const [currentCategory, setCurrentCategory] = useState('');
-  const [rawQuestions, setRawQuestions] = useState(null);
+  const [rawQuestions, setRawQuestions] = useState(null); // LOADED DATA
   const [isLoading, setIsLoading] = useState(true);
 
   const timerRef = useRef(null);
@@ -676,7 +672,7 @@ export default function SQEArcade() {
         name: userName.trim().slice(0, 15),
         score: score,
         difficulty: difficulty,
-        level: level, // NEW: Save Level
+        level: level, 
         timestamp: serverTimestamp(),
         userId: user.uid,
         mode: isChronosMode ? 'CHRONOS' : (currentCategory || 'STANDARD')
@@ -691,6 +687,7 @@ export default function SQEArcade() {
       }
   };
 
+  // Bind global unlock on first interaction
   useEffect(() => {
       const unlock = () => {
           audio.resume();
@@ -730,16 +727,12 @@ export default function SQEArcade() {
     }
 
     // --- FILTER BY DIFFICULTY LEVEL ---
-    // Level 1: Only difficulty 1 (or undefined)
-    // Level 2: Difficulty 1 & 2
-    // Level 3: All
     const filteredQuestions = questions.filter(q => {
         const qDiff = parseInt(q.difficulty || "1");
         return qDiff <= level;
     });
     
     if (filteredQuestions.length === 0) {
-        // Fallback if filtering removes all (shouldn't happen with good data)
         setActiveQuestions(shuffleArray(questions)); 
     } else {
         setActiveQuestions(shuffleArray(filteredQuestions));
@@ -856,7 +849,7 @@ export default function SQEArcade() {
       
       // APPLY DIFFICULTY BONUS
       const qDiff = parseInt(currentQ.difficulty || "1");
-      const diffBonus = (qDiff - 1) * 500; // +0 for Lvl 1, +500 for Lvl 2, +1000 for Lvl 3
+      const diffBonus = (qDiff - 1) * 500; 
       
       points = Math.floor((rawScore + diffBonus) * getMultiplier());
       
@@ -988,8 +981,6 @@ export default function SQEArcade() {
     return 'bg-rose-600 animate-pulse shadow-[0_0_20px_rgba(225,29,72,0.8)]';
   };
 
-  const timingCount = (rawQuestions ? Object.values(rawQuestions) : Object.values(PREPARED_BANKS)).flat().filter(q => q.isTiming).length;
-
   return (
     <div className={`min-h-screen bg-slate-950 text-white font-sans flex flex-col items-center justify-center relative overflow-hidden selection:bg-rose-500 transition-all duration-300 ${timeLeft < 1.5 && gameState === 'playing' ? 'shadow-[inset_0_0_100px_rgba(220,38,38,0.5)]' : ''}`}>
       
@@ -1048,7 +1039,7 @@ export default function SQEArcade() {
                 <>
                     <DifficultySelector current={difficulty} onSelect={setDifficulty} />
                     <LevelSelector current={level} onSelect={setLevel} />
-                    <CategoryGrid onSelect={selectCategory} />
+                    <CategoryGrid onSelect={selectCategory} data={rawQuestions || PREPARED_BANKS} />
                 </>
             )}
             <div className="pt-8">
@@ -1265,7 +1256,7 @@ export default function SQEArcade() {
                         <Activity className="animate-pulse text-fuchsia-400" /> 
                         INITIATE HYPERJUMP: SELECT DESTINATION
                     </div>
-                    <CategoryGrid onSelect={(cat) => selectCategoryWithState(cat, true)} />
+                    <CategoryGrid onSelect={(cat) => selectCategoryWithState(cat, true)} data={rawQuestions || PREPARED_BANKS} />
                 </div>
             )}
 
