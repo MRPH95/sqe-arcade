@@ -5,6 +5,12 @@ import { getAuth, signInAnonymously, onAuthStateChanged, signInWithCustomToken }
 import { getFirestore, collection, addDoc, query, orderBy, limit, onSnapshot, serverTimestamp } from 'firebase/firestore';
 import { db, auth } from './firebase';
 
+// --- Add these small, safe fallbacks right after your imports ---
+// Questions from public/questions.json are the priority; keep PREPARED_BANKS as a fallback.
+const PREPARED_BANKS = {};            // fallback bank (empty by default). You can populate this with any hardcoded questions if you want local fallback data.
+const appId = 'sqe-arcade';          // Firestore path id used by collection(..., appId, ...). Adjust if you prefer a different id.
+// --------------------------------------------------------------
+
 // --- AUDIO ENGINE v22.0 (Lazy Load Fix) ---
 class AudioEngine {
   constructor() {
