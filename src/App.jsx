@@ -450,27 +450,33 @@ const WormholeEffect = ({ streak, isChronos, isGameOver, failCount }) => {
 
 // --- COMPONENTS ---
 
-const DifficultySelector = ({ current, onSelect }) => (
-  <div className="flex gap-2 justify-center mb-6 flex-wrap">
-    {[
-      { id: 'relaxed', label: 'RELAXED (10s)', time: 10.0, multi: 0.8, color: 'hover:bg-blue-600' },
-      { id: 'standard', label: 'STANDARD (5s)', time: 5.0, multi: 1.0, color: 'hover:bg-emerald-600' },
-      { id: 'fast', label: 'FAST (3s)', time: 3.0, multi: 1.5, color: 'hover:bg-rose-600' }
-    ].map((diff) => (
-      <button
-        key={diff.id}
-        onClick={() => onSelect(diff.id)}
-        className={`px-4 py-2 rounded-lg font-mono text-sm font-bold border transition-all ${
-          current === diff.id 
-            ? 'bg-slate-100 text-slate-900 border-white' 
-            : `bg-slate-800 text-slate-400 border-slate-700 ${diff.color}`
-        }`}
-      >
-        {diff.label}
-      </button>
-    ))}
-  </div>
-);
+// --- COMPONENTS ---
+
+const DifficultySelector = ({ current, onSelect }) => {
+  const levels = [
+    { id: 'foundation', label: 'FOUNDATION (L1)', level: 1, color: 'hover:bg-blue-600', border: 'border-blue-500/30' },
+    { id: 'merit', label: 'MERIT (L2)', level: 2, color: 'hover:bg-emerald-600', border: 'border-emerald-500/30' },
+    { id: 'distinction', label: 'DISTINCTION (L3)', level: 3, color: 'hover:bg-rose-600', border: 'border-rose-500/30' }
+  ];
+
+  return (
+    <div className="flex gap-2 justify-center mb-6 flex-wrap">
+      {levels.map((diff) => (
+        <button
+          key={diff.id}
+          onClick={() => onSelect(diff.id)}
+          className={`px-4 py-2 rounded-lg font-mono text-sm font-bold border transition-all duration-200 ${
+            current === diff.id 
+              ? 'bg-slate-100 text-slate-900 border-white scale-105 shadow-lg' 
+              : `bg-slate-800 text-slate-400 border-slate-700 ${diff.color} hover:text-white`
+          }`}
+        >
+          {diff.label}
+        </button>
+      ))}
+    </div>
+  );
+};
 
 const CategoryCard = ({ id, label, icon: Icon, count, onClick, isSpecial }) => (
   <button 
