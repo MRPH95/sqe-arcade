@@ -1046,7 +1046,7 @@
     "exp": "Kenward v Adams established the golden rule: a medical practitioner should assess capacity and witness the will for elderly/ill testators.",
     "isTiming": false,
     "difficulty": 2
-  }
+  },
   {
     "q": "If a testator lacks capacity at execution but had it at instruction, the will is always invalid.",
     "a": false,
@@ -1746,7 +1746,7 @@
     "exp": "A life interest is an equitable interest in the trust property, giving the beneficiary the right to income/enjoyment.",
     "isTiming": false,
     "difficulty": 1
-  }
+  },
   {
     "q": "An executor who has intermeddled in an estate may subsequently renounce their position.",
     "a": false,
@@ -3492,7 +3492,7 @@
     "exp": "An equitable remedy often used to prevent a breach of confidence or duty.",
     "isTiming": false,
     "difficulty": 1
-  }
+  },
   {
     "q": "Beneficiaries can trace into the hands of a bona fide purchaser for value without notice.",
     "a": false,
@@ -4892,7 +4892,7 @@
     "exp": "Unenforceable means valid but cannot be enforced in court until formalities (e.g., writing) are met.",
     "isTiming": false,
     "difficulty": 1
-  }
+  },
   {
     "q": "The presumption of advancement applies to determine beneficial ownership of a family home between cohabitants.",
     "a": false,
@@ -6757,8 +6757,7 @@
       "isTiming": false,
       "difficulty": "3"
     }
-  ]
-  {
+  ],
   "public_law_2": [
     {
       "q": "The Senior Courts Act 1981 s.31(3) requires a claimant to have 'sufficient interest' for standing.",
@@ -7601,5 +7600,4 @@
       "difficulty": "1"
     }
   ]
-}
 }
