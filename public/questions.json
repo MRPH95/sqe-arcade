@@ -399,53 +399,3516 @@
     { "q": "Business Property Relief: 2 years ownership.", "a": true, "exp": "Qualifying period.", "isTiming": true }
   ],
   "trusts": [
-    { "q": "Three Certainties required for express trust.", "a": true, "exp": "Knight v Knight." },
-    { "q": "Precatory words create a trust.", "a": false, "exp": "Lambe v Eames (Hope/Desire insufficient)." },
-    { "q": "Beneficiaries must be ascertainable.", "a": true, "exp": "Certainty of Objects." },
-    { "q": "Trust of land needs writing.", "a": true, "exp": "s.53(1)(b) LPA." },
-    { "q": "Equity will assist a volunteer.", "a": false, "exp": "Constitution rule." },
-    { "q": "Strong v Bird perfects imperfect gift.", "a": true, "exp": "Executor appointment." },
-    { "q": "Resulting trust arises if express trust fails.", "a": true, "exp": "Automatic RT." },
-    { "q": "Presumption of Advancement: Father to child.", "a": true, "exp": "Gift presumed." },
-    { "q": "Secret trust can be oral.", "a": true, "exp": "Fully secret." },
-    { "q": "Charity needs public benefit.", "a": true, "exp": "Charities Act 2011." },
-    { "q": "Cy-pres doctrine saves charity.", "a": true, "exp": "If purpose fails." },
-    { "q": "Trustees have duty to invest.", "a": true, "exp": "Trustee Act 2000." },
-    { "q": "Self-dealing is voidable.", "a": true, "exp": "Strict rule." },
-    { "q": "Trustees must act unanimously (private).", "a": true, "exp": "Unless trust deed says otherwise." },
-    { "q": "s.31 TA 1925 allows Maintenance.", "a": true, "exp": "Income to minors." },
-    { "q": "s.32 TA 1925 allows Advancement.", "a": true, "exp": "Capital payment." },
-    { "q": "Tracing is a proprietary remedy.", "a": true, "exp": "Follows asset." },
-    { "q": "Disposition of equitable interest needs writing.", "a": true, "exp": "s.53(1)(c)." },
-    { "q": "Constitution requires title transfer.", "a": true, "exp": "Milroy v Lord." },
-    { "q": "DMC is exception to constitution.", "a": true, "exp": "Deathbed gift." },
-    { "q": "Purchase money resulting trust.", "a": true, "exp": "Contribution to price." },
-    { "q": "Constructive trust requires common intention.", "a": true, "exp": "Stack v Dowden." },
-    { "q": "Half-secret trust communicated before will.", "a": true, "exp": "Strict timing." },
-    { "q": "Beneficiary of secret trust can witness will.", "a": true, "exp": "Dehors the will." },
-    { "q": "Purpose trusts are generally void.", "a": true, "exp": "Beneficiary principle." },
-    { "q": "Re Dean: Trust for animals valid.", "a": true, "exp": "Testamentary exception." },
-    { "q": "Standard of care: Prudent man of business.", "a": true, "exp": "Speight v Gaunt." },
-    { "q": "Trustees can delegate investment.", "a": true, "exp": "TA 2000." },
-    { "q": "Breach of trust liability is personal.", "a": true, "exp": "Trustee liable." },
-    { "q": "Vicarious liability for co-trustees.", "a": false, "exp": "Only liable for own default." },
-    { "q": "s.61 TA 1925 excuses honest breach.", "a": true, "exp": "Court discretion." },
-    { "q": "Cannot trace into Equity's Darling.", "a": true, "exp": "Bona fide purchaser." },
-    { "q": "Hallett's Estate: Trustee spends own money first.", "a": true, "exp": "Presumption." },
-    { "q": "Lowest Intermediate Balance limits tracing.", "a": true, "exp": "Roscoe v Winder." },
-    { "q": "Quistclose trust protects loan money.", "a": true, "exp": "Specific purpose." },
-    { "q": "Protective trust determines on bankruptcy.", "a": true, "exp": "Becomes discretionary." },
-    { "q": "Variation of Trusts Act 1958.", "a": true, "exp": "Court consent for minors." },
-    { "q": "Saunders v Vautier rights.", "a": true, "exp": "Beneficiaries end trust." },
-    { "q": "Trustees must keep accounts.", "a": true, "exp": "Duty." },
-    { "q": "Duty to distribute correctly is strict.", "a": true, "exp": "Absolute liability." },
-    { "q": "Fiduciary cannot make unauthorized profit.", "a": true, "exp": "No profit rule." },
-    { "q": "Boardman v Phipps is strict.", "a": true, "exp": "Account for profit." },
-    { "q": "Appoint new trustees s.36 TA 1925.", "a": true, "exp": "Continuing trustees." },
-    { "q": "Retirement usually requires 2 trustees remain.", "a": true, "exp": "Discharge." },
-    { "q": "Trust fails for want of trustee.", "a": false, "exp": "Equity intervenes." },
-    { "q": "Perpetuity Period: 125 years.", "a": true, "exp": "2009 Act.", "isTiming": true }
+  {
+    "q": "A bank holding a customer's money in a standard current account is a trustee of those funds.",
+    "a": false,
+    "exp": "Foley v Hill; the relationship is debtor-creditor, and the bank can use the money for its own purposes.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A trust can be validly declared over 'the bulk of my residuary estate'.",
+    "a": false,
+    "exp": "Palmer v Simmonds; 'bulk' is linguistically uncertain and fails for lack of certainty of subject matter.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "To create a trust, the settlor must use the specific word 'trust'.",
+    "a": false,
+    "exp": "Re Kayford; intention can be inferred from conduct (e.g., segregating funds); technical words are not required.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A Quistclose trust arises when money is lent for a specific purpose and is not at the borrower's free disposal.",
+    "a": true,
+    "exp": "Twinsectra v Yardley; the restriction on the use of funds creates the trust structure.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A bailment can exist over intangible property like shares.",
+    "a": false,
+    "exp": "Bailment applies only to tangible personal property (chattels), whereas trusts can cover any asset.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Segregation is required to create a valid trust over 50 bottles of wine from a larger stock.",
+    "a": true,
+    "exp": "Re London Wine; tangible assets must be segregated to satisfy certainty of subject matter.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Segregation is required to create a valid trust over 50 shares in a company from a larger holding.",
+    "a": false,
+    "exp": "Hunter v Moss; intangible fungible assets like shares of the same class do not require segregation.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "The words 'this money is as much yours as mine' were sufficient to declare a trust in Paul v Constance.",
+    "a": true,
+    "exp": "Paul v Constance; unsophisticated characters can declare a trust through conduct and plain speech.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A trust of 'reasonable income' fails for uncertainty of subject matter.",
+    "a": false,
+    "exp": "Re Golay's Will Trusts; 'reasonable' is an objective yardstick that the court can quantify.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Under a self-declaration of trust, the settlor transfers legal title to a third party.",
+    "a": false,
+    "exp": "The settlor retains legal title but declares they hold it for the beneficiary (change in equitable title only).",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Gold bullion is treated as fungible for the purposes of certainty of subject matter.",
+    "a": false,
+    "exp": "Re Goldcorp; gold bullion is tangible and requires segregation, unlike shares in Hunter v Moss.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "A failed gift will be interpreted as a self-declaration of trust if the donor intended to benefit the donee.",
+    "a": false,
+    "exp": "Jones v Lock; equity will not perfect an imperfect gift by treating it as a declaration of trust.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "In a Quistclose arrangement, if the primary purpose fails, the money belongs to the borrower.",
+    "a": false,
+    "exp": "Barclays Bank v Quistclose; if the purpose fails, the money is held on a secondary trust for the lender.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Customers paying into a 'Christmas Savings Scheme' were held to be beneficiaries of a trust in Re Farepak.",
+    "a": false,
+    "exp": "Re Farepak; there was no requirement to keep funds separate, so the relationship was debtor-creditor.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "For certainty of intention, the court looks at the subjective intention of the settlor.",
+    "a": false,
+    "exp": "The test is objective: what the words/conduct would convey to a reasonable person (Twinsectra).",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A trust of 'the remaining part of what is left' is uncertain if the primary gift allows capital dissipation.",
+    "a": true,
+    "exp": "Sprange v Barnard; if the first recipient can use up the capital, the remainder is uncertain.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Placing money into a separate bank account is conclusive evidence of a trust.",
+    "a": false,
+    "exp": "Re Kayford; it is strong evidence ('indicative') but not conclusive in itself.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "A charge gives the chargee a right to use the charged property.",
+    "a": false,
+    "exp": "A charge gives a security interest (right to sell upon default), not a right to use/occupy.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Agency is always a trustee-beneficiary relationship.",
+    "a": false,
+    "exp": "Agency is usually debtor-creditor; a trust only arises if the agent is required to keep funds separate.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "If a trust fails for uncertainty of intention, the transferee takes the property as a gift.",
+    "a": true,
+    "exp": "Lassence v Tierney; if the trust obligation is not binding, the absolute gift remains.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "If a trust fails for uncertainty of subject matter, the property remains with the settlor.",
+    "a": true,
+    "exp": "If the property cannot be identified, no trust attaches, and title does not leave the settlor (resulting trust).",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Certainty of intention is assessed at the date of the trial.",
+    "a": false,
+    "exp": "It is assessed at the time of the alleged declaration/transfer.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "In Re Lehman Brothers, the court applied the 'beneficial co-ownership' analysis to a pool of unsegregated shares.",
+    "a": true,
+    "exp": "This rationale allows certainty for unsegregated fungibles by treating it as a trust of the whole fund.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "In Modelboard Ltd, describing a relationship as a 'trust' in the contract was conclusive.",
+    "a": false,
+    "exp": "Modelboard Ltd v Outer Box Ltd; labels are not conclusive if the rights/duties created do not match a trust.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "An attempted assignment of non-assignable contracts can take effect as a trust.",
+    "a": true,
+    "exp": "Don King v Warren; if assignment fails, the intent may be given effect via a trust.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "A 'Settlor' is the person who creates an express trust.",
+    "a": true,
+    "exp": "They transfer property to trustees or declare themselves trustee.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Trustee' holds the equitable title to trust property.",
+    "a": false,
+    "exp": "The trustee holds the legal title; the beneficiary holds the equitable title.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Beneficiary' (or Object) is the person for whose benefit the property is held.",
+    "a": true,
+    "exp": "They hold the equitable/beneficial interest and can enforce the trust.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "An 'Express Trust' is one created intentionally by the settlor.",
+    "a": true,
+    "exp": "It is created by words or conduct manifesting an intention to create a trust.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "An 'Inter Vivos' trust is created by a will.",
+    "a": false,
+    "exp": "'Inter vivos' means 'during lifetime'; trusts created by will are 'Testamentary'.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Testamentary Trust' takes effect upon the death of the testator.",
+    "a": true,
+    "exp": "It is created via a valid will and operates only after death.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Bare Trust' involves trustees with active management duties.",
+    "a": false,
+    "exp": "In a bare trust, the trustee's only duty is to hold the property and transfer it as directed.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Fixed Trust' gives the trustee discretion over who benefits.",
+    "a": false,
+    "exp": "In a fixed trust, the beneficiaries and their shares are determined by the settlor.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Discretionary Trust' allows trustees to decide how to distribute income/capital.",
+    "a": true,
+    "exp": "Trustees have discretion over which objects benefit and in what proportions.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Resulting Trust' arises based on the presumed intention of the transferor.",
+    "a": true,
+    "exp": "It is an implied trust where beneficial interest 'results' back to the transferor.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Constructive Trust' is imposed by the court to prevent unconscionable conduct.",
+    "a": true,
+    "exp": "It arises by operation of law, regardless of the parties' intentions.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Fungible' assets are identical and interchangeable.",
+    "a": true,
+    "exp": "Examples include shares of the same class or money; specific identification is not needed.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Chose in Action' is a tangible physical object.",
+    "a": false,
+    "exp": "It is an intangible right enforceable by legal action (e.g., a debt, shares, IP).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Chattel' is a personal possession or movable property.",
+    "a": true,
+    "exp": "Examples include jewelry, furniture, or cars (tangible personal property).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "The 'Three Certainties' are Intention, Subject Matter, and Objects.",
+    "a": true,
+    "exp": "Knight v Knight; all three must be present for a valid express trust.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Legal Title' represents the formal ownership of the asset.",
+    "a": true,
+    "exp": "It allows the holder to deal with the property at law (e.g., sell it).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Equitable Title' represents the right to enjoy the benefit of the asset.",
+    "a": true,
+    "exp": "It is the beneficial interest enforced by equity against the trustee.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Fiduciary' owes a duty of single-minded loyalty to their principal.",
+    "a": true,
+    "exp": "They must not put themselves in a position of conflict or make unauthorized profits.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "The 'Beneficiary Principle' states that a trust must have a human beneficiary.",
+    "a": true,
+    "exp": "Someone must be able to enforce the trust (exceptions apply for charities).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Precatory Words' express a hope or wish rather than a command.",
+    "a": true,
+    "exp": "Words like 'hope', 'desire', or 'confidence' usually fail to create a trust.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Power of Appointment' compels the holder to distribute property.",
+    "a": false,
+    "exp": "A power gives discretion to distribute but does not compel it (unlike a discretionary trust).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Saunders v Vautier' rights allow adult beneficiaries to collapse the trust.",
+    "a": true,
+    "exp": "Beneficiaries who are sui juris and absolutely entitled can direct the transfer of legal title.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "The 'Perpetuity Period' limits the duration of a trust.",
+    "a": true,
+    "exp": "It prevents property from being tied up in trust indefinitely.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Volunteer' in equity is someone who has provided consideration.",
+    "a": false,
+    "exp": "A volunteer is someone who has NOT provided consideration.",
+    "isTiming": false,
+    "difficulty": 1
+  }
+
+
+    {
+    "q": "The 'complete list' test applies to discretionary trusts.",
+    "a": false,
+    "exp": "McPhail v Doulton; the 'is or is not' test applies to discretionary trusts.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A discretionary trust for 'friends' fails for conceptual uncertainty.",
+    "a": true,
+    "exp": "Re Barlow's WT; 'friends' is conceptually uncertain for a trust (unlike a gift subject to condition precedent).",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Evidential uncertainty renders a discretionary trust void under the approach of Stamp LJ in Re Baden (No 2).",
+    "a": true,
+    "exp": "Stamp LJ held the trust valid only because 'relatives' meant 'next of kin' (which is evidentially certain).",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Under Sachs LJ's approach in Re Baden (No 2), a claimant must prove they are within the class to benefit.",
+    "a": true,
+    "exp": "If a claimant cannot prove they are in the class, they are treated as being outside it; the trust remains valid.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Administrative unworkability can invalidate a fiduciary power of appointment.",
+    "a": false,
+    "exp": "Re Manisty's Settlement; unworkability invalidates discretionary trusts but not powers.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "A trust for 'the inhabitants of West Yorkshire' is administratively unworkable.",
+    "a": true,
+    "exp": "R v District Auditor ex p West Yorkshire; a class of 2.5 million is too large for a discretionary trust.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A fixed trust fails if the whereabouts of one beneficiary is unknown.",
+    "a": false,
+    "exp": "This is evidential uncertainty; the share can be paid into court or dealt with by a Benjamin Order.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Beneficiaries of a discretionary trust have a proprietary interest in the trust fund before distribution.",
+    "a": false,
+    "exp": "Gartside v IRC; they have a mere hope (spes) of receiving a benefit, not a proprietary interest.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Beneficiaries can exercise Saunders v Vautier rights even if their interests are contingent, provided they act together.",
+    "a": true,
+    "exp": "If all possible beneficiaries are sui juris and agree, they can collapse the trust.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A power of appointment coupled with a gift-over in default is likely a mere power, not a trust.",
+    "a": true,
+    "exp": "The gift-over indicates the settlor envisaged the power might not be exercised.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Under a discretionary trust, trustees must distribute all income/capital by the end of the trust period.",
+    "a": true,
+    "exp": "Unlike a power, a discretionary trust is mandatory; distribution must occur.",
+    "isTiming": true,
+    "difficulty": 2
+  },
+  {
+    "q": "Megaw LJ's test for certainty in Re Baden (No 2) requires a 'substantial number' of objects to be identifiable.",
+    "a": true,
+    "exp": "He rejected the strict 'don't know' category; if a substantial number fall within the class, it is certain.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "A beneficiary under a fixed trust has a right to demand information about the trust accounts.",
+    "a": true,
+    "exp": "Schmidt v Rosewood Trust; beneficiaries have a right to seek disclosure (subject to court discretion).",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "If a fixed trust fails for uncertainty of objects, the property goes to the state (bona vacantia).",
+    "a": false,
+    "exp": "It results back to the settlor (automatic resulting trust).",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A personal power of appointment must be exercised periodically.",
+    "a": false,
+    "exp": "A personal donee has no obligation to exercise the power or even consider it.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Under Saunders v Vautier, a beneficiary can direct trustees to appoint a new trustee.",
+    "a": false,
+    "exp": "They can direct the transfer of property to themselves/a third party, but generally cannot dictate administration.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "An interest 'to X for life, remainder to Y' gives Y a contingent interest.",
+    "a": false,
+    "exp": "Y has a vested interest (vested in interest) postponed only in possession.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A trust 'to X if he attains 25' creates a vested interest.",
+    "a": false,
+    "exp": "It is a contingent interest; vesting is conditional on reaching the specified age.",
+    "isTiming": true,
+    "difficulty": 2
+  },
+  {
+    "q": "The 'Is/Is Not' test applies to fiduciary powers of appointment.",
+    "a": true,
+    "exp": "Re Gulbenkian; the test for powers was aligned with discretionary trusts in McPhail.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Trustees of a discretionary trust can be compelled to distribute to a specific object.",
+    "a": false,
+    "exp": "Objects can compel the *exercise* of discretion, but not a distribution to themselves specifically.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Conceptual uncertainty can be cured by giving an expert (e.g., Chief Rabbi) the power to resolve disputes.",
+    "a": true,
+    "exp": "Re Tuck's Settlement Trusts; a third-party opinion clause can resolve conceptual ambiguity.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "The presence of 'shall' in a trust instrument conclusively creates a discretionary trust.",
+    "a": false,
+    "exp": "It is a strong indicator of a trust (mandatory), but the court looks at the whole instrument context.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "A contingent interest always carries the intermediate income.",
+    "a": false,
+    "exp": "It carries income only if the trust instrument directs, or under s.31 TA 1925 (subject to prior interests).",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "If a discretion is given to a non-trustee third party, it is a discretionary trust.",
+    "a": false,
+    "exp": "If the holder is not a trustee, it is a power of appointment (as they cannot be compelled to act).",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A beneficiary with a life interest is entitled to the trust capital.",
+    "a": false,
+    "exp": "They are entitled to income only; capital belongs to the remainderman.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A 'Fixed Trust' requires the trustee to distribute according to set shares.",
+    "a": true,
+    "exp": "The trustee has no discretion over who benefits or how much they receive.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Discretionary Trust' is also known as a 'Trust Power'.",
+    "a": true,
+    "exp": "It combines a mandatory duty to distribute (trust) with discretion over selection (power).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Fiduciary Power' allows trustees to choose whether to distribute at all.",
+    "a": true,
+    "exp": "Unlike a discretionary trust, the trustees are not obliged to distribute the property.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Personal Power' is held by a trustee in their official capacity.",
+    "a": false,
+    "exp": "It is held by an individual personally, not attached to the office of trustee.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Conceptual Certainty' refers to the precision of the language defining the class.",
+    "a": true,
+    "exp": "Also called linguistic certainty; the definition must have clear semantic borders.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Evidential Certainty' refers to the ability to prove a person falls within a class.",
+    "a": true,
+    "exp": "It concerns factual proof (e.g., birth certificates) rather than the meaning of words.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "The 'Complete List Test' requires every beneficiary to be identifiable.",
+    "a": true,
+    "exp": "Required for fixed trusts so the trustee can distribute equally/proportionately.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "The 'Is/Is Not Test' asks if a given person is a member of the class.",
+    "a": true,
+    "exp": "Required for discretionary trusts and powers; a complete list is not needed.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Vested Interest' is a current unconditional right to property.",
+    "a": true,
+    "exp": "The interest is secure, even if possession is postponed (e.g., to a remainderman).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Contingent Interest' depends on an uncertain future event.",
+    "a": true,
+    "exp": "The interest does not vest until the condition (e.g., reaching 21) is satisfied.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "An 'Interest in Possession' gives the beneficiary an immediate right to income/enjoyment.",
+    "a": true,
+    "exp": "Typically held by a life tenant.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Remainder Interest' takes effect after a prior interest ends.",
+    "a": true,
+    "exp": "Held by the remainderman, typically taking the capital after the life tenant dies.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Gift-Over' specifies what happens if a primary disposition fails or a power is unexercised.",
+    "a": true,
+    "exp": "It provides a destination for the property in default of appointment.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Administrative Unworkability' invalidates a trust because the class is too small.",
+    "a": false,
+    "exp": "It invalidates a trust because the class is too large or capricious to administer.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Capriciousness' refers to a senseless or irrational class of objects.",
+    "a": true,
+    "exp": "A power or trust may be void if the class negates any sensible intention by the settlor.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "The 'Beneficiary Principle' requires ascertainable human beneficiaries.",
+    "a": true,
+    "exp": "Morice v Bishop of Durham; there must be someone to enforce the trust.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Life Tenant' is entitled to the trust capital.",
+    "a": false,
+    "exp": "A life tenant is entitled to income/enjoyment for life; capital goes to the remainderman.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Intermediate Income' is income generated before the capital vests.",
+    "a": true,
+    "exp": "It accumulates or is paid out depending on whether the interest carries the intermediate income.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Sui Juris' means a person is of full age and capacity.",
+    "a": true,
+    "exp": "Required for a beneficiary to exercise Saunders v Vautier rights.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Bare Trustee' has active management duties.",
+    "a": false,
+    "exp": "A bare trustee holds legal title but must follow the instructions of the beneficiary.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Certainty of Objects' is unnecessary for charitable trusts.",
+    "a": true,
+    "exp": "Charitable trusts are for purposes, not specific persons, and are enforced by the Attorney General.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Mere Power' creates an obligation to distribute.",
+    "a": false,
+    "exp": "A mere power is discretionary; the holder can choose to do nothing.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "The 'Donor' of a power is the person who exercises it.",
+    "a": false,
+    "exp": "The 'Donor' gives the power; the 'Donee' exercises it.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Successive Interest Trust' creates concurrent interests.",
+    "a": false,
+    "exp": "It creates consecutive interests (one after the other), e.g., life interest then remainder.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Conceptual Uncertainty' makes a fixed trust void.",
+    "a": true,
+    "exp": "If the class cannot be defined, a complete list cannot be drawn up.",
+    "isTiming": false,
+    "difficulty": 1
+  }
+
+    {
+    "q": "A professional trustee who fails to consider the standard investment criteria commits a breach of trust.",
+    "a": true,
+    "exp": "s.4 Trustee Act 2000; trustees have a duty to consider the standard investment criteria (suitability and diversification).",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Lay trustees are held to the same higher standard of care as professional trustees under s.1 TA 2000.",
+    "a": false,
+    "exp": "s.1 TA 2000; professionals are held to a higher standard based on their special knowledge/experience.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Trustees can delegate their dispositive powers (e.g., deciding who benefits) to an agent.",
+    "a": false,
+    "exp": "s.11 TA 2000; trustees cannot delegate asset distribution or policy formulation.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Trustees must obtain written advice before exercising their power of investment unless it is unnecessary/inappropriate.",
+    "a": true,
+    "exp": "s.5 TA 2000; advice is required unless the trustee reasonably concludes it is unnecessary.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A trustee can purchase trust property if they pay full market value.",
+    "a": false,
+    "exp": "Self-dealing rule; a trustee cannot buy trust property (voidable) unless authorized by the trust instrument or court.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Trustees can invest in land for occupation by a beneficiary.",
+    "a": true,
+    "exp": "s.8 TA 2000; trustees can acquire land for investment or occupation.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Trustees are vicariously liable for the defaults of an agent they appoint.",
+    "a": false,
+    "exp": "s.23 TA 2000; trustees are only liable if they breached their own duty of care in appointment/supervision.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Ethical considerations override financial returns in standard trust investments.",
+    "a": false,
+    "exp": "Cowan v Scargill; trustees must generally prioritize financial best interests over ethical views.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "If a trust holds a majority shareholding, trustees have a duty to intervene in the company's management.",
+    "a": true,
+    "exp": "Bartlett v Barclays Bank; a controlling interest imposes a higher duty of supervision.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "A retiring trustee is liable for breaches committed after their retirement.",
+    "a": false,
+    "exp": "Unless they retired to facilitate the breach (Head v Gould).",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Trustees can offset a loss from one breach against a profit from a separate breach.",
+    "a": false,
+    "exp": "Bartlett v Barclays Bank; generally, losses and profits from distinct breaches cannot be offset.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "A beneficiary who instigates a breach of trust may have their interest impounded.",
+    "a": true,
+    "exp": "s.62 TA 1925; the court can impound the interest to indemnify the trustee.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Section 61 TA 1925 allows the court to excuse a trustee who acted honestly and reasonably.",
+    "a": true,
+    "exp": "s.61 TA 1925 provides discretionary relief for honest and reasonable trustees.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Trustees of a trust of land must consult beneficiaries of full age and giving effect to their wishes.",
+    "a": true,
+    "exp": "s.11 TLATA 1996; duty to consult beneficiaries in possession.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A trustee can retire without a replacement if at least two trustees (or a trust corporation) remain.",
+    "a": true,
+    "exp": "s.39 TA 1925 allows retirement without replacement if sufficient trustees remain.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Beneficiaries can compel a trustee to retire under s.19 TLATA if they are absolutely entitled.",
+    "a": true,
+    "exp": "Beneficiaries with Saunders v Vautier rights can direct the retirement/appointment of trustees.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Trustees can be removed by the court if there is mere friction between them and the beneficiaries.",
+    "a": false,
+    "exp": "Letterstedt v Broers; friction must obstruct the administration of the trust to warrant removal.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Under s.31 TA 1925, trustees must pay income to an adult beneficiary if their interest is vested.",
+    "a": true,
+    "exp": "Unless the trust instrument directs otherwise, adults are entitled to income.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Trustees can use s.32 TA 1925 to advance capital to a beneficiary with a contingent interest.",
+    "a": true,
+    "exp": "Advancement can be made for contingent interests, subject to prior consents.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Trustees are liable for breaches committed before their appointment.",
+    "a": false,
+    "exp": "Unless they fail to take action to recover losses upon discovering them.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A trustee who receives a secret commission holds it on constructive trust.",
+    "a": true,
+    "exp": "FHR European Ventures; unauthorized profits are held on constructive trust.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Trustees can invest in unsecured loans.",
+    "a": true,
+    "exp": "Under the general power of investment (s.3 TA 2000), unless restricted by the trust instrument.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Trustees have a duty to diversify investments regardless of the trust size.",
+    "a": false,
+    "exp": "s.4 TA 2000; diversification is required 'in so far as is appropriate to the circumstances'.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Trustees can be paid for their services if the trust instrument is silent.",
+    "a": false,
+    "exp": "Generally unpaid (voluntary), unless s.29 TA 2000 applies (professionals) or court orders.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Trustees must act unanimously in private trusts.",
+    "a": true,
+    "exp": "Luke v South Kensington Hotel; decisions must be unanimous unless the trust deed says otherwise.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A 'Fiduciary' is someone who owes duties of loyalty and good faith.",
+    "a": true,
+    "exp": "Includes trustees, agents, and company directors.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Trustee Duties' are permissive powers the trustee may choose to exercise.",
+    "a": false,
+    "exp": "Duties are mandatory; Powers are permissive.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Trustee Powers' are mandatory obligations the trustee must perform.",
+    "a": false,
+    "exp": "Powers are discretionary (permissive); Duties are mandatory.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "The 'General Power of Investment' allows trustees to invest as if they were absolute owners.",
+    "a": true,
+    "exp": "s.3 TA 2000; broadens investment powers beyond the old lists.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Standard Investment Criteria' refers to Suitability and Diversification.",
+    "a": true,
+    "exp": "s.4 TA 2000; criteria trustees must consider.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Lay Trustee' refers to a trustee who is not a professional charging for services.",
+    "a": true,
+    "exp": "They are unpaid volunteers.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Professional Trustee' acts in the course of a business or profession.",
+    "a": true,
+    "exp": "Subject to a higher duty of care under s.1 TA 2000.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Delegation' is the transfer of trustee functions to an agent.",
+    "a": true,
+    "exp": "Permitted for administrative functions under s.11 TA 2000.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Dispositive Powers' relate to the distribution of trust property.",
+    "a": true,
+    "exp": "E.g., Power of Appointment, Maintenance, Advancement.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Administrative Powers' relate to the management of trust property.",
+    "a": true,
+    "exp": "E.g., Power of Investment, Delegation, Insurance.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Self-Dealing' involves a trustee purchasing trust property.",
+    "a": true,
+    "exp": "Strictly prohibited (voidable) due to conflict of interest.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Fair-Dealing' involves a trustee purchasing a beneficiary's beneficial interest.",
+    "a": true,
+    "exp": "Permitted if fair, honest, and full disclosure is made.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Unauthorized Investment' is an investment not permitted by the trust or statute.",
+    "a": true,
+    "exp": "Making one is a breach of trust.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Equitable Compensation' is the remedy for loss caused by breach of trust.",
+    "a": true,
+    "exp": "Restores the trust fund to the position it would have been in.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Account of Profits' recovers unauthorized gains made by a fiduciary.",
+    "a": true,
+    "exp": "Personal remedy for breach of the no-profit rule.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Joint and Several Liability' means beneficiaries can sue any one trustee for the full loss.",
+    "a": true,
+    "exp": "Applies to co-trustees who are liable for a breach.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Vicarious Liability' means a trustee is automatically liable for an agent's breach.",
+    "a": false,
+    "exp": "Trustees are not vicariously liable; they are liable only for their own default (e.g., in selection/supervision).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Indemnity' allows a trustee to recover costs/losses from the trust fund.",
+    "a": true,
+    "exp": "Trustees have a right to be indemnified for properly incurred expenses.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Impounding' allows the court to use a beneficiary's interest to cover a breach.",
+    "a": true,
+    "exp": "s.62 TA 1925; if the beneficiary instigated or consented to the breach.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Exemption Clause' can exclude liability for fraudulent breaches of trust.",
+    "a": false,
+    "exp": "Armitage v Nurse; cannot exclude liability for fraud/dishonesty.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Wilful Default' means a trustee is liable only for intentional breaches.",
+    "a": false,
+    "exp": "Includes conscious negligence or recklessness, not just intent.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Statutory Duty of Care' is found in s.1 Trustee Act 2000.",
+    "a": true,
+    "exp": "Requires reasonable care and skill, considering special knowledge.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Passive Trustee' is one who leaves administration to a co-trustee.",
+    "a": true,
+    "exp": "Still liable for breaches; trustees must act jointly.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Breach of Trust' is any act or omission contrary to trustee duties.",
+    "a": true,
+    "exp": "Includes unauthorized acts and failure to meet the standard of care.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Benjamin Order' allows trustees to distribute when a beneficiary is missing.",
+    "a": true,
+    "exp": "Presumes the beneficiary is dead for distribution purposes.",
+    "isTiming": false,
+    "difficulty": 1
+  }
+
+    {
+    "q": "A trustee sells trust property to a company in which they are the sole shareholder. This transaction is automatically void.",
+    "a": false,
+    "exp": "Self-dealing transactions are voidable by the beneficiaries, not automatically void.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A trustee can purchase a beneficiary's equitable interest if they can prove they acted fairly and honestly.",
+    "a": true,
+    "exp": "This is the 'Fair-Dealing' rule; the transaction is valid if the trustee proves fairness and full disclosure.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A solicitor trustee can keep the interest earned on client money held in a general client account.",
+    "a": false,
+    "exp": "Brown v IRC; interest earned on client money belongs to the client (principal), not the solicitor (fiduciary).",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A trustee appointed as a company director by virtue of their shareholding can keep the director's fees.",
+    "a": false,
+    "exp": "Re Macadam; they must account to the trust for remuneration received by virtue of their trustee position.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "The strict rule in Keech v Sandford applies even if the landlord refuses to renew the lease to the trust.",
+    "a": true,
+    "exp": "The trustee cannot take the renewal personally, even if it is impossible for the trust to do so.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Beneficiaries can elect between a personal and a proprietary remedy for a breach of the no-profit rule.",
+    "a": true,
+    "exp": "FHR European Ventures; principals can choose an account of profits or a constructive trust.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Dishonesty in 'dishonest assistance' is determined purely by the defendant's subjective beliefs.",
+    "a": false,
+    "exp": "Ivey v Genting Casinos; the test is objective (standard of ordinary decent people) based on subjective knowledge.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A stranger can be liable for knowing receipt even if they no longer hold the property.",
+    "a": true,
+    "exp": "Knowing receipt is a personal claim; liability remains even if the assets are dissipated (unlike a proprietary claim).",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "For dishonest assistance, the trustee must also have been dishonest.",
+    "a": false,
+    "exp": "Royal Brunei Airlines v Tan; the assistant's dishonesty is sufficient, regardless of the trustee's state of mind.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A recipient of trust property is liable for knowing receipt if they have 'constructive notice' only.",
+    "a": false,
+    "exp": "BCCI v Akindele; the test is 'unconscionability', which generally requires more than mere constructive notice.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "In Boardman v Phipps, the solicitor was liable because he acted with bad faith.",
+    "a": false,
+    "exp": "He acted in good faith but was still liable for the profit because he used information acquired as a fiduciary.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "A trustee can keep director's fees if the trust deed expressly authorizes it.",
+    "a": true,
+    "exp": "Re Llewellin's Will Trusts; the trust instrument can modify the strict no-profit rule.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Assistance in a dishonest assistance claim must be more than minimal.",
+    "a": true,
+    "exp": "Ultraframe (UK) Ltd v Fielding; the assistance must make the breach easier to commit.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A bank receiving money into an overdrawn account receives it beneficially for knowing receipt purposes.",
+    "a": true,
+    "exp": "The bank benefits by the reduction of the debt, unlike a credit account where it holds as agent/debtor.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "A fiduciary can avoid liability for conflict of interest by obtaining the consent of their co-fiduciaries.",
+    "a": false,
+    "exp": "Consent must come from the *principals* (beneficiaries), not co-trustees.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A dishonest assistant is always liable for the profits they make from the breach.",
+    "a": false,
+    "exp": "Novoship v Mikhaylyuk; the court has discretion to withhold the remedy if disproportionate.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Registration of land wipes out a beneficiary's interest against a purchaser without notice.",
+    "a": true,
+    "exp": "s.29 LRA 2002; a purchaser for value takes free of unregistered equitable interests (unless overriding).",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Knowing receipt requires the defendant to have received the property beneficially.",
+    "a": true,
+    "exp": "Receipt in a ministerial capacity (e.g., as an agent) is insufficient for knowing receipt.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "The 'self-dealing' rule applies when a trustee sells their own property to the trust.",
+    "a": true,
+    "exp": "It applies to both purchases from and sales to the trust by the trustee.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A fiduciary who takes a bribe holds it on constructive trust for their principal.",
+    "a": true,
+    "exp": "FHR European Ventures; bribes are treated as the property of the principal.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Fully informed consent for a breach of fiduciary duty must be obtained from the court.",
+    "a": false,
+    "exp": "Consent can be given by the beneficiaries if they are all sui juris and fully informed.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A dishonest assistant is liable for the full loss caused by the breach of trust.",
+    "a": true,
+    "exp": "They are jointly and severally liable with the trustee for the loss.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "The Baden scale of knowledge is irrelevant to modern knowing receipt claims.",
+    "a": false,
+    "exp": "While 'unconscionability' is the test, the Baden categories help determine what makes conduct unconscionable.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "A trustee can compete with the trust business if the trust deed is silent.",
+    "a": false,
+    "exp": "Re Thomson; fiduciaries generally cannot enter into competition with the trust business.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Rescission is available for self-dealing even if the property has been sold to a bona fide purchaser.",
+    "a": false,
+    "exp": "Rescission is barred if third-party rights have intervened (bona fide purchaser).",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A 'Fiduciary' is a person who owes duties of loyalty and good faith.",
+    "a": true,
+    "exp": "Examples include trustees, solicitors, and agents.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Self-Dealing' refers to a trustee transacting with the trust.",
+    "a": true,
+    "exp": "Buying from or selling to the trust is prohibited without authority.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Fair-Dealing' refers to a trustee transacting with a beneficiary.",
+    "a": true,
+    "exp": "Buying the beneficiary's interest is permitted subject to strict fairness rules.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "The 'No-Conflict Rule' prevents a fiduciary from putting personal interests ahead of their duty.",
+    "a": true,
+    "exp": "A core fiduciary obligation to avoid conflict between duty and interest.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "The 'No-Profit Rule' prevents a fiduciary from making unauthorized gains from their position.",
+    "a": true,
+    "exp": "Fiduciaries must account for any unauthorized profit made by virtue of their office.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Dishonest Assistance' is a receipt-based claim.",
+    "a": false,
+    "exp": "It is a fault-based accessory liability claim (secondary liability for breach).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Knowing Receipt' is a claim against someone who receives trust property with unconscionable knowledge.",
+    "a": true,
+    "exp": "A personal claim for the value of property received in breach of trust.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Accessory Liability' requires the defendant to have received trust property.",
+    "a": false,
+    "exp": "It requires assistance in the breach, not necessarily receipt of property.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Unconscionability' is the key test for liability in knowing receipt.",
+    "a": true,
+    "exp": "BCCI v Akindele; the recipient's state of knowledge must make retention unconscionable.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Constructive Trust' can be a proprietary remedy for breach of fiduciary duty.",
+    "a": true,
+    "exp": "The court can declare that illicit profits are held on constructive trust.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Account of Profits' is a proprietary claim.",
+    "a": false,
+    "exp": "It is a personal claim for the value of the profit made.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Voidable' means a transaction is automatically invalid.",
+    "a": false,
+    "exp": "It means the transaction is valid until set aside (rescinded) by the beneficiaries.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Rescission' puts the parties back in the position they were in before the transaction.",
+    "a": true,
+    "exp": "It unwinds the transaction (restitutio in integrum).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Stranger' to the trust is anyone other than a trustee or beneficiary.",
+    "a": true,
+    "exp": "Third parties who may become liable for assisting or receiving from a breach.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Vicarious Liability' makes a partner liable for another partner's dishonest assistance.",
+    "a": true,
+    "exp": "Partnerships can be vicariously liable for the wrongful acts of a partner in the ordinary course of business.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Tracing' is the process of identifying a new asset as a substitute for the old.",
+    "a": true,
+    "exp": "Foskett v McKeown; distinct from following the same asset.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Following' is the process of tracking the same asset as it moves hands.",
+    "a": true,
+    "exp": "Foskett v McKeown; locating the original asset itself.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Bona Fide Purchaser' (Equity's Darling) takes property free of equitable interests.",
+    "a": true,
+    "exp": "Must be for value and without notice (actual, constructive, or imputed).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Ministerial Capacity' refers to holding property as an agent without beneficial interest.",
+    "a": true,
+    "exp": "Agents receiving funds for a principal do not typically incur knowing receipt liability.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Joint and Several Liability' means each wrongdoer is liable for the entire loss.",
+    "a": true,
+    "exp": "The claimant can sue any one of them for the full amount.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Solicitor-Client' is a recognized fiduciary relationship.",
+    "a": true,
+    "exp": "Solicitors owe fiduciary duties of loyalty to their clients.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Director-Company' is a recognized fiduciary relationship.",
+    "a": true,
+    "exp": "Directors act as fiduciaries for the company.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "The 'Baden Scale' categorizes degrees of knowledge.",
+    "a": true,
+    "exp": "Used to analyze the mental state for knowing receipt (actual knowledge to constructive notice).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Strict Liability' means liability arises regardless of fault or dishonesty.",
+    "a": true,
+    "exp": "Trustees are strictly liable for misapplication of assets (breach of trust), unlike accessories.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "An 'Injunction' is a court order to do or stop doing a specific act.",
+    "a": true,
+    "exp": "An equitable remedy often used to prevent a breach of confidence or duty.",
+    "isTiming": false,
+    "difficulty": 1
+  }
+
+    {
+    "q": "Beneficiaries can trace into the hands of a bona fide purchaser for value without notice.",
+    "a": false,
+    "exp": "Foskett v McKeown; a BFP takes the property free of equitable interests, extinguishing the proprietary claim.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "The rule in Clayton's Case ('first in, first out') is always applied to innocent mixtures in current accounts.",
+    "a": false,
+    "exp": "Barlow Clowes v Vaughan; it can be disapplied if contrary to intention, unjust, or impracticable.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A beneficiary can claim a proportionate share of an asset bought with a mixed fund (trustee + trust money).",
+    "a": true,
+    "exp": "Foskett v McKeown; beneficiaries can choose between a proportionate share or a lien.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "If a trustee dissipates mixed funds (trustee + trust), the dissipated money is presumed to be the trustee's.",
+    "a": true,
+    "exp": "Re Hallett's Estate; the trustee is presumed to spend their own money first to preserve trust funds.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "In an innocent mixture (two trusts), losses are shared rateably (pari passu).",
+    "a": true,
+    "exp": "Re Diplock; innocent contributors share the remaining pool in proportion to their contributions.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Beneficiaries can use 'cherry picking' against the unsecured creditors of an insolvent trustee.",
+    "a": false,
+    "exp": "Shalson v Russo; cherry picking is allowed against the trustee personally, but not to prejudice other innocent creditors.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Subrogation allows a beneficiary to step into the shoes of a secured creditor if trust money paid off the debt.",
+    "a": true,
+    "exp": "Boscawen v Bajwa; revives the extinguished security for the benefit of the trust.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Tracing is possible into an asset purchased by an innocent volunteer.",
+    "a": true,
+    "exp": "Re Diplock; volunteers (who paid no value) take property subject to equitable interests.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Backward tracing (into an asset bought before the misappropriation) is never permitted.",
+    "a": false,
+    "exp": "Brazil v Durant; permitted if there is a close causal link/coordinated scheme.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "If a trustee buys an asset with trust money and it increases in value, the beneficiary can claim the profit.",
+    "a": true,
+    "exp": "Foskett v McKeown; beneficiaries can elect to take the beneficial ownership of the asset.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Common law tracing allows tracing into a mixed bank account.",
+    "a": false,
+    "exp": "Agip (Africa) Ltd v Jackson; mixing defeats common law tracing (which requires clean physical substitution).",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "An equitable lien allows the beneficiary to take ownership of the asset.",
+    "a": false,
+    "exp": "A lien is a security interest (right to sell and recover sum), not ownership.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "The 'Lowest Intermediate Balance' rule limits tracing claims into a mixed account.",
+    "a": true,
+    "exp": "Roscoe v Winder; the claim is limited to the lowest balance in the account after the trust money was deposited.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Re Oatway allows beneficiaries to trace into assets bought first if the remaining balance is dissipated.",
+    "a": true,
+    "exp": "Reverses the Hallett presumption if necessary to prevent injustice to the beneficiaries.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Proprietary claims are available against a knowing recipient who has dissipated the assets.",
+    "a": false,
+    "exp": "If assets are dissipated, there is no property to claim; only a personal claim remains.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "The Rolling Charge method is the standard approach for innocent mixtures in current accounts.",
+    "a": false,
+    "exp": "While theoretically fairer, it is complex/expensive; Pari Passu (ex post facto) is more commonly applied (Barlow Clowes).",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "A fiduciary relationship is required for equitable tracing.",
+    "a": true,
+    "exp": "Re Diplock; a pre-existing fiduciary relationship (or equitable interest) is a prerequisite.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Beneficiaries can trace into money paid to a bank to reduce an overdraft.",
+    "a": false,
+    "exp": "Unless the bank had notice (knowing receipt), the money is dissipated (pay off debt) and cannot be traced.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Change of position is a defense to a proprietary claim.",
+    "a": false,
+    "exp": "It is a defense to a personal claim (e.g., in Re Diplock restitution), not a proprietary one.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "If trust money is used to improve an innocent volunteer's land, the beneficiary gets a share of the land.",
+    "a": false,
+    "exp": "Re Diplock; generally no remedy (inequitable to force sale), or at most a lien for the value added.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Personal claims in Re Diplock are limited to the amount of the overpayment.",
+    "a": true,
+    "exp": "Beneficiaries can recover the sum wrongly paid, subject to defenses.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A trustee can assert their own claim to mixed funds before the beneficiaries are satisfied.",
+    "a": false,
+    "exp": "The trustee's interest is subordinated to the beneficiaries' interest.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Subrogation confers the same priority as the original mortgage.",
+    "a": true,
+    "exp": "The beneficiary steps into the lender's shoes, retaining the priority of the paid-off charge.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Following is the process of tracking the value into a new asset.",
+    "a": false,
+    "exp": "Following tracks the *same* asset; Tracing tracks the value into a *substitute*.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Proprietary claims are affected by the trustee's insolvency.",
+    "a": false,
+    "exp": "They give priority over unsecured creditors, 'ringfencing' the asset from insolvency.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Tracing' identifies a new asset as a substitute for the old.",
+    "a": true,
+    "exp": "Foskett v McKeown; distinct from following the same asset.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Following' tracks the same asset as it moves from hand to hand.",
+    "a": true,
+    "exp": "Foskett v McKeown; locating the original asset itself.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Claiming' is the assertion of rights after tracing or following.",
+    "a": true,
+    "exp": "The legal process of recovering the asset or value based on the identification.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Clean Substitution' occurs when trust money is used exclusively to buy an asset.",
+    "a": true,
+    "exp": "No mixing with other funds; the asset is the direct product.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Mixed Fund' contains money from more than one source.",
+    "a": true,
+    "exp": "E.g., Trust money mixed with Trustee's own money.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Wrongful Mixture' involves mixing trust money with the trustee's own money.",
+    "a": true,
+    "exp": "The trustee is the wrongdoer.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Innocent Mixture' involves mixing funds from two innocent parties.",
+    "a": true,
+    "exp": "E.g., Two trust funds mixed by a trustee, or trust money mixed by an innocent volunteer.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Equitable Lien' is a right to take possession of property.",
+    "a": false,
+    "exp": "It is a charge/security over property to secure a debt, not a right to possession/ownership.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Subrogation' means replacing one creditor with another.",
+    "a": true,
+    "exp": "A remedy where the claimant 'steps into the shoes' of a paid-off creditor.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Bona Fide Purchaser' takes property free of equitable interests.",
+    "a": true,
+    "exp": "Equity's Darling; must be for value and without notice.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Dissipation' means the asset has been destroyed or consumed.",
+    "a": true,
+    "exp": "E.g., spent on a holiday or dinner; tracing generally ends here.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Falsification' requires the trustee to restore the trust fund.",
+    "a": true,
+    "exp": "Used for unauthorized misapplication; treats the disbursement as if it never happened.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Surcharging' addresses a shortfall in the trust fund caused by negligence.",
+    "a": true,
+    "exp": "Used for breaches of duty (e.g., poor investment); compensation for what the fund *should* be worth.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Lowest Intermediate Balance' limits the claim to the lowest amount in the account.",
+    "a": true,
+    "exp": "Prevents tracing into funds deposited *after* the trust money was spent.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Clayton's Case' applies the 'First In, First Out' rule.",
+    "a": true,
+    "exp": "Traditional rule for current accounts, often disapplied in favor of pari passu.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Pari Passu' means sharing proportionately.",
+    "a": true,
+    "exp": "Assets are shared rateably according to contributions.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Rolling Charge' calculates shares at the time of each withdrawal.",
+    "a": true,
+    "exp": "A dynamic method of apportionment, theoretically fairer but complex.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Backward Tracing' traces into an asset bought on credit before trust money was used.",
+    "a": true,
+    "exp": "Tracing into the asset paid for by the misappropriated funds.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Swollen Assets Theory' suggests a trust exists if the estate is increased by the misappropriation.",
+    "a": true,
+    "exp": "Often rejected in English law; proprietary claims require identification of specific assets.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Change of Position' is a defense for an innocent volunteer who spent the money.",
+    "a": true,
+    "exp": "Lipkin Gorman v Karpnale; inequitable to require repayment if they changed position in reliance.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Volunteer' is someone who provides no consideration.",
+    "a": true,
+    "exp": "A recipient of a gift.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Equity's Darling' refers to the Bona Fide Purchaser for Value Without Notice.",
+    "a": true,
+    "exp": "The absolute defense against equitable proprietary claims.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Proprietary Remedy' gives rights in the property itself.",
+    "a": true,
+    "exp": "As opposed to a personal remedy (debt).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Personal Remedy' is a claim against the defendant personally.",
+    "a": true,
+    "exp": "Does not attach to specific property; vulnerable to insolvency.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Notice' includes actual, constructive, and imputed knowledge.",
+    "a": true,
+    "exp": "Relevant for determining if a purchaser is bona fide.",
+    "isTiming": false,
+    "difficulty": 1
+  }
+
+    {
+    "q": "A trust of land can be validly declared orally.",
+    "a": false,
+    "exp": "s.53(1)(b) LPA 1925; a declaration of trust respecting land must be manifested and proved in signed writing.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "The lack of formalities under s.53(1)(b) renders a trust of land void.",
+    "a": false,
+    "exp": "s.53(1)(b) is an evidential requirement; non-compliance renders the trust unenforceable, not void.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "If a trust fails for uncertainty of objects, the property results back to the settlor.",
+    "a": true,
+    "exp": "Automatic resulting trust; if the beneficial interest is not effectively disposed of, it returns to the settlor.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A trust of 'the bulk of my estate' is valid.",
+    "a": false,
+    "exp": "Palmer v Simmonds; 'bulk' is linguistically uncertain and fails for lack of certainty of subject matter.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "In Paul v Constance, the words 'the money is as much yours as mine' created a trust.",
+    "a": true,
+    "exp": "The court found sufficient intention to create a trust despite the lack of technical language.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A trust of 50 shares from a holding of 950 identical shares requires segregation.",
+    "a": false,
+    "exp": "Hunter v Moss; intangible fungible assets do not require segregation for certainty of subject matter.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A trust of 50 bottles of wine from a larger stock requires segregation.",
+    "a": true,
+    "exp": "Re London Wine; tangible assets must be segregated to be identifiable.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Precatory words like 'in full confidence' impose a binding trust obligation.",
+    "a": false,
+    "exp": "Re Adams and Kensington Vestry; precatory words usually create a moral obligation, not a legal trust.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A trust of 'reasonable income' is void for uncertainty.",
+    "a": false,
+    "exp": "Re Golay's Will Trusts; 'reasonable' is an objective yardstick that the court can quantify.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "If a self-declaration of trust fails for uncertainty of objects, the settlor holds the property on resulting trust.",
+    "a": false,
+    "exp": "If a self-declaration fails, the settlor simply remains the absolute owner; no trust is created.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "A testamentary trust must comply with s.9 Wills Act 1837.",
+    "a": true,
+    "exp": "To be valid, a will (and trusts within it) must be in writing, signed, and witnessed by two people.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "The 'Is/Is Not' test applies to fixed trusts.",
+    "a": false,
+    "exp": "Fixed trusts require a 'complete list' of beneficiaries (conceptual and evidential certainty).",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "The 'Is/Is Not' test applies to discretionary trusts.",
+    "a": true,
+    "exp": "McPhail v Doulton; trustees must be able to say if any given individual is or is not a member of the class.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Administrative unworkability can invalidate a fiduciary power.",
+    "a": false,
+    "exp": "Re Manisty's Settlement; unworkability invalidates discretionary trusts but not powers.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "A trust for 'friends' is conceptually certain.",
+    "a": false,
+    "exp": "Re Barlow's WT; 'friends' is conceptually uncertain for a trust (though valid for a condition precedent).",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Evidential uncertainty renders a discretionary trust void under Sachs LJ's approach in Re Baden (No 2).",
+    "a": false,
+    "exp": "Sachs LJ held that claimants must prove they are in the class; otherwise, they are treated as outside.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Segregating funds into a separate bank account is conclusive evidence of an intention to create a trust.",
+    "a": false,
+    "exp": "Re Kayford; it is strong evidence but not conclusive; intention is ascertained from all circumstances.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "If a trust fails for uncertainty of intention in a transfer, the transferee takes the property beneficially.",
+    "a": true,
+    "exp": "Lassence v Tierney; if the trust obligation is not binding, the absolute gift takes effect.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "A power of appointment requires the donee to distribute the property.",
+    "a": false,
+    "exp": "A power is discretionary; the donee can choose not to exercise it (unlike a trust).",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A trust for 'relatives' is conceptually certain.",
+    "a": true,
+    "exp": "Re Baden (No 2); 'relatives' means 'descendants from a common ancestor' (or next of kin).",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "The beneficiary principle allows a trust to exist for a purpose.",
+    "a": false,
+    "exp": "Generally, a trust must have human beneficiaries (exceptions: charitable/Endacott trusts).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A settlor can also be a beneficiary of the trust they create.",
+    "a": true,
+    "exp": "A settlor can transfer property to trustees to hold for themselves (e.g., life interest).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "If a trust fails for uncertainty of subject matter (beneficial share), the property results to the settlor.",
+    "a": true,
+    "exp": "Boyce v Boyce; if the shares are uncertain, the trust fails and results back.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A trust of 'the remaining part of what is left' is certain if the primary gift allows capital dissipation.",
+    "a": false,
+    "exp": "Sprange v Barnard; if the first recipient can use up the capital, the remainder is uncertain.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "A gift-over in default of appointment indicates a power of appointment.",
+    "a": true,
+    "exp": "It shows the settlor envisaged the power might not be exercised.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A 'Settlor' is the person who creates the trust.",
+    "a": true,
+    "exp": "They transfer property to trustees or declare themselves trustee.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Trustee' holds the equitable title to trust property.",
+    "a": false,
+    "exp": "The trustee holds the legal title; the beneficiary holds the equitable title.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Beneficiary' (or Object) is the person for whose benefit the property is held.",
+    "a": true,
+    "exp": "They hold the equitable/beneficial interest and can enforce the trust.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "An 'Express Trust' is one created intentionally by the settlor.",
+    "a": true,
+    "exp": "It is created by words or conduct manifesting an intention to create a trust.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "An 'Inter Vivos' trust is created by a will.",
+    "a": false,
+    "exp": "'Inter vivos' means 'during lifetime'; trusts created by will are 'Testamentary'.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Testamentary Trust' takes effect upon the death of the testator.",
+    "a": true,
+    "exp": "It is created via a valid will and operates only after death.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Bare Trust' involves trustees with active management duties.",
+    "a": false,
+    "exp": "In a bare trust, the trustee's only duty is to hold the property and transfer it as directed.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Fixed Trust' gives the trustee discretion over who benefits.",
+    "a": false,
+    "exp": "In a fixed trust, the beneficiaries and their shares are determined by the settlor.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Discretionary Trust' allows trustees to decide how to distribute income/capital.",
+    "a": true,
+    "exp": "Trustees have discretion over which objects benefit and in what proportions.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Resulting Trust' arises based on the presumed intention of the transferor.",
+    "a": true,
+    "exp": "It is an implied trust where beneficial interest 'results' back to the transferor.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Constructive Trust' is imposed by the court to prevent unconscionable conduct.",
+    "a": true,
+    "exp": "It arises by operation of law, regardless of the parties' intentions.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Fungible' assets are identical and interchangeable.",
+    "a": true,
+    "exp": "Examples include shares of the same class or money; specific identification is not needed.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Chose in Action' is a tangible physical object.",
+    "a": false,
+    "exp": "It is an intangible right enforceable by legal action (e.g., a debt, shares, IP).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Chattel' is a personal possession or movable property.",
+    "a": true,
+    "exp": "Examples include jewelry, furniture, or cars (tangible personal property).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "The 'Three Certainties' are Intention, Subject Matter, and Objects.",
+    "a": true,
+    "exp": "Knight v Knight; all three must be present for a valid express trust.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Legal Title' represents the formal ownership of the asset.",
+    "a": true,
+    "exp": "It allows the holder to deal with the property at law (e.g., sell it).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Equitable Title' represents the right to enjoy the benefit of the asset.",
+    "a": true,
+    "exp": "It is the beneficial interest enforced by equity against the trustee.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Fiduciary' owes a duty of single-minded loyalty to their principal.",
+    "a": true,
+    "exp": "They must not put themselves in a position of conflict or make unauthorized profits.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "The 'Beneficiary Principle' states that a trust must have a human beneficiary.",
+    "a": true,
+    "exp": "Someone must be able to enforce the trust (exceptions apply for charities).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Precatory Words' express a hope or wish rather than a command.",
+    "a": true,
+    "exp": "Words like 'hope', 'desire', or 'confidence' usually fail to create a trust.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Power of Appointment' compels the holder to distribute property.",
+    "a": false,
+    "exp": "A power gives discretion to distribute but does not compel it (unlike a discretionary trust).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Saunders v Vautier' rights allow adult beneficiaries to collapse the trust.",
+    "a": true,
+    "exp": "Beneficiaries who are sui juris and absolutely entitled can direct the transfer of legal title.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "The 'Perpetuity Period' limits the duration of a trust.",
+    "a": true,
+    "exp": "It prevents property from being tied up in trust indefinitely.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Volunteer' in equity is someone who has provided consideration.",
+    "a": false,
+    "exp": "A volunteer is someone who has NOT provided consideration.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Certainty of Subject Matter' requires identification of the trust property and beneficial interest.",
+    "a": true,
+    "exp": "Both the asset and the share must be certain.",
+    "isTiming": false,
+    "difficulty": 1
+  }
+
+    {
+    "q": "A trust for 'the relief of poverty' fails if it does not benefit the public.",
+    "a": false,
+    "exp": "Dingle v Turner; trusts for the relief of poverty are an exception to the strict public benefit rule (personal nexus allowed).",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A trust for 'the advancement of religion' is automatically charitable.",
+    "a": false,
+    "exp": "It must also satisfy the public benefit requirement (demonstrable benefit to the public).",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A non-charitable purpose trust for 'a useful memorial to myself' is valid.",
+    "a": false,
+    "exp": "Re Endacott; too vague and outside the specific exceptions (monuments/graves/animals/masses).",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A trust to maintain a specific animal (e.g., a pet dog) can be valid as a non-charitable purpose trust.",
+    "a": true,
+    "exp": "Re Dean; a recognized Endacott exception, provided it complies with perpetuity rules.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A trust for political purposes (e.g., changing the law) can be charitable.",
+    "a": false,
+    "exp": "McGovern v AG; political purposes are not charitable (courts cannot judge if changing the law is beneficial).",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "The maintenance of a private tomb can be a valid charitable purpose.",
+    "a": false,
+    "exp": "It is a private purpose (Re Hooper), unless part of the fabric of a church (advancement of religion).",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Non-charitable purpose trusts are subject to the rule against inalienability.",
+    "a": true,
+    "exp": "They must be limited to a perpetuity period (usually 21 years) or they are void.",
+    "isTiming": true,
+    "difficulty": 2
+  },
+  {
+    "q": "A trust for 'the education of my children' is charitable.",
+    "a": false,
+    "exp": "Oppenheim v Tobacco Securities Trust; fails the public benefit test due to the personal nexus.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Cy-près can be applied if a non-charitable purpose trust fails.",
+    "a": false,
+    "exp": "Cy-près applies only to charitable trusts; failed non-charitable trusts result back to the settlor.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A trust for the advancement of sport is charitable only if it promotes health.",
+    "a": true,
+    "exp": "s.3(2)(d) Charities Act 2011; sport involves physical or mental skill/exertion promoting health.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A trust for the saying of private masses is a valid charitable trust.",
+    "a": false,
+    "exp": "Gilmour v Coats; private masses lack public benefit, though they may be valid non-charitable trusts (Re Hetherington).",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "The 'personal nexus' test disqualifies trusts for the relief of poverty.",
+    "a": false,
+    "exp": "Re Scarisbrick; poverty trusts are the exception where a personal nexus (e.g., 'poor relations') does not fail charity.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A trust for the 'abolition of vivisection' is charitable.",
+    "a": false,
+    "exp": "National Anti-Vivisection Society v IRC; political purpose (changing law) and public benefit outweighed by detriment to science.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "The perpetuity period for a non-charitable purpose trust can be 'as long as the law allows'.",
+    "a": true,
+    "exp": "Though vague, courts often interpret this as 21 years (common law period).",
+    "isTiming": true,
+    "difficulty": 3
+  },
+  {
+    "q": "A trust for the advancement of human rights is a recognized charitable head.",
+    "a": true,
+    "exp": "s.3(1)(h) Charities Act 2011; includes conflict resolution and equality.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A charitable trust can charge fees for its services.",
+    "a": true,
+    "exp": "Independent Schools Council; provided the poor are not entirely excluded (more than token benefit).",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A trust for the 'preservation of the environment' is charitable.",
+    "a": true,
+    "exp": "s.3(1)(i) Charities Act 2011; advancement of environmental protection is a head of charity.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "If a charitable purpose fails initially, the funds are always applied cy-près.",
+    "a": false,
+    "exp": "Only if there is a 'general charitable intention'; otherwise, it results back to the donor (Re Good).",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "A trust for 'the working classes' is a valid trust for the relief of poverty.",
+    "a": false,
+    "exp": "Re Sanders' WT; 'working class' does not necessarily mean 'poor' or 'impoverished'.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "The promotion of ethical standards in business is a charitable purpose.",
+    "a": false,
+    "exp": "IRC v Oldham TEC; promoting industry/commerce for private gain is not charitable unless for public benefit.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "A trust for 'the 40-letter alphabet' was charitable.",
+    "a": false,
+    "exp": "Re Shaw; mere increase in knowledge without education/teaching is not charitable.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "A non-charitable purpose trust can be enforced by the Attorney General.",
+    "a": false,
+    "exp": "The AG enforces charitable trusts; non-charitable ones are unenforceable (imperfect obligation).",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A trust for 'my old regiment' to buy sports gear is charitable.",
+    "a": true,
+    "exp": "Re Gray; promotion of efficiency of the armed forces is a charitable head.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A trust for 'benevolent purposes' is charitable.",
+    "a": false,
+    "exp": "Chichester Diocesan Fund v Simpson; 'benevolent' is broader than 'charitable', so the trust fails for uncertainty.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "A trust for the 'welfare of cats' is charitable.",
+    "a": true,
+    "exp": "Re Moss; advancement of animal welfare is charitable (benefit to human morality).",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "'Charitable Purpose Trust' must be for the public benefit.",
+    "a": true,
+    "exp": "s.2 Charities Act 2011; defined by purpose (s.3) and public benefit (s.4).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Non-Charitable Purpose Trust' is generally void.",
+    "a": true,
+    "exp": "Re Endacott; violates the beneficiary principle (except for specific anomalies).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Beneficiary Principle' requires a trust to have ascertainable beneficiaries.",
+    "a": true,
+    "exp": "Morice v Bishop of Durham; someone must be able to enforce the trust.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Cy-près Doctrine' allows charitable funds to be redirected.",
+    "a": true,
+    "exp": "If the original purpose fails, funds go to a similar charitable purpose (closest match).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Public Benefit' has two limbs: identifiable benefit and section of the public.",
+    "a": true,
+    "exp": "Independent Schools Council; benefit must be clear and not restricted to a private class.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Personal Nexus' refers to a relationship linking beneficiaries (e.g., employees).",
+    "a": true,
+    "exp": "Oppenheim; a personal link to a settlor/employer usually negates the 'public' element.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Endacott Exceptions' are valid non-charitable purpose trusts.",
+    "a": true,
+    "exp": "Anomalous categories: animals, graves/monuments, private masses.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Perpetuity Rule' for non-charitable trusts is the rule against inalienability.",
+    "a": true,
+    "exp": "The trust must end within the perpetuity period (21 years).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Trust of Imperfect Obligation' is a valid but unenforceable trust.",
+    "a": true,
+    "exp": "E.g., Endacott exceptions; the trustee can perform it, but no one can compel them.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Pettingall Order' allows the court to ensure a purpose trust is carried out.",
+    "a": true,
+    "exp": "The trustee undertakes to perform the trust, allowing the residuary legatee to sue if they don't.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Charity Commission' is the regulator for charities in England and Wales.",
+    "a": true,
+    "exp": "Registers and regulates charities; ensures compliance.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Advancement of Education' includes research only if it is disseminated.",
+    "a": true,
+    "exp": "Re Hopkins; research must be communicable/of educational value to be charitable.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Advancement of Religion' requires belief in a supreme being.",
+    "a": false,
+    "exp": "s.3(2)(a) Charities Act 2011; includes religions without a god (e.g., Buddhism).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Wholly and Exclusively' means a trust cannot have mixed charitable/non-charitable purposes.",
+    "a": true,
+    "exp": "Unless the non-charitable part is incidental, the trust fails as a charity.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Political Purpose' includes campaigning for a change in the law.",
+    "a": true,
+    "exp": "Not charitable; courts must remain neutral on whether changing the law is beneficial.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'General Charitable Intention' is required for cy-près on initial failure.",
+    "a": true,
+    "exp": "Shows the donor wanted to give to charity generally, not just the specific (failed) object.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Initial Failure' occurs when the purpose is impossible at the start.",
+    "a": true,
+    "exp": "E.g., the charity never existed or closed before the testator's death.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Subsequent Failure' occurs after the trust has started operating.",
+    "a": true,
+    "exp": "Cy-près applies automatically; funds are already dedicated to charity.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Royal Lives Clause' extends the perpetuity period.",
+    "a": true,
+    "exp": "Links the 21-year period to the death of the last survivor of a royal family.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Poverty' in charity law means destitution.",
+    "a": false,
+    "exp": "Re Coulthurst; it means 'going short' of normal things, not absolute destitution.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Relief of those in need' (s.3(1)(j)) requires the beneficiary to be poor.",
+    "a": false,
+    "exp": "Need can arise from age, ill-health, or disability, not just financial hardship (Joseph Rowntree).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Ancillary Purpose' is a non-charitable purpose that supports the main charitable aim.",
+    "a": true,
+    "exp": "E.g., a student union bar; does not invalidate charitable status.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Rule Against Remoteness of Vesting' applies to charitable trusts.",
+    "a": true,
+    "exp": "Property must vest in the charity within the perpetuity period (125 years).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Human Rights' is a statutory head of charity.",
+    "a": true,
+    "exp": "s.3(1)(h) Charities Act 2011; includes promotion of human rights.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Animal Welfare' trusts must benefit animals generally or specific species.",
+    "a": true,
+    "exp": "Cannot be for a specific individual animal (that would be a private trust).",
+    "isTiming": false,
+    "difficulty": 1
+  }
+
+    {
+    "q": "An oral declaration of a trust of land is void ab initio.",
+    "a": false,
+    "exp": "s.53(1)(b) LPA 1925; it is valid but unenforceable until manifested and proved in signed writing.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A constructive trust of land must be evidenced in writing to be enforceable.",
+    "a": false,
+    "exp": "s.53(2) LPA 1925; resulting, implied, and constructive trusts are exempt from formalities.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Under Milroy v Lord, equity will construe a failed gift as a self-declaration of trust to save it.",
+    "a": false,
+    "exp": "Jones v Lock; equity will not assist a volunteer by perfecting an imperfect gift or changing its nature.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "For the Re Rose exception to apply, the transferor must deliver the documents to the company registrar personally.",
+    "a": false,
+    "exp": "Mascall v Mascall; it is sufficient to put the matter beyond the transferor's control (e.g., giving documents to the donee).",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Handing a stock transfer form to the transferor's own agent puts the matter beyond their control.",
+    "a": false,
+    "exp": "Re Fry; agency is revocable, so the transfer is not complete until the agent acts or documents reach the donee/registrar.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "In Pennington v Waine, the gift was perfected because it was unconscionable for the donor to resile.",
+    "a": true,
+    "exp": "The donor told the donee no further action was needed, and the donee acted to their detriment (became a director).",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "The rule in Strong v Bird applies if the donor intends to make a gift in the future.",
+    "a": false,
+    "exp": "Re Freeland; there must be a continuing intention to make an *immediate* gift.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Strong v Bird can perfect a gift if the donee becomes the administrator of the intestate donor.",
+    "a": true,
+    "exp": "Re James; the rule applies to administrators as well as executors.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Writing a cheque to a donee in lieu of a house demonstrates continuing intention under Strong v Bird.",
+    "a": false,
+    "exp": "Re Gonin; writing the cheque showed the intention to gift the house had changed/ceased.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "A valid Donatio Mortis Causa (DMC) requires the donor to die from the specific cause contemplated.",
+    "a": false,
+    "exp": "Wilkes v Allington (general law); broadly, they must die, but the specific cause isn't strictly required if death occurs.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "For a DMC, the donor must part with 'dominion' over the property.",
+    "a": true,
+    "exp": "Sen v Headley; delivery of keys (e.g., to a deed box) can constitute constructive delivery of dominion.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A DMC of a house cannot be valid because land requires a deed.",
+    "a": false,
+    "exp": "Sen v Headley; DMCs operate via constructive trust, overriding statutory formalities for land.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "In Khan v Mahmood, the court held that detrimental reliance is strictly necessary for the 'unconscionable principle'.",
+    "a": false,
+    "exp": "Marcus Smith J held reliance is relevant but not a strict necessity; the focus is on the donor's conscience.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "A failed transfer on trust results in an automatic resulting trust for the settlor.",
+    "a": true,
+    "exp": "If the beneficial interest is not effectively disposed of, it results back to the settlor.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "The presumption of advancement applies when a mother transfers property to her child.",
+    "a": false,
+    "exp": "Historically only Father->Child; the position for mothers is 'less clear' (Equality Act s.199 not in force).",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "A purchase money resulting trust applies to a family home acquired in joint names.",
+    "a": false,
+    "exp": "Stack v Dowden; family homes are dealt with under common intention constructive trusts, not resulting trusts.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "If A buys a car and registers it in B's name, B is presumed to hold it on trust for A.",
+    "a": true,
+    "exp": "Presumed resulting trust; equity presumes bargains, not gifts (unless presumption of advancement applies).",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "The limitation period for a fraudulent breach of trust is 6 years.",
+    "a": false,
+    "exp": "s.21(1) Limitation Act 1980; no limitation period applies to fraudulent breaches.",
+    "isTiming": true,
+    "difficulty": 2
+  },
+  {
+    "q": "Under Rochefoucauld v Boustead, a trustee cannot rely on the lack of writing to keep land for themselves.",
+    "a": true,
+    "exp": "Equity will not allow a statute (Statute of Frauds/LPA 1925) to be used as an instrument of fraud.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A valid DMC requires the donor to believe death is imminent.",
+    "a": true,
+    "exp": "King v Dubrey; mere elderly age or general mortality is insufficient; death must be anticipated soon.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "In Rahman v Hassan, handing over a Land Registry certificate was sufficient for a DMC of land.",
+    "a": true,
+    "exp": "The court found valid gifts of accounts and land via delivery of documents representing title.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "If a trust fails for uncertainty of objects, the trustee takes the property beneficially.",
+    "a": false,
+    "exp": "The trustee holds on automatic resulting trust for the settlor/estate.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Section 53(1)(c) LPA 1925 requires dispositions of equitable interests to be in writing.",
+    "a": true,
+    "exp": "Disposition of a subsisting equitable interest must be in writing signed by the disponor or agent.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "If a father transfers money to his son, a resulting trust is presumed.",
+    "a": false,
+    "exp": "Presumption of advancement applies (Father->Child), presuming a gift.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A self-declaration of trust requires the transfer of legal title.",
+    "a": false,
+    "exp": "The settlor already holds legal title; they simply declare they now hold it as trustee.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Constitution' refers to the transfer of legal title to the trustee or donee.",
+    "a": true,
+    "exp": "The trust is not 'constituted' until the property is vested in the trustee.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Donatio Mortis Causa' is a gift made in contemplation of death.",
+    "a": true,
+    "exp": "A hybrid between a lifetime gift and a testamentary bequest.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Automatic Resulting Trust' arises when a trust fails and the surplus remains.",
+    "a": true,
+    "exp": "The beneficial interest 'results' back to the settlor automatically.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Presumed Resulting Trust' arises from a gratuitous transfer.",
+    "a": true,
+    "exp": "Equity presumes the transferor did not intend to give the property away for free.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Presumption of Advancement' presumes a gift based on relationship.",
+    "a": true,
+    "exp": "Applies to Husband->Wife and Father->Child.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Fortuitous Vesting' occurs when a donee becomes the donor's personal representative.",
+    "a": true,
+    "exp": "The rule in Strong v Bird; legal title vests by operation of law (administration), perfecting the gift.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Equity will not assist a volunteer' means equity will not enforce an unconstituted trust.",
+    "a": true,
+    "exp": "Unless consideration was provided, equity will not compel the settlor to complete the transfer.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Dominion' refers to control over the property or indicia of title.",
+    "a": true,
+    "exp": "Essential element for a valid DMC (e.g., handing over keys).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Inter Vivos' means taking place during the lifetime of the parties.",
+    "a": true,
+    "exp": "Opposite of testamentary (by will).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Testamentary Trust' is created by a will.",
+    "a": true,
+    "exp": "Must comply with s.9 Wills Act 1837.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Stock Transfer Form' is required to transfer shares.",
+    "a": true,
+    "exp": "Along with the share certificate, sent to the company for registration.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Deed' is required to transfer legal title to land.",
+    "a": true,
+    "exp": "s.52 LPA 1925; conveyance of land is void for legal estate unless made by deed.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Delivery' is required to transfer title to chattels.",
+    "a": true,
+    "exp": "Re Cole; simple physical delivery with intention to give transfers ownership.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Chose in Action' is transferred by written notice to the debtor.",
+    "a": true,
+    "exp": "s.136 LPA 1925; e.g., bank accounts or debts.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Unconscionability' is the trigger for a constructive trust in Pennington v Waine.",
+    "a": true,
+    "exp": "If the donor's conduct makes it unconscionable to withdraw the gift, equity perfects it.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Instrument of Fraud' refers to using a statute to deny a trust.",
+    "a": true,
+    "exp": "Rochefoucauld v Boustead; preventing a trustee from keeping land because the trust wasn't written.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Bare Trust' involves a trustee with no active duties.",
+    "a": true,
+    "exp": "Holding title to the order of the beneficiary.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Perfecting an Imperfect Gift' is generally allowed by equity.",
+    "a": false,
+    "exp": "General rule is equity will *not* perfect an imperfect gift (Milroy v Lord), subject to exceptions.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Re Rose' exception relies on the 'every effort' test.",
+    "a": true,
+    "exp": "The donor must have done everything in their power to transfer title.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Loco Parentis' refers to someone taking on the role of a parent.",
+    "a": true,
+    "exp": "Relevant for the presumption of advancement.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Residue' is the remainder of an estate after specific gifts/debts.",
+    "a": true,
+    "exp": "If a specific trust fails, the property usually falls into residue.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Executor' is a personal representative appointed by will.",
+    "a": true,
+    "exp": "They take legal title to the testator's estate.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Administrator' is a personal representative appointed by the court.",
+    "a": true,
+    "exp": "Usually where there is no valid will (intestacy).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Constructive Delivery' is handing over the means of access.",
+    "a": true,
+    "exp": "E.g., keys to a car or box; sufficient for DMC.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Unenforceable' means a trust is void.",
+    "a": false,
+    "exp": "Unenforceable means valid but cannot be enforced in court until formalities (e.g., writing) are met.",
+    "isTiming": false,
+    "difficulty": 1
+  }
+
+    {
+    "q": "The presumption of advancement applies to determine beneficial ownership of a family home between cohabitants.",
+    "a": false,
+    "exp": "Jones v Kernott; resulting trusts/presumptions of advancement are displaced by the common intention constructive trust.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "In a sole name case, the starting point is that the non-legal owner has a 50% beneficial interest.",
+    "a": false,
+    "exp": "Stack v Dowden; in sole name cases, the starting point is sole beneficial ownership (equity follows the law).",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "In a joint names case, the presumption of joint beneficial ownership can be rebutted by unequal financial contributions alone.",
+    "a": false,
+    "exp": "Fowler v Barron; financial contributions alone are usually insufficient; the whole course of conduct is considered.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Common intention can be inferred from conduct in sole name cases.",
+    "a": true,
+    "exp": "Lloyds Bank v Rosset; direct contributions to the purchase price or mortgage payments can infer intention.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "The court can impute an intention to the parties at the acquisition stage (Step 1) of a sole name claim.",
+    "a": false,
+    "exp": "Barnes v Phillips; imputation is permissible only at the quantification stage, not the acquisition stage.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "A proprietary estoppel claim requires an assurance about ownership of property.",
+    "a": false,
+    "exp": "Thorner v Major; it requires an assurance about a right *in relation to* property, not strictly ownership (can be a license).",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Detrimental reliance for a common intention constructive trust must be financial.",
+    "a": false,
+    "exp": "Eves v Eves; significant physical labor (wielding a sledgehammer) can constitute detrimental reliance.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "The 'whole course of dealing' includes advice or discussions the parties had.",
+    "a": true,
+    "exp": "Stack v Dowden; Lady Hale's list includes advice/discussions as key factors.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "An express declaration of trust in the TR1 form is conclusive of beneficial ownership.",
+    "a": true,
+    "exp": "Pettitt v Pettitt / Stack v Dowden; an express declaration is conclusive unless set aside for fraud/mistake.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Proprietary estoppel always results in the claimant receiving the property.",
+    "a": false,
+    "exp": "Guest v Guest; the remedy is the minimum to do equity/prevent unconscionability (e.g., compensation).",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Intention can change over time ('ambulatory intention').",
+    "a": true,
+    "exp": "Jones v Kernott; intentions can change, e.g., at separation, crystallizing interests differently.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "In sole name cases, 'family home' discussions are sufficient to prove an express common intention.",
+    "a": false,
+    "exp": "Lloyds Bank v Rosset; statements must be about shared *ownership*, not just shared occupation ('family home').",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Making substantial improvements that add significant value can infer a common intention.",
+    "a": true,
+    "exp": "Aspden v Elvy; substantial value-adding work can infer an intention to share ownership.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "An excuse given by the legal owner (e.g., 'you're too young') can be evidence of common intention.",
+    "a": true,
+    "exp": "Eves v Eves; such excuses imply an agreement to share but for the obstacle.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Paying household bills is generally sufficient to infer a common intention in sole name cases.",
+    "a": false,
+    "exp": "Unless it enables the other to pay the mortgage (indirect contribution), it is usually insufficient (Rosset).",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Rigid separation of finances was a key factor in rebutting the joint tenancy presumption in Stack v Dowden.",
+    "a": true,
+    "exp": "Stack v Dowden; keeping finances strictly separate indicated an intention *not* to share equally.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "The court can use 'fairness' as the sole basis for quantifying interests.",
+    "a": false,
+    "exp": "The court looks for actual/inferred intention first; 'fairness' (imputation) is a last resort.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Proprietary estoppel is a cause of action, not just a defense.",
+    "a": true,
+    "exp": "Unlike promissory estoppel, proprietary estoppel can be used as a sword (cause of action).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Unconscionability is a requirement for proprietary estoppel but not common intention constructive trusts.",
+    "a": false,
+    "exp": "Constructive trusts also respond to unconscionability (denying an interest contrary to agreement/conduct).",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "A claim under the Matrimonial Causes Act 1973 applies to unmarried cohabitants.",
+    "a": false,
+    "exp": "Cohabitants must rely on trusts/estoppel; the MCA 1973 applies only to married couples.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "In Jones v Kernott, the court inferred a change of intention when Mr Kernott cashed in a life policy.",
+    "a": true,
+    "exp": "Cashing in the policy and ceasing contributions signaled an end to the joint pooling of assets.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A proprietary estoppel remedy must match the expectation exactly.",
+    "a": false,
+    "exp": "The remedy must be proportionate and avoid unconscionability; it may be less than expectation.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Domestic work alone (cooking/cleaning) is sufficient to infer common intention.",
+    "a": false,
+    "exp": "Burns v Burns; domestic duties are generally insufficient to establish a beneficial interest.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "In Adekunle v Ritchie, the purpose of buying the house (as a home for the mother) rebutted the joint tenancy.",
+    "a": true,
+    "exp": "The primary purpose (mother's home) outweighed the joint legal title.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Proprietary estoppel requires a pre-existing fiduciary relationship.",
+    "a": false,
+    "exp": "It requires an assurance, reliance, and detriment, not a fiduciary relationship.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Equity follows the law' is the starting presumption for joint legal owners.",
+    "a": true,
+    "exp": "Joint legal tenants are presumed to be joint beneficial tenants.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Sole Legal Owner' holds the legal title alone.",
+    "a": true,
+    "exp": "The presumption is they are also the sole beneficial owner.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Joint Tenants' hold the entire interest together without distinct shares.",
+    "a": true,
+    "exp": "Includes the right of survivorship.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Tenants in Common' hold distinct, divisible shares.",
+    "a": true,
+    "exp": "No right of survivorship; shares pass to their estate.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Common Intention Constructive Trust' is based on the shared intention of the parties.",
+    "a": true,
+    "exp": "Arises to give effect to an agreement (express or inferred) acted upon to detriment.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Resulting Trust' is based on contributions to the purchase price.",
+    "a": true,
+    "exp": "Generally not used for family homes anymore (Stack v Dowden).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Proprietary Estoppel' prevents a legal owner from unconscionably denying a right.",
+    "a": true,
+    "exp": "Based on assurance, reliance, and detriment.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Detrimental Reliance' is conduct the claimant would not have done but for the agreement.",
+    "a": true,
+    "exp": "Required for both constructive trusts and estoppel (e.g., paying mortgage, heavy DIY).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Express Common Intention' is based on explicit discussions.",
+    "a": true,
+    "exp": "Spoken words about ownership (e.g., 'half yours').",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Inferred Common Intention' is deduced objectively from conduct.",
+    "a": true,
+    "exp": "The court looks at the 'whole course of dealing'.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Imputed Common Intention' is what reasonable people would have intended.",
+    "a": true,
+    "exp": "Used as a last resort at the quantification stage.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Whole Course of Dealing' includes financial and non-financial factors.",
+    "a": true,
+    "exp": "Stack v Dowden factors (children, nature of relationship, finances, etc.).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Right of Survivorship' means the interest passes to the other joint tenant on death.",
+    "a": true,
+    "exp": "Applies to joint tenancies.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Severance' converts a joint tenancy into a tenancy in common.",
+    "a": true,
+    "exp": "Allows a co-owner to leave their share by will.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Assurance' is a promise or representation about rights in property.",
+    "a": true,
+    "exp": "The first element of proprietary estoppel.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Unconscionability' means it shocks the conscience of the court.",
+    "a": true,
+    "exp": "The overarching requirement for equitable intervention.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Quantification' is the process of determining the size of the share.",
+    "a": true,
+    "exp": "Step 2 in the constructive trust analysis.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Ambulatory' means the intention can change over time.",
+    "a": true,
+    "exp": "Jones v Kernott; interests can 'crystallize' differently later.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'TR1 Form' is used to transfer legal title to land.",
+    "a": true,
+    "exp": "Contains a box to declare beneficial interests (express trust).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Excuse' cases involve a reason given for not putting a name on the title.",
+    "a": true,
+    "exp": "E.g., 'too young', 'prejudice divorce'; implies agreement.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Equity' refers to the body of law supplementing the common law.",
+    "a": true,
+    "exp": "Focuses on fairness and conscience.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Remedy' in estoppel is the court order to satisfy the equity.",
+    "a": true,
+    "exp": "Discretionary (e.g., money, transfer of property, license).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Beneficial Interest' allows the holder to enjoy the property.",
+    "a": true,
+    "exp": "Right to occupy or receive proceeds of sale.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Legal Title' is the formal paper ownership.",
+    "a": true,
+    "exp": "Held by the trustees (up to 4).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Statutory Trust' arises by operation of legislation.",
+    "a": true,
+    "exp": "E.g., under TLATA 1996 for co-owned land.",
+    "isTiming": false,
+    "difficulty": 1
+  }
+
+    {
+    "q": "Under s.32 TA 1925 (post-2014), trustees can advance up to 100% of a beneficiary's prospective share.",
+    "a": true,
+    "exp": "The Inheritance and Trustees' Powers Act 2014 removed the 50% cap for trusts created after 1 Oct 2014.",
+    "isTiming": true,
+    "difficulty": 2
+  },
+  {
+    "q": "The statutory power of maintenance (s.31 TA 1925) applies to adult beneficiaries.",
+    "a": false,
+    "exp": "It applies to minors; adults are generally entitled to income as it arises (unless the trust directs accumulation).",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Trustees must obtain the consent of a prior life tenant to exercise the power of advancement.",
+    "a": true,
+    "exp": "s.32(1)(c) TA 1925; consent is required from any person with a prior life or other interest.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Advancement of capital to a minor should be paid directly to the minor to ensure they receive it.",
+    "a": false,
+    "exp": "Minors cannot give a valid receipt; payment should be to a parent/guardian or direct to a provider.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Beneficiaries can compel a trustee to retire under s.19 TLATA 1996 if they are all of full age and absolutely entitled.",
+    "a": true,
+    "exp": "s.19 TLATA allows beneficiaries to direct the retirement and appointment of trustees if unanimous.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A trustee can be replaced under s.36(1) TA 1925 if they remain out of the UK for more than 12 months.",
+    "a": true,
+    "exp": "s.36(1) lists absence from the UK for >12 months as a ground for replacement.",
+    "isTiming": true,
+    "difficulty": 2
+  },
+  {
+    "q": "The 'benefit' for advancement is strictly limited to education or career purposes.",
+    "a": false,
+    "exp": "Pilkington v IRC; 'benefit' is the 'widest possible sense', improving the material situation.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Trustees have a duty to ensure money advanced is applied for the stated purpose.",
+    "a": true,
+    "exp": "Re Pauling's Settlement Trusts; trustees cannot simply hand over money if they suspect misuse.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "The power of maintenance applies even if the contingent interest does not carry the intermediate income.",
+    "a": false,
+    "exp": "s.31(3) TA 1925; the power applies only if the trust carries the intermediate income.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "A trustee can retire under s.39 TA 1925 leaving only one individual trustee in office.",
+    "a": false,
+    "exp": "s.39 requires that at least two individuals (or a trust corporation) remain after retirement.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Trustees appointed by the court under s.41 TA 1925 have fewer powers than original trustees.",
+    "a": false,
+    "exp": "s.43 TA 1925; they have the same powers, authorities, and discretions as if originally appointed.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Existing trustees can use s.36(6) TA 1925 to appoint additional trustees.",
+    "a": true,
+    "exp": "The power is vested in the person nominated or, if none, the current trustees.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "An advancement can be made to discharge a beneficiary's moral obligation to charity.",
+    "a": true,
+    "exp": "Re Clore's Settlement Trusts; benefit includes discharging moral obligations the beneficiary recognizes.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Income accumulated during minority under s.31 is added to capital when the beneficiary turns 18.",
+    "a": true,
+    "exp": "s.31(2) TA 1925; accumulations are held as an accretion to the capital.",
+    "isTiming": true,
+    "difficulty": 2
+  },
+  {
+    "q": "Personal representatives cannot appoint trustees if the named trustee in a will predeceases the testator.",
+    "a": false,
+    "exp": "s.36(1) (via s.36(8)) allows PRs to appoint trustees if the nominated trustee dies before the testator.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "If trustees do not exercise the power of maintenance for a minor, they must distribute the income to the parents.",
+    "a": false,
+    "exp": "They must accumulate the income (invest it) if the power of maintenance is not exercised.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A payment under s.32 TA 1925 must be 'brought into account' at the final distribution.",
+    "a": true,
+    "exp": "s.32(1)(b) TA 1925; advanced sums are deducted from the beneficiary's final share.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Trustees can increase the number of trustees to five using the statutory power.",
+    "a": false,
+    "exp": "s.36(6) TA 1925; additional trustees cannot be appointed if it increases the number beyond four.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Trustees can surrender their discretion to the court if they are deadlocked.",
+    "a": true,
+    "exp": "Surrendering discretion is a valid protection method in cases of deadlock or conflict.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Trustees can delegate their dispositive powers (e.g., choosing beneficiaries) to an agent.",
+    "a": false,
+    "exp": "s.11 TA 2000; asset management is delegable, but distributive functions are not.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Retirement under s.39 TA 1925 requires the consent of the beneficiaries.",
+    "a": false,
+    "exp": "It requires the consent by deed of the co-trustees and any person with power to appoint trustees.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Section 32 advancement requires the consent of beneficiaries entitled to the remainder on a gift-over.",
+    "a": false,
+    "exp": "It only requires the consent of those with a *prior* interest, not subsequent/remainder interests.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Trustees are entitled to wait for a beneficiary to demand payment before distributing.",
+    "a": false,
+    "exp": "Trustees have a positive duty to distribute income/capital as soon as it is due.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A Benjamin Order authorizes trustees to distribute based on a presumption (e.g., death).",
+    "a": true,
+    "exp": "Re Benjamin; protects trustees from liability if the missing beneficiary later appears.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "The power of advancement can be used to settle funds on a new trust (resettlement).",
+    "a": true,
+    "exp": "Pilkington v IRC; advancement can take the form of a settlement if it benefits the beneficiary.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "'Dispositive Powers' relate to the distribution of trust property.",
+    "a": true,
+    "exp": "E.g., Maintenance and Advancement (as opposed to Administrative powers).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Administrative Powers' relate to the management of trust property.",
+    "a": true,
+    "exp": "E.g., Investment, Insurance, Delegation.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Power of Maintenance' (s.31) allows use of income for a minor.",
+    "a": true,
+    "exp": "For 'maintenance, education, or benefit'.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Power of Advancement' (s.32) allows use of capital before vesting.",
+    "a": true,
+    "exp": "Allows early access to capital for the beneficiary's benefit.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Accumulation' means adding unspent income to the capital.",
+    "a": true,
+    "exp": "Required under s.31(2) if income is not paid out for maintenance.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Intermediate Income' is income generated by the trust fund before the capital vests.",
+    "a": true,
+    "exp": "Contingent interests must carry this for s.31 to apply.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Prior Interest' refers to a beneficiary currently entitled to income (e.g., life tenant).",
+    "a": true,
+    "exp": "Their consent is needed for advancement to a remainderman.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Vested in Possession' means a current right to enjoyment.",
+    "a": true,
+    "exp": "E.g., the interest of a life tenant receiving income now.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Vested in Interest' means a current right to future enjoyment.",
+    "a": true,
+    "exp": "E.g., a remainderman waiting for the life tenant to die.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Contingent Interest' depends on an uncertain future event.",
+    "a": true,
+    "exp": "E.g., 'to X if he attains 25'.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'s.36 TA 1925' contains the statutory power to appoint/replace trustees.",
+    "a": true,
+    "exp": "The primary mechanism for out-of-court appointments.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'s.19 TLATA 1996' allows beneficiaries to direct retirement/appointment.",
+    "a": true,
+    "exp": "Applies where beneficiaries are sui juris and absolutely entitled.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'s.41 TA 1925' allows the court to appoint trustees.",
+    "a": true,
+    "exp": "Used when it is 'inexpedient, difficult or impracticable' to do so otherwise.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Benjamin Order' allows distribution assuming a missing beneficiary is dead.",
+    "a": true,
+    "exp": "Protects trustees from personal liability for wrongful distribution.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'s.27 Notice' protects trustees against claims from unknown beneficiaries.",
+    "a": true,
+    "exp": "Requires advertisement in the London Gazette.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Payment into Court' (s.63) transfers funds to the court's control.",
+    "a": true,
+    "exp": "A last resort for trustees wishing to be discharged when beneficiaries cannot be found.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Indemnity' allows a trustee to recover costs from the trust fund.",
+    "a": true,
+    "exp": "Or from a beneficiary who instigated a breach.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Impounding' allows the court to use a beneficiary's interest to cover a breach.",
+    "a": true,
+    "exp": "s.62 TA 1925; indemnifies the trustee against claims from other beneficiaries.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Lay Trustee' acts voluntarily without payment.",
+    "a": true,
+    "exp": "As opposed to a professional trustee.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Professional Trustee' acts in the course of a business.",
+    "a": true,
+    "exp": "Entitled to remuneration (s.29 TA 2000) and higher duty of care.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Trust Corporation' can act as a sole trustee of land.",
+    "a": true,
+    "exp": "Can give valid receipt for capital money alone (unlike a sole individual).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Disclaimer' is the refusal to accept the office of trustee.",
+    "a": true,
+    "exp": "A person cannot be compelled to be a trustee.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Retirement' is the discharge of a trustee from their office.",
+    "a": true,
+    "exp": "Can be voluntary (s.39) or compulsory (s.19 TLATA / Court).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Removal' is the compulsory discharge of a trustee.",
+    "a": true,
+    "exp": "Can be done via s.36 (if unfit/incapable) or by the Court.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Bringing into Account' deducts advanced sums from the final share.",
+    "a": true,
+    "exp": "Ensures fairness among beneficiaries at the final distribution.",
+    "isTiming": false,
+    "difficulty": 1
+  }
+
   ],
+
+
+
+
+  
   "public_law_1": [
     {
       "q": "Parliamentary Sovereignty means Parliament can make/unmake any law.",
