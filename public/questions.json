@@ -2791,9 +2791,8 @@
     "exp": "If the class cannot be defined, a complete list cannot be drawn up.",
     "isTiming": false,
     "difficulty": 1
-  }
-
-    {
+  },
+  {
     "q": "A professional trustee who fails to consider the standard investment criteria commits a breach of trust.",
     "a": true,
     "exp": "s.4 Trustee Act 2000; trustees have a duty to consider the standard investment criteria (suitability and diversification).",
@@ -3142,7 +3141,7 @@
     "exp": "Presumes the beneficiary is dead for distribution purposes.",
     "isTiming": false,
     "difficulty": 1
-  }
+  },
   {
     "q": "A trustee sells trust property to a company in which they are the sole shareholder. This transaction is automatically void.",
     "a": false,
@@ -3842,7 +3841,7 @@
     "exp": "Relevant for determining if a purchaser is bona fide.",
     "isTiming": false,
     "difficulty": 1
-  }
+  },
   {
     "q": "A trust of land can be validly declared orally.",
     "a": false,
@@ -4192,7 +4191,7 @@
     "exp": "Both the asset and the share must be certain.",
     "isTiming": false,
     "difficulty": 1
-  }
+  },
   {
     "q": "A trust for 'the relief of poverty' fails if it does not benefit the public.",
     "a": false,
@@ -4542,7 +4541,7 @@
     "exp": "Cannot be for a specific individual animal (that would be a private trust).",
     "isTiming": false,
     "difficulty": 1
-  }
+  },
   {
     "q": "An oral declaration of a trust of land is void ab initio.",
     "a": false,
@@ -5242,7 +5241,7 @@
     "exp": "E.g., under TLATA 1996 for co-owned land.",
     "isTiming": false,
     "difficulty": 1
-  }
+  },
   {
     "q": "Under s.32 TA 1925 (post-2014), trustees can advance up to 100% of a beneficiary's prospective share.",
     "a": true,
