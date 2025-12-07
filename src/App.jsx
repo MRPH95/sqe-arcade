@@ -514,14 +514,24 @@ const CategoryCard = ({ id, label, icon: Icon, count, onClick, isSpecial }) => (
   </button>
 );
 
-// --- REVISED CATEGORY GRID (Dynamic Counts) ---
+// --- UPDATED CATEGORY GRID ---
 const CategoryGrid = ({ onSelect, data }) => {
-  
-  // Calculate counts based on passed data
+  // HELPER: Calculate counts based on the passed 'data' prop
   const getCount = (key) => {
-      if (!data) return "0";
-      if (key === 'mixed') return Object.values(data).flat().length;
-      if (key === 'timing') return Object.values(data).flat().filter(q => q.isTiming).length;
+      // If data hasn't loaded yet, return 0
+      if (!data) return 0;
+      
+      // Special logic for Chaos Mode (Count everything)
+      if (key === 'mixed') {
+          return Object.values(data).flat().length;
+      }
+      
+      // Special logic for Counting Time (Filter by isTiming flag)
+      if (key === 'timing') {
+          return Object.values(data).flat().filter(q => q.isTiming).length;
+      }
+      
+      // Standard Category Count
       return data[key]?.length || 0;
   };
 
@@ -540,7 +550,7 @@ const CategoryGrid = ({ onSelect, data }) => {
           <CategoryCard id="trusts" label="Trusts & Equity" icon={BrainCircuit} count={getCount('trusts')} onClick={() => onSelect('trusts')} />
           
           <div className="col-span-full grid grid-cols-2 gap-4 mt-4">
-              <CategoryCard id="mixed" label="CHAOS MODE (ALL)" icon={Hexagon} count={getCount('mixed')} onClick={() => onSelect('mixed')} />
+              <CategoryCard id="mixed" label="CHAOS MODE (ALL)" icon={Hexagon} count={getCount('mixed')} onClick={() => onSelect('mixed')} isSpecial={true} />
               <CategoryCard id="timing" label="COUNTING TIME" icon={Clock} count={getCount('timing')} onClick={() => onSelect('timing')} isSpecial={true} />
           </div>
       </div>
@@ -622,7 +632,7 @@ export default function SQEArcade() {
 
   // LOAD DATA with CATEGORY INJECTION
   useEffect(() => {
-    fetch('./questions.json')
+    fetch('/questions.json')
       .then(res => res.json())
       .then(data => {
           const processedData = {};
@@ -1039,7 +1049,11 @@ export default function SQEArcade() {
                 <>
                     <DifficultySelector current={difficulty} onSelect={setDifficulty} />
                     <LevelSelector current={level} onSelect={setLevel} />
-                    <CategoryGrid onSelect={selectCategory} data={rawQuestions || PREPARED_BANKS} />
+                    {/* PASS THE DATA PROP HERE */}
+                    <CategoryGrid 
+                    onSelect={selectCategory} 
+                    data={rawQuestions || PREPARED_BANKS} 
+                    />
                 </>
             )}
             <div className="pt-8">
