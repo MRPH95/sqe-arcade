@@ -346,57 +346,1793 @@
     { "q": "Search warrant valid for 3 months.", "a": true, "exp": "Duration.", "isTiming": true },
     { "q": "Suspended sentence max length: 2 years.", "a": true, "exp": "Prison term.", "isTiming": true }
   ],
+
+
+
+  
   "willsAdmin": [
-    { "q": "Marriage revokes a will automatically.", "a": true, "exp": "Unless contemplation." },
-    { "q": "Witness cannot be a beneficiary.", "a": false, "exp": "Gift fails, will valid." },
-    { "q": "Intestacy: Spouse gets £322k statutory legacy.", "a": true, "exp": "Plus chattels." },
-    { "q": "Cohabitants inherit automatically under intestacy.", "a": false, "exp": "1975 Act claim only." },
-    { "q": "Inheritance Tax is 40% over threshold.", "a": true, "exp": "Death rate." },
-    { "q": "Taper relief applies to gifts 3-7 years before death.", "a": true, "exp": "Reduces tax." },
-    { "q": "Executors act from date of death.", "a": true, "exp": "Will authority." },
-    { "q": "Administrators act from date of death.", "a": false, "exp": "Grant authority." },
-    { "q": "s.27 Notice protects against known creditors.", "a": false, "exp": "Unknown creditors." },
-    { "q": "Commorientes: Younger presumed died first.", "a": false, "exp": "Elder died first." },
-    { "q": "Ademption: Specific gift fails if asset gone.", "a": true, "exp": "Failure of gift." },
-    { "q": "Benjamin Order: Missing beneficiary presumed dead.", "a": true, "exp": "Protects PRs." },
-    { "q": "Minor can be appointed executor.", "a": false, "exp": "Power reserved." },
-    { "q": "Step-children are 'issue' for intestacy.", "a": false, "exp": "Blood/Adopted only." },
-    { "q": "Donatio Mortis Causa (DMC) is deathbed gift.", "a": true, "exp": "Exception to formalities." },
-    { "q": "Capacity test: Banks v Goodfellow.", "a": true, "exp": "Understanding test." },
-    { "q": "Undue influence must be proved in probate.", "a": true, "exp": "No presumption." },
-    { "q": "Fraudulent calumny poisons testator's mind.", "a": true, "exp": "Invalidity ground." },
-    { "q": "Due execution presumes knowledge & approval.", "a": true, "exp": "Usually." },
-    { "q": "Blind person cannot witness a will.", "a": true, "exp": "Must see signature." },
-    { "q": "Codicil republishes the will.", "a": true, "exp": "Date moves forward." },
-    { "q": "Destruction requires animus revocandi.", "a": true, "exp": "Intent to revoke." },
-    { "q": "Dependent Relative Revocation saves will.", "a": true, "exp": "Conditional revocation." },
-    { "q": "Abatement: Residue used first for debts.", "a": true, "exp": "Statutory order." },
-    { "q": "Lapse: Beneficiary dies before Testator.", "a": true, "exp": "Gift fails." },
-    { "q": "s.33 WA 1837 saves gifts to children.", "a": true, "exp": "Issue take." },
-    { "q": "Class closing: Andrews v Partington.", "a": true, "exp": "Vesting rule." },
-    { "q": "Armchair principle used for construction.", "a": true, "exp": "Context." },
-    { "q": "Extrinsic evidence allowed if ambiguous.", "a": true, "exp": "s.21 AJA 1982." },
-    { "q": "Inheritance Tax Nil Rate Band is £325,000.", "a": true, "exp": "Standard NRB." },
-    { "q": "Residence Nil Rate Band is £175,000.", "a": true, "exp": "Home to descendants." },
-    { "q": "PET is exempt after 7 years.", "a": true, "exp": "Survival period.", "isTiming": true },
-    { "q": "Lifetime Chargeable Transfer (LCT) incurs 20% immediate tax.", "a": true, "exp": "Trusts." },
-    { "q": "Quick Succession Relief applies to deaths within 5 years.", "a": true, "exp": "Tax relief.", "isTiming": true },
-    { "q": "Caveat lasts 6 months.", "a": true, "exp": "Stops grant.", "isTiming": true },
-    { "q": "Citation forces executor to act.", "a": true, "exp": "Accept or refuse." },
-    { "q": "Chain of Representation: Executor of Executor.", "a": true, "exp": "Continuous admin." },
-    { "q": "Chain broken by intestacy.", "a": true, "exp": "Admin breaks chain." },
-    { "q": "1975 Act Claim: 6 months from Grant.", "a": true, "exp": "Deadline.", "isTiming": true },
-    { "q": "Adult children can claim under 1975 Act.", "a": true, "exp": "Maintenance." },
-    { "q": "Spouse standard is 'reasonable in all circumstances'.", "a": true, "exp": "Higher standard." },
-    { "q": "CGT uplift on death.", "a": true, "exp": "Assets revalued." },
-    { "q": "Assent transfers land to beneficiary.", "a": true, "exp": "Writing required." },
-    { "q": "Devastavit is waste/mismanagement.", "a": true, "exp": "PR liability." },
-    { "q": "Intestacy Spouse survivorship: 28 days.", "a": true, "exp": "Statutory.", "isTiming": true },
-    { "q": "IHT payment deadline: 6 months.", "a": true, "exp": "Interest runs.", "isTiming": true },
-    { "q": "IHT400 filing deadline: 12 months.", "a": true, "exp": "Filing.", "isTiming": true },
-    { "q": "Deed of Variation deadline: 2 years.", "a": true, "exp": "Tax purposes.", "isTiming": true },
-    { "q": "s.27 Notice duration: 2 months.", "a": true, "exp": "Creditor claim time.", "isTiming": true },
-    { "q": "Business Property Relief: 2 years ownership.", "a": true, "exp": "Qualifying period.", "isTiming": true }
+
+  {
+    "q": "Can you act where there is a significant risk of an own interest conflict?",
+    "a": false,
+    "exp": "CCS 6.1 prohibits acting where there is an own interest conflict or significant risk thereof, with no exceptions.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Does the duty of confidentiality take precedence over the duty of disclosure where they conflict?",
+    "a": true,
+    "exp": "Where duties conflict, confidentiality (CCS 6.3) takes precedence over disclosure (CCS 6.4) unless an exception applies.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Is money received for a disbursement you have already paid considered client money?",
+    "a": false,
+    "exp": "Money received for paid disbursements is non-client money; only money for unpaid disbursements is client money (Rule 2.1(d) SRA Accounts Rules).",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Can you act for two clients with adverse interests if they have a substantially common interest?",
+    "a": true,
+    "exp": "You may act under the 'substantially common interest' exception if conditions in CCS 6.2(a) and (i)-(iii) are met.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Is treating a man less favourably regarding pregnancy benefits considered direct discrimination?",
+    "a": false,
+    "exp": "Under s.13(6)(b) Equality Act 2010, special treatment afforded to women in connection with pregnancy is not discrimination against men.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Must you cease acting if a client instructs you to mislead the court?",
+    "a": true,
+    "exp": "You must uphold the rule of law and proper administration of justice (Principle 1) and not mislead the court (CCS 1.4).",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Are you required to pay client money into a client account within 24 hours?",
+    "a": false,
+    "exp": "Rule 2.3 SRA Accounts Rules requires client money to be paid in 'promptly', not within a specific fixed timeframe like 24 hours.",
+    "isTiming": true,
+    "difficulty": 2
+  },
+  {
+    "q": "Can you withdraw client money for a client if they have insufficient funds in the account?",
+    "a": false,
+    "exp": "Rule 5.3 SRA Accounts Rules prohibits withdrawing funds unless sufficient funds are held for that specific client.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Is a firm manager personally responsible for the firm's compliance with Accounts Rules?",
+    "a": true,
+    "exp": "Managers are jointly and severally responsible for compliance by the authorised body and its employees (Rule 1.2 SRA Accounts Rules).",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Does the duty to make reasonable adjustments for disabled persons only arise upon request?",
+    "a": false,
+    "exp": "The duty is anticipatory; service providers must think in advance about what disabled people might reasonably need (Equality Act 2010).",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Can you disclose confidential information if you believe a child is in danger?",
+    "a": true,
+    "exp": "This is a recognized exception to the duty of confidentiality where there are grounds to believe a child's health is in danger.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Is money received on account of costs generally considered client money?",
+    "a": true,
+    "exp": "Money received on account of costs relates to regulated services and is client money under Rule 2.1(a) SRA Accounts Rules.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Must a client care letter always be sent to comply with CCS requirements?",
+    "a": false,
+    "exp": "A letter is not mandatory, though providing certain information in writing is required; the letter is the standard method of compliance.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Can you act against a former client if you hold material confidential information about them?",
+    "a": false,
+    "exp": "CCS 6.5 prohibits acting unless effective measures protect the information or the former client gives informed consent.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Is a firm exempt from an accountant's report if the average client balance is £15,000?",
+    "a": false,
+    "exp": "The exemption applies if the average balance does not exceed £10,000 (and max balance £250,000) (Rule 12.2 SRA Accounts Rules).",
+    "isTiming": true,
+    "difficulty": 3
+  },
+  {
+    "q": "Must you terminate a retainer if you cannot obtain clear instructions from the client?",
+    "a": true,
+    "exp": "Inability to obtain clear instructions is a good reason to terminate the retainer.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Can you transfer money from a client account to pay your bill before sending the bill?",
+    "a": false,
+    "exp": "Rule 4.3 requires you to give a bill or written notification of costs before transferring client money to pay those costs.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Is the 'competing for the same objective' conflict exception common in practice?",
+    "a": false,
+    "exp": "This exception (CCS 6.2(b)) is very rare and usually applies only to sophisticated clients in auctions or tenders.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Does the duty of disclosure extend to information known only by your colleagues?",
+    "a": false,
+    "exp": "The duty under CCS 6.4 is limited to information of which the individual solicitor has personal knowledge.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Can you act for a client if your personal political views affect your relationship?",
+    "a": false,
+    "exp": "CCS 1.1 prohibits unfairly discriminating by allowing personal views to affect professional relationships.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Is a cheque payable to the client considered 'client money' under the Accounts Rules?",
+    "a": false,
+    "exp": "A cheque payable to the client cannot be banked in the client account and does not fall within the Rule 2.1 definition.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Must you repay money improperly withdrawn from a client account immediately?",
+    "a": true,
+    "exp": "Rule 6.1 SRA Accounts Rules requires immediate replacement of any money improperly withheld or withdrawn.",
+    "isTiming": true,
+    "difficulty": 2
+  },
+  {
+    "q": "Is victimisation treating someone less favourably because they made a discrimination allegation?",
+    "a": true,
+    "exp": "Victimisation is subjecting B to detriment because B has done a protected act, such as alleging a contravention of the Equality Act (s.27).",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Can a firm use a client account to provide banking facilities to a client?",
+    "a": false,
+    "exp": "Rule 3.3 SRA Accounts Rules prohibits using a client account to provide banking facilities to clients or third parties.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Is failing to justify a PCP that disadvantages a protected group indirect discrimination?",
+    "a": true,
+    "exp": "Indirect discrimination occurs if a PCP disadvantages a protected group and cannot be shown to be a proportionate means of achieving a legitimate aim (s.19).",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Is 'acting in the best interests of your employer' an SRA Principle?",
+    "a": false,
+    "exp": "This is not one of the seven SRA Principles; public interest principles take priority over employer interests.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Are there seven SRA Principles?",
+    "a": true,
+    "exp": "The SRA Standards and Regulations 2019 list exactly seven Principles.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Is 'Measles' a protected characteristic under the Equality Act 2010?",
+    "a": false,
+    "exp": "Measles is not a protected characteristic; Disability, Race, Sex, etc., are listed in the Equality Act 2010.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Does CCS 6.3 apply to former clients?",
+    "a": true,
+    "exp": "CCS 6.3 requires you to keep the affairs of current and former clients confidential.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Is money received for unpaid professional fees considered client money?",
+    "a": true,
+    "exp": "Rule 2.1(d) defines money received for fees prior to the delivery of a bill as client money.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Must a client account include the word 'client' in its name?",
+    "a": true,
+    "exp": "Rule 3.2 SRA Accounts Rules requires the account name to include the authorised body's name and the word 'client'.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Is 'harassment' one of the prohibited conducts under the Equality Act 2010?",
+    "a": true,
+    "exp": "The Act prohibits Direct/Indirect discrimination, Harassment, and Victimisation.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Must you maintain accounting records for at least 6 years?",
+    "a": true,
+    "exp": "Rule 13.1 SRA Accounts Rules requires accounting records to be stored securely and retained for at least six years.",
+    "isTiming": true,
+    "difficulty": 1
+  },
+  {
+    "q": "Is an accountant's report required if all client money comes from the Legal Aid Agency?",
+    "a": false,
+    "exp": "Rule 12.2(a) provides an exemption if all client money is received from the Legal Aid Agency.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Does 'CDD' stand for Client Due Diligence?",
+    "a": false,
+    "exp": "In the context of the Money Laundering Regulations, CDD stands for Customer Due Diligence.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Does a 'mixed payment' include both client and non-client money?",
+    "a": true,
+    "exp": "A mixed payment is defined in the SRA Glossary as a payment that includes both client money and non-client money.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Must you account to clients for a fair sum of interest on client money?",
+    "a": true,
+    "exp": "Rule 7.1 SRA Accounts Rules requires accounting for a fair sum of interest on client money held.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Is 'Integrity' the same as 'Honesty' under the SRA Principles?",
+    "a": false,
+    "exp": "Integrity is broader than honesty; you can lack integrity without being dishonest (e.g., being reckless).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Does CCS 6.4 relate to the duty of disclosure?",
+    "a": true,
+    "exp": "CCS 6.4 requires making the client aware of all material information of which you have knowledge.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Is age a protected characteristic under the Equality Act 2010?",
+    "a": true,
+    "exp": "Age is listed as a protected characteristic in the Equality Act 2010.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Can you use a client account to hold money for a third party without providing regulated services?",
+    "a": false,
+    "exp": "Rule 3.3 prohibits using client accounts as a banking facility; transactions must relate to regulated services.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Is 'Promptly' defined as 3 days in the SRA Accounts Rules?",
+    "a": false,
+    "exp": "There is no specific definition of 'promptly' in the SRA Accounts Rules.",
+    "isTiming": true,
+    "difficulty": 1
+  },
+  {
+    "q": "Do SRA Principles apply to a solicitor's private life?",
+    "a": true,
+    "exp": "The Principles apply to legal professionals in their personal as well as their professional lives.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Is money held as a trustee considered client money?",
+    "a": true,
+    "exp": "Rule 2.1(c) defines money held as a trustee or holder of a specified office as client money.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Does 'CCS' stand for Code of Conduct for Solicitors?",
+    "a": true,
+    "exp": "CCS is the shorthand for the SRA Code of Conduct for Solicitors, RELs and RFLs.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Can a firm act where there is an own interest conflict?",
+    "a": false,
+    "exp": "CCS 6.1 imposes a strict prohibition on acting where there is an own interest conflict.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Is the 'Code of Conduct for Firms' abbreviated as CCF?",
+    "a": true,
+    "exp": "CCF is the standard abbreviation for the SRA Code of Conduct for Firms.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Must a conflict check include the names of directors of a corporate client?",
+    "a": true,
+    "exp": "Conflict checks should include directors of the client and counterparty to identify previous relationships.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Does the duty of confidentiality end when a client dies?",
+    "a": false,
+    "exp": "The duty of confidentiality continues to apply after a client's death.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Is a 'fixed fee' agreement one where costs are capped?",
+    "a": false,
+    "exp": "A fixed fee is a set amount regardless of time; a capped fee records time but will not exceed a limit.",
+    "isTiming": false,
+    "difficulty": 1
+  }
+
+  {
+    "q": "Does the succession estate include property passing by survivorship?",
+    "a": false,
+    "exp": "Property passing by survivorship, such as joint tenancies, bypasses the will/intestacy and is excluded from the succession estate.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Is a discretionary pension lump sum part of the succession estate?",
+    "a": false,
+    "exp": "Discretionary pension benefits do not form part of the deceased's estate for distribution purposes as payment is at the trustees' discretion.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Does a life policy written in trust for a third party pass into the succession estate?",
+    "a": false,
+    "exp": "The proceeds belong to the beneficiaries nominated in the trust and vest on the insured's death, bypassing the succession estate.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Does a donatio mortis causa (DMC) form part of the succession estate?",
+    "a": false,
+    "exp": "A valid DMC gift passes directly to the donee upon death and does not form part of the succession estate administered by PRs.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "If a will fails to dispose of the residue, do the intestacy rules apply to it?",
+    "a": true,
+    "exp": "Partial intestacy occurs when a valid will fails to dispose of the entire estate, so intestacy rules apply to the undisposed residue.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Does a spouse need to survive the intestate by 28 days to inherit?",
+    "a": true,
+    "exp": "Under s.46(2A) AEA 1925, a spouse must survive the intestate by 28 days to take a beneficial interest.",
+    "isTiming": true,
+    "difficulty": 2
+  },
+  {
+    "q": "Do issue take the statutory legacy on intestacy?",
+    "a": false,
+    "exp": "The statutory legacy (£322,000) is payable only to a surviving spouse or civil partner, not to issue.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Do siblings of the whole blood rank higher than parents on intestacy?",
+    "a": false,
+    "exp": "Parents rank higher (paragraph (c)) than siblings of the whole blood (paragraph (d)) in the statutory order under s.46 AEA 1925.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Do half-blood siblings inherit if whole-blood siblings survive?",
+    "a": false,
+    "exp": "Whole blood siblings (category d) take priority over half-blood siblings (category e) under s.46 AEA 1925.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Does the statutory trust apply to issue under intestacy if they are under 18?",
+    "a": true,
+    "exp": "Issue inherit on the statutory trusts (s.47 AEA 1925), meaning their interest is contingent on attaining age 18 or marrying earlier.",
+    "isTiming": true,
+    "difficulty": 3
+  },
+  {
+    "q": "Can a surviving spouse appropriate the marital home in satisfaction of their intestacy entitlement?",
+    "a": true,
+    "exp": "Schedule 2 Intestates' Estates Act 1952 gives the surviving spouse a right to appropriate the marital home.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Must the election to appropriate the marital home be made within 12 months of the grant?",
+    "a": true,
+    "exp": "The right must be exercised within 12 months of the first taking out of representation (Schedule 2 para 3(1)(a)).",
+    "isTiming": true,
+    "difficulty": 3
+  },
+  {
+    "q": "Do step-children automatically inherit under the intestacy rules as 'issue'?",
+    "a": false,
+    "exp": "Step-children are not 'issue' and do not inherit under intestacy unless legally adopted by the deceased.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Do adopted children inherit from their biological parents on intestacy?",
+    "a": false,
+    "exp": "Adoption severs legal ties with birth parents; adopted children inherit from their adoptive parents.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Does a cohabitee have an automatic right to inherit under intestacy rules?",
+    "a": false,
+    "exp": "Cohabitees (unmarried partners) have no automatic entitlement under intestacy, regardless of the relationship's duration.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Does the 'commorientes' rule presume the younger died first?",
+    "a": false,
+    "exp": "S.184 LPA 1925 presumes the elder died first if the order of death is uncertain, so the younger is deemed the survivor.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "If a joint tenant dies, does their share pass under their will?",
+    "a": false,
+    "exp": "The right of survivorship means the share passes automatically to the surviving joint tenant(s), bypassing the will.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Does a tenant in common's share pass to their estate on death?",
+    "a": true,
+    "exp": "A tenant in common has a distinct beneficial share that passes under their will or intestacy, not by survivorship.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Can a buyer overreach beneficial interests by paying capital money to a sole trustee?",
+    "a": false,
+    "exp": "Overreaching requires payment of capital money to at least two trustees or a trust corporation (s.27 LPA 1925).",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Is the limit for a statutory nomination £5,000?",
+    "a": true,
+    "exp": "The limit for a statutory nomination in Friendly/Industrial/Provident Societies is £5,000 (Administration of Estates (Small Payments) Act 1965).",
+    "isTiming": true,
+    "difficulty": 2
+  },
+  {
+    "q": "Does a discretionary trust beneficiary have a vested interest in the trust fund?",
+    "a": false,
+    "exp": "Beneficiaries of a discretionary trust have no proprietary interest until the trustees exercise their discretion in their favour.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Is a life tenant entitled to trust capital?",
+    "a": false,
+    "exp": "A life tenant is entitled to income (e.g., rent, interest) for life; the capital ('remainder') goes to the remainderman.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Does 'vested in interest' mean a current right to future enjoyment?",
+    "a": true,
+    "exp": "Vested in interest means the right is secured now, but possession/enjoyment is deferred (e.g., to a remainderman).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Can trustees use s.32 TA 1925 to advance capital to a life tenant without consent?",
+    "a": false,
+    "exp": "Advancement under s.32 requires the written consent of any beneficiary with a prior interest (e.g., the life tenant).",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Does s.31 TA 1925 apply to adult beneficiaries?",
+    "a": false,
+    "exp": "S.31 (power of maintenance) applies to minor beneficiaries; adults with vested interests are entitled to income directly.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Can trustees advance 100% of a beneficiary's presumptive share under s.32 TA 1925?",
+    "a": true,
+    "exp": "For trusts created after 1 Oct 2014, s.32 allows advancement of the full (100%) presumptive share.",
+    "isTiming": true,
+    "difficulty": 2
+  },
+  {
+    "q": "Does the rule in Strong v Bird apply if the intention to give was not continuous?",
+    "a": false,
+    "exp": "Strong v Bird requires a continuing intention to give the specific property up until the donor's death (Re Gonin).",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Does Re Rose apply if the transferor has not done everything in their power?",
+    "a": false,
+    "exp": "Re Rose requires the transferor to have done everything in their power to divest themselves of the interest.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Is delivery essential for a valid donatio mortis causa?",
+    "a": true,
+    "exp": "The donor must part with dominion (control) over the property (e.g., keys, deeds) for a DMC to be valid (Sen v Headley).",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Can a gift in a will be 'subject to tax'?",
+    "a": true,
+    "exp": "A testator can direct a gift to bear its own tax, overriding the statutory rule that free estate IHT comes from residue.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Does the statutory legacy include interest from the date of death?",
+    "a": true,
+    "exp": "The statutory legacy carries interest from death until payment (s.46(1)(i) AEA 1925).",
+    "isTiming": true,
+    "difficulty": 3
+  },
+  {
+    "q": "Are personal chattels defined in s.55(1)(x) AEA 1925?",
+    "a": true,
+    "exp": "S.55(1)(x) defines personal chattels (excluding money, business assets, and investments) for intestacy.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Does a 'contingent' interest fail if the beneficiary dies before satisfying the condition?",
+    "a": true,
+    "exp": "If the condition (e.g., reaching 21) is not met, the interest fails and does not pass to the beneficiary's estate.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Can a minor give a valid receipt for capital?",
+    "a": false,
+    "exp": "Minors cannot give valid receipt for capital; it must be held on trust or paid to parents/guardians (s.42 AEA).",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Does the 'class closing' rule apply to fixed sum gifts?",
+    "a": false,
+    "exp": "Class closing rules apply to shared funds/residue, not where a fixed sum is given to each individual (e.g., '£100 to each child').",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Is a gift to 'my children' a class gift?",
+    "a": true,
+    "exp": "A gift to a group identified by a general description (e.g., 'children') is a class gift.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Does s.33 Wills Act 1837 apply to gifts to siblings?",
+    "a": false,
+    "exp": "S.33 applies only to gifts to the testator's own children or remoter descendants (issue), not siblings.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Does a specific gift adeem if the testator does not own it at death?",
+    "a": true,
+    "exp": "Ademption occurs if the specific subject matter (e.g., 'my car') is not in the estate at death.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Does a general legacy fail if the estate does not contain the item?",
+    "a": false,
+    "exp": "A general legacy (e.g., 'a car') does not adeem; PRs must purchase the item or pay its value.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Can an unexecuted document be incorporated into a will if it existed when the will was executed?",
+    "a": true,
+    "exp": "Incorporation requires the document to exist at execution, be referred to as existing, and be clearly identified.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Is a 'letter of wishes' legally binding on trustees?",
+    "a": false,
+    "exp": "A letter of wishes provides guidance but imposes no binding legal obligation on trustees.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Does 'per stirpes' distribution apply to issue on intestacy?",
+    "a": true,
+    "exp": "Issue take 'through all degrees, according to their stocks' (s.47(1)(i) AEA 1925), which is per stirpes.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Does the Crown take the estate as bona vacantia if no relatives are found?",
+    "a": true,
+    "exp": "If no relatives in the statutory classes (s.46 AEA) survive, the estate passes to the Crown as bona vacantia.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Can beneficiaries under a discretionary trust compel distribution?",
+    "a": false,
+    "exp": "Objects can compel trustees to *exercise* discretion, but cannot compel distribution in their specific favour.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Is a power of appointment the same as a discretionary trust?",
+    "a": false,
+    "exp": "A discretionary trust imposes a duty to distribute; a power of appointment is permissive (trustees 'may' distribute).",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Does the statutory legacy amount of £322,000 apply to deaths before 26 July 2023?",
+    "a": false,
+    "exp": "The statutory legacy was increased to £322,000 on 26 July 2023; prior deaths used the previous figure (e.g., £270k).",
+    "isTiming": true,
+    "difficulty": 3
+  },
+  {
+    "q": "Are 'issue' limited to children only?",
+    "a": false,
+    "exp": "'Issue' includes all lineal descendants: children, grandchildren, great-grandchildren, etc.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Is a 'life interest' a capital interest?",
+    "a": false,
+    "exp": "A life interest is an income interest (right to enjoyment/income) for the duration of the beneficiary's life.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Can a testator dispose of property they hold as a trustee in their will?",
+    "a": false,
+    "exp": "Trust property does not belong beneficially to the trustee and cannot be disposed of by their personal will.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Does the 'golden rule' require a medical practitioner to witness a will for an elderly client?",
+    "a": true,
+    "exp": "Kenward v Adams established the golden rule: a medical practitioner should assess capacity and witness the will for elderly/ill testators.",
+    "isTiming": false,
+    "difficulty": 2
+  }
+
+  {
+    "q": "If a testator lacks capacity at execution but had it at instruction, the will is always invalid.",
+    "a": false,
+    "exp": "Under the rule in Parker v Felgate, a will may be valid if capacity existed at instruction and the testator understands they are signing that will.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "The 'Golden Rule' requires a medical practitioner to witness the will of an elderly testator.",
+    "a": true,
+    "exp": "Kenward v Adams established the 'Golden Rule' that a medical practitioner should witness and record findings for aged/ill testators.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A gift in a will to the spouse of a witness is void under s.15 Wills Act 1837.",
+    "a": true,
+    "exp": "Section 15 Wills Act 1837 renders gifts to attesting witnesses or their spouses void, though the will remains valid.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A specific gift of 'my car' usually carries a contrary intention to s.24 Wills Act 1837.",
+    "a": true,
+    "exp": "The use of 'my' indicates the will speaks from the date of execution regarding the specific object, not the date of death.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "A gift of 'my stamp collection' includes items added after the will was executed.",
+    "a": true,
+    "exp": "Gifts of collections capable of growing are construed to speak from the date of death, despite the use of 'my'.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Section 33 Wills Act 1837 applies to a gift to the testator's niece who predeceases them leaving issue.",
+    "a": false,
+    "exp": "Section 33 applies only to gifts to the testator's children or remoter descendants (issue), not collateral relatives like nieces.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "An IPFDA 1975 claim must be brought within 6 months of the date of death.",
+    "a": false,
+    "exp": "The claim must be brought within 6 months of the date the grant of representation is taken out (s.4 IPFDA 1975).",
+    "isTiming": true,
+    "difficulty": 2
+  },
+  {
+    "q": "A former spouse who has remarried is eligible to claim under the IPFDA 1975.",
+    "a": false,
+    "exp": "Under s.1(1)(b) IPFDA 1975, a former spouse is only eligible if they have not formed a subsequent marriage or civil partnership.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A cohabitee must live with the deceased for 2 years prior to death to claim under IPFDA 1975.",
+    "a": true,
+    "exp": "Section 1(1)(ba) requires cohabitation for the 'whole of the period of two years ending immediately before the date' of death.",
+    "isTiming": true,
+    "difficulty": 2
+  },
+  {
+    "q": "A general legacy of '100 shares in BP plc' fails if the testator owns no such shares at death.",
+    "a": false,
+    "exp": "A general legacy does not adeem; the executors must purchase the shares or pay the cash equivalent to the beneficiary.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "If a residuary beneficiary predeceases the testator, the gift falls into the residue.",
+    "a": false,
+    "exp": "If a residuary gift lapses, it passes under the intestacy rules (partial intestacy), not back into the residue.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Under class closing rules, a class closes when any member first obtains a vested interest.",
+    "a": true,
+    "exp": "The class closes when the first member becomes entitled in possession, excluding those born afterwards (Andrews v Partington).",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "The court can treat a deceased's severable share of a joint tenancy as part of the net estate for IPFDA claims.",
+    "a": true,
+    "exp": "Section 9 IPFDA 1975 allows the court to treat the deceased's severable share of joint property as part of the net estate.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "A will witnessed by a blind person is invalid.",
+    "a": true,
+    "exp": "A witness must be able to visually see the testator sign; a blind person cannot verify the signature (In the Goods of Gunstan).",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "If a beneficiary witnesses a codicil, their gift in the original will is void.",
+    "a": false,
+    "exp": "Section 15 Wills Act 1837 only voids gifts in the specific instrument witnessed; the gift in the will remains valid.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "The 'Maintenance Standard' under IPFDA applies to a surviving spouse.",
+    "a": false,
+    "exp": "Spouses are assessed on the higher 'Surviving Spouse Standard' (reasonable in all circumstances), not limited to maintenance.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A demonstrative legacy abates before a specific legacy.",
+    "a": true,
+    "exp": "Once the specific fund is exhausted, a demonstrative legacy ranks as a general legacy and abates before specific legacies.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "To claim under IPFDA as being 'maintained', the deceased must have made a substantial contribution.",
+    "a": true,
+    "exp": "Section 1(3) IPFDA 1975 requires a 'substantial contribution in money or money's worth' towards reasonable needs.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A testator acting under undue influence can still make a valid will if they approve the contents.",
+    "a": false,
+    "exp": "Undue influence coerces the testator, meaning the will does not reflect their true volition, rendering it invalid regardless of knowledge.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "The IPFDA 1975 applies to the estate of anyone dying in England and Wales.",
+    "a": false,
+    "exp": "It only applies if the deceased died *domiciled* in England and Wales (s.1(1) IPFDA 1975).",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A gift to 'my children' in a will automatically includes step-children.",
+    "a": false,
+    "exp": "Step-children are not 'issue' or 'children' unless express wording includes them or they were adopted.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A will can be rectified if a clerical error caused a failure to carry out intentions.",
+    "a": true,
+    "exp": "Section 20 Administration of Justice Act 1982 allows rectification for clerical errors or failure to understand instructions.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Extrinsic evidence is admissible if a will is ambiguous on its face.",
+    "a": true,
+    "exp": "Section 21 Administration of Justice Act 1982 permits extrinsic evidence to resolve ambiguity or meaninglessness.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Under the commorientes rule, the younger person is deemed to have died first.",
+    "a": false,
+    "exp": "S.184 LPA 1925 presumes the *elder* died first, so the younger is deemed the survivor.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "A contingent gift carries the intermediate income if it is a specific legacy.",
+    "a": true,
+    "exp": "A specific gift carries income/profits from the date of death, even if contingent (s.175 LPA 1925).",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Testamentary capacity requires understanding the nature of the act and its effects.",
+    "a": true,
+    "exp": "This is the first limb of the test established in Banks v Goodfellow (1870).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A blind person cannot make a valid will.",
+    "a": false,
+    "exp": "A blind person can make a will, but the attestation clause should confirm the will was read to them (knowledge & approval).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Section 9 Wills Act 1837 requires the testator to sign in the presence of two witnesses.",
+    "a": true,
+    "exp": "The signature must be made or acknowledged in the presence of two or more witnesses present at the same time.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Presumption of due execution arises if there is a proper attestation clause.",
+    "a": true,
+    "exp": "A properly drafted attestation clause raises a presumption that s.9 requirements were met (Sherrington v Sherrington).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Undue influence in probate requires proof of coercion.",
+    "a": true,
+    "exp": "Unlike lifetime gifts, probate undue influence requires actual coercion; persuasion is not enough (Re Edwards).",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A specific legacy is a gift of a specific item distinguished from other property.",
+    "a": true,
+    "exp": "A specific legacy (e.g., 'my gold ring') is identified as a distinct part of the testator's estate.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Ademption occurs when the beneficiary dies before the testator.",
+    "a": false,
+    "exp": "Ademption occurs when the subject matter of a specific gift is no longer in the estate at death; death of a beneficiary causes lapse.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A pecuniary legacy is a gift of money.",
+    "a": true,
+    "exp": "Pecuniary legacies are gifts of cash sums, usually general legacies.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "The 'residue' is what remains after debts, expenses, and other legacies are paid.",
+    "a": true,
+    "exp": "The residuary estate comprises all property not effectively disposed of by other gifts.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A vested interest is conditional upon a future event.",
+    "a": false,
+    "exp": "A vested interest is absolute; a *contingent* interest is conditional on a future event (e.g., reaching 21).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Section 24 Wills Act 1837 states a will speaks from the date of execution regarding property.",
+    "a": false,
+    "exp": "Section 24 states a will speaks from the date of *death* regarding the estate comprised in it, unless contrary intention appears.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A witness to a will can be a minor.",
+    "a": false,
+    "exp": "While there is no statutory age, witnesses must be credible and understand the act; minors are generally avoided/unacceptable.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "The burden of proving lack of capacity lies with the person challenging the will.",
+    "a": true,
+    "exp": "If the will is rational/duly executed, capacity is presumed; the challenger must produce evidence to rebut this.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "The 'net estate' under IPFDA 1975 excludes property nominated by statutory nomination.",
+    "a": false,
+    "exp": "Section 8 IPFDA 1975 treats statutory nominations and DMCs as part of the net estate.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A letter of wishes is legally binding on trustees.",
+    "a": false,
+    "exp": "Letters of wishes serve as guidance for trustees but are not legally binding documents.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Incorporation of documents requires the document to exist when the will is executed.",
+    "a": true,
+    "exp": "To incorporate an unexecuted document, it must exist at execution and be referred to as such in the will.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "The 'Cy-pres' doctrine saves charitable gifts where the specific charity has ceased to exist.",
+    "a": true,
+    "exp": "If a general charitable intent is shown, the gift is applied to a similar charitable purpose (s.62 Charities Act 2011).",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A general legacy fails if the testator does not own the item at death.",
+    "a": false,
+    "exp": "General legacies do not adeem; the executor must procure the item or pay its value.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Divorce automatically revokes a will.",
+    "a": false,
+    "exp": "Divorce does not revoke a will; it treats the former spouse as having died at the date of divorce (s.18A WA 1837).",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Marriage automatically revokes a will unless made in contemplation of it.",
+    "a": true,
+    "exp": "Section 18 Wills Act 1837 revokes a will upon marriage unless it was expressly made in contemplation of that marriage.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "An applicant under IPFDA 1975 can be an adult child of the deceased.",
+    "a": true,
+    "exp": "Section 1(1)(c) IPFDA 1975 lists 'a child of the deceased' as an eligible applicant, regardless of age.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "The 'reasonable financial provision' test is subjective.",
+    "a": false,
+    "exp": "The test is objective, based on the s.3 guidelines (Ilott v Mitson).",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Step-children are treated as 'issue' for s.33 Wills Act 1837.",
+    "a": false,
+    "exp": "Section 33 applies to 'child or remoter descendant'; step-children are excluded unless adopted.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Lapse occurs when a beneficiary dies after the testator but before receiving the gift.",
+    "a": false,
+    "exp": "Lapse only occurs if the beneficiary dies *before* the testator. If they die after, it passes to their estate.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A will can be valid even if the testator does not sign at the very end.",
+    "a": true,
+    "exp": "While s.9(b) requires it to *appear* the testator intended to give effect, the signature doesn't strictly have to be physically at the end (though highly recommended).",
+    "isTiming": false,
+    "difficulty": 2
+  }
+
+  {
+    "q": "Does the intestacy rule for spouses require them to survive the deceased by 28 days?",
+    "a": true,
+    "exp": "Under s.46(2A) AEA 1925, a spouse must survive the intestate by 28 days to inherit; otherwise, the estate is distributed as if the spouse had predeceased.",
+    "isTiming": true,
+    "difficulty": 2
+  },
+  {
+    "q": "Are step-children considered 'issue' under the intestacy rules?",
+    "a": false,
+    "exp": "Step-children are not blood relatives and are excluded from the definition of 'issue' unless legally adopted by the deceased.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Does the statutory legacy amount of £322,000 apply to deaths before 26 July 2023?",
+    "a": false,
+    "exp": "The statutory legacy was increased to £322,000 only for deaths occurring on or after 26 July 2023.",
+    "isTiming": true,
+    "difficulty": 3
+  },
+  {
+    "q": "Do joint tenants hold legal title as tenants in common?",
+    "a": false,
+    "exp": "Legal title to co-owned land is always held as a joint tenancy; only the beneficial interest can be held as a tenancy in common.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Is a grant of representation required for assets passing by survivorship?",
+    "a": false,
+    "exp": "Assets held as joint tenants pass automatically to the survivor upon death, bypassing the need for a grant.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Can a minor be a trustee of a trust of land?",
+    "a": false,
+    "exp": "Under s.20 LPA 1925, a minor cannot be appointed as a trustee in relation to any settlement or trust.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Does a beneficiary with a contingent interest have a right to trust income?",
+    "a": false,
+    "exp": "A contingent interest does not carry an automatic right to income; trustees have discretion to apply income for maintenance (s.31 TA 1925).",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Is a valid donatio mortis causa part of the succession estate?",
+    "a": false,
+    "exp": "A valid DMC gift passes directly to the donee upon death and does not form part of the succession estate administered by PRs.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Can trustees use s.32 TA 1925 to advance capital to a beneficiary with a prior life interest?",
+    "a": false,
+    "exp": "Advancement under s.32 requires the written consent of any beneficiary with a prior interest (e.g., a life tenant).",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Do adopted children inherit from their biological parents on intestacy?",
+    "a": false,
+    "exp": "Adoption severs legal ties with birth parents; adopted children inherit from their adoptive parents.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Is the 'golden rule' a strict legal requirement for valid will execution?",
+    "a": false,
+    "exp": "The 'golden rule' is a matter of good practice for solicitors when a testator is elderly or ill, but failure to follow it does not automatically invalidate a will.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Does a will speak from the date of execution regarding the subject matter of gifts?",
+    "a": false,
+    "exp": "Unless a contrary intention appears (e.g., use of 'my'), a will speaks from the date of death regarding the estate comprised in it (s.24 Wills Act 1837).",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Can a witness to a will benefit from a gift in that will?",
+    "a": false,
+    "exp": "Section 15 Wills Act 1837 voids gifts to attesting witnesses or their spouses, though the will itself remains valid.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Does marriage automatically revoke a will made in contemplation of that specific marriage?",
+    "a": false,
+    "exp": "A will expressly made in contemplation of a specific marriage is not revoked by that marriage (s.18 Wills Act 1837).",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Does divorce revoke the entire will of a testator?",
+    "a": false,
+    "exp": "Divorce only revokes appointments and gifts to the former spouse; the rest of the will remains valid (s.18A Wills Act 1837).",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Is a general legacy of shares valid if the testator owns no such shares at death?",
+    "a": true,
+    "exp": "A general legacy does not adeem; the executors must purchase the shares or pay the cash equivalent to the beneficiary.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Does the 'class closing' rule apply to gifts of a fixed sum to each member?",
+    "a": false,
+    "exp": "Class closing rules apply to shared funds/residue, not where a fixed sum is given to each individual (e.g., '£100 to each child').",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Can a beneficiary disclaim a gift after accepting a benefit from it?",
+    "a": false,
+    "exp": "A disclaimer must be made before any benefit is accepted; once accepted, the beneficiary cannot disclaim.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Is a variation of a will effective for tax purposes if made 3 years after death?",
+    "a": false,
+    "exp": "To be effective for IHT and CGT purposes, a deed of variation must be made within 2 years of the deceased's death.",
+    "isTiming": true,
+    "difficulty": 2
+  },
+  {
+    "q": "Does a precatory trust create a binding legal obligation on the recipient?",
+    "a": false,
+    "exp": "Precatory words (e.g., 'hope', 'wish') express a desire but do not create a binding trust; the recipient takes the gift absolutely.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Is inheritance tax payable on the death estate if the value is below the nil rate band?",
+    "a": false,
+    "exp": "If the value of the estate is within the available nil rate band (currently £325,000), no IHT is payable (taxed at 0%).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Do personal representatives have a duty to administer the estate within one year?",
+    "a": false,
+    "exp": "There is no strict duty to finish in one year ('executor's year'), but they must act with due diligence and justify delays beyond that period.",
+    "isTiming": true,
+    "difficulty": 2
+  },
+  {
+    "q": "Can a sole administrator grant a valid receipt for capital proceeds of sale of land?",
+    "a": false,
+    "exp": "To overreach beneficial interests and give a valid receipt for capital money arising from land, at least two trustees or a trust corporation are required.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Is a grant of probate required if the estate consists only of joint assets passing by survivorship?",
+    "a": false,
+    "exp": "Assets passing by survivorship do not vest in the PRs, so a grant is not needed to deal with them.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Can an executor renounce probate after intermeddling in the estate?",
+    "a": false,
+    "exp": "Intermeddling (taking steps to administer) precludes an executor from renouncing their role.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Is the 'chain of representation' broken if an executor dies intestate?",
+    "a": true,
+    "exp": "The chain of representation continues only if the proving executor leaves a will appointing their own executor who proves that will.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Does a 'Benjamin Order' protect trustees from liability to a missing beneficiary?",
+    "a": true,
+    "exp": "A Benjamin Order allows trustees to distribute based on a presumption (e.g., death), protecting them from personal liability to the missing beneficiary.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Can trustees use s.31 TA 1925 to pay income to an adult beneficiary?",
+    "a": false,
+    "exp": "Section 31 (power of maintenance) applies only to beneficiaries under 18; adults with vested interests are entitled to income directly.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Is a 'half-secret trust' valid if communicated after the will is executed?",
+    "a": false,
+    "exp": "For a half-secret trust, communication of the trust's terms must occur *before* or *at the time* of the will's execution.",
+    "isTiming": true,
+    "difficulty": 3
+  },
+  {
+    "q": "Does the 'cy-pres' doctrine apply if a specific charitable gift fails and there is no general charitable intent?",
+    "a": false,
+    "exp": "If a specific charitable gift fails (e.g., charity ceased to exist) and no general charitable intent is found, the gift lapses.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Are funeral expenses deductible for inheritance tax purposes?",
+    "a": true,
+    "exp": "Reasonable funeral expenses are a deductible liability when calculating the value of the estate for IHT.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Does a gift to a charity attract inheritance tax?",
+    "a": false,
+    "exp": "Gifts to qualifying charities are exempt from inheritance tax (s.23 IHTA 1984).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Can a minor act as an executor?",
+    "a": false,
+    "exp": "A minor can be appointed as executor but cannot act until they reach 18; power is reserved to them.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Is a witness to a will required to read the will?",
+    "a": false,
+    "exp": "Witnesses need only see the testator sign or acknowledge their signature; they do not need to know the contents.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Does the burden of proof for capacity lie with the person propounding the will?",
+    "a": true,
+    "exp": "The propounder of the will bears the legal burden of proving the testator had capacity.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Can a beneficiary under a will also be an executor?",
+    "a": true,
+    "exp": "There is no prohibition against a beneficiary acting as an executor, and it is very common.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Does a codicil republish the will as of the date of the codicil?",
+    "a": true,
+    "exp": "A properly executed codicil republishes the will, bringing its date forward to the date of the codicil.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Is capital gains tax payable on death?",
+    "a": false,
+    "exp": "Death is not a disposal for CGT purposes; assets are rebased to their market value at the date of death.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Does an administrator derive their authority from the will?",
+    "a": false,
+    "exp": "An administrator derives their authority solely from the grant of representation.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Can a creditor apply for a grant of administration?",
+    "a": true,
+    "exp": "If no one with a higher priority applies, a creditor may apply for a grant of administration (NCPR 22).",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Is the 'residue' of an estate calculated before paying debts?",
+    "a": false,
+    "exp": "Residue is what remains of the estate *after* payment of all debts, funeral/testamentary expenses, and specific/pecuniary legacies.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Does a gift of 'all my personal chattels' include a car used for business?",
+    "a": false,
+    "exp": "The statutory definition of personal chattels (s.55(1)(x) AEA 1925) excludes property used solely or mainly for business purposes.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Can a personal representative purchase estate assets?",
+    "a": false,
+    "exp": "Self-dealing is generally prohibited unless authorised by the will, beneficiaries, or the court.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Does the statutory legacy for a surviving spouse carry interest?",
+    "a": true,
+    "exp": "The statutory legacy carries interest from the date of death until payment.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Is a 'specific legacy' subject to abatement before a 'general legacy'?",
+    "a": false,
+    "exp": "General legacies abate before specific legacies when the estate is insufficient to pay all gifts.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Can a PR delegate their power to distribute the estate?",
+    "a": false,
+    "exp": "PRs cannot delegate dispositive powers (decision to distribute) unless authorised, but can delegate administrative tasks.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Is a trust valid if the subject matter is uncertain?",
+    "a": false,
+    "exp": "Certainty of subject matter is one of the three certainties required for a valid trust (Knight v Knight).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Does 'per stirpes' distribution apply to issue on intestacy?",
+    "a": true,
+    "exp": "Issue inherit 'per stirpes' (according to the stocks), meaning grandchildren represent a deceased parent.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Can a testator exclude a family member from their will?",
+    "a": true,
+    "exp": "Testamentary freedom allows exclusion, but eligible persons may claim under the IPFDA 1975 for reasonable provision.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Is a 'life interest' an equitable interest?",
+    "a": true,
+    "exp": "A life interest is an equitable interest in the trust property, giving the beneficiary the right to income/enjoyment.",
+    "isTiming": false,
+    "difficulty": 1
+  }
+
+  {
+    "q": "An executor who has intermeddled in an estate may subsequently renounce their position.",
+    "a": false,
+    "exp": "Intermeddling indicates acceptance of the office; an executor who has intermeddled cannot renounce and must apply for the grant or be cited to do so.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "The 'chain of representation' under s.7 AEA 1925 continues if the sole surviving executor dies intestate.",
+    "a": false,
+    "exp": "The chain is broken if the sole surviving executor dies intestate; it only continues if they leave a will appointing an executor who obtains probate.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Under NCPR Rule 20, a residuary beneficiary has a better right to a grant than a specific legatee.",
+    "a": true,
+    "exp": "Residuary beneficiaries (category c) rank higher than specific legatees (category e) in the order of priority for Letters of Administration (with Will).",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A grant of representation is legally required to transfer land held as joint tenants.",
+    "a": false,
+    "exp": "Property held as joint tenants passes by survivorship upon death and does not form part of the succession estate requiring a grant.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "If a will appoints four executors, all four may apply for and be named on the grant of probate.",
+    "a": true,
+    "exp": "Up to four executors can be named on the grant; if more are appointed, power must be reserved to the others.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Under NCPR Rule 22, a sibling of the whole blood has priority over a parent of the intestate.",
+    "a": false,
+    "exp": "Parents (category c) have priority over siblings of the whole blood (category d) under the intestacy rules.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "When valuing quoted shares, the 'quarter-up' rule adds one-quarter of the difference to the higher price.",
+    "a": false,
+    "exp": "The valuation is the lower price plus one-quarter of the difference between the lower and higher price.",
+    "isTiming": true,
+    "difficulty": 3
+  },
+  {
+    "q": "An executor derives their authority to act from the grant of probate.",
+    "a": false,
+    "exp": "An executor derives authority from the will and can act from the date of death; the grant merely confirms this authority.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "If a minority interest arises under intestacy, at least two administrators must be appointed.",
+    "a": true,
+    "exp": "Under s.114 Senior Courts Act 1981, two administrators are required if there is a minority or life interest.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A co-owner's share of land held as tenants in common attracts a valuation discount of 10-15%.",
+    "a": true,
+    "exp": "A discount is applied to reflect the difficulty of selling a partial share of land (unless the co-owner is a spouse).",
+    "isTiming": true,
+    "difficulty": 3
+  },
+  {
+    "q": "An applicant for Letters of Administration (with Will) must 'clear off' any executors appointed in the will.",
+    "a": true,
+    "exp": "The applicant must explain why those with a better right (executors) are not applying (e.g., death or renunciation).",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Inheritance Tax must be paid six months after the end of the month of death to avoid interest.",
+    "a": true,
+    "exp": "The deadline for paying IHT is 6 months from the end of the month of death; interest accrues thereafter.",
+    "isTiming": true,
+    "difficulty": 2
+  },
+  {
+    "q": "A 'Grant de bonis non' is required if a sole administrator dies leaving the administration incomplete.",
+    "a": true,
+    "exp": "Since the chain of representation does not apply to administrators, a second grant (de bonis non) is required to complete the estate.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "The Direct Payment Scheme allows PRs to use the deceased's bank funds to pay IHT before a grant is issued.",
+    "a": true,
+    "exp": "Participating institutions can transfer funds directly to HMRC to settle IHT liabilities using form IHT 423.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "If a will has no attestation clause, an affidavit of plight and condition is required.",
+    "a": false,
+    "exp": "An affidavit of *due execution* is required to prove compliance with s.9 Wills Act 1837 if the attestation clause is missing.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "A spouse must survive the intestate by 28 days to take a beneficial interest under intestacy rules.",
+    "a": true,
+    "exp": "S.46(2A) AEA 1925 imposes a 28-day survivorship clause for spouses under intestacy.",
+    "isTiming": true,
+    "difficulty": 3
+  },
+  {
+    "q": "An administrator can 'reserve power' if they do not wish to act immediately.",
+    "a": false,
+    "exp": "Only executors can reserve power; administrators must proceed or renounce/not apply.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "For an estate to be an 'Exempt Excepted Estate', the gross value must not exceed £1 million.",
+    "a": false,
+    "exp": "The gross value limit for an Exempt Excepted Estate is £3 million (provided the net qualifying value is below the NRB).",
+    "isTiming": true,
+    "difficulty": 3
+  },
+  {
+    "q": "Funeral expenses are a deductible debt for Inheritance Tax purposes.",
+    "a": true,
+    "exp": "Reasonable funeral expenses are a deductible liability when calculating the net value of the estate for IHT.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "An attorney applying for a grant on behalf of an executor applies for a Grant of Probate.",
+    "a": false,
+    "exp": "An attorney applies for Letters of Administration (with Will), as they are not the executor named in the will.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "If a will appears to have been tampered with (e.g., staple holes), an affidavit of search is required.",
+    "a": false,
+    "exp": "An affidavit of *plight and condition* is required to explain the physical condition/marks; affidavit of search relates to missing documents.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "A Low Value Excepted Estate is one where the gross value is below the Inheritance Tax nil rate band.",
+    "a": true,
+    "exp": "To be a Low Value Excepted Estate, the gross value must be below the NRB (currently £325,000).",
+    "isTiming": true,
+    "difficulty": 2
+  },
+  {
+    "q": "Personal Representatives are personally liable for IHT on the free estate.",
+    "a": true,
+    "exp": "PRs are personally liable to pay IHT on the assets that devolve to them (the free estate/succession estate).",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A citation to accept or refuse a grant can be used to force an intermeddling executor to take a grant.",
+    "a": true,
+    "exp": "A citation is a court tool used to force a person with a right to a grant to either accept it or renounce/step aside.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "The statutory limit for assets released without a grant under the Small Payments Act is £15,000.",
+    "a": false,
+    "exp": "The statutory limit under the Administration of Estates (Small Payments) Act 1965 is £5,000, though banks often have higher internal limits.",
+    "isTiming": true,
+    "difficulty": 3
+  },
+  {
+    "q": "A Personal Representative appointed by will is called an Executor.",
+    "a": true,
+    "exp": "An executor is expressly appointed by the testator in their will.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "An Administrator derives their authority to act from the date of death.",
+    "a": false,
+    "exp": "An administrator derives authority solely from the Grant of Representation.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "The form used to report estate value to HMRC for a non-excepted estate is IHT 205.",
+    "a": false,
+    "exp": "The correct form for a non-excepted (full) estate account is IHT 400.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Form PA1P is used to apply for probate where there is a valid will.",
+    "a": true,
+    "exp": "PA1P is the paper application form for a grant where the deceased left a will.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Form PA1A is used to apply for a grant where the deceased died intestate.",
+    "a": true,
+    "exp": "PA1A is the paper application form for a grant where there is no will (intestacy).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A Grant of Probate confirms the validity of the will.",
+    "a": true,
+    "exp": "The grant is the court's confirmation that the will is valid and the executors are authorised to act.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "NCPR Rule 20 governs the priority of applicants for Letters of Administration (with Will).",
+    "a": true,
+    "exp": "NCPR Rule 20 applies where there is a will but no proving executor.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "NCPR Rule 22 governs the priority of applicants for simple Letters of Administration.",
+    "a": true,
+    "exp": "NCPR Rule 22 applies to intestacy cases.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "The Crown claims an estate as 'bona vacantia' if no relatives are found under NCPR 22.",
+    "a": true,
+    "exp": "If no specified relatives survive, the estate passes to the Crown as ownerless goods (bona vacantia).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A minor can be appointed as an executor in a will.",
+    "a": true,
+    "exp": "A minor can be appointed, but they cannot act until they reach 18 (power is reserved).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A minor can act as an administrator.",
+    "a": false,
+    "exp": "A minor cannot act as an administrator; a grant would be issued to their guardians for their use and benefit.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A renunciation of probate must be made in writing.",
+    "a": true,
+    "exp": "Renunciation must be by a formal written instrument (Form PA15) filed at the registry.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "An affidavit is a written statement signed under oath.",
+    "a": true,
+    "exp": "An affidavit is a formal statement of fact sworn or affirmed to be true before a solicitor or commissioner for oaths.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Joint assets pass into the succession estate administered by the PRs.",
+    "a": false,
+    "exp": "Joint assets pass by survivorship and are not part of the succession estate (though they are part of the taxable estate).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "The IHT 400 must be filed within 12 months of the end of the month of death.",
+    "a": true,
+    "exp": "The filing deadline for the IHT account is 12 months from the end of the month of death.",
+    "isTiming": true,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Grant of Double Probate' is used when a reserved executor decides to act later.",
+    "a": true,
+    "exp": "An executor to whom power was reserved can apply for a concurrent grant (Double Probate) later.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A certified copy of the death certificate is required for a probate application.",
+    "a": true,
+    "exp": "Proof of death via a certified copy of the death certificate is a standard requirement for the application.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "The 'succession estate' is identical to the 'taxable estate'.",
+    "a": false,
+    "exp": "The taxable estate includes joint property and trust interests which are excluded from the succession estate.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A grant of representation is an order of the County Court.",
+    "a": false,
+    "exp": "A grant of representation is an order of the High Court.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Funeral expenses are paid before unsecured debts.",
+    "a": true,
+    "exp": "Funeral and testamentary expenses have priority over ordinary unsecured debts.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Creditors can apply for a grant if no next of kin apply.",
+    "a": true,
+    "exp": "Under NCPR 22, creditors are eligible to apply for a grant if persons with a beneficial interest do not.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "The 'Golden Rule' relates to assessing testamentary capacity.",
+    "a": true,
+    "exp": "The Golden Rule advises that a medical practitioner should witness the will of an elderly/ill testator.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "An executor can witness the will they are appointed in.",
+    "a": true,
+    "exp": "An executor can witness the will, but any gift to them in that will would be void under s.15 Wills Act.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A divorced spouse is treated as having predeceased the testator for appointment as executor.",
+    "a": true,
+    "exp": "Section 18A Wills Act 1837 treats a former spouse as having died on the date of decree absolute.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Personal Representatives have a statutory duty to collect in the estate.",
+    "a": true,
+    "exp": "Section 25 Administration of Estates Act 1925 imposes a duty to collect and get in the estate.",
+    "isTiming": false,
+    "difficulty": 1
+  }
+
+  ...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+
+
+
+    
   ],
   "trusts": [
   {
