@@ -344,7 +344,3808 @@
     { "q": "Custody Time Limit (Crown): 182 days.", "a": true, "exp": "Before trial.", "isTiming": true },
     { "q": "Review detention every 9 hours.", "a": true, "exp": "After first 6h review.", "isTiming": true },
     { "q": "Search warrant valid for 3 months.", "a": true, "exp": "Duration.", "isTiming": true },
-    { "q": "Suspended sentence max length: 2 years.", "a": true, "exp": "Prison term.", "isTiming": true }
+    { "q": "Suspended sentence max length: 2 years.", "a": true, "exp": "Prison term.", "isTiming": true },
+    {
+    "q": "Confidentiality overrides the duty of disclosure if the two conflict.",
+    "a": true,
+    "exp": "SRA Code of Conduct 6.3/6.4; you must cease acting rather than disclose confidential information without consent.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "A solicitor can act for two suspects where one blames the other.",
+    "a": false,
+    "exp": "SRA Code 6.2; this constitutes a significant risk of conflict of interest.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A solicitor must stop acting if a client admits guilt but pleads not guilty.",
+    "a": false,
+    "exp": "SRA Code; they can act, provided they do not advance a positive case suggesting innocence.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Calling a witness to confirm an alibi known to be false misleads the court.",
+    "a": true,
+    "exp": "SRA Code 1.4; knowingly calling false evidence breaches the duty to the court.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "The 'Interests of Justice' test applies to the means assessment for legal aid.",
+    "a": false,
+    "exp": "s.17 LASPO 2012; 'Interests of Justice' is the merits test, not the means test.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Receipt of Universal Credit automatically satisfies the means test for legal aid.",
+    "a": true,
+    "exp": "Applicants on specific benefits like Universal Credit are 'passported' through the means test.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Magistrates can sentence up to 12 months for a single either-way offence.",
+    "a": true,
+    "exp": "s.224 Sentencing Act 2020 (as cited in Workshop 8 PDF, reflected in Workshop 0 context).",
+    "isTiming": true,
+    "difficulty": 3
+  },
+  {
+    "q": "Robbery can be tried in the Magistrates' Court.",
+    "a": false,
+    "exp": "s.8 Theft Act 1968; Robbery is an indictable-only offence.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Theft is a summary only offence.",
+    "a": false,
+    "exp": "s.1 Theft Act 1968; Theft is triable either-way.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Common assault is triable only on indictment.",
+    "a": false,
+    "exp": "s.39 Criminal Justice Act 1988; Common assault is summary only.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "An appeal from a Crown Court trial lies to the High Court.",
+    "a": false,
+    "exp": "Appeals against conviction/sentence go to the Court of Appeal (Criminal Division).",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "The Supreme Court hears appeals on points of law of general public importance.",
+    "a": true,
+    "exp": "Constitutional Reform Act 2005; final court of appeal for UK civil/criminal cases.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A solicitor can accept instructions from a suspect's mother without confirming with the suspect.",
+    "a": false,
+    "exp": "PACE Code C Annex B; solicitor must confirm the suspect wishes to see them.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "The police can delay a suspect's access to legal advice for up to 48 hours.",
+    "a": false,
+    "exp": "s.58 PACE 1984; the maximum delay authorized by a Superintendent is 36 hours.",
+    "isTiming": true,
+    "difficulty": 3
+  },
+  {
+    "q": "Summary only offences must be charged within 6 months.",
+    "a": true,
+    "exp": "s.127 Magistrates' Courts Act 1980; time limit for laying information.",
+    "isTiming": true,
+    "difficulty": 2
+  },
+  {
+    "q": "A defendant found unfit to plead can be given a custodial sentence.",
+    "a": false,
+    "exp": "Criminal Procedure (Insanity) Act 1964; options are Hospital Order, Supervision, or Absolute Discharge.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "The prosecution must prove the case beyond reasonable doubt.",
+    "a": true,
+    "exp": "Woolmington v DPP; the legal burden rests on the prosecution.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "The defence bears the legal burden for self-defence.",
+    "a": false,
+    "exp": "The defence bears an evidential burden; prosecution must disprove it beyond reasonable doubt.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "A submission of no case to answer applies the Galbraith test.",
+    "a": true,
+    "exp": "R v Galbraith; assesses if there is sufficient evidence for a jury to properly convict.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A private prosecution can be taken over by the CPS.",
+    "a": true,
+    "exp": "Prosecution of Offences Act 1985; CPS can take over and discontinue.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Burglary is an indictable-only offence.",
+    "a": false,
+    "exp": "s.9 Theft Act 1968; Burglary is triable either-way (unless aggravated s.10).",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "The Crown Court has the power to hear appeals from the Magistrates' Court.",
+    "a": true,
+    "exp": "The Crown Court acts as an appellate court for summary convictions/sentences.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Police must have a warrant to arrest for any offence.",
+    "a": false,
+    "exp": "s.24 PACE 1984; allows arrest without warrant based on reasonable suspicion/necessity.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Solicitors owe a duty to the court which overrides the duty to the client.",
+    "a": true,
+    "exp": "SRA Principle 1; duty to the administration of justice is paramount.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Indictable-only offences have their first hearing in the Magistrates' Court.",
+    "a": true,
+    "exp": "s.51 Crime and Disorder Act 1998; sent forthwith to Crown Court.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "SRA Principle 1 is to uphold the rule of law.",
+    "a": true,
+    "exp": "SRA Standards and Regulations 2019.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "SRA Principle 7 is to act in the best interests of the firm.",
+    "a": false,
+    "exp": "SRA Standards and Regulations; Principle 7 is best interests of the client.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Indictable only' offences are tried in the Crown Court.",
+    "a": true,
+    "exp": "Classification of offences.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Summary only' offences are tried in the Magistrates' Court.",
+    "a": true,
+    "exp": "Classification of offences.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Either-way' offences can be tried in Magistrates or Crown Court.",
+    "a": true,
+    "exp": "Classification of offences.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Voir Dire' is a trial within a trial.",
+    "a": true,
+    "exp": "Procedure to determine admissibility of evidence in absence of jury.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "The 'Legal Burden' is the standard of proof.",
+    "a": false,
+    "exp": "Legal burden is the obligation to prove; standard is the level required.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Review Officer' must be at least the rank of Inspector.",
+    "a": true,
+    "exp": "s.40 PACE 1984.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Custody Officer' must be at least the rank of Sergeant.",
+    "a": true,
+    "exp": "s.36 PACE 1984.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'PACE' stands for Police and Criminal Evidence Act 1984.",
+    "a": true,
+    "exp": "Primary legislation governing police powers.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Code C' governs detention and questioning.",
+    "a": true,
+    "exp": "PACE Codes of Practice.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Appropriate Adult' is required for juveniles.",
+    "a": true,
+    "exp": "PACE Code C; for support/welfare.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Duty Solicitor' requires accreditation.",
+    "a": true,
+    "exp": "Legal Aid Agency requirement (CLAS).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Rights of Audience' allow a lawyer to appear in court.",
+    "a": true,
+    "exp": "Legal Services Act 2007.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "The 'Magistrates' Court' is a court of summary jurisdiction.",
+    "a": true,
+    "exp": "Court structure definition.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Warrant' is a written order issued by a court.",
+    "a": true,
+    "exp": "e.g., Arrest warrant or Search warrant.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Hearsay' is generally admissible in criminal trials.",
+    "a": false,
+    "exp": "s.114 CJA 2003; Hearsay is inadmissible unless an exception applies.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Turnbull Guidelines' relate to confession evidence.",
+    "a": false,
+    "exp": "R v Turnbull; relates to Visual Identification evidence.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Totality' principle applies to sentencing multiple offences.",
+    "a": true,
+    "exp": "Sentencing Council Guidelines; ensuring total sentence is just.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Newton Hearing' resolves factual disputes after a guilty plea.",
+    "a": true,
+    "exp": "R v Newton; hearing before a judge to determine basis of sentence.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Adverse Inference' can be drawn from silence.",
+    "a": true,
+    "exp": "s.34 CJPO 1994.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Significant Statement' involves an admission of guilt.",
+    "a": true,
+    "exp": "PACE Code C; capable of being used in evidence.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'ROTI' stands for Record of Taped Interview.",
+    "a": true,
+    "exp": "Standard police acronym.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Lay Magistrates' are legally qualified judges.",
+    "a": false,
+    "exp": "They are unpaid volunteers without legal qualification, advised by a Legal Adviser.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A Superintendent can authorize detention without charge up to 96 hours.",
+    "a": false,
+    "exp": "Superintendents can authorize up to 36 hours; Magistrates authorize up to 96 hours (s.42/43/44 PACE).",
+    "isTiming": true,
+    "difficulty": 3
+  },
+  {
+    "q": "An Inspector can authorize delaying a suspect's right to legal advice.",
+    "a": false,
+    "exp": "Delaying legal advice (s.58) requires an officer of at least Superintendent rank.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "An Inspector can authorize delaying the right to have someone informed of arrest.",
+    "a": true,
+    "exp": "Delaying intimation (s.56) requires an officer of at least Inspector rank.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "The 'relevant time' always starts when the suspect arrives at the police station.",
+    "a": false,
+    "exp": "It starts at arrival OR 24 hours after arrest, whichever is earlier (s.41 PACE).",
+    "isTiming": true,
+    "difficulty": 3
+  },
+  {
+    "q": "A solicitor can act as the appropriate adult for their juvenile client.",
+    "a": false,
+    "exp": "Code C 1.7; a solicitor present in a professional capacity cannot be the appropriate adult.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Reviews of detention must occur every 9 hours after the first review.",
+    "a": true,
+    "exp": "s.40 PACE; first review at 6 hours, subsequent reviews at intervals of 9 hours.",
+    "isTiming": true,
+    "difficulty": 2
+  },
+  {
+    "q": "An adverse inference under s.34 can be drawn if the suspect was not cautioned.",
+    "a": false,
+    "exp": "s.34 CJPOA 1994; the inference only applies if the suspect was cautioned.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A 'special warning' is required to draw inferences from silence regarding objects or marks.",
+    "a": true,
+    "exp": "s.36 CJPOA 1994; an ordinary caution is insufficient, a special warning is required.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "The first review of detention must take place within 6 hours of detention authorization.",
+    "a": true,
+    "exp": "s.40(3)(a) PACE 1984.",
+    "isTiming": true,
+    "difficulty": 2
+  },
+  {
+    "q": "A defendant can be convicted solely on the basis of an adverse inference.",
+    "a": false,
+    "exp": "s.38 CJPOA 1994; a conviction cannot be based solely on an inference.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A 'mixed' interview transcript (answers and no comments) is admissible in court.",
+    "a": true,
+    "exp": "Unlike a total 'no comment' interview, a mixed interview transcript is read to the jury.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Legal advice can be delayed for a maximum of 48 hours.",
+    "a": false,
+    "exp": "s.58 PACE; the maximum delay authorized by the police is 36 hours.",
+    "isTiming": true,
+    "difficulty": 2
+  },
+  {
+    "q": "A 17-year-old suspect is entitled to an appropriate adult.",
+    "a": true,
+    "exp": "Code C 1.5; anyone under 18 is treated as a juvenile.",
+    "isTiming": true,
+    "difficulty": 2
+  },
+  {
+    "q": "Inferences from silence apply if the client was denied legal advice.",
+    "a": false,
+    "exp": "s.34(2A) CJPOA 1994; no inferences if allowed access to legal advice was refused.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Police can interview a vulnerable suspect without an appropriate adult to prevent property loss.",
+    "a": true,
+    "exp": "Code C 11.18; urgent interviews allowed if authorized by Superintendent to prevent serious loss.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "A written prepared statement prevents all adverse inferences.",
+    "a": false,
+    "exp": "Inferences can still be drawn if the statement is incomplete or inconsistent with trial evidence.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "The 'Official Law Reports' are the most authoritative source for case law.",
+    "a": true,
+    "exp": "Practice Direction (Citation of Authorities) 2012; AC, QB, Ch, Fam are superior.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A Review Officer must be at least the rank of Sergeant.",
+    "a": false,
+    "exp": "s.40 PACE; Review Officer must be at least an Inspector.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "The All England Law Reports (All ER) are 'Official Law Reports'.",
+    "a": false,
+    "exp": "They are commercial reports; only AC, QB, Ch, and Fam are 'Official'.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "A suspect must answer questions about their name and address.",
+    "a": false,
+    "exp": "There is a right to silence; however, failure to provide details may delay release.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "An estranged parent can be an appropriate adult even if the juvenile objects.",
+    "a": false,
+    "exp": "Code C 1.7; an estranged parent should not act if the juvenile specifically objects.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Confessions obtained by oppression must be excluded.",
+    "a": true,
+    "exp": "s.76(2)(a) PACE; the court 'shall not allow' the confession.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A solicitor may be required to give evidence at trial about advice given in interview.",
+    "a": true,
+    "exp": "If the client waives privilege to explain their silence/conduct, the solicitor can be called.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Adverse inferences can be drawn for failing to account for presence at a scene.",
+    "a": true,
+    "exp": "s.37 CJPOA 1994; subject to a special warning.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Case law reported in newspapers is authoritative for legal research.",
+    "a": false,
+    "exp": "Practice Direction 2012; newspaper reports should not be cited if other reports exist.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "PACE stands for Police and Criminal Evidence Act 1984.",
+    "a": true,
+    "exp": "Primary legislation governing police powers.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A Custody Officer must be at least the rank of Sergeant.",
+    "a": true,
+    "exp": "s.36 PACE 1984.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Code C governs the detention and questioning of suspects.",
+    "a": true,
+    "exp": "PACE Codes of Practice.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Primary legislation consists of Acts of Parliament.",
+    "a": true,
+    "exp": "Legal Research definition.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Secondary legislation is also known as delegated legislation.",
+    "a": true,
+    "exp": "Legal Research definition.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Ratio decidendi is the binding part of a judgment.",
+    "a": true,
+    "exp": "Legal Research principle; the legal reason for the decision.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Obiter dicta are binding on lower courts.",
+    "a": false,
+    "exp": "Obiter dicta are persuasive, not binding.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "The 'relevant time' for detention is usually arrival at the police station.",
+    "a": true,
+    "exp": "s.41 PACE 1984.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A suspect has a right to free legal advice.",
+    "a": true,
+    "exp": "s.58 PACE 1984.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "An 'Appropriate Adult' safeguards the rights of vulnerable suspects.",
+    "a": true,
+    "exp": "Code C requirement.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "s.34 CJPOA relates to failure to mention facts.",
+    "a": true,
+    "exp": "Adverse inference provision.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "s.36 CJPOA relates to failure to account for objects/marks.",
+    "a": true,
+    "exp": "Adverse inference provision.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "s.37 CJPOA relates to failure to account for presence.",
+    "a": true,
+    "exp": "Adverse inference provision.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Neutral citations were introduced in 2001.",
+    "a": true,
+    "exp": "Legal Research; e.g., [2004] EWCA Civ 1127.",
+    "isTiming": true,
+    "difficulty": 1
+  },
+  {
+    "q": "'AC' stands for Appeal Cases.",
+    "a": true,
+    "exp": "Official Law Report abbreviation.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "An interview is the questioning of a suspect regarding their involvement in an offence.",
+    "a": true,
+    "exp": "Code C 11.1A definition.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A solicitor must act in the best interests of their client.",
+    "a": true,
+    "exp": "SRA Principle 7 / Code C 6D.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'significant statement' is one capable of being used in evidence.",
+    "a": true,
+    "exp": "Code C 11.4A; e.g., an admission of guilt.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A Review Officer must not be involved in the investigation.",
+    "a": true,
+    "exp": "s.40 PACE; ensures independence.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Street bail is bail granted before arrival at a police station.",
+    "a": true,
+    "exp": "Police can grant bail at the scene of arrest.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "The Custody Record logs all events involving the detainee.",
+    "a": true,
+    "exp": "Code C requirement; creates an audit trail.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Active defence involves intervening to prevent improper questioning.",
+    "a": true,
+    "exp": "Code C Notes for Guidance 6D.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A caution must be given before questioning about an offence.",
+    "a": true,
+    "exp": "Code C 10.1.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "An appropriate adult is subject to legal privilege.",
+    "a": false,
+    "exp": "Only legal advisors have privilege; AAs do not.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Indictable offences are the most serious category of offence.",
+    "a": true,
+    "exp": "Triable in the Crown Court.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A solicitor may advise a client to remain silent if police disclosure is insufficient.",
+    "a": true,
+    "exp": "R v Roble; lack of disclosure can justify silence to avoid 'ambush'.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Adverse inferences can be drawn under s.34 if the suspect was not cautioned.",
+    "a": false,
+    "exp": "s.34 CJPOA 1994; the inference is dependent on the suspect being cautioned.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A 'special warning' is required to draw inferences from silence regarding objects or marks (s.36).",
+    "a": true,
+    "exp": "Code C 10.11; an ordinary caution is insufficient for s.36/37 inferences.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "A defendant can be convicted solely on the basis of an adverse inference.",
+    "a": false,
+    "exp": "s.38 CJPOA 1994; a conviction cannot be based 'solely or mainly' on an inference.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A 17-year-old suspect can waive their right to an appropriate adult.",
+    "a": false,
+    "exp": "Code C 1.4; anyone under 18 must be treated as a juvenile and requires an AA.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "An urgent interview with a vulnerable suspect without an AA requires Superintendent authority.",
+    "a": true,
+    "exp": "Code C 11.18; allowed only if delay risks harm to evidence/persons or serious loss.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Submission of a prepared statement guarantees no adverse inferences will be drawn.",
+    "a": false,
+    "exp": "R v Knight; inferences may still arise if the statement is incomplete or inconsistent.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Police must hold an ID parade if the suspect asks, even if Video ID is available.",
+    "a": false,
+    "exp": "Code D 3.14; Video ID (VIPER) is the primary method unless not practicable.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A 'mixed' interview (answering some questions, refusing others) avoids adverse inferences.",
+    "a": false,
+    "exp": "It risks confusion and the transcript (including 'no comments') is read to the jury.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Criminal damage valued at £4,000 is triable either-way.",
+    "a": false,
+    "exp": "s.22 MCA 1980; Criminal Damage <£5,000 is treated as summary only.",
+    "isTiming": true,
+    "difficulty": 3
+  },
+  {
+    "q": "Low value shoplifting (<£200) allows the defendant to elect Crown Court trial.",
+    "a": true,
+    "exp": "s.22A MCA 1980; although treated as summary, the adult defendant retains election rights.",
+    "isTiming": true,
+    "difficulty": 3
+  },
+  {
+    "q": "Robbery is an either-way offence.",
+    "a": false,
+    "exp": "s.8 Theft Act 1968; Robbery is triable only on indictment.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Burglary under s.9(1)(a) is an indictable-only offence.",
+    "a": false,
+    "exp": "Theft Act 1968; Burglary is triable either-way (unless aggravated s.10).",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Common Assault is a summary only offence.",
+    "a": true,
+    "exp": "s.39 Criminal Justice Act 1988.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Private prosecutions can be commenced by written charge and requisition.",
+    "a": false,
+    "exp": "s.29 CJA 2003; restricted to public prosecutors. Private prosecutions use 'laying an information'.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "There is no time limit for charging an either-way offence.",
+    "a": true,
+    "exp": "Time limits apply to summary offences (6 months); indictable offences have no limit.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Breach of Code D automatically renders identification evidence inadmissible.",
+    "a": false,
+    "exp": "s.78 PACE; the court has discretion to exclude if admission would be unfair.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A solicitor can act as the appropriate adult for their client.",
+    "a": false,
+    "exp": "Code C 1.7; a solicitor present in a professional capacity cannot be the AA.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Inferences from silence under s.34 apply if legal advice was refused by police.",
+    "a": false,
+    "exp": "s.34(2A) CJPOA; no inferences if the suspect was denied access to legal advice.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "An officer of Inspector rank must supervise a confrontation ID procedure.",
+    "a": true,
+    "exp": "Code D 3.23; Identification Officer must be at least an Inspector.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Theft is a summary only offence.",
+    "a": false,
+    "exp": "s.1 Theft Act 1968; Theft is triable either-way.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Assault Occasioning Actual Bodily Harm (ABH) is an indictable-only offence.",
+    "a": false,
+    "exp": "s.47 OAPA 1861; ABH is triable either-way.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Summary only offences must be charged within 6 months of the offence.",
+    "a": true,
+    "exp": "s.127 Magistrates' Courts Act 1980.",
+    "isTiming": true,
+    "difficulty": 2
+  },
+  {
+    "q": "A 'significant statement' must be put to the suspect at the start of the interview.",
+    "a": true,
+    "exp": "Code C 11.4A; to allow the suspect to confirm or deny it.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Silence in interview prevents the prosecution from adducing a 'no comment' transcript.",
+    "a": true,
+    "exp": "A 'no comment' interview transcript is generally not read; admissions/mixed interviews are.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "The 'Caution' must be given before questioning a suspect about an offence.",
+    "a": true,
+    "exp": "Code C 10.1.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "An 'Interview' is questioning regarding involvement in an offence.",
+    "a": true,
+    "exp": "Code C 11.1A definition.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Active defence involves sitting passively and taking notes.",
+    "a": false,
+    "exp": "Active defence involves intervening to protect rights and advance the client's case.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Significant Statement' includes an admission of guilt.",
+    "a": true,
+    "exp": "Code C 11.4A.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "s.34 CJPOA relates to failure to mention facts relied on at trial.",
+    "a": true,
+    "exp": "Adverse inference provision.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "s.36 CJPOA relates to failure to account for objects, substances, or marks.",
+    "a": true,
+    "exp": "Adverse inference provision.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "s.37 CJPOA relates to failure to account for presence at the scene.",
+    "a": true,
+    "exp": "Adverse inference provision.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Code D governs Identification Procedures.",
+    "a": true,
+    "exp": "PACE Codes of Practice.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "VIPER stands for Video Identification Parade Electronic Recording.",
+    "a": true,
+    "exp": "Standard identification procedure.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Juvenile' is a person under the age of 18.",
+    "a": true,
+    "exp": "Code C 1.5.",
+    "isTiming": true,
+    "difficulty": 1
+  },
+  {
+    "q": "An Appropriate Adult provides legal advice to the suspect.",
+    "a": false,
+    "exp": "They provide support/communication assistance; legal advice is for the solicitor.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Summary offences are tried in the Magistrates' Court.",
+    "a": true,
+    "exp": "Classification of offences.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Indictable-only offences are tried in the Crown Court.",
+    "a": true,
+    "exp": "Classification of offences.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Either-way offences can be tried in Magistrates or Crown Court.",
+    "a": true,
+    "exp": "Classification of offences.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Low value shoplifting threshold is £200.",
+    "a": true,
+    "exp": "s.22A MCA 1980.",
+    "isTiming": true,
+    "difficulty": 1
+  },
+  {
+    "q": "Criminal damage summary threshold is £5,000.",
+    "a": true,
+    "exp": "s.22 MCA 1980.",
+    "isTiming": true,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Confrontation' involves a witness seeing the suspect in a line-up.",
+    "a": false,
+    "exp": "Confrontation is 1-on-1; a line-up is an Identification Parade.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Code C governs detention, treatment, and questioning.",
+    "a": true,
+    "exp": "PACE Codes of Practice.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A solicitor must act in the best interests of their client.",
+    "a": true,
+    "exp": "SRA Principle 7.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Laying an information is used to commence a private prosecution.",
+    "a": true,
+    "exp": "Method of commencing proceedings.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Written charge and requisition is available to all prosecutors.",
+    "a": false,
+    "exp": "Restricted to 'relevant prosecutors' (public bodies).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Theft is an indictable-only offence.",
+    "a": false,
+    "exp": "Theft is triable either-way.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "An Identification Officer must be involved in the investigation.",
+    "a": false,
+    "exp": "Code D 3.11; must be independent of the investigation.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Group identification involves seeing the suspect in an informal group.",
+    "a": true,
+    "exp": "Code D Annex C.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A suspect has a right to consult the Codes of Practice.",
+    "a": true,
+    "exp": "Code C 3.1.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A defendant on Universal Credit automatically passes the interests of justice test.",
+    "a": false,
+    "exp": "Universal Credit passports the Means Test; the Merits (Interests of Justice) Test must still be passed.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Magistrates can commit a defendant for sentence if their powers are insufficient.",
+    "a": true,
+    "exp": "s.14 Sentencing Act 2020; allows committal to Crown Court for greater punishment.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "An adult charged with criminal damage valued at £4,000 can elect Crown Court trial.",
+    "a": false,
+    "exp": "s.22 MCA 1980; Criminal damage <£5,000 is summary only with no right of election.",
+    "isTiming": true,
+    "difficulty": 3
+  },
+  {
+    "q": "An adult charged with low-value shoplifting (<£200) can elect Crown Court trial.",
+    "a": true,
+    "exp": "s.22A MCA 1980; although treated as summary only, the right to elect remains for adults.",
+    "isTiming": true,
+    "difficulty": 3
+  },
+  {
+    "q": "Magistrates can grant bail to a defendant charged with murder.",
+    "a": false,
+    "exp": "s.115 Coroners and Justice Act 2009; only a Crown Court Judge can grant bail for murder.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A defendant refused bail in the Magistrates' Court has a right to appeal to the Crown Court.",
+    "a": true,
+    "exp": "Requires a 'certificate of full argument' from the magistrates.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "The custody time limit for a summary trial in the Magistrates' Court is 70 days.",
+    "a": false,
+    "exp": "The limit is 56 days between first appearance and start of summary trial.",
+    "isTiming": true,
+    "difficulty": 3
+  },
+  {
+    "q": "Ideally, a defendant makes their first bail application at the police station.",
+    "a": false,
+    "exp": "Police grant bail (s.37/38 PACE); the first 'application' to a court is at the first hearing.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A plea of 'Guilty, but I didn't mean to do it' is treated as a Guilty plea.",
+    "a": false,
+    "exp": "This is an 'equivocal plea'; the court must treat it as Not Guilty.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "The prosecution can appeal a decision to grant bail for an imprisonable offence.",
+    "a": true,
+    "exp": "Bail (Amendment) Act 1993; must give oral notice at the hearing.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Failure to surrender to bail is a criminal offence.",
+    "a": true,
+    "exp": "s.6 Bail Act 1976; punishable by fine or imprisonment.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A surety must deposit money with the court before the defendant is released.",
+    "a": false,
+    "exp": "A surety promises to pay (recognizance); a 'security' involves depositing money/items.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Magistrates must follow the Allocation Guideline when deciding venue.",
+    "a": true,
+    "exp": "s.19 MCA 1980; must consider if sentencing powers are adequate.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "If a defendant indicates a Not Guilty plea, the court proceeds immediately to trial.",
+    "a": false,
+    "exp": "The court proceeds to Allocation (Mode of Trial) to decide venue.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A defendant charged with robbery will have a plea before venue hearing.",
+    "a": false,
+    "exp": "Robbery is indictable-only; it is sent forthwith to the Crown Court (s.51 CDA 1998).",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "The 'No Real Prospect' test prevents custodial remand for minor offences.",
+    "a": true,
+    "exp": "Bail Act 1976 Sch 1 Part 1 Para 9; no remand if no real prospect of custodial sentence.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "A defendant can make unlimited repeat bail applications on the same arguments.",
+    "a": false,
+    "exp": "Part 19 CrimPR/Common Law; must show a change in circumstances after the second application.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "The Magistrates' Court can sentence an offender for a related summary offence sent to the Crown Court.",
+    "a": false,
+    "exp": "If sent under s.51 CDA 1998, the Crown Court deals with the related summary offence.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "A defendant can ask for an indication of sentence before electing venue.",
+    "a": true,
+    "exp": "s.17A MCA 1980; the indication is binding if the defendant then pleads guilty.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Breaching a bail condition is a standalone criminal offence.",
+    "a": false,
+    "exp": "It allows arrest and withdrawal of bail, but is not a separate offence (unlike Failure to Surrender).",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Initial details of the prosecution case (IDPC) must include a summary of the evidence.",
+    "a": true,
+    "exp": "CrimPR Part 8; usually a summary and previous convictions.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A defendant detained after charge must appear in court within 48 hours.",
+    "a": false,
+    "exp": "PACE s.46; must be brought before the next available court (usually next morning).",
+    "isTiming": true,
+    "difficulty": 2
+  },
+  {
+    "q": "Legal aid for the Crown Court may require an income contribution.",
+    "a": true,
+    "exp": "Income Contribution Orders apply if disposable income exceeds the threshold.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Complex fraud cases can be sent to the Crown Court without allocation.",
+    "a": true,
+    "exp": "s.51B CDA 1998; bypassing the usual mode of trial procedure.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "If Magistrates decline jurisdiction, the defendant can still choose summary trial.",
+    "a": false,
+    "exp": "If Magistrates decline, the case MUST go to the Crown Court.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "s.4 Bail Act 1976 creates a general presumption in favour of bail.",
+    "a": true,
+    "exp": "Primary legislation establishing the right to bail.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Representation Order' grants public funding for legal costs.",
+    "a": true,
+    "exp": "Legal Aid funding mechanism.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "The 'Interests of Justice' test is the merits test for legal aid.",
+    "a": true,
+    "exp": "Assesses if the case warrants public funding (Widgery Criteria).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Surety' is a person who guarantees the defendant's surrender.",
+    "a": true,
+    "exp": "Bail condition requiring a financial recognizance.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Security' involves the defendant depositing money/valuables.",
+    "a": true,
+    "exp": "Bail condition; forfeited if they fail to surrender.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Summary Only' offences are tried in the Magistrates' Court.",
+    "a": true,
+    "exp": "Classification of offences.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Indictable Only' offences are tried in the Crown Court.",
+    "a": true,
+    "exp": "Classification of offences.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Either-Way' offences can be tried in either court.",
+    "a": true,
+    "exp": "Classification of offences.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Plea Before Venue' determines the plea for either-way offences.",
+    "a": true,
+    "exp": "s.17A MCA 1980; procedure before allocation.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Allocation' determines the trial venue for either-way offences.",
+    "a": true,
+    "exp": "s.19 MCA 1980; deciding between Mags or Crown.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Committal for Sentence' sends a convicted defendant to the Crown Court.",
+    "a": true,
+    "exp": "s.14 Sentencing Act 2020; used when Mags' powers are insufficient.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Sending for Trial' transfers indictable cases to the Crown Court.",
+    "a": true,
+    "exp": "s.51 CDA 1998; procedure for moving cases up.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'IDPC' stands for Initial Details of the Prosecution Case.",
+    "a": true,
+    "exp": "CrimPR Part 8; evidence served at first hearing.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Conditional Bail' imposes restrictions on the defendant's liberty.",
+    "a": true,
+    "exp": "e.g., Curfew, Residence, Reporting.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Unconditional Bail' requires only surrender to custody.",
+    "a": true,
+    "exp": "Release without restrictions.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Remand in Custody' means detaining the defendant in prison.",
+    "a": true,
+    "exp": "Refusal of bail.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'CTL' stands for Custody Time Limit.",
+    "a": true,
+    "exp": "Maximum time a defendant can be held before trial.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Equivocal Plea' is a plea with a defence attached.",
+    "a": true,
+    "exp": "Must be treated as Not Guilty.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Passporting' refers to automatic eligibility for legal aid means test.",
+    "a": true,
+    "exp": "Based on age or benefit status.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Duty Solicitor' provides free legal advice at court.",
+    "a": true,
+    "exp": "Available for first hearings for imprisonable offences.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Section 51 CDA 1998 governs sending cases to the Crown Court.",
+    "a": true,
+    "exp": "Statutory authority for transfer.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "The 'Merits Test' considers the seriousness of the case.",
+    "a": true,
+    "exp": "Widgery Criteria; distinct from the Means Test.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Failure to Surrender is punishable by imprisonment.",
+    "a": true,
+    "exp": "Bail Act 1976 s.6; creates a distinct offence.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "s.4 Bail Act exceptions are listed in Schedule 1.",
+    "a": true,
+    "exp": "Exceptions to the right to bail.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Certificate of Full Argument' is needed to appeal bail.",
+    "a": true,
+    "exp": "Procedural requirement for Crown Court bail application.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A defendant found unfit to plead can be given a custodial sentence.",
+    "a": false,
+    [cite_start]"exp": "The only options are a hospital order, supervision order, or absolute discharge[cite: 1088].",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "If a defendant is unfit to plead, the jury determines if they had the mens rea.",
+    "a": false,
+    [cite_start]"exp": "The jury determines if they committed the act (actus reus), not the mens rea[cite: 1087].",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "The prosecution must disclose material that is neutral to the case.",
+    "a": false,
+    [cite_start]"exp": "Disclosure is required only if it undermines the prosecution or assists the defence[cite: 1268].",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A defence statement is mandatory in the Magistrates' Court.",
+    "a": false,
+    [cite_start]"exp": "It is voluntary in the Magistrates' Court but mandatory in the Crown Court[cite: 1365].",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Failure to serve a defence statement prevents the accused from calling alibi witnesses.",
+    "a": false,
+    [cite_start]"exp": "The court cannot prevent the witness being called; the sanction is adverse inferences[cite: 1435].",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "The defence statement must be served within 28 days of prosecution initial disclosure.",
+    "a": true,
+    [cite_start]"exp": "CrimPR 15.4; strict time limit for Crown Court defence statements[cite: 1365].",
+    "isTiming": true,
+    "difficulty": 2
+  },
+  {
+    "q": "A s.8 application for specific disclosure can be made without serving a defence statement.",
+    "a": false,
+    [cite_start]"exp": "Service of a defence statement is a prerequisite for a s.8 application[cite: 1511].",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "The prosecution's duty of disclosure ends once the trial begins.",
+    "a": false,
+    [cite_start]"exp": "It is a continuing duty until conviction, acquittal, or discontinuation[cite: 1502].",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A s.9 statement is admissible as evidence if the other party does not object.",
+    "a": true,
+    [cite_start]"exp": "s.9 CJA 1967 allows statements to be read if agreed/uncontested[cite: 1621].",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Judicial notice 'on enquiry' allows a judge to research indisputable facts.",
+    "a": true,
+    [cite_start]"exp": "Judges can look up generally known facts; jurors cannot research[cite: 1639].",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "An application to dismiss a charge must be made after arraignment.",
+    "a": false,
+    [cite_start]"exp": "It must be made *before* the defendant is arraigned[cite: 1776].",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Under Galbraith, a judge must stop the case if the evidence is weak or vague.",
+    "a": false,
+    [cite_start]"exp": "Only if a properly directed jury *could not* properly convict on it[cite: 1799].",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Section 78 PACE can be used to exclude defence evidence.",
+    "a": false,
+    [cite_start]"exp": "s.78 applies only to evidence on which the *prosecution* proposes to rely[cite: 1821].",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Abuse of process can be argued if the police destroy evidence assisting the defence.",
+    "a": true,
+    [cite_start]"exp": "This can undermine the integrity of the justice system[cite: 1847].",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A confession obtained by oppression must be excluded even if it is true.",
+    "a": true,
+    [cite_start]"exp": "s.76(2)(a) PACE; the court 'shall not allow' it, regardless of truth[cite: 2132].",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Facts discovered as a result of an excluded confession are inadmissible.",
+    "a": false,
+    [cite_start]"exp": "s.76(4) PACE allows facts discovered to be admitted (no 'fruit of poisoned tree')[cite: 2230].",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Denying a solicitor to a vulnerable suspect renders a confession unreliable under s.76(2)(b).",
+    "a": true,
+    [cite_start]"exp": "R v McGovern; breach of Code C likely renders confession unreliable[cite: 2205].",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "A nod or gesture can constitute a 'confession' under PACE.",
+    "a": true,
+    [cite_start]"exp": "s.82(1) PACE defines confession as words 'or otherwise'[cite: 2087].",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "The prosecution must prove beyond reasonable doubt that a confession was not obtained by oppression.",
+    "a": true,
+    [cite_start]"exp": "Once raised, the burden is on the prosecution to disprove oppression[cite: 2121].",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "The court can raise s.76 confession issues of its own motion.",
+    "a": true,
+    [cite_start]"exp": "s.76(3) PACE allows the court to require proof of admissibility[cite: 2119].",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A 'mixed' statement (part admission, part exculpatory) is a confession.",
+    "a": true,
+    "exp": "s.82(1) PACE; [cite_start]'wholly or partly adverse'[cite: 2090].",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Breach of Code C automatically renders a confession inadmissible.",
+    "a": false,
+    [cite_start]"exp": "Breaches must be significant/substantial to trigger exclusion under s.76 or s.78[cite: 2008].",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "A voir dire is held in the presence of the jury.",
+    "a": false,
+    [cite_start]"exp": "It is a 'trial within a trial' held in the absence of the jury[cite: 2047].",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "The defence can apply to exclude a confession under both s.76 and s.78.",
+    "a": true,
+    [cite_start]"exp": "They are often argued in the alternative[cite: 2292].",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "The prosecution can tell the jury that a body was found because the defendant confessed.",
+    "a": false,
+    [cite_start]"exp": "s.76(5) PACE prohibits linking the discovery to the excluded statement[cite: 2232].",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "PTPH stands for Plea and Trial Preparation Hearing.",
+    "a": true,
+    [cite_start]"exp": "The main pre-trial hearing in the Crown Court[cite: 1063].",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Arraignment' is the process of putting the indictment to the defendant.",
+    "a": true,
+    [cite_start]"exp": "Occurs at the plea stage of the PTPH[cite: 1081].",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Used material' is material the prosecution relies on at trial.",
+    "a": true,
+    [cite_start]"exp": "Evidence served on the defence[cite: 1161].",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Unused material' must be recorded on a schedule.",
+    "a": true,
+    [cite_start]"exp": "Usually the MG6C schedule[cite: 1235].",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "CPIA stands for Criminal Procedure and Investigations Act 1996.",
+    "a": true,
+    [cite_start]"exp": "Primary legislation governing disclosure[cite: 1191].",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Defence Statement' sets out the nature of the accused's defence.",
+    "a": true,
+    [cite_start]"exp": "Defined in s.6A CPIA 1996[cite: 1343].",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "s.11 CPIA allows adverse inferences from disclosure failures.",
+    "a": true,
+    [cite_start]"exp": "Sanction for failing to serve/inadequate defence statement[cite: 1429].",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "PII stands for Public Interest Immunity.",
+    "a": true,
+    [cite_start]"exp": "Application to withhold sensitive material[cite: 1551].",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Facts in issue' are facts a party must prove to succeed.",
+    "a": true,
+    [cite_start]"exp": "Elements of the offence or defence[cite: 1605].",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "s.10 CJA 1967 deals with Formal Admissions.",
+    "a": true,
+    [cite_start]"exp": "Agreeing facts in writing[cite: 1626].",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Real evidence' refers to material objects produced for inspection.",
+    "a": true,
+    [cite_start]"exp": "e.g., the knife used in an attack[cite: 1657].",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "The jury is the 'Tribunal of Fact' in the Crown Court.",
+    "a": true,
+    [cite_start]"exp": "They determine the facts; the judge determines the law[cite: 1694].",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Admissibility' is a question of law for the judge.",
+    "a": true,
+    [cite_start]"exp": "Determined by the Tribunal of Law[cite: 1696].",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Galbraith provides the test for 'No Case to Answer'.",
+    "a": true,
+    [cite_start]"exp": "R v Galbraith [1981][cite: 1796].",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "s.78 PACE relates to the exclusion of unfair evidence.",
+    "a": true,
+    [cite_start]"exp": "Discretionary exclusion power[cite: 1918].",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "s.82(1) PACE defines a 'confession'.",
+    "a": true,
+    [cite_start]"exp": "Includes statements wholly or partly adverse[cite: 2087].",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A purely exculpatory statement is a confession.",
+    "a": false,
+    [cite_start]"exp": "Must be wholly or partly adverse to the maker[cite: 2093].",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "s.76(2)(a) PACE deals with exclusion for oppression.",
+    "a": true,
+    [cite_start]"exp": "Mandatory exclusion if oppression proved[cite: 2100].",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "s.76(2)(b) PACE deals with exclusion for unreliability.",
+    "a": true,
+    [cite_start]"exp": "Mandatory exclusion if unreliability proved[cite: 2101].",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Oppression' includes torture or inhuman treatment.",
+    "a": true,
+    [cite_start]"exp": "Defined in s.76(8) PACE[cite: 2113].",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A judge must withdraw a case if identification evidence is poor and unsupported.",
+    "a": true,
+    "exp": "R v Turnbull; if ID is poor and unsupported, the judge should direct an acquittal.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "A Turnbull warning is required even if the witness recognizes the defendant.",
+    "a": true,
+    "exp": "R v Turnbull; mistakes can be made even in recognition cases.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Breach of Code D automatically renders identification evidence inadmissible under s.78.",
+    "a": false,
+    "exp": "R v Ryan; breaches do not automatically lead to exclusion unless they cause unfairness.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "A 'dock identification' is the standard method for identifying a defendant at trial.",
+    "a": false,
+    "exp": "It is exceptional and undesirable due to prejudice; formal ID procedures are preferred.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "The defence bears the legal burden of proving self-defence.",
+    "a": false,
+    "exp": "The defence bears only the evidential burden; the prosecution must disprove it beyond reasonable doubt.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Under Galbraith, a judge should stop a case if the evidence is merely inconsistent.",
+    "a": false,
+    "exp": "Inconsistency/reliability is for the jury; the judge stops it only if no jury *could* properly convict.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "A confession obtained by oppression must be excluded, even if true.",
+    "a": true,
+    "exp": "s.76(2)(a) PACE; the court 'shall not allow' it, protecting the integrity of the system.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "The prosecution must prove beyond reasonable doubt that a confession was not obtained by oppression.",
+    "a": true,
+    "exp": "s.76(2) PACE; the burden of proof is on the prosecution once the issue is raised.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Facts discovered as a result of an inadmissible confession are also inadmissible.",
+    "a": false,
+    "exp": "s.76(4) PACE; facts discovered (e.g., location of a weapon) remain admissible.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "A 'voir dire' is required if the defence challenges the truth of a confession.",
+    "a": false,
+    "exp": "A voir dire determines *admissibility* (voluntariness), not truth (which is for the jury).",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "In the Magistrates' Court, s.76 applications must be heard as a preliminary issue.",
+    "a": true,
+    "exp": "Magistrates must decide admissibility before continuing (or retrying if excluded).",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "The prosecution must disclose material that undermines their case or assists the defence.",
+    "a": true,
+    "exp": "s.3 CPIA 1996; the statutory test for initial and continuing disclosure.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A Defence Statement is mandatory in the Magistrates' Court.",
+    "a": false,
+    "exp": "s.5 CPIA 1996; it is mandatory in the Crown Court, voluntary in the Magistrates' Court.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "The time limit for serving a Defence Statement in the Crown Court is 14 days.",
+    "a": false,
+    "exp": "It is 28 days from compliance with initial prosecution disclosure (s.5 CPIA/CrimPR).",
+    "isTiming": true,
+    "difficulty": 3
+  },
+  {
+    "q": "Failure to serve a Defence Statement can lead to adverse inferences at trial.",
+    "a": true,
+    "exp": "s.11 CPIA 1996; inferences can be drawn for failure to serve or late service.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A s.8 application for specific disclosure requires a Defence Statement to be served first.",
+    "a": true,
+    "exp": "s.8 CPIA 1996; the defence must set out their case to justify the request.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "The prosecution can make a closing speech if the defendant is unrepresented and gives no evidence.",
+    "a": false,
+    "exp": "Prosecution cannot make a closing speech if an unrepresented D calls no witnesses.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "A judge can exclude prosecution evidence under s.78 if it would have an adverse effect on fairness.",
+    "a": true,
+    "exp": "s.78 PACE; the discretionary power to exclude unfair evidence.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "s.78 PACE can be used to exclude evidence adduced by a co-defendant.",
+    "a": false,
+    "exp": "s.78 applies only to evidence on which the *prosecution* proposes to rely.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "If a submission of no case to answer succeeds, the judge directs a verdict of not guilty.",
+    "a": true,
+    "exp": "The case stops, and the defendant is acquitted.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A Turnbull warning must instruct the jury that a mistaken witness cannot be convincing.",
+    "a": false,
+    "exp": "It must warn that a mistaken witness *can* be convincing.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "The defence opening speech occurs before the prosecution evidence.",
+    "a": false,
+    "exp": "It occurs after the prosecution case closes and before defence evidence (if calling witnesses).",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Supporting evidence in a Turnbull case must be independent of the identification.",
+    "a": true,
+    "exp": "R v Turnbull; e.g., forensics, admissions, or silence (if adverse inference applies).",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "An alibi witness must be notified to the prosecution in the Defence Statement.",
+    "a": true,
+    "exp": "s.6A CPIA 1996; details of alibi witnesses must be provided.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "The judge determines the facts in a Newton Hearing.",
+    "a": true,
+    "exp": "A Newton hearing (trial of issue) is decided by the judge alone, even in the Crown Court.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "R v Turnbull establishes guidelines for identification evidence.",
+    "a": true,
+    "exp": "Key case for disputed visual identification.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "ADVOKATE is a mnemonic for identification factors.",
+    "a": true,
+    "exp": "Amount of time, Distance, Visibility, Obstruction, Known, Any reason to remember, Time lapse, Errors.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "s.76 PACE relates to the exclusion of confessions.",
+    "a": true,
+    "exp": "Mandatory exclusion for oppression or unreliability.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "s.78 PACE provides discretion to exclude unfair evidence.",
+    "a": true,
+    "exp": "Discretionary exclusion ('shall not allow' is s.76).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Oppression' includes torture or inhuman treatment.",
+    "a": true,
+    "exp": "Defined in s.76(8) PACE.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "The 'Legal Burden' is the obligation to prove a fact.",
+    "a": true,
+    "exp": "Usually rests on the prosecution (Woolmington).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "The 'Standard of Proof' for the prosecution is beyond reasonable doubt.",
+    "a": true,
+    "exp": "Woolmington v DPP; 'so that you are sure'.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "The 'Standard of Proof' for the defence is the balance of probabilities.",
+    "a": true,
+    "exp": "Applies when the defence bears a legal burden (e.g., insanity).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "An 'Evidential Burden' is the burden to raise an issue.",
+    "a": true,
+    "exp": "e.g., raising 'some evidence' of self-defence.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Galbraith provides the test for 'No Case to Answer'.",
+    "a": true,
+    "exp": "R v Galbraith [1981].",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "CPIA stands for Criminal Procedure and Investigations Act 1996.",
+    "a": true,
+    "exp": "Primary legislation governing disclosure.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Voir Dire' is a trial within a trial.",
+    "a": true,
+    "exp": "Procedure to determine admissibility in the absence of the jury.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "s.82(1) PACE defines a 'Confession'.",
+    "a": true,
+    "exp": "Includes statements wholly or partly adverse.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Unused Material' is material not relied upon by the prosecution.",
+    "a": true,
+    "exp": "Must be disclosed if it meets the s.3 test.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "The 'Golden Rule' of disclosure requires full disclosure of undermining material.",
+    "a": true,
+    "exp": "R v H and C [2004].",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Submission of No Case to Answer' is made after the prosecution case.",
+    "a": true,
+    "exp": "Half-time submission.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'PII' stands for Public Interest Immunity.",
+    "a": true,
+    "exp": "Application to withhold sensitive material.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "The jury is the 'Tribunal of Fact' in the Crown Court.",
+    "a": true,
+    "exp": "They determine the facts; the judge determines the law.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "s.9 CJA 1967 allows witness statements to be read.",
+    "a": true,
+    "exp": "If agreed by parties.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "s.10 CJA 1967 allows formal admissions of fact.",
+    "a": true,
+    "exp": "Agreed facts presented in writing.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "The 'Review Officer' is responsible for disclosure in the police station.",
+    "a": false,
+    "exp": "The 'Disclosure Officer' is responsible; Review Officer reviews detention.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'ADVOKATE' 'T' stands for Time lapse.",
+    "a": true,
+    "exp": "Time between observation and identification.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'ADVOKATE' 'V' stands for Visibility.",
+    "a": true,
+    "exp": "Lighting conditions etc.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Turnbull Warning' urges caution in relying on identification.",
+    "a": true,
+    "exp": "Mandatory direction in disputed ID cases.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "s.3 CPIA 1996 sets the test for initial prosecution disclosure.",
+    "a": true,
+    "exp": "Undermine prosecution / assist defence.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "The court must exclude defendant bad character evidence under s.101(3) if it is unfair.",
+    "a": true,
+    "exp": "s.101(3) CJA 2003; 'must' exclude if admission has adverse effect on fairness (Gateways D & G only).",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A defendant can use s.78 PACE to exclude bad character evidence adduced by a co-defendant.",
+    "a": false,
+    "exp": "s.78 PACE applies only to evidence on which the *prosecution* proposes to rely.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "A previous conviction for burglary automatically establishes a propensity to be untruthful.",
+    "a": false,
+    "exp": "R v Hanson; dishonesty offences do not automatically show a propensity to be untruthful.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "The prosecution can adduce evidence of a previous acquittal to show propensity.",
+    "a": true,
+    "exp": "R v Z; double jeopardy does not prevent using acquittals as evidence of propensity.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Evidence of a defendant's motive to commit the offence falls within s.98 bad character.",
+    "a": false,
+    "exp": "s.98(a) CJA 2003; motive has 'to do with the alleged facts' so it is NOT bad character.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A Defence Statement must be served within 14 days of initial disclosure in the Crown Court.",
+    "a": false,
+    "exp": "CrimPR 15.4; the time limit is 28 days in the Crown Court.",
+    "isTiming": true,
+    "difficulty": 2
+  },
+  {
+    "q": "Failure to serve a Defence Statement in the Crown Court can lead to adverse inferences.",
+    "a": true,
+    "exp": "s.11 CPIA 1996; inferences can be drawn for failure to serve or late service.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A s.8 application for specific disclosure can be made before a Defence Statement is served.",
+    "a": false,
+    "exp": "s.8 CPIA 1996; the defendant must have served a defence statement first.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "The prosecution has a continuing duty to review disclosure until the defendant is acquitted or convicted.",
+    "a": true,
+    "exp": "s.7A CPIA 1996; the duty continues throughout the proceedings.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Third parties (e.g., banks) have a statutory duty of disclosure under the CPIA.",
+    "a": false,
+    "exp": "There is no statutory duty; the prosecution must issue a witness summons to obtain third-party material.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A Public Interest Immunity (PII) application is made in the presence of the defence.",
+    "a": false,
+    "exp": "PII applications are usually ex parte (without the defence present) to protect the sensitive material.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "A youth jointly charged with an adult will have their first hearing in the Youth Court.",
+    "a": false,
+    "exp": "s.46 CYPA 1933; they appear in the Adult Magistrates' Court for the first hearing.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A youth can be remitted to the Youth Court for trial after being sent to the Crown Court.",
+    "a": false,
+    "exp": "R v W; once lawfully before the Crown Court, there is no power to remit for trial.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "A defendant has an absolute right to change their plea from Guilty to Not Guilty.",
+    "a": false,
+    "exp": "It is at the discretion of the court, exercised sparingly (e.g., for improper pressure/mistake).",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Notice to adduce prosecution bad character evidence in the Crown Court is 10 business days.",
+    "a": true,
+    "exp": "CrimPR 21.4; 10 business days after a not guilty plea.",
+    "isTiming": true,
+    "difficulty": 3
+  },
+  {
+    "q": "Evidence attacking a deceased person's character triggers gateway (g).",
+    "a": true,
+    "exp": "s.106 CJA 2003; attack on 'another person' includes those who are dead.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Leave of the court is required for a defendant to adduce their own bad character (Gateway b).",
+    "a": false,
+    "exp": "s.101(1)(b) CJA 2003; no leave is required for the defendant to adduce their own record.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Gateway (e) 'Co-defendant' applies only if the defence undermines the co-defendant's defence.",
+    "a": true,
+    "exp": "s.104 CJA 2003; specifically regarding propensity to be untruthful.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Only the prosecution can adduce evidence to correct a false impression (Gateway f).",
+    "a": true,
+    "exp": "s.105(7) CJA 2003; restricted to prosecution evidence.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Propensity to commit offences can be shown by a single previous conviction.",
+    "a": true,
+    "exp": "R v Hanson; possible if the conviction shows a tendency towards unusual behaviour.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Non-defendant bad character can be admitted if all parties agree.",
+    "a": true,
+    "exp": "s.100(1)(c) CJA 2003; agreement bypasses the 'substantial probative value' test.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A defence statement in the Magistrates' Court is mandatory.",
+    "a": false,
+    "exp": "s.5 CPIA 1996; it is voluntary in the Magistrates' Court.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "The prosecution must disclose evidence that strengthens the defence case.",
+    "a": true,
+    "exp": "s.3 CPIA 1996; the core test for initial disclosure.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Post-offence conduct can be evidence of propensity.",
+    "a": true,
+    "exp": "R v Hanson; if it shows the propensity is ongoing.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Special measures for witnesses in fear include the use of an intermediary.",
+    "a": false,
+    "exp": "YJCEA 1999; intermediaries are for vulnerable witnesses, not merely those in fear.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "s.98 CJA 2003 defines 'Bad Character'.",
+    "a": true,
+    "exp": "Evidence of/disposition towards misconduct.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "s.112 CJA 2003 defines 'Misconduct'.",
+    "a": true,
+    "exp": "Commission of an offence or reprehensible behaviour.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Gateway (a) is 'Agreement of the parties'.",
+    "a": true,
+    "exp": "s.101(1)(a) CJA 2003.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Gateway (c) is 'Important Explanatory Evidence'.",
+    "a": true,
+    "exp": "s.101(1)(c) CJA 2003.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Gateway (d) relates to 'Propensity'.",
+    "a": true,
+    "exp": "s.101(1)(d) Relevant to an important matter in issue.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Gateway (e) relates to 'Co-Defendants'.",
+    "a": true,
+    "exp": "s.101(1)(e) Substantial probative value between D and Co-D.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Gateway (f) relates to 'False Impressions'.",
+    "a": true,
+    "exp": "s.101(1)(f) Evidence to correct a false impression.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Gateway (g) relates to 'Attack on another's character'.",
+    "a": true,
+    "exp": "s.101(1)(g) CJA 2003.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "s.100 CJA 2003 governs Non-Defendant Bad Character.",
+    "a": true,
+    "exp": "Rules for witnesses or non-parties.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "CPIA 1996 governs Disclosure.",
+    "a": true,
+    "exp": "Criminal Procedure and Investigations Act 1996.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "s.6A CPIA sets out the contents of a Defence Statement.",
+    "a": true,
+    "exp": "Requires nature of defence, facts disputed, and points of law.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "MG6C is the schedule of unused material.",
+    "a": true,
+    "exp": "Standard police form for disclosure schedules.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "PTPH stands for Plea and Trial Preparation Hearing.",
+    "a": true,
+    "exp": "Main case management hearing in the Crown Court.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "CrimPR Part 21 governs Bad Character procedure.",
+    "a": true,
+    "exp": "Rules for notices and applications.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "CrimPR Part 15 governs Disclosure procedure.",
+    "a": true,
+    "exp": "Rules for initial and defence disclosure.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "s.103 CJA 2003 defines 'Matter in Issue'.",
+    "a": true,
+    "exp": "Includes propensity to commit offences or be untruthful.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Reprehensible behaviour' implies moral blameworthiness.",
+    "a": true,
+    "exp": "Case law definition for misconduct.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "s.101(3) provides the court's discretion to exclude.",
+    "a": true,
+    "exp": "Must exclude if it has an adverse effect on fairness (Gateways d/g).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "The 'Disclosure Officer' examines retained material.",
+    "a": true,
+    "exp": "Disclosure Code of Practice role.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Special Measure' assists vulnerable witnesses.",
+    "a": true,
+    "exp": "YJCEA 1999; e.g., screens or live link.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "The 'Interests of Justice' test applies to joint trials.",
+    "a": true,
+    "exp": "Sentencing Council Guideline; youth charged with adult.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "s.51 CDA 1998 governs sending youths to Crown Court.",
+    "a": true,
+    "exp": "Crime and Disorder Act 1998.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Arraignment is the taking of the plea.",
+    "a": true,
+    "exp": "Occurs at the PTPH.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Theft' is a category of offence for propensity (s.103).",
+    "a": true,
+    "exp": "Categories of Offences Order 2004.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "s.107 CJA 2003 allows stopping the case for contamination.",
+    "a": true,
+    "exp": "If bad character evidence is contaminated and conviction unsafe.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "The prosecution can compel a spouse to testify in a theft trial.",
+    "a": false,
+    "exp": "s.80 PACE; spouses are generally not compellable for the prosecution unless specific exceptions (e.g. assault) apply.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A defendant is competent to give evidence for the prosecution against a co-defendant.",
+    "a": false,
+    "exp": "A defendant is not competent as a prosecution witness in their own trial.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "The jury must accept expert evidence if it is uncontradicted.",
+    "a": false,
+    "exp": "The jury is not obliged to accept expert evidence unless it leads inevitably to one conclusion.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Under s.116 CJA 2003, anonymous hearsay statements are admissible.",
+    "a": false,
+    "exp": "s.116(1)(b) requires the maker of the statement to be identified.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A previous inconsistent statement admitted under s.119 is evidence of the truth of its contents.",
+    "a": true,
+    "exp": "s.119 CJA 2003; changes the common law where it only went to credibility.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "The prosecution can make a closing speech if an unrepresented defendant gives evidence alone.",
+    "a": false,
+    "exp": "Prosecution can only close if D is represented or calls at least one other factual witness.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "A judge can direct a jury to return a verdict of guilty.",
+    "a": false,
+    "exp": "A judge can direct a 'not guilty' verdict (Galbraith) but never a 'guilty' verdict.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Multiple hearsay is generally admissible under s.117 business documents.",
+    "a": true,
+    "exp": "s.121 CJA 2003 allows multiple hearsay if the document fits s.117 requirements.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "The defence has an absolute right to make an opening speech.",
+    "a": false,
+    "exp": "Only if calling at least one witness to fact other than the defendant.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A request for drugs via text message is hearsay evidence.",
+    "a": false,
+    "exp": "R v Twist; a request/question is not a 'statement of a matter', so not hearsay.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "The court must accept a majority verdict after 2 hours of deliberation.",
+    "a": false,
+    "exp": "The court *may* accept one, but only if reasonable time has elapsed (min 2 hours 10 mins).",
+    "isTiming": true,
+    "difficulty": 3
+  },
+  {
+    "q": "A witness statement read under s.9 CJA 1967 is hearsay.",
+    "a": true,
+    "exp": "It is an out-of-court statement admitted for its truth, but admissible by agreement.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A judge can exclude a business document under s.117 if its reliability is doubtful.",
+    "a": true,
+    "exp": "s.117(7) CJA 2003; specific discretion to exclude business documents.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "The 'Interests of Justice' gateway (s.114(1)(d)) is a routine way to admit hearsay.",
+    "a": false,
+    "exp": "It is a residual discretion ('safety valve') not to be used to circumvent other sections.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A spouse can be compelled to give evidence for the defence.",
+    "a": true,
+    "exp": "s.80 PACE; a spouse is compellable for the defendant (their partner).",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Hearsay notice must be served by the prosecution within 10 business days of a not guilty plea.",
+    "a": false,
+    "exp": "In the Crown Court it is 10 days; in Magistrates' Court it is 20 business days.",
+    "isTiming": true,
+    "difficulty": 3
+  },
+  {
+    "q": "A confession is admissible under the Res Gestae exception.",
+    "a": true,
+    "exp": "s.118 CJA 2003 preserves the common law rules including Res Gestae and Confessions.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "The Galbraith test asks if the prosecution case is 'weak or vague'.",
+    "a": false,
+    "exp": "Weak/vague evidence goes to the jury; the test is if a jury *could* properly convict.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Legal professional privilege can be waived by the lawyer.",
+    "a": false,
+    "exp": "Privilege belongs to the client and can only be waived by them.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A view of a crime scene is not considered evidence.",
+    "a": false,
+    "exp": "Observations made during a 'view' become evidence in the case.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "The defence must serve hearsay notice as soon as reasonably practicable.",
+    "a": true,
+    "exp": "CrimPR Part 20; no fixed day limit for defence, unlike prosecution.",
+    "isTiming": true,
+    "difficulty": 2
+  },
+  {
+    "q": "A witness in fear can automatically have their statement read under s.116.",
+    "a": false,
+    "exp": "s.116(2)(e) requires leave of the court; it is not automatic.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "If a defendant refuses to testify, the jury can draw an adverse inference.",
+    "a": true,
+    "exp": "s.35 CJPOA 1994; provided the appropriate warning is given.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "The judge sums up the facts before the law.",
+    "a": false,
+    "exp": "The judge deals with legal directions first, then sums up the evidence.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A solicitor can invoke privilege to protect a spouse from incrimination.",
+    "a": false,
+    "exp": "Privilege against self-incrimination applies only to the witness themselves.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Hearsay is defined in s.114 CJA 2003.",
+    "a": true,
+    "exp": "Statement not made in oral evidence adduced as evidence of matter stated.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Original evidence is admissible if relevant.",
+    "a": true,
+    "exp": "Evidence adduced to prove a statement was made, not its truth.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "R v Twist provides the test for identifying hearsay.",
+    "a": true,
+    "exp": "Three-stage test: Matter to prove -> Statement? -> Purpose?",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "s.116 CJA 2003 covers unavailable witnesses.",
+    "a": true,
+    "exp": "Dead, unfit, outside UK, cannot be found, fear.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "s.117 CJA 2003 covers business documents.",
+    "a": true,
+    "exp": "Created in course of trade/business etc.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Res Gestae is a statutory hearsay exception.",
+    "a": false,
+    "exp": "It is a common law exception preserved by s.118.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Multiple hearsay is generally inadmissible.",
+    "a": true,
+    "exp": "s.121 CJA 2003 restricts hearsay upon hearsay.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Competence refers to whether a witness may lawfully testify.",
+    "a": true,
+    "exp": "General rule: everyone is competent.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Compellability refers to forcing a witness to testify.",
+    "a": true,
+    "exp": "Most competent witnesses are compellable.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Hostile Witness' gives evidence adverse to the calling party.",
+    "a": true,
+    "exp": "Can be cross-examined by own side with leave.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Leading questions are permitted in cross-examination.",
+    "a": true,
+    "exp": "Standard advocacy practice to control the witness.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Leading questions are generally banned in examination-in-chief.",
+    "a": true,
+    "exp": "Witness must give their own account.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Legal Professional Privilege protects lawyer-client comms.",
+    "a": true,
+    "exp": "Confidentiality protection.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Litigation Privilege requires litigation to be in contemplation.",
+    "a": true,
+    "exp": "Dominant purpose test.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "The 'burden of proof' usually lies with the prosecution.",
+    "a": true,
+    "exp": "Woolmington v DPP.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "The standard of proof is 'beyond reasonable doubt'.",
+    "a": true,
+    "exp": "Often described as 'so that you are sure'.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Submission of no case to answer happens after defence evidence.",
+    "a": false,
+    "exp": "It happens at the close of the prosecution case ('half-time').",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Closing speeches occur before the summing up.",
+    "a": true,
+    "exp": "Pros closing -> Defence closing -> Summing up.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "The jury is the 'Tribunal of Fact'.",
+    "a": true,
+    "exp": "They decide the facts; judge decides the law.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "The judge is the 'Tribunal of Law'.",
+    "a": true,
+    "exp": "Decides admissibility and directs jury on law.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "s.126 CJA 2003 allows exclusion of superfluous hearsay.",
+    "a": true,
+    "exp": "Discretion to exclude to avoid waste of time.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Foreman' delivers the jury's verdict.",
+    "a": true,
+    "exp": "Juror elected to speak for the group.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Jury Bailiffs swear an oath to keep the jury private.",
+    "a": true,
+    "exp": "Procedure when jury retires.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "s.9 CJA 1967 allows agreed statements to be read.",
+    "a": true,
+    "exp": "Written evidence procedure.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "s.10 CJA 1967 allows formal admissions.",
+    "a": true,
+    "exp": "Facts agreed between parties.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A Newton hearing is required if the difference in facts is immaterial to the sentence.",
+    "a": false,
+    "exp": "A Newton hearing is only held if the factual dispute would make a material difference to the sentence.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "If a defendant loses a Newton hearing, their credit for a guilty plea is usually halved.",
+    "a": true,
+    "exp": "The reduction is normally halved because court time and witnesses were used to determine facts.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Magistrates can commit an offender to the Crown Court for sentence if their powers are insufficient.",
+    "a": true,
+    "exp": "s.14 Sentencing Act 2020; allows committal if the offence warrants greater punishment.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "The minimum sentence for a third Class A drug trafficking offence is 5 years.",
+    "a": false,
+    "exp": "s.313 Sentencing Act 2020; the minimum sentence is 7 years (unless unjust).",
+    "isTiming": true,
+    "difficulty": 3
+  },
+  {
+    "q": "The minimum sentence for a third domestic burglary is 3 years.",
+    "a": true,
+    "exp": "s.314 Sentencing Act 2020; applies to third domestic burglary conviction.",
+    "isTiming": true,
+    "difficulty": 3
+  },
+  {
+    "q": "A Crown Court judge can suspend a sentence of up to 3 years.",
+    "a": false,
+    "exp": "A sentence can only be suspended if the custodial term is between 14 days and 2 years.",
+    "isTiming": true,
+    "difficulty": 3
+  },
+  {
+    "q": "The operational period of a suspended sentence must be between 6 months and 2 years.",
+    "a": true,
+    "exp": "The period during which the sentence is suspended is statutorily limited.",
+    "isTiming": true,
+    "difficulty": 3
+  },
+  {
+    "q": "A court can defer a sentence for up to 12 months.",
+    "a": false,
+    "exp": "Sentence can be deferred for up to 6 months to allow the offender to prove conduct.",
+    "isTiming": true,
+    "difficulty": 2
+  },
+  {
+    "q": "A Goodyear indication in the Crown Court binds the judge if the defendant pleads guilty.",
+    "a": true,
+    "exp": "R v Goodyear; the indication of maximum sentence is binding if the plea is entered.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Magistrates can give a specific indication of sentence length before a plea.",
+    "a": false,
+    "exp": "Magistrates can only indicate whether the sentence will be custodial or non-custodial.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "The custody threshold requires that neither a fine nor community sentence can be justified.",
+    "a": true,
+    "exp": "s.230 Sentencing Act 2020; custody is a last resort.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A Community Order can last for a maximum of 2 years.",
+    "a": false,
+    "exp": "The maximum duration of a Community Order is 3 years.",
+    "isTiming": true,
+    "difficulty": 2
+  },
+  {
+    "q": "Unpaid work requirements must be between 40 and 300 hours.",
+    "a": true,
+    "exp": "Statutory range for unpaid work requirements.",
+    "isTiming": true,
+    "difficulty": 2
+  },
+  {
+    "q": "A curfew requirement can be imposed for up to 20 hours a day.",
+    "a": false,
+    "exp": "Curfew limits are 2-16 hours in any 24-hour period.",
+    "isTiming": true,
+    "difficulty": 3
+  },
+  {
+    "q": "A guilty plea on the day of trial attracts a maximum reduction of one-third.",
+    "a": false,
+    "exp": "Guilty plea on the day of trial attracts a maximum reduction of one-tenth (1/10).",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A prisoner serving an Extended Determinate Sentence (EDS) is automatically released at the halfway point.",
+    "a": false,
+    "exp": "They are eligible to apply for parole at the two-thirds point of the custodial term.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "The 'Slip Rule' allows a judge to vary a sentence within 56 days.",
+    "a": true,
+    "exp": "s.385 Sentencing Act 2020; to correct errors in sentencing.",
+    "isTiming": true,
+    "difficulty": 2
+  },
+  {
+    "q": "Breach of a Community Order can result in a fine of up to £2,500.",
+    "a": true,
+    "exp": "Schedule 10 SA 2020; fine is one option for breach.",
+    "isTiming": true,
+    "difficulty": 2
+  },
+  {
+    "q": "Consecutive sentences are generally used for offences arising from the same incident.",
+    "a": false,
+    "exp": "Concurrent sentences are used for the same incident; consecutive for separate events.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A pre-sentence report is mandatory before passing a custodial sentence (unless unnecessary).",
+    "a": true,
+    "exp": "s.30 Sentencing Act 2020; court must obtain a report unless it considers it unnecessary.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Time spent on qualifying electronically monitored curfew counts towards a custodial sentence.",
+    "a": true,
+    "exp": "Credit is given for half a day for each day on qualifying curfew (9+ hours).",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "The general limit for a single offence in the Magistrates' Court is 6 months.",
+    "a": true,
+    "exp": "s.224 SA 2020; though briefly increased to 12 months, it reverted to 6 months.",
+    "isTiming": true,
+    "difficulty": 2
+  },
+  {
+    "q": "A court must activate a suspended sentence upon breach unless it is unjust.",
+    "a": true,
+    "exp": "Presumption of activation in whole or part upon breach.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Absolute discharge means the conviction is not recorded.",
+    "a": false,
+    "exp": "The conviction stands, but no punishment is imposed.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A fine can be combined with a conditional discharge for the same offence.",
+    "a": false,
+    "exp": "A discharge cannot be combined with a fine for the same offence.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "The Sentencing Code is contained in the Sentencing Act 2020.",
+    "a": true,
+    "exp": "Consolidated sentencing legislation.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "s.57 SA 2020 sets out the purposes of sentencing.",
+    "a": true,
+    "exp": "Punishment, reduction of crime, reform, protection, reparation.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Culpability refers to the harm caused to the victim.",
+    "a": false,
+    "exp": "Culpability refers to the offender's blameworthiness; Harm refers to the impact.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Category 1' offence represents the lowest seriousness.",
+    "a": false,
+    "exp": "Category 1 is the highest seriousness (High Culpability/High Harm).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Aggravating factors increase the severity of the sentence.",
+    "a": true,
+    "exp": "e.g., previous convictions, use of a weapon.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Mitigating factors reduce the severity of the sentence.",
+    "a": true,
+    "exp": "e.g., remorse, lack of previous convictions.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Previous convictions are a statutory aggravating factor.",
+    "a": true,
+    "exp": "s.65 Sentencing Act 2020.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Remorse is a mitigating factor.",
+    "a": true,
+    "exp": "Listed in sentencing guidelines.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Totality involves ensuring the overall sentence is just and proportionate.",
+    "a": true,
+    "exp": "Sentencing principle for multiple offences.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Concurrent' sentence runs at the same time as another.",
+    "a": true,
+    "exp": "Total time served is the length of the longest sentence.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Consecutive' sentence adds to the length of another.",
+    "a": true,
+    "exp": "Sentences run one after the other.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "An 'Absolute Discharge' involves no penalty.",
+    "a": true,
+    "exp": "Finding of guilt but no punishment.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Conditional Discharge' requires the offender not to reoffend for a set period.",
+    "a": true,
+    "exp": "If they reoffend, they are resentenced for the original offence.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Suspended Sentence' is a custodial sentence served in the community.",
+    "a": true,
+    "exp": "Prison term is suspended on conditions.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Murder carries a mandatory life sentence.",
+    "a": true,
+    "exp": "Schedule 21 SA 2020 sets minimum terms.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Whole Life Order' means the offender is never released.",
+    "a": true,
+    "exp": "Reserved for the most serious murders.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Sentencing Guidelines must be followed unless contrary to the interests of justice.",
+    "a": true,
+    "exp": "s.59 Sentencing Act 2020.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Victim Impact Statement' details the effect of the crime on the victim.",
+    "a": true,
+    "exp": "Read to the court before sentencing.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "The maximum reduction for a guilty plea at the first stage is one-third.",
+    "a": true,
+    "exp": "Sentencing Council Guidelines on Guilty Pleas.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'EDS' stands for Extended Determinate Sentence.",
+    "a": true,
+    "exp": "Custodial term plus extended licence for dangerous offenders.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Bind Over' requires a person to keep the peace.",
+    "a": true,
+    "exp": "Forfeit a sum of money if breached.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Fines are the most common criminal sentence.",
+    "a": true,
+    "exp": "Used for approx 80% of offences.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Surcharge' is a mandatory payment to fund victim services.",
+    "a": true,
+    "exp": "Imposed alongside other sentences.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Newton Hearing' is held without a jury.",
+    "a": true,
+    "exp": "The judge (or magistrates) is the arbiter of fact.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "The 'Custody Threshold' is the test for imposing imprisonment.",
+    "a": true,
+    "exp": "Offence must be 'so serious'.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Magistrates can use s.142 MCA 1980 to increase a sentence.",
+    "a": true,
+    "exp": "s.142 MCA 1980; exceptionally, e.g., if the court was misled by the defendant.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "The prosecution can appeal a Magistrates' acquittal to the Crown Court.",
+    "a": false,
+    "exp": "s.108 MCA 1980; prosecution cannot appeal to Crown Court, only by Case Stated/JR.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "The Crown Court can increase a sentence on appeal from the Magistrates.",
+    "a": true,
+    "exp": "s.48 Senior Courts Act 1981; sentence is 'at large' up to the Magistrates' limit.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "An appeal by way of Case Stated involves a re-hearing of the evidence.",
+    "a": false,
+    "exp": "Case Stated deals with errors of law/jurisdiction based on agreed facts; no evidence is heard.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "The time limit for an appeal by way of Case Stated is 21 days.",
+    "a": true,
+    "exp": "s.111 MCA 1980; strictly applied time limit.",
+    "isTiming": true,
+    "difficulty": 2
+  },
+  {
+    "q": "An application for Judicial Review must be made within 3 months.",
+    "a": true,
+    "exp": "Must be made 'promptly' and in any event within 3 months.",
+    "isTiming": true,
+    "difficulty": 2
+  },
+  {
+    "q": "A defendant alleging bias by Magistrates should appeal to the Crown Court.",
+    "a": false,
+    "exp": "Ex p Rowlands; allegations of unfairness/bias should go to Judicial Review.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Magistrates can grant bail pending an appeal to the Crown Court.",
+    "a": true,
+    "exp": "s.113 MCA 1980; bail pending appeal is available.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "The Crown Court Slip Rule (s.385) applies to errors of law in conviction.",
+    "a": false,
+    "exp": "s.385 Sentencing Act 2020; applies to sentences/orders, not convictions.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "The Crown Court Slip Rule time limit is 28 days.",
+    "a": false,
+    "exp": "s.385 Sentencing Act 2020; the limit is 56 days.",
+    "isTiming": true,
+    "difficulty": 2
+  },
+  {
+    "q": "A defendant pleading guilty in the Crown Court cannot appeal the conviction.",
+    "a": false,
+    "exp": "Can appeal if the plea was a nullity (e.g., erroneous legal ruling or undue pressure).",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Notice of Appeal to the Court of Appeal must be served within 28 days.",
+    "a": true,
+    "exp": "s.18 Criminal Appeal Act 1968; 28 days from conviction or sentence.",
+    "isTiming": true,
+    "difficulty": 2
+  },
+  {
+    "q": "If the Single Judge refuses leave, the appellant has 14 days to renew.",
+    "a": false,
+    "exp": "CrimPR; the renewal period is 10 business days.",
+    "isTiming": true,
+    "difficulty": 3
+  },
+  {
+    "q": "The Court of Appeal can increase a sentence on an appeal by the defendant.",
+    "a": false,
+    "exp": "s.11(3) CAA 1968; appellant cannot be dealt with more severely than the court below.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "The Attorney General can refer an unduly lenient sentence for Theft.",
+    "a": false,
+    "exp": "CJA 1988; only for indictable-only or specified either-way offences (Theft is not specified).",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "An Attorney General's Reference on a point of law overturns the acquittal.",
+    "a": false,
+    "exp": "s.36 CJA 1972; clarifies the law but the acquittal stands.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A Loss of Time order can be made by the Single Judge.",
+    "a": true,
+    "exp": "s.29 CAA 1968; though usually made by the full court on renewal.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Jurors can be compelled to give evidence to the Court of Appeal.",
+    "a": true,
+    "exp": "s.23 CAA 1968; wide power to receive fresh evidence.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Prosecution appeal against a terminatory ruling requires an acquittal agreement.",
+    "a": true,
+    "exp": "s.58 CJA 2003; prosecution must agree to acquittal if appeal fails/abandoned.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "The CCRC can refer a case only if there is new evidence/argument.",
+    "a": true,
+    "exp": "Criminal Appeal Act 1995; usually requires something not previously raised.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "An appeal from the High Court (Case Stated) goes to the Court of Appeal.",
+    "a": false,
+    "exp": "Administration of Justice Act 1960; leapfrogs to the Supreme Court.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "A defendant who pleaded guilty in Magistrates' can appeal conviction to Crown Court.",
+    "a": false,
+    "exp": "s.108 MCA 1980; guilty plea restricts appeal to sentence only (unless equivocal).",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A prosecution appeal against a terminatory ruling must be expedited.",
+    "a": true,
+    "exp": "s.59 CJA 2003; to prevent jury discharge where possible.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "The Court of Appeal can order a retrial if a conviction is quashed.",
+    "a": true,
+    "exp": "s.7 CAA 1968; if the interests of justice so require.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Magistrates can refuse to state a case if they consider it frivolous.",
+    "a": true,
+    "exp": "s.111 MCA 1980; 'frivolous' in the legal sense (futile/vexatious).",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "s.142 MCA 1980 is the power to rectify mistakes.",
+    "a": true,
+    "exp": "Magistrates' power to set aside conviction/vary sentence.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "s.108 MCA 1980 provides the right of appeal to the Crown Court.",
+    "a": true,
+    "exp": "Standard appeal route from Magistrates.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Appeal by 'Case Stated' is to the High Court.",
+    "a": true,
+    "exp": "s.111 MCA 1980; Divisional Court of QBD.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Judicial Review deals with procedural irregularity.",
+    "a": true,
+    "exp": "e.g., breach of natural justice, bias.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "An appeal to the Crown Court is a 're-hearing'.",
+    "a": true,
+    "exp": "Evidence is heard afresh.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Notice of Appeal to Crown Court is 15 business days.",
+    "a": true,
+    "exp": "CrimPR Part 34.",
+    "isTiming": true,
+    "difficulty": 1
+  },
+  {
+    "q": "s.385 Sentencing Act 2020 is the Crown Court Slip Rule.",
+    "a": true,
+    "exp": "Power to correct sentences.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "CAA 1968 stands for Criminal Appeal Act 1968.",
+    "a": true,
+    "exp": "Primary statute for the Court of Appeal.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Single Judge' considers leave to appeal on paper.",
+    "a": true,
+    "exp": "s.31 CAA 1968 procedure.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "The 'Registrar' manages criminal appeals.",
+    "a": true,
+    "exp": "Receives forms, orders transcripts.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Perfecting grounds' involves adding transcript references.",
+    "a": true,
+    "exp": "Counsel's duty after receiving transcripts.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Form NG is the Notice of Appeal to the COA.",
+    "a": true,
+    "exp": "Standard form for Notice/Grounds.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "The 'Safety Test' applies to conviction appeals.",
+    "a": true,
+    "exp": "s.2 CAA 1968; is the conviction 'unsafe'?",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "AG Reference refers 'Unduly Lenient' sentences.",
+    "a": true,
+    "exp": "CJA 1988 power.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Terminatory Ruling' brings the case to an end.",
+    "a": true,
+    "exp": "Subject of prosecution appeal under CJA 2003.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "CCRC stands for Criminal Cases Review Commission.",
+    "a": true,
+    "exp": "Independent body reviewing miscarriages of justice.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "The Supreme Court hears points of 'general public importance'.",
+    "a": true,
+    "exp": "Criteria for leave to appeal to UKSC.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Leave to Appeal' means permission from the court.",
+    "a": true,
+    "exp": "Required for Court of Appeal.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Loss of Time' order discounts time served.",
+    "a": true,
+    "exp": "Penalty for meritless appeals.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "s.23 CAA 1968 allows 'Fresh Evidence' on appeal.",
+    "a": true,
+    "exp": "If necessary/expedient in interests of justice.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Double Jeopardy' discount applies to AG References.",
+    "a": true,
+    "exp": "Compensation for anxiety of second sentencing.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "'Wednesbury Unreasonableness' is a Judicial Review test.",
+    "a": true,
+    "exp": "Irrationality ground.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A Trial Judge can certify a case 'Fit for Appeal'.",
+    "a": true,
+    "exp": "Bypasses the need for leave (rare).",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Form RN is the Respondent's Notice.",
+    "a": true,
+    "exp": "Prosecution response in COA.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A youth charged with homicide must be tried in the Crown Court.",
+    "a": true,
+    "exp": "s.51A CDA 1998; homicide is an exception to the presumption of Youth Court trial.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "The youth court can impose a Detention and Training Order on a 10-year-old.",
+    "a": false,
+    "exp": "No DTO can be imposed on an offender aged 10 or 11.",
+    "isTiming": true,
+    "difficulty": 3
+  },
+  {
+    "q": "A 13-year-old can receive a DTO if they are a persistent offender.",
+    "a": true,
+    "exp": "DTO available for 12-14 year olds only if they are a persistent offender.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Reporting restrictions apply automatically in the Adult Magistrates' Court for youths.",
+    "a": false,
+    "exp": "They apply automatically in the Youth Court; in Adult Magistrates' they are discretionary.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A youth jointly charged with an adult has their first hearing in the Youth Court.",
+    "a": false,
+    "exp": "First hearing takes place in the Adult Magistrates' Court.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "If an adult co-defendant pleads guilty, the youth must be remitted to the Youth Court for trial.",
+    "a": true,
+    "exp": "Unless the youth is charged with a homicide or grave crime requiring Crown Court.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "A Referral Order is mandatory for a first-time offender pleading guilty to an imprisonable offence.",
+    "a": true,
+    "exp": "Unless the sentence is fixed by law or custody/discharge is appropriate.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A court can impose a Referral Order if it intends to give an absolute discharge.",
+    "a": false,
+    "exp": "A Referral Order cannot be given if an absolute or conditional discharge is justified.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "Parents must be required to attend court if the accused is under 16.",
+    "a": true,
+    "exp": "s.34A CYPA 1933; unless unreasonable to require attendance.",
+    "isTiming": true,
+    "difficulty": 2
+  },
+  {
+    "q": "The 'Grave Crimes' provisions apply to offences carrying 10 years imprisonment for an adult.",
+    "a": false,
+    "exp": "s.249 SA 2020; applies to offences carrying 14 years or more.",
+    "isTiming": true,
+    "difficulty": 3
+  },
+  {
+    "q": "A youth can elect trial by jury for an either-way offence.",
+    "a": false,
+    "exp": "A youth has no right of election; mode of trial is determined by the court.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "The Youth Court can sentence a youth to 4 years detention for a grave crime.",
+    "a": false,
+    "exp": "Youth Court limit is 24 months DTO; longer sentences require committal to Crown Court.",
+    "isTiming": true,
+    "difficulty": 3
+  },
+  {
+    "q": "The Crown Court must remit a convicted youth to the Youth Court for sentence.",
+    "a": true,
+    "exp": "s.25 SA 2020; unless it is undesirable to do so.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "A Youth Rehabilitation Order can last for up to 36 months.",
+    "a": true,
+    "exp": "Maximum length of a YRO is 36 months.",
+    "isTiming": true,
+    "difficulty": 2
+  },
+  {
+    "q": "A Referral Order can be imposed for a minimum of 1 month.",
+    "a": false,
+    "exp": "The minimum term for a referral order is 3 months.",
+    "isTiming": true,
+    "difficulty": 2
+  },
+  {
+    "q": "The police can authorise a Youth Caution for an indictable-only offence.",
+    "a": false,
+    "exp": "Requires authority of the CPS for indictable-only offences.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "A youth charged with a summary-only offence cannot be tried in the Crown Court.",
+    "a": true,
+    "exp": "Summary offences remain in the Magistrates/Youth Court unless s.40 applies (rare).",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Intensive Supervision and Surveillance (ISS) is available for all youths.",
+    "a": false,
+    "exp": "If under 15, they must be a persistent offender.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "A 'persistent young offender' is defined by statute.",
+    "a": false,
+    "exp": "No statutory definition; guidance suggests 3 imprisonable convictions in 12 months.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "If a youth and adult are jointly charged, the youth is always tried in the Crown Court.",
+    "a": false,
+    "exp": "Only if it is in the 'Interests of Justice' for them to be tried jointly.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "The custody officer can detain a youth in police custody if secure accommodation is expensive.",
+    "a": false,
+    "exp": "Cost is not a ground; must be 'impracticable' or protect public from serious harm.",
+    "isTiming": false,
+    "difficulty": 3
+  },
+  {
+    "q": "The relevant age for sentencing is the age at the date of the offence.",
+    "a": false,
+    "exp": "The relevant age is the age at the date of conviction.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "Unpaid work is available for a 15-year-old offender.",
+    "a": false,
+    "exp": "Unpaid work is available only for those aged 16 or 17.",
+    "isTiming": true,
+    "difficulty": 3
+  },
+  {
+    "q": "A Referral Order is spent immediately upon discharge.",
+    "a": true,
+    "exp": "Leaving the youth with a clean slate.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "The 'Interests of Justice' test considers the age gap between youth and adult.",
+    "a": true,
+    "exp": "A substantial gap militates in favour of separate trials.",
+    "isTiming": false,
+    "difficulty": 2
+  },
+  {
+    "q": "The age of criminal responsibility is 10.",
+    "a": true,
+    "exp": "Conclusive presumption under 10s cannot be guilty.",
+    "isTiming": true,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Child' is a person under 14.",
+    "a": true,
+    "exp": "s.107 CYPA 1933.",
+    "isTiming": true,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Young Person' is aged 14 to 17.",
+    "a": true,
+    "exp": "s.107 CYPA 1933.",
+    "isTiming": true,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Juvenile' is anyone under 18.",
+    "a": true,
+    "exp": "Standard definition.",
+    "isTiming": true,
+    "difficulty": 1
+  },
+  {
+    "q": "The Youth Court is not a public court.",
+    "a": true,
+    "exp": "s.47 CYPA 1933.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Grave Crime' carries 14 years or more for an adult.",
+    "a": true,
+    "exp": "s.249 SA 2020.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "s.250 SA 2020 allows for long-term detention.",
+    "a": true,
+    "exp": "Sentence for grave crimes.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "DTO stands for Detention and Training Order.",
+    "a": true,
+    "exp": "The custodial sentence for youths.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "YRO stands for Youth Rehabilitation Order.",
+    "a": true,
+    "exp": "The community sentence for youths.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "s.37 CDA 1998 sets the aim to prevent offending.",
+    "a": true,
+    "exp": "Principal aim of youth justice system.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "s.44 CYPA 1933 requires regard for welfare.",
+    "a": true,
+    "exp": "Principal aim of youth justice system.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "An Appropriate Adult safeguards a juvenile's rights.",
+    "a": true,
+    "exp": "PACE Code C requirement.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Triage' is an informal out-of-court disposal.",
+    "a": true,
+    "exp": "Recorded as No Further Action.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Youth Caution' is a formal out-of-court disposal.",
+    "a": true,
+    "exp": "Crime and Disorder Act 1998.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Detention at His Majesty's Pleasure is for murder.",
+    "a": true,
+    "exp": "Mandatory sentence for youths.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "The maximum DTO is 24 months.",
+    "a": true,
+    "exp": "Statutory maximum.",
+    "isTiming": true,
+    "difficulty": 1
+  },
+  {
+    "q": "The minimum Referral Order is 3 months.",
+    "a": true,
+    "exp": "Statutory minimum.",
+    "isTiming": true,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'finding of guilt' is the youth court term for conviction.",
+    "a": true,
+    "exp": "Different terminology used.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "IOJ stands for Interests of Justice.",
+    "a": true,
+    "exp": "Test for joint trials.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "Lawyers do not wear robes in the Youth Court.",
+    "a": true,
+    "exp": "Informality rule.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "The Youth Court is constituted of a District Judge or Magistrates.",
+    "a": true,
+    "exp": "Specially trained.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "s.38 PACE deals with detention after charge.",
+    "a": true,
+    "exp": "Grounds for refusing bail.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A 'Reparation Order' is a non-custodial sentence.",
+    "a": true,
+    "exp": "Available for youths.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "s.51A CDA 1998 covers sending youths to Crown Court.",
+    "a": true,
+    "exp": "Jurisdiction provision.",
+    "isTiming": false,
+    "difficulty": 1
+  },
+  {
+    "q": "A Parenting Order can be imposed on parents.",
+    "a": true,
+    "exp": "Available in Youth Court.",
+    "isTiming": false,
+    "difficulty": 1
+  }
   ],
   "willsAdmin": [
   {
