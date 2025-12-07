@@ -548,7 +548,7 @@ const CategoryGrid = ({ onSelect, data, level }) => {
 const Leaderboard = ({ entries }) => (
   <div className="bg-slate-800/80 rounded-xl p-4 border border-slate-700 w-full max-w-md mx-auto h-48 overflow-y-auto custom-scrollbar backdrop-blur-sm">
     <div className="flex items-center gap-2 mb-3 text-yellow-400 font-bold tracking-widest text-sm uppercase sticky top-0 bg-slate-800/90 p-2 backdrop-blur-sm z-10">
-      <Trophy className="w-4 h-4" /> Global Agents
+      <Trophy className="w-4 h-4" /> LEADERBOARD
     </div>
     <div className="space-y-2">
       {entries.map((entry, idx) => (
