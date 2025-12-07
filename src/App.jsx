@@ -1,11 +1,45 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { Play, Pause, RefreshCw, Check, X, Volume2, VolumeX, Zap, Trophy, Award, Hexagon, Briefcase, Gavel, Home, ScrollText, AlertTriangle, Tag, FastForward, Eye, BrainCircuit, MessageSquare, Clock, ShieldAlert, ArrowRight, Activity, Scale, Landmark, BookOpen, Shield } from 'lucide-react';
+import { Play, Pause, Volume2, VolumeX, Zap, Trophy, Hexagon, Briefcase, Gavel, Home, ScrollText, AlertTriangle, Tag, FastForward, Eye, BrainCircuit, MessageSquare, Clock, ShieldAlert, Activity, Scale, Landmark } from 'lucide-react';
 import { initializeApp } from 'firebase/app';
 import { getAuth, signInAnonymously, onAuthStateChanged, signInWithCustomToken } from 'firebase/auth';
 import { getFirestore, collection, addDoc, query, orderBy, limit, onSnapshot, serverTimestamp } from 'firebase/firestore';
-import { db, auth } from './firebase';
 
-// --- AUDIO ENGINE v19.0 (FINAL) ---
+// --- FIREBASE SETUP ---
+// Note: Ensure your environment variables are set in Vercel/Local env
+const firebaseConfigStr = typeof __firebase_config !== 'undefined' ? __firebase_config : JSON.stringify({
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_PROJECT.firebaseapp.com",
+  projectId: "YOUR_PROJECT",
+  storageBucket: "YOUR_PROJECT.appspot.com",
+  messagingSenderId: "123",
+  appId: "1:123:web:123"
+});
+
+const firebaseConfig = JSON.parse(firebaseConfigStr);
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
+
+// --- FALLBACK DATA (Used if JSON fetch fails) ---
+const RAW_QUESTION_BANKS = {
+  business: [
+    { q: "A sole trader must register with Companies House.", a: false, exp: "Only with HMRC.", difficulty: "1" },
+    { q: "Directors must avoid conflicts of interest (s.175).", a: true, exp: "Strict fiduciary duty.", difficulty: "1" },
+  ],
+  // ... (Minimal fallback set to prevent crash)
+};
+
+// Helper to flatten
+const PREPARED_BANKS = {};
+Object.keys(RAW_QUESTION_BANKS).forEach(key => {
+  PREPARED_BANKS[key] = RAW_QUESTION_BANKS[key].map(q => ({
+    ...q,
+    category: key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase()) 
+  }));
+});
+
+// --- AUDIO ENGINE v20.0 (FINAL) ---
 class AudioEngine {
   constructor() {
     this.ctx = null;
@@ -73,7 +107,7 @@ class AudioEngine {
     osc.connect(filter);
     
     if (useGlitch && this.distortionNode) {
-       filter.connect(gain); 
+       filter.connect(gain); // Bypassed distortion for cleanliness based on v18 feedback
     } else {
        filter.connect(gain);
     }
@@ -93,12 +127,10 @@ class AudioEngine {
           const osc = this.ctx.createOscillator();
           osc.type = 'sawtooth'; 
           osc.frequency.setValueAtTime(freq * h, time);
-          
           const filter = this.ctx.createBiquadFilter();
           filter.type = 'lowpass';
           filter.frequency.setValueAtTime(200, time);
           filter.frequency.linearRampToValueAtTime(600, time + duration); 
-
           osc.connect(filter);
           filter.connect(gain);
           osc.start(time);
@@ -106,7 +138,7 @@ class AudioEngine {
       });
 
       gain.gain.setValueAtTime(0, time);
-      gain.gain.linearRampToValueAtTime(0.05, time + 2.0); // Reduced volume
+      gain.gain.linearRampToValueAtTime(0.05, time + 2.0); 
       gain.gain.linearRampToValueAtTime(0, time + duration + 1.0);
   }
 
@@ -115,19 +147,15 @@ class AudioEngine {
       const osc = this.ctx.createOscillator();
       const gain = this.ctx.createGain();
       const filter = this.ctx.createBiquadFilter();
-      
       osc.type = 'triangle'; 
       osc.frequency.setValueAtTime(freq, time);
       osc.detune.value = detune;
-
       filter.type = 'lowpass';
       filter.frequency.setValueAtTime(200, time);
       filter.frequency.linearRampToValueAtTime(800, time + duration/2);
-      
       gain.gain.setValueAtTime(0, time);
       gain.gain.linearRampToValueAtTime(0.15, time + 1.5); 
       gain.gain.linearRampToValueAtTime(0, time + duration); 
-      
       osc.connect(filter);
       filter.connect(gain);
       gain.connect(this.ctx.destination);
@@ -139,24 +167,15 @@ class AudioEngine {
     if (!this.ctx) return;
     const gain = this.ctx.createGain();
     gain.connect(this.ctx.destination);
-    
     const harmonics = [1, 2, 3, 4];
     harmonics.forEach((h, i) => {
         const osc = this.ctx.createOscillator();
         osc.type = i % 2 === 0 ? 'square' : 'sawtooth'; 
         osc.frequency.setValueAtTime(freq * h, time);
-        
-        const filter = this.ctx.createBiquadFilter();
-        filter.type = 'lowpass';
-        filter.frequency.setValueAtTime(2000, time);
-
-        osc.connect(filter);
-        filter.connect(gain);
+        osc.connect(gain);
         osc.start(time);
         osc.stop(time + duration);
     });
-
-    // DRAMATICALLY REDUCED VOLUME
     gain.gain.setValueAtTime(0, time);
     gain.gain.linearRampToValueAtTime(0.02, time + 0.1); 
     gain.gain.setValueAtTime(0.02, time + duration - 0.1);
@@ -184,7 +203,6 @@ class AudioEngine {
       const filter = this.ctx.createBiquadFilter();
       filter.type = 'highpass';
       filter.frequency.value = 8000;
-      // REDUCED VOLUME FURTHER
       const hatVol = 0.01 + (this.density * 0.002); 
       gain.gain.setValueAtTime(hatVol, time);
       gain.gain.exponentialRampToValueAtTime(0.001, time + 0.05);
@@ -216,19 +234,19 @@ class AudioEngine {
     const step = this.beatCount % 16;
     const root = (Math.floor(this.beatCount / 32) % 2 === 0) ? 41.20 : 49.00; 
     
-    // Stage 1: Kick + Bass
+    // Stage 1 (Menu/Base)
     if (step % 4 === 0) this.playDrum(time, 'kick');
     if (step % 4 === 2 || step % 4 === 3) this.playOsc(time, root, 'sawtooth', 0.15, 0.5, 600);
 
-    // Stage 2: Snare
+    // Stage 2
     if (this.density >= 2 && (step === 4 || step === 12)) this.playDrum(time, 'snare');
     
-    // Stage 3: Harmony Bass (5th)
+    // Stage 3
     if (this.density >= 3) {
         if (step % 4 === 0) this.playOsc(time, root * 1.5, 'triangle', 0.2, 0.1, 1000); 
     }
 
-    // Stage 4-5: Energy (Lead)
+    // Stage 4-5
     if (this.density >= 5 && step % 2 === 0) {
        const arp = [root*4, root*6, root*8, root*5];
        this.playOsc(time, arp[(step/2)%4], 'square', 0.1, 0.05, 2000);
@@ -240,16 +258,16 @@ class AudioEngine {
         this.playPad(time, root * 6, 4, 5); 
     }
 
-    // Stage 7: Hats (Subtle)
+    // Stage 7: Hats
     if (this.density >= 7 && step % 2 === 0) this.playDrum(time, 'hat'); 
     
-    // Stage 8: "Aerodynamic" Tapping Solo
+    // Stage 8: "Aerodynamic"
     if (this.density >= 8) {
         const soloNotes = [root*8, root*12, root*10, root*15, root*8, root*6, root*12, root*16];
         this.playOsc(time, soloNotes[step % 8], 'sawtooth', 0.12, 0.1, 4000);
     }
 
-    // Stage 9: Reduced Volume Super Saws
+    // Stage 9: Reduced Super Saws
     if (this.density >= 9) {
         if (step === 0 && this.beatCount % 32 === 0) {
              this.playOsc(time, root * 2, 'sawtooth', 0.08, 0.15, 800);  
@@ -287,7 +305,7 @@ class AudioEngine {
 
 const audio = new AudioEngine();
 
-// --- VISUAL EFFECT v14.0 ---
+// --- VISUAL EFFECT v12.0 ---
 const WormholeEffect = ({ streak, isChronos, isGameOver, failCount }) => {
   const canvasRef = useRef(null);
   const streakRef = useRef(streak); 
@@ -323,7 +341,6 @@ const WormholeEffect = ({ streak, isChronos, isGameOver, failCount }) => {
 
     const render = () => {
       const currentStreak = streakRef.current;
-      
       let baseHue = 210; 
       let sat = '80%'; 
       let light = '70%'; 
@@ -331,7 +348,7 @@ const WormholeEffect = ({ streak, isChronos, isGameOver, failCount }) => {
       let warpFactor = 0; 
       let isNegative = false;
 
-      // Stages 1-12
+      // Visual Progression
       if (currentStreak >= 60) { isNegative = true; speedMult = 6.0; warpFactor = 50; } 
       else if (currentStreak >= 50) { baseHue = 'nebula'; speedMult = 5.5; warpFactor = 45; } 
       else if (currentStreak >= 45) { baseHue = 'rainbow'; speedMult = 5.0; warpFactor = 40; } 
@@ -346,19 +363,15 @@ const WormholeEffect = ({ streak, isChronos, isGameOver, failCount }) => {
       
       if (isChronos && currentStreak < 5) { baseHue = 150; sat = '100%'; }
       
-      // Clear Screen Logic
       let bgStyle = `rgba(10, 15, 30, 0.4)`; 
       if (isNegative) {
-         // Fade from White to Black (Reset)
-         const fade = Math.min(1, (currentStreak - 60) / 10); // 0 to 1 over 10 streak points
-         // White (255,255,255) -> Black (10,15,30)
-         const r = Math.floor(255 * (1-fade) + 10 * fade);
-         const g = Math.floor(255 * (1-fade) + 15 * fade);
+         const fade = Math.min(1, (currentStreak - 60) / 10);
+         const r = Math.floor(220 * (1-fade) + 10 * fade);
+         const g = Math.floor(240 * (1-fade) + 15 * fade);
          const b = Math.floor(255 * (1-fade) + 30 * fade);
          bgStyle = `rgba(${r}, ${g}, ${b}, 0.2)`; 
       }
 
-      const failIntensity = failCount / 10; 
       if (failCount > 0) {
           let alpha = 0;
           if (failCount > 5) {
@@ -372,11 +385,19 @@ const WormholeEffect = ({ streak, isChronos, isGameOver, failCount }) => {
       ctx.fillStyle = bgStyle; 
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-      // Tunnel Gradient
       if (currentStreak > 20 && !isNegative) {
           const grad = ctx.createRadialGradient(canvas.width/2, canvas.height/2, 50, canvas.width/2, canvas.height/2, canvas.width);
           grad.addColorStop(0, "rgba(0,0,0,0)");
           grad.addColorStop(1, "rgba(0,0,0,0.5)");
+          ctx.fillStyle = grad;
+          ctx.fillRect(0,0,canvas.width, canvas.height);
+      }
+
+      if (baseHue === 'nebula') {
+          const grad = ctx.createRadialGradient(canvas.width/2, canvas.height/2, 100, canvas.width/2, canvas.height/2, canvas.width * 0.8);
+          grad.addColorStop(0, "rgba(100, 0, 100, 0)");
+          grad.addColorStop(0.5, "rgba(80, 20, 120, 0.1)");
+          grad.addColorStop(1, "rgba(0, 0, 0, 0)");
           ctx.fillStyle = grad;
           ctx.fillRect(0,0,canvas.width, canvas.height);
       }
@@ -404,10 +425,9 @@ const WormholeEffect = ({ streak, isChronos, isGameOver, failCount }) => {
 
         let starColor;
         if (isNegative) {
-             // Dark stars fading back to light
              const fade = Math.min(1, (currentStreak - 60) / 10);
-             if (fade < 0.5) starColor = `rgba(0, 0, 0, 0.8)`; // Black Stars
-             else starColor = `hsl(210, 80%, 70%)`; // Return to blue
+             if (fade < 0.5) starColor = `rgba(0, 0, 0, 0.8)`; 
+             else starColor = `hsl(210, 80%, 70%)`; 
         } else if (baseHue === 'rainbow') {
             starColor = `hsl(${(star.hueOffset + Date.now() * 0.2) % 360}, 100%, 70%)`;
         } else if (baseHue === 'nebula') {
@@ -450,33 +470,51 @@ const WormholeEffect = ({ streak, isChronos, isGameOver, failCount }) => {
 
 // --- COMPONENTS ---
 
-// --- COMPONENTS ---
+const DifficultySelector = ({ current, onSelect }) => (
+  <div className="flex gap-2 justify-center mb-6 flex-wrap">
+    {[
+      { id: 'relaxed', label: 'RELAXED (10s)', time: 10.0, multi: 0.8, color: 'hover:bg-blue-600' },
+      { id: 'standard', label: 'STANDARD (5s)', time: 5.0, multi: 1.0, color: 'hover:bg-emerald-600' },
+      { id: 'fast', label: 'FAST (3s)', time: 3.0, multi: 1.5, color: 'hover:bg-rose-600' }
+    ].map((diff) => (
+      <button
+        key={diff.id}
+        onClick={() => onSelect(diff.id)}
+        className={`px-4 py-2 rounded-lg font-mono text-sm font-bold border transition-all ${
+          current === diff.id 
+            ? 'bg-slate-100 text-slate-900 border-white' 
+            : `bg-slate-800 text-slate-400 border-slate-700 ${diff.color}`
+        }`}
+      >
+        {diff.label}
+      </button>
+    ))}
+  </div>
+);
 
-const DifficultySelector = ({ current, onSelect }) => {
-  const levels = [
-    { id: 'foundation', label: 'FOUNDATION (L1)', level: 1, color: 'hover:bg-blue-600', border: 'border-blue-500/30' },
-    { id: 'merit', label: 'MERIT (L2)', level: 2, color: 'hover:bg-emerald-600', border: 'border-emerald-500/30' },
-    { id: 'distinction', label: 'DISTINCTION (L3)', level: 3, color: 'hover:bg-rose-600', border: 'border-rose-500/30' }
-  ];
+// LEVEL SELECTOR (NEW)
+const LevelSelector = ({ current, onSelect }) => (
+  <div className="flex gap-2 justify-center mb-6 flex-wrap">
+    {[
+      { id: 1, label: 'FOUNDATION', color: 'hover:bg-cyan-600' },
+      { id: 2, label: 'MERIT', color: 'hover:bg-indigo-600' },
+      { id: 3, label: 'DISTINCTION', color: 'hover:bg-fuchsia-600' }
+    ].map((lvl) => (
+      <button
+        key={lvl.id}
+        onClick={() => onSelect(lvl.id)}
+        className={`px-4 py-2 rounded-lg font-mono text-sm font-bold border transition-all ${
+          current === lvl.id 
+            ? 'bg-slate-100 text-slate-900 border-white' 
+            : `bg-slate-800 text-slate-400 border-slate-700 ${lvl.color}`
+        }`}
+      >
+        {lvl.label} LEVEL
+      </button>
+    ))}
+  </div>
+);
 
-  return (
-    <div className="flex gap-2 justify-center mb-6 flex-wrap">
-      {levels.map((diff) => (
-        <button
-          key={diff.id}
-          onClick={() => onSelect(diff.id)}
-          className={`px-4 py-2 rounded-lg font-mono text-sm font-bold border transition-all duration-200 ${
-            current === diff.id 
-              ? 'bg-slate-100 text-slate-900 border-white scale-105 shadow-lg' 
-              : `bg-slate-800 text-slate-400 border-slate-700 ${diff.color} hover:text-white`
-          }`}
-        >
-          {diff.label}
-        </button>
-      ))}
-    </div>
-  );
-};
 
 const CategoryCard = ({ id, label, icon: Icon, count, onClick, isSpecial }) => (
   <button 
@@ -491,11 +529,6 @@ const CategoryCard = ({ id, label, icon: Icon, count, onClick, isSpecial }) => (
 );
 
 const CategoryGrid = ({ onSelect }) => {
-  const [rawQuestions, setRawQuestions] = useState(null); 
-  
-  // UI needs to be resilient if data isn't loaded yet
-  // For display purposes, we can use hardcoded counts or check state passed down
-  // To simplify, we render the grid directly
   return (
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           <CategoryCard id="business" label="Business Law" icon={Briefcase} count="55" onClick={() => onSelect('business')} />
@@ -512,7 +545,7 @@ const CategoryGrid = ({ onSelect }) => {
           
           <div className="col-span-full grid grid-cols-2 gap-4 mt-4">
               <CategoryCard id="mixed" label="CHAOS MODE (ALL)" icon={Hexagon} count="485" onClick={() => onSelect('mixed')} />
-              <CategoryCard id="timing" label="COUNTING TIME" icon={Clock} count="60+" onClick={() => onSelect('timing')} isSpecial={true} />
+              <CategoryCard id="timing" label="COUNTING TIME" icon={Clock} count="80+" onClick={() => onSelect('timing')} isSpecial={true} />
           </div>
       </div>
   );
@@ -522,7 +555,7 @@ const CategoryGrid = ({ onSelect }) => {
 const Leaderboard = ({ entries }) => (
   <div className="bg-slate-800/80 rounded-xl p-4 border border-slate-700 w-full max-w-md mx-auto h-48 overflow-y-auto custom-scrollbar backdrop-blur-sm">
     <div className="flex items-center gap-2 mb-3 text-yellow-400 font-bold tracking-widest text-sm uppercase sticky top-0 bg-slate-800/90 p-2 backdrop-blur-sm z-10">
-      <Trophy className="w-4 h-4" /> Leaderboard
+      <Trophy className="w-4 h-4" /> Global Agents
     </div>
     <div className="space-y-2">
       {entries.map((entry, idx) => (
@@ -564,6 +597,7 @@ export default function SQEArcade() {
   const [feedback, setFeedback] = useState(null);
   const [isMuted, setIsMuted] = useState(false);
   const [difficulty, setDifficulty] = useState('standard');
+  const [level, setLevel] = useState(2); // NEW: Merit default
   const [leaderboard, setLeaderboard] = useState([]);
   const [user, setUser] = useState(null);
   const [userName, setUserName] = useState('');
@@ -574,7 +608,7 @@ export default function SQEArcade() {
   const [commentary, setCommentary] = useState('');
   const [isChronosMode, setIsChronosMode] = useState(false);
   const [currentCategory, setCurrentCategory] = useState('');
-  const [rawQuestions, setRawQuestions] = useState(null); // LOADED DATA
+  const [rawQuestions, setRawQuestions] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
   const timerRef = useRef(null);
@@ -590,27 +624,20 @@ export default function SQEArcade() {
   const getLimit = () => CONFIG[difficulty].time;
   const getMultiplier = () => CONFIG[difficulty].multi;
 
-// LOAD DATA
+  // LOAD DATA with CATEGORY INJECTION
   useEffect(() => {
     fetch('./questions.json')
       .then(res => res.json())
       .then(data => {
-          // --- FIX START ---
-          // Iterate through keys and inject the category name into every question object
           const processedData = {};
           Object.keys(data).forEach(key => {
-            // Converts "criminalLaw" -> "Criminal Law"
             const categoryLabel = key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase());
-            
             processedData[key] = data[key].map(q => ({
               ...q,
-              category: categoryLabel // Inject the missing tag
+              category: categoryLabel 
             }));
           });
-          
           setRawQuestions(processedData);
-          // --- FIX END ---
-          
           setIsLoading(false);
       })
       .catch(e => {
@@ -649,6 +676,7 @@ export default function SQEArcade() {
         name: userName.trim().slice(0, 15),
         score: score,
         difficulty: difficulty,
+        level: level, // NEW: Save Level
         timestamp: serverTimestamp(),
         userId: user.uid,
         mode: isChronosMode ? 'CHRONOS' : (currentCategory || 'STANDARD')
@@ -656,19 +684,41 @@ export default function SQEArcade() {
     } catch (e) { console.error(e); }
   };
 
+  const unlockAudio = () => {
+      if (!isMuted) {
+        audio.resume();
+        if (!audio.isPlaying) audio.start();
+      }
+  };
+
+  useEffect(() => {
+      const unlock = () => {
+          audio.resume();
+          window.removeEventListener('click', unlock);
+          window.removeEventListener('touchstart', unlock);
+      };
+      window.addEventListener('click', unlock);
+      window.addEventListener('touchstart', unlock);
+      return () => {
+          window.removeEventListener('click', unlock);
+          window.removeEventListener('touchstart', unlock);
+      };
+  }, []);
+
   const selectCategory = (categoryKey) => {
+    unlockAudio();
     selectCategoryWithState(categoryKey, false); 
   };
 
   const selectCategoryWithState = (categoryKey, keepState) => {
-    if (!rawQuestions) return;
-
+    // FIX: FALLBACK TO PREPARED_BANKS IF RAWQUESTIONS IS NULL
+    const sourceData = rawQuestions || PREPARED_BANKS;
+    
     let questions = [];
     setIsChronosMode(false);
     setCurrentCategory(categoryKey.toUpperCase());
 
-    // Helper to flatten
-    const allQs = Object.values(rawQuestions).flat();
+    const allQs = Object.values(sourceData).flat();
 
     if (categoryKey === 'mixed') {
       questions = allQs;
@@ -676,10 +726,25 @@ export default function SQEArcade() {
       setIsChronosMode(true);
       questions = allQs.filter(q => q.isTiming);
     } else {
-      questions = rawQuestions[categoryKey] || [];
+      questions = sourceData[categoryKey] || [];
+    }
+
+    // --- FILTER BY DIFFICULTY LEVEL ---
+    // Level 1: Only difficulty 1 (or undefined)
+    // Level 2: Difficulty 1 & 2
+    // Level 3: All
+    const filteredQuestions = questions.filter(q => {
+        const qDiff = parseInt(q.difficulty || "1");
+        return qDiff <= level;
+    });
+    
+    if (filteredQuestions.length === 0) {
+        // Fallback if filtering removes all (shouldn't happen with good data)
+        setActiveQuestions(shuffleArray(questions)); 
+    } else {
+        setActiveQuestions(shuffleArray(filteredQuestions));
     }
     
-    setActiveQuestions(shuffleArray(questions));
     startSector(keepState); 
   };
 
@@ -736,7 +801,6 @@ export default function SQEArcade() {
     }
   }, [streak, gameState, density]);
 
-  // Continuous Audio Logic for Menu/End
   useEffect(() => {
       if ((gameState === 'menu' || gameState === 'end' || gameState === 'game_over') && !isMuted) {
           if (gameState === 'menu' || gameState === 'game_over') {
@@ -789,7 +853,12 @@ export default function SQEArcade() {
       timeBonus = Math.floor(timeLeft * 1000); 
       const streakBonus = streak * 100;
       const rawScore = 1000 + (timeBonus / 10) + streakBonus;
-      points = Math.floor(rawScore * getMultiplier());
+      
+      // APPLY DIFFICULTY BONUS
+      const qDiff = parseInt(currentQ.difficulty || "1");
+      const diffBonus = (qDiff - 1) * 500; // +0 for Lvl 1, +500 for Lvl 2, +1000 for Lvl 3
+      
+      points = Math.floor((rawScore + diffBonus) * getMultiplier());
       
       setScore(s => s + points);
       setStreak(s => s + 1);
@@ -878,8 +947,8 @@ export default function SQEArcade() {
   };
 
   const hyperJump = () => {
-      if (!rawQuestions) return;
-      const cats = Object.keys(rawQuestions);
+      const sourceData = rawQuestions || PREPARED_BANKS;
+      const cats = Object.keys(sourceData);
       let randomCat = cats[Math.floor(Math.random() * cats.length)];
       selectCategoryWithState(randomCat);
   };
@@ -918,6 +987,8 @@ export default function SQEArcade() {
     if (ratio > 0.3) return 'bg-yellow-400 shadow-[0_0_15px_rgba(250,204,21,0.5)]';
     return 'bg-rose-600 animate-pulse shadow-[0_0_20px_rgba(225,29,72,0.8)]';
   };
+
+  const timingCount = (rawQuestions ? Object.values(rawQuestions) : Object.values(PREPARED_BANKS)).flat().filter(q => q.isTiming).length;
 
   return (
     <div className={`min-h-screen bg-slate-950 text-white font-sans flex flex-col items-center justify-center relative overflow-hidden selection:bg-rose-500 transition-all duration-300 ${timeLeft < 1.5 && gameState === 'playing' ? 'shadow-[inset_0_0_100px_rgba(220,38,38,0.5)]' : ''}`}>
@@ -976,6 +1047,7 @@ export default function SQEArcade() {
             ) : (
                 <>
                     <DifficultySelector current={difficulty} onSelect={setDifficulty} />
+                    <LevelSelector current={level} onSelect={setLevel} />
                     <CategoryGrid onSelect={selectCategory} />
                 </>
             )}
