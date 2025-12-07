@@ -551,7 +551,8 @@ const CategoryGrid = ({ onSelect, data }) => {
           <CategoryCard id="dispute" label="Dispute Resolution" icon={Gavel} count={getCount('dispute')} onClick={() => onSelect('dispute')} />
           <CategoryCard id="contract" label="Contract Law" icon={ScrollText} count={getCount('contract')} onClick={() => onSelect('contract')} />
           <CategoryCard id="tort" label="Tort Law" icon={AlertTriangle} count={getCount('tort')} onClick={() => onSelect('tort')} />
-          <CategoryCard id="public" label="Public Law" icon={Landmark} count={getCount('public')} onClick={() => onSelect('public')} />
+          <CategoryCard id="public_law_1" label="Public Law I" icon={Landmark} count={getCount('public_law_1')} onClick={() => onSelect('public_law_1')} />
+          <CategoryCard id="public_law_2" label="Public Law II" icon={Landmark} count={getCount('public_law_2')} onClick={() => onSelect('public_law_2')} />
           <CategoryCard id="criminalLaw" label="Criminal Law" icon={Scale} count={getCount('criminalLaw')} onClick={() => onSelect('criminalLaw')} />
           <CategoryCard id="criminalPractice" label="Criminal Practice" icon={AlertTriangle} count={getCount('criminalPractice')} onClick={() => onSelect('criminalPractice')} />
           <CategoryCard id="landLaw" label="Land Law" icon={Home} count={getCount('landLaw')} onClick={() => onSelect('landLaw')} />
