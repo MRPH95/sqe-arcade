@@ -1,17 +1,15 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { Play, Pause, RefreshCw, Check, X, Volume2, VolumeX, Zap, Trophy, Award, Hexagon, Briefcase, Gavel, Home, ScrollText, AlertTriangle, Tag, FastForward, Eye, BrainCircuit, MessageSquare, Clock, ShieldAlert, ArrowRight, Activity, Scale, Landmark, BookOpen, Shield } from 'lucide-react';
+import { Play, Pause, RefreshCw, Check, X, Volume2, VolumeX, Zap, Trophy, Award, Hexagon, Briefcase, Gavel, Home, ScrollText, AlertTriangle, Tag, FastForward, Eye, BrainCircuit, MessageSquare, Clock, ShieldAlert, ArrowRight, Activity, Scale, Landmark, BookOpen, Shield, Layers } from 'lucide-react';
 import { initializeApp } from 'firebase/app';
 import { getAuth, signInAnonymously, onAuthStateChanged, signInWithCustomToken } from 'firebase/auth';
 import { getFirestore, collection, addDoc, query, orderBy, limit, onSnapshot, serverTimestamp } from 'firebase/firestore';
 import { db, auth } from './firebase';
 
-// --- Add these small, safe fallbacks right after your imports ---
-// Questions from public/questions.json are the priority; keep PREPARED_BANKS as a fallback.
-const PREPARED_BANKS = {};            // fallback bank (empty by default). You can populate this with any hardcoded questions if you want local fallback data.
-const appId = 'sqe-arcade';          // Firestore path id used by collection(..., appId, ...). Adjust if you prefer a different id.
-// --------------------------------------------------------------
+// --- Safe Fallbacks ---
+const PREPARED_BANKS = {};            
+const appId = 'sqe-arcade';          
 
-// --- AUDIO ENGINE v22.0 (Lazy Load Fix) ---
+// --- AUDIO ENGINE v22.0 ---
 class AudioEngine {
   constructor() {
     this.ctx = null;
@@ -24,7 +22,6 @@ class AudioEngine {
     this.distortionNode = null;
   }
 
-  // Initialize only on user interaction
   init() {
     if (!this.ctx) {
       this.ctx = new (window.AudioContext || window.webkitAudioContext)();
@@ -464,7 +461,7 @@ const DifficultySelector = ({ current, onSelect }) => (
       <button
         key={diff.id}
         onClick={() => onSelect(diff.id)}
-        className={`px-4 py-2 rounded-lg font-mono text-sm font-bold border transition-all ${
+        className={`px-3 py-2 md:px-4 md:py-2 rounded-lg font-mono text-xs md:text-sm font-bold border transition-all ${
           current === diff.id 
             ? 'bg-slate-100 text-slate-900 border-white' 
             : `bg-slate-800 text-slate-400 border-slate-700 ${diff.color}`
@@ -486,7 +483,7 @@ const LevelSelector = ({ current, onSelect }) => (
       <button
         key={lvl.id}
         onClick={() => onSelect(lvl.id)}
-        className={`px-4 py-2 rounded-lg font-mono text-sm font-bold border transition-all ${
+        className={`px-3 py-2 md:px-4 md:py-2 rounded-lg font-mono text-xs md:text-sm font-bold border transition-all ${
           current === lvl.id 
             ? 'bg-slate-100 text-slate-900 border-white' 
             : `bg-slate-800 text-slate-400 border-slate-700 ${lvl.color}`
@@ -501,25 +498,31 @@ const LevelSelector = ({ current, onSelect }) => (
 const CategoryCard = ({ id, label, icon: Icon, count, onClick, isSpecial }) => (
   <button 
     onClick={onClick}
-    className={`relative group border p-6 rounded-xl transition-all duration-200 hover:-translate-y-1 text-left w-full overflow-hidden ${isSpecial ? 'bg-slate-900 border-emerald-500 hover:bg-emerald-950/30' : 'bg-slate-800 hover:bg-slate-700 border-slate-700 hover:border-emerald-400'}`}
+    className={`relative group border p-4 md:p-6 rounded-xl transition-all duration-200 hover:-translate-y-1 text-left w-full overflow-hidden ${isSpecial ? 'bg-slate-900 border-emerald-500 hover:bg-emerald-950/30' : 'bg-slate-800 hover:bg-slate-700 border-slate-700 hover:border-emerald-400'}`}
   >
     <div className={`absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 rounded-full blur-xl transition-all ${isSpecial ? 'bg-emerald-500/30 group-hover:bg-emerald-400/50' : 'bg-gradient-to-br from-emerald-500/20 to-transparent group-hover:bg-emerald-500/30'}`}></div>
-    <Icon className={`w-8 h-8 mb-3 group-hover:scale-110 transition-transform ${isSpecial ? 'text-emerald-300' : 'text-emerald-400'}`} />
-    <h3 className={`text-xl font-bold mb-1 ${isSpecial ? 'text-emerald-200' : 'text-white'}`}>{label}</h3>
-    <p className="text-sm text-slate-400 font-mono">{count} Questions</p>
+    <Icon className={`w-6 h-6 md:w-8 md:h-8 mb-2 md:mb-3 group-hover:scale-110 transition-transform ${isSpecial ? 'text-emerald-300' : 'text-emerald-400'}`} />
+    <h3 className={`text-sm md:text-xl font-bold mb-1 ${isSpecial ? 'text-emerald-200' : 'text-white'}`}>{label}</h3>
+    <p className="text-xs md:text-sm text-slate-400 font-mono">{count} Questions</p>
   </button>
 );
 
-const CategoryGrid = ({ onSelect, data }) => {
+const CategoryGrid = ({ onSelect, data, level }) => {
+  // Updated getCount to filter by level
   const getCount = (key) => {
       if (!data) return "0";
-      if (key === 'mixed') return Object.values(data).flat().length;
-      if (key === 'timing') return Object.values(data).flat().filter(q => q.isTiming).length;
-      return data[key]?.length || 0;
+      let qs = [];
+      if (key === 'mixed') qs = Object.values(data).flat();
+      else if (key === 'timing') qs = Object.values(data).flat().filter(q => q.isTiming);
+      else qs = data[key] || [];
+
+      // Filter by level
+      const count = qs.filter(q => (parseInt(q.difficulty || 1) <= level)).length;
+      return count;
   };
 
   return (
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
           <CategoryCard id="business" label="Business Law" icon={Briefcase} count={getCount('business')} onClick={() => onSelect('business')} />
           <CategoryCard id="dispute" label="Dispute Resolution" icon={Gavel} count={getCount('dispute')} onClick={() => onSelect('dispute')} />
           <CategoryCard id="contract" label="Contract Law" icon={ScrollText} count={getCount('contract')} onClick={() => onSelect('contract')} />
@@ -533,7 +536,7 @@ const CategoryGrid = ({ onSelect, data }) => {
           <CategoryCard id="willsAdmin" label="Wills & Admin" icon={ScrollText} count={getCount('willsAdmin')} onClick={() => onSelect('willsAdmin')} />
           <CategoryCard id="trusts" label="Trusts & Equity" icon={BrainCircuit} count={getCount('trusts')} onClick={() => onSelect('trusts')} />
           
-          <div className="col-span-full grid grid-cols-2 gap-4 mt-4">
+          <div className="col-span-full grid grid-cols-2 gap-3 md:gap-4 mt-2 md:mt-4">
               <CategoryCard id="mixed" label="CHAOS MODE (ALL)" icon={Hexagon} count={getCount('mixed')} onClick={() => onSelect('mixed')} isSpecial={true} />
               <CategoryCard id="timing" label="COUNTING TIME" icon={Clock} count={getCount('timing')} onClick={() => onSelect('timing')} isSpecial={true} />
           </div>
@@ -573,6 +576,14 @@ const shuffleArray = (array) => {
     [arr[i], arr[j]] = [arr[j], arr[i]];
   }
   return arr;
+};
+
+// Helper for Question Difficulty Display
+const getLevelInfo = (level) => {
+    const l = parseInt(level || 1);
+    if (l === 3) return { label: 'DST', color: 'text-fuchsia-400 border-fuchsia-500', full: 'DISTINCTION' };
+    if (l === 2) return { label: 'MRT', color: 'text-indigo-400 border-indigo-500', full: 'MERIT' };
+    return { label: 'FND', color: 'text-cyan-400 border-cyan-500', full: 'FOUNDATION' };
 };
 
 export default function SQEArcade() {
@@ -724,6 +735,7 @@ export default function SQEArcade() {
     });
     
     if (filteredQuestions.length === 0) {
+        // Fallback if no questions meet criteria, though with counts on buttons this shouldn't happen often
         setActiveQuestions(shuffleArray(questions)); 
     } else {
         setActiveQuestions(shuffleArray(filteredQuestions));
@@ -977,51 +989,51 @@ export default function SQEArcade() {
       <WormholeEffect streak={gameState === 'playing' ? streak : 0} isChronos={isChronosMode} isGameOver={gameState === 'game_over'} failCount={consecutiveWrongs} />
       
       {/* HUD */}
-      <div className="fixed top-0 left-0 right-0 p-4 flex justify-between items-center z-30 bg-slate-900/80 backdrop-blur-md border-b border-white/10">
+      <div className="fixed top-0 left-0 right-0 p-2 md:p-4 flex justify-between items-center z-30 bg-slate-900/80 backdrop-blur-md border-b border-white/10">
         <div className="flex items-center gap-2">
-          <Zap className={`w-6 h-6 ${gameState === 'playing' ? 'text-yellow-400 animate-pulse' : 'text-slate-500'}`} />
-          <span className="font-mono font-bold text-xl tracking-tighter italic bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent hidden sm:inline">
+          <Zap className={`w-4 h-4 md:w-6 md:h-6 ${gameState === 'playing' ? 'text-yellow-400 animate-pulse' : 'text-slate-500'}`} />
+          <span className="font-mono font-bold text-lg md:text-xl tracking-tighter italic bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent hidden sm:inline">
             SQE ARCADE
           </span>
         </div>
-        <div className="flex items-center gap-4 md:gap-8">
+        <div className="flex items-center gap-2 md:gap-8">
            {gameState === 'playing' && (
              <div className="flex flex-col items-end">
-                <div className="flex gap-4">
+                <div className="flex gap-2 md:gap-4">
                     <div className="hidden sm:flex flex-col items-end">
-                        <span className="text-[10px] text-slate-400 uppercase tracking-widest">Streak</span>
-                        <div className={`text-xl font-black ${streak > 4 ? 'text-cyan-400 animate-pulse' : 'text-slate-500'}`}>{streak}x</div>
+                        <span className="text-[8px] md:text-[10px] text-slate-400 uppercase tracking-widest">Streak</span>
+                        <div className={`text-base md:text-xl font-black ${streak > 4 ? 'text-cyan-400 animate-pulse' : 'text-slate-500'}`}>{streak}x</div>
                     </div>
                     <div className="flex flex-col items-end">
-                        <span className="text-[10px] text-slate-400 uppercase tracking-widest">Integrity</span>
+                        <span className="text-[8px] md:text-[10px] text-slate-400 uppercase tracking-widest">Integrity</span>
                         <div className="flex gap-0.5 mt-1 bg-slate-800 p-1 rounded">
                             {Array.from({ length: 10 }).map((_, i) => (
-                                <div key={i} className={`w-1.5 h-3 rounded-sm transition-all duration-300 ${i < (10 - consecutiveWrongs) ? 'bg-emerald-500 shadow-[0_0_5px_rgba(16,185,129,0.5)]' : 'bg-red-900/50'}`} />
+                                <div key={i} className={`w-1 md:w-1.5 h-2 md:h-3 rounded-sm transition-all duration-300 ${i < (10 - consecutiveWrongs) ? 'bg-emerald-500 shadow-[0_0_5px_rgba(16,185,129,0.5)]' : 'bg-red-900/50'}`} />
                             ))}
                         </div>
                     </div>
                 </div>
              </div>
            )}
-          <div className="font-mono text-xl font-black text-white tabular-nums tracking-widest">
+          <div className="font-mono text-lg md:text-xl font-black text-white tabular-nums tracking-widest">
             {score.toLocaleString()}
           </div>
           <button onClick={toggleMute} className="hover:text-white text-slate-400 transition-colors">
-            {isMuted ? <VolumeX size={20} /> : <Volume2 size={20} className="text-cyan-400" />}
+            {isMuted ? <VolumeX size={16} /> : <Volume2 size={16} className="text-cyan-400" />}
           </button>
         </div>
       </div>
 
-      <div className="w-full max-w-5xl px-6 z-20 mt-16 pb-10">
+      <div className="w-full max-w-5xl px-4 md:px-6 z-20 mt-12 md:mt-16 pb-10">
         
         {/* MENU */}
         {gameState === 'menu' && (
-          <div className="space-y-8 animate-in fade-in zoom-in duration-500 pt-8">
-            <div className="text-center mb-8">
-              <h1 className="text-6xl md:text-8xl font-black italic tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white to-slate-400 drop-shadow-2xl">
+          <div className="space-y-6 md:space-y-8 animate-in fade-in zoom-in duration-500 pt-4 md:pt-8">
+            <div className="text-center mb-6 md:mb-8">
+              <h1 className="text-4xl md:text-8xl font-black italic tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white to-slate-400 drop-shadow-2xl">
                 SQE ARCADE
               </h1>
-              <p className="text-slate-400 text-lg mt-4 font-mono">SELECT PROTOCOL</p>
+              <p className="text-slate-400 text-sm md:text-lg mt-2 md:mt-4 font-mono">SELECT PROTOCOL</p>
             </div>
             {isLoading ? (
                 <div className="text-center text-emerald-400 animate-pulse font-mono">INITIALIZING MAINFRAME...</div>
@@ -1029,14 +1041,15 @@ export default function SQEArcade() {
                 <>
                     <DifficultySelector current={difficulty} onSelect={setDifficulty} />
                     <LevelSelector current={level} onSelect={setLevel} />
-                    {/* PASS THE DATA PROP HERE */}
+                    {/* PASS THE DATA PROP and LEVEL HERE */}
                     <CategoryGrid 
                     onSelect={selectCategory} 
                     data={rawQuestions || PREPARED_BANKS} 
+                    level={level}
                     />
                 </>
             )}
-            <div className="pt-8">
+            <div className="pt-4 md:pt-8">
                <Leaderboard entries={leaderboard} />
             </div>
           </div>
@@ -1045,34 +1058,34 @@ export default function SQEArcade() {
         {/* PAUSE */}
         {gameState === 'paused' && (
           <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-slate-900/80 backdrop-blur-xl animate-in fade-in">
-            <h2 className="text-5xl font-black text-white mb-8 tracking-widest">MISSION PAUSED</h2>
-            <div className="grid grid-cols-3 gap-4 mb-8 w-full max-w-md">
+            <h2 className="text-3xl md:text-5xl font-black text-white mb-8 tracking-widest">MISSION PAUSED</h2>
+            <div className="grid grid-cols-3 gap-4 mb-8 w-full max-w-md px-4">
               <div className="bg-emerald-900/50 p-4 rounded-lg border border-emerald-500/30 text-center">
-                <Check className="w-8 h-8 text-emerald-400 mx-auto mb-2" />
-                <div className="text-2xl font-bold">{gameStats.correct}</div>
+                <Check className="w-6 h-6 md:w-8 md:h-8 text-emerald-400 mx-auto mb-2" />
+                <div className="text-xl md:text-2xl font-bold">{gameStats.correct}</div>
               </div>
               <div className="bg-rose-900/50 p-4 rounded-lg border border-rose-500/30 text-center">
-                <X className="w-8 h-8 text-rose-400 mx-auto mb-2" />
-                <div className="text-2xl font-bold">{gameStats.wrong}</div>
+                <X className="w-6 h-6 md:w-8 md:h-8 text-rose-400 mx-auto mb-2" />
+                <div className="text-xl md:text-2xl font-bold">{gameStats.wrong}</div>
               </div>
               <div className="bg-slate-800 p-4 rounded-lg border border-slate-600 text-center">
-                <Eye className="w-8 h-8 text-cyan-400 mx-auto mb-2" />
-                <div className="text-2xl font-bold">{activeQuestions.length - currentQIndex}</div>
+                <Eye className="w-6 h-6 md:w-8 md:h-8 text-cyan-400 mx-auto mb-2" />
+                <div className="text-xl md:text-2xl font-bold">{activeQuestions.length - currentQIndex}</div>
               </div>
             </div>
-            <button onClick={togglePause} className="px-12 py-4 bg-white text-slate-900 font-bold rounded hover:bg-slate-200 text-xl tracking-widest">RESUME</button>
+            <button onClick={togglePause} className="px-8 md:px-12 py-3 md:py-4 bg-white text-slate-900 font-bold rounded hover:bg-slate-200 text-lg md:text-xl tracking-widest">RESUME</button>
             <button onClick={() => setGameState('menu')} className="mt-6 text-slate-400 hover:text-white text-sm">ABORT MISSION</button>
           </div>
         )}
 
         {/* REVIEW */}
         {gameState === 'review' && (
-          <div className="fixed inset-0 z-[60] flex flex-col items-center justify-center bg-slate-950 pt-24 pb-10 px-6 animate-in slide-in-from-bottom">
+          <div className="fixed inset-0 z-[60] flex flex-col items-center justify-center bg-slate-950 pt-24 pb-10 px-4 md:px-6 animate-in slide-in-from-bottom">
             <div className="w-full max-w-2xl h-full flex flex-col">
               <div className="text-center mb-6 shrink-0">
-                <BrainCircuit className="w-12 h-12 text-cyan-400 mx-auto mb-2" />
-                <h2 className="text-3xl font-black text-white uppercase tracking-widest">Tactical Review</h2>
-                <p className="text-slate-400">Consolidate knowledge before proceeding.</p>
+                <BrainCircuit className="w-8 h-8 md:w-12 md:h-12 text-cyan-400 mx-auto mb-2" />
+                <h2 className="text-2xl md:text-3xl font-black text-white uppercase tracking-widest">Tactical Review</h2>
+                <p className="text-slate-400 text-sm">Consolidate knowledge before proceeding.</p>
               </div>
               <div className="flex-1 overflow-y-auto custom-scrollbar bg-slate-900/50 rounded-xl border border-slate-700 p-4 space-y-3 mb-6">
                 {batchReview.map((item, idx) => (
@@ -1086,7 +1099,7 @@ export default function SQEArcade() {
                     }}
                   >
                     <div className="flex justify-between items-start gap-4">
-                      <p className="font-medium text-slate-200 text-sm">{item.q}</p>
+                      <p className="font-medium text-slate-200 text-xs md:text-sm">{item.q}</p>
                       {item.isCorrect ? <Check size={16} className="text-emerald-500 shrink-0" /> : <X size={16} className="text-rose-500 shrink-0" />}
                     </div>
                     {!item.isCorrect && (
@@ -1101,7 +1114,7 @@ export default function SQEArcade() {
                     }
                 `}</style>
               </div>
-              <button onClick={continueFromReview} className="w-full py-4 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-black text-xl rounded-lg flex items-center justify-center gap-2 transition-transform hover:scale-[1.02] shrink-0 shadow-lg shadow-cyan-500/20">
+              <button onClick={continueFromReview} className="w-full py-3 md:py-4 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-black text-lg md:text-xl rounded-lg flex items-center justify-center gap-2 transition-transform hover:scale-[1.02] shrink-0 shadow-lg shadow-cyan-500/20">
                 CONTINUE RUN <FastForward fill="currentColor" />
               </button>
             </div>
@@ -1110,43 +1123,55 @@ export default function SQEArcade() {
 
         {/* GAMEPLAY */}
         {(gameState === 'playing' || gameState === 'feedback' || gameState === 'game_over_anim') && (
-          <div className="w-full relative max-w-3xl mx-auto pt-10">
-            <div className="flex flex-col items-center mb-6">
-               <div className={`flex items-center gap-3 px-6 py-3 rounded-full border shadow-[0_0_20px_rgba(16,185,129,0.2)] backdrop-blur-md transform hover:scale-105 transition-transform ${isChronosMode ? 'bg-emerald-900/90 border-emerald-400' : 'bg-slate-900/90 border-emerald-500/50'}`}>
-                  {isChronosMode ? <Clock className="text-white w-5 h-5 animate-pulse" /> : <Tag className="text-emerald-400 w-5 h-5" />}
-                  <span className="text-lg font-black text-white uppercase tracking-widest">
-                    {isChronosMode ? 'COUNTING TIME' : activeQuestions[currentQIndex]?.category}
-                  </span>
+          <div className="w-full relative max-w-3xl mx-auto pt-6 md:pt-10">
+            <div className="flex flex-col items-center mb-4 md:mb-6">
+               <div className="flex gap-2">
+                 {/* Category Badge */}
+                 <div className={`flex items-center gap-2 px-4 py-2 rounded-full border shadow-[0_0_20px_rgba(16,185,129,0.2)] backdrop-blur-md transform hover:scale-105 transition-transform ${isChronosMode ? 'bg-emerald-900/90 border-emerald-400' : 'bg-slate-900/90 border-emerald-500/50'}`}>
+                    {isChronosMode ? <Clock className="text-white w-4 h-4 md:w-5 md:h-5 animate-pulse" /> : <Tag className="text-emerald-400 w-4 h-4 md:w-5 md:h-5" />}
+                    <span className="text-xs md:text-lg font-black text-white uppercase tracking-widest">
+                      {isChronosMode ? 'COUNTING TIME' : activeQuestions[currentQIndex]?.category}
+                    </span>
+                 </div>
+                 
+                 {/* Level Badge */}
+                 <div className={`flex items-center gap-1 px-3 py-2 rounded-full border backdrop-blur-md bg-slate-900/90 ${getLevelInfo(activeQuestions[currentQIndex]?.difficulty).color}`}>
+                    <Layers className="w-3 h-3 md:w-4 md:h-4" />
+                    <span className="text-xs md:text-base font-black uppercase tracking-widest">
+                        {getLevelInfo(activeQuestions[currentQIndex]?.difficulty).label}
+                    </span>
+                 </div>
                </div>
+
                <div className="mt-2 h-6 flex items-center justify-center">
                   {commentary && (
-                    <span className="text-sm font-mono font-bold text-cyan-400 tracking-widest animate-pulse flex items-center gap-2">
+                    <span className="text-xs md:text-sm font-mono font-bold text-cyan-400 tracking-widest animate-pulse flex items-center gap-2">
                        <MessageSquare size={12} /> {commentary}
                     </span>
                   )}
                </div>
             </div>
 
-            <div className="w-full h-4 bg-slate-800 mb-8 overflow-hidden relative border border-slate-700 shadow-inner rounded-full">
+            <div className="w-full h-3 md:h-4 bg-slate-800 mb-6 md:mb-8 overflow-hidden relative border border-slate-700 shadow-inner rounded-full">
                <div className="absolute left-1/3 top-0 bottom-0 w-0.5 bg-slate-900/50 z-10"></div>
                <div className="absolute left-2/3 top-0 bottom-0 w-0.5 bg-slate-900/50 z-10"></div>
               <div className={`h-full transition-all duration-75 ease-linear ${getTimerColor()}`} style={{ width: `${(timeLeft / getLimit()) * 100}%` }} />
             </div>
 
-            <div className="absolute -top-12 right-0">
+            <div className="absolute -top-10 md:-top-12 right-0">
                <button onClick={togglePause} className="text-slate-500 hover:text-white transition-colors flex items-center gap-1 text-xs font-mono uppercase tracking-wider">
                  <Pause size={14} /> Pause
                </button>
             </div>
 
-            <div className={`relative min-h-[400px] flex items-center justify-center transition-all duration-300 ${gameState === 'paused' ? 'blur-xl opacity-50' : ''}`}>
+            <div className={`relative min-h-[300px] md:min-h-[400px] flex items-center justify-center transition-all duration-300 ${gameState === 'paused' ? 'blur-xl opacity-50' : ''}`}>
               
               {/* FEEDBACK */}
               {gameState === 'feedback' && (
                 <div className={`absolute inset-0 z-40 flex flex-col items-center justify-center rounded-2xl backdrop-blur-xl border-4 shadow-2xl animate-in zoom-in-95 duration-200 ${feedback.correct ? 'bg-emerald-950/90 border-emerald-500' : 'bg-rose-950/90 border-rose-500'}`}>
                   {feedback.correct ? (
                     <div className="text-center">
-                      <div className="text-emerald-400 font-black text-7xl mb-1 animate-bounce">+{feedback.pointsEarned}</div>
+                      <div className="text-emerald-400 font-black text-5xl md:text-7xl mb-1 animate-bounce">+{feedback.pointsEarned}</div>
                       <div className="flex gap-4 justify-center text-xs font-mono uppercase tracking-widest mb-6">
                         <span className="text-emerald-200 bg-emerald-900/50 px-2 py-1 rounded">Time: +{feedback.msBonus}ms</span>
                         <span className="text-cyan-200 bg-cyan-900/50 px-2 py-1 rounded">Streak: {streak}x</span>
@@ -1154,20 +1179,20 @@ export default function SQEArcade() {
                     </div>
                   ) : (
                      <div className="text-center mb-6">
-                      <div className="text-rose-500 font-black text-7xl mb-2">DAMAGE</div>
+                      <div className="text-rose-500 font-black text-5xl md:text-7xl mb-2">DAMAGE</div>
                       {/* Show Health Remaining */}
                       <div className="flex justify-center gap-1 mt-2">
                          {Array.from({length: 10}).map((_, i) => (
-                             <div key={i} className={`w-3 h-3 rounded-full ${i < (10 - feedback.failCount) ? 'bg-emerald-500' : 'bg-rose-900'}`} />
+                             <div key={i} className={`w-2 h-2 md:w-3 md:h-3 rounded-full ${i < (10 - feedback.failCount) ? 'bg-emerald-500' : 'bg-rose-900'}`} />
                          ))}
                       </div>
-                      <div className="text-rose-300 text-sm font-mono uppercase tracking-widest mt-4">Integrity: {Math.max(0, 10 - feedback.failCount)} / 10</div>
+                      <div className="text-rose-300 text-xs md:text-sm font-mono uppercase tracking-widest mt-4">Integrity: {Math.max(0, 10 - feedback.failCount)} / 10</div>
                     </div>
                   )}
                   
-                  <div className="px-8 py-6 bg-black/60 rounded-xl max-w-xl mx-4 border border-white/10 backdrop-blur-md">
-                    <h3 className="text-white/50 text-xs font-bold uppercase mb-2 tracking-widest">Legal Authority</h3>
-                    <p className="text-white text-xl font-medium leading-relaxed drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)]">{feedback.explanation}</p>
+                  <div className="px-6 md:px-8 py-6 bg-black/60 rounded-xl max-w-xl mx-4 border border-white/10 backdrop-blur-md">
+                    <h3 className="text-white/50 text-[10px] md:text-xs font-bold uppercase mb-2 tracking-widest">Legal Authority</h3>
+                    <p className="text-white text-base md:text-xl font-medium leading-relaxed drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)]">{feedback.explanation}</p>
                   </div>
                 </div>
               )}
@@ -1175,45 +1200,45 @@ export default function SQEArcade() {
               {/* GAME OVER ANIM */}
               {gameState === 'game_over_anim' && (
                   <div className="absolute inset-0 z-50 flex flex-col items-center justify-center bg-rose-950/90 backdrop-blur-xl animate-in fade-in zoom-in duration-300 border-4 border-rose-600 rounded-2xl">
-                      <ShieldAlert className="w-32 h-32 text-rose-500 animate-pulse mb-6" />
-                      <h2 className="text-6xl font-black text-white tracking-tighter mb-2">SYSTEM FAILURE</h2>
+                      <ShieldAlert className="w-20 h-20 md:w-32 md:h-32 text-rose-500 animate-pulse mb-6" />
+                      <h2 className="text-4xl md:text-6xl font-black text-white tracking-tighter mb-2">SYSTEM FAILURE</h2>
                       <p className="text-rose-300 font-mono tracking-widest uppercase">Integrity Critical</p>
                   </div>
               )}
 
               {/* Question */}
-              <div className="text-center space-y-8 w-full">
+              <div className="text-center space-y-4 md:space-y-8 w-full">
                  <div className="flex justify-between items-center border-b border-cyan-500/20 pb-2">
-                   <div className="text-xs font-mono text-cyan-500 tracking-widest uppercase">
+                   <div className="text-[10px] md:text-xs font-mono text-cyan-500 tracking-widest uppercase">
                       Q {currentQIndex + 1} / {activeQuestions.length}
                    </div>
-                   <div className="text-xs font-mono text-slate-400 uppercase tracking-widest">
+                   <div className="text-[10px] md:text-xs font-mono text-slate-400 uppercase tracking-widest">
                       Batch: {(currentQIndex % 10) + 1} / 10
                    </div>
                  </div>
                  
-                 <div className="relative min-h-[200px] flex items-center justify-center py-6 px-4">
+                 <div className="relative min-h-[150px] md:min-h-[200px] flex items-center justify-center py-4 md:py-6 px-2 md:px-4">
                     {/* FROSTED GLASS CONTAINER - LIGHTER */}
                     <div className="absolute inset-0 bg-slate-950/30 backdrop-blur-xl rounded-2xl border border-white/10 -z-10 shadow-2xl"></div>
-                    <h2 className="text-3xl md:text-5xl font-bold leading-tight tracking-tight text-white drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)] select-none">
+                    <h2 className="text-xl md:text-5xl font-bold leading-tight tracking-tight text-white drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)] select-none">
                       {activeQuestions[currentQIndex]?.q}
                     </h2>
                  </div>
                 
                 {gameState === 'playing' && (
-                  <div className="grid grid-cols-2 gap-6 pt-4">
+                  <div className="grid grid-cols-2 gap-3 md:gap-6 pt-2 md:pt-4">
                     <button 
                       onClick={() => handleAnswer(true)}
-                      className="group relative bg-slate-800/80 hover:bg-emerald-600 transition-all duration-200 border-b-4 border-slate-950 hover:border-emerald-800 active:border-b-0 active:translate-y-1 p-8 rounded-xl overflow-hidden backdrop-blur-sm"
+                      className="group relative bg-slate-800/80 hover:bg-emerald-600 transition-all duration-200 border-b-4 border-slate-950 hover:border-emerald-800 active:border-b-0 active:translate-y-1 p-4 md:p-8 rounded-xl overflow-hidden backdrop-blur-sm"
                     >
-                      <span className="block text-4xl font-black mb-1 text-slate-300 group-hover:text-white italic drop-shadow-md">TRUE</span>
+                      <span className="block text-2xl md:text-4xl font-black mb-1 text-slate-300 group-hover:text-white italic drop-shadow-md">TRUE</span>
                     </button>
                     
                     <button 
                       onClick={() => handleAnswer(false)}
-                      className="group relative bg-slate-800/80 hover:bg-rose-600 transition-all duration-200 border-b-4 border-slate-950 hover:border-rose-800 active:border-b-0 active:translate-y-1 p-8 rounded-xl overflow-hidden backdrop-blur-sm"
+                      className="group relative bg-slate-800/80 hover:bg-rose-600 transition-all duration-200 border-b-4 border-slate-950 hover:border-rose-800 active:border-b-0 active:translate-y-1 p-4 md:p-8 rounded-xl overflow-hidden backdrop-blur-sm"
                     >
-                      <span className="block text-4xl font-black mb-1 text-slate-300 group-hover:text-white italic drop-shadow-md">FALSE</span>
+                      <span className="block text-2xl md:text-4xl font-black mb-1 text-slate-300 group-hover:text-white italic drop-shadow-md">FALSE</span>
                     </button>
                   </div>
                 )}
@@ -1224,33 +1249,38 @@ export default function SQEArcade() {
 
         {/* END (Success or Fail) */}
         {(gameState === 'end' || gameState === 'game_over') && (
-          <div className={`text-center space-y-8 animate-in slide-in-from-bottom duration-500 max-w-6xl mx-auto p-8 rounded-2xl border backdrop-blur-xl ${gameState === 'game_over' ? 'bg-rose-950/50 border-rose-500/50' : 'bg-slate-900/90 border-white/10'}`}>
-             {gameState === 'game_over' ? <ShieldAlert className="w-20 h-20 text-rose-500 mx-auto" /> : <Trophy className="w-20 h-20 text-yellow-400 mx-auto drop-shadow-glow" />}
+          <div className={`text-center space-y-6 md:space-y-8 animate-in slide-in-from-bottom duration-500 max-w-6xl mx-auto p-6 md:p-8 rounded-2xl border backdrop-blur-xl ${gameState === 'game_over' ? 'bg-rose-950/50 border-rose-500/50' : 'bg-slate-900/90 border-white/10'}`}>
+             {gameState === 'game_over' ? <ShieldAlert className="w-16 h-16 md:w-20 md:h-20 text-rose-500 mx-auto" /> : <Trophy className="w-16 h-16 md:w-20 md:h-20 text-yellow-400 mx-auto drop-shadow-glow" />}
             
             <div>
-              <h2 className="text-4xl font-black text-white italic tracking-tighter mb-2">{gameState === 'end' ? 'SECTOR CLEARED' : 'MISSION FAILED'}</h2>
-              <p className="text-slate-400">Final Audit Report</p>
+              <h2 className="text-3xl md:text-4xl font-black text-white italic tracking-tighter mb-2">{gameState === 'end' ? 'SECTOR CLEARED' : 'MISSION FAILED'}</h2>
+              <p className="text-slate-400 text-sm">Final Audit Report</p>
             </div>
             
             <div className="grid grid-cols-2 gap-4 max-w-xl mx-auto mb-8">
                <div className="bg-slate-800 p-4 rounded-lg">
                   <div className="text-slate-400 text-xs uppercase">Score</div>
-                  <div className="text-3xl font-black text-emerald-400">{score.toLocaleString()}</div>
+                  <div className="text-2xl md:text-3xl font-black text-emerald-400">{score.toLocaleString()}</div>
                </div>
                <div className="bg-slate-800 p-4 rounded-lg">
                   <div className="text-slate-400 text-xs uppercase">Max Streak</div>
-                  <div className="text-3xl font-black text-cyan-400">{streak}</div>
+                  <div className="text-2xl md:text-3xl font-black text-cyan-400">{streak}</div>
                </div>
             </div>
 
             {/* SECTOR COMPLETE OPTIONS */}
             {gameState === 'end' && (
                 <div className="flex flex-col gap-6 animate-in fade-in zoom-in duration-500">
-                    <div className="flex items-center justify-center gap-2 text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-400">
+                    <div className="flex items-center justify-center gap-2 text-lg md:text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-400">
                         <Activity className="animate-pulse text-fuchsia-400" /> 
                         INITIATE HYPERJUMP: SELECT DESTINATION
                     </div>
-                    <CategoryGrid onSelect={(cat) => selectCategoryWithState(cat, true)} data={rawQuestions || PREPARED_BANKS} />
+                    {/* PASS LEVEL TO HYPERJUMP GRID TOO */}
+                    <CategoryGrid 
+                      onSelect={(cat) => selectCategoryWithState(cat, true)} 
+                      data={rawQuestions || PREPARED_BANKS} 
+                      level={level}
+                    />
                 </div>
             )}
 
@@ -1270,9 +1300,9 @@ export default function SQEArcade() {
                <div className="text-emerald-400 font-mono text-sm mt-8">UPLOAD COMPLETE</div>
             )}
 
-            <div className="flex justify-center gap-4 mt-8">
-              <button onClick={() => { startSector(false); }} className="px-8 py-3 bg-white text-slate-900 font-bold rounded-lg hover:bg-slate-200">RETRY SECTOR</button>
-              <button onClick={() => setGameState('menu')} className="px-8 py-3 bg-slate-800 text-slate-300 font-bold rounded-lg hover:bg-slate-700">MENU</button>
+            <div className="flex flex-col md:flex-row justify-center gap-4 mt-8">
+              <button onClick={() => { startSector(false); }} className="w-full md:w-auto px-8 py-3 bg-white text-slate-900 font-bold rounded-lg hover:bg-slate-200">RETRY SECTOR</button>
+              <button onClick={() => setGameState('menu')} className="w-full md:w-auto px-8 py-3 bg-slate-800 text-slate-300 font-bold rounded-lg hover:bg-slate-700">MENU</button>
             </div>
           </div>
         )}
