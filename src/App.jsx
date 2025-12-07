@@ -680,7 +680,7 @@ export default function SQEArcade() {
         level: level, 
         timestamp: serverTimestamp(),
         userId: user.uid,
-        mode: isChronosMode ? 'CHRONOS' : (currentCategory || 'STANDARD')
+        mode: isChronosMode ? 'COUNTING TIME' : (currentCategory || 'STANDARD')
       });
     } catch (e) { console.error(e); }
   };
