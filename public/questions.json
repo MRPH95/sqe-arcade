@@ -54,7 +54,4207 @@
     { "q": "Accounts Filing (Public): 6 months.", "a": true, "exp": "From accounting reference date.", "isTiming": true },
     { "q": "Register Charge (MR01): 21 days.", "a": true, "exp": "From creation of charge.", "isTiming": true },
     { "q": "Special Resolution filing: 15 days.", "a": true, "exp": "To Companies House.", "isTiming": true },
-    { "q": "VAT Return deadline: 1 month 7 days.", "a": true, "exp": "From end of period.", "isTiming": true }
+    { "q": "VAT Return deadline: 1 month 7 days.", "a": true, "exp": "From end of period.", "isTiming": true },
+    {
+      "q": "Failure to disclose (s.330 POCA) applies to work outside the regulated sector.",
+      "a": false,
+      "exp": "The s.330 offence applies only to information received in the course of business in the regulated sector.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A solicitor acts in the 'regulated sector' when buying a business entity for a client.",
+      "a": true,
+      "exp": "Schedule 9 POCA includes participating in the buying and selling of business entities.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Tipping off (s.333A) applies if a solicitor discloses a money laundering investigation to a client.",
+      "a": true,
+      "exp": "It is an offence to disclose that a report has been made if it is likely to prejudice an investigation.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A solicitor is liable for s.328 if they merely suspect an arrangement facilitates using criminal property.",
+      "a": true,
+      "exp": "The mens rea for s.328 is knowledge or suspicion.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Authorised disclosure under s.338 must always be made before the prohibited act.",
+      "a": false,
+      "exp": "Disclosure can be made during or after the act if there is a good reason for the delay (s.338(3)).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Enhanced CDD is optional for clients established in high-risk third countries.",
+      "a": false,
+      "exp": "Regulation 33(1)(b) MLR 2017 makes Enhanced CDD mandatory for high-risk third countries.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A solicitor can rely on a third party's CDD without remaining liable for failures.",
+      "a": false,
+      "exp": "Regulation 39; the solicitor remains liable for any failure to comply with CDD requirements.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Occasional transactions of 500 Euros require standard CDD.",
+      "a": false,
+      "exp": "Regulation 27(1)(b) triggers CDD only for occasional transactions exceeding 1,000 Euros.",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "Simplified CDD is permitted if a transaction presents a low risk of money laundering.",
+      "a": true,
+      "exp": "Regulation 37 allows simplified CDD where the risk of money laundering is determined to be low.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Ongoing monitoring of a business relationship includes scrutinizing source of funds.",
+      "a": true,
+      "exp": "Regulation 28(11) requires scrutiny of transactions including source of funds where necessary.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Advising a client on the merits of buying specific shares is a regulated activity.",
+      "a": true,
+      "exp": "Article 53(1) RAO; advising on the merits of a specified investment is a specified activity.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Generic advice on the benefits of investing in shares requires FCA authorisation.",
+      "a": false,
+      "exp": "Generic advice is not a specified activity; the advice must relate to a specific investment.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The Article 70 RAO exclusion applies to the sale of 40% of a company's voting shares.",
+      "a": false,
+      "exp": "Article 70 requires 50% or more of voting shares, or acquisition of day-to-day control.",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "A firm can use the s.327 FSMA exemption if it receives and keeps a commission.",
+      "a": false,
+      "exp": "s.327(3) requires the firm to account to the client for any commission received.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Arranging the sale of shares is excluded if it is a 'necessary part' of legal services.",
+      "a": true,
+      "exp": "Article 67 RAO excludes activities that are a necessary part of other professional services.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A solicitor acting as a nominee shareholder is carrying out a regulated activity.",
+      "a": true,
+      "exp": "Safeguarding and administering investments (Article 40 RAO) is a specified activity.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "To rely on s.327 FSMA, the activity must arise out of or be complementary to legal services.",
+      "a": true,
+      "exp": "SRA Scope Rule 2 imposes this condition for the 'incidental' exemption.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Breaching the General Prohibition under s.19 FSMA is a criminal offence.",
+      "a": true,
+      "exp": "s.23 FSMA makes it an offence to carry on regulated activities without authorisation or exemption.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The 'Is/Is Not' test applies to identifying the beneficial owner of a company.",
+      "a": false,
+      "exp": "The 'Is/Is Not' test relates to discretionary trusts; beneficial ownership uses the 25% rule.",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "An acquisition of day-to-day control of a company falls within the Article 70 exclusion.",
+      "a": true,
+      "exp": "Article 70(1)(c) RAO covers transactions for the acquisition of day-to-day control.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A solicitor can transfer client funds to a charity if the client is missing.",
+      "a": true,
+      "exp": "SRA Accounts Rules allow payment to charity for small balances if client cannot be traced.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "If a client asks to use the client account like a bank, the solicitor must refuse.",
+      "a": true,
+      "exp": "Rule 3.3 SRA Accounts Rules prohibits using the client account as a banking facility.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The threshold for a 'material interest' in a close company is 5%.",
+      "a": true,
+      "exp": "For tax purposes regarding loans to participators, material interest is >5%.",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "A solicitor must verify a client's identity even if they have acted for them for 10 years.",
+      "a": true,
+      "exp": "Regulation 28(11) requires ongoing monitoring and keeping documents up to date.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Accepting £2,000 in cash from a client for fees is a high-risk money laundering indicator.",
+      "a": true,
+      "exp": "Large cash payments are a classic warning sign of money laundering.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "POCA stands for Proceeds of Crime Act.",
+      "a": true,
+      "exp": "The primary UK anti-money laundering legislation.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "MLR stands for Money Laundering Regulations.",
+      "a": true,
+      "exp": "Refers to the Money Laundering, Terrorist Financing and Transfer of Funds Regulations 2017.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "CDD stands for Client Due Diligence.",
+      "a": false,
+      "exp": "It stands for Customer Due Diligence (Regulation 27 MLR).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "MLRO stands for Money Laundering Reporting Officer.",
+      "a": true,
+      "exp": "The nominated officer responsible for disclosures.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "NCA stands for National Crime Agency.",
+      "a": true,
+      "exp": "The body to whom SARs (Suspicious Activity Reports) are sent.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "PEP stands for Politically Exposed Person.",
+      "a": true,
+      "exp": "Individuals entrusted with prominent public functions.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "FSMA stands for Financial Services and Markets Act.",
+      "a": true,
+      "exp": "The key statute governing financial services in the UK.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "FCA stands for Financial Conduct Authority.",
+      "a": true,
+      "exp": "One of the two main regulators for financial services.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "PRA stands for Prudential Regulation Authority.",
+      "a": true,
+      "exp": "The other main regulator for financial services.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "RAO stands for Regulated Activities Order.",
+      "a": true,
+      "exp": "Secondary legislation defining specified investments and activities.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "SRA stands for Solicitors Regulation Authority.",
+      "a": true,
+      "exp": "The regulatory body for solicitors in England and Wales.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "FATF stands for Financial Action Task Force.",
+      "a": true,
+      "exp": "Inter-governmental body dealing with money laundering.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "SAR stands for Suspicious Activity Report.",
+      "a": true,
+      "exp": "The report made to the NCA regarding money laundering suspicions.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Placement is the first stage of money laundering.",
+      "a": true,
+      "exp": "Introducing illegal proceeds into the financial system.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Layering involves moving funds to distance them from the source.",
+      "a": true,
+      "exp": "The second stage of money laundering.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Integration involves re-entering funds into the economy as legitimate.",
+      "a": true,
+      "exp": "The final stage of money laundering.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A 'Warning Sign' is an indicator of potential money laundering.",
+      "a": true,
+      "exp": "Also known as a red flag.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "S.327 POCA creates the offence of concealing criminal property.",
+      "a": true,
+      "exp": "One of the principal money laundering offences.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "S.328 POCA creates the offence of entering into an arrangement.",
+      "a": true,
+      "exp": "Involves facilitating the use or control of criminal property.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "S.329 POCA creates the offence of acquiring criminal property.",
+      "a": true,
+      "exp": "Also covers using or possessing criminal property.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Criminal Property constitutes a person's benefit from criminal conduct.",
+      "a": true,
+      "exp": "Defined in s.340 POCA 2002.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Subjective suspicion is sufficient for a s.330 failure to disclose offence.",
+      "a": false,
+      "exp": "S.330 includes an objective test: 'reasonable grounds for knowing or suspecting'.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The 'General Prohibition' prevents carrying on regulated activities without authorisation.",
+      "a": true,
+      "exp": "s.19 FSMA 2000.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Shares are a 'Specified Investment' under the RAO.",
+      "a": true,
+      "exp": "Article 76 RAO lists shares as a specified investment.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Land is a 'Specified Investment' under the RAO.",
+      "a": false,
+      "exp": "Direct ownership of land is not a specified investment (though mortgages are).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A new partner is automatically liable for debts incurred before they joined.",
+      "a": false,
+      "exp": "s.17(1) PA 1890; a new partner does not become liable for pre-existing debts.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A retiring partner remains liable for debts incurred while they were a partner.",
+      "a": true,
+      "exp": "s.17(2) PA 1890; retirement does not automatically discharge existing liabilities.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Notice in the London Gazette protects a retiring partner from liability to existing customers.",
+      "a": false,
+      "exp": "s.36(1) PA 1890; actual notice is required for those who dealt with the firm before.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A non-partner can be liable for firm debts if they are 'held out' as a partner.",
+      "a": true,
+      "exp": "s.14 PA 1890; liability arises if credit is given on the faith of the representation.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A partner binds the firm to any contract they sign, regardless of the business type.",
+      "a": false,
+      "exp": "s.5 PA 1890; the act must be for carrying on business of the kind carried on by the firm.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A firm is bound by an unauthorized act if the third party did not know of the restriction.",
+      "a": true,
+      "exp": "s.5 PA 1890; firm is bound unless the third party knew of the lack of authority or did not believe them to be a partner.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Partners are jointly and severally liable for contractual debts of the firm.",
+      "a": false,
+      "exp": "s.9 PA 1890; partners are 'jointly' liable for debts/contracts (Joint & Several applies to torts s.10/12).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Introducing a new partner requires a majority vote under the PA 1890 default rules.",
+      "a": false,
+      "exp": "s.24(7) PA 1890; unanimous consent of all existing partners is required.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A majority of partners can expel a partner for misconduct under the PA 1890.",
+      "a": false,
+      "exp": "s.25 PA 1890; no majority can expel a partner unless the power is expressly conferred by agreement.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A partnership at will can be dissolved by notice at any time.",
+      "a": true,
+      "exp": "s.26 PA 1890; any partner can determine the partnership by giving notice.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Property bought with partnership money is deemed to be partnership property.",
+      "a": true,
+      "exp": "s.21 PA 1890; unless a contrary intention appears.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Partners contributing unequal capital are entitled to unequal profits under PA 1890.",
+      "a": false,
+      "exp": "s.24(1) PA 1890; partners share capital and profits equally unless agreed otherwise.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A partner managing the business is entitled to a salary under default rules.",
+      "a": false,
+      "exp": "s.24(6) PA 1890; no partner is entitled to remuneration for acting in the partnership business.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Changing the nature of the partnership business requires unanimous consent.",
+      "a": true,
+      "exp": "s.24(8) PA 1890; ordinary matters are majority decided, but nature changes require unanimity.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "An LLP member is considered an employee of the LLP for employment law purposes.",
+      "a": false,
+      "exp": "s.4(4) LLPA 2000; a member is not employed by the LLP unless they would be if it were a partnership.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "An LLP must have at least two designated members.",
+      "a": true,
+      "exp": "s.8 LLPA 2000; required for administrative compliance (filing, signing accounts).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "LLP members share capital and profits equally by default.",
+      "a": true,
+      "exp": "Reg 7(1) LLP Regulations 2001; default provision in absence of agreement.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "An LLP member can be expelled by majority vote under the default regulations.",
+      "a": false,
+      "exp": "Reg 8 LLP Regulations 2001; no implied power to expel.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Money withdrawn by LLP members within 2 years of winding up can be clawed back.",
+      "a": true,
+      "exp": "s.214A Insolvency Act 1986; applies specifically to LLPs.",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "An LLP is taxed as a body corporate.",
+      "a": false,
+      "exp": "LLPs are tax transparent; members are taxed as partners.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A written partnership agreement overrides s.24 PA 1890 default provisions.",
+      "a": true,
+      "exp": "s.19 PA 1890; rights and duties may be varied by consent (express or implied).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Death of a partner automatically dissolves a general partnership subject to agreement.",
+      "a": true,
+      "exp": "s.33 PA 1890; dissolution occurs unless there is an agreement to the contrary.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A partner carrying on a competing business must account for profits.",
+      "a": true,
+      "exp": "s.30 PA 1890; duty not to compete without consent.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Ordinary decision making in an LLP requires unanimity under default rules.",
+      "a": false,
+      "exp": "Reg 7(6) LLP Regulations 2001; ordinary matters are decided by a majority.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "An LLP needs to file a confirmation statement annually.",
+      "a": true,
+      "exp": "LLPs are subject to the continuing registration regime like companies.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A general partnership is a separate legal entity.",
+      "a": false,
+      "exp": "It is a relationship between persons, not a separate entity (unlike an LLP).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "An LLP is a body corporate.",
+      "a": true,
+      "exp": "s.1(2) LLPA 2000; it has legal personality separate from its members.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Partners in a general partnership have unlimited personal liability.",
+      "a": true,
+      "exp": "They are personally liable for the firm's debts.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "LLP members have limited liability.",
+      "a": true,
+      "exp": "s.1(4) LLPA 2000; liability is limited to their capital contribution (usually).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "The term 'Firm' refers to the partners collectively.",
+      "a": true,
+      "exp": "s.4 PA 1890; persons entering partnership are called the firm.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "PA 1890 stands for Partnership Act 1890.",
+      "a": true,
+      "exp": "The primary legislation governing traditional partnerships.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "LLPA 2000 stands for Limited Liability Partnerships Act 2000.",
+      "a": true,
+      "exp": "The primary legislation creating LLPs.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A 'sleeping partner' is not liable for firm debts.",
+      "a": false,
+      "exp": "All partners, active or sleeping, are liable for firm debts.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Joint and several' liability allows a creditor to sue one partner for the whole debt.",
+      "a": true,
+      "exp": "Applies to torts (s.10/12 PA 1890); creditor can pursue any partner for full amount.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Tax transparency' means the entity itself pays no tax.",
+      "a": true,
+      "exp": "Profits flow through to the partners who are taxed individually.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Form LL IN01 is used to incorporate an LLP.",
+      "a": true,
+      "exp": "The prescribed form sent to Companies House.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A 'Designated Member' has administrative responsibilities in an LLP.",
+      "a": true,
+      "exp": "Includes signing accounts and filing returns.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Partners owe fiduciary duties to each other.",
+      "a": true,
+      "exp": "Duty of good faith, honesty, and disclosure (s.28-30).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Holding out' creates liability for non-partners.",
+      "a": true,
+      "exp": "s.14 PA 1890; representing oneself as a partner creates liability.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Dissolution' brings a partnership to an end.",
+      "a": true,
+      "exp": "The legal termination of the partnership relationship.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A 'Partnership at Will' has no fixed duration.",
+      "a": true,
+      "exp": "s.26 PA 1890; can be terminated by notice at any time.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Novation' transfers liability from an outgoing to a new partner.",
+      "a": true,
+      "exp": "A tripartite agreement between creditor, old partner, and new partner (s.17(3)).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Indemnity' protects a partner from personal loss incurred for the firm.",
+      "a": true,
+      "exp": "s.24(2) PA 1890; firm must indemnify partners for proper payments.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Capital' is the money invested by partners.",
+      "a": true,
+      "exp": "Distinct from income/profits.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Drawings' are advance payments of profit.",
+      "a": true,
+      "exp": "Partners take drawings against expected profits.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Partners have a duty to render true accounts.",
+      "a": true,
+      "exp": "s.28 PA 1890; duty to provide full information.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "LLP members have a duty not to compete under default rules.",
+      "a": true,
+      "exp": "Reg 7(9) LLP Regulations 2001; must account for profits from competing business.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A general partnership can create a floating charge.",
+      "a": false,
+      "exp": "Only companies and LLPs can grant floating charges (unincorporated partnerships cannot).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "An LLP must file annual accounts at Companies House.",
+      "a": true,
+      "exp": "Unlike general partnerships, LLPs are subject to public filing requirements.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "An LLP needs a PSC Register.",
+      "a": true,
+      "exp": "LLPs must maintain a register of People with Significant Control.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A contract made before incorporation binds the company automatically.",
+      "a": false,
+      "exp": "s.51 CA 2006; the promoter is personally liable unless agreed otherwise.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Private companies can pass a written resolution to remove a director.",
+      "a": false,
+      "exp": "s.288(2)(a) CA 2006; removal of a director cannot be done by written resolution.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Short notice for a GM requires 90% consent for a private company with Model Articles.",
+      "a": true,
+      "exp": "s.307(5) CA 2006; majority in number holding 90% of shares (unless articles say higher).",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "On a show of hands, a shareholder with 51% of shares has one vote.",
+      "a": true,
+      "exp": "s.284(2) CA 2006; one vote per person present, regardless of shareholding.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Shareholders holding 3% of voting capital can require directors to call a GM.",
+      "a": false,
+      "exp": "s.303 CA 2006; the threshold is 5% of paid-up voting share capital.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "A special resolution requires a majority of exactly 75%.",
+      "a": false,
+      "exp": "s.283 CA 2006; requires a majority of 'not less than 75%'.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "The quorum for a valid board meeting under Model Articles is one director.",
+      "a": false,
+      "exp": "MA 11(2); the quorum is two (unless fixed otherwise or a sole director company).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "To change a company name, form NM01 must be filed.",
+      "a": true,
+      "exp": "Standard form for notice of change of name by resolution.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A company must file a copy of every ordinary resolution at Companies House.",
+      "a": false,
+      "exp": "s.29/30 CA 2006; generally only Special Resolutions must be filed (with exceptions).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "14 clear days' notice means the day of the meeting is included.",
+      "a": false,
+      "exp": "s.360 CA 2006; excludes day of notice and day of meeting.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "If a written resolution receives 51% approval, it passes immediately.",
+      "a": true,
+      "exp": "s.296 CA 2006; passes when the required majority is reached.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A shelf company conversion requires transferring the subscriber share.",
+      "a": true,
+      "exp": "The share held by the formation agent must be transferred to the client.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Under s.33, a member can sue the company to enforce outsider rights.",
+      "a": false,
+      "exp": "Eley v Positive Government Security; only membership rights are enforceable.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A company secretary is mandatory for a private limited company.",
+      "a": false,
+      "exp": "s.270 CA 2006; optional for private companies, mandatory for public.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Directors can change the company's articles without shareholder approval.",
+      "a": false,
+      "exp": "s.21 CA 2006; articles are amended by Special Resolution of shareholders.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Abstaining on a written resolution counts as a vote against.",
+      "a": true,
+      "exp": "Majority is of 'total voting rights of eligible members', not just those responding.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A poll vote can be demanded by a member holding 10% of voting rights.",
+      "a": true,
+      "exp": "s.321 / MA 44; 10% is the statutory threshold to demand a poll.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "If notice is emailed, it is deemed served 24 hours later.",
+      "a": false,
+      "exp": "s.1147 CA 2006; deemed service is 48 hours after sending.",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "A company must have an 'appropriate email address' registered.",
+      "a": true,
+      "exp": "s.9(5)(aa) CA 2006 (added by ECCTA 2023); mandatory requirement.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Directors must register for PAYE only if the company has 5 employees.",
+      "a": false,
+      "exp": "Must register if any employee is paid above the NI Lower Earnings Limit.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A PO Box can be used as a registered office address.",
+      "a": false,
+      "exp": "s.86 CA 2006; must be an 'appropriate address' where delivery can be acknowledged.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A written resolution lapses after 28 days by default.",
+      "a": true,
+      "exp": "s.297 CA 2006; 28 days unless articles specify otherwise.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "The first accounting reference period ends on the anniversary of incorporation.",
+      "a": false,
+      "exp": "s.391(4); ends on the last day of the month of the anniversary.",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "Companies House form AP01 is used to terminate a director's appointment.",
+      "a": false,
+      "exp": "TM01 is for termination; AP01 is for appointment.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Corporate shareholders must appoint a representative to vote at meetings.",
+      "a": true,
+      "exp": "s.323 CA 2006; allows appointment of corporate representatives.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Memorandum of Association acts as the company's rulebook.",
+      "a": false,
+      "exp": "The Articles are the rulebook; the Memorandum is a historic snapshot.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Articles of Association form a contract between company and members.",
+      "a": true,
+      "exp": "s.33 CA 2006; creates a statutory contract.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Model Articles are the default constitution for new companies.",
+      "a": true,
+      "exp": "s.20 CA 2006; apply if no other articles registered.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Form IN01 is the application to register a company.",
+      "a": true,
+      "exp": "The prescribed form for incorporation.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Certificate of Incorporation proves the company exists.",
+      "a": true,
+      "exp": "Conclusive evidence of registration (s.15 CA 2006).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Promoter is the person who sets up the company.",
+      "a": true,
+      "exp": "Takes procedural steps for formation.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Board Resolution is a decision of the directors.",
+      "a": true,
+      "exp": "Taken at a board meeting.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Ordinary Resolution requires a simple majority (>50%).",
+      "a": true,
+      "exp": "s.282 CA 2006.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Special Resolution requires at least 75%.",
+      "a": true,
+      "exp": "s.283 CA 2006.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Quorum is the minimum number of people to hold a meeting.",
+      "a": true,
+      "exp": "Business cannot be validly transacted without it.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Poll vote is one vote per share.",
+      "a": true,
+      "exp": "s.284 CA 2006; reflects financial stake.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Show of hands is one vote per person.",
+      "a": true,
+      "exp": "s.284 CA 2006; default voting method at GM.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Written Resolution is for private companies only.",
+      "a": true,
+      "exp": "s.288 CA 2006.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "General Meeting is a meeting of shareholders.",
+      "a": true,
+      "exp": "Where shareholder resolutions are passed.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Proxy is a person appointed to vote for a shareholder.",
+      "a": true,
+      "exp": "s.324 CA 2006.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Ultra Vires means acting beyond capacity.",
+      "a": true,
+      "exp": "Historic doctrine; now restricted by s.31 CA 2006.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Entrenched articles require more than a special resolution to change.",
+      "a": true,
+      "exp": "s.22 CA 2006; specific conditions for amendment.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "PSC Register records People with Significant Control.",
+      "a": true,
+      "exp": "Transparency requirement (s.790 CA 2006).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Statement of Capital details the shares issued.",
+      "a": true,
+      "exp": "s.10 CA 2006 requirement on formation.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "s.172 duty is to promote the success of the company.",
+      "a": true,
+      "exp": "Primary director duty.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Subscriber is a first shareholder of the company.",
+      "a": true,
+      "exp": "Signatory to the Memorandum.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Company Seal is mandatory for executing documents.",
+      "a": false,
+      "exp": "Optional; documents can be signed by directors.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Shareholder Agreement is a private contract.",
+      "a": true,
+      "exp": "Between shareholders; supplements articles.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Chairman usually has a casting vote under Model Articles.",
+      "a": true,
+      "exp": "MA 13; to resolve deadlocks at board level.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Companies House is the UK registrar of companies.",
+      "a": true,
+      "exp": "Maintains the public register.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A shadow director is exempt from the duties in the Companies Act 2006.",
+      "a": false,
+      "exp": "s.251 CA 2006; duties generally apply to shadow directors.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Shareholders can remove a director using a written resolution.",
+      "a": false,
+      "exp": "s.288(2)(a) CA 2006; removal must be at a meeting to allow the director to speak.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Special Notice of 28 days is required to remove a director.",
+      "a": true,
+      "exp": "s.168(2) CA 2006; notice given to the company at least 28 days before the meeting.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "The board must place a removal resolution on the agenda if Special Notice is received.",
+      "a": false,
+      "exp": "Pedley v Inland Waterways; directors are not bound to place it on the agenda.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A Bushell v Faith clause gives weighted voting rights to a director-shareholder on removal.",
+      "a": true,
+      "exp": "Valid mechanism to protect directors from removal by simple majority.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Under s.188, a service contract of exactly 2 years requires shareholder approval.",
+      "a": false,
+      "exp": "s.188 CA 2006; approval is required for a guaranteed term of *more* than 2 years.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "A wholly-owned subsidiary needs shareholder approval for a director's long-term service contract.",
+      "a": false,
+      "exp": "s.188(6)(b) CA 2006; wholly-owned subsidiaries are exempt.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "If s.188 is breached, the entire service contract is void.",
+      "a": false,
+      "exp": "s.189(a) CA 2006; only the specific provision is void; it becomes terminable on reasonable notice.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A non-cash asset worth £90,000 is always a Substantial Property Transaction.",
+      "a": false,
+      "exp": "s.191 CA 2006; if between £5k-£100k, it is only substantial if >10% of Net Asset Value.",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "A director's brother is a 'connected person' for SPT purposes.",
+      "a": false,
+      "exp": "s.253 CA 2006; siblings are NOT connected persons.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A director's step-child is a 'connected person' for SPT purposes.",
+      "a": true,
+      "exp": "s.253(2)(c) CA 2006; children and step-children are connected.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "An SPT entered into without approval is voidable by the company.",
+      "a": true,
+      "exp": "s.195(2) CA 2006; voidable unless restitution is impossible or third rights intervene.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Private companies (standalone) need shareholder approval to lend to a director.",
+      "a": true,
+      "exp": "s.197 CA 2006; loan to a director requires Ordinary Resolution.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Private companies (standalone) need shareholder approval to lend to a director's spouse.",
+      "a": false,
+      "exp": "s.200 CA 2006 (connected persons) applies to Public companies or their associates.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Expenditure on company business up to £50,000 is exempt from s.197 approval.",
+      "a": true,
+      "exp": "s.204 CA 2006; exception for business expenditure.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "s.172 requires a director to act in a way that *objectively* promotes success.",
+      "a": false,
+      "exp": "s.172 CA 2006; the test is subjective ('act in the way *he considers*').",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A director can rely on the s.175(3) exception for a transaction *with* the company.",
+      "a": true,
+      "exp": "s.175(3) CA 2006; conflicts arising from transactions with the company fall under s.177, not s.175.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Directors of a private company can authorize a s.175 conflict.",
+      "a": true,
+      "exp": "s.175(5) CA 2006; provided the constitution does not invalidate it.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Under Model Articles, an interested director can vote on the transaction.",
+      "a": false,
+      "exp": "MA 14; interested directors cannot vote or count in the quorum.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Shareholders can ratify a director's negligence by ordinary resolution.",
+      "a": true,
+      "exp": "s.239 CA 2006; the director and connected members cannot vote.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A director must declare an interest in a proposed transaction to the shareholders.",
+      "a": false,
+      "exp": "s.177 CA 2006; the declaration is made to the *other directors*.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Accepting a benefit from a third party (s.176) can be authorized by the board.",
+      "a": false,
+      "exp": "s.176 CA 2006; requires shareholder approval (no board authorization provision).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A director acts in breach of s.171 if they use powers for an improper purpose.",
+      "a": true,
+      "exp": "s.171(b) CA 2006; duty to exercise powers only for the purposes conferred.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "s.174 duty of care is judged purely by an objective standard.",
+      "a": false,
+      "exp": "s.174 CA 2006; dual test (objective minimum + subjective upgrade for special skill).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A director's resignation must be accepted by the board to be effective.",
+      "a": false,
+      "exp": "MA 18(f); resignation takes effect in accordance with its terms upon notification.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "De jure directors are validly appointed at law.",
+      "a": true,
+      "exp": "Standard appointed directors .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Minimum age for a director is 16.",
+      "a": true,
+      "exp": "s.157 CA 2006 .",
+      "isTiming": true,
+      "difficulty": 1
+    },
+    {
+      "q": "Public companies must have at least two directors.",
+      "a": true,
+      "exp": "s.154 CA 2006 .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Private companies must have a company secretary.",
+      "a": false,
+      "exp": "Optional under s.270 CA 2006 .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Shadow directors are professional advisors.",
+      "a": false,
+      "exp": "s.251(2) CA 2006; advice given in professional capacity excluded .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "s.171 is the duty to act within powers.",
+      "a": true,
+      "exp": "General duty .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "s.172 is the duty to promote the success of the company.",
+      "a": true,
+      "exp": "General duty .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "s.173 is the duty to exercise independent judgment.",
+      "a": true,
+      "exp": "General duty .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "s.174 is the duty to exercise reasonable care, skill and diligence.",
+      "a": true,
+      "exp": "General duty .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "s.175 is the duty to avoid conflicts of interest.",
+      "a": true,
+      "exp": "General duty .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "s.176 is the duty not to accept benefits from third parties.",
+      "a": true,
+      "exp": "General duty .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "s.177 is the duty to declare an interest in a proposed transaction.",
+      "a": true,
+      "exp": "General duty .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A Substantial Property Transaction involves a non-cash asset >£100,000.",
+      "a": true,
+      "exp": "s.191 CA 2006 .",
+      "isTiming": true,
+      "difficulty": 1
+    },
+    {
+      "q": "Asset value >£5,000 can be Substantial if >10% NAV.",
+      "a": true,
+      "exp": "s.191 CA 2006 .",
+      "isTiming": true,
+      "difficulty": 1
+    },
+    {
+      "q": "A guarantee given for a director is a regulated transaction under s.197.",
+      "a": true,
+      "exp": "Requires shareholder approval .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Quasi-loans involve the company paying a sum the director must reimburse.",
+      "a": true,
+      "exp": "s.199 CA 2006 .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Credit transactions involve supplying goods/services on credit.",
+      "a": true,
+      "exp": "s.202 CA 2006 .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "s.168 CA 2006 requires an Ordinary Resolution to remove a director.",
+      "a": true,
+      "exp": "Standard removal procedure .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Special Notice must be given to the company 28 days before the GM.",
+      "a": true,
+      "exp": "s.312 CA 2006 .",
+      "isTiming": true,
+      "difficulty": 1
+    },
+    {
+      "q": "Directors' residential addresses are open to public inspection.",
+      "a": false,
+      "exp": "Kept on a private register; service address is public .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Form AP01 is used to appoint a director.",
+      "a": true,
+      "exp": "Companies House form .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Form TM01 is used to terminate a director.",
+      "a": true,
+      "exp": "Companies House form .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Long-term service contracts require Ordinary Resolution approval.",
+      "a": true,
+      "exp": "s.188 CA 2006 .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "The 'Guaranteed Term' excludes notice periods.",
+      "a": false,
+      "exp": "It includes the notice period (s.188(3)(b)) .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Ratification of a breach of duty requires a Special Resolution.",
+      "a": false,
+      "exp": "Ordinary Resolution (s.239) .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Shareholders can remove a director using the written resolution procedure.",
+      "a": false,
+      "exp": "s.288(2)(a) CA 2006; removal must be at a meeting to allow the director to make representations .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A director who is also a shareholder can vote on their own removal resolution.",
+      "a": true,
+      "exp": "Directors act in their capacity as shareholders and are entitled to vote in their own interest .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The board must place a removal resolution on the agenda if they receive Special Notice.",
+      "a": false,
+      "exp": "Pedley v Inland Waterways Association; directors are not bound to place it on the agenda .",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Shareholders holding 4% of voting capital can require directors to call a GM.",
+      "a": false,
+      "exp": "s.303(1) CA 2006; the threshold is at least 5% of the paid-up voting share capital .",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "If directors accept a s.303 request, they must hold the GM within 28 days.",
+      "a": false,
+      "exp": "s.304(1) CA 2006; they must *call* it within 21 days, to be *held* within 28 days of the notice .",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "Shareholders calling a GM under s.305 can recover expenses from the company.",
+      "a": true,
+      "exp": "s.305(6) CA 2006; the company then recoups this from the defaulting directors' fees .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A Bushell v Faith clause requires a special resolution to remove a director.",
+      "a": false,
+      "exp": "It gives weighted voting rights on an ordinary resolution, making it harder to pass .",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A member can enforce a right to be the company solicitor under s.33 CA 2006.",
+      "a": false,
+      "exp": "Eley v Positive Government Security; outsider rights are not enforceable under s.33 .",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A Shareholders' Agreement can validly require unanimity to remove a director.",
+      "a": true,
+      "exp": "It creates personal obligations between shareholders, though it cannot fetter the company's statutory powers .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A derivative claim can be brought in respect of a proposed act.",
+      "a": true,
+      "exp": "s.260(3) CA 2006; covers actual or proposed acts or omissions .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A new shareholder cannot bring a derivative claim for a breach occurring before they joined.",
+      "a": false,
+      "exp": "s.260(4) CA 2006; it is immaterial whether the cause of action arose before they became a member .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The court must refuse a derivative claim if the act has been validly ratified.",
+      "a": true,
+      "exp": "s.263(2)(c) CA 2006; ratification is an absolute bar to continuing the claim .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Unfair prejudice (s.994) requires proof of bad faith by the directors.",
+      "a": false,
+      "exp": "There is no requirement to show bad faith or conscious intent .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A minority discount is usually applied to shares in a quasi-partnership valuation.",
+      "a": false,
+      "exp": "Courts generally do not impose a discount for minority shareholdings in quasi-partnerships .",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Negligent management is automatic grounds for an unfair prejudice petition.",
+      "a": false,
+      "exp": "Only if it amounts to serious/repeated mismanagement putting the share value at risk .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A s.303 request must state the text of the resolution.",
+      "a": false,
+      "exp": "It must state the general nature of business; including the text is optional but recommended .",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Directors must be given notice of a removal resolution even if it's not put on the agenda.",
+      "a": true,
+      "exp": "s.169(1) CA 2006; company must send a copy to the director 'forthwith' .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A derivative claim can be brought against a third party.",
+      "a": true,
+      "exp": "s.260(3) CA 2006; cause of action may be against the director or another person .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Compensation for loss of office to a director always requires shareholder approval.",
+      "a": false,
+      "exp": "s.217 CA 2006; exceptions exist, e.g., payments by a wholly-owned subsidiary .",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "If a s.303 request is valid, directors have 28 days to call the meeting.",
+      "a": false,
+      "exp": "s.304(1)(a) CA 2006; they have 21 days to *call* the meeting .",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "A Shareholders' Agreement can be altered by a 75% majority.",
+      "a": false,
+      "exp": "It is a contract requiring unanimous approval to vary, unlike Articles .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "s.994 petitions are the primary method for resolving valuation disputes.",
+      "a": false,
+      "exp": "Courts encourage out-of-court independent valuation to save costs .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The court must dismiss a derivative claim if a hypothetical director acting under s.172 would not pursue it.",
+      "a": true,
+      "exp": "s.263(2)(a) CA 2006; this is an absolute bar to permission .",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A director removed under s.168 loses their right to compensation for loss of office.",
+      "a": false,
+      "exp": "s.168(5) CA 2006; removal does not deprive them of compensation/damages payable .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Just and Equitable Winding Up is a remedy of first resort.",
+      "a": false,
+      "exp": "It is a drastic remedy; courts prefer alternative orders under s.996 .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "s.168 CA 2006 allows removal of a director by Ordinary Resolution.",
+      "a": true,
+      "exp": "Statutory power of shareholders .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Special Notice requires 28 clear days.",
+      "a": true,
+      "exp": "s.312(1) CA 2006 .",
+      "isTiming": true,
+      "difficulty": 1
+    },
+    {
+      "q": "s.33 CA 2006 creates a contract between company and members.",
+      "a": true,
+      "exp": "Statutory contract regarding the constitution .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Foss v Harbottle established the proper claimant rule.",
+      "a": true,
+      "exp": "The company is the proper claimant for wrongs done to it .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A Derivative Claim is brought by a shareholder on behalf of the company.",
+      "a": true,
+      "exp": "s.260(1) CA 2006 .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Unfair Prejudice is a claim under s.994 CA 2006.",
+      "a": true,
+      "exp": "Personal claim by a member .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "s.122 Insolvency Act 1986 covers Just and Equitable Winding Up.",
+      "a": true,
+      "exp": "Drastic remedy for shareholders .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Bushell v Faith clauses provide weighted voting rights.",
+      "a": true,
+      "exp": "Used to protect directors from removal .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Quasi-partnership companies often involve legitimate expectations.",
+      "a": true,
+      "exp": "Expectations of management involvement .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "s.303 allows shareholders to request a General Meeting.",
+      "a": true,
+      "exp": "Requires 5% shareholding .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Share Purchase Order is a common remedy for Unfair Prejudice.",
+      "a": true,
+      "exp": "Court orders purchase of petitioner's shares .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "s.260 claims require court permission.",
+      "a": true,
+      "exp": "Two-stage permission process .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Ratification can bar a derivative claim.",
+      "a": true,
+      "exp": "s.263(2)(c) CA 2006 .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "s.169 gives directors a right to protest removal.",
+      "a": true,
+      "exp": "Right to speak and make written representations .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Shareholders' Agreements are public documents.",
+      "a": false,
+      "exp": "They are private contracts, unlike Articles .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "s.172 relates to the duty to promote success.",
+      "a": true,
+      "exp": "Key factor in court's decision on derivative claims .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A member can bring a derivative claim for negligence.",
+      "a": true,
+      "exp": "s.260(3) includes negligence, default, breach of duty .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Majority Rule dictates that 51% usually controls the company.",
+      "a": true,
+      "exp": "General principle of company law .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "s.305 allows shareholders to call a GM at the company's expense.",
+      "a": true,
+      "exp": "If directors fail to call it .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Membership rights include the right to a declared dividend.",
+      "a": true,
+      "exp": "Enforceable under s.33 .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Special Notice is sent to the shareholders.",
+      "a": false,
+      "exp": "Sent to the *company* (board) .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A Director has a right to be heard at the removal meeting.",
+      "a": true,
+      "exp": "s.169(2) CA 2006 .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "s.996 grants the court wide remedial powers.",
+      "a": true,
+      "exp": "Power to make 'such order as it thinks fit' .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Clean Hands are required for s.994 petitions.",
+      "a": false,
+      "exp": "Petitioner's conduct is relevant but not a strict bar .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "s.260 applies to shadow directors.",
+      "a": true,
+      "exp": "Statutory definition includes shadow directors .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Private companies with one class of shares need shareholder authority to allot.",
+      "a": false,
+      "exp": "s.550 CA 2006; directors have automatic authority to allot shares.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Pre-emption rights apply to the issue of preference shares with capped rights.",
+      "a": false,
+      "exp": "s.560(1) CA 2006; definition of 'equity securities' excludes shares with capped dividend/capital rights.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A specific disapplication of pre-emption rights requires a written statement from directors.",
+      "a": true,
+      "exp": "s.571(6) CA 2006; must explain reasons and justify amount to be paid.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Companies incorporated under CA 1985 need an Ordinary Resolution to remove the authorised capital cap.",
+      "a": true,
+      "exp": "The 1985 authorised capital became a provision in the articles; removable by OR under transitional rules.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A private company is prohibited from giving security for a loan to buy its own shares.",
+      "a": false,
+      "exp": "s.678/679 CA 2006; prohibition applies to Public companies (or their private subsidiaries).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A public subsidiary is prohibited from guaranteeing a loan to buy shares in its private holding company.",
+      "a": true,
+      "exp": "s.679 CA 2006; public subsidiaries of private targets are caught by financial assistance rules.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Paying due diligence fees for a buyer constitutes prohibited financial assistance.",
+      "a": true,
+      "exp": "Chaston v SWP Group; 'smoothing the path' of acquisition is assistance.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Buyback of shares out of capital requires a Special Resolution.",
+      "a": true,
+      "exp": "s.716 CA 2006; payment out of capital requires SR (plus OR for the contract).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Public companies can use capital to fund a buyback of shares.",
+      "a": false,
+      "exp": "s.709 CA 2006; permissible capital payment is available to private companies only.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Payment for a buyback out of capital must occur within 7 weeks of the resolution.",
+      "a": true,
+      "exp": "s.723 CA 2006; payment window is 5 to 7 weeks after the resolution.",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "Shareholders selling shares back to the company can vote on the approval resolution.",
+      "a": false,
+      "exp": "s.695/s.717 CA 2006; selling shareholders are disenfranchised for the approval vote.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Advising a client on the merits of buying specific shares is a specified activity.",
+      "a": true,
+      "exp": "Article 53(1) RAO; advising on merits of specified investments is regulated.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The Article 70 RAO exclusion applies to the sale of 30% of voting shares without control.",
+      "a": false,
+      "exp": "Article 70 requires 50% voting shares OR acquisition of day-to-day control.",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "Solicitors can retain financial services commission without client consent.",
+      "a": false,
+      "exp": "SRA Codes; commission must be accounted for unless informed consent is given.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Interim dividends constitute a legally binding debt once declared by directors.",
+      "a": false,
+      "exp": "Potel v IRC; interim dividends can be rescinded any time before payment.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Final dividends must be declared by ordinary resolution.",
+      "a": true,
+      "exp": "Standard Articles (MA 30); shareholders declare final dividends upon director recommendation.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Preference shares are non-cumulative unless stated otherwise.",
+      "a": false,
+      "exp": "Presumption is that preference shares are cumulative regarding dividends.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Stamp duty is payable if the consideration is exactly £1,000.",
+      "a": false,
+      "exp": "Stamp duty is payable only if consideration *exceeds* £1,000.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "A company must file Form SH01 within 2 months of allotment.",
+      "a": false,
+      "exp": "s.555 CA 2006; return of allotment must be filed within one month.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "A Directors' Statement of Solvency for buyback must be made no earlier than 1 week before the meeting.",
+      "a": true,
+      "exp": "s.714(6) CA 2006; strict timeframe for solvency statement validity.",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "Failure to register a charge within 21 days makes the money immediately repayable.",
+      "a": true,
+      "exp": "s.859H CA 2006; debt becomes immediately payable and security is void against liquidator.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "A floating charge holder usually ranks ahead of preferential creditors.",
+      "a": false,
+      "exp": "Preferential creditors (e.g., employees, HMRC) rank ahead of floating charge holders.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Legal title to shares passes on execution of the stock transfer form.",
+      "a": false,
+      "exp": "s.112 CA 2006; title passes on entry into the Register of Members.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Private companies can offer shares to the public.",
+      "a": false,
+      "exp": "s.755 CA 2006; strict prohibition on public offers by private companies.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Transmission of shares on death requires a stock transfer form.",
+      "a": false,
+      "exp": "Shares vest in PRs by operation of law; no stock transfer form needed for transmission.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "'Equity Finance' involves raising funds by issuing shares.",
+      "a": true,
+      "exp": "Selling ownership stakes in exchange for capital.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Debt Finance' involves borrowing money.",
+      "a": true,
+      "exp": "E.g., loans or bonds, creating a creditor-debtor relationship.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Nominal Value' is the minimum subscription price for a share.",
+      "a": true,
+      "exp": "Shares cannot be issued at a discount to nominal value (s.580).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Share Premium' is the excess paid over the nominal value.",
+      "a": true,
+      "exp": "Must be credited to the share premium account (s.610).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Pre-emption Right' is a right of first refusal for existing shareholders.",
+      "a": true,
+      "exp": "s.561 CA 2006; protection against dilution.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Equity Securities' includes ordinary shares with uncapped rights.",
+      "a": true,
+      "exp": "s.560 CA 2006; generally ordinary shares (vs fixed-rate preference shares).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Rights Issue' offers new shares to existing shareholders.",
+      "a": true,
+      "exp": "Usually at a discount, pro-rata to holdings.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Bonus Issue' capitalises reserves to issue free shares.",
+      "a": true,
+      "exp": "Turning reserves into share capital; no cash raised.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Treasury Shares' are shares bought back and held by the company.",
+      "a": true,
+      "exp": "Company holds its own shares instead of cancelling them.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Financial Assistance' includes gifts, loans, and guarantees.",
+      "a": true,
+      "exp": "s.677 CA 2006 definition; assistance for purchasing own shares.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Distributable Profits' are accumulated realised profits less losses.",
+      "a": true,
+      "exp": "s.830 CA 2006; funds available for dividends.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Redeemable Shares' are issued with an intention to be bought back.",
+      "a": true,
+      "exp": "Terms of redemption are set at issue.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Maintenance of Capital' prevents returning capital to shareholders generally.",
+      "a": true,
+      "exp": "Fundamental principle to protect creditors.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Stamp Duty' is a tax on documents transferring shares.",
+      "a": true,
+      "exp": "0.5% on stock transfer forms.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'FCA' stands for Financial Conduct Authority.",
+      "a": true,
+      "exp": "UK financial regulator.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'PRA' stands for Prudential Regulation Authority.",
+      "a": true,
+      "exp": "Regulator for banks/insurers.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'RAO' stands for Regulated Activities Order.",
+      "a": true,
+      "exp": "Defines what activities/investments are regulated under FSMA.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'General Prohibition' bans regulated activities without authorisation.",
+      "a": true,
+      "exp": "s.19 FSMA 2000.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Specified Investment' includes shares and bonds.",
+      "a": true,
+      "exp": "Part III RAO lists these instruments.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Specified Activity' includes advising on the merits of investments.",
+      "a": true,
+      "exp": "Part II RAO.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Article 67' RAO provides the 'necessary part' exclusion.",
+      "a": true,
+      "exp": "Exclusion for activities incidental to a profession (e.g., law).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Article 70' RAO provides the 'sale of body corporate' exclusion.",
+      "a": true,
+      "exp": "Exclusion for corporate transactions (50% shares/control).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Term Sheet' is a legally binding loan document.",
+      "a": false,
+      "exp": "Generally non-binding statement of intent (subject to contract).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Gearing' is the ratio of debt to equity.",
+      "a": true,
+      "exp": "Measure of financial leverage/risk.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Event of Default' allows a lender to call in a loan early.",
+      "a": true,
+      "exp": "Contractual breach triggering repayment.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "The Personal Allowance is reduced by £1 for every £2 of net income above £100,000.",
+      "a": true,
+      "exp": "Income Tax Act 2007; the allowance is tapered for high earners.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "An additional rate taxpayer is entitled to a Personal Savings Allowance of £500.",
+      "a": false,
+      "exp": "Additional rate taxpayers receive a Personal Savings Allowance of £0.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "Dividend income is taxed before savings income in the tax computation.",
+      "a": false,
+      "exp": "The strict order is: Non-savings income, then Savings income, then Dividend income.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A higher rate taxpayer pays 24% Capital Gains Tax on the sale of shares.",
+      "a": true,
+      "exp": "The CGT rate for higher rate taxpayers on shares is 24% (2025/26 rates).",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "Business Asset Disposal Relief (BADR) taxes qualifying gains at 10%.",
+      "a": false,
+      "exp": "The BADR rate is 14% for the 2025/26 tax year.",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "Transfers of assets between spouses are made on a no gain/no loss basis.",
+      "a": true,
+      "exp": "s.58 TCGA 1992; allows tax-free inter-spousal transfers.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A disposal to a connected person is treated as being made at market value.",
+      "a": true,
+      "exp": "s.18 TCGA 1992; actual consideration is ignored if parties are connected.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The CGT Annual Exemption can be carried forward to the next tax year if unused.",
+      "a": false,
+      "exp": "The CGT Annual Exemption is 'use it or lose it' and cannot be carried forward.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Rollover Relief allows a company to defer tax on a gain by buying a replacement asset.",
+      "a": true,
+      "exp": "s.152 TCGA 1992; the gain is rolled into the base cost of the new asset.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A Potentially Exempt Transfer (PET) becomes fully exempt after 3 years.",
+      "a": false,
+      "exp": "A PET becomes exempt only if the transferor survives for 7 years.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "Lifetime Chargeable Transfers (LCTs) incur an immediate IHT charge of 20%.",
+      "a": true,
+      "exp": "Entry charge for transfers into relevant property trusts is 20% (half death rate).",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "Business Property Relief (BPR) is available on assets owned for 1 year.",
+      "a": false,
+      "exp": "The minimum ownership period for BPR is 2 years.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "Quoted shares qualify for 100% Business Property Relief.",
+      "a": false,
+      "exp": "Quoted shares generally do not qualify; unquoted shares qualify for 100% BPR.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "The IHT Annual Exemption of £3,000 can be carried forward for one year only.",
+      "a": true,
+      "exp": "Unused IHT annual exemption can be carried forward to the next year only.",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "Trading losses can be carried back to the previous three tax years.",
+      "a": false,
+      "exp": "General rule is carry back 1 year (though temporary extensions existed for COVID).",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "Dividends received by individuals are paid gross.",
+      "a": true,
+      "exp": "Since 2016, dividends are paid without deduction of tax at source.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The Residence Nil Rate Band (RNRB) applies to transfers to siblings.",
+      "a": false,
+      "exp": "RNRB applies only to transfers to direct descendants (children/grandchildren).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A gift into a discretionary trust is a PET.",
+      "a": false,
+      "exp": "It is a Lifetime Chargeable Transfer (LCT), immediately chargeable.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Capital losses must be set off against gains in the same year.",
+      "a": true,
+      "exp": "Current year losses must be used before the Annual Exemption.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A painting sold for £4,000 is exempt from CGT under the Chattels Exemption.",
+      "a": true,
+      "exp": "Tangible movable property sold for £6,000 or less is exempt.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "Hold-Over Relief (s.165) applies to gifts of investment property.",
+      "a": false,
+      "exp": "Relief applies to business assets (trading), not pure investments.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "The IHT death rate is 40%.",
+      "a": true,
+      "exp": "Standard rate on the estate above the Nil Rate Band.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "Indexation Allowance is available to individuals for CGT.",
+      "a": false,
+      "exp": "Indexation Allowance was frozen and abolished for individuals; available to companies only (frozen 2017).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Pension contributions increase the basic rate tax band.",
+      "a": true,
+      "exp": "Relief at source extends the basic rate band by the gross contribution.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Entrepreneurs' Relief has been renamed Business Asset Disposal Relief.",
+      "a": true,
+      "exp": "Renamed by Finance Act 2020.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Income Tax is a direct tax.",
+      "a": true,
+      "exp": "Levied directly on the person's income.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "VAT is an indirect tax.",
+      "a": true,
+      "exp": "Levied on transactions, not income.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "HMRC stands for HM Revenue and Customs.",
+      "a": true,
+      "exp": "The UK tax authority.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "The Tax Year ends on 31 March.",
+      "a": false,
+      "exp": "The tax year for individuals ends on 5 April.",
+      "isTiming": true,
+      "difficulty": 1
+    },
+    {
+      "q": "Domicile is the same concept as Residence.",
+      "a": false,
+      "exp": "Residence is where you live; Domicile is your permanent home country.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "CGT stands for Capital Gains Tax.",
+      "a": true,
+      "exp": "Tax on profit from disposal of assets.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "IHT stands for Inheritance Tax.",
+      "a": true,
+      "exp": "Tax on transfers of value (death/lifetime).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "PET stands for Potentially Exempt Transfer.",
+      "a": true,
+      "exp": "A lifetime gift to an individual.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "LCT stands for Lifetime Chargeable Transfer.",
+      "a": true,
+      "exp": "A lifetime gift into a trust.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "NRB stands for Nil Rate Band.",
+      "a": true,
+      "exp": "The amount chargeable to IHT at 0%.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "RNRB stands for Residence Nil Rate Band.",
+      "a": true,
+      "exp": "Additional threshold for passing a home to descendants.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Taper Relief reduces the tax payable on death.",
+      "a": true,
+      "exp": "Reduces IHT on gifts made 3-7 years before death.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Chattels are tangible movable property.",
+      "a": true,
+      "exp": "e.g., paintings, antiques, racehorses.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "BPR stands for Business Property Relief.",
+      "a": true,
+      "exp": "IHT relief for business assets.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "APR stands for Agricultural Property Relief.",
+      "a": true,
+      "exp": "IHT relief for farms/agricultural land.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Total Income is income before any deductions.",
+      "a": true,
+      "exp": "The aggregate of all income sources.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Net Income is Total Income minus reliefs.",
+      "a": true,
+      "exp": "e.g., minus pension contributions.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Taxable Income is Net Income minus Personal Allowance.",
+      "a": true,
+      "exp": "The final figure to which tax rates are applied.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Self-Assessment is the system for reporting personal tax.",
+      "a": true,
+      "exp": "Individuals file a tax return annually.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Dividend Allowance is a 0% tax band for dividends.",
+      "a": true,
+      "exp": "Currently applied to the first £500 of dividend income.",
+      "isTiming": true,
+      "difficulty": 1
+    },
+    {
+      "q": "Personal Savings Allowance is a 0% tax band for interest.",
+      "a": true,
+      "exp": "Applied to savings income based on tax bracket.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Capital Allowances are deductions for capital expenditure.",
+      "a": true,
+      "exp": "Used in place of depreciation for tax purposes.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Principal Private Residence (PPR) is the taxpayer's main home.",
+      "a": true,
+      "exp": "Qualifies for CGT relief on disposal.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Connected Persons includes spouses and siblings.",
+      "a": true,
+      "exp": "Statutory definition for tax anti-avoidance.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "7-Year Rule applies to IHT lifetime gifts.",
+      "a": true,
+      "exp": "Gifts are exempt if donor survives 7 years.",
+      "isTiming": true,
+      "difficulty": 1
+    },
+    {
+      "q": "A company must register for VAT if taxable supplies exceed £90,000 in 12 months.",
+      "a": true,
+      "exp": "VAT registration threshold (2024/25) .",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "Input tax incurred on exempt supplies is generally recoverable.",
+      "a": false,
+      "exp": "Input tax attributable to exempt supplies cannot be recovered .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A business using the Flat Rate Scheme cannot normally recover input tax.",
+      "a": true,
+      "exp": "Flat rate percentage accounts for input tax; separate recovery is not allowed .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The VAT element of a £120 gross price at standard rate is £24.",
+      "a": false,
+      "exp": "The VAT fraction is 1/6; £120 / 6 = £20 VAT .",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "Client entertainment expenditure is a deductible expense for Corporation Tax.",
+      "a": false,
+      "exp": "Business entertainment expenditure is prohibited by statute .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Dividends received by a UK company are generally subject to Corporation Tax.",
+      "a": false,
+      "exp": "Dividend income is generally exempt from Corporation Tax .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A company with TTP of £40,000 pays Corporation Tax at 19%.",
+      "a": true,
+      "exp": "The small profits rate (19%) applies to profits £50,000 or less .",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "Companies can claim an Annual Investment Allowance of £1 million.",
+      "a": true,
+      "exp": "Allows 100% deduction for qualifying P&M expenditure up to £1m .",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "Indexation Allowance can be used to increase a capital loss.",
+      "a": false,
+      "exp": "Indexation Allowance cannot create or increase a loss (frozen Dec 2017) .",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Trading losses can be set off against capital gains in the same year.",
+      "a": true,
+      "exp": "Trading losses can be set against profits of any description (income & gains) .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Capital losses can be carried back to the previous accounting period.",
+      "a": false,
+      "exp": "Capital losses can only be carried forward to future periods .",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Rollover Relief applies if the new asset is bought 4 years after disposal.",
+      "a": false,
+      "exp": "Reinvestment must be within 1 year before to 3 years after disposal .",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "Substantial Shareholding Exemption requires a 10% holding for 12 months.",
+      "a": true,
+      "exp": "Exempts gain on sale of shares if conditions met .",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "A large company with profits >£1.5m must pay tax 9 months after year end.",
+      "a": false,
+      "exp": "Large companies must pay by quarterly instalments .",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "A loan to a participator in a close company triggers a tax charge on the company.",
+      "a": true,
+      "exp": "Company pays tax (s.455) if loan not repaid within 9 months .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Tax paid on a close company loan is never refundable.",
+      "a": false,
+      "exp": "Tax is refunded if the loan is repaid or written off .",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Writing off a loan to a participator is tax-free for the individual.",
+      "a": false,
+      "exp": "The participator is deemed to receive a taxable dividend .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Zero-rated supplies allow a business to recover input tax.",
+      "a": true,
+      "exp": "Zero-rated supplies are taxable supplies (at 0%), allowing recovery .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The Cash Accounting Scheme is available if turnover exceeds £2 million.",
+      "a": false,
+      "exp": "Turnover limit is £1.35 million .",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "Depreciation is a deductible expense for Corporation Tax.",
+      "a": false,
+      "exp": "Depreciation is disallowed; Capital Allowances are used instead .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Companies pay Capital Gains Tax on their gains.",
+      "a": false,
+      "exp": "Companies pay Corporation Tax on chargeable gains .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Full Expensing allows 100% deduction for new plant and machinery.",
+      "a": true,
+      "exp": "Temporary allowance introduced April 2023 .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Rollover Relief is available on the sale of shares.",
+      "a": false,
+      "exp": "Shares are not 'qualifying assets' (e.g. land, goodwill) .",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A company must file its tax return within 9 months of year end.",
+      "a": false,
+      "exp": "Filing deadline is 12 months; payment is 9 months 1 day (small co) .",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "A close company is controlled by 5 or fewer participators.",
+      "a": true,
+      "exp": "Statutory definition of a close company .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Output Tax is VAT charged on sales.",
+      "a": true,
+      "exp": "Tax on supplies made by the business .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Input Tax is VAT paid on purchases.",
+      "a": true,
+      "exp": "Tax on supplies received by the business .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Standard Rate VAT is 20%.",
+      "a": true,
+      "exp": "Current standard rate .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Reduced Rate VAT is 5%.",
+      "a": true,
+      "exp": "Applies to domestic fuel etc .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "TTP stands for Taxable Total Profits.",
+      "a": true,
+      "exp": "The sum of income profits and chargeable gains .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "The Financial Year starts on 6 April.",
+      "a": false,
+      "exp": "The Financial Year for companies starts on 1 April .",
+      "isTiming": true,
+      "difficulty": 1
+    },
+    {
+      "q": "AIA stands for Annual Investment Allowance.",
+      "a": true,
+      "exp": "Capital allowance for P&M .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "TWDV stands for Tax Written Down Value.",
+      "a": true,
+      "exp": "Value of asset pool after allowances .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "SSE stands for Substantial Shareholding Exemption.",
+      "a": true,
+      "exp": "Relief for companies selling shares .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Rollover Relief defers Capital Gains Tax.",
+      "a": true,
+      "exp": "Deferral by reinvestment .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Participator includes a shareholder.",
+      "a": true,
+      "exp": "Person with share/interest in company .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Associate includes a spouse or parent.",
+      "a": true,
+      "exp": "Close relative definition for close companies .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Corporation Tax is a direct tax.",
+      "a": true,
+      "exp": "Tax on company profits .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "VAT is an indirect tax.",
+      "a": true,
+      "exp": "Tax on transactions .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Exempt supplies attract no VAT.",
+      "a": true,
+      "exp": "e.g. insurance, finance .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Zero-rated supplies are taxed at 0%.",
+      "a": true,
+      "exp": "e.g. books, food .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "HMRC stands for HM Revenue and Customs.",
+      "a": true,
+      "exp": "UK tax authority .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Interest on business loans is a deductible expense.",
+      "a": true,
+      "exp": "Reduces taxable profit .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Income receipts arise from everyday trading.",
+      "a": true,
+      "exp": "vs capital one-off receipts .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Capital expenditure is for long-term assets.",
+      "a": true,
+      "exp": "e.g. buying machinery/premises .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "VAT Returns are usually submitted quarterly.",
+      "a": true,
+      "exp": "Standard reporting period .",
+      "isTiming": true,
+      "difficulty": 1
+    },
+    {
+      "q": "A Taxable Person is registered for VAT.",
+      "a": true,
+      "exp": "Or required to be registered .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "The Main Rate of Corporation Tax is 25%.",
+      "a": true,
+      "exp": "For profits >£250,000 .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Close Company rules are anti-avoidance legislation.",
+      "a": true,
+      "exp": "Prevents tax advantages for small companies .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A dividend is a distribution of profit.",
+      "a": true,
+      "exp": "Paid to shareholders .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Income tax is calculated in the order: Non-savings, Savings, Dividends.",
+      "a": true,
+      "exp": "Strict statutory order of taxation is required to apply bands correctly.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The Personal Allowance is reduced to zero if Net Income hits £125,140.",
+      "a": true,
+      "exp": "Reduced by £1 for every £2 over £100,000; £12,570 * 2 = £25,140 taper range.",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "A basic rate taxpayer pays 8.75% tax on dividend income.",
+      "a": true,
+      "exp": "The basic rate for dividends is 8.75% (2025/26 rates).",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "Capital Gains Tax is payable on 31 January following the tax year end.",
+      "a": true,
+      "exp": "Same payment deadline as income tax self-assessment.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "Gifts to a discretionary trust are Potentially Exempt Transfers (PETs).",
+      "a": false,
+      "exp": "They are Lifetime Chargeable Transfers (LCTs) subject to immediate 20% tax.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Business Property Relief (BPR) is available on assets held for 18 months.",
+      "a": false,
+      "exp": "The transferor must have owned the assets for at least 2 years.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "Shares in a quoted company qualify for 100% Business Property Relief.",
+      "a": false,
+      "exp": "Quoted shares qualify for 50% relief, and only if the transferor had control.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "If a PET fails, the tax is recalculated using the Nil Rate Band at death.",
+      "a": true,
+      "exp": "The NRB applicable at the date of death is used, not the date of the gift.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A company can deregister for VAT if taxable supplies fall below £88,000.",
+      "a": true,
+      "exp": "The deregistration threshold is £88,000.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "Reduced rate VAT (5%) applies to children's car seats.",
+      "a": true,
+      "exp": "Listed as a reduced rate supply along with domestic heating.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The sale of a new commercial building is automatically exempt from VAT.",
+      "a": false,
+      "exp": "Sale of *new* commercial buildings is standard rated; old ones are exempt.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A VAT invoice must be issued within 30 days of the supply.",
+      "a": true,
+      "exp": "Mandatory time limit for taxable business supplies.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "Dividends paid by a company are a tax-deductible expense.",
+      "a": false,
+      "exp": "Dividends are an appropriation of profit after tax, not an expense.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Capital allowances at 18% are calculated on a straight-line basis.",
+      "a": false,
+      "exp": "They are calculated on a 'reducing balance' basis.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Full Expensing allows a 100% deduction for new plant and machinery.",
+      "a": true,
+      "exp": "Temporary allowance uncapped for new/unused P&M.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Trading losses can be carried forward against trading profits only.",
+      "a": false,
+      "exp": "Post-2017 losses can be carried forward against 'taxable total profits'.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Rollover Relief allows deferral of tax on the sale of goodwill.",
+      "a": true,
+      "exp": "Goodwill is a qualifying asset for Rollover Relief.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A close company must pay tax on a loan to a participator within 9 months.",
+      "a": true,
+      "exp": "Payable 9 months and 1 day after the accounting period end.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "Benefits in kind to a participator in a close company are treated as distributions.",
+      "a": true,
+      "exp": "Extended definition of distribution for close companies.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Large companies pay Corporation Tax in four instalments.",
+      "a": true,
+      "exp": "Applies to companies with TTP over £1.5 million.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Indexation Allowance was frozen in December 2017.",
+      "a": true,
+      "exp": "No relief for inflation after Dec 2017.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "A private motor car is an exempt asset for CGT.",
+      "a": true,
+      "exp": "Specifically excluded from Chargeable Assets.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Stamp Duty of 0.5% is payable on share transfers over £1,000.",
+      "a": true,
+      "exp": "Rounded up to the nearest £5.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Partners are jointly and severally liable for partnership tax.",
+      "a": false,
+      "exp": "Each partner is personally liable only for their own tax.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "LLPs are tax transparent.",
+      "a": true,
+      "exp": "Members are taxed as partners, the LLP is not taxed .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "PA stands for Personal Allowance.",
+      "a": true,
+      "exp": "Tax-free income threshold.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "PSA stands for Personal Savings Allowance.",
+      "a": true,
+      "exp": "Nil rate band for savings interest.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "DA stands for Dividend Allowance.",
+      "a": true,
+      "exp": "Nil rate band for dividend income.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "CGT stands for Capital Gains Tax.",
+      "a": true,
+      "exp": "Tax on disposal gains.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "BADR stands for Business Asset Disposal Relief.",
+      "a": true,
+      "exp": "Reduces CGT on business assets.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "IHT stands for Inheritance Tax.",
+      "a": true,
+      "exp": "Tax on transfers of value.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "PET stands for Potentially Exempt Transfer.",
+      "a": true,
+      "exp": "Lifetime gift between individuals.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "LCT stands for Lifetime Chargeable Transfer.",
+      "a": true,
+      "exp": "e.g., gift into trust.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "NRB stands for Nil Rate Band.",
+      "a": true,
+      "exp": "Threshold for 0% IHT.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "RNRB stands for Residence Nil Rate Band.",
+      "a": true,
+      "exp": "Additional threshold for family home.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "BPR stands for Business Property Relief.",
+      "a": true,
+      "exp": "Relief from IHT for business assets.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "VAT stands for Value Added Tax.",
+      "a": true,
+      "exp": "Indirect tax on supplies.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "TTP stands for Taxable Total Profits.",
+      "a": true,
+      "exp": "Corporate tax base.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "FY stands for Financial Year.",
+      "a": true,
+      "exp": "1 April to 31 March.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "AIA stands for Annual Investment Allowance.",
+      "a": true,
+      "exp": "100% relief for capital spend.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "WDA stands for Writing Down Allowance.",
+      "a": true,
+      "exp": "Standard capital allowance rate.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "TWDV stands for Tax Written Down Value.",
+      "a": true,
+      "exp": "Value of asset pool after allowances.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "SSE stands for Substantial Shareholding Exemption.",
+      "a": true,
+      "exp": "Exemption for companies selling shares.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "CT stands for Corporation Tax.",
+      "a": true,
+      "exp": "Tax on company profits.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "HMRC stands for His Majesty's Revenue and Customs.",
+      "a": true,
+      "exp": "Tax collection authority.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "PAYE stands for Pay As You Earn.",
+      "a": true,
+      "exp": "Deduction of tax from salary.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "AE stands for Annual Exemption.",
+      "a": true,
+      "exp": "Tax-free allowance for CGT.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "IR stands for Investors' Relief.",
+      "a": true,
+      "exp": "CGT relief for unlisted shares.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "TNRB stands for Transferable Nil Rate Band.",
+      "a": true,
+      "exp": "Unused NRB transferred to spouse.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "P&M stands for Plant and Machinery.",
+      "a": true,
+      "exp": "Assets qualifying for capital allowances.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Taking out a long-term loan increases a company's net assets.",
+      "a": false,
+      "exp": "Net assets remain unchanged; assets (cash) increase, but liabilities increase by the same amount .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Issuing shares at a premium increases the Share Capital account by the full issue price.",
+      "a": false,
+      "exp": "Share Capital increases by nominal value; the excess goes to the Share Premium Account .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A company must register a charge at Companies House within 14 days of creation.",
+      "a": false,
+      "exp": "s.859A CA 2006; the period allowed for registration is 21 days .",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "Failure to register a charge makes the debt immediately payable.",
+      "a": true,
+      "exp": "s.859H CA 2006; the security is void and the money becomes immediately repayable .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A floating charge holder ranks ahead of preferential creditors in a winding up.",
+      "a": false,
+      "exp": "Preferential creditors (e.g., employees, HMRC) are paid before floating charge holders .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Depreciation using the straight-line method results in a higher charge in earlier years.",
+      "a": false,
+      "exp": "Straight-line depreciation spreads the cost evenly; reducing balance charges more in early years .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "An accrual is recorded as a current liability on the balance sheet.",
+      "a": true,
+      "exp": "It represents a debt owed for goods/services received but not yet paid for .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A prepayment is recorded as an expense in the profit and loss account.",
+      "a": false,
+      "exp": "Prepayments reduce the expense in the P&L and appear as a current asset on the balance sheet .",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Increasing the provision for doubtful debts increases the business's profits.",
+      "a": false,
+      "exp": "An increase in the provision is treated as an expense, reducing profit .",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A declared final dividend is recorded as a liability if unpaid at year-end.",
+      "a": true,
+      "exp": "Once declared, a final dividend is a binding debt and appears in current liabilities .",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Interim dividends are recorded in the Profit and Loss account.",
+      "a": false,
+      "exp": "Dividends are an appropriation of profit, not an expense; they appear in the SoCIE .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A guarantee given by a subsidiary for its parent's loan is an 'upstream' guarantee.",
+      "a": true,
+      "exp": "Guarantee flows up the corporate chain from subsidiary to holding company .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A private company can offer bonds to the public.",
+      "a": false,
+      "exp": "s.755 CA 2006 prohibits private companies from offering securities to the public .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "High gearing means a company has a high proportion of equity compared to debt.",
+      "a": false,
+      "exp": "High gearing means a high ratio of debt (liabilities) to equity .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The 'net book value' of an asset is its cost minus accumulated depreciation.",
+      "a": true,
+      "exp": "Standard accounting formula for asset valuation on the balance sheet .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Revaluation of assets creates a distributable reserve.",
+      "a": false,
+      "exp": "The revaluation reserve is an unrealised profit and is a capital (undistributable) reserve .",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A fixed charge allows the borrower to deal with the asset freely.",
+      "a": false,
+      "exp": "The lender controls the asset; the borrower cannot dispose of it without consent .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Crystallisation converts a fixed charge into a floating charge.",
+      "a": false,
+      "exp": "It converts a floating charge into a fixed charge upon specific events .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Bad debts written off are treated as an expense in the Profit and Loss account.",
+      "a": true,
+      "exp": "Written off debts are a cost to the business and reduce profit .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A 1:10 bonus issue increases the cash assets of the company.",
+      "a": false,
+      "exp": "Bonus issues capitalize reserves; no cash is received from shareholders .",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "The share premium account can be used to pay dividends.",
+      "a": false,
+      "exp": "It is a capital reserve and cannot be distributed as dividends .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A specific provision for doubtful debts reduces the receivables figure on the balance sheet.",
+      "a": true,
+      "exp": "The provision is deducted from the gross receivables asset .",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Interest on a loan is paid out of post-tax profits.",
+      "a": false,
+      "exp": "Interest is an expense deducted *before* tax (P&L); dividends are post-tax .",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A term loan is repayable on demand.",
+      "a": false,
+      "exp": "Term loans are for a fixed period; overdrafts are repayable on demand .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The prescribed part fund is set aside for secured creditors.",
+      "a": false,
+      "exp": "It is set aside for *unsecured* creditors from floating charge assets .",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Equity Finance involves issuing shares.",
+      "a": true,
+      "exp": "Raising funds by selling ownership stakes .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Debt Finance involves borrowing money.",
+      "a": true,
+      "exp": "Raising funds through loans or debt securities .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A Debenture is a document creating security.",
+      "a": true,
+      "exp": "Common term for a security document registering charges .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Overdraft is an on-demand loan facility.",
+      "a": true,
+      "exp": "Repayable immediately upon request by the lender .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Bond is a type of debt security.",
+      "a": true,
+      "exp": "A tradeable instrument acknowledging a debt .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Gearing is the ratio of debt to equity.",
+      "a": true,
+      "exp": "Also known as leverage; measures financial risk .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Fixed Charge attaches to specific identifiable assets.",
+      "a": true,
+      "exp": "e.g., machinery or land; lender controls disposal .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Floating Charge floats over a class of assets.",
+      "a": true,
+      "exp": "e.g., stock; borrower can deal freely until crystallisation .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Crystallisation fixes a floating charge.",
+      "a": true,
+      "exp": "Converts floating charge to fixed upon default/insolvency .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Negative Pledge prohibits creating further security.",
+      "a": true,
+      "exp": "Clause preventing borrower from charging assets to others .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Profit and Loss Account shows income and expenses.",
+      "a": true,
+      "exp": "Summarises financial performance over a period .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Balance Sheet shows assets, liabilities, and equity.",
+      "a": true,
+      "exp": "Snapshot of financial position at a specific date .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Fixed Assets are long-term assets.",
+      "a": true,
+      "exp": "Held for use in the business (e.g., buildings, machinery) .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Current Assets include stock and cash.",
+      "a": true,
+      "exp": "Assets expected to be realized within a year .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Current Liabilities are debts due within one year.",
+      "a": true,
+      "exp": "e.g., trade creditors, overdrafts .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Depreciation spreads the cost of an asset.",
+      "a": true,
+      "exp": "Allocates cost over useful life in accounts .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Accruals are expenses incurred but not yet paid.",
+      "a": true,
+      "exp": "Matched to the period they relate to .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Prepayments are expenses paid in advance.",
+      "a": true,
+      "exp": "Benefit received in future period .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Bad Debt is a debt that will never be paid.",
+      "a": true,
+      "exp": "Written off as an expense .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Share Premium is the excess over nominal value.",
+      "a": true,
+      "exp": "Capital reserve from issuing shares above par .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Retained Earnings are accumulated past profits.",
+      "a": true,
+      "exp": "Revenue reserve available for distribution .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "SoCIE stands for Statement of Changes in Equity.",
+      "a": true,
+      "exp": "Shows movement in reserves and dividends .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Representations are statements of fact in a loan agreement.",
+      "a": true,
+      "exp": "Legal/commercial facts confirmed by borrower .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Undertakings are promises to do or not do something.",
+      "a": true,
+      "exp": "Also known as covenants in loan agreements .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Event of Default triggers the right to demand repayment.",
+      "a": true,
+      "exp": "Breach of loan terms allowing acceleration of debt .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A company failing to pay a statutory demand of £800 is deemed insolvent.",
+      "a": true,
+      "exp": "s.123(1)(a) IA 1986; threshold is >£750 .",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "Interest on a bank loan must be paid during a CIGA moratorium.",
+      "a": true,
+      "exp": "Debts involving financial services are excluded from the payment holiday .",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A CVA is approved if 51% of creditors by value vote in favour.",
+      "a": false,
+      "exp": "Requires 75% of creditors by value to approve .",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "A Restructuring Plan can bind secured creditors without their consent.",
+      "a": true,
+      "exp": "The court can sanction a cross-class cram down binding dissenting classes .",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "The primary objective of administration is to realise property for secured creditors.",
+      "a": false,
+      "exp": "Primary objective is rescuing the company as a going concern .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Directors must give 5 business days' notice to a QFCH to appoint an administrator.",
+      "a": true,
+      "exp": "Sch B1 para 26 IA 1986; notice of intention to appoint must be served .",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "A landlord can forfeit a lease without court permission during administration.",
+      "a": false,
+      "exp": "The moratorium prevents forfeiture without consent of administrator or court .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A fixed charge receiver owes their primary duty to the company.",
+      "a": false,
+      "exp": "Primary duty is owed to the appointing creditor (charge holder) .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Disposition of property after a winding up petition is void unless validated.",
+      "a": true,
+      "exp": "s.127 IA 1986; avoids dissipation of assets pending the order .",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A Declaration of Solvency is required for a Creditors' Voluntary Liquidation.",
+      "a": false,
+      "exp": "Required only for a Members' Voluntary Liquidation (MVL) .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Employee wages are preferential debts up to £800.",
+      "a": true,
+      "exp": "Schedule 6 IA 1986; wages capped at £800 per employee .",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "The Prescribed Part fund is distributed to floating charge holders.",
+      "a": false,
+      "exp": "It is ring-fenced for unsecured creditors .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A floating charge holder can claim shortfall from the Prescribed Part.",
+      "a": false,
+      "exp": "Expressly prohibited from sharing in the Prescribed Part for the shortfall .",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A creditor can petition for bankruptcy if the debt is at least £750.",
+      "a": false,
+      "exp": "The bankruptcy petition threshold is £5,000 .",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "A Trustee in Bankruptcy can challenge a transaction at an undervalue from 4 years ago.",
+      "a": true,
+      "exp": "s.339 IA 1986; look-back period is 5 years .",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "Insolvency is presumed if a transaction at an undervalue is with an associate.",
+      "a": true,
+      "exp": "s.339 IA 1986; burden shifts to the associate to prove solvency .",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "An IVA requires the approval of 50% of creditors by value.",
+      "a": false,
+      "exp": "Requires 75% of creditors by value to approve .",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "Secured creditors are bound by an IVA without their consent.",
+      "a": false,
+      "exp": "Secured creditors must consent to be bound .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A bankrupt is generally discharged after 3 years.",
+      "a": false,
+      "exp": "Automatic discharge occurs after 1 year .",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "A CIGA moratorium initially lasts for 20 business days.",
+      "a": true,
+      "exp": "Initial period is 20 business days .",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "HMRC VAT arrears are unsecured debts.",
+      "a": false,
+      "exp": "HMRC debts are now secondary preferential debts .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The 'Relevant Date' for the Prescribed Part is 15 September 2003.",
+      "a": true,
+      "exp": "Applies to floating charges created on/after this date .",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "Fixed charge creditors are paid before the liquidator's general expenses.",
+      "a": true,
+      "exp": "They pay only the costs of realising their specific asset .",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Shareholders are paid before interest on unsecured debts in liquidation.",
+      "a": false,
+      "exp": "Interest on debts ranks above shareholders .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A desire to prefer is presumed in a bankruptcy preference to an associate.",
+      "a": true,
+      "exp": "s.340 IA 1986; rebuttable presumption of desire to prefer .",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "IA 1986 stands for Insolvency Act 1986.",
+      "a": true,
+      "exp": "Main statute for insolvency .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Cash flow test checks if a company can pay debts as they fall due.",
+      "a": true,
+      "exp": "s.123(1)(e) IA 1986 .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Balance sheet test checks if liabilities exceed assets.",
+      "a": true,
+      "exp": "s.123(2) IA 1986 .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "CVA stands for Company Voluntary Arrangement.",
+      "a": true,
+      "exp": "Formal compromise with creditors .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Nominee is an insolvency practitioner supervising a CVA proposal.",
+      "a": true,
+      "exp": "Becomes Supervisor upon approval .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Supervisor implements an approved CVA.",
+      "a": true,
+      "exp": "Role after CVA approval .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Moratorium is a freeze on creditor action.",
+      "a": true,
+      "exp": "Breathing space for the company .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Restructuring Plan is a court-sanctioned compromise.",
+      "a": true,
+      "exp": "Part 26A CA 2006 (CIGA 2020) .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Cross-class cram down binds dissenting creditor classes.",
+      "a": true,
+      "exp": "Feature of Restructuring Plans .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Administration is a collective insolvency procedure.",
+      "a": true,
+      "exp": "Acts for all creditors .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "QFCH stands for Qualifying Floating Charge Holder.",
+      "a": true,
+      "exp": "Holder of security over whole/substantially whole property .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Administrative Receiver is appointed by a floating charge holder.",
+      "a": true,
+      "exp": "Rare procedure now (pre-2003 charges) .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "LPA Receiver is a fixed charge receiver.",
+      "a": true,
+      "exp": "Appointed under Law of Property Act / security .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Compulsory Liquidation is court-ordered winding up.",
+      "a": true,
+      "exp": "Started by petition .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "MVL stands for Members' Voluntary Liquidation.",
+      "a": true,
+      "exp": "Solvent liquidation .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "CVL stands for Creditors' Voluntary Liquidation.",
+      "a": true,
+      "exp": "Insolvent liquidation initiated by members .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Declaration of Solvency confirms the company can pay debts in 12 months.",
+      "a": true,
+      "exp": "Required for MVL .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Preferential Creditors include employees and HMRC.",
+      "a": true,
+      "exp": "Paid before floating charge holders .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Prescribed Part is a fund ring-fenced for unsecured creditors.",
+      "a": true,
+      "exp": "s.176A IA 1986 .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Pari passu means ranking equally.",
+      "a": true,
+      "exp": "Unsecured creditors share pro rata .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "IVA stands for Individual Voluntary Arrangement.",
+      "a": true,
+      "exp": "Alternative to bankruptcy .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Bankruptcy Order declares an individual insolvent.",
+      "a": true,
+      "exp": "Court order .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Trustee in Bankruptcy administers the bankrupt's estate.",
+      "a": true,
+      "exp": "Assets vest in them .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Official Receiver is a civil servant and officer of the court.",
+      "a": true,
+      "exp": "Acts as trustee initially .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Discharge releases a bankrupt from debts.",
+      "a": true,
+      "exp": "Usually after 1 year .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Wrongful trading liability arises if directors knew insolvent liquidation was inevitable.",
+      "a": true,
+      "exp": "s.214(2) IA 1986; the 'point of no return' test .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Resigning is a recommended step to avoid wrongful trading liability.",
+      "a": false,
+      "exp": "Resigning might itself be an act of wrongful trading; directors should stay to minimize loss .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Fraudulent trading requires proof of actual dishonesty.",
+      "a": true,
+      "exp": "Subjective dishonesty must be proven (Ivey v Genting Casinos) .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Only formally appointed directors can be liable for wrongful trading.",
+      "a": false,
+      "exp": "Liability extends to shadow and de facto directors .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Insolvency is presumed in a Transaction at an Undervalue with a connected person.",
+      "a": true,
+      "exp": "s.240(2) IA 1986; burden shifts to the connected person to prove solvency .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The 'relevant time' for a preference given to an unconnected person is 2 years.",
+      "a": false,
+      "exp": "s.239(2) IA 1986; the period is 6 months for unconnected persons .",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "A desire to prefer is presumed when giving a preference to an associate.",
+      "a": true,
+      "exp": "s.239(6) IA 1986; rebuttable presumption of desire to prefer applies .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Granting a floating charge for no new consideration is valid if within 12 months of insolvency.",
+      "a": false,
+      "exp": "s.245 IA 1986; generally void if created within 12 months with no new money .",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "s.423 claims for transactions defrauding creditors require the company to be insolvent.",
+      "a": false,
+      "exp": "s.423 IA 1986; insolvency is not a requirement .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "New money paid into an overdraft can validate a floating charge.",
+      "a": true,
+      "exp": "Re Yeovil Glove Co; operations on an overdraft can constitute 'new money' .",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Wrongful trading claims can be assigned to a third party.",
+      "a": true,
+      "exp": "Allowed under SBEEA 2015 to raise funds for the estate .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The court can impose punitive damages for fraudulent trading.",
+      "a": false,
+      "exp": "Compensation is compensatory only, not punitive .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Blind-eye knowledge is insufficient for fraudulent trading liability.",
+      "a": false,
+      "exp": "Knowledge includes a suspicion and a deliberate decision to avoid confirmation .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The 'Every Step' defence applies to fraudulent trading claims.",
+      "a": false,
+      "exp": "It is a specific statutory defence for Wrongful Trading (s.214(3)) .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Misfeasance proceedings (s.212) create a new statutory liability.",
+      "a": false,
+      "exp": "s.212 is procedural; it enforces existing duties .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The relevant time for a Transaction at an Undervalue is always 2 years.",
+      "a": true,
+      "exp": "s.240(1)(a) IA 1986; 2 years regardless of connection .",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "A dividend can be challenged as a Transaction at an Undervalue.",
+      "a": true,
+      "exp": "BTI v Sequana SA; dividends can be transactions at an undervalue .",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Commercial pressure negates the 'desire to prefer' in a preference claim.",
+      "a": true,
+      "exp": "Re MC Bacon; action taken to avoid calling in a loan is not a preference .",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A floating charge granted to a connected person is vulnerable for 2 years.",
+      "a": true,
+      "exp": "s.245(3)(a) IA 1986; extended period for connected persons .",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "The 'onset of insolvency' in a compulsory liquidation is the date of the winding-up order.",
+      "a": false,
+      "exp": "It is the date of the presentation of the petition .",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Wrongful Trading applies to companies in administration.",
+      "a": true,
+      "exp": "s.246ZB IA 1986 applies wrongful trading to administration .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A person liable for fraudulent trading faces up to 10 years imprisonment.",
+      "a": true,
+      "exp": "s.993 CA 2006 provides criminal sanctions .",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "A subsequent purchaser in good faith is protected from TUV avoidance orders.",
+      "a": true,
+      "exp": "s.241(2) IA 1986 protects third parties acting in good faith for value .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Wrongful trading liability is judged on the 'cash flow' test of insolvency.",
+      "a": false,
+      "exp": "Judged solely on the 'Balance Sheet' test .",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A bank can be liable for fraudulent trading.",
+      "a": true,
+      "exp": "Morris v State Bank of India; 'any person' includes banks .",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "s.213 IA 1986 covers Fraudulent Trading.",
+      "a": true,
+      "exp": "Statutory provision for liquidation .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "s.214 IA 1986 covers Wrongful Trading.",
+      "a": true,
+      "exp": "Statutory provision for liquidation .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "s.238 IA 1986 covers Transactions at an Undervalue.",
+      "a": true,
+      "exp": "Statutory provision .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "s.239 IA 1986 covers Preferences.",
+      "a": true,
+      "exp": "Statutory provision .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "s.245 IA 1986 covers Avoidance of Floating Charges.",
+      "a": true,
+      "exp": "Statutory provision .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "s.423 IA 1986 covers Transactions Defrauding Creditors.",
+      "a": true,
+      "exp": "Statutory provision .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "TUV stands for Transaction at an Undervalue.",
+      "a": true,
+      "exp": "Common acronym .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "TDC stands for Transaction Defrauding Creditors.",
+      "a": true,
+      "exp": "Common acronym .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "CDDA stands for Company Directors Disqualification Act.",
+      "a": true,
+      "exp": "Legislation governing disqualification .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "The 'Relevant Time' is the look-back period before insolvency.",
+      "a": true,
+      "exp": "s.240 IA 1986 .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Connected Person' includes a director.",
+      "a": true,
+      "exp": "s.249 IA 1986 .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Associate' includes a spouse or relative.",
+      "a": true,
+      "exp": "s.435 IA 1986 .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Onset of Insolvency' includes the date of winding up resolution.",
+      "a": true,
+      "exp": "s.240(3) IA 1986 .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Misfeasance' is the misapplication of company property.",
+      "a": true,
+      "exp": "s.212 IA 1986 .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Point of No Return' is when insolvent liquidation is inevitable.",
+      "a": true,
+      "exp": "Trigger for wrongful trading liability .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Restoration Order' restores the company's position.",
+      "a": true,
+      "exp": "Remedy for voidable transactions .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'New Money' validates a floating charge.",
+      "a": true,
+      "exp": "Fresh consideration under s.245 .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Reasonably Diligent Person' is the test for wrongful trading.",
+      "a": true,
+      "exp": "s.214(4) IA 1986 standard .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Shadow Director' is subject to wrongful trading laws.",
+      "a": true,
+      "exp": "Included in definition of director .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Liquidator' can bring a wrongful trading claim.",
+      "a": true,
+      "exp": "s.214(1) IA 1986 .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Administrator' can bring a fraudulent trading claim.",
+      "a": true,
+      "exp": "s.246ZA IA 1986 .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Insolvency' generally means inability to pay debts.",
+      "a": true,
+      "exp": "s.123 IA 1986 .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Civil Liability' requires contribution to company assets.",
+      "a": true,
+      "exp": "Remedy for wrongful/fraudulent trading .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Criminal Liability' involves fines or imprisonment.",
+      "a": true,
+      "exp": "Applies to fraudulent trading .",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Office-holder' refers to a liquidator or administrator.",
+      "a": true,
+      "exp": "Person empowered to bring claims .",
+      "isTiming": false,
+      "difficulty": 1
+    }
   ],
   "dispute": [
     { "q": "Limitation Period (Contract): 6 years.", "a": true, "exp": "Limitation Act 1980.", "isTiming": true },
