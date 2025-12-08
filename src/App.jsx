@@ -217,7 +217,7 @@ class AudioEngine {
     
     // Stage 1 (Menu/Base)
     if (step % 4 === 0) this.playDrum(time, 'kick');
-    if (step % 4 === 2 || step % 4 === 3) this.playOsc(time, root, 'sawtooth', 0.15, 0.5, 600);
+    if (step % 4 === 2 || step % 4 === 3) this.playOsc(time, root, 'sawtooth', 0.15, 0.5, 400);
 
     // Stage 2
     if (this.density >= 2 && (step === 4 || step === 12)) this.playDrum(time, 'snare');
