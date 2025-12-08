@@ -3,6 +3,7 @@ import { Play, Pause, RefreshCw, Check, X, Volume2, VolumeX, Zap, Trophy, Award,
 import { initializeApp } from 'firebase/app';
 import { getAuth, signInAnonymously, onAuthStateChanged, signInWithCustomToken } from 'firebase/auth';
 import { getFirestore, collection, addDoc, query, orderBy, limit, onSnapshot, serverTimestamp } from 'firebase/firestore';
+import { Analytics } from "@vercel/analytics/react";
 import { db, auth } from './firebase';
 
 // --- Safe Fallbacks ---
@@ -557,7 +558,11 @@ const Leaderboard = ({ entries }) => (
             <span className={`w-5 text-center font-bold ${idx < 3 ? 'text-yellow-400' : 'text-slate-500'}`}>#{idx + 1}</span>
             <div className="flex flex-col">
                <span className="text-white truncate max-w-[100px]">{entry.name}</span>
-               <span className="text-[9px] text-slate-400 uppercase">{entry.mode}</span>
+               <div className="flex gap-2 text-[9px] text-slate-400 uppercase">
+                  <span>{entry.mode}</span>
+                  {entry.accuracy && <span className="text-emerald-500">{entry.accuracy}% ACC</span>}
+                  {entry.maxStreak && <span className="text-cyan-500">{entry.maxStreak}x STR</span>}
+               </div>
             </div>
           </div>
           <span className="text-emerald-400 font-bold">{entry.score.toLocaleString()}</span>
@@ -592,6 +597,7 @@ export default function SQEArcade() {
   const [currentQIndex, setCurrentQIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [streak, setStreak] = useState(0);
+  const [maxStreak, setMaxStreak] = useState(0);
   const [consecutivePasses, setConsecutivePasses] = useState(0);
   const [consecutiveWrongs, setConsecutiveWrongs] = useState(0); 
   const [timeLeft, setTimeLeft] = useState(5.0);
@@ -680,7 +686,10 @@ export default function SQEArcade() {
         level: level, 
         timestamp: serverTimestamp(),
         userId: user.uid,
-        mode: isChronosMode ? 'COUNTING TIME' : (currentCategory || 'STANDARD')
+        mode: isChronosMode ? 'COUNTING TIME' : (currentCategory || 'STANDARD'),
+        accuracy: Math.round((gameStats.correct / ((gameStats.correct + gameStats.wrong) || 1)) * 100),
+        maxStreak: maxStreak,
+        integrity: Math.max(0, 10 - consecutiveWrongs)
       });
     } catch (e) { console.error(e); }
   };
@@ -752,6 +761,7 @@ export default function SQEArcade() {
     if (!keepState) {
         setScore(0);
         setStreak(0);
+        setMaxStreak(0);
         setConsecutiveWrongs(0);
         setConsecutivePasses(0);
         setDensity(1);
@@ -798,8 +808,8 @@ export default function SQEArcade() {
   }, [streak, gameState, density]);
 
   useEffect(() => {
-      if ((gameState === 'menu' || gameState === 'end' || gameState === 'game_over') && !isMuted) {
-          if (gameState === 'menu' || gameState === 'game_over') {
+      if ((gameState === 'menu' || gameState === 'end' || gameState === 'game_over' || gameState === 'aborted') && !isMuted) {
+          if (gameState === 'menu' || gameState === 'game_over' || gameState === 'aborted') {
              audio.setDensity(1);
           }
           audio.resume();
@@ -856,7 +866,9 @@ export default function SQEArcade() {
       points = Math.floor((rawScore + diffBonus) * getMultiplier());
       
       setScore(s => s + points);
-      setStreak(s => s + 1);
+      const newStreak = streak + 1;
+      setStreak(newStreak);
+      if (newStreak > maxStreak) setMaxStreak(newStreak);
       
       newConsecutivePasses += 1;
       
@@ -867,7 +879,6 @@ export default function SQEArcade() {
       }
       setConsecutivePasses(newConsecutivePasses);
 
-      const newStreak = streak + 1;
       if (newStreak === 60) setCommentary("EVENT HORIZON 🌑");
       else if (newStreak === 50) setCommentary("NEBULA SURF 🌠");
       else if (newStreak === 45) setCommentary("SINGULARITY 🌌");
@@ -1074,7 +1085,8 @@ export default function SQEArcade() {
               </div>
             </div>
             <button onClick={togglePause} className="px-8 md:px-12 py-3 md:py-4 bg-white text-slate-900 font-bold rounded hover:bg-slate-200 text-lg md:text-xl tracking-widest">RESUME</button>
-            <button onClick={() => setGameState('menu')} className="mt-6 text-slate-400 hover:text-white text-sm">ABORT MISSION</button>
+            <button onClick={() => setGameState('aborted')} className="mt-6 text-slate-400 hover:text-white text-sm">FINISH & SUBMIT</button>
+            <button onClick={() => setGameState('menu')} className="mt-2 text-rose-400 hover:text-rose-300 text-xs uppercase tracking-widest">ABORT TO MENU</button>
           </div>
         )}
 
@@ -1247,13 +1259,21 @@ export default function SQEArcade() {
           </div>
         )}
 
-        {/* END (Success or Fail) */}
-        {(gameState === 'end' || gameState === 'game_over') && (
+        {/* END (Success, Fail, or Abort) */}
+        {(gameState === 'end' || gameState === 'game_over' || gameState === 'aborted') && (
           <div className={`text-center space-y-6 md:space-y-8 animate-in slide-in-from-bottom duration-500 max-w-6xl mx-auto p-6 md:p-8 rounded-2xl border backdrop-blur-xl ${gameState === 'game_over' ? 'bg-rose-950/50 border-rose-500/50' : 'bg-slate-900/90 border-white/10'}`}>
-             {gameState === 'game_over' ? <ShieldAlert className="w-16 h-16 md:w-20 md:h-20 text-rose-500 mx-auto" /> : <Trophy className="w-16 h-16 md:w-20 md:h-20 text-yellow-400 mx-auto drop-shadow-glow" />}
+             
+             {gameState === 'game_over' ? 
+                <ShieldAlert className="w-16 h-16 md:w-20 md:h-20 text-rose-500 mx-auto" /> : 
+                <Trophy className="w-16 h-16 md:w-20 md:h-20 text-yellow-400 mx-auto drop-shadow-glow" />
+             }
             
             <div>
-              <h2 className="text-3xl md:text-4xl font-black text-white italic tracking-tighter mb-2">{gameState === 'end' ? 'SECTOR CLEARED' : 'MISSION FAILED'}</h2>
+              <h2 className="text-3xl md:text-4xl font-black text-white italic tracking-tighter mb-2">
+                {gameState === 'end' ? 'SECTOR CLEARED' : 
+                 gameState === 'aborted' ? 'MISSION COMPLETE' : 
+                 'MISSION FAILED'}
+              </h2>
               <p className="text-slate-400 text-sm">Final Audit Report</p>
             </div>
             
@@ -1263,13 +1283,13 @@ export default function SQEArcade() {
                   <div className="text-2xl md:text-3xl font-black text-emerald-400">{score.toLocaleString()}</div>
                </div>
                <div className="bg-slate-800 p-4 rounded-lg">
-                  <div className="text-slate-400 text-xs uppercase">Max Streak</div>
-                  <div className="text-2xl md:text-3xl font-black text-cyan-400">{streak}</div>
+                  <div className="text-slate-400 text-xs uppercase">Peak Streak</div>
+                  <div className="text-2xl md:text-3xl font-black text-cyan-400">{maxStreak}</div>
                </div>
             </div>
 
-            {/* SECTOR COMPLETE OPTIONS */}
-            {gameState === 'end' && (
+            {/* SECTOR COMPLETE OPTIONS - Show for End OR Aborted */}
+            {(gameState === 'end' || gameState === 'aborted') && (
                 <div className="flex flex-col gap-6 animate-in fade-in zoom-in duration-500">
                     <div className="flex items-center justify-center gap-2 text-lg md:text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-400">
                         <Activity className="animate-pulse text-fuchsia-400" /> 
@@ -1308,6 +1328,7 @@ export default function SQEArcade() {
         )}
 
       </div>
+      <Analytics />
     </div>
   );
 }
