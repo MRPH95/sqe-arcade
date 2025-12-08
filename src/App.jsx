@@ -286,7 +286,7 @@ class AudioEngine {
 
 const audio = new AudioEngine();
 
-// --- VISUAL EFFECT v12.1 (TUNNEL UPDATE) ---
+// --- VISUAL EFFECT v13.0 (Doppler Shift) ---
 const WormholeEffect = ({ streak, isChronos, isGameOver, failCount }) => {
   const canvasRef = useRef(null);
   const streakRef = useRef(streak); 
@@ -330,37 +330,39 @@ const WormholeEffect = ({ streak, isChronos, isGameOver, failCount }) => {
       let warpFactor = 0; 
       let isNegative = false;
 
-      // --- VISUAL STAGE LOGIC UPDATED ---
-      if (currentStreak >= 70) { 
-          // PHASE 6: NEGATIVE/SINGULARITY (Moved from 60 to 70)
+      // --- VISUAL STAGE LOGIC ---
+      if (currentStreak >= 60) { 
+          // PHASE 6: SINGULARITY (Negative Colors)
           isNegative = true; 
-          speedMult = 7.0; 
-          warpFactor = 60; 
-      } 
-      else if (currentStreak >= 50) { 
-          // PHASE 5: RAINBOW TUNNEL (Replaces Purple/Nebula)
-          // High speed, Rainbow color, High warp
-          baseHue = 'rainbow'; 
           speedMult = 6.0; 
           warpFactor = 50; 
       } 
+      else if (currentStreak >= 50) { 
+          // PHASE 5: NEBULA (Purple Swirl)
+          // Restored to your original preference (Purple, not Rainbow)
+          baseHue = 'nebula'; 
+          speedMult = 5.5; 
+          warpFactor = 45; 
+      } 
       else if (currentStreak >= 45) { 
-          // PHASE 4: RAINBOW START
+          // PHASE 4: HYPERDRIVE (Rainbow)
           baseHue = 'rainbow'; 
           speedMult = 5.0; 
           warpFactor = 40; 
       } 
-      else if (currentStreak >= 40) { 
-          // PHASE 3: NEBULA/PURPLE (Pushed earlier)
-          baseHue = 'nebula'; 
-          speedMult = 4.5; 
-          warpFactor = 30; 
+      else if (currentStreak >= 35) { 
+          // PHASE 3: DOPPLER SHIFT (Red -> Blue)
+          // Replaces the old plain purple phase.
+          // Stars shift from Red to Blue as they approach.
+          baseHue = 'doppler'; 
+          sat = '100%'; 
+          speedMult = 4.0; 
+          warpFactor = 25; 
       } 
-      else if (currentStreak >= 35) { baseHue = 300; sat = '100%'; speedMult = 4.0; warpFactor = 25; } 
-      else if (currentStreak >= 30) { baseHue = 0; sat = '100%'; speedMult = 3.5; warpFactor = 20; } 
-      else if (currentStreak >= 25) { baseHue = 30; sat = '100%'; speedMult = 3.0; warpFactor = 15; } 
-      else if (currentStreak >= 20) { baseHue = 60; sat = '100%'; speedMult = 2.5; warpFactor = 10; } 
-      else if (currentStreak >= 15) { baseHue = 90; sat = '90%'; speedMult = 2.2; warpFactor = 5; } 
+      else if (currentStreak >= 30) { baseHue = 0; sat = '100%'; speedMult = 3.5; warpFactor = 20; } // Red
+      else if (currentStreak >= 25) { baseHue = 30; sat = '100%'; speedMult = 3.0; warpFactor = 15; } // Orange
+      else if (currentStreak >= 20) { baseHue = 60; sat = '100%'; speedMult = 2.5; warpFactor = 10; } // Yellow
+      else if (currentStreak >= 15) { baseHue = 90; sat = '90%'; speedMult = 2.2; warpFactor = 5; } // Green-ish
       else if (currentStreak >= 10) { baseHue = 150; sat = '90%'; speedMult = 2.0; warpFactor = 2; } 
       else if (currentStreak >= 5) { baseHue = 180; sat = '90%'; speedMult = 1.5; warpFactor = 0; } 
       
@@ -368,8 +370,7 @@ const WormholeEffect = ({ streak, isChronos, isGameOver, failCount }) => {
       
       let bgStyle = `rgba(10, 15, 30, 0.4)`; 
       if (isNegative) {
-         // Updated fade calculation to match new threshold (70)
-         const fade = Math.min(1, (currentStreak - 70) / 10);
+         const fade = Math.min(1, (currentStreak - 60) / 10);
          const r = Math.floor(220 * (1-fade) + 10 * fade);
          const g = Math.floor(240 * (1-fade) + 15 * fade);
          const b = Math.floor(255 * (1-fade) + 30 * fade);
@@ -410,12 +411,7 @@ const WormholeEffect = ({ streak, isChronos, isGameOver, failCount }) => {
       const cx = canvas.width / 2;
       const cy = canvas.height / 2;
       const speed = 2 + (currentStreak * 0.5) * speedMult; 
-      
-      // ROTATION LOGIC UPDATE
-      // Between 50 and 70, spin FAST to create the tunnel effect
-      const rotationSpeed = (currentStreak >= 50 && currentStreak < 70) 
-        ? 0.2 
-        : (currentStreak >= 40 ? 0.05 : 0.0005 + (currentStreak * 0.0002)); 
+      const rotationSpeed = (currentStreak >= 50 && currentStreak < 60) ? 0.05 : 0.0005 + (currentStreak * 0.0002); 
 
       stars.forEach(star => {
         star.z -= speed;
@@ -435,11 +431,17 @@ const WormholeEffect = ({ streak, isChronos, isGameOver, failCount }) => {
 
         let starColor;
         if (isNegative) {
-             const fade = Math.min(1, (currentStreak - 70) / 10);
+             const fade = Math.min(1, (currentStreak - 60) / 10);
              if (fade < 0.5) starColor = `rgba(0, 0, 0, 0.8)`; 
              else starColor = `hsl(210, 80%, 70%)`; 
         } else if (baseHue === 'rainbow') {
             starColor = `hsl(${(star.hueOffset + Date.now() * 0.2) % 360}, 100%, 70%)`;
+        } else if (baseHue === 'doppler') {
+            // DOPPLER LOGIC
+            // z=2000 (far) -> Hue 0 (Red)
+            // z=0 (close) -> Hue 240 (Blue)
+            const hue = 240 - ((star.z / 2000) * 240);
+            starColor = `hsl(${hue}, 100%, 70%)`;
         } else if (baseHue === 'nebula') {
              starColor = `hsl(280, 80%, 80%)`;
         } else {
