@@ -282,7 +282,3745 @@
     { "q": "TR1 form used for transfer.", "a": true, "exp": "Transfer deed." },
     { "q": "Assent must be in writing.", "a": true, "exp": "PRs to beneficiary." },
     { "q": "Land Contract limitation: 6 years.", "a": true, "exp": "Simple contract.", "isTiming": true },
-    { "q": "Deed limitation: 12 years.", "a": true, "exp": "Specialty debt.", "isTiming": true }
+    { "q": "Deed limitation: 12 years.", "a": true, "exp": "Specialty debt.", "isTiming": true },
+    {
+      "q": "A solicitor can act in an 'own interest conflict' if the client consents.",
+      "a": false,
+      "exp": "CCS 6.1 prohibits acting in an own interest conflict with no exceptions.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Firms must have systems to identify conflicts of interest.",
+      "a": true,
+      "exp": "CCF 2.1 requires effective systems to identify conflicts.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "You can act for buyer and seller if they have a 'substantially common interest'.",
+      "a": true,
+      "exp": "CCS 6.2(a) exception applies if conditions (informed consent, safeguards) are met.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A firm can act for two bidders competing for the same asset in a tender.",
+      "a": true,
+      "exp": "CCS 6.2(b) 'Competing for the same objective' exception applies.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "You must verify the identity of a client before the business relationship starts.",
+      "a": true,
+      "exp": "Regulation 30(2) MLR 2017; verification generally occurs before establishment.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Standard CDD requires identifying the client's beneficial owner.",
+      "a": true,
+      "exp": "Regulation 28(2) MLR 2017; beneficial owners must be identified.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Managers of an authorised body are severally liable for compliance.",
+      "a": false,
+      "exp": "Rule 1.2 SRA Accounts Rules; they are 'jointly and severally' responsible.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Client money must be kept separate from the firm's own money.",
+      "a": true,
+      "exp": "Rule 4.1 SRA Accounts Rules.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Acting for a buyer and lender in a residential purchase is usually a conflict.",
+      "a": false,
+      "exp": "Standard mortgage terms usually align interests (Substantially Common Interest).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Enhanced CDD is optional for clients from high-risk third countries.",
+      "a": false,
+      "exp": "Regulation 33(1)(b) MLR 2017 makes Enhanced CDD mandatory.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Simplified CDD allows adjusting the timing of verification.",
+      "a": true,
+      "exp": "Regulation 37(2) MLR 2017 allows adjustment of extent/timing.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Receipt of client money is recorded as a Debit in the Client Ledger.",
+      "a": false,
+      "exp": "It is recorded as a Credit in the Client Ledger (and Debit in Cash Sheet).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Payment of client money is recorded as a Credit in the Cash Sheet.",
+      "a": true,
+      "exp": "Double entry: Debit Client Ledger, Credit Cash Sheet.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A beneficial owner owns more than 20% of a company's shares.",
+      "a": false,
+      "exp": "Regulation 5(1) MLR 2017 sets the threshold at more than 25%.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "Occasional transactions under 1,000 Euros are exempt from CDD.",
+      "a": true,
+      "exp": "Regulation 27(1)(b) MLR 2017 triggers CDD only above 1,000 Euros.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "A solicitor can rely on a third party's CDD without liability.",
+      "a": false,
+      "exp": "Regulation 29; the solicitor remains liable for any failure.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Negotiating a commercial lease for landlord and tenant implies a Substantially Common Interest.",
+      "a": false,
+      "exp": "Negotiation usually involves conflict on key terms; SCI requires strong consensus.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A solicitor acting for a seller must disclose a higher valuation to a buyer client.",
+      "a": true,
+      "exp": "CCS 6.4 duty of disclosure applies unless prohibited by law/confidentiality.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Confidentiality to Client A overrides the duty of disclosure to Client B.",
+      "a": true,
+      "exp": "CCS 6.3/6.4; you cannot disclose confidential info without consent.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Client account bank statements must be obtained every 7 weeks.",
+      "a": false,
+      "exp": "Rule 8.2 SRA Accounts Rules requires statements at least every 5 weeks.",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "Reconciliations of client accounts must be signed off by the COFA or manager.",
+      "a": true,
+      "exp": "Rule 8.3 SRA Accounts Rules.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Issuing a bill of costs creates a Credit entry in the Business Ledger.",
+      "a": false,
+      "exp": "It creates a Debit in the client's Business Ledger (client owes money).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A 'significant risk' of conflict is sufficient to prohibit acting.",
+      "a": true,
+      "exp": "CCS 6.1 and 6.2 apply to actual conflicts and 'significant risk' of them.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Acting for a company and its director always creates a conflict.",
+      "a": false,
+      "exp": "Not always, but requires checking for separate duties/interests.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A solicitor can pay a disbursement before issuing a bill to the client.",
+      "a": true,
+      "exp": "Rule 4.3 applies to transferring money for the *solicitor's* costs, not disbursements.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "'MLRO' stands for Money Laundering Reporting Officer.",
+      "a": true,
+      "exp": "The nominated officer responsible for disclosures under PoCA.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'CDD' stands for Client Due Diligence.",
+      "a": false,
+      "exp": "It stands for 'Customer' Due Diligence (Regulation 27 MLR).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'PEP' stands for Politically Exposed Person.",
+      "a": true,
+      "exp": "Individuals entrusted with prominent public functions.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'CCS' refers to the Code of Conduct for Solicitors.",
+      "a": true,
+      "exp": "Code of Conduct for Solicitors, RELs and RFLs.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'CCF' refers to the Code of Conduct for Firms.",
+      "a": true,
+      "exp": "SRA Code of Conduct for Firms.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'SCI' stands for Substantially Common Interest.",
+      "a": true,
+      "exp": "An exception to conflict of interest under CCS 6.2(a).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'CSO' stands for Competing for the Same Objective.",
+      "a": true,
+      "exp": "An exception to conflict of interest under CCS 6.2(b).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Own Interest Conflict' involves the solicitor's personal interests.",
+      "a": true,
+      "exp": "Conflict between solicitor's interest and client's interest.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Client Money' includes money held as a trustee.",
+      "a": true,
+      "exp": "Rule 2.1(c) SRA Accounts Rules.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Authorised Body' includes recognised sole practices.",
+      "a": true,
+      "exp": "Defined in the SRA Glossary.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'COLP' stands for Compliance Officer for Legal Practice.",
+      "a": true,
+      "exp": "Responsible for firm's compliance with regulatory obligations.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'COFA' stands for Compliance Officer for Finance and Administration.",
+      "a": true,
+      "exp": "Responsible for firm's compliance with Accounts Rules.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Double Entry' requires one Credit and one Debit.",
+      "a": true,
+      "exp": "Fundamental principle of bookkeeping.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Client Ledger' records individual client transactions.",
+      "a": true,
+      "exp": "Separated into client side and business side.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Cash Sheet' records the running total of the bank account.",
+      "a": true,
+      "exp": "Rule 8.1(c) SRA Accounts Rules.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Manager' includes a partner in a partnership.",
+      "a": true,
+      "exp": "SRA Glossary definition of Manager.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Business Relationship' implies an element of duration.",
+      "a": true,
+      "exp": "Regulation 4 MLR 2017.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Occasional Transaction' is outside a business relationship.",
+      "a": true,
+      "exp": "Regulation 3 MLR 2017.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Placement' is the first stage of money laundering.",
+      "a": true,
+      "exp": "Introducing illegal proceeds into the financial system.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Layering' conceals the source of money.",
+      "a": true,
+      "exp": "Moving funds to distance them from the crime.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+    "q": "A buyer can withdraw from a purchase without penalty before exchange of contracts.",
+    "a": true,
+    "exp": "Until exchange, neither party is contractually bound and can withdraw without penalty.",
+    "isTiming": false,
+    "difficulty": 2
+    },
+    {
+      "q": "A seller must disclose physical defects like dry rot to the buyer.",
+      "a": false,
+      "exp": "Under caveat emptor, the seller has no duty to disclose physical defects (Hardy v Griffiths).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Legal title passes to the buyer on the day of completion.",
+      "a": false,
+      "exp": "Legal title passes only upon registration at the Land Registry post-completion.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "The maximum number of legal owners for a property is four.",
+      "a": true,
+      "exp": "There is a maximum number of four legal owners (s.34(2) Trustee Act 1925).",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "A minor (under 18) can be a legal owner of land.",
+      "a": false,
+      "exp": "Legal owners must be over 18.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "Co-owners wishing to leave their share by will must hold as Joint Tenants.",
+      "a": false,
+      "exp": "Joint tenancy includes the right of survivorship; Tenants in Common is required to leave shares by will.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A solicitor can act for both buyer and lender in a standard residential transaction.",
+      "a": true,
+      "exp": "Permitted as there is usually a 'substantially common interest' and standard mortgage terms.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A solicitor can act for both buyer and seller if they agree on the price.",
+      "a": false,
+      "exp": "Price agreement does not constitute 'strong consensus' on all terms; conflict usually exists.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "If confidentiality conflicts with the duty of disclosure, disclosure takes precedence.",
+      "a": false,
+      "exp": "Confidentiality (CCS 6.3) overrides disclosure (CCS 6.4) unless consent is given.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A seller must commission an Energy Performance Certificate (EPC) before marketing.",
+      "a": true,
+      "exp": "The seller must commission an EPC before marketing and provide it free of charge.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Capital Gains Tax is payable on the sale of a main residence.",
+      "a": false,
+      "exp": "Private Residence Relief (PRR) usually exempts the main home from CGT.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Stamp Duty Land Tax (SDLT) is paid by the seller.",
+      "a": false,
+      "exp": "SDLT is paid by the buyer post-completion.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "An interest-only mortgage ensures the capital is repaid at the end of the term.",
+      "a": false,
+      "exp": "Only interest is paid; capital remains outstanding and requires a separate repayment vehicle.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A Basic Valuation survey is sufficient to protect a buyer's interests.",
+      "a": false,
+      "exp": "It is for the lender's benefit; buyers are advised to obtain a Homebuyer or Structural survey.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Solicitors can act for two bidders competing in a tender process.",
+      "a": true,
+      "exp": "The 'Competing for the same objective' exception (CCS 6.2(b)) applies to auctions/tenders.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "If a client discloses mortgage fraud, the solicitor must inform the lender immediately.",
+      "a": false,
+      "exp": "The solicitor must ask for consent; if refused, they must cease acting to avoid breaching confidentiality.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "The 'Own Interest Conflict' rule (CCS 6.1) has exceptions for sophisticated clients.",
+      "a": false,
+      "exp": "There are NO exceptions to the ban on acting with an own interest conflict.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Leading questions are best used to obtain a client's initial account.",
+      "a": false,
+      "exp": "Leading questions restrict detail; open questions are better for obtaining an account.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "An attendance note should be written in the first person.",
+      "a": false,
+      "exp": "It is common to write attendance notes in the third person (e.g., 'BS advised Mr X').",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The deposit paid on exchange is usually 10% of the purchase price.",
+      "a": true,
+      "exp": "The standard deposit paid by the buyer on exchange is 10%.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "VAT is payable on the purchase price of all residential properties.",
+      "a": false,
+      "exp": "Existing residential properties are usually VAT exempt.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Beneficial ownership can be held by a minor.",
+      "a": true,
+      "exp": "Unlike legal ownership, there is no age restriction for beneficial owners.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A Full Structural Survey is recommended for listed buildings.",
+      "a": true,
+      "exp": "It is suitable for listed properties or those with extensive renovations.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A solicitor must verify a client's identity.",
+      "a": true,
+      "exp": "Identity checks are essential to verify the client is who they claim to be.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Parking an issue in an interview means ignoring it completely.",
+      "a": false,
+      "exp": "It means putting it aside to deal with later, and the client should be informed.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "'Caveat Emptor' translates to 'Seller Beware'.",
+      "a": false,
+      "exp": "It translates to 'Buyer Beware'.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Pre-exchange is the stage where most conveyancing work occurs.",
+      "a": true,
+      "exp": "Investigation of title and searches occur pre-exchange.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Exchange of contracts is when the parties become legally bound.",
+      "a": true,
+      "exp": "Neither party can pull out without consequences after exchange.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Completion is when the buyer receives the keys.",
+      "a": true,
+      "exp": "The buyer gets keys and physical possession on completion.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "SDLT stands for Stamp Duty Land Tax.",
+      "a": true,
+      "exp": "The tax paid on land transactions in England.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "LTT stands for Land Transaction Tax.",
+      "a": true,
+      "exp": "The tax paid on land transactions in Wales.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Joint Tenants are viewed as a single entity.",
+      "a": true,
+      "exp": "They collectively own the whole beneficial estate.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Right of Survivorship applies to Tenants in Common.",
+      "a": false,
+      "exp": "It applies to Joint Tenants; Tenants in Common pass shares by will.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Capital Repayment Mortgage pays off the loan principal monthly.",
+      "a": true,
+      "exp": "Borrower repays capital and interest monthly.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Equity Finance involves raising capital by selling shares.",
+      "a": true,
+      "exp": "Public companies may use equity finance for commercial purchases.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "CCS 6.1 deals with Conflict of Interest between clients.",
+      "a": false,
+      "exp": "CCS 6.1 deals with Own Interest Conflict; CCS 6.2 deals with Client Conflict.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "SCI stands for Substantially Common Interest.",
+      "a": true,
+      "exp": "An exception to the conflict rule under CCS 6.2.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "CCS 6.3 imposes a duty of confidentiality.",
+      "a": true,
+      "exp": "You must keep affairs of current and former clients confidential.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "CCS 6.4 imposes a duty of disclosure.",
+      "a": true,
+      "exp": "You must make the client aware of all material information.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A leading question can be answered with a 'yes' or 'no'.",
+      "a": true,
+      "exp": "Leading questions suggest the answer and allow simple confirmation.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Open questions typically begin with 'who', 'what', 'where', or 'how'.",
+      "a": true,
+      "exp": "They provoke narrative answers and do not limit scope.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Attendance notes should record the date and time engaged.",
+      "a": true,
+      "exp": "Date, fee earner, client, and time engaged are key elements.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "VAT is a tax on goods and services.",
+      "a": true,
+      "exp": "Value Added Tax applies to certain property transactions.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Capital Gains Tax (CGT) is a tax on profit from selling assets.",
+      "a": true,
+      "exp": "Tax on the gain in value of assets like land.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A Homebuyer Report is less detailed than a Basic Valuation.",
+      "a": false,
+      "exp": "A Homebuyer Report is *more* detailed than a Basic Valuation.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A sole surviving tenant in common can give a valid receipt for capital money.",
+      "a": false,
+      "exp": "A second trustee must be appointed to overreach beneficial interests (s.27 LPA 1925).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A conveyance dated 1985 must be sealed to be a valid deed.",
+      "a": true,
+      "exp": "Pre-1990 deeds required sealing; LP(MP)A 1989 abolished this for individuals.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "A root of title conveyance dated 1 December 1990 triggers compulsory first registration.",
+      "a": true,
+      "exp": "1 Dec 1990 was the trigger date for all sales to be registered.",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "If a restrictive covenant is not registered as a D(ii) Land Charge, it binds a buyer for value.",
+      "a": false,
+      "exp": "Unregistered land charges are void against a purchaser for money or money's worth (s.4 LCA 1972).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Positive covenants in the Charges Register are automatically binding on a buyer.",
+      "a": false,
+      "exp": "Positive covenants do not run with the land; they bind via a chain of indemnity.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A buyer should accept a root of title that refers to an earlier plan not included.",
+      "a": false,
+      "exp": "The description must be adequate; missing plans cast doubt on the extent of the land.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Possessory title can be upgraded to Absolute title immediately upon registration.",
+      "a": false,
+      "exp": "Usually requires a period of time without adverse claims (e.g., 12 years) to upgrade.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "A surviving joint tenant needs to appoint a second trustee to sell the property.",
+      "a": false,
+      "exp": "Survivorship applies; the survivor becomes the sole legal and beneficial owner.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "An assent by personal representatives can be a good root of title.",
+      "a": false,
+      "exp": "It is not a disposition for value, so it does not prove 15 years of ownership investigation.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A puisne mortgage (second mortgage) in unregistered land is protected by keeping the title deeds.",
+      "a": false,
+      "exp": "Only the first mortgagee holds deeds; puisne mortgages must be registered as C(i) Land Charges.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Insurance is the first option for a restrictive covenant breach where the PWB is known.",
+      "a": false,
+      "exp": "Insurance usually requires no contact with the Person With Benefit (PWB).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A conveyance transferring 'beneficial title only' is a good root of title.",
+      "a": false,
+      "exp": "A good root must deal with both legal and beneficial title.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A Form K15 search should be made against the seller's full name for their period of ownership.",
+      "a": true,
+      "exp": "Land Charges searches are name-based and period-specific.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Specific performance is available to enforce a positive covenant against a successor in title.",
+      "a": false,
+      "exp": "Burden of positive covenants does not run with the land (Rhone v Stephens).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A 'Particulars Delivered' stamp is required for a conveyance dated 1920.",
+      "a": false,
+      "exp": "PD stamps are required for conveyances after 1931.",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "Buying a property with 'Good Leasehold Title' requires no further investigation.",
+      "a": false,
+      "exp": "The landlord's title to grant the lease has not been proven; risk of eviction exists.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A restriction in the proprietorship register always indicates a tenancy in common.",
+      "a": false,
+      "exp": "Restrictions can also relate to mortgages or other consents.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "If a deed is not validly stamped, it cannot be used in evidence.",
+      "a": true,
+      "exp": "Stamp Act 1891; unstamped documents are inadmissible in civil courts.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "An Index Map Search (SIM) reveals the owner of unregistered land.",
+      "a": false,
+      "exp": "SIM only reveals if land is registered or unregistered; it does not name unregistered owners.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A buyer is bound by an overriding interest even if not mentioned in the contract.",
+      "a": true,
+      "exp": "Overriding interests (Sch 3 LRA 2002) bind without registration.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A gift of land triggers compulsory first registration.",
+      "a": true,
+      "exp": "Since April 1998, gifts trigger registration.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "A chain of indemnity is required for a restrictive covenant to bind a successor.",
+      "a": false,
+      "exp": "Restrictive covenants run with the land in equity (Tulk v Moxhay).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A statutory declaration can cure a defect in a root of title description.",
+      "a": true,
+      "exp": "Used to provide evidence of long usage or boundary clarification.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Under the 1989 Act, a witness must be present when the individual signs the deed.",
+      "a": true,
+      "exp": "s.1(3) LP(MP)A 1989 requires attestation by a witness.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A mortgage discharged by a receipted vacate does not need to be in the epitome.",
+      "a": false,
+      "exp": "Post-root mortgages must be included to prove discharge.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The Property Register describes the physical extent of the property.",
+      "a": true,
+      "exp": "It refers to the title plan and describes the land.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "The Proprietorship Register names the current legal owners.",
+      "a": true,
+      "exp": "It identifies the registered proprietor.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "The Charges Register lists rights benefitting the property.",
+      "a": false,
+      "exp": "It lists burdens (mortgages, covenants); benefits are in the Property Register.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Title Absolute is the best class of title.",
+      "a": true,
+      "exp": "Indicates the Land Registry is satisfied with the title ownership.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Qualified Title indicates a specific defect in the title.",
+      "a": true,
+      "exp": "Granted when the Registrar cannot guarantee a specific aspect.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Possessory Title is often granted for adverse possession.",
+      "a": true,
+      "exp": "Based on physical occupation rather than deeds.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Good Leasehold Title guarantees the landlord's right to grant the lease.",
+      "a": false,
+      "exp": "It means the landlord's title was not produced/inspected.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A root of title must be at least 15 years old.",
+      "a": true,
+      "exp": "s.44 Law of Property Act 1925.",
+      "isTiming": true,
+      "difficulty": 1
+    },
+    {
+      "q": "An Epitome of Title is a summary of unregistered title documents.",
+      "a": true,
+      "exp": "Used to deduce title in unregistered land.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Class C(i) Land Charge protects a puisne mortgage.",
+      "a": true,
+      "exp": "A legal mortgage not protected by deposit of deeds.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Class D(ii) Land Charge protects a restrictive covenant.",
+      "a": true,
+      "exp": "Post-1925 restrictive covenants in unregistered land.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Class D(iii) Land Charge protects an equitable easement.",
+      "a": true,
+      "exp": "Created post-1925 in unregistered land.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Class F Land Charge protects matrimonial home rights.",
+      "a": true,
+      "exp": "Family Law Act 1996 rights for non-owning spouse.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Overreaching detaches beneficial interests from the land.",
+      "a": true,
+      "exp": "Interests attach to the purchase money instead.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Caveat Emptor means 'Seller Beware'.",
+      "a": false,
+      "exp": "It means 'Buyer Beware'.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A Deed must be signed, witnessed, and delivered.",
+      "a": true,
+      "exp": "s.1 Law of Property (Miscellaneous Provisions) Act 1989.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "SIM stands for Search of the Index Map.",
+      "a": true,
+      "exp": "Checks if land is registered or unregistered.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Ad valorem stamp duty is based on the value of the transaction.",
+      "a": true,
+      "exp": "Historic tax replaced by SDLT.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A restriction prevents a disposition without compliance.",
+      "a": true,
+      "exp": "Appears in the Proprietorship Register (e.g., 'No disposition by a sole proprietor').",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A chain of indemnity protects against positive covenants.",
+      "a": true,
+      "exp": "Ensures the seller is covered if sued by the original covenantee.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Joint Tenants hold the property as a single entity.",
+      "a": true,
+      "exp": "The 'four unities' apply.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Tenants in Common have distinct indivisible shares.",
+      "a": true,
+      "exp": "Can leave their share by will.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A Power of Attorney allows someone to sign deeds for another.",
+      "a": true,
+      "exp": "Must be included in the epitome if used for a root deed.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "The 'Right of Survivorship' applies to Tenancies in Common.",
+      "a": false,
+      "exp": "It applies only to Joint Tenancies.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Building works affecting only the interior always require planning permission.",
+      "a": false,
+      "exp": "Internal works are generally not 'development' under s.55 TCPA 1990.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "An Article 4 Direction restricts rights under the General Permitted Development Order.",
+      "a": true,
+      "exp": "It removes permitted development rights, requiring express planning permission.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "In England, the time limit for building regulations enforcement notices is 12 months.",
+      "a": false,
+      "exp": "Under BSA 2022, the limit in England is 10 years (it is 1 year in Wales).",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "A local authority has unlimited time to prosecute for building regulations breaches in England.",
+      "a": true,
+      "exp": "Changes under the Building Safety Act 2022 removed the 2-year limit.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A change of use from a betting shop to a restaurant requires planning permission.",
+      "a": true,
+      "exp": "Betting shops are 'Sui Generis'; changes to/from usually require permission.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "The LLC1 search reveals pending planning applications.",
+      "a": false,
+      "exp": "LLC1 reveals granted charges; CON29 reveals pending applications.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A Highways Search is required if the property does not abut the public highway.",
+      "a": true,
+      "exp": "Needed to verify access rights if boundaries do not touch adoption lines.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A solicitor paying a disbursement as 'agent' must use client money.",
+      "a": true,
+      "exp": "Agency method requires using funds held for the client (Rule 2.1 SRA Accounts Rules).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "When paying a disbursement as 'principal', VAT is recorded in the Client Ledger.",
+      "a": false,
+      "exp": "VAT is recorded in the VAT Account and Business Cash Sheet (Principal method).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A seller answering 'not so far as seller is aware' implies reasonable investigations were made.",
+      "a": true,
+      "exp": "This is an implied assertion that records were checked (William Sindall v Cambridgeshire).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Listed Building Consent is required for internal alterations to a listed property.",
+      "a": true,
+      "exp": "Listed status covers the whole building, interior and exterior.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Demolishing an unlisted building in a conservation area in England needs planning permission.",
+      "a": true,
+      "exp": "Conservation area consent was abolished in England; planning permission is now required.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A Coal Mining Search (CON29M) is mandatory for all UK properties.",
+      "a": false,
+      "exp": "Only required if the property is in a designated coal mining area.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Common Land enquiries are part of the standard CON29 search.",
+      "a": false,
+      "exp": "Common Land is Enquiry 22 on the optional CON29O form.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A Report on Title should exclude limitations on the solicitor's liability.",
+      "a": false,
+      "exp": "It should explicitly state limitations (e.g., physical condition not inspected).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Under the Protocol, a buyer's solicitor can raise enquiries about the building's state indiscriminately.",
+      "a": false,
+      "exp": "Enquiries must be specific to issues arising from searches/surveys.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Breach of planning condition (England, pre-2024) has a 10-year enforcement period.",
+      "a": true,
+      "exp": "Breach of condition or use (other than dwelling) was 10 years (s.171B TCPA 1990).",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "A Regularisation Certificate authorises future building works.",
+      "a": false,
+      "exp": "It is retrospective consent for works already completed without approval.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Tree Preservation Orders are revealed by the CON29 search.",
+      "a": false,
+      "exp": "TPOs are local land charges revealed by the LLC1 search.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A Chancel Repair search is unnecessary if the property is unregistered.",
+      "a": false,
+      "exp": "Liability can still exist; a search or insurance is recommended.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Desktop Environmental Searches assess flood risk based on historical data.",
+      "a": true,
+      "exp": "It uses datasets to predict risk without a site inspection.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The 4-year planning enforcement rule applies to all breaches in Wales.",
+      "a": false,
+      "exp": "It applies to building works and change to single dwelling house only.",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "A seller can rely on an exclusion clause for fraudulent misrepresentation.",
+      "a": false,
+      "exp": "Liability for fraud or recklessness cannot be excluded (SCS 7.1.1 / SCPC 10.1).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "SIM search reveals the owner of the property.",
+      "a": false,
+      "exp": "SIM only reveals if land is registered/unregistered and title numbers.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Companies House searches have a priority period of 21 days.",
+      "a": false,
+      "exp": "Company searches have no priority period; they reflect the register at that moment.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "LLC1 stands for Local Land Charges Search.",
+      "a": true,
+      "exp": "Search of the Local Land Charges Register.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "CON29 refers to Standard Enquiries of the Local Authority.",
+      "a": true,
+      "exp": "Standard form for planning, building regs, and road adoption info.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "TA6 is the Property Information Form.",
+      "a": true,
+      "exp": "Standard protocol form for residential sellers.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "TA10 is the Leasehold Information Form.",
+      "a": false,
+      "exp": "TA10 is Fittings and Contents; TA7 is Leasehold Information.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "CPSE stands for Commercial Property Standard Enquiries.",
+      "a": true,
+      "exp": "Standard enquiries used in commercial transactions.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "GPDO stands for General Permitted Development Order.",
+      "a": true,
+      "exp": "Grants automatic planning permission for certain classes of development.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Sui Generis uses belong to a specific Use Class.",
+      "a": false,
+      "exp": "Sui Generis means 'of its own kind' and falls outside use classes.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Use Class E covers Commercial, Business and Service.",
+      "a": true,
+      "exp": "Broad class introduced in 2020 including retail, offices, and cafes.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Use Class C3 covers Hotels.",
+      "a": false,
+      "exp": "C3 covers Dwelling Houses; C1 covers Hotels.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A Conservation Area preserves special architectural interest.",
+      "a": true,
+      "exp": "Designated by local authority to preserve character.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Building Regulations ensure the structural safety of buildings.",
+      "a": true,
+      "exp": "Statutory instruments governing construction standards and safety.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "NLIS stands for National Land Information Service.",
+      "a": true,
+      "exp": "The electronic portal for ordering searches.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "SIM stands for Search of the Index Map.",
+      "a": true,
+      "exp": "Used to establish if land is registered or unregistered.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "CQS stands for Conveyancing Quality Scheme.",
+      "a": true,
+      "exp": "Law Society accreditation that requires use of the Protocol.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Caveat Emptor places the burden of investigation on the seller.",
+      "a": false,
+      "exp": "It places the burden on the BUYER ('Buyer Beware').",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Report on Title is addressed to the seller.",
+      "a": false,
+      "exp": "It is addressed to the buyer (client) explaining investigations.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "CCS 6.4 requires disclosing material information to the client.",
+      "a": true,
+      "exp": "Duty to make client aware of all material info known to the solicitor.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Enforcement Notice is a remedy for breach of planning control.",
+      "a": true,
+      "exp": "Requires land to be restored or conditions complied with.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Stop Notice can prohibit use as a dwelling house.",
+      "a": false,
+      "exp": "Stop notices cannot prohibit use as a dwelling house.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Regularisation Certificate applies to unauthorised planning works.",
+      "a": false,
+      "exp": "It applies to unauthorised *building regulations* works.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Input Tax is VAT paid on goods and services obtained.",
+      "a": true,
+      "exp": "Tax paid by a business to suppliers.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Output Tax is VAT charged on supplies made.",
+      "a": true,
+      "exp": "Tax collected by a business from customers.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "FENSA is a self-certification scheme for windows.",
+      "a": true,
+      "exp": "Fenestration Self-Assessment Scheme for building regs compliance.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Japanese Knotweed is an invasive plant species.",
+      "a": true,
+      "exp": "Can cause structural damage; addressed in Form TA6.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "CON29O contains optional enquiries.",
+      "a": true,
+      "exp": "Optional questions like common land or pipelines.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A solicitor acts for both buyer and lender in a residential purchase; if the buyer reveals a discrepancy in the price, the solicitor must always disclose it to the lender.",
+      "a": true,
+      "exp": "Solicitor has a duty to disclose material information to the lender client (CCS 6.4); if the buyer refuses consent, the solicitor must cease acting.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Under the Standard Conditions of Sale (SCS), the risk of damage to the property passes to the buyer on completion.",
+      "a": false,
+      "exp": "Risk passes to the buyer on exchange of contracts (SCS 5.1).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "In a commercial transaction using SCPC, the property is deemed to be a standard-rated supply for VAT by default.",
+      "a": true,
+      "exp": "SCPC Condition 2 provides that the property is a standard-rated supply unless altered by special condition.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A seller giving 'Limited Title Guarantee' warrants that the property is free from all incumbrances.",
+      "a": false,
+      "exp": "Limited guarantee warrants only that the seller has not created incumbrances during their period of ownership.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "If a deposit is held as 'agent', the seller can demand the money immediately after exchange.",
+      "a": true,
+      "exp": "An agent holds the money for the seller; a stakeholder cannot release it until completion.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Under Law Society Formula B, the exchange becomes binding when the telephone conversation ends.",
+      "a": true,
+      "exp": "Binding contracts are created at the moment the solicitors agree to the exchange over the phone.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A contract for the sale of land signed by only one party is valid if the other party performs.",
+      "a": false,
+      "exp": "s.2 LP(MP)A 1989 requires the contract to be signed by or on behalf of all parties.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Under SCPC, a buyer is deemed to have knowledge of incumbrances revealed by pre-contract searches they failed to make.",
+      "a": true,
+      "exp": "SCPC 4.1.2 deems the buyer to buy subject to matters a 'prudent buyer' would have discovered.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A seller of an old commercial building (over 3 years) must charge VAT if they have opted to tax.",
+      "a": true,
+      "exp": "The option to tax converts an exempt supply into a standard-rated supply.",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "Law Society Formula A is used when one solicitor holds both parts of the contract.",
+      "a": true,
+      "exp": "Used where one solicitor holds both signed contracts (e.g., the other is away).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "If a buyer fails to complete by the contract time, time automatically becomes 'of the essence'.",
+      "a": false,
+      "exp": "Time is not of the essence until a Notice to Complete is served (SCS 6.1.1 / SCPC 9.1.1).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A 'chain' transaction should use Law Society Formula B with a release of the contract.",
+      "a": true,
+      "exp": "The 'release' method ties the transactions together to ensure simultaneous exchange.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A buyer of a new commercial property (under 3 years old) must pay VAT.",
+      "a": true,
+      "exp": "The sale of new commercial freehold buildings is standard-rated.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "Under the Standard Conditions of Sale, the deposit must be paid by solicitor's client account cheque or electronic means.",
+      "a": true,
+      "exp": "SCS 2.2.4; personal cheques are not permitted (unlike older editions).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A seller acting as an administrator usually gives 'Full Title Guarantee'.",
+      "a": false,
+      "exp": "Administrators/Liquidators typically give 'No Title Guarantee' as they have no personal knowledge.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The 'Contract Rate' determines the interest payable for late completion.",
+      "a": true,
+      "exp": "SCS 1.1.1(e); if unspecified, the Law Society interest rate applies.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A special condition is required to make a positive covenant enforceable against a buyer.",
+      "a": true,
+      "exp": "The seller requires an indemnity covenant from the buyer to maintain the chain of indemnity.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "If the deposit is 5%, the seller can never claim the full 10% on buyer default.",
+      "a": false,
+      "exp": "Standard conditions usually allow the seller to claim the balance of the 10% if the buyer defaults.",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "The CLLS Certificate of Title allows the solicitor to qualify statements with disclosures.",
+      "a": true,
+      "exp": "The solicitor must disclose exceptions to the standard statements (e.g., missing planning).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A Transfer of a Going Concern (TOGC) attracts VAT at 20%.",
+      "a": false,
+      "exp": "A qualifying TOGC is outside the scope of VAT (effectively tax-free).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "The Standard Conditions of Sale default completion time is 1:00 pm.",
+      "a": false,
+      "exp": "The default time is 2:00 pm (SCS 6.1.2).",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "An oral agreement to sell land is valid if there is part performance.",
+      "a": false,
+      "exp": "s.2 LP(MP)A 1989 abolished part performance; contracts must be in writing.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A solicitor giving an undertaking to send the deposit must have the funds in their account.",
+      "a": true,
+      "exp": "Solicitors cannot give an undertaking they cannot perform (misconduct).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "In a residential sale, the purchase price is inclusive of VAT under SCS.",
+      "a": true,
+      "exp": "SCS 1.4.1; the price is deemed to include VAT (if any).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The 'Occupier's Consent' special condition is used to override beneficial interests.",
+      "a": true,
+      "exp": "Adult occupiers sign to waive rights and agree to vacate, ensuring vacant possession.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "s.2 Law of Property (Miscellaneous Provisions) Act 1989 governs land contracts.",
+      "a": true,
+      "exp": "Requires writing, incorporation of all terms, and signatures of both parties.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "SCS stands for Standard Conditions of Sale.",
+      "a": true,
+      "exp": "Standard terms used primarily for residential property transactions.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "SCPC stands for Standard Commercial Property Conditions.",
+      "a": true,
+      "exp": "Standard terms used primarily for commercial property transactions.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A 'Stakeholder' holds the deposit for both parties.",
+      "a": true,
+      "exp": "Money cannot be released to the seller until completion.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Full Title Guarantee implies the seller has the right to sell.",
+      "a": true,
+      "exp": "Also implies the property is free from undisclosed charges/incumbrances.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Limited Title Guarantee is typically given by Executors.",
+      "a": true,
+      "exp": "Reflects their limited knowledge of the property's history.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "An 'Undertaking' is a binding professional promise made by a solicitor.",
+      "a": true,
+      "exp": "Failure to fulfill an undertaking is professional misconduct.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Formula B involves exchange of contracts by telephone.",
+      "a": true,
+      "exp": "The most common method where solicitors hold their own client's signed contract.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Formula C is used for 'chain' transactions.",
+      "a": true,
+      "exp": "Designed to synchronise exchange across multiple linked transactions.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A 'Certificate of Title' confirms the property is good security for the lender.",
+      "a": true,
+      "exp": "Solicitor certifies the title is marketable and valid.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "CLLS stands for City of London Law Society.",
+      "a": true,
+      "exp": "Produces the long-form Certificate of Title for commercial lending.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "VAT 'Output Tax' is charged on sales.",
+      "a": true,
+      "exp": "Tax collected by a business on its supplies.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "VAT 'Input Tax' is paid on purchases.",
+      "a": true,
+      "exp": "Tax paid by a business on goods/services it buys.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "An 'Exempt Supply' attracts no VAT.",
+      "a": true,
+      "exp": "E.g., most residential property/insurance; input tax cannot be reclaimed.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A 'Zero-Rated Supply' is taxable at 0%.",
+      "a": true,
+      "exp": "E.g., new residential builds; allows input tax recovery.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Caveat Emptor' applies to the physical condition of the property.",
+      "a": true,
+      "exp": "Buyer beware; seller generally has no duty to disclose physical defects.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A 'Special Condition' amends the standard conditions.",
+      "a": true,
+      "exp": "Tailored clauses to suit the specific transaction.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Contra Proferentem' construes ambiguity against the drafter.",
+      "a": true,
+      "exp": "Interpretation rule for contracts.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Vacant Possession' means the property is empty of people and chattels.",
+      "a": true,
+      "exp": "Standard requirement on completion unless sold subject to tenancy.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Indemnity Covenant' protects the seller against future liability.",
+      "a": true,
+      "exp": "Buyer agrees to observe positive covenants and cover the seller's loss.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Engrossment' is the final version of the document for signing.",
+      "a": true,
+      "exp": "The agreed text printed on durable paper (traditionally).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Ejusdem Generis' limits general words to the same kind as specific words.",
+      "a": true,
+      "exp": "Interpretation rule (e.g., 'cats, dogs and other animals' excludes tigers).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A 'Recital' sets out the background to a deed.",
+      "a": true,
+      "exp": "Usually starts with 'Whereas'; aids interpretation but is not operative.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Time is of the essence' means late performance is a breach allowing termination.",
+      "a": true,
+      "exp": "Only applies if expressly stated or Notice to Complete is served.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "The 'Option to Tax' makes a commercial property VAT standard-rated.",
+      "a": true,
+      "exp": "Voluntary election by the owner to charge VAT on rents/sale.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Under the Code for Completion by Post, the seller's solicitor acts as agent for the buyer's solicitor on completion.",
+      "a": true,
+      "exp": "The seller's solicitor acts as agent for the buyer's solicitor (Source: 4996).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The priority period for an OS1 search is 30 calendar days.",
+      "a": false,
+      "exp": "The priority period is 30 *working* days (Source: 4815).",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "Failure to register a company charge within 21 days makes the charge void against a liquidator.",
+      "a": true,
+      "exp": "It must be registered at Companies House within 21 days of creation (Source: 5248).",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "SDLT must be paid within 30 days of completion.",
+      "a": false,
+      "exp": "SDLT must be paid within 14 days; LTT (Wales) is 30 days (Source: 5235, 5244).",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "A buyer's solicitor must carry out a bankruptcy search (K16) against a corporate borrower.",
+      "a": false,
+      "exp": "K16 is for individuals; a Company Search is used for corporate borrowers (Source: 4852).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "First registration of unregistered land must occur within 2 months of completion.",
+      "a": true,
+      "exp": "If missed, the transaction becomes void (Source: 5310).",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "Under the Standard Conditions of Sale, time is of the essence from the date of exchange.",
+      "a": false,
+      "exp": "Time is not of the essence until a Notice to Complete is served (Source: 5142).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A Notice to Complete gives the parties 10 working days to complete.",
+      "a": true,
+      "exp": "Once served, parties must complete within 10 working days (Source: 5146).",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "The date in Panel 3 of the TR1 transfer deed should be inserted before execution.",
+      "a": false,
+      "exp": "Panel 3 is left blank and dated on completion (Source: 4603).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Contractual compensation for delayed completion under SCS is calculated using the Law Society interest rate.",
+      "a": true,
+      "exp": "Unless a different contract rate is specified (Source: 5115).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "If a buyer fails to complete, the seller can immediately rescind the contract.",
+      "a": false,
+      "exp": "The seller must serve a Notice to Complete and wait for it to expire (Source: 5142).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A transfer of a portfolio of titles uses form TR5.",
+      "a": true,
+      "exp": "TR5 is used for portfolio transfers; TR1 for whole titles (Source: 4586).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A transferee must execute the TR1 if they are entering into a new covenant.",
+      "a": true,
+      "exp": "Execution is required if the buyer gives an indemnity covenant or declaration of trust (Source: 4647).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Land Charges searches (K15) confer a priority period of 30 working days.",
+      "a": false,
+      "exp": "They confer a priority period of 15 working days (Source: 4820).",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "Under the Code for Completion by Post, the seller's solicitor undertakes to redeem the mortgage.",
+      "a": true,
+      "exp": "Undertaking to redeem (pay off), not strictly to discharge (Source: 4937).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Private Residence Relief (PRR) applies if the property was used exclusively for business.",
+      "a": false,
+      "exp": "PRR is for main homes; business use excludes relief (Source: 5616).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "VAT is payable on the sale of a commercial property more than 3 years old without an option to tax.",
+      "a": false,
+      "exp": "It is an exempt supply unless the seller opts to tax (Source: 9256).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "In the principal method of accounting for disbursements, VAT is recorded in the client ledger.",
+      "a": false,
+      "exp": "VAT is recorded in the VAT account and business cash sheet (Source: 8137).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A seller's solicitor can release a deposit held as stakeholder before completion.",
+      "a": false,
+      "exp": "Stakeholder deposits must be held until completion (Source: 9041).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The time for completion under the Standard Conditions of Sale is 1:00 pm.",
+      "a": false,
+      "exp": "The standard time is 2:00 pm (Source: 5148).",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "An OS2 search is used for a lease of part.",
+      "a": true,
+      "exp": "OS2 searches part of a registered title (Source: 4813).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Capital Gains Tax is charged on the total sale proceeds.",
+      "a": false,
+      "exp": "It is charged on the *gain* (disposal value minus acquisition/allowable costs) (Source: 5597).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A company executes a deed by the signature of one director in the presence of a witness.",
+      "a": true,
+      "exp": "s.44 Companies Act 2006; allows single director + witness (Source: 4678).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The buyer's solicitor sends the completion monies to the seller's lender directly.",
+      "a": false,
+      "exp": "Money is sent to the seller's solicitor, who undertakes to redeem the mortgage (Source: 4954).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Receipt of mortgage funds from a lender client is a Credit to the Client Ledger.",
+      "a": true,
+      "exp": "Client money received: Credit Client Ledger, Debit Cash Sheet (Source: 5783).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "TR1 is the form for Transfer of Whole.",
+      "a": true,
+      "exp": "Transfer of whole registered title (Source: 4584).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "TP1 is the form for Transfer of Part.",
+      "a": true,
+      "exp": "Used when selling part of a title (Source: 4585).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "OS1 is an Official Search of Whole.",
+      "a": true,
+      "exp": "Protects priority for the whole title (Source: 4813).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "DS1 is a form to discharge a registered charge.",
+      "a": true,
+      "exp": "Used to remove a mortgage from the register (Source: 4939).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "AP1 is the application form to change the register.",
+      "a": true,
+      "exp": "Used for registered land post-completion (Source: 5261).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "FR1 is the application form for First Registration.",
+      "a": true,
+      "exp": "Used for unregistered land (Source: 5271).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "SDLT stands for Stamp Duty Land Tax.",
+      "a": true,
+      "exp": "Tax on land transactions in England (Source: 5232).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "LTT stands for Land Transaction Tax.",
+      "a": true,
+      "exp": "Tax on land transactions in Wales (Source: 5239).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "TA13 is the form for Completion Information and Undertakings.",
+      "a": true,
+      "exp": "Standard Law Society form for requisitions (Source: 4916).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "K16 is a Bankruptcy Search.",
+      "a": true,
+      "exp": "Carried out against individual borrowers (Source: 4852).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A Solvency Search checks for company liquidation.",
+      "a": true,
+      "exp": "Carried out against corporate parties (Source: 4853).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Engrossment means the final version of a document for signing.",
+      "a": true,
+      "exp": "Printing the agreed text for execution (Source: 4697).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "CGT stands for Capital Gains Tax.",
+      "a": true,
+      "exp": "Tax on profit from disposing of assets (Source: 5553).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Rescission puts parties back in their pre-contract position.",
+      "a": true,
+      "exp": "Setting aside the contract (Source: 5139).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Double Entry requires one Credit and one Debit.",
+      "a": true,
+      "exp": "Fundamental accounting principle (Source: 5673).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Attestation Clause is where a witness signs.",
+      "a": true,
+      "exp": "Formalities for executing a deed (Source: 4643).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Telegraphic Transfer (TT) is a method of bank transfer.",
+      "a": true,
+      "exp": "Used to send completion monies (Source: 5035).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Redemption Statement shows the amount to pay off a mortgage.",
+      "a": true,
+      "exp": "Obtained from the lender before completion (Source: 5028).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Indemnity Covenant protects the seller against positive covenants.",
+      "a": true,
+      "exp": "Chain of indemnity (Source: 4639).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Certificate of Title confirms good title to the lender.",
+      "a": true,
+      "exp": "Request for drawdown of funds (Source: 4565).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A legal lease for exactly three years must be created by deed.",
+      "a": false,
+      "exp": "A tenancy of 3 years or under may be created in writing or orally (s.54(2) LPA 1925).",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "An agreement for lease is necessary in every commercial lease transaction.",
+      "a": false,
+      "exp": "It is only needed if parties want to bind themselves before they are ready to complete (e.g., construction pending).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "In a rent review, the tenant's voluntary improvements should be disregarded.",
+      "a": true,
+      "exp": "It is unfair for the tenant to pay higher rent for value they created (Hypothetical Lease terms).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Under the Code for Leasing Business Premises, producing written heads of terms is mandatory.",
+      "a": true,
+      "exp": "Mandatory requirement for RICS members/regulated firms under the 2020 Code.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A tenant taking a lease of a new building should exclude 'inherent defects' from their repairing obligation.",
+      "a": true,
+      "exp": "Tenants should not pay for structural/design faults in new builds.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "In a lease of part, the tenant is directly responsible for repairing the building's structure.",
+      "a": false,
+      "exp": "The landlord repairs the structure/common parts and recovers costs via service charge.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A lease of 5 years must be registered at the Land Registry.",
+      "a": false,
+      "exp": "Only leases granted for more than 7 years must be registered.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "If a rent review is late, the new rent is backdated to the review date.",
+      "a": true,
+      "exp": "The tenant must pay the difference plus interest for the delay period.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "An 'upwards only' rent review allows the rent to decrease if market rates fall.",
+      "a": false,
+      "exp": "The rent remains the same if the market rate is lower than the current rent.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A tenant on a 6-month lease of a dilapidated warehouse should accept a full repairing obligation.",
+      "a": false,
+      "exp": "A qualified repairing obligation (limited to a schedule of condition) is appropriate for short terms/poor states.",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "The 'hypothetical lease' assumes the landlord has complied with all their covenants.",
+      "a": false,
+      "exp": "Assuming landlord compliance is unfair to the tenant if the actual building is neglected.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A landlord's solicitor acting for an RICS member must ignore the Code for Leasing Business Premises.",
+      "a": false,
+      "exp": "Solicitors should be familiar with the Code as their client/agent may be bound by it.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Pre-completion searches for a lease grant include an OS1 if the landlord's title is registered.",
+      "a": true,
+      "exp": "OS1 (whole) or OS2 (part) gives a priority period for registration.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A 'turnover rent' is based on the retail prices index.",
+      "a": false,
+      "exp": "Turnover rent is based on the tenant's business revenue at the property.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "In a lease of whole, the tenant usually pays the insurance premium directly to the insurer.",
+      "a": false,
+      "exp": "The landlord insures and recovers the cost from the tenant as 'insurance rent'.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The landlord executes the Counterpart Lease.",
+      "a": false,
+      "exp": "The landlord executes the Original; the tenant executes the Counterpart.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "SDLT on a new lease is calculated based on the Net Present Value of the rent.",
+      "a": true,
+      "exp": "Commercial lease SDLT involves a complex formula converting rent to a capital figure.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "The Code for Leasing Business Premises applies to agricultural holdings.",
+      "a": false,
+      "exp": "It applies to commercial business premises (exemptions include short lets/agricultural).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A 'stepped rent' increases annually by a fixed percentage.",
+      "a": false,
+      "exp": "Stepped rent is fixed at specific amounts for specific periods (e.g., £25k yr 1, £30k yr 2).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "If a tenant carries out works required by law, this is disregarded on rent review.",
+      "a": false,
+      "exp": "Disregards usually apply to voluntary improvements, not those required by lease obligations.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A licence to occupy grants exclusive possession.",
+      "a": false,
+      "exp": "Exclusive possession is the hallmark of a lease, distinguishing it from a licence.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "An unrepresented tenant must be advised about the existence of the Code for Leasing Business Premises.",
+      "a": true,
+      "exp": "Mandatory requirement for RICS members dealing with unrepresented parties.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The 'Contractual Term' is the duration for which the lease is granted.",
+      "a": true,
+      "exp": "It must be a determinate period (e.g., 10 years).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A lease of part usually requires an OS2 search.",
+      "a": true,
+      "exp": "OS2 is the specific priority search for part of a registered title.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "An 'Anchor Tenant' usually has weak negotiating power.",
+      "a": false,
+      "exp": "Anchor tenants (e.g., major department stores) have strong power as they attract others.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "FRI stands for Full Repairing and Insuring.",
+      "a": true,
+      "exp": "The standard form of commercial lease where the tenant bears all costs.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "The 'Reversion' is the interest held by the landlord.",
+      "a": true,
+      "exp": "The interest subject to the lease that returns to the landlord at the end.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Exclusive Possession' allows a tenant to exclude the landlord.",
+      "a": true,
+      "exp": "Subject to limited rights of entry (e.g., inspection).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Covenant Strength' refers to a tenant's financial ability to comply with obligations.",
+      "a": true,
+      "exp": "Crucial for institutional investors assessing value.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A 'Rent Deposit' deed documents money held as security.",
+      "a": true,
+      "exp": "Used when a tenant has poor covenant strength.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Heads of Terms' are the agreed commercial principles of the deal.",
+      "a": true,
+      "exp": "Subject to contract document used to draft the lease.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "An 'Agreement for Lease' is a contract to grant a lease in the future.",
+      "a": true,
+      "exp": "Used when conditions (e.g., planning, construction) must be met first.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Counterpart Lease' is the copy signed by the tenant.",
+      "a": true,
+      "exp": "Held by the landlord; the Original is signed by the landlord and held by the tenant.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Engrossment' is the final version of the lease printed for signature.",
+      "a": true,
+      "exp": "The agreed legal document ready for execution.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Apportionment' calculates rent for a partial period.",
+      "a": true,
+      "exp": "Calculating daily rates for completion part-way through a quarter.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Insurance Rent' is the reimbursement of the insurance premium to the landlord.",
+      "a": true,
+      "exp": "Reserved as rent to allow distress/forfeiture for non-payment.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Service Charge' covers the maintenance of common parts.",
+      "a": true,
+      "exp": "Paid by tenants in a multi-let building to the landlord.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Demise' refers to the death of the tenant.",
+      "a": false,
+      "exp": "In property law, 'Demise' refers to the extent of the premises let.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A 'Schedule of Condition' limits a repairing obligation.",
+      "a": true,
+      "exp": "Photographic/written record used in qualified repairing covenants.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Inherent Defects' are faults in design or construction.",
+      "a": true,
+      "exp": "Often excluded from repair obligations in new builds.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Quarter Days' include 25 December and 24 June.",
+      "a": true,
+      "exp": "Traditional days when commercial rent is payable.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Open Market Rent' is the rent a property would achieve if let today.",
+      "a": true,
+      "exp": "The standard basis for rent reviews.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A 'Break Clause' allows early termination of the lease.",
+      "a": true,
+      "exp": "Can be mutual, or for landlord/tenant only.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Peppercorn Rent' is a high market rent.",
+      "a": false,
+      "exp": "It is a nominal rent (effectively zero) used in long leases.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "RICS stands for Royal Institution of Chartered Surveyors.",
+      "a": true,
+      "exp": "The professional body that issues the Code for Leasing.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Quiet Enjoyment' is the right to use premises without interference.",
+      "a": true,
+      "exp": "Implied or express covenant by the landlord.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Waste' refers to damage or alteration reducing property value.",
+      "a": true,
+      "exp": "Doctrine limiting alterations if the lease is silent.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "OS3 is a search for unregistered leases.",
+      "a": true,
+      "exp": "Used when the lease is not registrable but noted against the title.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Insured Risks' are damages covered by the landlord's policy.",
+      "a": true,
+      "exp": "E.g., fire, flood; tenant usually pays for this cover.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A 'Determination' is the end of a lease.",
+      "a": true,
+      "exp": "General legal term for the ending of the tenancy.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Section 19(2) LTA 1927 converts a qualified covenant against alterations into a fully qualified one if the alteration is an improvement.",
+      "a": true,
+      "exp": "If the alteration is an improvement from the tenant's perspective, the landlord cannot unreasonably withhold consent.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Section 19(3) LTA 1927 converts a qualified user covenant into a fully qualified one.",
+      "a": false,
+      "exp": "It does not convert the covenant; it only prevents the landlord from charging a fine/premium for consent.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A lease granted for a term of 5 years must be registered with its own title number.",
+      "a": false,
+      "exp": "Only leases granted for more than 7 years must be registered; 5-year leases are noted on the landlord's title.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "A lease of 2 years cannot be noted against the landlord's registered title.",
+      "a": true,
+      "exp": "Leases of 3 years or less cannot be noted against the title.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "The tenant's solicitor should carry out an OS2 search for a lease of part.",
+      "a": true,
+      "exp": "OS2 is the correct priority search for a lease of part; OS1 is for a lease of whole.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "If a commercial tenant is a company, the lease must always be registered at Companies House.",
+      "a": false,
+      "exp": "Registration at Companies House is usually only required if the lease is charged (mortgaged), which is rare for tenants.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "The landlord executes the Counterpart lease on completion.",
+      "a": false,
+      "exp": "The landlord executes the Original; the tenant executes the Counterpart.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Rent apportionment involves calculating the daily rate based on a 365-day year.",
+      "a": true,
+      "exp": "The daily rate is found by dividing the yearly rent by 365 (or 366 in a leap year).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A licence for alterations usually requires the tenant to pay the landlord's professional costs.",
+      "a": true,
+      "exp": "The tenant typically covenants to pay the landlord's surveyor's and solicitor's costs.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Changing a shop to a betting shop requires planning permission.",
+      "a": true,
+      "exp": "Betting shops are 'Sui Generis'; moving to/from a use class usually requires permission.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "An agreement for lease is required if the property is still under construction.",
+      "a": true,
+      "exp": "Used when parties want to bind themselves but cannot yet complete (e.g., waiting for construction).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Under the Code for Leasing Business Premises, a landlord can absolutely prohibit internal non-structural alterations in a lease of whole.",
+      "a": false,
+      "exp": "The Code requires landlords to allow internal non-structural alterations without consent in a lease of whole.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A tenant can carry out alterations that reduce the value of the property if the lease is silent.",
+      "a": false,
+      "exp": "The doctrine of 'waste' prohibits alterations that reduce the value of the premises.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "CPSE3 enquiries are used for the grant of a new lease.",
+      "a": true,
+      "exp": "CPSE1 is general; CPSE3 is specific to the grant of a lease.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A deposit is usually payable on the exchange of an agreement for lease.",
+      "a": false,
+      "exp": "Deposits are not usually payable on commercial leases as there is rarely a premium.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "SDLT for a commercial lease is calculated on the premium only.",
+      "a": false,
+      "exp": "It is calculated using a formula based on the Net Present Value (NPV) of the rent over the term.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The landlord is responsible for obtaining consent from their own lender to grant a lease.",
+      "a": true,
+      "exp": "The landlord must deduce title and check their lender consents.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "An absolute covenant against alterations allows the tenant to apply for consent.",
+      "a": false,
+      "exp": "An absolute covenant prohibits the act entirely; the landlord has no obligation to consider a request.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The tenant's solicitor prepares the original lease for execution.",
+      "a": false,
+      "exp": "The landlord's solicitor prepares the original and counterpart leases.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A completion statement for a lease includes an apportionment of service charge.",
+      "a": true,
+      "exp": "Rent, insurance rent, and service charge are apportioned on a daily basis.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Use Class E includes takeaways where food is mostly consumed off-premises.",
+      "a": false,
+      "exp": "Hot food takeaways (mostly off-premises) are 'Sui Generis', not Class E.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Reinstatement of alterations is always mandatory at the end of the lease.",
+      "a": false,
+      "exp": "It depends on the lease/licence terms; the Code suggests it should be made clear in heads of terms.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A tenant can change use from Class E (shop) to Class E (office) without planning permission.",
+      "a": true,
+      "exp": "Changes within the same use class do not constitute 'development' requiring permission.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The SQE assessment allows 45 minutes to write an attendance note.",
+      "a": false,
+      "exp": "Candidates are given 25 minutes to handwrite the attendance note.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "An attendance note should record the time engaged.",
+      "a": true,
+      "exp": "Time engaged is a required field for the attendance note.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Engrossment refers to the final version of the lease printed for signature.",
+      "a": true,
+      "exp": "Printing the agreed text on good quality paper for execution.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Counterpart Lease is the copy signed by the tenant.",
+      "a": true,
+      "exp": "The tenant executes the counterpart; the landlord executes the original.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Apportionment is the calculation of rent for a partial period.",
+      "a": true,
+      "exp": "Calculating the rent due from completion to the next quarter day.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "FRI stands for Full Repairing and Insuring.",
+      "a": true,
+      "exp": "Standard commercial lease where the tenant bears repair and insurance costs.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Covenant Strength refers to a tenant's financial ability to comply with lease obligations.",
+      "a": true,
+      "exp": "Crucial for landlords to ensure rent will be paid.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Anchor Tenant is a key tenant that attracts others to a development.",
+      "a": true,
+      "exp": "E.g., a major supermarket in a retail park; they have strong negotiating power.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Heads of Terms set out the main agreed principles of the deal.",
+      "a": true,
+      "exp": "Subject to contract document used to draft the lease.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Agreement for Lease is a contract to grant a lease in the future.",
+      "a": true,
+      "exp": "Used when parties are not ready to complete immediately.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Licence for Alterations documents the landlord's consent to works.",
+      "a": true,
+      "exp": "Contains tenant covenants regarding the works and costs.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Absolute Covenant prohibits an act entirely.",
+      "a": true,
+      "exp": "E.g., 'The Tenant shall not make any alterations'.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Qualified Covenant allows an act with landlord's consent.",
+      "a": true,
+      "exp": "E.g., '...without the landlord's consent'.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Fully Qualified Covenant requires consent not to be unreasonably withheld.",
+      "a": true,
+      "exp": "E.g., '...consent not to be unreasonably withheld'.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Use Class E covers Commercial, Business and Service uses.",
+      "a": true,
+      "exp": "Broad class introduced in 2020 including retail, offices, and cafes.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Sui Generis uses do not fall into any specific Use Class.",
+      "a": true,
+      "exp": "Means 'of its own kind'; includes pubs and takeaways.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "SDLT stands for Stamp Duty Land Tax.",
+      "a": true,
+      "exp": "Tax on land transactions in England.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "LTT stands for Land Transaction Tax.",
+      "a": true,
+      "exp": "Tax on land transactions in Wales.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "OS1 is an Official Search of Whole with priority.",
+      "a": true,
+      "exp": "Used for a lease of the whole of a registered title.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "OS2 is an Official Search of Part with priority.",
+      "a": true,
+      "exp": "Used for a lease of part of a registered title.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "AP1 is the form to register a dealing with the whole of a registered title.",
+      "a": true,
+      "exp": "Used to register the lease against the landlord's title.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "FR1 is the form for First Registration.",
+      "a": true,
+      "exp": "Used if the landlord's title is unregistered.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "CPSE stands for Commercial Property Standard Enquiries.",
+      "a": true,
+      "exp": "Standard enquiries used in commercial transactions.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Demise refers to the extent of the property let to the tenant.",
+      "a": true,
+      "exp": "The premises granted by the lease.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Reinstatement involves returning the property to its original state.",
+      "a": true,
+      "exp": "Removing alterations at the end of the lease.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Waste refers to alterations that reduce the value of the premises.",
+      "a": true,
+      "exp": "Common law doctrine restricting tenant alterations.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Attendance Note records the advice given and instructions received.",
+      "a": true,
+      "exp": "Formal record of a client meeting.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Under the LTA 1988, a landlord must give written reasons for refusing consent to assign.",
+      "a": true,
+      "exp": "The Landlord and Tenant Act 1988 requires the decision and reasons to be in writing.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "An original tenant of an 'Old Lease' remains liable for the rent throughout the entire term.",
+      "a": true,
+      "exp": "Privity of contract persists for the full duration of leases granted before 1 Jan 1996.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A tenant of a 'New Lease' is automatically released from liability upon lawful assignment.",
+      "a": true,
+      "exp": "s.5 Landlord and Tenant (Covenants) Act 1995 provides for automatic release.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "An Authorised Guarantee Agreement (AGA) requires the outgoing tenant to guarantee all future assignees.",
+      "a": false,
+      "exp": "An AGA guarantees only the *immediate* assignee's performance.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Section 19(1)(a) LTA 1927 applies to absolute covenants against assignment.",
+      "a": false,
+      "exp": "It only applies to *qualified* covenants (requiring consent), upgrading them to fully qualified.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A landlord can reasonably withhold consent if the assignee cannot produce satisfactory references.",
+      "a": true,
+      "exp": "Concerns about the assignee's ability to pay rent are reasonable grounds for refusal.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "In a commercial assignment, the landlord's solicitor usually drafts the Licence to Assign.",
+      "a": true,
+      "exp": "The landlord controls the consent process; the tenant pays the costs.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A tenant granting an underlease must deduce their freehold title.",
+      "a": false,
+      "exp": "They deduce their *leasehold* title (and superior title if required).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "An undertenant has privity of estate with the head landlord.",
+      "a": false,
+      "exp": "There is neither privity of contract nor privity of estate between head landlord and undertenant.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "The Code for Leasing Business Premises mandates allowing sharing with group companies without consent.",
+      "a": true,
+      "exp": "The 2020 Code states leases 'should allow' sharing with group companies without consent.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A landlord can sue a subtenant directly for breach of a restrictive covenant.",
+      "a": true,
+      "exp": "Restrictive covenants are enforceable against occupiers under s.3(5) LTCA 1995 / Tulk v Moxhay.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "The assignee's solicitor should carry out an OS1 search for an assignment of part.",
+      "a": false,
+      "exp": "OS1 is for whole; OS2 is for part.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "If a tenant assigns in breach of covenant, they are not released from liability under the 1995 Act.",
+      "a": true,
+      "exp": "This is an 'excluded assignment' (s.11 LTCA 1995); no statutory release occurs.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "An agreement for lease is always required for an assignment.",
+      "a": false,
+      "exp": "It is often skipped; parties proceed directly to the assignment deed.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The tenant's solicitor usually gives an undertaking for the landlord's costs.",
+      "a": true,
+      "exp": "Standard practice before the landlord's solicitor begins work on the licence.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Underletting for a term equal to the head lease takes effect as an assignment.",
+      "a": true,
+      "exp": "An underlease must be for a shorter term than the head lease (Milmo v Carreras).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A landlord is automatically released from covenants upon selling the reversion of a New Lease.",
+      "a": false,
+      "exp": "Under s.6 LTCA 1995, the landlord must apply for a release.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "The rule in Moule v Garrett allows a former tenant to recoup damages from a defaulting assignee.",
+      "a": true,
+      "exp": "Common law right of indemnity/restitution.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "CPSE4 enquiries are specific to the grant of a new lease.",
+      "a": false,
+      "exp": "CPSE4 is for assignment; CPSE3 is for the grant of a new lease.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A licence to underlet usually contains a direct covenant from the undertenant to the landlord.",
+      "a": true,
+      "exp": "To create a direct contractual link where privity of estate is absent.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "For a 'New Lease', the burden of personal covenants passes to the assignee.",
+      "a": false,
+      "exp": "s.3(6) LTCA 1995; covenants 'expressed to be personal' do NOT pass.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "An OS1 search priority period is 30 working days.",
+      "a": true,
+      "exp": "Standard priority period for official searches.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "Notice of assignment must be served on the landlord within a reasonable time, often 1 month.",
+      "a": true,
+      "exp": "Standard lease term to ensure the landlord knows who the tenant is.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "The landlord's decision on consent must be given within a reasonable time.",
+      "a": true,
+      "exp": "s.1 LTA 1988; usually measured in days or weeks.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A legal assignment of a registered lease must be completed by registration.",
+      "a": true,
+      "exp": "Legal title does not pass until registration (s.27 LRA 2002).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "'Alienation' refers to the disposal of a leasehold interest.",
+      "a": true,
+      "exp": "Includes assignment, underletting, and charging.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Assignment' transfers the entire remaining term of the lease.",
+      "a": true,
+      "exp": "The assignee steps into the tenant's shoes.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Underletting' creates a new lease out of the existing one.",
+      "a": true,
+      "exp": "Also called subletting; creates a sub-tenancy.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Privity of Contract' exists between the original landlord and original tenant.",
+      "a": true,
+      "exp": "They are the parties to the original contract.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Privity of Estate' exists between the current landlord and current tenant.",
+      "a": true,
+      "exp": "Based on the tenure relationship involving the legal estate.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'AGA' stands for Authorised Guarantee Agreement.",
+      "a": true,
+      "exp": "Guarantee by an outgoing tenant for their assignee (s.16 LTCA 1995).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Old Lease' is a lease granted before 1 January 1996.",
+      "a": true,
+      "exp": "Subject to original tenant liability doctrine.",
+      "isTiming": true,
+      "difficulty": 1
+    },
+    {
+      "q": "'New Lease' is a lease granted on or after 1 January 1996.",
+      "a": true,
+      "exp": "Subject to the LTCA 1995 regime.",
+      "isTiming": true,
+      "difficulty": 1
+    },
+    {
+      "q": "'Absolute Covenant' completely prohibits alienation.",
+      "a": true,
+      "exp": "E.g., 'The Tenant shall not assign'.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Qualified Covenant' requires the landlord's consent.",
+      "a": true,
+      "exp": "E.g., '...without the landlord's consent'.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Fully Qualified Covenant' requires consent not to be unreasonably withheld.",
+      "a": true,
+      "exp": "E.g., '...consent not to be unreasonably withheld'.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Licence to Assign' is the deed granting landlord's consent.",
+      "a": true,
+      "exp": "Formal permission to transfer the lease.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'TR1' is the Land Registry transfer form for a whole title.",
+      "a": true,
+      "exp": "Used to assign a registered lease.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Headlease' is the superior lease out of which an underlease is carved.",
+      "a": true,
+      "exp": "The lease held by the intermediate landlord.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'LTCA 1995' stands for Landlord and Tenant (Covenants) Act 1995.",
+      "a": true,
+      "exp": "The statute governing enforceability of leasehold covenants.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Indemnity Covenant' is a promise to reimburse for liability.",
+      "a": true,
+      "exp": "Used to protect the assignor against future breaches by the assignee.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Undertaking for Costs' is a solicitor's promise to pay legal fees.",
+      "a": true,
+      "exp": "Given by the tenant's solicitor to cover the landlord's license costs.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Sui Generis' means a use class of its own kind.",
+      "a": true,
+      "exp": "E.g., pubs/takeaways; outside standard classes.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Covenant Strength' refers to financial reliability.",
+      "a": true,
+      "exp": "Ability of a tenant to pay rent and perform obligations.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Specific Performance' is a remedy compelling performance.",
+      "a": true,
+      "exp": "Equitable remedy; discretionary.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Forfeiture' is the landlord's right to end the lease for breach.",
+      "a": true,
+      "exp": "Re-entry upon breach of covenant.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'CPSE' stands for Commercial Property Standard Enquiries.",
+      "a": true,
+      "exp": "Industry standard pre-contract enquiries.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'LTA 1954' provides security of tenure for business tenants.",
+      "a": true,
+      "exp": "Landlord and Tenant Act 1954.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Excluded Assignment' is one in breach of covenant.",
+      "a": true,
+      "exp": "An assignment without required consent (s.11 LTCA 1995).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Quiet Enjoyment' protects the tenant from interference.",
+      "a": true,
+      "exp": "Covenant allowing tenant lawful possession without disturbance.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A periodic tenancy can be contracted out of the LTA 1954 security of tenure provisions.",
+      "a": false,
+      "exp": "Only fixed term tenancies can be contracted out (Source: 10391).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A tenant occupying premises for 8 months under a fixed term lease has security of tenure.",
+      "a": false,
+      "exp": "Tenancies of 6 months or less are excluded unless occupation exceeds 12 months (Source: 10385).",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "If a landlord serves a warning notice 10 days before completion, a simple declaration is sufficient.",
+      "a": false,
+      "exp": "If less than 14 days' notice is given, a statutory declaration is required (Source: 10413).",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "A tenant who underlets the whole of the premises loses security of tenure.",
+      "a": true,
+      "exp": "The tenant must occupy at least part of the premises to qualify (Source: 10367).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A Section 25 notice must be served no more than 12 months before the termination date.",
+      "a": true,
+      "exp": "Notice period is 6 to 12 months before the date of termination (Source: 10532).",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "A landlord must serve a counter-notice to a Section 26 request within 3 months.",
+      "a": false,
+      "exp": "The landlord has two months to serve a counter-notice (Source: 10686).",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "Ground (f) (redevelopment) is a mandatory ground for possession.",
+      "a": true,
+      "exp": "If established, the court *must* grant possession (Source: 10616).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A landlord relying on Ground (b) (persistent delay in rent) must pay compensation.",
+      "a": false,
+      "exp": "Ground (b) is a non-compensatory ground based on tenant fault (Source: 10606).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Compensation is calculated at 2x rateable value if occupation is 14 years or more.",
+      "a": true,
+      "exp": "14 years is the threshold for double compensation (Source: 10577).",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "To rely on Ground (g), a landlord must have owned the reversion for at least 2 years.",
+      "a": false,
+      "exp": "The landlord must have owned the reversion for at least 5 years (Source: 10618).",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "A tenant wishing to leave on the contractual expiry date must serve a Section 27 notice.",
+      "a": false,
+      "exp": "No notice is required to leave on the contractual expiry date (Source: 10482).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A Section 26 request can specify a commencement date earlier than the contractual expiry.",
+      "a": false,
+      "exp": "The new tenancy cannot start before the current contractual term expires (Source: 10684).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The Competent Landlord must have a reversionary interest exceeding 14 months.",
+      "a": true,
+      "exp": "Defined as a freehold or leasehold not ending within 14 months (Source: 10840).",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "Interim rent is always set at the open market rent.",
+      "a": false,
+      "exp": "If the landlord opposes renewal, interim rent is 10-15% lower than market rent (Source: 11021).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A Section 27 notice must be served at least 3 months before the termination date.",
+      "a": true,
+      "exp": "Section 27 requires at least 3 months' notice (Source: 11010).",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "Sunday school sessions provided free of charge constitute a business purpose.",
+      "a": false,
+      "exp": "Case law has held this is not a business purpose (Source: 10378).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A court can order a new lease term of up to 20 years.",
+      "a": false,
+      "exp": "The court can grant a term up to 15 years (Source: 10731).",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "Parties can agree to extend the deadline for court applications in writing.",
+      "a": true,
+      "exp": "The deadline can be extended by written agreement (Source: 10724).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A tenant can serve a Section 26 request after receiving a Section 25 notice.",
+      "a": false,
+      "exp": "The notices are mutually exclusive; once one is served, the other cannot be (Source: 10671).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A members-only tennis club can qualify for security of tenure.",
+      "a": true,
+      "exp": "Case law confirms this is a business purpose (Source: 10375).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Contracting out requires a court order.",
+      "a": false,
+      "exp": "Since 2004, the notice and declaration procedure replaced court orders (Source: 10404).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Ground (a) (breach of repair) is a mandatory ground.",
+      "a": false,
+      "exp": "Ground (a) is a discretionary ground (Source: 10605).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The immediate landlord is always the Competent Landlord.",
+      "a": false,
+      "exp": "It is the first in the chain with sufficient reversionary interest (Source: 10839).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A Section 25 notice served on 31 August expires on 28 (or 29) February.",
+      "a": true,
+      "exp": "The corresponding date rule applies to shorter months (Source: 10828).",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "Tenants can contract out of compensation rights if occupation is less than 5 years.",
+      "a": true,
+      "exp": "Exclusion of compensation is permitted for short occupation (<5 years) (Source: 10580).",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "Security of Tenure allows a tenant to renew their lease automatically.",
+      "a": false,
+      "exp": "It gives a right to *apply* for a new tenancy, not automatic renewal.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "LTA 1954 stands for Landlord and Tenant Act 1954.",
+      "a": true,
+      "exp": "The primary legislation governing business tenancies.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Holding Over means remaining in occupation after the contractual term ends.",
+      "a": true,
+      "exp": "Protected tenants have the right to hold over under s.24 LTA 1954.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A 'Friendly' Section 25 notice offers a new lease.",
+      "a": true,
+      "exp": "The landlord indicates willingness to grant a new tenancy.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A 'Hostile' Section 25 notice opposes a new lease.",
+      "a": true,
+      "exp": "The landlord opposes renewal on statutory grounds.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Section 26 Request is served by the tenant.",
+      "a": true,
+      "exp": "The tenant's formal request for a new tenancy.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Section 27 Notice is used to end a protected tenancy.",
+      "a": true,
+      "exp": "Used by the tenant to terminate the tenancy (usually while holding over).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Rateable Value is used to calculate compensation.",
+      "a": true,
+      "exp": "Compensation is a multiple of the rateable value (s.37 LTA 1954).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Interim Rent is paid while the new lease is negotiated.",
+      "a": true,
+      "exp": "Rent payable during the statutory continuation period (s.24A LTA 1954).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Contracting Out removes security of tenure rights.",
+      "a": true,
+      "exp": "Agreement that the LTA 1954 protections will not apply.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Statutory Declaration is required for short notice contracting out.",
+      "a": true,
+      "exp": "Required if the warning notice is served less than 14 days before completion.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Tenancy at Will provides security of tenure.",
+      "a": false,
+      "exp": "It is a personal arrangement terminable at any time; no security.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A Licence grants exclusive possession.",
+      "a": false,
+      "exp": "A licence is a personal permission; exclusive possession indicates a lease.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Agricultural Tenancies are excluded from the LTA 1954.",
+      "a": true,
+      "exp": "Excluded by s.43; they have their own statutory regime.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Service Tenancies are protected by the LTA 1954.",
+      "a": false,
+      "exp": "Excluded by s.43 as they are granted for employment purposes.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Mandatory Grounds require the court to grant possession.",
+      "a": true,
+      "exp": "If proven, the court has no discretion to refuse possession.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Discretionary Grounds allow the court to decide on possession.",
+      "a": true,
+      "exp": "The court considers if it is reasonable to grant possession.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Compensatory Grounds entitle the tenant to money.",
+      "a": true,
+      "exp": "Compensation is payable for 'no fault' grounds (e.g., redevelopment).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Competent Landlord is always the freeholder.",
+      "a": false,
+      "exp": "It can be a superior leaseholder with sufficient reversion.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Proposed Commencement Date (PCD) is found in a Section 25 notice.",
+      "a": false,
+      "exp": "PCD is in a Section 26 request; Section 25 has a Date of Termination.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "DOT stands for Date of Termination.",
+      "a": true,
+      "exp": "The date the current tenancy ends in a Section 25 notice.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Sui Generis means a use class of its own kind.",
+      "a": true,
+      "exp": "Uses that do not fall into standard classes (e.g., theatres).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Prescribed Form means the notice must follow a statutory template.",
+      "a": true,
+      "exp": "s.25 and s.26 notices must use the official statutory wording.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Reverse Premium is paid by the tenant to the landlord.",
+      "a": true,
+      "exp": "Paid to induce the landlord to accept a surrender.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Demise refers to the extent of the property let.",
+      "a": true,
+      "exp": "The premises granted by the lease.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A landlord exercising a break clause automatically ends a protected tenant's right to occupy.",
+      "a": false,
+      "exp": "It ends the contractual term, but the tenant may still hold over under the 1954 Act.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "To validly end a yearly periodic tenancy, the notice to quit must be at least 6 months.",
+      "a": true,
+      "exp": "Yearly tenancies require 6 months' notice.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "A residential weekly tenancy requires 4 weeks' notice to quit.",
+      "a": true,
+      "exp": "Residential weekly tenancies require 4 weeks; other tenancies require 1 week.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "Accepting rent from a new tenant after an unlawful assignment waives the right to forfeit.",
+      "a": true,
+      "exp": "It is an unequivocal act recognizing the lease with knowledge of the breach.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A landlord must serve a s.146 notice before forfeiting for non-payment of rent.",
+      "a": false,
+      "exp": "Non-payment of rent does not require a s.146 notice; other breaches do.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Commercial Rent Arrears Recovery (CRAR) can be used to recover service charges.",
+      "a": false,
+      "exp": "CRAR is limited to principal rent, VAT, and interest, excluding service charges.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A landlord must give 7 clear days' notice before exercising CRAR.",
+      "a": true,
+      "exp": "7 clear days' notice of intention to enter is required.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "The Leasehold Property (Repairs) Act 1938 applies to a 5-year lease.",
+      "a": false,
+      "exp": "It applies only to leases for a term of 7 years or more.",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "A tenant can serve a counter-notice to a s.146 repair notice if 2 years are left on the lease.",
+      "a": false,
+      "exp": "There must be at least 3 years of the term left to run.",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "Damages for breach of repair are limited to the cost of the remedial works.",
+      "a": false,
+      "exp": "Damages are limited to the reduction in value of the landlord's reversion.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A Jervis v Harris clause allows the landlord to recover costs as a debt.",
+      "a": true,
+      "exp": "Costs are recovered as a debt, avoiding the damages cap and s.146 procedure.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "An agreement to surrender a protected tenancy requires the contracting out procedure.",
+      "a": true,
+      "exp": "Notice and declaration procedure must be followed for an agreement to surrender.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Merger occurs when a third party acquires both the leasehold and reversionary interest.",
+      "a": true,
+      "exp": "Merger happens if tenant acquires reversion or third party acquires both.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A debt action for rent arrears is limited to 12 years.",
+      "a": false,
+      "exp": "An action for debt is limited to rent due in the last 6 years.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "Peaceable re-entry can be used for mixed commercial and residential premises.",
+      "a": false,
+      "exp": "Cannot be used if any part of the premises is residential.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Failure to repair is a 'once and for all' breach.",
+      "a": false,
+      "exp": "It is a 'continuing breach'; the right to forfeit arises each day.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Unlawful assignment is a 'continuing breach'.",
+      "a": false,
+      "exp": "It is a 'once and for all' breach; waiver is permanent.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Specific performance is the standard remedy for breach of a repairing covenant.",
+      "a": false,
+      "exp": "It is rarely granted for repair unless exceptional circumstances exist.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A landlord can use CRAR after forfeiting the lease.",
+      "a": false,
+      "exp": "CRAR cannot be used if the lease has been forfeited.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A s.146 notice must give the tenant a reasonable time to remedy the breach.",
+      "a": true,
+      "exp": "Statutory requirement for the s.146 notice.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Using CRAR waives the right to forfeit for that specific rent breach.",
+      "a": true,
+      "exp": "Using CRAR acknowledges the lease, waiving forfeiture.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Tenants can apply for relief from forfeiture after the landlord has re-entered.",
+      "a": true,
+      "exp": "Tenants can apply for relief after peaceable re-entry or court proceedings start.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A surrender by operation of law requires a deed.",
+      "a": false,
+      "exp": "It arises from conduct (e.g., handing back keys), unlike express surrender.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "If a landlord accepts rent after a repair breach, they waive the right to forfeit forever.",
+      "a": false,
+      "exp": "Repair is a continuing breach; the right to forfeit arises again the next day.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A rent deposit deed typically requires the tenant to top up withdrawn funds.",
+      "a": true,
+      "exp": "Tenant must top up the deposit after the landlord draws on it.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "'Effluxion of time' means the lease ends at the contractual term.",
+      "a": true,
+      "exp": "Standard method of termination for fixed-term leases.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A 'Notice to Quit' is used to end a fixed-term tenancy.",
+      "a": false,
+      "exp": "It is used to end a periodic tenancy.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Surrender' involves the tenant giving up the lease to the landlord.",
+      "a": true,
+      "exp": " consensual termination where the lease merges into the reversion.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Merger' occurs when the tenant acquires the landlord's interest.",
+      "a": true,
+      "exp": "The lease is extinguished when interests unite.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Forfeiture' is the landlord's right to re-enter for breach.",
+      "a": true,
+      "exp": "Right to end the lease early for tenant default.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'CRAR' stands for Commercial Rent Arrears Recovery.",
+      "a": true,
+      "exp": "Replaced the old remedy of distress.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Reverse Premium' is paid by the tenant to the landlord.",
+      "a": true,
+      "exp": "Paid by tenant to induce landlord to accept surrender.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Jervis v Harris' clause is a self-help repair clause.",
+      "a": true,
+      "exp": "Allows landlord to enter, repair, and claim costs as debt.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Peaceable Re-entry' involves changing the locks without a court order.",
+      "a": true,
+      "exp": "Physical re-entry by bailiffs.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Waiver' is the loss of the right to forfeit.",
+      "a": true,
+      "exp": "Occurs by recognising the lease after a known breach.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Relief from Forfeiture' is a discretionary court remedy.",
+      "a": true,
+      "exp": "Restores the lease as if forfeiture had not occurred.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "s.146 Notice is required for forfeiture for non-payment of rent.",
+      "a": false,
+      "exp": "Required for 'other' breaches, not rent.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Holding Over' occurs when a protected tenant stays after the term ends.",
+      "a": true,
+      "exp": "Continuation of tenancy under LTA 1954.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Debt Action' can claim unpaid service charges.",
+      "a": true,
+      "exp": "Unlike CRAR, debt action covers all sums due.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Insolvency Event' typically triggers a forfeiture right.",
+      "a": true,
+      "exp": "Bankruptcy or receivership usually allows re-entry.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Once and for all' breach includes non-payment of rent.",
+      "a": true,
+      "exp": "Waiver of a specific rent payment breach is permanent for that payment.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Continuing Breach' includes failure to repair.",
+      "a": true,
+      "exp": "The breach re-occurs every day.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Specific Performance' compels a party to perform an obligation.",
+      "a": true,
+      "exp": "Equitable remedy, order to do something.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Injunction' is an order to stop doing something.",
+      "a": true,
+      "exp": "Equitable remedy, e.g., to stop unlawful assignment.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Periodic Tenancy' renews automatically.",
+      "a": true,
+      "exp": "Continues period to period until notice to quit.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Tenancy at Will' can be ended by either party instantly.",
+      "a": true,
+      "exp": "No security of tenure; personal permission.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Counter-notice' under LPRA 1938 protects tenants.",
+      "a": true,
+      "exp": "Forces landlord to get court leave for repair forfeiture/damages.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Rent Deposit' is money held as security for tenant obligations.",
+      "a": true,
+      "exp": "Landlord can draw on it for arrears.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Guarantor' agrees to answer for the tenant's debt/default.",
+      "a": true,
+      "exp": "Secondary liability for tenant obligations.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Self-help' remedies do not require court action.",
+      "a": true,
+      "exp": "E.g., CRAR or Jervis v Harris; quicker/cheaper.",
+      "isTiming": false,
+      "difficulty": 1
+    }
   ],
   "criminalLaw": [
     { "q": "Theft: Dishonest appropriation of property of another.", "a": true, "exp": "s.1 Theft Act." },
