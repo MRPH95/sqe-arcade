@@ -320,7 +320,7 @@ const WormholeEffect = ({ streak, isChronos, isGameOver, failCount }) => {
       });
     }
 
-    const render = () => {
+const render = () => {
       const currentStreak = streakRef.current;
       
       let baseHue = 210; 
@@ -331,15 +331,17 @@ const WormholeEffect = ({ streak, isChronos, isGameOver, failCount }) => {
       let isNegative = false;
 
       // --- VISUAL STAGE LOGIC ---
-      if (currentStreak >= 60) { 
+      // TO ADD A PHASE "AFTER" SINGULARITY (e.g. Streak 100+), ADD IT HERE AT THE TOP
+      // if (currentStreak >= 100) { ... } else ...
+
+      if (currentStreak >= 75) { 
           // PHASE 6: SINGULARITY (Negative Colors)
           isNegative = true; 
           speedMult = 6.0; 
           warpFactor = 50; 
       } 
-      else if (currentStreak >= 50) { 
+      else if (currentStreak >= 65) { 
           // PHASE 5: NEBULA (Purple Swirl)
-          // Restored to your original preference (Purple, not Rainbow)
           baseHue = 'nebula'; 
           speedMult = 5.5; 
           warpFactor = 45; 
@@ -352,17 +354,15 @@ const WormholeEffect = ({ streak, isChronos, isGameOver, failCount }) => {
       } 
       else if (currentStreak >= 35) { 
           // PHASE 3: DOPPLER SHIFT (Red -> Blue)
-          // Replaces the old plain purple phase.
-          // Stars shift from Red to Blue as they approach.
           baseHue = 'doppler'; 
           sat = '100%'; 
           speedMult = 4.0; 
           warpFactor = 25; 
       } 
-      else if (currentStreak >= 30) { baseHue = 0; sat = '100%'; speedMult = 3.5; warpFactor = 20; } // Red
-      else if (currentStreak >= 25) { baseHue = 30; sat = '100%'; speedMult = 3.0; warpFactor = 15; } // Orange
-      else if (currentStreak >= 20) { baseHue = 60; sat = '100%'; speedMult = 2.5; warpFactor = 10; } // Yellow
-      else if (currentStreak >= 15) { baseHue = 90; sat = '90%'; speedMult = 2.2; warpFactor = 5; } // Green-ish
+      else if (currentStreak >= 30) { baseHue = 0; sat = '100%'; speedMult = 3.5; warpFactor = 20; } 
+      else if (currentStreak >= 25) { baseHue = 30; sat = '100%'; speedMult = 3.0; warpFactor = 15; } 
+      else if (currentStreak >= 20) { baseHue = 60; sat = '100%'; speedMult = 2.5; warpFactor = 10; } 
+      else if (currentStreak >= 15) { baseHue = 90; sat = '90%'; speedMult = 2.2; warpFactor = 5; } 
       else if (currentStreak >= 10) { baseHue = 150; sat = '90%'; speedMult = 2.0; warpFactor = 2; } 
       else if (currentStreak >= 5) { baseHue = 180; sat = '90%'; speedMult = 1.5; warpFactor = 0; } 
       
@@ -370,7 +370,9 @@ const WormholeEffect = ({ streak, isChronos, isGameOver, failCount }) => {
       
       let bgStyle = `rgba(10, 15, 30, 0.4)`; 
       if (isNegative) {
-         const fade = Math.min(1, (currentStreak - 60) / 10);
+         // !!! FIX 1: UPDATE THIS NUMBER TO MATCH YOUR SINGULARITY THRESHOLD (75) !!!
+         const fade = Math.min(1, (currentStreak - 75) / 10);
+         
          const r = Math.floor(220 * (1-fade) + 10 * fade);
          const g = Math.floor(240 * (1-fade) + 15 * fade);
          const b = Math.floor(255 * (1-fade) + 30 * fade);
@@ -411,9 +413,14 @@ const WormholeEffect = ({ streak, isChronos, isGameOver, failCount }) => {
       const cx = canvas.width / 2;
       const cy = canvas.height / 2;
       const speed = 2 + (currentStreak * 0.5) * speedMult; 
-      const rotationSpeed = (currentStreak >= 50 && currentStreak < 60) ? 0.05 : 0.0005 + (currentStreak * 0.0002); 
+      
+      // !!! FIX 2: UPDATE THIS RANGE TO MATCH YOUR NEBULA PHASE (65 to 75) !!!
+      const rotationSpeed = (currentStreak >= 65 && currentStreak < 75) 
+         ? 0.05 
+         : 0.0005 + (currentStreak * 0.0002); 
 
       stars.forEach(star => {
+        // ... (Star update logic remains exactly the same) ...
         star.z -= speed;
         star.angle += rotationSpeed;
 
@@ -431,15 +438,13 @@ const WormholeEffect = ({ streak, isChronos, isGameOver, failCount }) => {
 
         let starColor;
         if (isNegative) {
-             const fade = Math.min(1, (currentStreak - 60) / 10);
+             // !!! FIX 3: UPDATE THIS NUMBER TO MATCH SINGULARITY (75) !!!
+             const fade = Math.min(1, (currentStreak - 75) / 10);
              if (fade < 0.5) starColor = `rgba(0, 0, 0, 0.8)`; 
              else starColor = `hsl(210, 80%, 70%)`; 
         } else if (baseHue === 'rainbow') {
             starColor = `hsl(${(star.hueOffset + Date.now() * 0.2) % 360}, 100%, 70%)`;
         } else if (baseHue === 'doppler') {
-            // DOPPLER LOGIC
-            // z=2000 (far) -> Hue 0 (Red)
-            // z=0 (close) -> Hue 240 (Blue)
             const hue = 240 - ((star.z / 2000) * 240);
             starColor = `hsl(${hue}, 100%, 70%)`;
         } else if (baseHue === 'nebula') {
