@@ -1191,7 +1191,7 @@ export default function SQEArcade() {
                     </div>
                   ) : (
                      <div className="text-center mb-6">
-                      <div className="text-rose-500 font-black text-5xl md:text-7xl mb-2">DAMAGE</div>
+                      <div className="text-rose-500 font-black text-5xl md:text-7xl mb-2">INCORRECT</div>
                       {/* Show Health Remaining */}
                       <div className="flex justify-center gap-1 mt-2">
                          {Array.from({length: 10}).map((_, i) => (
