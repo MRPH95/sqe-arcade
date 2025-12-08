@@ -172,7 +172,7 @@ class AudioEngine {
     if (type === 'kick') {
       osc.frequency.setValueAtTime(150, time);
       osc.frequency.exponentialRampToValueAtTime(0.01, time + 0.5);
-      gain.gain.setValueAtTime(1.0, time);
+      gain.gain.setValueAtTime(0.6, time);
       gain.gain.exponentialRampToValueAtTime(0.01, time + 0.5);
       osc.connect(gain);
     } else if (type === 'hat') {
