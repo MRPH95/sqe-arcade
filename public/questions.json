@@ -1959,315 +1959,315 @@
     {
       "q": "Under the Code for Completion by Post, the seller's solicitor acts as agent for the buyer's solicitor on completion.",
       "a": true,
-      "exp": "The seller's solicitor acts as agent for the buyer's solicitor (Source: 4996).",
+      "exp": "The seller's solicitor acts as agent for the buyer's solicitor.",
       "isTiming": false,
       "difficulty": 2
     },
     {
       "q": "The priority period for an OS1 search is 30 calendar days.",
       "a": false,
-      "exp": "The priority period is 30 *working* days (Source: 4815).",
+      "exp": "The priority period is 30 *working* days.",
       "isTiming": true,
       "difficulty": 2
     },
     {
       "q": "Failure to register a company charge within 21 days makes the charge void against a liquidator.",
       "a": true,
-      "exp": "It must be registered at Companies House within 21 days of creation (Source: 5248).",
+      "exp": "It must be registered at Companies House within 21 days of creation.",
       "isTiming": true,
       "difficulty": 3
     },
     {
       "q": "SDLT must be paid within 30 days of completion.",
       "a": false,
-      "exp": "SDLT must be paid within 14 days; LTT (Wales) is 30 days (Source: 5235, 5244).",
+      "exp": "SDLT must be paid within 14 days; LTT (Wales) is 30 days.",
       "isTiming": true,
       "difficulty": 2
     },
     {
       "q": "A buyer's solicitor must carry out a bankruptcy search (K16) against a corporate borrower.",
       "a": false,
-      "exp": "K16 is for individuals; a Company Search is used for corporate borrowers (Source: 4852).",
+      "exp": "K16 is for individuals; a Company Search is used for corporate borrowers.",
       "isTiming": false,
       "difficulty": 2
     },
     {
       "q": "First registration of unregistered land must occur within 2 months of completion.",
       "a": true,
-      "exp": "If missed, the transaction becomes void (Source: 5310).",
+      "exp": "If missed, the transaction becomes void.",
       "isTiming": true,
       "difficulty": 2
     },
     {
       "q": "Under the Standard Conditions of Sale, time is of the essence from the date of exchange.",
       "a": false,
-      "exp": "Time is not of the essence until a Notice to Complete is served (Source: 5142).",
+      "exp": "Time is not of the essence until a Notice to Complete is served.",
       "isTiming": false,
       "difficulty": 2
     },
     {
       "q": "A Notice to Complete gives the parties 10 working days to complete.",
       "a": true,
-      "exp": "Once served, parties must complete within 10 working days (Source: 5146).",
+      "exp": "Once served, parties must complete within 10 working days.",
       "isTiming": true,
       "difficulty": 2
     },
     {
       "q": "The date in Panel 3 of the TR1 transfer deed should be inserted before execution.",
       "a": false,
-      "exp": "Panel 3 is left blank and dated on completion (Source: 4603).",
+      "exp": "Panel 3 is left blank and dated on completion.",
       "isTiming": false,
       "difficulty": 2
     },
     {
       "q": "Contractual compensation for delayed completion under SCS is calculated using the Law Society interest rate.",
       "a": true,
-      "exp": "Unless a different contract rate is specified (Source: 5115).",
+      "exp": "Unless a different contract rate is specified.",
       "isTiming": false,
       "difficulty": 2
     },
     {
       "q": "If a buyer fails to complete, the seller can immediately rescind the contract.",
       "a": false,
-      "exp": "The seller must serve a Notice to Complete and wait for it to expire (Source: 5142).",
+      "exp": "The seller must serve a Notice to Complete and wait for it to expire.",
       "isTiming": false,
       "difficulty": 3
     },
     {
       "q": "A transfer of a portfolio of titles uses form TR5.",
       "a": true,
-      "exp": "TR5 is used for portfolio transfers; TR1 for whole titles (Source: 4586).",
+      "exp": "TR5 is used for portfolio transfers; TR1 for whole titles.",
       "isTiming": false,
       "difficulty": 2
     },
     {
       "q": "A transferee must execute the TR1 if they are entering into a new covenant.",
       "a": true,
-      "exp": "Execution is required if the buyer gives an indemnity covenant or declaration of trust (Source: 4647).",
+      "exp": "Execution is required if the buyer gives an indemnity covenant or declaration of trust.",
       "isTiming": false,
       "difficulty": 2
     },
     {
       "q": "Land Charges searches (K15) confer a priority period of 30 working days.",
       "a": false,
-      "exp": "They confer a priority period of 15 working days (Source: 4820).",
+      "exp": "They confer a priority period of 15 working days.",
       "isTiming": true,
       "difficulty": 3
     },
     {
       "q": "Under the Code for Completion by Post, the seller's solicitor undertakes to redeem the mortgage.",
       "a": true,
-      "exp": "Undertaking to redeem (pay off), not strictly to discharge (Source: 4937).",
+      "exp": "Undertaking to redeem (pay off), not strictly to discharge.",
       "isTiming": false,
       "difficulty": 3
     },
     {
       "q": "Private Residence Relief (PRR) applies if the property was used exclusively for business.",
       "a": false,
-      "exp": "PRR is for main homes; business use excludes relief (Source: 5616).",
+      "exp": "PRR is for main homes; business use excludes relief.",
       "isTiming": false,
       "difficulty": 2
     },
     {
       "q": "VAT is payable on the sale of a commercial property more than 3 years old without an option to tax.",
       "a": false,
-      "exp": "It is an exempt supply unless the seller opts to tax (Source: 9256).",
+      "exp": "It is an exempt supply unless the seller opts to tax.",
       "isTiming": false,
       "difficulty": 3
     },
     {
       "q": "In the principal method of accounting for disbursements, VAT is recorded in the client ledger.",
       "a": false,
-      "exp": "VAT is recorded in the VAT account and business cash sheet (Source: 8137).",
+      "exp": "VAT is recorded in the VAT account and business cash sheet.",
       "isTiming": false,
       "difficulty": 3
     },
     {
       "q": "A seller's solicitor can release a deposit held as stakeholder before completion.",
       "a": false,
-      "exp": "Stakeholder deposits must be held until completion (Source: 9041).",
+      "exp": "Stakeholder deposits must be held until completion.",
       "isTiming": false,
       "difficulty": 2
     },
     {
       "q": "The time for completion under the Standard Conditions of Sale is 1:00 pm.",
       "a": false,
-      "exp": "The standard time is 2:00 pm (Source: 5148).",
+      "exp": "The standard time is 2:00 pm.",
       "isTiming": true,
       "difficulty": 2
     },
     {
       "q": "An OS2 search is used for a lease of part.",
       "a": true,
-      "exp": "OS2 searches part of a registered title (Source: 4813).",
+      "exp": "OS2 searches part of a registered title.",
       "isTiming": false,
       "difficulty": 2
     },
     {
       "q": "Capital Gains Tax is charged on the total sale proceeds.",
       "a": false,
-      "exp": "It is charged on the *gain* (disposal value minus acquisition/allowable costs) (Source: 5597).",
+      "exp": "It is charged on the *gain* (disposal value minus acquisition/allowable costs).",
       "isTiming": false,
       "difficulty": 2
     },
     {
       "q": "A company executes a deed by the signature of one director in the presence of a witness.",
       "a": true,
-      "exp": "s.44 Companies Act 2006; allows single director + witness (Source: 4678).",
+      "exp": "s.44 Companies Act 2006; allows single director + witness.",
       "isTiming": false,
       "difficulty": 2
     },
     {
       "q": "The buyer's solicitor sends the completion monies to the seller's lender directly.",
       "a": false,
-      "exp": "Money is sent to the seller's solicitor, who undertakes to redeem the mortgage (Source: 4954).",
+      "exp": "Money is sent to the seller's solicitor, who undertakes to redeem the mortgage.",
       "isTiming": false,
       "difficulty": 2
     },
     {
       "q": "Receipt of mortgage funds from a lender client is a Credit to the Client Ledger.",
       "a": true,
-      "exp": "Client money received: Credit Client Ledger, Debit Cash Sheet (Source: 5783).",
+      "exp": "Client money received: Credit Client Ledger, Debit Cash Sheet.",
       "isTiming": false,
       "difficulty": 3
     },
     {
       "q": "TR1 is the form for Transfer of Whole.",
       "a": true,
-      "exp": "Transfer of whole registered title (Source: 4584).",
+      "exp": "Transfer of whole registered title.",
       "isTiming": false,
       "difficulty": 1
     },
     {
       "q": "TP1 is the form for Transfer of Part.",
       "a": true,
-      "exp": "Used when selling part of a title (Source: 4585).",
+      "exp": "Used when selling part of a title.",
       "isTiming": false,
       "difficulty": 1
     },
     {
       "q": "OS1 is an Official Search of Whole.",
       "a": true,
-      "exp": "Protects priority for the whole title (Source: 4813).",
+      "exp": "Protects priority for the whole title.",
       "isTiming": false,
       "difficulty": 1
     },
     {
       "q": "DS1 is a form to discharge a registered charge.",
       "a": true,
-      "exp": "Used to remove a mortgage from the register (Source: 4939).",
+      "exp": "Used to remove a mortgage from the register.",
       "isTiming": false,
       "difficulty": 1
     },
     {
       "q": "AP1 is the application form to change the register.",
       "a": true,
-      "exp": "Used for registered land post-completion (Source: 5261).",
+      "exp": "Used for registered land post-completion.",
       "isTiming": false,
       "difficulty": 1
     },
     {
       "q": "FR1 is the application form for First Registration.",
       "a": true,
-      "exp": "Used for unregistered land (Source: 5271).",
+      "exp": "Used for unregistered land.",
       "isTiming": false,
       "difficulty": 1
     },
     {
       "q": "SDLT stands for Stamp Duty Land Tax.",
       "a": true,
-      "exp": "Tax on land transactions in England (Source: 5232).",
+      "exp": "Tax on land transactions in England.",
       "isTiming": false,
       "difficulty": 1
     },
     {
       "q": "LTT stands for Land Transaction Tax.",
       "a": true,
-      "exp": "Tax on land transactions in Wales (Source: 5239).",
+      "exp": "Tax on land transactions in Wales.",
       "isTiming": false,
       "difficulty": 1
     },
     {
       "q": "TA13 is the form for Completion Information and Undertakings.",
       "a": true,
-      "exp": "Standard Law Society form for requisitions (Source: 4916).",
+      "exp": "Standard Law Society form for requisitions.",
       "isTiming": false,
       "difficulty": 1
     },
     {
       "q": "K16 is a Bankruptcy Search.",
       "a": true,
-      "exp": "Carried out against individual borrowers (Source: 4852).",
+      "exp": "Carried out against individual borrowers.",
       "isTiming": false,
       "difficulty": 1
     },
     {
       "q": "A Solvency Search checks for company liquidation.",
       "a": true,
-      "exp": "Carried out against corporate parties (Source: 4853).",
+      "exp": "Carried out against corporate parties.",
       "isTiming": false,
       "difficulty": 1
     },
     {
       "q": "Engrossment means the final version of a document for signing.",
       "a": true,
-      "exp": "Printing the agreed text for execution (Source: 4697).",
+      "exp": "Printing the agreed text for execution.",
       "isTiming": false,
       "difficulty": 1
     },
     {
       "q": "CGT stands for Capital Gains Tax.",
       "a": true,
-      "exp": "Tax on profit from disposing of assets (Source: 5553).",
+      "exp": "Tax on profit from disposing of assets.",
       "isTiming": false,
       "difficulty": 1
     },
     {
       "q": "Rescission puts parties back in their pre-contract position.",
       "a": true,
-      "exp": "Setting aside the contract (Source: 5139).",
+      "exp": "Setting aside the contract.",
       "isTiming": false,
       "difficulty": 1
     },
     {
       "q": "Double Entry requires one Credit and one Debit.",
       "a": true,
-      "exp": "Fundamental accounting principle (Source: 5673).",
+      "exp": "Fundamental accounting principle.",
       "isTiming": false,
       "difficulty": 1
     },
     {
       "q": "Attestation Clause is where a witness signs.",
       "a": true,
-      "exp": "Formalities for executing a deed (Source: 4643).",
+      "exp": "Formalities for executing a deed.",
       "isTiming": false,
       "difficulty": 1
     },
     {
       "q": "Telegraphic Transfer (TT) is a method of bank transfer.",
       "a": true,
-      "exp": "Used to send completion monies (Source: 5035).",
+      "exp": "Used to send completion monies.",
       "isTiming": false,
       "difficulty": 1
     },
     {
       "q": "Redemption Statement shows the amount to pay off a mortgage.",
       "a": true,
-      "exp": "Obtained from the lender before completion (Source: 5028).",
+      "exp": "Obtained from the lender before completion.",
       "isTiming": false,
       "difficulty": 1
     },
     {
       "q": "Indemnity Covenant protects the seller against positive covenants.",
       "a": true,
-      "exp": "Chain of indemnity (Source: 4639).",
+      "exp": "Chain of indemnity.",
       "isTiming": false,
       "difficulty": 1
     },
     {
       "q": "Certificate of Title confirms good title to the lender.",
       "a": true,
-      "exp": "Request for drawdown of funds (Source: 4565).",
+      "exp": "Request for drawdown of funds.",
       "isTiming": false,
       "difficulty": 1
     },
@@ -3324,175 +3324,175 @@
     {
       "q": "A periodic tenancy can be contracted out of the LTA 1954 security of tenure provisions.",
       "a": false,
-      "exp": "Only fixed term tenancies can be contracted out (Source: 10391).",
+      "exp": "Only fixed term tenancies can be contracted out.",
       "isTiming": false,
       "difficulty": 2
     },
     {
       "q": "A tenant occupying premises for 8 months under a fixed term lease has security of tenure.",
       "a": false,
-      "exp": "Tenancies of 6 months or less are excluded unless occupation exceeds 12 months (Source: 10385).",
+      "exp": "Tenancies of 6 months or less are excluded unless occupation exceeds 12 months.",
       "isTiming": true,
       "difficulty": 3
     },
     {
       "q": "If a landlord serves a warning notice 10 days before completion, a simple declaration is sufficient.",
       "a": false,
-      "exp": "If less than 14 days' notice is given, a statutory declaration is required (Source: 10413).",
+      "exp": "If less than 14 days' notice is given, a statutory declaration is required.",
       "isTiming": true,
       "difficulty": 2
     },
     {
       "q": "A tenant who underlets the whole of the premises loses security of tenure.",
       "a": true,
-      "exp": "The tenant must occupy at least part of the premises to qualify (Source: 10367).",
+      "exp": "The tenant must occupy at least part of the premises to qualify.",
       "isTiming": false,
       "difficulty": 2
     },
     {
       "q": "A Section 25 notice must be served no more than 12 months before the termination date.",
       "a": true,
-      "exp": "Notice period is 6 to 12 months before the date of termination (Source: 10532).",
+      "exp": "Notice period is 6 to 12 months before the date of termination.",
       "isTiming": true,
       "difficulty": 2
     },
     {
       "q": "A landlord must serve a counter-notice to a Section 26 request within 3 months.",
       "a": false,
-      "exp": "The landlord has two months to serve a counter-notice (Source: 10686).",
+      "exp": "The landlord has two months to serve a counter-notice.",
       "isTiming": true,
       "difficulty": 2
     },
     {
       "q": "Ground (f) (redevelopment) is a mandatory ground for possession.",
       "a": true,
-      "exp": "If established, the court *must* grant possession (Source: 10616).",
+      "exp": "If established, the court *must* grant possession.",
       "isTiming": false,
       "difficulty": 2
     },
     {
       "q": "A landlord relying on Ground (b) (persistent delay in rent) must pay compensation.",
       "a": false,
-      "exp": "Ground (b) is a non-compensatory ground based on tenant fault (Source: 10606).",
+      "exp": "Ground (b) is a non-compensatory ground based on tenant fault.",
       "isTiming": false,
       "difficulty": 2
     },
     {
       "q": "Compensation is calculated at 2x rateable value if occupation is 14 years or more.",
       "a": true,
-      "exp": "14 years is the threshold for double compensation (Source: 10577).",
+      "exp": "14 years is the threshold for double compensation.",
       "isTiming": true,
       "difficulty": 2
     },
     {
       "q": "To rely on Ground (g), a landlord must have owned the reversion for at least 2 years.",
       "a": false,
-      "exp": "The landlord must have owned the reversion for at least 5 years (Source: 10618).",
+      "exp": "The landlord must have owned the reversion for at least 5 years.",
       "isTiming": true,
       "difficulty": 3
     },
     {
       "q": "A tenant wishing to leave on the contractual expiry date must serve a Section 27 notice.",
       "a": false,
-      "exp": "No notice is required to leave on the contractual expiry date (Source: 10482).",
+      "exp": "No notice is required to leave on the contractual expiry date.",
       "isTiming": false,
       "difficulty": 2
     },
     {
       "q": "A Section 26 request can specify a commencement date earlier than the contractual expiry.",
       "a": false,
-      "exp": "The new tenancy cannot start before the current contractual term expires (Source: 10684).",
+      "exp": "The new tenancy cannot start before the current contractual term expires.",
       "isTiming": false,
       "difficulty": 2
     },
     {
       "q": "The Competent Landlord must have a reversionary interest exceeding 14 months.",
       "a": true,
-      "exp": "Defined as a freehold or leasehold not ending within 14 months (Source: 10840).",
+      "exp": "Defined as a freehold or leasehold not ending within 14 months.",
       "isTiming": true,
       "difficulty": 3
     },
     {
       "q": "Interim rent is always set at the open market rent.",
       "a": false,
-      "exp": "If the landlord opposes renewal, interim rent is 10-15% lower than market rent (Source: 11021).",
+      "exp": "If the landlord opposes renewal, interim rent is 10-15% lower than market rent.",
       "isTiming": false,
       "difficulty": 3
     },
     {
       "q": "A Section 27 notice must be served at least 3 months before the termination date.",
       "a": true,
-      "exp": "Section 27 requires at least 3 months' notice (Source: 11010).",
+      "exp": "Section 27 requires at least 3 months' notice.",
       "isTiming": true,
       "difficulty": 2
     },
     {
       "q": "Sunday school sessions provided free of charge constitute a business purpose.",
       "a": false,
-      "exp": "Case law has held this is not a business purpose (Source: 10378).",
+      "exp": "Case law has held this is not a business purpose.",
       "isTiming": false,
       "difficulty": 2
     },
     {
       "q": "A court can order a new lease term of up to 20 years.",
       "a": false,
-      "exp": "The court can grant a term up to 15 years (Source: 10731).",
+      "exp": "The court can grant a term up to 15 years.",
       "isTiming": true,
       "difficulty": 2
     },
     {
       "q": "Parties can agree to extend the deadline for court applications in writing.",
       "a": true,
-      "exp": "The deadline can be extended by written agreement (Source: 10724).",
+      "exp": "The deadline can be extended by written agreement.",
       "isTiming": false,
       "difficulty": 2
     },
     {
       "q": "A tenant can serve a Section 26 request after receiving a Section 25 notice.",
       "a": false,
-      "exp": "The notices are mutually exclusive; once one is served, the other cannot be (Source: 10671).",
+      "exp": "The notices are mutually exclusive; once one is served, the other cannot be.",
       "isTiming": false,
       "difficulty": 3
     },
     {
       "q": "A members-only tennis club can qualify for security of tenure.",
       "a": true,
-      "exp": "Case law confirms this is a business purpose (Source: 10375).",
+      "exp": "Case law confirms this is a business purpose.",
       "isTiming": false,
       "difficulty": 2
     },
     {
       "q": "Contracting out requires a court order.",
       "a": false,
-      "exp": "Since 2004, the notice and declaration procedure replaced court orders (Source: 10404).",
+      "exp": "Since 2004, the notice and declaration procedure replaced court orders.",
       "isTiming": false,
       "difficulty": 2
     },
     {
       "q": "Ground (a) (breach of repair) is a mandatory ground.",
       "a": false,
-      "exp": "Ground (a) is a discretionary ground (Source: 10605).",
+      "exp": "Ground (a) is a discretionary ground.",
       "isTiming": false,
       "difficulty": 2
     },
     {
       "q": "The immediate landlord is always the Competent Landlord.",
       "a": false,
-      "exp": "It is the first in the chain with sufficient reversionary interest (Source: 10839).",
+      "exp": "It is the first in the chain with sufficient reversionary interest.",
       "isTiming": false,
       "difficulty": 2
     },
     {
       "q": "A Section 25 notice served on 31 August expires on 28 (or 29) February.",
       "a": true,
-      "exp": "The corresponding date rule applies to shorter months (Source: 10828).",
+      "exp": "The corresponding date rule applies to shorter months.",
       "isTiming": true,
       "difficulty": 3
     },
     {
       "q": "Tenants can contract out of compensation rights if occupation is less than 5 years.",
       "a": true,
-      "exp": "Exclusion of compensation is permitted for short occupation (<5 years) (Source: 10580).",
+      "exp": "Exclusion of compensation is permitted for short occupation (<5 years).",
       "isTiming": true,
       "difficulty": 3
     },
