@@ -10,7 +10,7 @@ import { db, auth } from './firebase';
 const PREPARED_BANKS = {};            
 const appId = 'sqe-arcade';          
 
-// --- AUDIO ENGINE v24.0 (Generative Flow + SFX) ---
+// --- AUDIO ENGINE v25.0 (Generative Ambience + FM Synthesis) ---
 class AudioEngine {
   constructor() {
     this.ctx = null;
@@ -23,18 +23,63 @@ class AudioEngine {
     this.beatCount = 0;
     this.distortionNode = null;
     
-    // Nodes for Flow Mode (Ambient)
+    // Flow Mode State
+    this.chordIndex = 0;
+    this.chordTimer = null;
     this.flowNodes = {
         pads: [],
-        gain: null
+        gain: null,
+        delayInput: null,
+        filterLFO: null
     };
+    
+    // Chord Progression (C Minor context)
+    this.chords = [
+        { freqs: [130.81, 155.56, 196.00, 233.08], scale: [261.63, 311.13, 392.00, 466.16, 523.25] }, // Cm9 -> Cm Pentatonic
+        { freqs: [103.83, 155.56, 185.00, 207.65], scale: [207.65, 261.63, 311.13, 415.30, 523.25] }, // AbMaj7
+        { freqs: [87.31, 130.81, 174.61, 220.00],  scale: [174.61, 220.00, 261.63, 349.23, 440.00] }, // Fadd9
+        { freqs: [116.54, 146.83, 174.61, 233.08], scale: [233.08, 293.66, 349.23, 466.16, 587.33] }  // Bb
+    ];
   }
 
   init() {
     if (!this.ctx) {
       this.ctx = new (window.AudioContext || window.webkitAudioContext)();
       this.createDistortion();
+      this.createDelayNetwork();
     }
+  }
+
+  createDelayNetwork() {
+      // Create a Ping-Pong Delay for the Flow Mode bells
+      const delayL = this.ctx.createDelay();
+      const delayR = this.ctx.createDelay();
+      const feedback = this.ctx.createGain();
+      const merger = this.ctx.createChannelMerger(2);
+      
+      // 500ms delay time (120bpm quarter note)
+      delayL.delayTime.value = 0.5; 
+      delayR.delayTime.value = 0.75; // Syncopated right
+      
+      feedback.gain.value = 0.4; // Decay time (Memory of the loop)
+      
+      // Filter the delay trails so they don't muddy the mix
+      const delayFilter = this.ctx.createBiquadFilter();
+      delayFilter.type = 'lowpass';
+      delayFilter.frequency.value = 2000;
+
+      // Routing: Input -> Delay -> Filter -> Feedback -> Input
+      delayL.connect(delayR); // Cross feed
+      delayR.connect(feedback);
+      feedback.connect(delayFilter);
+      delayFilter.connect(delayL);
+      
+      delayL.connect(merger, 0, 0);
+      delayR.connect(merger, 0, 1);
+      
+      merger.connect(this.ctx.destination);
+      
+      this.flowNodes.delayInput = delayL;
   }
 
   setMode(mode) {
@@ -65,173 +110,279 @@ class AudioEngine {
 
   setDensity(level) {
     this.density = Math.min(12, Math.max(1, level));
-    if (this.mode === 'flow' && this.isPlaying) {
-        this.updateFlowIntensity();
-    }
   }
 
-  // --- SFX & INTERACTION ---
+  // --- INTERACTION SFX ---
   playInteraction(type) {
       if (!this.ctx) return;
       this.resume();
       const t = this.ctx.currentTime;
-      const osc = this.ctx.createOscillator();
-      const gain = this.ctx.createGain();
       
       if (type === 'hover') {
           // Tiny high blip
-          osc.frequency.setValueAtTime(800, t);
-          osc.type = 'triangle';
-          gain.gain.setValueAtTime(0.05, t);
-          gain.gain.exponentialRampToValueAtTime(0.001, t + 0.05);
+          const osc = this.ctx.createOscillator();
+          const gain = this.ctx.createGain();
+          osc.frequency.setValueAtTime(1200, t);
+          osc.type = 'sine';
+          gain.gain.setValueAtTime(0.02, t);
+          gain.gain.exponentialRampToValueAtTime(0.001, t + 0.03);
+          osc.connect(gain);
+          gain.connect(this.ctx.destination);
           osc.start(t);
           osc.stop(t + 0.05);
       } else if (type === 'click') {
-          // Soft mechanical thud
-          osc.frequency.setValueAtTime(150, t);
-          osc.frequency.exponentialRampToValueAtTime(0.01, t + 0.1);
-          osc.type = 'sine';
-          gain.gain.setValueAtTime(0.2, t);
+          // Satisfying mechanical "thud"
+          const osc = this.ctx.createOscillator();
+          const gain = this.ctx.createGain();
+          osc.frequency.setValueAtTime(180, t);
+          osc.frequency.exponentialRampToValueAtTime(40, t + 0.1);
+          osc.type = 'triangle';
+          gain.gain.setValueAtTime(0.15, t);
           gain.gain.exponentialRampToValueAtTime(0.001, t + 0.1);
+          osc.connect(gain);
+          gain.connect(this.ctx.destination);
           osc.start(t);
           osc.stop(t + 0.1);
-      } else if (type === 'correct') {
-          // Harmonious Bell (C Major 7th ish)
-          this.playBell(t, 523.25); // C5
-          setTimeout(() => this.playBell(this.ctx.currentTime, 659.25), 50); // E5
       } else if (type === 'wrong') {
           // Low "Dud"
+          const osc = this.ctx.createOscillator();
+          const gain = this.ctx.createGain();
           osc.frequency.setValueAtTime(100, t);
           osc.frequency.linearRampToValueAtTime(50, t + 0.3);
           osc.type = 'sawtooth';
-          
           const filter = this.ctx.createBiquadFilter();
           filter.type = 'lowpass';
-          filter.frequency.value = 200;
-          
-          gain.gain.setValueAtTime(0.3, t);
+          filter.frequency.value = 300;
+          gain.gain.setValueAtTime(0.2, t);
           gain.gain.linearRampToValueAtTime(0, t + 0.3);
-          
           osc.connect(filter);
           filter.connect(gain);
           gain.connect(this.ctx.destination);
           osc.start(t);
           osc.stop(t + 0.3);
-          return; // Custom routing for wrong
       }
+  }
+
+  // --- FM SYNTHESIS BELL (For Flow Mode) ---
+  playFMBell(freq) {
+      if(!this.ctx) return;
+      const t = this.ctx.currentTime;
       
-      osc.connect(gain);
-      gain.connect(this.ctx.destination);
+      // 1. Carrier (The main tone)
+      const carrier = this.ctx.createOscillator();
+      const carrierGain = this.ctx.createGain();
+      carrier.frequency.value = freq;
+      carrier.type = 'sine';
+
+      // 2. Modulator (Create the metallic timbre)
+      // Ratio 1:2 makes it bell-like. 
+      const modulator = this.ctx.createOscillator();
+      const modulatorGain = this.ctx.createGain();
+      modulator.frequency.value = freq * 2.0; 
+      modulator.type = 'sine';
+      
+      // Envelope for the "Clang" (Modulation Index)
+      modulatorGain.gain.setValueAtTime(300, t); // Intensity of metal
+      modulatorGain.gain.exponentialRampToValueAtTime(0.01, t + 0.5); // Fast decay
+
+      // Amplitude Envelope (Volume)
+      carrierGain.gain.setValueAtTime(0, t);
+      carrierGain.gain.linearRampToValueAtTime(0.3, t + 0.02); // Fast attack
+      carrierGain.gain.exponentialRampToValueAtTime(0.001, t + 3.0); // Long tail
+
+      // Connect: Mod -> ModGain -> CarrierFreq
+      modulator.connect(modulatorGain);
+      modulatorGain.connect(carrier.frequency);
+      
+      carrier.connect(carrierGain);
+      
+      // Send to Master Output
+      carrierGain.connect(this.ctx.destination);
+      
+      // Send to Delay Network (The Loop)
+      if (this.flowNodes.delayInput) {
+          const send = this.ctx.createGain();
+          send.gain.value = 0.4;
+          carrierGain.connect(send);
+          send.connect(this.flowNodes.delayInput);
+      }
+
+      carrier.start(t);
+      modulator.start(t);
+      
+      // Cleanup
+      carrier.stop(t + 3.5);
+      modulator.stop(t + 3.5);
   }
 
-  playBell(time, freq) {
-      const osc = this.ctx.createOscillator();
-      const gain = this.ctx.createGain();
-      osc.type = 'sine';
-      osc.frequency.setValueAtTime(freq, time);
-      gain.gain.setValueAtTime(0, time);
-      gain.gain.linearRampToValueAtTime(0.1, time + 0.02);
-      gain.gain.exponentialRampToValueAtTime(0.001, time + 1.5);
-      osc.connect(gain);
-      gain.connect(this.ctx.destination);
-      osc.start(time);
-      osc.stop(time + 1.5);
-  }
-  
-  // Generative Melody for Flow Mode (Pentatonic Scale)
+  // Generative Melody Logic
   playFlowNote() {
-      if (this.mode !== 'flow' || !this.ctx) return;
-      const scale = [261.63, 311.13, 349.23, 392.00, 466.16, 523.25]; // C Minor Pentatonic
-      const note = scale[Math.floor(Math.random() * scale.length)];
-      this.playBell(this.ctx.currentTime, note * (Math.random() > 0.5 ? 1 : 2));
+      if (this.mode !== 'flow' || !this.ctx) {
+          // If in Arcade mode, play standard chime
+          this.playInteraction('correct'); // Placeholder fallback
+          const t = this.ctx.currentTime;
+          // Simple Arcade Chime
+          const osc = this.ctx.createOscillator();
+          const gain = this.ctx.createGain();
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(523.25, t);
+          osc.frequency.exponentialRampToValueAtTime(1046.50, t + 0.1);
+          gain.gain.setValueAtTime(0.1, t);
+          gain.gain.exponentialRampToValueAtTime(0.001, t + 0.5);
+          osc.connect(gain);
+          gain.connect(this.ctx.destination);
+          osc.start(t);
+          osc.stop(t + 0.5);
+          return;
+      }
+
+      // Pick a note from the current chord's scale
+      const currentScale = this.chords[this.chordIndex].scale;
+      let note = currentScale[Math.floor(Math.random() * currentScale.length)];
+      
+      // Sometimes jump octave
+      if (Math.random() > 0.7) note *= 2; 
+      
+      this.playFMBell(note);
   }
 
-  // --- ARCADE MODE METHODS ---
+  // --- FLOW MODE (Breathing Pads) ---
+  startFlow() {
+      if (!this.ctx) return;
+      this.stopFlow(); 
+
+      const now = this.ctx.currentTime;
+      const masterGain = this.ctx.createGain();
+      
+      masterGain.gain.setValueAtTime(0, now);
+      masterGain.gain.linearRampToValueAtTime(0.4, now + 3); // Slow fade in
+      masterGain.connect(this.ctx.destination);
+      this.flowNodes.gain = masterGain;
+
+      // Start the chord progression loop
+      this.updateFlowChord();
+      this.chordTimer = setInterval(() => {
+          this.chordIndex = (this.chordIndex + 1) % this.chords.length;
+          this.updateFlowChord();
+      }, 8000); // Change chord every 8 seconds
+  }
+
+  updateFlowChord() {
+      const now = this.ctx.currentTime;
+      const freqs = this.chords[this.chordIndex].freqs;
+      
+      // Kill old pads gently
+      this.flowNodes.pads.forEach(p => {
+          p.gain.gain.setTargetAtTime(0, now, 1.5); // Release
+          p.osc.stop(now + 4);
+      });
+      this.flowNodes.pads = [];
+
+      // Create new pads
+      freqs.forEach((f, i) => {
+          const osc = this.ctx.createOscillator();
+          const gain = this.ctx.createGain();
+          const filter = this.ctx.createBiquadFilter();
+          
+          osc.type = i % 2 === 0 ? 'sawtooth' : 'triangle'; // Richer harmonics
+          osc.frequency.value = f;
+          
+          // Detune spread for "Super-Saw" feel
+          osc.detune.value = (Math.random() * 20) - 10; 
+
+          // Filter "Breathing" LFO
+          filter.type = 'lowpass';
+          filter.frequency.value = 400; // Start muffled
+          
+          // LFO to modulate filter
+          const lfo = this.ctx.createOscillator();
+          lfo.frequency.value = 0.1 + (Math.random() * 0.1); // Very slow breath
+          const lfoGain = this.ctx.createGain();
+          lfoGain.gain.value = 300; // Modulation depth
+          lfo.connect(lfoGain);
+          lfoGain.connect(filter.frequency);
+          lfo.start();
+
+          // Stereo Spread
+          const pan = this.ctx.createStereoPanner();
+          pan.pan.value = (Math.random() * 1.5) - 0.75;
+
+          gain.gain.setValueAtTime(0, now);
+          gain.gain.linearRampToValueAtTime(0.08, now + 2); // Attack
+
+          osc.connect(filter);
+          filter.connect(gain);
+          gain.connect(pan);
+          pan.connect(this.flowNodes.gain);
+          
+          osc.start();
+          this.flowNodes.pads.push({ osc, gain, lfo });
+      });
+  }
+
+  stopFlow() {
+      if (this.chordTimer) clearInterval(this.chordTimer);
+      if (this.flowNodes.gain) {
+          const now = this.ctx.currentTime;
+          this.flowNodes.gain.gain.linearRampToValueAtTime(0, now + 1);
+          setTimeout(() => {
+              this.flowNodes.pads.forEach(n => {
+                  n.osc.stop();
+                  if(n.lfo) n.lfo.stop();
+              });
+              this.flowNodes.pads = [];
+          }, 1100);
+      }
+  }
+
+  // --- ARCADE MODE (Rhythmic) ---
+  schedulePattern(time) {
+    const step = this.beatCount % 16;
+    const root = (Math.floor(this.beatCount / 32) % 2 === 0) ? 41.20 : 49.00; 
+    
+    if (step % 4 === 0) this.playDrum(time, 'kick');
+    if (step % 4 === 2 || step % 4 === 3) this.playOsc(time, root, 'triangle', 0.15, 0.4, 300);
+
+    if (this.density >= 2 && (step === 4 || step === 12)) this.playDrum(time, 'snare');
+    if (this.density >= 3 && step % 4 === 0) this.playOsc(time, root * 1.5, 'triangle', 0.2, 0.1, 1000); 
+    if (this.density >= 5 && step % 2 === 0) {
+       const arp = [root*4, root*6, root*8, root*5];
+       this.playOsc(time, arp[(step/2)%4], 'square', 0.1, 0.05, 2000);
+    }
+    if (this.density >= 6 && step === 0 && this.beatCount % 32 === 0) {
+        this.playPad(time, root * 4, 4, -5); 
+        this.playPad(time, root * 6, 4, 5); 
+    }
+    if (this.density >= 7 && step % 2 === 0) this.playDrum(time, 'hat'); 
+    if (this.density >= 8) {
+        const soloNotes = [root*8, root*12, root*10, root*15, root*8, root*6, root*12, root*16];
+        this.playOsc(time, soloNotes[step % 8], 'sawtooth', 0.12, 0.1, 4000);
+    }
+    if (this.density >= 11 && step === 0 && this.beatCount % 64 === 0) {
+        this.playCinematicStack(time, root, 8); 
+    }
+  }
+
+  // ... (Keep existing arcade helper methods: playOsc, playDrum, playPad etc) ...
+  // Re-inserting them here for completeness since we are replacing the class
+  
   playOsc(time, freq, type, duration, vol, filterFreq, useGlitch = false) {
     if (!this.ctx) return;
     const osc = this.ctx.createOscillator();
     const gain = this.ctx.createGain();
     const filter = this.ctx.createBiquadFilter();
-
     osc.type = type;
     osc.frequency.setValueAtTime(freq, time);
-
-    if (useGlitch) {
-        filter.type = 'highpass';
-        filter.frequency.setValueAtTime(8000, time);
-        vol = vol * 0.02; 
-    } else {
-        filter.type = 'lowpass';
-        filter.frequency.setValueAtTime(filterFreq || 1500, time);
-    }
-    
+    filter.type = useGlitch ? 'highpass' : 'lowpass';
+    filter.frequency.setValueAtTime(useGlitch ? 8000 : (filterFreq || 1500), time);
     gain.gain.setValueAtTime(0, time);
-    gain.gain.linearRampToValueAtTime(vol, time + 0.02);
+    gain.gain.linearRampToValueAtTime(vol * (useGlitch ? 0.02 : 1), time + 0.02);
     gain.gain.exponentialRampToValueAtTime(0.001, time + duration);
-
     osc.connect(filter);
-    
-    if (useGlitch && this.distortionNode) {
-       filter.connect(gain); 
-    } else {
-       filter.connect(gain);
-    }
-    
+    filter.connect(gain);
     gain.connect(this.ctx.destination);
     osc.start(time);
     osc.stop(time + duration + 0.5);
-  }
-
-  playCinematicStack(time, freq, duration) {
-      if (!this.ctx) return;
-      const gain = this.ctx.createGain();
-      gain.connect(this.ctx.destination);
-      
-      const harmonics = [1, 1.5, 2];
-      harmonics.forEach((h, i) => {
-          const osc = this.ctx.createOscillator();
-          osc.type = 'sawtooth'; 
-          osc.frequency.setValueAtTime(freq * h, time);
-          
-          const filter = this.ctx.createBiquadFilter();
-          filter.type = 'lowpass';
-          filter.frequency.setValueAtTime(200, time);
-          filter.frequency.linearRampToValueAtTime(600, time + duration); 
-
-          osc.connect(filter);
-          filter.connect(gain);
-          osc.start(time);
-          osc.stop(time + duration + 2.0); 
-      });
-
-      gain.gain.setValueAtTime(0, time);
-      gain.gain.linearRampToValueAtTime(0.05, time + 2.0); 
-      gain.gain.linearRampToValueAtTime(0, time + duration + 1.0);
-  }
-
-  playPad(time, freq, duration, detune = 0) {
-      if (!this.ctx) return;
-      const osc = this.ctx.createOscillator();
-      const gain = this.ctx.createGain();
-      const filter = this.ctx.createBiquadFilter();
-      
-      osc.type = 'triangle'; 
-      osc.frequency.setValueAtTime(freq, time);
-      osc.detune.value = detune;
-
-      filter.type = 'lowpass';
-      filter.frequency.setValueAtTime(200, time);
-      filter.frequency.linearRampToValueAtTime(800, time + duration/2);
-      
-      gain.gain.setValueAtTime(0, time);
-      gain.gain.linearRampToValueAtTime(0.15, time + 1.5); 
-      gain.gain.linearRampToValueAtTime(0, time + duration); 
-      
-      osc.connect(filter);
-      filter.connect(gain);
-      gain.connect(this.ctx.destination);
-      osc.start(time);
-      osc.stop(time + duration);
   }
 
   playDrum(time, type) {
@@ -239,11 +390,10 @@ class AudioEngine {
     const osc = this.ctx.createOscillator();
     const gain = this.ctx.createGain();
     const noiseNode = this.ctx.createBufferSource();
-
     if (type === 'kick') {
       osc.frequency.setValueAtTime(150, time);
       osc.frequency.exponentialRampToValueAtTime(0.01, time + 0.5);
-      gain.gain.setValueAtTime(0.6, time); // Soft Kick
+      gain.gain.setValueAtTime(0.6, time);
       gain.gain.exponentialRampToValueAtTime(0.01, time + 0.5);
       osc.connect(gain);
     } else if (type === 'hat') {
@@ -272,6 +422,49 @@ class AudioEngine {
     if (type !== 'hat') { osc.start(time); osc.stop(time + 0.5); }
   }
 
+  playCinematicStack(time, freq, duration) {
+      if (!this.ctx) return;
+      const gain = this.ctx.createGain();
+      gain.connect(this.ctx.destination);
+      [1, 1.5, 2].forEach((h) => {
+          const osc = this.ctx.createOscillator();
+          osc.type = 'sawtooth'; 
+          osc.frequency.setValueAtTime(freq * h, time);
+          const filter = this.ctx.createBiquadFilter();
+          filter.type = 'lowpass';
+          filter.frequency.setValueAtTime(200, time);
+          filter.frequency.linearRampToValueAtTime(600, time + duration); 
+          osc.connect(filter);
+          filter.connect(gain);
+          osc.start(time);
+          osc.stop(time + duration + 2.0); 
+      });
+      gain.gain.setValueAtTime(0, time);
+      gain.gain.linearRampToValueAtTime(0.05, time + 2.0); 
+      gain.gain.linearRampToValueAtTime(0, time + duration + 1.0);
+  }
+
+  playPad(time, freq, duration, detune = 0) {
+      if (!this.ctx) return;
+      const osc = this.ctx.createOscillator();
+      const gain = this.ctx.createGain();
+      const filter = this.ctx.createBiquadFilter();
+      osc.type = 'triangle'; 
+      osc.frequency.setValueAtTime(freq, time);
+      osc.detune.value = detune;
+      filter.type = 'lowpass';
+      filter.frequency.setValueAtTime(200, time);
+      filter.frequency.linearRampToValueAtTime(800, time + duration/2);
+      gain.gain.setValueAtTime(0, time);
+      gain.gain.linearRampToValueAtTime(0.15, time + 1.5); 
+      gain.gain.linearRampToValueAtTime(0, time + duration); 
+      osc.connect(filter);
+      filter.connect(gain);
+      gain.connect(this.ctx.destination);
+      osc.start(time);
+      osc.stop(time + duration);
+  }
+
   scheduler() {
     if (this.mode !== 'arcade') return; 
     while (this.nextNoteTime < this.ctx.currentTime + 0.1) {
@@ -281,119 +474,6 @@ class AudioEngine {
       this.beatCount++;
     }
     this.timerID = window.setTimeout(this.scheduler.bind(this), 25.0);
-  }
-
-  schedulePattern(time) {
-    const step = this.beatCount % 16;
-    const root = (Math.floor(this.beatCount / 32) % 2 === 0) ? 41.20 : 49.00; 
-    
-    // Stage 1 (Menu/Base) - Smooth Triangle Bass
-    if (step % 4 === 0) this.playDrum(time, 'kick');
-    if (step % 4 === 2 || step % 4 === 3) this.playOsc(time, root, 'triangle', 0.15, 0.4, 300);
-
-    // Stage 2
-    if (this.density >= 2 && (step === 4 || step === 12)) this.playDrum(time, 'snare');
-    
-    // Stage 3
-    if (this.density >= 3 && step % 4 === 0) this.playOsc(time, root * 1.5, 'triangle', 0.2, 0.1, 1000); 
-
-    // Stage 4-5
-    if (this.density >= 5 && step % 2 === 0) {
-       const arp = [root*4, root*6, root*8, root*5];
-       this.playOsc(time, arp[(step/2)%4], 'square', 0.1, 0.05, 2000);
-    }
-
-    // Stage 6
-    if (this.density >= 6 && step === 0 && this.beatCount % 32 === 0) {
-        this.playPad(time, root * 4, 4, -5); 
-        this.playPad(time, root * 6, 4, 5); 
-    }
-
-    // Stage 7
-    if (this.density >= 7 && step % 2 === 0) this.playDrum(time, 'hat'); 
-    
-    // Stage 8
-    if (this.density >= 8) {
-        const soloNotes = [root*8, root*12, root*10, root*15, root*8, root*6, root*12, root*16];
-        this.playOsc(time, soloNotes[step % 8], 'sawtooth', 0.12, 0.1, 4000);
-    }
-
-    // Stage 9
-    if (this.density >= 9 && step === 0 && this.beatCount % 32 === 0) {
-        this.playOsc(time, root * 2, 'sawtooth', 0.08, 0.15, 800);  
-        this.playOsc(time, root * 3, 'sawtooth', 0.08, 0.15, 800); 
-    }
-    
-    // Stage 10
-    if (this.density >= 10 && Math.random() > 0.90) {
-        this.playOsc(time, Math.random()*4000 + 200, 'sine', 0.1, 0.05, 8000, true); 
-    }
-
-    // Stage 11
-    if (this.density >= 11 && step === 0 && this.beatCount % 64 === 0) {
-        this.playCinematicStack(time, root, 8); 
-    }
-  }
-
-  // --- FLOW MODE METHODS (Ambient + Generative) ---
-  startFlow() {
-      if (!this.ctx) return;
-      this.stopFlow(); 
-
-      const now = this.ctx.currentTime;
-      // C Minor 9 Pad: C3, Eb3, G3, Bb3, D4
-      const freqs = [130.81, 155.56, 196.00, 233.08, 293.66];
-      const masterGain = this.ctx.createGain();
-      
-      masterGain.gain.setValueAtTime(0, now);
-      masterGain.gain.linearRampToValueAtTime(0.25, now + 3); // Slow fade in
-      masterGain.connect(this.ctx.destination);
-      this.flowNodes.gain = masterGain;
-
-      // Create a lush pad stack
-      freqs.forEach((f, i) => {
-          const osc = this.ctx.createOscillator();
-          osc.type = i % 2 === 0 ? 'sine' : 'triangle';
-          osc.frequency.value = f;
-          
-          // Slight detune for "lo-fi" feel
-          osc.detune.value = Math.random() * 10 - 5; 
-          
-          const pan = this.ctx.createStereoPanner();
-          pan.pan.value = (Math.random() * 2) - 1; // Random spread
-          
-          const lfo = this.ctx.createOscillator();
-          lfo.frequency.value = 0.1 + (Math.random() * 0.2); // Slow drift
-          const lfoGain = this.ctx.createGain();
-          lfoGain.gain.value = 10;
-          lfo.connect(lfoGain);
-          lfoGain.connect(osc.detune);
-          lfo.start();
-
-          osc.connect(pan);
-          pan.connect(masterGain);
-          osc.start();
-          this.flowNodes.pads.push({ osc, lfo, pan });
-      });
-  }
-
-  updateFlowIntensity() {
-      // In Flow mode, intensity just slightly opens the stereo width or brightness
-      // But we keep it calm.
-  }
-
-  stopFlow() {
-      if (this.flowNodes.gain) {
-          const now = this.ctx.currentTime;
-          this.flowNodes.gain.gain.linearRampToValueAtTime(0, now + 2); // Fade out
-          setTimeout(() => {
-              this.flowNodes.pads.forEach(n => {
-                  n.osc.stop();
-                  if(n.lfo) n.lfo.stop();
-              });
-              this.flowNodes.pads = [];
-          }, 2100);
-      }
   }
 
   start() {
