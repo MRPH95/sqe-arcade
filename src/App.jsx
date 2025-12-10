@@ -10,7 +10,7 @@ import { db, auth } from './firebase';
 const PREPARED_BANKS = {};            
 const appId = 'sqe-arcade';          
 
-// --- AUDIO ENGINE v33.0 (Triangle Variant + Smooth Fades) ---
+// --- AUDIO ENGINE v34.0 (Fixed Volumes / No Fades / Sawtooth) ---
 class AudioEngine {
   constructor() {
     this.ctx = null;
@@ -209,9 +209,11 @@ class AudioEngine {
       modulator.frequency.value = freq * 2.0; 
       modulator.type = 'sine';
       
+      // RICH RESONANCE RESTORED
       modulatorGain.gain.setValueAtTime(250, t); 
       modulatorGain.gain.exponentialRampToValueAtTime(0.01, t + 1.2); 
 
+      // VOLUME CONTROLLED
       carrierGain.gain.setValueAtTime(0, t);
       carrierGain.gain.linearRampToValueAtTime(0.1, t + 0.05); 
       carrierGain.gain.exponentialRampToValueAtTime(0.001, t + 4.0); 
@@ -274,11 +276,9 @@ class AudioEngine {
       }
 
       const currentScale = this.chords[this.chordIndex].scale;
-      
       const noteIdx = Math.floor(Math.random() * currentScale.length);
       const note = currentScale[noteIdx];
       this.playFMBell(note, 0);
-      
       this.playChoirEcho(note, 2.0); 
       
       if (this.currentStreak > 30) {
@@ -409,51 +409,26 @@ class AudioEngine {
     if (this.density >= 2 && (step === 4 || step === 12)) this.playDrum(time, 'snare');
     if (this.density >= 3 && step % 4 === 0) this.playOsc(time, root * 1.5, 'triangle', 0.2, 0.1, 1000); 
     
-    // ARPEGGIO FADE IN (Streak 20-30)
+    // ARPEGGIO (Streak 20-30) - Fixed Low Volume (No Fade)
     if (this.density >= 5 && step % 2 === 0) {
-       let arpVol = 0;
-       if (this.currentStreak >= 20 && this.currentStreak < 30) {
-           arpVol = (this.currentStreak - 20) / 10;
-       } else if (this.currentStreak >= 30) {
-           arpVol = 1.0;
-       }
-       
-       if (arpVol > 0.05) {
-           const arp = [root*4, root*6, root*8, root*5];
-           // 50% Volume reduction on Square Wave
-           this.playOsc(time, arp[(step/2)%4], 'square', 0.04 * arpVol, 0.05, 2000);
-       }
+       const arp = [root*4, root*6, root*8, root*5];
+       // Fixed low volume 0.025 (very safe)
+       this.playOsc(time, arp[(step/2)%4], 'square', 0.025, 0.05, 2000);
     }
     
-    // PAD FADE IN (Streak 25-35)
+    // PAD (Streak 25-35) - Fixed Low Volume (No Fade)
     if (this.density >= 6 && step === 0 && this.beatCount % 32 === 0) {
-        let padVol = 0;
-        if (this.currentStreak >= 25 && this.currentStreak < 35) {
-            padVol = (this.currentStreak - 25) / 10;
-        } else if (this.currentStreak >= 35) {
-            padVol = 1.0;
-        }
-        
-        if (padVol > 0.05) {
-            this.playPad(time, root * 4, 4, -5, 0.1 * padVol); 
-            this.playPad(time, root * 6, 4, 5, 0.1 * padVol); 
-        }
+        // Fixed low volume 0.08
+        this.playPad(time, root * 4, 4, -5, 0.08); 
+        this.playPad(time, root * 6, 4, 5, 0.08); 
     }
     if (this.density >= 7 && step % 2 === 0) this.playDrum(time, 'hat'); 
     
-    // DOPPLER FADE IN (Streak 35-45) - TRIANGLE VARIANT
+    // DOPPLER (Streak 35-45) - Fixed Low Volume (No Fade)
     if (this.density >= 8) {
-        let fadeVol = 0;
-        if (this.currentStreak >= 35 && this.currentStreak <= 45) {
-            fadeVol = (this.currentStreak - 35) / 10;
-        } else if (this.currentStreak > 45) {
-            fadeVol = 1.0;
-        }
-        if (fadeVol > 0.01) {
-            const soloNotes = [root*8, root*12, root*10, root*15, root*8, root*6, root*12, root*16];
-            // TRIANGLE WAVE + Higher Vol (0.08) + 2000 Filter
-            this.playOsc(time, soloNotes[step % 8], 'triangle', 0.08 * fadeVol, 0.1, 2000);
-        }
+        const soloNotes = [root*8, root*12, root*10, root*15, root*8, root*6, root*12, root*16];
+        // SAWTOOTH + Fixed low vol 0.025 + 2000 Filter
+        this.playOsc(time, soloNotes[step % 8], 'sawtooth', 0.025, 0.1, 2000);
     }
     
     if (this.density >= 11 && step === 0 && this.beatCount % 64 === 0) {
