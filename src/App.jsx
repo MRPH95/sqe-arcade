@@ -10,7 +10,7 @@ import { db, auth } from './firebase';
 const PREPARED_BANKS = {};            
 const appId = 'sqe-arcade';          
 
-// --- AUDIO ENGINE v32.0 (Sawtooth Fix + Pad Fades) ---
+// --- AUDIO ENGINE v33.0 (Triangle Variant + Smooth Fades) ---
 class AudioEngine {
   constructor() {
     this.ctx = null;
@@ -209,11 +209,9 @@ class AudioEngine {
       modulator.frequency.value = freq * 2.0; 
       modulator.type = 'sine';
       
-      // RICH RESONANCE RESTORED
       modulatorGain.gain.setValueAtTime(250, t); 
       modulatorGain.gain.exponentialRampToValueAtTime(0.01, t + 1.2); 
 
-      // VOLUME CONTROLLED
       carrierGain.gain.setValueAtTime(0, t);
       carrierGain.gain.linearRampToValueAtTime(0.1, t + 0.05); 
       carrierGain.gain.exponentialRampToValueAtTime(0.001, t + 4.0); 
@@ -276,9 +274,11 @@ class AudioEngine {
       }
 
       const currentScale = this.chords[this.chordIndex].scale;
+      
       const noteIdx = Math.floor(Math.random() * currentScale.length);
       const note = currentScale[noteIdx];
       this.playFMBell(note, 0);
+      
       this.playChoirEcho(note, 2.0); 
       
       if (this.currentStreak > 30) {
@@ -420,7 +420,7 @@ class AudioEngine {
        
        if (arpVol > 0.05) {
            const arp = [root*4, root*6, root*8, root*5];
-           // Max Volume reduced to 0.04 (50% quieter)
+           // 50% Volume reduction on Square Wave
            this.playOsc(time, arp[(step/2)%4], 'square', 0.04 * arpVol, 0.05, 2000);
        }
     }
@@ -441,8 +441,7 @@ class AudioEngine {
     }
     if (this.density >= 7 && step % 2 === 0) this.playDrum(time, 'hat'); 
     
-    // DOPPLER SAWTOOTH FADE (Streak 35-45)
-    // RESTORED SAWTOOTH but heavily reduced volume
+    // DOPPLER FADE IN (Streak 35-45) - TRIANGLE VARIANT
     if (this.density >= 8) {
         let fadeVol = 0;
         if (this.currentStreak >= 35 && this.currentStreak <= 45) {
@@ -452,8 +451,8 @@ class AudioEngine {
         }
         if (fadeVol > 0.01) {
             const soloNotes = [root*8, root*12, root*10, root*15, root*8, root*6, root*12, root*16];
-            // SAWTOOTH + 0.04 Max Volume + 2000 Filter
-            this.playOsc(time, soloNotes[step % 8], 'sawtooth', 0.04 * fadeVol, 0.1, 2000);
+            // TRIANGLE WAVE + Higher Vol (0.08) + 2000 Filter
+            this.playOsc(time, soloNotes[step % 8], 'triangle', 0.08 * fadeVol, 0.1, 2000);
         }
     }
     
