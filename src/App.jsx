@@ -10,18 +10,20 @@ import { db, auth } from './firebase';
 const PREPARED_BANKS = {};            
 const appId = 'sqe-arcade';          
 
-// --- AUDIO ENGINE v26.0 (Harmonic Flow + Arpeggios) ---
+// --- AUDIO ENGINE v28.0 (Master Volume Control) ---
 class AudioEngine {
   constructor() {
     this.ctx = null;
     this.isPlaying = false;
     this.mode = 'arcade'; 
     this.tempo = 128; 
-    this.density = 1; 
+    this.density = 1;
+    this.currentStreak = 0;
     this.nextNoteTime = 0;
     this.timerID = null;
     this.beatCount = 0;
     this.distortionNode = null;
+    this.masterGain = null; // NEW: Master Volume Node
     
     // Flow Mode State
     this.chordIndex = 0;
@@ -30,14 +32,9 @@ class AudioEngine {
         pads: [],
         gain: null,
         delayInput: null,
-        reverb: null
+        choirBus: null 
     };
     
-    // NEW "Hopeful/Cosmic" Progression (Eb Major context)
-    // 1. Eb Major 9 (Warm, home)
-    // 2. Gm 11 (Mysterious, floaty)
-    // 3. Ab Major 7 (Lydian, heroic/lifting)
-    // 4. Bb add9 (Resolving, bright)
     this.chords = [
         { freqs: [155.56, 196.00, 233.08, 277.18], scale: [311.13, 392.00, 466.16, 554.37, 622.25] }, // EbMaj9
         { freqs: [196.00, 233.08, 293.66, 349.23], scale: [392.00, 466.16, 587.33, 698.46, 783.99] }, // Gm11
@@ -49,9 +46,23 @@ class AudioEngine {
   init() {
     if (!this.ctx) {
       this.ctx = new (window.AudioContext || window.webkitAudioContext)();
+      
+      // Create Master Gain
+      this.masterGain = this.ctx.createGain();
+      this.masterGain.gain.value = 0.75; // Default 75%
+      this.masterGain.connect(this.ctx.destination);
+
       this.createDistortion();
       this.createDelayNetwork();
+      this.createChoirReverb();
     }
+  }
+
+  setMasterVolume(value) {
+      if (this.masterGain) {
+          // Smooth transition to avoid clicks
+          this.masterGain.gain.setTargetAtTime(value, this.ctx.currentTime, 0.05);
+      }
   }
 
   createDelayNetwork() {
@@ -60,15 +71,13 @@ class AudioEngine {
       const feedback = this.ctx.createGain();
       const merger = this.ctx.createChannelMerger(2);
       
-      // Longer, dreamier delay times
       delayL.delayTime.value = 0.6; 
       delayR.delayTime.value = 0.9; 
-      
-      feedback.gain.value = 0.5; // Longer feedback for "looping" feel
+      feedback.gain.value = 0.5; 
       
       const delayFilter = this.ctx.createBiquadFilter();
       delayFilter.type = 'lowpass';
-      delayFilter.frequency.value = 1500; // Softer trails
+      delayFilter.frequency.value = 1500; 
 
       delayL.connect(delayR); 
       delayR.connect(feedback);
@@ -78,9 +87,33 @@ class AudioEngine {
       delayL.connect(merger, 0, 0);
       delayR.connect(merger, 0, 1);
       
-      merger.connect(this.ctx.destination);
+      // Connect to Master
+      merger.connect(this.masterGain);
       
       this.flowNodes.delayInput = delayL;
+  }
+
+  createChoirReverb() {
+      const convolver = this.ctx.createConvolver();
+      const rate = this.ctx.sampleRate;
+      const length = rate * 3.0; 
+      const decay = 2.0;
+      const buffer = this.ctx.createBuffer(2, length, rate);
+      for (let c = 0; c < 2; c++) {
+          const channel = buffer.getChannelData(c);
+          for (let i = 0; i < length; i++) {
+             channel[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / length, decay);
+          }
+      }
+      convolver.buffer = buffer;
+      
+      const gain = this.ctx.createGain();
+      gain.gain.value = 0.6;
+      convolver.connect(gain);
+      
+      // Connect to Master
+      gain.connect(this.masterGain);
+      this.flowNodes.choirBus = convolver;
   }
 
   setMode(mode) {
@@ -112,6 +145,10 @@ class AudioEngine {
   setDensity(level) {
     this.density = Math.min(12, Math.max(1, level));
   }
+  
+  setStreak(s) {
+      this.currentStreak = s;
+  }
 
   // --- INTERACTION SFX ---
   playInteraction(type) {
@@ -124,10 +161,10 @@ class AudioEngine {
           const gain = this.ctx.createGain();
           osc.frequency.setValueAtTime(1200, t);
           osc.type = 'sine';
-          gain.gain.setValueAtTime(0.02, t);
+          gain.gain.setValueAtTime(0.015, t); 
           gain.gain.exponentialRampToValueAtTime(0.001, t + 0.03);
           osc.connect(gain);
-          gain.connect(this.ctx.destination);
+          gain.connect(this.masterGain); // Master
           osc.start(t);
           osc.stop(t + 0.05);
       } else if (type === 'click') {
@@ -136,33 +173,33 @@ class AudioEngine {
           osc.frequency.setValueAtTime(180, t);
           osc.frequency.exponentialRampToValueAtTime(40, t + 0.1);
           osc.type = 'triangle';
-          gain.gain.setValueAtTime(0.15, t);
+          gain.gain.setValueAtTime(0.1, t);
           gain.gain.exponentialRampToValueAtTime(0.001, t + 0.1);
           osc.connect(gain);
-          gain.connect(this.ctx.destination);
+          gain.connect(this.masterGain); // Master
           osc.start(t);
           osc.stop(t + 0.1);
       } else if (type === 'wrong') {
           const osc = this.ctx.createOscillator();
           const gain = this.ctx.createGain();
-          osc.frequency.setValueAtTime(80, t); // Lower pitch for wrong
+          osc.frequency.setValueAtTime(80, t); 
           osc.frequency.linearRampToValueAtTime(40, t + 0.4);
           osc.type = 'sawtooth';
           const filter = this.ctx.createBiquadFilter();
           filter.type = 'lowpass';
-          filter.frequency.value = 200; // Darker
+          filter.frequency.value = 200; 
           gain.gain.setValueAtTime(0.2, t);
           gain.gain.linearRampToValueAtTime(0, t + 0.4);
           osc.connect(filter);
           filter.connect(gain);
-          gain.connect(this.ctx.destination);
+          gain.connect(this.masterGain); // Master
           osc.start(t);
           osc.stop(t + 0.4);
       }
   }
 
-  // --- FM BELL (Glassy, Euphonic) ---
-  playFMBell(freq, timeOffset = 0, duration = 4.0) {
+  // --- FLOW MODE: GENERATIVE MELODY ---
+  playFMBell(freq, timeOffset = 0) {
       if(!this.ctx) return;
       const t = this.ctx.currentTime + timeOffset;
       
@@ -176,60 +213,78 @@ class AudioEngine {
       modulator.frequency.value = freq * 2.0; 
       modulator.type = 'sine';
       
-      // Less "clang", more "glass"
-      modulatorGain.gain.setValueAtTime(100, t); 
-      modulatorGain.gain.exponentialRampToValueAtTime(0.01, t + 1.0); 
+      modulatorGain.gain.setValueAtTime(80, t); 
+      modulatorGain.gain.exponentialRampToValueAtTime(0.01, t + 0.8); 
 
       carrierGain.gain.setValueAtTime(0, t);
-      carrierGain.gain.linearRampToValueAtTime(0.15, t + 0.05); // Soft attack
-      carrierGain.gain.exponentialRampToValueAtTime(0.001, t + duration); // Long tail
+      carrierGain.gain.linearRampToValueAtTime(0.08, t + 0.05); 
+      carrierGain.gain.exponentialRampToValueAtTime(0.001, t + 3.0);
 
       modulator.connect(modulatorGain);
       modulatorGain.connect(carrier.frequency);
       
       carrier.connect(carrierGain);
-      carrierGain.connect(this.ctx.destination);
-      
-      if (this.flowNodes.delayInput) {
-          const send = this.ctx.createGain();
-          send.gain.value = 0.5; // Send to loop
-          carrierGain.connect(send);
-          send.connect(this.flowNodes.delayInput);
-      }
+      carrierGain.connect(this.masterGain); // Master
 
       carrier.start(t);
       modulator.start(t);
-      carrier.stop(t + duration + 0.5);
-      modulator.stop(t + duration + 0.5);
+      carrier.stop(t + 3.5);
+      modulator.stop(t + 3.5);
   }
 
-  // GENERATIVE ARPEGGIATOR
-  // This ensures the sounds always match the current background chord
+  playChoirEcho(freq, delaySeconds) {
+      if(!this.ctx) return;
+      const t = this.ctx.currentTime + delaySeconds;
+      
+      const osc = this.ctx.createOscillator();
+      const gain = this.ctx.createGain();
+      const filter = this.ctx.createBiquadFilter();
+      
+      osc.type = 'sawtooth';
+      osc.frequency.value = freq;
+      
+      filter.type = 'bandpass';
+      filter.frequency.value = 600; 
+      filter.Q.value = 1.0;
+
+      gain.gain.setValueAtTime(0, t);
+      gain.gain.linearRampToValueAtTime(0.06, t + 1.0); 
+      gain.gain.linearRampToValueAtTime(0, t + 4.0); 
+
+      osc.connect(filter);
+      filter.connect(gain);
+      
+      if (this.flowNodes.choirBus) {
+          gain.connect(this.flowNodes.choirBus);
+      } else {
+          gain.connect(this.masterGain); // Master
+      }
+      
+      osc.start(t);
+      osc.stop(t + 4.5);
+  }
+
   playFlowNote() {
       if (this.mode !== 'flow' || !this.ctx) {
-          // Fallback for Arcade Mode
           this.playInteraction('correct');
           return;
       }
 
-      // 1. Get the harmonic pool for the CURRENT chord
       const currentScale = this.chords[this.chordIndex].scale;
       
-      // 2. Play a 3-note arpeggio (Harp Strum)
-      // Pick a random starting point in the scale
-      const startIdx = Math.floor(Math.random() * (currentScale.length - 2));
+      const noteIdx = Math.floor(Math.random() * currentScale.length);
+      const note = currentScale[noteIdx];
+      this.playFMBell(note, 0);
       
-      // Note 1 (Immediate)
-      this.playFMBell(currentScale[startIdx], 0);
+      this.playChoirEcho(note, 2.0); 
       
-      // Note 2 (+100ms, next scale degree)
-      this.playFMBell(currentScale[startIdx + 1], 0.1);
-      
-      // Note 3 (+200ms, skip one degree for open voicing)
-      this.playFMBell(currentScale[startIdx + 3] || currentScale[0] * 2, 0.2);
+      if (this.currentStreak > 30) {
+          const harmIdx = (noteIdx + 2) % currentScale.length;
+          this.playChoirEcho(currentScale[harmIdx], 3.0); 
+      }
   }
 
-  // --- FLOW MODE (Warm Pads) ---
+  // --- FLOW MODE: EVOLVING PADS ---
   startFlow() {
       if (!this.ctx) return;
       this.stopFlow(); 
@@ -238,67 +293,90 @@ class AudioEngine {
       const masterGain = this.ctx.createGain();
       
       masterGain.gain.setValueAtTime(0, now);
-      masterGain.gain.linearRampToValueAtTime(0.3, now + 4); // Very slow fade in
-      masterGain.connect(this.ctx.destination);
+      masterGain.gain.linearRampToValueAtTime(0.5, now + 4); 
+      masterGain.connect(this.masterGain); // Master
       this.flowNodes.gain = masterGain;
 
-      // Start the chord progression loop
       this.updateFlowChord();
       this.chordTimer = setInterval(() => {
           this.chordIndex = (this.chordIndex + 1) % this.chords.length;
           this.updateFlowChord();
-      }, 10000); // Change chord every 10 seconds (Slower, calmer)
+      }, 10000); 
   }
 
   updateFlowChord() {
+      if (!this.ctx) return;
       const now = this.ctx.currentTime;
       const freqs = this.chords[this.chordIndex].freqs;
       
-      // Kill old pads gently
       this.flowNodes.pads.forEach(p => {
-          p.gain.gain.setTargetAtTime(0, now, 2.0); // Slow release
+          p.gain.gain.setTargetAtTime(0, now, 2.0);
           p.osc.stop(now + 6);
       });
       this.flowNodes.pads = [];
 
-      // Create new pads (Warm Sawtooths)
+      const useHighStrings = this.currentStreak > 20;
+      const usePulse = this.currentStreak > 50;
+
       freqs.forEach((f, i) => {
-          const osc = this.ctx.createOscillator();
-          const gain = this.ctx.createGain();
-          const filter = this.ctx.createBiquadFilter();
-          
-          osc.type = 'sawtooth'; // Sawtooth + Low Filter = Warm Synth
-          osc.frequency.value = f;
-          osc.detune.value = (Math.random() * 12) - 6; // Analog drift
-
-          // Filter Logic
-          filter.type = 'lowpass';
-          filter.frequency.value = 200; // Start very closed/muffled
-          
-          // LFO to modulate filter (The "Swell")
-          const lfo = this.ctx.createOscillator();
-          lfo.frequency.value = 0.05; // 20 second cycle
-          const lfoGain = this.ctx.createGain();
-          lfoGain.gain.value = 200; // Open up to 400Hz
-          lfo.connect(lfoGain);
-          lfoGain.connect(filter.frequency);
-          lfo.start();
-
-          // Stereo Spread
-          const pan = this.ctx.createStereoPanner();
-          pan.pan.value = (i % 2 === 0 ? -0.4 : 0.4); 
-
-          gain.gain.setValueAtTime(0, now);
-          gain.gain.linearRampToValueAtTime(0.06, now + 3); // Slow attack
-
-          osc.connect(filter);
-          filter.connect(gain);
-          gain.connect(pan);
-          pan.connect(this.flowNodes.gain);
-          
-          osc.start();
-          this.flowNodes.pads.push({ osc, gain, lfo });
+          this.createAmbientLayer(f, now, 'lowpass', 200, 0.1, i);
       });
+
+      if (useHighStrings) {
+          freqs.forEach((f, i) => {
+              this.createAmbientLayer(f * 2, now, 'bandpass', 800, 0.05, i);
+          });
+      }
+      
+      if (usePulse) {
+           const root = freqs[0] * 4; 
+           this.createAmbientLayer(root, now, 'highpass', 2000, 0.03, 0, true);
+      }
+  }
+
+  createAmbientLayer(freq, now, filterType, filterFreq, vol, index, isPulse = false) {
+      const osc = this.ctx.createOscillator();
+      const gain = this.ctx.createGain();
+      const filter = this.ctx.createBiquadFilter();
+      
+      osc.type = isPulse ? 'sine' : (index % 2 === 0 ? 'sawtooth' : 'triangle');
+      osc.frequency.value = freq;
+      osc.detune.value = (Math.random() * 10) - 5; 
+
+      filter.type = filterType;
+      filter.frequency.value = filterFreq;
+      
+      const lfo = this.ctx.createOscillator();
+      lfo.frequency.value = isPulse ? 4.0 : 0.1; 
+      const lfoGain = this.ctx.createGain();
+      lfoGain.gain.value = isPulse ? 0 : 200; 
+      lfo.connect(lfoGain);
+      lfoGain.connect(filter.frequency);
+      lfo.start();
+      
+      if (isPulse) {
+          const pulseLfo = this.ctx.createOscillator();
+          pulseLfo.frequency.value = 6.0; 
+          const pulseGain = this.ctx.createGain();
+          pulseGain.gain.value = vol;
+          pulseLfo.connect(pulseGain);
+          pulseGain.connect(gain.gain);
+          pulseLfo.start();
+      }
+
+      const pan = this.ctx.createStereoPanner();
+      pan.pan.value = (Math.random() * 1.6) - 0.8;
+
+      gain.gain.setValueAtTime(0, now);
+      if (!isPulse) gain.gain.linearRampToValueAtTime(vol, now + 3);
+
+      osc.connect(filter);
+      filter.connect(gain);
+      gain.connect(pan);
+      pan.connect(this.flowNodes.gain);
+      
+      osc.start();
+      this.flowNodes.pads.push({ osc, gain, lfo });
   }
 
   stopFlow() {
@@ -335,10 +413,21 @@ class AudioEngine {
         this.playPad(time, root * 6, 4, 5); 
     }
     if (this.density >= 7 && step % 2 === 0) this.playDrum(time, 'hat'); 
+    
+    // ARCADE FADE FIX
     if (this.density >= 8) {
-        const soloNotes = [root*8, root*12, root*10, root*15, root*8, root*6, root*12, root*16];
-        this.playOsc(time, soloNotes[step % 8], 'sawtooth', 0.12, 0.1, 4000);
+        let fadeVol = 0;
+        if (this.currentStreak >= 35 && this.currentStreak <= 45) {
+            fadeVol = (this.currentStreak - 35) / 10;
+        } else if (this.currentStreak > 45) {
+            fadeVol = 1.0;
+        }
+        if (fadeVol > 0.01) {
+            const soloNotes = [root*8, root*12, root*10, root*15, root*8, root*6, root*12, root*16];
+            this.playOsc(time, soloNotes[step % 8], 'sawtooth', 0.12 * fadeVol, 0.1, 4000);
+        }
     }
+    
     if (this.density >= 11 && step === 0 && this.beatCount % 64 === 0) {
         this.playCinematicStack(time, root, 8); 
     }
@@ -358,7 +447,7 @@ class AudioEngine {
     gain.gain.exponentialRampToValueAtTime(0.001, time + duration);
     osc.connect(filter);
     filter.connect(gain);
-    gain.connect(this.ctx.destination);
+    gain.connect(this.masterGain); // Master
     osc.start(time);
     osc.stop(time + duration + 0.5);
   }
@@ -396,14 +485,14 @@ class AudioEngine {
       gain.gain.exponentialRampToValueAtTime(0.01, time + 0.2);
       osc.connect(gain);
     }
-    gain.connect(this.ctx.destination);
+    gain.connect(this.masterGain); // Master
     if (type !== 'hat') { osc.start(time); osc.stop(time + 0.5); }
   }
 
   playCinematicStack(time, freq, duration) {
       if (!this.ctx) return;
       const gain = this.ctx.createGain();
-      gain.connect(this.ctx.destination);
+      gain.connect(this.masterGain); // Master
       [1, 1.5, 2].forEach((h) => {
           const osc = this.ctx.createOscillator();
           osc.type = 'sawtooth'; 
@@ -438,7 +527,7 @@ class AudioEngine {
       gain.gain.linearRampToValueAtTime(0, time + duration); 
       osc.connect(filter);
       filter.connect(gain);
-      gain.connect(this.ctx.destination);
+      gain.connect(this.masterGain); // Master
       osc.start(time);
       osc.stop(time + duration);
   }
@@ -480,7 +569,7 @@ class AudioEngine {
 
 const audio = new AudioEngine();
 
-// --- VISUAL EFFECT v13.1 (Fixed Positioning) ---
+// --- VISUAL EFFECT v13.2 (Fixed Positioning) ---
 const WormholeEffect = ({ streak, isChronos, isGameOver, failCount }) => {
   const canvasRef = useRef(null);
   const streakRef = useRef(streak); 
@@ -865,6 +954,7 @@ export default function SQEArcade() {
   const [timeLeft, setTimeLeft] = useState(5.0);
   const [feedback, setFeedback] = useState(null);
   const [isMuted, setIsMuted] = useState(false);
+  const [volume, setVolume] = useState(0.75); // DEFAULT VOLUME 75%
   const [difficulty, setDifficulty] = useState('standard');
   const [level, setLevel] = useState(2); 
   const [audioMode, setAudioMode] = useState('arcade'); // 'arcade' or 'flow'
@@ -983,6 +1073,16 @@ export default function SQEArcade() {
       audio.setMode(mode);
   };
 
+  const handleVolumeChange = (e) => {
+      const val = parseFloat(e.target.value);
+      setVolume(val);
+      audio.setMasterVolume(val);
+      if (val > 0 && isMuted) {
+          setIsMuted(false);
+          audio.start();
+      }
+  };
+
   const selectCategory = (categoryKey) => {
     audio.playInteraction('click'); // SFX
     unlockAudio();
@@ -1035,6 +1135,7 @@ export default function SQEArcade() {
         setConsecutivePasses(0);
         setDensity(1);
         audio.setDensity(1);
+        audio.setStreak(0); // Reset Audio Streak
     }
     setCurrentQIndex(0);
     setGameStats({ correct: 0, wrong: 0 });
@@ -1057,6 +1158,9 @@ export default function SQEArcade() {
 
   useEffect(() => {
     if (gameState === 'playing') {
+      // Sync Audio Engine with current streak for volume fades
+      audio.setStreak(streak);
+
       let newDensity = 1;
       if (streak >= 75) newDensity = 12; 
       else if (streak >= 65) newDensity = 11;
@@ -1081,6 +1185,7 @@ export default function SQEArcade() {
       if ((gameState === 'menu' || gameState === 'end' || gameState === 'game_over' || gameState === 'aborted') && !isMuted) {
           if (gameState === 'menu' || gameState === 'game_over' || gameState === 'aborted') {
              audio.setDensity(1);
+             audio.setStreak(0);
           }
           audio.resume();
           if (!audio.isPlaying) audio.start();
@@ -1309,9 +1414,21 @@ export default function SQEArcade() {
           <div className="font-mono text-lg md:text-xl font-black text-white tabular-nums tracking-widest">
             {score.toLocaleString()}
           </div>
-          <button onClick={toggleMute} className="hover:text-white text-slate-400 transition-colors">
-            {isMuted ? <VolumeX size={16} /> : <Volume2 size={16} className="text-cyan-400" />}
-          </button>
+          
+          <div className="flex items-center gap-2">
+              <button onClick={toggleMute} className="hover:text-white text-slate-400 transition-colors">
+                {isMuted ? <VolumeX size={16} /> : <Volume2 size={16} className="text-cyan-400" />}
+              </button>
+              <input 
+                type="range" 
+                min="0" 
+                max="1" 
+                step="0.01" 
+                value={isMuted ? 0 : volume}
+                onChange={handleVolumeChange}
+                className="w-16 md:w-24 h-1 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-cyan-500"
+              />
+          </div>
         </div>
       </div>
 
