@@ -214,7 +214,7 @@ class AudioEngine {
       modulator.type = 'sine';
       
       // RESTORED RESONANCE: Higher modulation index (250) for rich timbre
-      modulatorGain.gain.setValueAtTime(250, t); 
+      modulatorGain.gain.setValueAtTime(150, t); 
       modulatorGain.gain.exponentialRampToValueAtTime(0.01, t + 1.2); // Longer metallic tail
 
       // CONTROLLED VOLUME: Lower amplitude (0.1) despite rich timbre
