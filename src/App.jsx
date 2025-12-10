@@ -690,7 +690,7 @@ const WormholeEffect = ({ streak, isChronos, isGameOver, failCount }) => {
     };
   }, [isChronos, isGameOver, failCount]); 
 
-  return <canvas ref={canvasRef} className="absolute inset-0 pointer-events-none z-0 opacity-100" />;
+  return <canvas ref={canvasRef} className="fixed inset-0 pointer-events-none z-0 opacity-100" />;
 };
 
 // --- COMPONENTS ---
