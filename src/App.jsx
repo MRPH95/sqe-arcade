@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { Play, Pause, RefreshCw, Check, X, Volume2, VolumeX, Zap, Trophy, Award, Hexagon, Briefcase, Gavel, Home, ScrollText, AlertTriangle, Tag, FastForward, Eye, BrainCircuit, MessageSquare, Clock, ShieldAlert, ArrowRight, Activity, Scale, Landmark, BookOpen, Shield, Layers } from 'lucide-react';
+import { Play, Pause, RefreshCw, Check, X, Volume2, VolumeX, Zap, Trophy, Award, Hexagon, Briefcase, Gavel, Home, ScrollText, AlertTriangle, Tag, FastForward, Eye, BrainCircuit, MessageSquare, Clock, ShieldAlert, ArrowRight, Activity, Scale, Landmark, BookOpen, Shield, Layers, Headphones, Music } from 'lucide-react';
 import { initializeApp } from 'firebase/app';
 import { getAuth, signInAnonymously, onAuthStateChanged, signInWithCustomToken } from 'firebase/auth';
 import { getFirestore, collection, addDoc, query, orderBy, limit, onSnapshot, serverTimestamp } from 'firebase/firestore';
@@ -10,17 +10,26 @@ import { db, auth } from './firebase';
 const PREPARED_BANKS = {};            
 const appId = 'sqe-arcade';          
 
-// --- AUDIO ENGINE v22.0 ---
+// --- AUDIO ENGINE v23.0 (Dual Mode: Arcade + Binaural) ---
 class AudioEngine {
   constructor() {
     this.ctx = null;
     this.isPlaying = false;
+    this.mode = 'arcade'; // 'arcade' or 'focus'
     this.tempo = 128; 
     this.density = 1; 
     this.nextNoteTime = 0;
     this.timerID = null;
     this.beatCount = 0;
     this.distortionNode = null;
+    
+    // Binaural Nodes
+    this.binauralNodes = {
+        leftOsc: null,
+        rightOsc: null,
+        noise: null,
+        gain: null
+    };
   }
 
   init() {
@@ -28,6 +37,13 @@ class AudioEngine {
       this.ctx = new (window.AudioContext || window.webkitAudioContext)();
       this.createDistortion();
     }
+  }
+
+  setMode(mode) {
+      const wasPlaying = this.isPlaying;
+      if (wasPlaying) this.stop();
+      this.mode = mode;
+      if (wasPlaying) this.start();
   }
 
   resume() {
@@ -51,8 +67,13 @@ class AudioEngine {
 
   setDensity(level) {
     this.density = Math.min(12, Math.max(1, level));
+    // If in Focus mode, update drone intensity immediately
+    if (this.mode === 'focus' && this.isPlaying) {
+        this.updateBinauralIntensity();
+    }
   }
 
+  // --- ARCADE MODE METHODS ---
   playOsc(time, freq, type, duration, vol, filterFreq, useGlitch = false) {
     if (!this.ctx) return;
     const osc = this.ctx.createOscillator();
@@ -140,29 +161,6 @@ class AudioEngine {
       osc.stop(time + duration);
   }
 
-  playOrgan(time, freq, duration) {
-    if (!this.ctx) return;
-    const gain = this.ctx.createGain();
-    gain.connect(this.ctx.destination);
-    
-    const harmonics = [1, 2, 3, 4];
-    const vols = [0.02, 0.015, 0.01, 0.005]; 
-
-    harmonics.forEach((h, i) => {
-        const osc = this.ctx.createOscillator();
-        osc.type = i % 2 === 0 ? 'square' : 'sawtooth'; 
-        osc.frequency.setValueAtTime(freq * h, time);
-        osc.connect(gain);
-        osc.start(time);
-        osc.stop(time + duration);
-    });
-
-    gain.gain.setValueAtTime(0, time);
-    gain.gain.linearRampToValueAtTime(0.02, time + 0.1); 
-    gain.gain.setValueAtTime(0.02, time + duration - 0.1);
-    gain.gain.linearRampToValueAtTime(0, time + duration);
-  }
-
   playDrum(time, type) {
     if (!this.ctx) return;
     const osc = this.ctx.createOscillator();
@@ -172,7 +170,7 @@ class AudioEngine {
     if (type === 'kick') {
       osc.frequency.setValueAtTime(150, time);
       osc.frequency.exponentialRampToValueAtTime(0.01, time + 0.5);
-      gain.gain.setValueAtTime(0.6, time);
+      gain.gain.setValueAtTime(0.6, time); // Soft Kick
       gain.gain.exponentialRampToValueAtTime(0.01, time + 0.5);
       osc.connect(gain);
     } else if (type === 'hat') {
@@ -202,6 +200,7 @@ class AudioEngine {
   }
 
   scheduler() {
+    if (this.mode !== 'arcade') return; 
     while (this.nextNoteTime < this.ctx.currentTime + 0.1) {
       this.schedulePattern(this.nextNoteTime);
       const secondsPerBeat = 60.0 / this.tempo;
@@ -215,17 +214,15 @@ class AudioEngine {
     const step = this.beatCount % 16;
     const root = (Math.floor(this.beatCount / 32) % 2 === 0) ? 41.20 : 49.00; 
     
-    // Stage 1 (Menu/Base)
+    // Stage 1 (Menu/Base) - Smooth Triangle Bass
     if (step % 4 === 0) this.playDrum(time, 'kick');
-    if (step % 4 === 2 || step % 4 === 3) this.playOsc(time, root, 'sawtooth', 0.15, 0.5, 400);
+    if (step % 4 === 2 || step % 4 === 3) this.playOsc(time, root, 'triangle', 0.15, 0.4, 300);
 
     // Stage 2
     if (this.density >= 2 && (step === 4 || step === 12)) this.playDrum(time, 'snare');
     
     // Stage 3
-    if (this.density >= 3) {
-        if (step % 4 === 0) this.playOsc(time, root * 1.5, 'triangle', 0.2, 0.1, 1000); 
-    }
+    if (this.density >= 3 && step % 4 === 0) this.playOsc(time, root * 1.5, 'triangle', 0.2, 0.1, 1000); 
 
     // Stage 4-5
     if (this.density >= 5 && step % 2 === 0) {
@@ -249,11 +246,9 @@ class AudioEngine {
     }
 
     // Stage 9
-    if (this.density >= 9) {
-        if (step === 0 && this.beatCount % 32 === 0) {
-             this.playOsc(time, root * 2, 'sawtooth', 0.08, 0.15, 800);  
-             this.playOsc(time, root * 3, 'sawtooth', 0.08, 0.15, 800); 
-        }
+    if (this.density >= 9 && step === 0 && this.beatCount % 32 === 0) {
+        this.playOsc(time, root * 2, 'sawtooth', 0.08, 0.15, 800);  
+        this.playOsc(time, root * 3, 'sawtooth', 0.08, 0.15, 800); 
     }
     
     // Stage 10
@@ -267,20 +262,126 @@ class AudioEngine {
     }
   }
 
+  // --- FOCUS MODE METHODS (Binaural) ---
+  startBinaural() {
+      if (!this.ctx) return;
+      this.stopBinaural(); // Clear existing
+
+      const now = this.ctx.currentTime;
+      const baseFreq = 140; // Low soothing D note
+      const beatFreq = 8; // Alpha waves (Focus)
+
+      // Master Gain for Focus Mode
+      const masterGain = this.ctx.createGain();
+      masterGain.gain.setValueAtTime(0, now);
+      masterGain.gain.linearRampToValueAtTime(0.3, now + 2); // Fade in
+      masterGain.connect(this.ctx.destination);
+      this.binauralNodes.gain = masterGain;
+
+      // Left Oscillator (Base)
+      const oscL = this.ctx.createOscillator();
+      oscL.type = 'sine';
+      oscL.frequency.value = baseFreq;
+      const panL = this.ctx.createStereoPanner();
+      panL.pan.value = -1;
+      oscL.connect(panL);
+      panL.connect(masterGain);
+      oscL.start();
+      this.binauralNodes.leftOsc = oscL;
+
+      // Right Oscillator (Base + Alpha)
+      const oscR = this.ctx.createOscillator();
+      oscR.type = 'sine';
+      oscR.frequency.value = baseFreq + beatFreq;
+      const panR = this.ctx.createStereoPanner();
+      panR.pan.value = 1;
+      oscR.connect(panR);
+      panR.connect(masterGain);
+      oscR.start();
+      this.binauralNodes.rightOsc = oscR;
+
+      // Pink Noise Layer (for texture)
+      const bufferSize = this.ctx.sampleRate * 2;
+      const buffer = this.ctx.createBuffer(1, bufferSize, this.ctx.sampleRate);
+      const data = buffer.getChannelData(0);
+      let lastOut = 0;
+      for (let i = 0; i < bufferSize; i++) {
+          const white = Math.random() * 2 - 1;
+          data[i] = (lastOut + (0.02 * white)) / 1.02; 
+          lastOut = data[i];
+          data[i] *= 3.5; 
+      }
+      
+      const noise = this.ctx.createBufferSource();
+      noise.buffer = buffer;
+      noise.loop = true;
+      const noiseFilter = this.ctx.createBiquadFilter();
+      noiseFilter.type = 'lowpass';
+      noiseFilter.frequency.value = 400; // Muffled rain sound
+      const noiseGain = this.ctx.createGain();
+      noiseGain.gain.value = 0.02; // Very quiet background
+      
+      noise.connect(noiseFilter);
+      noiseFilter.connect(noiseGain);
+      noiseGain.connect(masterGain);
+      noise.start();
+      
+      this.binauralNodes.noise = { source: noise, filter: noiseFilter, gain: noiseGain };
+      
+      // Initialize with current density
+      this.updateBinauralIntensity();
+  }
+
+  updateBinauralIntensity() {
+      if (!this.binauralNodes.noise || !this.ctx) return;
+      const d = this.density;
+      const now = this.ctx.currentTime;
+      
+      // As streak goes up, open the filter slightly and increase volume
+      // This creates a sense of "heightened awareness" without being rhythmic
+      const newFreq = 400 + (d * 100); 
+      const newVol = 0.02 + (d * 0.005);
+
+      this.binauralNodes.noise.filter.frequency.linearRampToValueAtTime(newFreq, now + 1);
+      this.binauralNodes.noise.gain.gain.linearRampToValueAtTime(newVol, now + 1);
+  }
+
+  stopBinaural() {
+      if (this.binauralNodes.leftOsc) {
+          this.binauralNodes.leftOsc.stop();
+          this.binauralNodes.leftOsc = null;
+      }
+      if (this.binauralNodes.rightOsc) {
+          this.binauralNodes.rightOsc.stop();
+          this.binauralNodes.rightOsc = null;
+      }
+      if (this.binauralNodes.noise) {
+          this.binauralNodes.noise.source.stop();
+          this.binauralNodes.noise = null;
+      }
+  }
+
   start() {
     this.init();
     if (this.isPlaying) return;
     this.resume(); 
     if (this.ctx.state === 'suspended') this.ctx.resume();
-    this.beatCount = 0;
-    this.nextNoteTime = this.ctx.currentTime + 0.05;
+    
     this.isPlaying = true;
-    this.scheduler();
+
+    if (this.mode === 'arcade') {
+        this.beatCount = 0;
+        this.nextNoteTime = this.ctx.currentTime + 0.05;
+        this.scheduler();
+    } else {
+        this.startBinaural();
+    }
   }
 
   stop() {
     this.isPlaying = false;
     window.clearTimeout(this.timerID);
+    this.stopBinaural();
   }
 }
 
@@ -320,7 +421,7 @@ const WormholeEffect = ({ streak, isChronos, isGameOver, failCount }) => {
       });
     }
 
-const render = () => {
+    const render = () => {
       const currentStreak = streakRef.current;
       
       let baseHue = 210; 
@@ -331,9 +432,6 @@ const render = () => {
       let isNegative = false;
 
       // --- VISUAL STAGE LOGIC ---
-      // TO ADD A PHASE "AFTER" SINGULARITY (e.g. Streak 100+), ADD IT HERE AT THE TOP
-      // if (currentStreak >= 100) { ... } else ...
-
       if (currentStreak >= 75) { 
           // PHASE 6: SINGULARITY (Negative Colors)
           isNegative = true; 
@@ -370,9 +468,7 @@ const render = () => {
       
       let bgStyle = `rgba(10, 15, 30, 0.4)`; 
       if (isNegative) {
-         // !!! FIX 1: UPDATE THIS NUMBER TO MATCH YOUR SINGULARITY THRESHOLD (75) !!!
          const fade = Math.min(1, (currentStreak - 75) / 10);
-         
          const r = Math.floor(220 * (1-fade) + 10 * fade);
          const g = Math.floor(240 * (1-fade) + 15 * fade);
          const b = Math.floor(255 * (1-fade) + 30 * fade);
@@ -414,13 +510,11 @@ const render = () => {
       const cy = canvas.height / 2;
       const speed = 2 + (currentStreak * 0.5) * speedMult; 
       
-      // !!! FIX 2: UPDATE THIS RANGE TO MATCH YOUR NEBULA PHASE (65 to 75) !!!
       const rotationSpeed = (currentStreak >= 65 && currentStreak < 75) 
          ? 0.05 
          : 0.0005 + (currentStreak * 0.0002); 
 
       stars.forEach(star => {
-        // ... (Star update logic remains exactly the same) ...
         star.z -= speed;
         star.angle += rotationSpeed;
 
@@ -438,7 +532,6 @@ const render = () => {
 
         let starColor;
         if (isNegative) {
-             // !!! FIX 3: UPDATE THIS NUMBER TO MATCH SINGULARITY (75) !!!
              const fade = Math.min(1, (currentStreak - 75) / 10);
              if (fade < 0.5) starColor = `rgba(0, 0, 0, 0.8)`; 
              else starColor = `hsl(210, 80%, 70%)`; 
@@ -488,7 +581,7 @@ const render = () => {
 // --- COMPONENTS ---
 
 const DifficultySelector = ({ current, onSelect }) => (
-  <div className="flex gap-2 justify-center mb-6 flex-wrap">
+  <div className="flex gap-2 justify-center mb-4 flex-wrap">
     {[
       { id: 'relaxed', label: 'RELAXED (10s)', time: 10.0, multi: 0.8, color: 'hover:bg-blue-600' },
       { id: 'standard', label: 'STANDARD (5s)', time: 5.0, multi: 1.0, color: 'hover:bg-emerald-600' },
@@ -529,6 +622,25 @@ const LevelSelector = ({ current, onSelect }) => (
       </button>
     ))}
   </div>
+);
+
+const AudioModeSelector = ({ current, onSelect }) => (
+    <div className="flex justify-center mb-6">
+       <div className="flex bg-slate-800 p-1 rounded-lg border border-slate-700">
+          <button 
+             onClick={() => onSelect('arcade')}
+             className={`flex items-center gap-2 px-4 py-2 rounded font-mono text-xs font-bold transition-all ${current === 'arcade' ? 'bg-cyan-600 text-white' : 'text-slate-400 hover:text-white'}`}
+          >
+             <Music size={14} /> ARCADE
+          </button>
+          <button 
+             onClick={() => onSelect('focus')}
+             className={`flex items-center gap-2 px-4 py-2 rounded font-mono text-xs font-bold transition-all ${current === 'focus' ? 'bg-violet-600 text-white' : 'text-slate-400 hover:text-white'}`}
+          >
+             <Headphones size={14} /> FOCUS
+          </button>
+       </div>
+    </div>
 );
 
 const CategoryCard = ({ id, label, icon: Icon, count, onClick, isSpecial }) => (
@@ -640,6 +752,7 @@ export default function SQEArcade() {
   const [isMuted, setIsMuted] = useState(false);
   const [difficulty, setDifficulty] = useState('standard');
   const [level, setLevel] = useState(2); 
+  const [audioMode, setAudioMode] = useState('arcade'); // 'arcade' or 'focus'
   const [leaderboard, setLeaderboard] = useState([]);
   const [user, setUser] = useState(null);
   const [userName, setUserName] = useState('');
@@ -750,6 +863,11 @@ export default function SQEArcade() {
       };
   }, []);
 
+  const changeAudioMode = (mode) => {
+      setAudioMode(mode);
+      audio.setMode(mode);
+  };
+
   const selectCategory = (categoryKey) => {
     unlockAudio();
     selectCategoryWithState(categoryKey, false); 
@@ -823,10 +941,10 @@ export default function SQEArcade() {
   useEffect(() => {
     if (gameState === 'playing') {
       let newDensity = 1;
-      if (streak >= 60) newDensity = 12; 
-      else if (streak >= 50) newDensity = 11;
-      else if (streak >= 45) newDensity = 10;
-      else if (streak >= 40) newDensity = 9;
+      if (streak >= 75) newDensity = 12; 
+      else if (streak >= 65) newDensity = 11;
+      else if (streak >= 55) newDensity = 10;
+      else if (streak >= 45) newDensity = 9;
       else if (streak >= 35) newDensity = 8;
       else if (streak >= 30) newDensity = 7;
       else if (streak >= 25) newDensity = 6;
@@ -914,11 +1032,11 @@ export default function SQEArcade() {
       }
       setConsecutivePasses(newConsecutivePasses);
 
-      if (newStreak === 60) setCommentary("EVENT HORIZON 🌑");
-      else if (newStreak === 50) setCommentary("NEBULA SURF 🌠");
-      else if (newStreak === 45) setCommentary("SINGULARITY 🌌");
-      else if (newStreak === 40) setCommentary("DIMENSION BREACH 🔮");
-      else if (newStreak === 30) setCommentary("VOID WALKER 🚀");
+      if (newStreak === 75) setCommentary("EVENT HORIZON 🌑");
+      else if (newStreak === 65) setCommentary("NEBULA SURF 🌠");
+      else if (newStreak === 45) setCommentary("HYPERDRIVE 🚀");
+      else if (newStreak === 35) setCommentary("RED SHIFT 🔴");
+      else if (newStreak === 30) setCommentary("VOID WALKER 🔮");
       else if (newStreak === 20) setCommentary("GODLIKE ⚡");
       else if (newStreak === 10) setCommentary("UNSTOPPABLE 🔥");
       else if (timeLeft > getLimit() * 0.7) setCommentary("LIGHTNING FAST ⚡");
@@ -1087,6 +1205,8 @@ export default function SQEArcade() {
                 <>
                     <DifficultySelector current={difficulty} onSelect={setDifficulty} />
                     <LevelSelector current={level} onSelect={setLevel} />
+                    <AudioModeSelector current={audioMode} onSelect={changeAudioMode} />
+                    
                     {/* PASS THE DATA PROP and LEVEL HERE */}
                     <CategoryGrid 
                     onSelect={selectCategory} 
@@ -1226,7 +1346,7 @@ export default function SQEArcade() {
                     </div>
                   ) : (
                      <div className="text-center mb-6">
-                      <div className="text-rose-500 font-black text-5xl md:text-7xl mb-2">INCORRECT</div>
+                      <div className="text-rose-500 font-black text-5xl md:text-7xl mb-2">DAMAGE</div>
                       {/* Show Health Remaining */}
                       <div className="flex justify-center gap-1 mt-2">
                          {Array.from({length: 10}).map((_, i) => (
