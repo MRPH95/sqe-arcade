@@ -4306,7 +4306,3843 @@
     { "q": "Skeleton arguments are oral submissions.", "a": false, "exp": "Written summaries of arguments." },
     { "q": "Precedent H is a Costs Budget.", "a": true, "exp": "Required in Multi-track." },
     { "q": "Summary Assessment happens at 1 day hearing.", "a": true, "exp": "Immediate cost decision." },
-    { "q": "Detailed Assessment requires separate hearing.", "a": true, "exp": "For larger/complex costs." }
+    { "q": "Detailed Assessment requires separate hearing.", "a": true, "exp": "For larger/complex costs." },
+    {
+      "q": "A personal injury claim valued at £40,000 must be issued in the County Court.",
+      "a": true,
+      "exp": "Personal injury claims valued under £50,000 must be commenced in the County Court.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "A non-personal injury claim valued at £80,000 may be issued in the High Court.",
+      "a": false,
+      "exp": "Non-personal injury claims must be worth more than £100,000 to be issued in the High Court.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "The High Court is bound by decisions of the Privy Council.",
+      "a": false,
+      "exp": "Privy Council decisions are persuasive but not binding on English courts.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Solicitors automatically have rights of audience in the High Court.",
+      "a": false,
+      "exp": "Solicitors generally require Higher Rights of Audience to appear in the High Court.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A Conditional Fee Agreement can provide for a success fee of up to 100%.",
+      "a": true,
+      "exp": "The maximum success fee uplift is 100% of the solicitor's normal fees.",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "In a personal injury case, the CFA success fee cap is 25% of damages.",
+      "a": true,
+      "exp": "The success fee is capped at 25% of general damages and past pecuniary loss.",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "A Damages Based Agreement (DBA) allows a lawyer to take 50% of damages in employment cases.",
+      "a": false,
+      "exp": "The DBA cap for employment tribunal cases is 35%.",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "The DBA cap for general commercial litigation is 50% of damages.",
+      "a": true,
+      "exp": "Lawyers can take up to 50% of damages in non-PI, non-employment cases.",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "ATE insurance premiums are generally recoverable from the losing opponent.",
+      "a": false,
+      "exp": "ATE premiums are generally not recoverable (except for specific clinical negligence reports).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The Supreme Court is bound by its own previous decisions.",
+      "a": false,
+      "exp": "Under the Practice Statement 1966, it may depart when 'it appears right to do so'.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "The Court of Appeal (Civil Division) is bound by its own previous decisions.",
+      "a": true,
+      "exp": "Subject to the limited exceptions in Young v Bristol Aeroplane Co Ltd.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A decision made 'per incuriam' is binding on the Court of Appeal.",
+      "a": false,
+      "exp": "Per incuriam (ignorance of statute/binding authority) is an exception to stare decisis.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Civil Legal Aid is available for most breach of contract claims.",
+      "a": false,
+      "exp": "Civil CLS funding is restricted to very limited categories (e.g., family, homelessness).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A claim for judicial review is heard in the Chancery Division.",
+      "a": false,
+      "exp": "Judicial review is heard in the Administrative Court (King's Bench Division).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Bankruptcy petitions are heard in the King's Bench Division.",
+      "a": false,
+      "exp": "Insolvency matters are dealt with in the Chancery Division.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The Technology and Construction Court is part of the King's Bench Division.",
+      "a": true,
+      "exp": "It is a specialist court within the KBD.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The 'General Rule' on costs is that the loser pays the winner's costs.",
+      "a": true,
+      "exp": "Costs follow the event (CPR 44.2(2)).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The court will generally allow a successful party to recover 100% of their costs.",
+      "a": false,
+      "exp": "Recovery is limited to reasonable and proportionate costs (often approx. 60%).",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "A CFA success fee is recoverable from the opponent.",
+      "a": false,
+      "exp": "The success fee is paid by the client, usually from damages.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Before The Event (BTE) insurance is purchased after a dispute arises.",
+      "a": false,
+      "exp": "BTE is existing cover (e.g., in home insurance); ATE is purchased after the dispute.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The 'Business List' is found in the King's Bench Division.",
+      "a": false,
+      "exp": "The Business List is in the Chancery Division.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A Circuit Judge sits in the County Court.",
+      "a": true,
+      "exp": "Circuit Judges and District Judges sit in the County Court.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Third-party funders can take control of the litigation from the solicitors.",
+      "a": false,
+      "exp": "Code of Conduct prohibits funders from taking control of litigation.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The Commercial Court handles domestic breach of contract claims valued at £25,000.",
+      "a": false,
+      "exp": "It handles complex/international business disputes; lower value claims go to County Court.",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "Solicitors can carry out advocacy in the Supreme Court without extra qualifications.",
+      "a": false,
+      "exp": "Solicitors are not authorised for Higher Courts without Higher Rights of Audience.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "'Litigation' refers to resolving disputes through court proceedings.",
+      "a": true,
+      "exp": "Distinct from Alternative Dispute Resolution (ADR).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "The 'Claimant' is the party who starts civil proceedings.",
+      "a": true,
+      "exp": "They seek a remedy against the Defendant.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Stare Decisis' means 'stand by what has been decided'.",
+      "a": true,
+      "exp": "The principle of binding precedent.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A 'Tort' is a type of criminal offence.",
+      "a": false,
+      "exp": "A tort is a civil wrong (e.g., negligence).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Inter Partes' costs are costs payable between parties.",
+      "a": true,
+      "exp": "As opposed to solicitor-own client costs.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A 'Retainer' is the contract between solicitor and client.",
+      "a": true,
+      "exp": "It governs the professional relationship and funding.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'CFA' stands for Conditional Fee Agreement.",
+      "a": true,
+      "exp": "Commonly known as 'no win, no fee'.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'DBA' stands for Damages Based Agreement.",
+      "a": true,
+      "exp": "The lawyer receives a percentage of the damages recovered.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Disbursements' are fees paid to third parties.",
+      "a": true,
+      "exp": "Expenses like court fees or expert witness fees.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'KBD' stands for King's Bench Division.",
+      "a": true,
+      "exp": "One of the three divisions of the High Court.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A 'Master' is a judge in the County Court.",
+      "a": false,
+      "exp": "Masters sit in the High Court; District Judges sit in the County Court.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Precedent' is a judgment binding on lower courts.",
+      "a": true,
+      "exp": "The core of the common law system.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Ratio Decidendi' is the binding reasoning of a decision.",
+      "a": true,
+      "exp": "The legal principle on which the decision is based.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Obiter Dicta' are binding parts of a judgment.",
+      "a": false,
+      "exp": "They are persuasive comments, not binding.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Per Incuriam' means a decision made through lack of care.",
+      "a": true,
+      "exp": "Usually ignorance of a relevant statute or precedent.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Directions' are court orders managing the case timetable.",
+      "a": true,
+      "exp": "Setting deadlines for evidence and trial steps.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Allocation' assigns a claim to a case management track.",
+      "a": true,
+      "exp": "Small Claims, Fast, Intermediate, or Multi-track.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Disclosure' is the exchange of relevant documents.",
+      "a": true,
+      "exp": "A key evidence stage in civil litigation.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Statements of Case' include the Claim Form and Defence.",
+      "a": true,
+      "exp": "Documents setting out the factual case.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Enforcement' occurs before judgment.",
+      "a": false,
+      "exp": "Enforcement happens post-trial to compel compliance with an order.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Interim Application' is a request for a court order before trial.",
+      "a": true,
+      "exp": "E.g., for an extension of time or specific disclosure.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'CLS' stands for Community Legal Service.",
+      "a": true,
+      "exp": "The body formerly providing civil legal aid.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Success Fee' is an uplift payable in a CFA.",
+      "a": true,
+      "exp": "A percentage added to basic fees if the case is won.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "The 'Overriding Objective' is to generate maximum profit.",
+      "a": false,
+      "exp": "It is to deal with cases justly and at proportionate cost.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "The limitation period for a simple breach of contract claim is 12 years.",
+      "a": false,
+      "exp": "s.5 Limitation Act 1980; the limitation period for simple contract is 6 years from the breach.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "The limitation period for a personal injury claim is 3 years from the date of injury or knowledge.",
+      "a": true,
+      "exp": "s.11 Limitation Act 1980; 3 years from the cause of action accruing or date of knowledge.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "In the tort of negligence, the cause of action accrues when the duty of care is breached.",
+      "a": false,
+      "exp": "Actionable negligence requires damage; the cause of action accrues when damage occurs, not just breach.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A 'longstop' limitation period of 15 years applies to latent damage claims in negligence.",
+      "a": true,
+      "exp": "s.14B Limitation Act 1980; bars claims 15 years after the negligent act, regardless of knowledge.",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "Contractual damages are designed to punish the contract breaker.",
+      "a": false,
+      "exp": "Contract damages are compensatory (Robinson v Harman); punitve damages are not available in contract.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Specific performance is a discretionary remedy available as of right for breach of contract.",
+      "a": false,
+      "exp": "It is an equitable discretionary remedy, only granted if damages are inadequate (e.g., land sales).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A claimant has a duty to mitigate their loss in both contract and tort.",
+      "a": true,
+      "exp": "British Westinghouse v Underground Electric; claimants cannot recover for avoidable losses.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The 'remoteness' test in contract is narrower than in the tort of negligence.",
+      "a": true,
+      "exp": "The Wagon Mound (tort) is 'reasonable foreseeability'; Hadley v Baxendale (contract) requires loss to be in 'contemplation'.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Pure economic loss is generally recoverable in a negligence claim regarding a defective product.",
+      "a": false,
+      "exp": "Spartan Steel; pure economic loss is generally not recoverable in tort (unlike contract).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Contributory negligence is a complete defence to a claim in tort.",
+      "a": false,
+      "exp": "Law Reform (Contributory Negligence) Act 1945; it is a partial defence reducing damages.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "An exclusion clause for death or personal injury caused by negligence is void.",
+      "a": true,
+      "exp": "s.2(1) UCTA 1977 and s.65 CRA 2015; liability for death/PI cannot be excluded.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A claim for breach of a deed must be brought within 12 years of the breach.",
+      "a": true,
+      "exp": "s.8 Limitation Act 1980; the limitation period for a specialty (deed) is 12 years.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "Pre-action protocols are optional guidance that courts generally ignore.",
+      "a": false,
+      "exp": "Practice Direction - Pre-Action Conduct; non-compliance can lead to cost sanctions.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A 'Letter of Claim' should be sent before issuing proceedings.",
+      "a": true,
+      "exp": "Standard requirement of Pre-Action Protocols to define the dispute and encourage settlement.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Vicarious liability requires the tortfeasor to be an employee acting in the course of employment.",
+      "a": true,
+      "exp": "Lister v Hesley Hall; 'close connection' test applies to the course of employment.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Rescission for misrepresentation is available if the claimant has affirmed the contract.",
+      "a": false,
+      "exp": "Affirmation is a bar to rescission (Long v Lloyd).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "In a 'battle of the forms', the first set of terms proposed usually prevails.",
+      "a": false,
+      "exp": "Butler Machine Tool; the 'last shot' rule means the final terms sent before acceptance prevail.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Silence can constitute acceptance of an offer in contract law.",
+      "a": false,
+      "exp": "Felthouse v Bindley; acceptance must be communicated.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A variation to a contract is valid without consideration if made in writing.",
+      "a": false,
+      "exp": "Stilk v Myrick; variation requires fresh consideration (or practical benefit - Williams v Roffey) unless by deed.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Interest on a debt can be claimed under the Late Payment of Commercial Debts (Interest) Act 1998.",
+      "a": true,
+      "exp": "Applies to B2B contracts for the supply of goods and services.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The burden of proof in a civil contract claim is 'beyond reasonable doubt'.",
+      "a": false,
+      "exp": "The standard is the 'balance of probabilities'.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Third parties can enforce a contract term if the contract expressly provides for it.",
+      "a": true,
+      "exp": "s.1 Contracts (Rights of Third Parties) Act 1999.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A claim for defamation must be brought within 3 years.",
+      "a": false,
+      "exp": "s.4A Limitation Act 1980; the period is 1 year.",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "Damages in tort aim to put the claimant in the position they were in before the tort occurred.",
+      "a": true,
+      "exp": "Livingstone v Rawyards Coal Co; 'restitutio in integrum'.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "An interim injunction is granted before the trial to maintain the status quo.",
+      "a": true,
+      "exp": "American Cyanamid guidelines apply.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "'Tort' is a civil wrong independent of contract.",
+      "a": true,
+      "exp": "Derived from the Latin 'tortum' (twisted/wrong).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Contract' requires offer, acceptance, consideration, and intent.",
+      "a": true,
+      "exp": "The four essential elements for a binding agreement.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Limitation Period' is the time limit for bringing a claim.",
+      "a": true,
+      "exp": "Set by the Limitation Act 1980.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Damages' refers to financial compensation.",
+      "a": true,
+      "exp": "The primary remedy in civil litigation.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Injunction' is a court order to do or stop doing an act.",
+      "a": true,
+      "exp": "An equitable remedy.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Specific Performance' compels a party to fulfill a contract.",
+      "a": true,
+      "exp": "Used when damages are inadequate.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Breach of Contract' is a failure to perform a contractual term.",
+      "a": true,
+      "exp": "Gives rise to a right to claim damages.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Negligence' is the breach of a duty of care causing loss.",
+      "a": true,
+      "exp": "The most common tort (Donoghue v Stevenson).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Duty of Care' is a legal obligation to avoid causing harm.",
+      "a": true,
+      "exp": "Caparo test establishes if a duty exists.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Causation' links the breach to the damage.",
+      "a": true,
+      "exp": "The 'but for' test (Barnett v Chelsea).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Remoteness' limits the damages recoverable.",
+      "a": true,
+      "exp": "Damage must be reasonably foreseeable.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Mitigation' is the duty to minimize loss.",
+      "a": true,
+      "exp": "Claimant cannot recover for losses they could have avoided.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Consideration' is the price paid for a promise.",
+      "a": true,
+      "exp": "Must be sufficient but need not be adequate.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Privity of Contract' means only parties can sue.",
+      "a": true,
+      "exp": "General rule preventing third parties from enforcing terms.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Rescission' unwinds the contract ab initio.",
+      "a": true,
+      "exp": "Remedy for misrepresentation; restores parties to pre-contract position.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Void' means the contract never existed legally.",
+      "a": true,
+      "exp": "Of no legal effect from the start.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Voidable' means the contract is valid until set aside.",
+      "a": true,
+      "exp": "One party has the option to rescind.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Invitation to Treat' invites offers.",
+      "a": true,
+      "exp": "Not an offer itself (e.g., shop display).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Counter-offer' terminates the original offer.",
+      "a": true,
+      "exp": "Hyde v Wrench; rejects the old offer and creates a new one.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Deed' is a document signed, witnessed, and delivered.",
+      "a": true,
+      "exp": "Required for certain transactions (e.g., land) and extends limitation to 12 years.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Quantum' refers to the amount of damages.",
+      "a": true,
+      "exp": "The calculation of the monetary value of the claim.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Liability' is legal responsibility for an act or omission.",
+      "a": true,
+      "exp": "Determined before quantum.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Vicarious Liability' makes an employer liable for employees.",
+      "a": true,
+      "exp": "Strict liability for torts in the course of employment.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Pre-Action Protocol' sets out conduct before court proceedings.",
+      "a": true,
+      "exp": "Encourages exchange of information and settlement.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A defendant has 14 days to file a Defence if they do not file an Acknowledgment of Service.",
+      "a": true,
+      "exp": "CPR 15.4; the period is 14 days after service of the Particulars of Claim.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "Parties can agree to extend the deadline for filing a Defence by up to 56 days without court permission.",
+      "a": false,
+      "exp": "CPR 15.5; parties can agree an extension of up to 28 days (total 56 days from service).",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "Filing an Acknowledgment of Service extends the period for filing a Defence to 28 days.",
+      "a": true,
+      "exp": "CPR 15.4(1)(b); extends time to 28 days after service of Particulars of Claim.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "A claimant can obtain default judgment if the defendant files an Acknowledgment of Service but no Defence.",
+      "a": true,
+      "exp": "CPR 12.3(2); default judgment is available if the Defence time limit has expired.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The court *must* set aside a default judgment if it was entered after the Defence was filed.",
+      "a": true,
+      "exp": "CPR 13.2; mandatory set aside if judgment was wrongly entered (e.g., Defence was filed on time).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The court *may* set aside a default judgment if the defendant has a 'real prospect of success'.",
+      "a": true,
+      "exp": "CPR 13.3; discretionary set aside grounds.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A defendant seeking to set aside default judgment must act 'promptly'.",
+      "a": true,
+      "exp": "CPR 13.3(2); promptness is a key factor in discretionary set aside applications.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Summary judgment is available in proceedings for possession of residential premises.",
+      "a": false,
+      "exp": "CPR 24.3(2); summary judgment does not apply to certain possession claims.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A claimant can apply for summary judgment before the defendant has filed an Acknowledgment of Service.",
+      "a": false,
+      "exp": "CPR 24.4(1); claimant must wait until AoS or Defence has been filed (unless court gives permission).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "The test for summary judgment is whether the respondent has 'no arguable case'.",
+      "a": false,
+      "exp": "CPR 24.2; the test is 'no real prospect of succeeding/defending'.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A counterclaim must always be filed with the Defence.",
+      "a": false,
+      "exp": "CPR 20.4; it can be filed later with the court's permission.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "If a defendant admits part of a claim, the claimant can enter judgment for that amount.",
+      "a": true,
+      "exp": "CPR 14.3; judgment on admission.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A default judgment must be set aside if the claim form was not served correctly.",
+      "a": true,
+      "exp": "CPR 13.2; improper service means the judgment was wrongly entered.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "An application for summary judgment automatically stays the proceedings.",
+      "a": false,
+      "exp": "It does not automatically stay proceedings, but hearing dates may be adjusted.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "If a Defence is filed late but before the claimant requests judgment, default judgment cannot be entered.",
+      "a": true,
+      "exp": "CPR 12.3(2); the Defence prevents default judgment even if late, provided it is filed before the request.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A 'Request' for default judgment is used for claims for a specified amount of money.",
+      "a": true,
+      "exp": "CPR 12.4(1); administrative process for specified sums.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "An 'Application' for default judgment is required if the claim is for an unspecified amount.",
+      "a": false,
+      "exp": "A Request is still used, but the court will enter judgment for an amount 'to be decided' (CPR 12.4(2)).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A defendant has 14 days to file an Acknowledgment of Service.",
+      "a": true,
+      "exp": "CPR 10.3; 14 days after service of the claim form (or Particulars if served separately).",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "A defendant acting in person cannot be issued a default judgment.",
+      "a": false,
+      "exp": "Default judgment applies to litigants in person just as it does to represented parties.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The court can grant summary judgment of its own initiative.",
+      "a": true,
+      "exp": "CPR 24.2; the court has case management powers to summarily dispose of weak issues.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Admitting the claim within 14 days allows the defendant to ask for time to pay.",
+      "a": true,
+      "exp": "CPR 14.2; admission form (N9A) allows proposals for payment by instalments.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "A reply to a defence must be filed within 21 days.",
+      "a": false,
+      "exp": "There is no fixed time in CPR 15; it is usually set by Directions (often with Directions Questionnaire).",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "Disputing the court's jurisdiction requires an application within 14 days of filing the AoS.",
+      "a": true,
+      "exp": "CPR 11(4); strict deadline to challenge jurisdiction after acknowledging service.",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "A summary judgment hearing requires 14 days' notice to the respondent.",
+      "a": true,
+      "exp": "CPR 24.4(3); respondent must have at least 14 days' notice.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "Default judgment is available in Part 8 claims.",
+      "a": false,
+      "exp": "CPR 12.2; Part 8 procedure does not allow for default judgment.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "'AoS' stands for Acknowledgment of Service.",
+      "a": true,
+      "exp": "Form N9; indicates intention to defend or dispute jurisdiction.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Default Judgment' is judgment entered without a trial.",
+      "a": true,
+      "exp": "Because the defendant failed to file an AoS or Defence.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Summary Judgment' is judgment entered because the case has no real prospect of success.",
+      "a": true,
+      "exp": "CPR 24; early disposal of weak cases.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Set Aside' means to cancel a court order or judgment.",
+      "a": true,
+      "exp": "Restores the position to before the judgment was entered.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Defence' is the document setting out the defendant's case.",
+      "a": true,
+      "exp": "A statement of case responding to the Particulars of Claim.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Counterclaim' is a claim brought by the defendant against the claimant.",
+      "a": true,
+      "exp": "CPR 20; enables cross-claims in the same proceedings.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Admission' confirms the truth of the claimant's case.",
+      "a": true,
+      "exp": "Can be full or partial admission of liability/quantum.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Specified Amount' is a fixed sum of money.",
+      "a": true,
+      "exp": "A debt or liquidated sum (e.g., £10,000 invoice).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Unspecified Amount' requires the court to decide the value.",
+      "a": true,
+      "exp": "Damages to be assessed (e.g., personal injury compensation).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Real Prospect of Success' is the test for Summary Judgment.",
+      "a": true,
+      "exp": "More than merely arguable; a realistic chance of winning.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Mandatory Set Aside' means the court has no choice but to cancel judgment.",
+      "a": true,
+      "exp": "Applies when judgment was wrongly entered (CPR 13.2).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Discretionary Set Aside' allows the court to choose whether to cancel judgment.",
+      "a": true,
+      "exp": "Applies when the defendant has a real prospect of defending (CPR 13.3).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Reply' is the claimant's response to the Defence.",
+      "a": true,
+      "exp": "Optional statement of case to deal with new points in the Defence.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Form N9A' is the Admission Form.",
+      "a": true,
+      "exp": "Used to admit the claim and offer payment.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Form N9B' is the Defence and Counterclaim Form.",
+      "a": true,
+      "exp": "Used to defend the claim.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Form N244' is the Application Notice.",
+      "a": true,
+      "exp": "Standard form for interim applications (e.g., set aside, summary judgment).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Stay of Execution' pauses the enforcement of a judgment.",
+      "a": true,
+      "exp": "Often requested alongside an application to set aside.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Unless Order' imposes a sanction if not complied with.",
+      "a": true,
+      "exp": "E.g., 'Unless the Defence is filed by 4pm, judgment will be entered'.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Part 20 Claim' includes counterclaims and third-party claims.",
+      "a": true,
+      "exp": "Claims other than the main claim between C and D.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Denton Principles' apply to relief from sanctions.",
+      "a": true,
+      "exp": "Three-stage test for compliance failures (often cited in set-aside cases).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Statement of Case' refers to formal pleadings.",
+      "a": true,
+      "exp": "Claim Form, Particulars, Defence, Reply, Counterclaim.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Legal Burden' is the obligation to prove a fact.",
+      "a": true,
+      "exp": "Usually rests on the Claimant.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Judgment in Default' is governed by CPR Part 12.",
+      "a": true,
+      "exp": "The specific rule for default judgments.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Cheque Rule' prevents a set-off defence against a dishonoured cheque claim.",
+      "a": true,
+      "exp": "Cheques are treated as cash; defenses like set-off rarely apply.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Determining the Rate of Payment' sets instalment amounts.",
+      "a": true,
+      "exp": "Court officer decides repayment rate if parties disagree on an admission.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A defendant requires court permission to file a counterclaim with their Defence.",
+      "a": false,
+      "exp": "CPR 20.4; permission is not required if the counterclaim is filed with the Defence.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A counterclaim can continue even if the main claim is stayed or discontinued.",
+      "a": true,
+      "exp": "CPR 20.3; a counterclaim is treated as a separate claim and survives the main action.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A defendant must seek permission to issue an additional claim against a third party 6 months after filing their Defence.",
+      "a": true,
+      "exp": "CPR 20.7; permission is required if the additional claim is not issued before or with the Defence.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "The limitation period for a contribution claim under the 1978 Act is 6 years.",
+      "a": false,
+      "exp": "s.10 Limitation Act 1980; the period is 2 years from the date of judgment or settlement.",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "A party added to a claim after the limitation period is deemed to have been a party from the original issue date.",
+      "a": true,
+      "exp": "s.35 Limitation Act 1980; the claim 'relates back' to the original issue date (doctrine of relation back).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "The court can substitute a party after limitation expires to correct a mistake as to liability.",
+      "a": false,
+      "exp": "CPR 19.6; substitution is only allowed for a mistake as to the *name* of the party, not their identity/liability.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A defendant can seek contribution from a co-defendant by filing a notice without permission.",
+      "a": true,
+      "exp": "CPR 20.6; permission is not needed if the notice is filed with the Defence.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Default judgment can be entered on a Part 20 claim against a third party.",
+      "a": true,
+      "exp": "CPR 20.3; default judgment rules apply to third party claims (but special rules apply to contribution notices).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "An additional claim is deemed served on a third party when it is issued.",
+      "a": false,
+      "exp": "It must be served along with the appropriate forms (CPR 20.12) within 14 days of issue (CPR 7.5 does not apply exactly the same).",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "The court will grant permission to add a party if it is merely 'desirable' after limitation has expired.",
+      "a": false,
+      "exp": "Post-limitation, the addition must be 'necessary' (s.35 LA 1980), not just desirable.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A claimant can bring a counterclaim against a defendant's counterclaim.",
+      "a": false,
+      "exp": "This is technically a 'Reply and Defence to Counterclaim', not a distinct counterclaim-on-counterclaim.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A third party becomes a party to the proceedings when the Third Party Notice is issued.",
+      "a": true,
+      "exp": "CPR 20.7; they become a party upon the issuing of the additional claim.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A defendant issuing a counterclaim against the claimant must pay a court fee.",
+      "a": true,
+      "exp": "Counterclaims attract an issue fee based on the value of the counterclaim.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "In a contribution claim, the court must apportion liability equally.",
+      "a": false,
+      "exp": "Civil Liability (Contribution) Act 1978; court apportions based on what is 'just and equitable'.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "If a defendant settles with the claimant, they cannot seek contribution from a third party.",
+      "a": false,
+      "exp": "s.1(4) CL(C)A 1978; a settling party can still seek contribution if they would have been liable.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Adding a new cause of action after limitation is permitted if it arises from the same facts.",
+      "a": true,
+      "exp": "s.35(5) LA 1980; allowed if the new claim arises out of substantially the same facts.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A mistake as to the name of a party includes suing a subsidiary instead of the holding company.",
+      "a": true,
+      "exp": "Adelson case; this can be a mistake as to name if the description was clear but the name wrong.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Service of a Part 20 claim form on a third party follows the same rules as a standard claim form.",
+      "a": true,
+      "exp": "CPR 20.12; standard service rules (CPR 6) apply.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Before limitation expires, the court can add a party if it is desirable to resolve the dispute.",
+      "a": true,
+      "exp": "CPR 19.2(2); the 'desirable' test applies pre-limitation.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A counterclaiming defendant is referred to as the 'Part 20 Claimant'.",
+      "a": false,
+      "exp": "They remain the 'Defendant'; 'Part 20 Claimant' usually refers to D suing a Third Party.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Permission to make an additional claim can be sought without notice.",
+      "a": true,
+      "exp": "Although the court often directs an on-notice hearing, the application can be made without notice initially.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A person cannot be added as a claimant unless they give their consent in writing.",
+      "a": true,
+      "exp": "CPR 19.4(4); nobody can be compelled to be a claimant.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "If a proposed claimant refuses consent, they must be added as a defendant.",
+      "a": true,
+      "exp": "CPR 19.4; necessary parties who refuse to join as claimants are joined as defendants.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A counterclaim must serve the same purpose as a defence.",
+      "a": false,
+      "exp": "A defence resists the claim; a counterclaim is an independent sword seeking its own remedy.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A defendant can use a counterclaim to set off damages against the claimant's claim.",
+      "a": true,
+      "exp": "Equitable set-off is often pleaded alongside a counterclaim.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "'Part 20 Claim' encompasses counterclaims and third-party claims.",
+      "a": true,
+      "exp": "The generic term for additional claims under CPR 20.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Counterclaim' is a claim by a defendant against a claimant.",
+      "a": true,
+      "exp": "A cross-action in the same proceedings.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Third Party' is a person not originally part of the proceedings.",
+      "a": true,
+      "exp": "Joined via a Part 20 claim by a defendant.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Contribution' is sharing the burden of liability.",
+      "a": true,
+      "exp": "Recovering a share of damages paid from another liable party.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Indemnity' is the right to recover 100% of the loss from another.",
+      "a": true,
+      "exp": "Complete reimbursement, distinct from partial contribution.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Part 20 Defendant' is the target of an additional claim.",
+      "a": true,
+      "exp": "Can be the original claimant (in a counterclaim) or a third party.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Limitation Act 1980 s.35' governs new claims in pending actions.",
+      "a": true,
+      "exp": "The statutory rules for adding parties/claims post-limitation.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Relation Back' treats a new claim as starting on the original issue date.",
+      "a": true,
+      "exp": "Prevents the limitation defence for the new party/claim.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Set-Off' reduces the amount owed to the claimant.",
+      "a": true,
+      "exp": "A defence that subtracts the defendant's claim from the claimant's.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Substitution' replaces one party with another.",
+      "a": true,
+      "exp": "Used when the original party was named by mistake.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Addition' joins a new party alongside existing ones.",
+      "a": true,
+      "exp": "CPR 19.2; adding a party to resolve matters in dispute.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Mistake as to Name' is a specific ground for substitution.",
+      "a": true,
+      "exp": "The only ground to change parties after limitation (Sardinia Sulcis).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Contribution Notice' is used between co-defendants.",
+      "a": true,
+      "exp": "CPR 20.6; formally claiming contribution from an existing party.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Joint Liability' means parties are liable together for the whole.",
+      "a": true,
+      "exp": "Claimant can sue one or all for the full amount.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Several Liability' means parties are liable only for their share.",
+      "a": true,
+      "exp": "Distinct from joint liability.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Civil Liability (Contribution) Act 1978' governs contribution.",
+      "a": true,
+      "exp": "Statutory basis for claiming shares of liability.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Same Damage' is a requirement for contribution.",
+      "a": true,
+      "exp": "The parties must be liable for the same damage to the claimant.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Necessary' is the test for adding parties post-limitation.",
+      "a": true,
+      "exp": "s.35 LA 1980; stricter than the 'desirable' pre-limitation test.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Consolidation' combines two separate claims into one.",
+      "a": true,
+      "exp": "Case management power to manage linked cases.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Directions Questionnaire' is used to allocate the track.",
+      "a": true,
+      "exp": "Standard case management form.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Permission' is leave of the court.",
+      "a": true,
+      "exp": "Required for many steps, including late counterclaims.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Defence to Counterclaim' must be filed by the claimant.",
+      "a": true,
+      "exp": "Usually within 14 days of the counterclaim.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Reply' is optional.",
+      "a": true,
+      "exp": "Claimant's response to defence; not mandatory.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Default Judgment' is not available in Part 8 claims.",
+      "a": true,
+      "exp": "CPR 12.2; Part 8 is for disputes of law, not fact.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Acknowledgment of Service' extends time for Defence.",
+      "a": true,
+      "exp": "From 14 days to 28 days.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "An application notice must be served at least 3 clear days before the hearing.",
+      "a": true,
+      "exp": "CPR 23.7(1)(b); the general rule is 3 clear days unless a different period is specified.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "Evidence in support of an interim application is usually provided by affidavit.",
+      "a": false,
+      "exp": "CPR 32.6; evidence is usually by Witness Statement, though affidavits are used for freezing/search orders.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A Master can grant an interim injunction in the High Court.",
+      "a": false,
+      "exp": "PD 2B; Masters (and District Judges) generally cannot grant injunctions (except in limited circumstances like consents).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "The 'American Cyanamid' guidelines apply to final injunctions.",
+      "a": false,
+      "exp": "American Cyanamid applies to *interim* injunctions; final injunctions are decided on the merits at trial.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "To obtain an interim payment, the claimant must show a 'real prospect of success'.",
+      "a": false,
+      "exp": "CPR 25.7; the test is 'satisfied that the claimant *would* obtain judgment' (a higher burden).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Security for costs can be ordered against a claimant resident in the UK.",
+      "a": false,
+      "exp": "CPR 25.13; residence outside the jurisdiction (Hague/Lugano conventions notwithstanding) is the ground; UK residence bars it.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Impecuniosity of a corporate claimant is a ground for security for costs.",
+      "a": true,
+      "exp": "CPR 25.13(2)(c); security can be ordered if there is reason to believe the company cannot pay costs.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "An interim payment cannot exceed a 'reasonable proportion' of the likely final damages.",
+      "a": true,
+      "exp": "CPR 25.7(4); the court must not award more than a reasonable proportion.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "If an interim application is made without notice, the applicant has a duty of full and frank disclosure.",
+      "a": true,
+      "exp": "The applicant must disclose all material facts, including those adverse to their case.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A freezing order creates a proprietary interest in the frozen assets.",
+      "a": false,
+      "exp": "A freezing order operates *in personam* to prevent dissipation; it does not give the claimant priority over creditors.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A cross-undertaking in damages is mandatory for a search order.",
+      "a": true,
+      "exp": "The applicant must undertake to pay damages to the respondent if the order turns out to be wrongly granted.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The first stage of American Cyanamid is to establish a 'prima facie case'.",
+      "a": false,
+      "exp": "The test is whether there is a 'serious issue to be tried', which is a lower threshold than prima facie case.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Security for costs can be ordered against an individual claimant who is impecunious.",
+      "a": false,
+      "exp": "Impecuniosity alone is not a ground against an individual (unlike a company); other grounds must exist.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "An application for an interim payment can be made before the Defence is filed.",
+      "a": false,
+      "exp": "CPR 25.6; the claimant cannot apply until the time for filing Acknowledgement of Service has expired.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Costs 'in any event' means the winner of the application gets paid regardless of the trial outcome.",
+      "a": true,
+      "exp": "The party is entitled to those costs whatever the final result of the proceedings.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "If an order is silent as to costs, 'costs in the case' is implied.",
+      "a": false,
+      "exp": "CPR 44.10; if the order is silent, no party is entitled to costs of that application.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A 'Freezing Order' requires a 'good arguable case' on the merits.",
+      "a": true,
+      "exp": "This is a higher threshold than the 'serious issue to be tried' for standard injunctions.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "The court can grant security for costs if the claimant has taken steps to put assets beyond reach.",
+      "a": true,
+      "exp": "CPR 25.13(2)(g); applies if the claimant has dissipated assets to evade enforcement.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Unless declared 'totally without merit', a respondent can re-apply to set aside a without notice order.",
+      "a": true,
+      "exp": "CPR 23.10; a person served with an order made without notice may apply to set it aside within 7 days.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "The 'Balance of Convenience' is considered before the 'Adequacy of Damages' in American Cyanamid.",
+      "a": false,
+      "exp": "Adequacy of damages is considered *first*; if damages are adequate, no injunction is granted.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A telephone hearing is the default for applications expected to last less than 1 hour.",
+      "a": true,
+      "exp": "PD 23A; unless the court orders otherwise or it involves oral evidence.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "Interim payment can be ordered if the defendant has admitted liability.",
+      "a": true,
+      "exp": "CPR 25.7(1)(a); admission of liability is one of the grounds for an interim payment.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "An applicant for a search order must show a risk of 'serious' harm.",
+      "a": false,
+      "exp": "Anton Piller KG v Manufacturing Processes; must show potential for 'very serious' harm.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Security for costs effectively stays the claim until the money is paid into court.",
+      "a": true,
+      "exp": "The order usually imposes a stay of proceedings pending payment.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A consent order must be approved by a judge to be binding.",
+      "a": true,
+      "exp": "CPR 40.6; simply agreeing is not enough, the court must seal the order.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "'Interim Application' is a request for a court order pending trial.",
+      "a": true,
+      "exp": "Used to manage the case or protect positions before final judgment.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Applicant' is the party making the application.",
+      "a": true,
+      "exp": "Usually the Claimant or Defendant.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Respondent' is the party answering the application.",
+      "a": true,
+      "exp": "The party against whom the order is sought.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Without Notice' means the respondent is not warned.",
+      "a": true,
+      "exp": "Formerly 'ex parte'; used for urgency or secrecy (e.g., freezing orders).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'On Notice' means the application is served on the respondent.",
+      "a": true,
+      "exp": "The standard procedure ensuring fairness.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Form N244' is the Application Notice.",
+      "a": true,
+      "exp": "The standard form used to apply for an interim order.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Interim Injunction' preserves the status quo until trial.",
+      "a": true,
+      "exp": "Prevents irreversible harm before the main dispute is resolved.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Freezing Order' prevents the disposal of assets.",
+      "a": true,
+      "exp": "Formerly 'Mareva injunction'; secures funds for potential judgment.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Search Order' allows entry to premises to preserve evidence.",
+      "a": true,
+      "exp": "Formerly 'Anton Piller order'; prevents destruction of evidence.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Security for Costs' protects the defendant against unrecoverable costs.",
+      "a": true,
+      "exp": "Money paid into court by the claimant to cover the defendant's costs if the defence wins.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Interim Payment' is an advance payment of damages.",
+      "a": true,
+      "exp": "Paid by a defendant on account of any damages they will be liable for.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Cross-undertaking' is a promise to pay damages to the respondent.",
+      "a": true,
+      "exp": "Price of an interim injunction; compensates respondent if the injunction was wrong.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'American Cyanamid' sets the test for interim injunctions.",
+      "a": true,
+      "exp": "The leading case establishing the 'balance of convenience' test.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Costs in the Case' means the winner at trial gets the application costs.",
+      "a": true,
+      "exp": "Costs follow the final judgment.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Costs Reserved' means the decision on costs is deferred.",
+      "a": true,
+      "exp": "The trial judge will decide who pays the application costs later.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Costs in Any Event' means the winner of the application gets costs now.",
+      "a": true,
+      "exp": "Paid regardless of who wins the final trial.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Summarily Assessed' means costs are calculated by the judge on the day.",
+      "a": true,
+      "exp": "Standard for interim hearings lasting less than a day.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Consent Order' records an agreement between parties.",
+      "a": true,
+      "exp": "Binding order made with the agreement of both sides.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Full and Frank Disclosure' is the duty to reveal all material facts.",
+      "a": true,
+      "exp": "Essential for 'without notice' applications to ensure fairness.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Status Quo' refers to the existing state of affairs.",
+      "a": true,
+      "exp": "Preserving the status quo is a key aim of interim injunctions.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Return Date' is the date for a full hearing after a without notice order.",
+      "a": true,
+      "exp": "When the respondent can present their arguments against the order.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Penal Notice' warns of imprisonment for disobedience.",
+      "a": true,
+      "exp": "Must be attached to injunctions for contempt proceedings to follow.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Prohibitory Injunction' forbids an act.",
+      "a": true,
+      "exp": "Orders a party to refrain from doing something.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Mandatory Injunction' requires an act to be done.",
+      "a": true,
+      "exp": "Orders a party to actively do something (higher threshold than prohibitory).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Just and Convenient' is the statutory basis for injunctions.",
+      "a": true,
+      "exp": "s.37 Senior Courts Act 1981.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A claim for £80,000 with a 4-day trial estimate is allocated to the Multi-track.",
+      "a": false,
+      "exp": "CPR 26.9; claims between £25k-£100k with trial ≤3 days are usually Intermediate Track.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "In the Small Claims Track, the court will generally order the loser to pay the winner's legal costs.",
+      "a": false,
+      "exp": "CPR 27.14; costs are severely restricted in the Small Claims Track (fixed costs only).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Parties must file a Directions Questionnaire to assist the court in allocating the claim.",
+      "a": true,
+      "exp": "CPR 26.3; Form N181 is used to provide case management information.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Failure to file a costs budget on time restricts the party to recovering court fees only.",
+      "a": true,
+      "exp": "CPR 3.14; automatic sanction limits recoverable costs to applicable court fees.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "On the Standard Basis, any doubt as to reasonableness is resolved in favour of the receiving party.",
+      "a": false,
+      "exp": "CPR 44.3; on the Standard Basis, doubt is resolved in favour of the *paying* party.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The court will not depart from an approved costs budget unless there is a good reason.",
+      "a": true,
+      "exp": "CPR 3.18; the approved budget binds the assessment unless there is 'good reason'.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A claimant with a personal injury claim is protected by Qualified One-Way Costs Shifting (QOCS).",
+      "a": true,
+      "exp": "CPR 44.13; QOCS protects PI claimants from paying defendant costs if the claim fails.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "If a PI claimant is found to be fundamentally dishonest, QOCS protection is lost.",
+      "a": true,
+      "exp": "CPR 44.16; the court can enforce a full costs order against a dishonest claimant.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Costs on the Indemnity Basis must be proportionate to the matters in issue.",
+      "a": false,
+      "exp": "CPR 44.3; proportionality does not apply to Indemnity Basis costs, only reasonableness.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Summary assessment of costs usually takes place at the conclusion of a one-day hearing.",
+      "a": true,
+      "exp": "PD 44; summary assessment is the norm for fast track trials and hearings ≤1 day.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Detailed assessment proceedings must be commenced within 6 months of judgment.",
+      "a": false,
+      "exp": "CPR 47.7; the deadline is 3 months from the date of the judgment/order.",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "A claim allocated to the Fast Track is expected to last no longer than one day.",
+      "a": true,
+      "exp": "CPR 26.9; Fast Track is for claims >£10k-£25k with a trial estimate of ≤1 day.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Expert evidence in the Fast Track is usually limited to one expert per party in any field.",
+      "a": false,
+      "exp": "CPR 28.3; expert evidence is usually limited to *one joint expert* in the Fast Track.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A Costs Management Conference is mandatory for all Multi-track cases.",
+      "a": false,
+      "exp": "It is not mandatory if the court orders otherwise or for claims involving minors/life expectancy.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "If a party beats their own Part 36 offer at trial, they may be awarded indemnity costs.",
+      "a": true,
+      "exp": "CPR 36.17; indemnity costs apply from the date the relevant period expired.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Fixed Recoverable Costs (FRC) apply to most Fast Track claims.",
+      "a": true,
+      "exp": "CPR 45; FRC applies to the majority of Fast Track and Intermediate Track claims.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The Denton test is used when applying for relief from sanctions.",
+      "a": true,
+      "exp": "Denton v TH White; the three-stage test for relief from sanctions (CPR 3.9).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A request to revise a budget due to 'significant developments' must be made promptly.",
+      "a": true,
+      "exp": "PD 3E; revision allows updating budgets for unforeseen major costs.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Solicitors must notify the court of the outcome of a stay for settlement within 7 days.",
+      "a": false,
+      "exp": "Usually the court sets a specific date; no automatic 7-day rule exists in the CPR.",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "Interim payments on account of costs are rarely ordered before detailed assessment.",
+      "a": false,
+      "exp": "CPR 44.2(8); the court *will* generally order a reasonable sum on account.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The Intermediate Track has a normal trial limit of 5 days.",
+      "a": false,
+      "exp": "CPR 26.9; Intermediate Track trials should not exceed 3 days.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "In assessment of costs, a 'Point of Dispute' is filed by the receiving party.",
+      "a": false,
+      "exp": "Points of Dispute are filed by the *paying* party; Replies are filed by the receiving party.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A non-party can be ordered to pay costs if they control the litigation.",
+      "a": true,
+      "exp": "s.51 SCA 1981; Non-Party Costs Orders (NPCO) are possible for funders/controllers.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Unless Orders take effect without further action from the court.",
+      "a": true,
+      "exp": "The sanction applies automatically upon non-compliance (e.g., striking out).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Costs budgets (Precedent H) must be filed 21 days before the CMC for claims over £50,000.",
+      "a": true,
+      "exp": "CPR 3.13; 21 days for >£50k; 7 days for <£50k.",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "'Allocation' assigns a case to a management track.",
+      "a": true,
+      "exp": "Small Claims, Fast, Intermediate, or Multi-track.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Directions Questionnaire' (N181) provides info for allocation.",
+      "a": true,
+      "exp": "Filed by parties after the defence is served.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Small Claims Track' is usually for claims under £10,000.",
+      "a": true,
+      "exp": "Designed for simple disputes with limited cost recovery.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Fast Track' is for claims between £10,000 and £25,000.",
+      "a": true,
+      "exp": "For straightforward cases with short trials.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Intermediate Track' is for claims between £25,000 and £100,000.",
+      "a": true,
+      "exp": "Introduced in 2023 for moderately complex cases.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Multi-Track' is for complex claims or those over £100,000.",
+      "a": true,
+      "exp": "The most flexible and managed track.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'CMC' stands for Case Management Conference.",
+      "a": true,
+      "exp": "A hearing to set directions and budgets.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Precedent H' is the form for a Costs Budget.",
+      "a": true,
+      "exp": "Must be filed before the CMC.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Precedent R' is the Budget Discussion Report.",
+      "a": true,
+      "exp": "Used to agree or dispute the opponent's budget phases.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Costs Management Order' (CMO) approves the budgets.",
+      "a": true,
+      "exp": "The court records the agreed/approved figures.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Standard Basis' costs must be reasonable and proportionate.",
+      "a": true,
+      "exp": "The default basis for assessment.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Indemnity Basis' costs need only be reasonable.",
+      "a": true,
+      "exp": "Proportionality is not required; doubt favors the receiver.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Summary Assessment' happens at the end of a hearing.",
+      "a": true,
+      "exp": "The judge assesses costs immediately.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Detailed Assessment' is a separate procedure to quantify costs.",
+      "a": true,
+      "exp": "Used for large costs bills after trial.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'QOCS' stands for Qualified One-Way Costs Shifting.",
+      "a": true,
+      "exp": "Protects PI claimants from adverse costs.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Fundamental Dishonesty' removes QOCS protection.",
+      "a": true,
+      "exp": "If the claimant has been dishonest about a core element.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Proportionality' links costs to the value/complexity of the claim.",
+      "a": true,
+      "exp": "Costs should not exceed what is reasonable for the dispute.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Statement of Costs' (N260) is used for summary assessment.",
+      "a": true,
+      "exp": "Must be filed 24 hours before the hearing.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Relief from Sanctions' asks the court to forgive a mistake.",
+      "a": true,
+      "exp": "CPR 3.9; applies when a rule/order has been breached.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Unless Order' specifies a sanction for non-compliance.",
+      "a": true,
+      "exp": "Final warning before striking out.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Stay of Proceedings' pauses the case.",
+      "a": true,
+      "exp": "Often used to allow for settlement or ADR.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Points of Dispute' challenge a detailed bill of costs.",
+      "a": true,
+      "exp": "Served by the paying party in detailed assessment.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Default Costs Certificate' is issued if no Points of Dispute are filed.",
+      "a": true,
+      "exp": "The receiving party gets the full amount claimed.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Sanderson Order' makes the loser pay the successful co-defendant.",
+      "a": true,
+      "exp": "Direct costs order between defendants.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Bullock Order' makes the claimant pay the winner and reclaim from the loser.",
+      "a": true,
+      "exp": "Indirect costs reimbursement in multi-defendant cases.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A party must disclose a document that adversely affects their own case.",
+      "a": true,
+      "exp": "CPR 31.6(b); standard disclosure requires disclosing documents that adversely affect your own case.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A document is only 'in your control' if you have physical possession of it.",
+      "a": false,
+      "exp": "CPR 31.8; control includes physical possession, a right to possession, or a right to inspect/take copies.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Copies of documents must be disclosed even if they contain no new modifications.",
+      "a": false,
+      "exp": "CPR 31.9; you need not disclose more than one copy of the same document unless it contains a modification/marking.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Legal Advice Privilege protects communications between a client and their accountant for legal advice.",
+      "a": false,
+      "exp": "R (Prudential) v Special Commissioner; LAP applies only to lawyers, not other professionals.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Litigation Privilege protects communications with third parties if litigation is merely 'possible'.",
+      "a": false,
+      "exp": "USA v Philip Morris; litigation must be 'reasonably prospective' (pending or contemplated), not just a mere possibility.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A document created for two purposes is privileged if litigation was the 'dominant' purpose.",
+      "a": true,
+      "exp": "Waugh v British Railways Board; the dominant purpose test applies to litigation privilege.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A party can redact irrelevant commercial information from a disclosed document.",
+      "a": true,
+      "exp": "CPR 31.6 / GE Capital v Bankers Trust; irrelevant parts can be redacted (blanked out) to protect confidentiality.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The duty of disclosure ends once the List of Documents is served.",
+      "a": false,
+      "exp": "CPR 31.11; the duty of disclosure is continuous until the proceedings are concluded.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A solicitor who signs a disclosure statement without honest belief commits contempt of court.",
+      "a": true,
+      "exp": "CPR 31.23; false disclosure statements can lead to contempt proceedings.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Without Prejudice privilege is automatically waived if the settlement offer is rejected.",
+      "a": false,
+      "exp": "Privilege remains to protect the negotiation; it is not lost simply because the offer is rejected.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A party can inspect a document mentioned in the opponent's witness statement.",
+      "a": true,
+      "exp": "CPR 31.14; a party may inspect a document mentioned in a statement of case, witness statement, or affidavit.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Internal client notes discussing legal advice are protected by Legal Advice Privilege.",
+      "a": true,
+      "exp": "Three Rivers (No 5); repetition of legal advice internally within the client organization keeps privilege.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "If a privileged document is inadvertently disclosed, the recipient can always use it.",
+      "a": false,
+      "exp": "CPR 31.20; the court can forbid use if the mistake was obvious (Al Fayed v Commissioner of Police).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A 'reasonable search' requires looking at every single backup tape.",
+      "a": false,
+      "exp": "CPR 31.7; reasonableness depends on the number of documents, complexity, and proportionality (cost).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "In-house lawyers are not covered by Legal Advice Privilege.",
+      "a": false,
+      "exp": "Alfred Crompton v Customs & Excise; in-house lawyers are covered, provided they are acting in a legal capacity.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Specific disclosure can be ordered if the initial standard disclosure was inadequate.",
+      "a": true,
+      "exp": "CPR 31.12; the court may make an order for specific disclosure or inspection.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Privilege cannot be claimed for a document that evidences fraud.",
+      "a": true,
+      "exp": "The 'iniquity' exception (R v Cox and Railton); privilege does not cover communications furthering crime/fraud.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Waiver of privilege in a partial document usually waives privilege for the whole document.",
+      "a": true,
+      "exp": "Great Atlantic Insurance v Home Insurance; 'cherry picking' is not allowed (collateral waiver).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A party can withhold inspection of a document on the grounds of disproportionate cost.",
+      "a": true,
+      "exp": "CPR 31.3(2); inspection can be withheld if it is disproportionate to the issues in the case.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Metadata of electronic documents is never disclosable.",
+      "a": false,
+      "exp": "PD 31B; metadata is part of the document and can be relevant/disclosable.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A solicitors' attendance note of a meeting with the client is privileged.",
+      "a": true,
+      "exp": "Protected by Legal Advice Privilege as part of the continuum of communication.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Employees are always considered 'the client' for Legal Advice Privilege.",
+      "a": false,
+      "exp": "Three Rivers (No 5); 'client' is narrowly defined to those authorized to instruct/receive advice.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Without Prejudice Save as to Costs documents can be seen by the trial judge before judgment.",
+      "a": false,
+      "exp": "They can only be seen *after* judgment on liability, when deciding costs.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Disclosure generally takes place 14 days after the CMC.",
+      "a": false,
+      "exp": "Dates are set at the CMC; there is no automatic 14-day rule (often 4-6 weeks).",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "A party must search for documents held by their agent.",
+      "a": true,
+      "exp": "CPR 31.8; documents with an agent are under the party's 'right to possession' (control).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "'Standard Disclosure' requires disclosing documents you rely on.",
+      "a": true,
+      "exp": "CPR 31.6(a); the first limb of standard disclosure.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Adverse Documents' hurt your own case.",
+      "a": true,
+      "exp": "CPR 31.6(b); documents which adversely affect your own case.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Supportive Documents' help the other side's case.",
+      "a": true,
+      "exp": "CPR 31.6(b); documents which support another party's case.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Inspection' is the right to see and copy disclosed documents.",
+      "a": true,
+      "exp": "CPR 31.3; usually follows the exchange of lists.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'List of Documents' (N265) identifies disclosed items.",
+      "a": true,
+      "exp": "Form used to categorize documents (e.g., inspectable vs. privileged).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Disclosure Statement' confirms the extent of the search.",
+      "a": true,
+      "exp": "Signed by the party (not the solicitor) certifying the search was reasonable.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Privilege' allows a party to withhold inspection.",
+      "a": true,
+      "exp": "The document is disclosed (listed) but not inspected.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Legal Advice Privilege' protects confidential lawyer-client comms.",
+      "a": true,
+      "exp": "For the purpose of giving or receiving legal advice.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Litigation Privilege' covers third-party communications.",
+      "a": true,
+      "exp": "Only if the dominant purpose is pending or contemplated litigation.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Without Prejudice' protects genuine settlement negotiations.",
+      "a": true,
+      "exp": "Encourages parties to settle without fear of admissions being used in court.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Redaction' involves blanking out parts of a document.",
+      "a": true,
+      "exp": "Used for irrelevant or privileged information within a relevant document.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Reasonable Search' is the standard for finding documents.",
+      "a": true,
+      "exp": "CPR 31.7; determined by complexity, value, and significance.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Specific Disclosure' is a court order for particular documents.",
+      "a": true,
+      "exp": "Used when a party believes the other has failed to disclose relevant documents.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Control' includes the right to possession.",
+      "a": true,
+      "exp": "CPR 31.8; physical possession is not the only criteria.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Electronic Disclosure' covers emails and metadata.",
+      "a": true,
+      "exp": "PD 31B; special rules for e-disclosure.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Dominant Purpose' is the main reason a document was created.",
+      "a": true,
+      "exp": "The test for Litigation Privilege (Waugh v British Railways Board).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Waiver' is the voluntary surrender of privilege.",
+      "a": true,
+      "exp": "Can be express or implied (e.g., by reading part of it in court).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Inadvertent Disclosure' is accidental revelation of privileged documents.",
+      "a": true,
+      "exp": "CPR 31.20 provides a mechanism to correct this.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Solicitor's Lien' allows holding documents until fees are paid.",
+      "a": true,
+      "exp": "A right to retain property as security for debt.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Norwich Pharmacal Order' requires a third party to disclose info.",
+      "a": true,
+      "exp": "Used to identify a wrongdoer involved in misconduct.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Pre-Action Disclosure' occurs before proceedings start.",
+      "a": true,
+      "exp": "s.33 SCA 1981 / CPR 31.16; to assist settlement or save costs.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Continuing Duty' means disclosure obligations last until judgment.",
+      "a": true,
+      "exp": "New relevant documents found later must be disclosed immediately.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Document' includes anything on which information is recorded.",
+      "a": true,
+      "exp": "CPR 31.4; includes tapes, discs, emails, and photos.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Confidentiality' is the same as Privilege.",
+      "a": false,
+      "exp": "Confidentiality is a duty; Privilege is a right to withhold inspection (a stronger protection).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Three Rivers' defined the 'client' for privilege.",
+      "a": true,
+      "exp": "Narrow definition restricting 'client' to those authorised to instruct lawyers.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Failure to serve a witness statement on time automatically prevents the witness from giving oral evidence.",
+      "a": true,
+      "exp": "CPR 32.10; the witness may not be called unless the court gives permission (relief from sanctions).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A party must give 7 days' notice to challenge the authenticity of a disclosed document.",
+      "a": true,
+      "exp": "CPR 32.19; notice must be served by the latest date for serving witness statements or within 7 days of disclosure.",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "Written questions to an expert must be put within 28 days of service of the report.",
+      "a": true,
+      "exp": "CPR 35.6; questions can be put once only within 28 days to clarify the report.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "Answers to written questions to an expert do not form part of the expert's report.",
+      "a": false,
+      "exp": "CPR 35.6(3); the answers are treated as part of the expert's report.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A witness summons is binding if served less than 7 days before the trial.",
+      "a": false,
+      "exp": "CPR 34.6; a witness summons is only binding if served at least 7 days before the date on which the witness is required.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "Hearsay evidence is generally inadmissible in civil proceedings.",
+      "a": false,
+      "exp": "s.1 Civil Evidence Act 1995; in civil proceedings evidence shall not be excluded on the ground that it is hearsay.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A hearsay notice is mandatory if the witness is to be called to give oral evidence.",
+      "a": false,
+      "exp": "CPR 33.2; notice is only required if the party intends to rely on the hearsay *without* calling the maker of the statement.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "The court can direct that expert evidence be given by a Single Joint Expert.",
+      "a": true,
+      "exp": "CPR 35.7; the court has the power to direct that evidence is given by one expert only.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "An agreement between experts in a joint statement is automatically binding on the parties.",
+      "a": false,
+      "exp": "CPR 35.12(5); the agreement is not binding unless the parties expressly agree to be bound by it.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A Notice to Admit Facts must be served no later than 21 days before trial.",
+      "a": true,
+      "exp": "CPR 32.18; creates cost consequences if the fact is later proved.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "A conviction in a UK court is admissible as evidence that the person committed the offence.",
+      "a": true,
+      "exp": "s.11 Civil Evidence Act 1968; a subsisting conviction is admissible evidence.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A witness statement can be used as evidence in chief even if the witness is not called.",
+      "a": true,
+      "exp": "CPR 32.5(1); but it will be treated as hearsay evidence (s.1 CEA 1995).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Parties require the court's permission to call an expert witness.",
+      "a": true,
+      "exp": "CPR 35.4; no party may call an expert or put in a report without the court's permission.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Conduct money (travel expenses) must be offered when serving a witness summons.",
+      "a": true,
+      "exp": "CPR 34.7; the witness is not obliged to attend unless paid a sum to cover travel/expenses.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The weight of hearsay evidence is reduced if it is multiple hearsay.",
+      "a": true,
+      "exp": "s.4 Civil Evidence Act 1995; multiple hearsay is one of the factors reducing weight.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Instructions to a Single Joint Expert are privileged from the other party.",
+      "a": false,
+      "exp": "CPR 35.8; instructions must be sent to the other instructing parties.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A witness can be cross-examined on the contents of their witness statement.",
+      "a": true,
+      "exp": "CPR 32.11; where a witness is called, they can be cross-examined on their statement.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "An expert's fees can be contingent on the outcome of the case.",
+      "a": false,
+      "exp": "Civil Justice Council Guidance; experts must be independent, and contingent fees undermine this.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Evidence of plans and photographs is admissible without notice.",
+      "a": false,
+      "exp": "CPR 33.6; evidence is not receivable unless notice (or the item itself) is given by the witness statement deadline.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A party can amplify a witness statement at trial without permission.",
+      "a": false,
+      "exp": "CPR 32.5(3); permission is required to give evidence arising from new matters or to amplify.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The court can limit the issues on which expert evidence is directed.",
+      "a": true,
+      "exp": "CPR 35.4; the court restricts expert evidence to what is reasonably required.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "If an expert changes their view, they must notify all parties in writing.",
+      "a": true,
+      "exp": "PD 35; the duty to the court requires communicating any material change of view.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Draft expert reports are usually privileged.",
+      "a": true,
+      "exp": "CPR 35.10(4) implies drafts are privileged/not inspectable (unless substance is not in final report).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A witness giving evidence by video link does not require court permission.",
+      "a": false,
+      "exp": "CPR 32.3; the court may allow video link evidence (VCF) but permission is required.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "If a party attacks the character of an opposing witness, they can introduce evidence of bad character.",
+      "a": true,
+      "exp": "Common law rule; credibility can be challenged ('credit').",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "'Hearsay' is an out of court statement repeated to prove the truth of its contents.",
+      "a": true,
+      "exp": "s.1(2) Civil Evidence Act 1995.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Evidence in Chief' is the initial questioning of a witness by the calling party.",
+      "a": true,
+      "exp": "Usually stands as the witness statement in civil trials (CPR 32.5).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Cross-examination' is questioning by the opposing party.",
+      "a": true,
+      "exp": "Used to test the evidence and credibility.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Re-examination' occurs after cross-examination.",
+      "a": true,
+      "exp": "Used to clarify points raised in cross-examination.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Expert Witness' provides opinion evidence.",
+      "a": true,
+      "exp": "Qualified to give opinion on matters within their expertise (CPR 35).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Witness of Fact' gives evidence on what they perceived.",
+      "a": true,
+      "exp": "Cannot generally give opinion evidence.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Single Joint Expert' (SJE) acts for both parties.",
+      "a": true,
+      "exp": "Instructed jointly to save costs (CPR 35.7).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Witness Summons' compels a witness to attend court.",
+      "a": true,
+      "exp": "CPR 34; failure to attend is contempt.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Conduct Money' covers the witness's travel expenses.",
+      "a": true,
+      "exp": "Must be paid at the time of service of the summons.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Notice to Admit' asks a party to admit facts or documents.",
+      "a": true,
+      "exp": "CPR 32.18; saves costs of proving undisputed facts.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Affidavit' is a sworn written statement.",
+      "a": true,
+      "exp": "Signed under oath/affirmation; used in freezing orders/search orders.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Witness Statement' is a signed written statement of fact.",
+      "a": true,
+      "exp": "The standard form of written evidence in civil proceedings (CPR 32.4).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Civil Evidence Act 1995' abolished the rule against hearsay.",
+      "a": true,
+      "exp": "Made hearsay generally admissible in civil proceedings.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Standard of Proof' in civil cases is the balance of probabilities.",
+      "a": true,
+      "exp": "More likely than not (>50%).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Burden of Proof' lies on the person asserting the fact.",
+      "a": true,
+      "exp": "Usually the claimant ('he who asserts must prove').",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Statement of Truth' verifies the content of a witness statement.",
+      "a": true,
+      "exp": "CPR 22; honest belief in the facts stated.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Privilege against Self-Incrimination' applies in civil proceedings.",
+      "a": true,
+      "exp": "s.14 Civil Evidence Act 1968; right to refuse to answer incriminating questions.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Ikarian Reefer' sets out the duties of an expert.",
+      "a": true,
+      "exp": "National Justice Compania Naviera SA v Prudential Assurance; duty is to the court.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Opinion Evidence' is generally inadmissible from factual witnesses.",
+      "a": true,
+      "exp": "s.3(2) CEA 1972; admissible only if it conveys perceived facts.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Exhibit' is a document referred to in a witness statement.",
+      "a": true,
+      "exp": "Must be verified and attached to the statement.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Hostile Witness' gives evidence adverse to the party calling them.",
+      "a": true,
+      "exp": "Can be cross-examined by their own side with leave.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Leading Question' suggests the answer.",
+      "a": true,
+      "exp": "Allowed in cross-examination but not generally in chief.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Trial Bundle' contains documents for the court hearing.",
+      "a": true,
+      "exp": "CPR 39.5; must be filed 3-7 days before trial.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Similar Fact Evidence' is admissible if relevant.",
+      "a": true,
+      "exp": "O'Brien v Chief Constable of South Wales Police; e.g. previous conduct.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Without Prejudice' applies to meetings between experts.",
+      "a": true,
+      "exp": "CPR 35.12(4); discussions are not disclosed unless agreed.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A Part 36 offer must specify a period of at least 21 days for acceptance.",
+      "a": true,
+      "exp": "CPR 36.5(1)(c); the 'relevant period' must be not less than 21 days.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "A Part 36 offer can be withdrawn without court permission during the relevant period.",
+      "a": false,
+      "exp": "CPR 36.10; permission is required to withdraw or make the offer less advantageous during the 21 days.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A defendant's Part 36 offer must generally be inclusive of interest.",
+      "a": true,
+      "exp": "CPR 36.5(4); the offer is treated as inclusive of all interest until the relevant period expires.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "An offer stating 'this offer is valid for 14 days' is a valid Part 36 offer.",
+      "a": false,
+      "exp": "C v D [2011]; a 'sunset clause' (automatic expiry) makes the offer non-compliant with Part 36.",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "If a claimant accepts a Part 36 offer late, the defendant is usually entitled to costs from the expiry of the relevant period.",
+      "a": true,
+      "exp": "CPR 36.13(5); the offeree pays the offeror's costs for the period of delay.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A claimant who matches (but does not beat) their own Part 36 offer at trial gets Part 36 rewards.",
+      "a": true,
+      "exp": "CPR 36.17(1)(b); the test for a claimant's offer is obtaining a judgment 'at least as advantageous'.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A claimant who matches (but does not beat) a defendant's Part 36 offer must pay the defendant's costs.",
+      "a": true,
+      "exp": "CPR 36.17(1)(a); for a defendant's offer, the claimant must obtain judgment 'better than' the offer.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "The 'Additional Amount' awarded to a successful claimant is capped at £50,000.",
+      "a": false,
+      "exp": "CPR 36.17(4)(d); the cap for the additional amount is £75,000.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "An offer to settle 'inclusive of costs' is a valid Part 36 offer.",
+      "a": false,
+      "exp": "Mitchell v James; a Part 36 offer must assume costs are payable in addition (CPR 36.5).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A Part 36 offer can be made in respect of a counterclaim.",
+      "a": true,
+      "exp": "CPR 36.2(3); Part 36 applies to counterclaims and additional claims.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A Tomlin Order schedule is automatically confidential.",
+      "a": true,
+      "exp": "The schedule is not on the court file open to inspection, preserving confidentiality.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Breach of a term in the schedule of a Tomlin Order is contempt of court.",
+      "a": false,
+      "exp": "The schedule is a contract; breach is a breach of contract, not contempt (unlike the main order).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "The cost consequences of Part 36 apply fully to the Small Claims Track.",
+      "a": false,
+      "exp": "CPR 36.2; Part 36 rules generally do not override the no-costs rule in Small Claims.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A Part 36 offer accepted before trial stays the proceedings.",
+      "a": true,
+      "exp": "CPR 36.14; the claim is stayed upon acceptance.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "An interim payment can be a valid Part 36 offer.",
+      "a": false,
+      "exp": "A Part 36 offer must be an offer to settle the whole or part of the claim, not just an interim payment.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A Part 36 offer made 10 days before trial is invalid.",
+      "a": false,
+      "exp": "CPR 36.5; it is valid, but the 'relevant period' will not expire before trial, affecting cost consequences.",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "To enforce a Tomlin Order, a fresh claim form must be issued.",
+      "a": false,
+      "exp": "An application is made within the existing proceedings (which are stayed, not concluded).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Indemnity costs awarded under Part 36 carry interest at up to 10% above base rate.",
+      "a": true,
+      "exp": "CPR 36.17(4)(c); enhanced interest on costs is one of the rewards.",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "A Calderbank offer provides automatic cost protection.",
+      "a": false,
+      "exp": "Calderbank offers are a factor for the court's discretion (CPR 44.2), not automatic protection.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A Part 36 offer can be accepted at trial without the court's permission.",
+      "a": false,
+      "exp": "CPR 36.11(3); once the trial has started, permission is required to accept.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "The 'Additional Amount' is calculated on the damages awarded including interest.",
+      "a": true,
+      "exp": "CPR 36.17(4); 10% of the sum awarded (money claims) inclusive of pre-judgment interest.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "If a Part 36 offer is withdrawn, the offeree can never accept it.",
+      "a": false,
+      "exp": "It can be accepted later only if the court gives permission (rare).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A generic offer to 'settle all claims' covers future claims not yet pleaded.",
+      "a": false,
+      "exp": "Normally covers only claims in the proceedings unless expressly drafted to be wider.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A claimant failing to beat a defendant's offer pays costs on the indemnity basis.",
+      "a": false,
+      "exp": "CPR 36.17(3); they pay costs on the *standard* basis (unless ordered otherwise).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Part 36 rewards apply to a claimant even if they are awarded £0 damages.",
+      "a": false,
+      "exp": "The claimant must obtain a judgment *at least as advantageous*; £0 is usually a loss.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "'Part 36 Offer' is a settlement offer compliant with CPR Part 36.",
+      "a": true,
+      "exp": "Strict formalities apply to gain cost consequences.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Calderbank Offer' is written 'without prejudice save as to costs'.",
+      "a": true,
+      "exp": "Common law offer used where Part 36 is not appropriate.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Tomlin Order' stays proceedings on agreed terms.",
+      "a": true,
+      "exp": "Terms are in a confidential schedule.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Relevant Period' is the 21-day window for acceptance.",
+      "a": true,
+      "exp": "CPR 36.5; usually 21 days.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Without Prejudice' privilege prevents the court seeing the document.",
+      "a": true,
+      "exp": "Until the issue of costs arises.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Indemnity Costs' resolve doubt in favour of the receiving party.",
+      "a": true,
+      "exp": "A punitive basis of assessment.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Standard Basis' costs must be proportionate.",
+      "a": true,
+      "exp": "The default basis for assessment.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Additional Amount' is a bonus for beating your own offer.",
+      "a": true,
+      "exp": "Up to £75,000 extra for claimants.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Consent Order' is a judgment agreed by the parties.",
+      "a": true,
+      "exp": "Approved and sealed by the court.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Stay of Proceedings' pauses the litigation.",
+      "a": true,
+      "exp": "Used in Tomlin orders or for ADR.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Notice of Acceptance' is served to accept a Part 36 offer.",
+      "a": true,
+      "exp": "Creates a binding settlement.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Sunset Clause' is an automatic expiry date in an offer.",
+      "a": true,
+      "exp": "Invalid in Part 36 offers.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Mediation' uses a facilitator to help parties agree.",
+      "a": true,
+      "exp": "A non-binding form of ADR until settlement is signed.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Arbitration' uses a private judge to make a binding decision.",
+      "a": true,
+      "exp": "Governed by the Arbitration Act 1996.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Joint Settlement Meeting' (JSM) is a negotiation meeting.",
+      "a": true,
+      "exp": "Usually between lawyers and parties to settle.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Form N242A' is the Notice of Offer to Settle.",
+      "a": true,
+      "exp": "Optional form for Part 36 offers.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Withdrawal' retracts the offer before acceptance.",
+      "a": true,
+      "exp": "Must be in writing.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Clarification' can be requested regarding a Part 36 offer.",
+      "a": true,
+      "exp": "Offeree can ask for details within 7 days.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Global Offer' settles multiple claims in one sum.",
+      "a": true,
+      "exp": "Must be clear what it covers.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Cost Consequences' trigger when an offer is not beaten.",
+      "a": true,
+      "exp": "CPR 36.17 penalties/rewards.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Litigation Risk' is the chance of losing at trial.",
+      "a": true,
+      "exp": "A key factor in settlement value.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Quantum' is the amount of damages.",
+      "a": true,
+      "exp": "The value of the claim.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Protected Party' lacks capacity to litigate.",
+      "a": true,
+      "exp": "Settlements involving them must be approved by the court.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Liberty to Apply' allows parties to return to court.",
+      "a": true,
+      "exp": "Standard clause in Tomlin orders to enforce terms.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Full and Final Settlement' ends all claims.",
+      "a": true,
+      "exp": "Prevents future litigation on the same facts.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A decision of a District Judge in the County Court is appealed to a Circuit Judge.",
+      "a": true,
+      "exp": "Access to Justice Act 1999 (Destination of Appeals) Order 2016; standard route is to the next level of judge.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A final decision of a Master in the High Court is appealed to the Court of Appeal.",
+      "a": false,
+      "exp": "Appeals from a Master lie to a High Court Judge, not the Court of Appeal.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "An Appellant's Notice must be filed within 21 days of the decision being appealed.",
+      "a": true,
+      "exp": "CPR 52.12; unless the lower court directs a different period.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "Permission to appeal is required for all appeals from the County Court.",
+      "a": true,
+      "exp": "CPR 52.3; permission is generally required for all appeals (except committal/liberty cases).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "An appeal court will allow an appeal if the lower court's decision was 'wrong'.",
+      "a": true,
+      "exp": "CPR 52.21(3)(a); 'wrong' in law, fact, or exercise of discretion.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A 'Leapfrog' appeal allows a case to go directly from the County Court to the Supreme Court.",
+      "a": false,
+      "exp": "Leapfrog goes from the High Court (or Upper Tribunal) to the Supreme Court; rarely from County Court.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Fresh evidence is admitted on appeal only if it could not have been obtained with reasonable diligence for the trial.",
+      "a": true,
+      "exp": "Ladd v Marshall; first limb of the test for admitting new evidence.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A judgment for £400 can be enforced by a High Court Writ of Control.",
+      "a": false,
+      "exp": "Judgments under £600 must be enforced in the County Court (High Court and County Court Jurisdiction Order 1991).",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "A judgment for £6,000 must be enforced in the High Court.",
+      "a": true,
+      "exp": "Consumer Credit Act regulated debts aside, judgments over £5,000 must be enforced in the High Court.",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "Enforcement agents must give 7 clear days' notice before taking control of goods.",
+      "a": true,
+      "exp": "Sch 12 Tribunals, Courts and Enforcement Act 2007; 'Notice of Enforcement'.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "Tools of the trade are exempt from seizure up to a value of £1,350.",
+      "a": true,
+      "exp": "Taking Control of Goods Regulations 2013; statutory exemption limit.",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "A Third Party Debt Order is appropriate to seize money in a debtor's bank account.",
+      "a": true,
+      "exp": "CPR 72; freezes debts owed *to* the debtor (e.g., bank balance).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "An interim Third Party Debt Order freezes the full amount of the judgment debt in the account.",
+      "a": true,
+      "exp": "It freezes the amount owed to the creditor (plus costs) to prevent withdrawal.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A Charging Order automatically entitles the creditor to sell the property.",
+      "a": false,
+      "exp": "CPR 73; a separate Order for Sale application is required to realize the asset.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Attachment of Earnings orders can be made against self-employed debtors.",
+      "a": false,
+      "exp": "Attachment of Earnings Act 1971; applies only to debtors with an employer (PAYE).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Creditors can apply for an Order to Obtain Information to question the debtor under oath.",
+      "a": true,
+      "exp": "CPR 71; debtor must attend court to answer questions on finances.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A Pre-Trial Checklist (Listing Questionnaire) must be filed at least 14 days before trial.",
+      "a": false,
+      "exp": "The due date is specified in the directions order (often 8 weeks before trial).",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "Trial bundles must be filed with the court 3 to 7 days before trial.",
+      "a": true,
+      "exp": "CPR 39.5; specific time depends on the court guide, but 3-7 days is standard.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "If a defendant elects to call no evidence, the claimant has the right to the final speech.",
+      "a": true,
+      "exp": "Standard trial procedure; usually Defendant closes, but if D calls no evidence, C closes.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Judgment debts carry statutory interest at 4%.",
+      "a": false,
+      "exp": "Judgments Act 1838; statutory interest is currently 8%.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "A stay of execution is granted automatically upon filing an appeal notice.",
+      "a": false,
+      "exp": "CPR 52.16; an appeal does not operate as a stay unless the court orders one.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A High Court Enforcement Officer can force entry to residential premises on a first visit.",
+      "a": false,
+      "exp": "Generally, peaceable entry only; forced entry requires a specific warrant or breach of a CGA.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Bankruptcy proceedings can be commenced for a debt of £750.",
+      "a": false,
+      "exp": "Insolvency Act 1986; the minimum debt for a bankruptcy petition is £5,000.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "A Charging Order takes priority over a mortgage registered earlier.",
+      "a": false,
+      "exp": "Priority is determined by the date of registration; earlier charges rank first.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Permission for a second appeal is granted only if the case raises an important point of principle.",
+      "a": true,
+      "exp": "CPR 52.7; stringent test for second appeals (Court of Appeal).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "'Appellant' is the party bringing the appeal.",
+      "a": true,
+      "exp": "The party challenging the lower court's decision.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Respondent' is the party opposing the appeal.",
+      "a": true,
+      "exp": "Usually the successful party in the court below.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Permission to Appeal' is also known as leave.",
+      "a": true,
+      "exp": "Required for most civil appeals to proceed.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Lower Court' is the court where the decision was made.",
+      "a": true,
+      "exp": "The court from which the appeal is brought.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Review' is the standard method of hearing an appeal.",
+      "a": true,
+      "exp": "CPR 52.21; the appeal court reviews the decision rather than rehearing evidence.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Re-hearing' involves hearing the evidence again.",
+      "a": true,
+      "exp": "Rare in appeals; usually only if the interests of justice require it.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Judgment Debtor' is the party who owes money.",
+      "a": true,
+      "exp": "The loser against whom enforcement is sought.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Writ of Control' is a High Court enforcement method.",
+      "a": true,
+      "exp": "Commands an enforcement officer to take control of goods.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Warrant of Control' is a County Court enforcement method.",
+      "a": true,
+      "exp": "Used to enforce judgments <£5,000 (or <£600 exclusively).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Taking Control of Goods' means seizing assets.",
+      "a": true,
+      "exp": "Replaced 'distress' and 'execution' terminology.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Controlled Goods Agreement' leaves goods with the debtor.",
+      "a": true,
+      "exp": "Debtor agrees not to remove/sell goods while paying off debt.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Third Party Debt Order' intercepts funds owed to the debtor.",
+      "a": true,
+      "exp": "E.g., instructing the debtor's bank to pay the creditor directly.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Charging Order' secures a debt against land.",
+      "a": true,
+      "exp": "Converts an unsecured judgment debt into a secured debt.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Order for Sale' forces the sale of charged property.",
+      "a": true,
+      "exp": "The final step in enforcing a Charging Order.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Attachment of Earnings' deducts money from wages.",
+      "a": true,
+      "exp": "Employer pays the court directly from the debtor's salary.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Protected Earnings Rate' is the minimum income left to the debtor.",
+      "a": true,
+      "exp": "Calculated in Attachment of Earnings orders to ensure subsistence.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Information Order' compels a debtor to answer questions.",
+      "a": true,
+      "exp": "Formerly 'oral examination'; helps creditor choose enforcement method.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'HCEO' stands for High Court Enforcement Officer.",
+      "a": true,
+      "exp": "Private officer authorized to enforce High Court writs.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Bailiff' is a County Court enforcement agent.",
+      "a": true,
+      "exp": "Salaried court employee enforcing warrants.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Skeleton Argument' is a written summary of submissions.",
+      "a": true,
+      "exp": "Filed before trial to assist the judge.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Trial Bundle' is an indexed file of case documents.",
+      "a": true,
+      "exp": "Ensures the court and parties work from the same papers.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Reading Time' is time set aside for the judge to prepare.",
+      "a": true,
+      "exp": "Pre-reading documents before the hearing starts.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Exempt Goods' cannot be seized by bailiffs.",
+      "a": true,
+      "exp": "Includes basic domestic needs and tools of trade up to £1,350.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Return of Goods' is a specific enforcement for delivery up.",
+      "a": true,
+      "exp": "Writ/Warrant of Delivery to recover specific items.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Stay of Execution' pauses enforcement.",
+      "a": true,
+      "exp": "Court order halting enforcement actions.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "The Brussels I Recast Regulation applies to proceedings instituted in the UK after 31 December 2020.",
+      "a": false,
+      "exp": "Brussels I Recast generally ceased to apply to new UK proceedings after the Brexit transition period.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "The Hague Convention 2005 applies to exclusive choice of court agreements.",
+      "a": true,
+      "exp": "It requires courts to respect exclusive jurisdiction clauses in favor of contracting states.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Permission to serve out of the jurisdiction is required if the Hague Convention 2005 applies.",
+      "a": false,
+      "exp": "CPR 6.33; permission is not required if the court has jurisdiction under the Hague Convention.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Under Common Law rules, temporary presence in England is sufficient for jurisdiction.",
+      "a": true,
+      "exp": "Maharanee of Baroda v Wildenstein; serving a defendant while temporarily in the jurisdiction establishes jurisdiction.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Filing an Acknowledgment of Service to dispute jurisdiction constitutes submission.",
+      "a": false,
+      "exp": "CPR 11; filing an AoS does not constitute submission if a timely application to dispute jurisdiction follows.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "For a 'necessary or proper party' gateway, the anchor defendant must be served first.",
+      "a": false,
+      "exp": "There must be a real issue with the anchor defendant, but they need not be served *before* permission is sought, just effectively served.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "In a forum non conveniens challenge (service within jurisdiction), the burden is on the claimant.",
+      "a": false,
+      "exp": "Spiliada; if served within jurisdiction, the burden is on the *defendant* to show another forum is clearly more appropriate.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "In a forum non conveniens challenge (service out), the burden is on the claimant.",
+      "a": true,
+      "exp": "Spiliada; if seeking permission to serve out, the claimant must show England is the proper place (forum conveniens).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Rome I Regulation allows parties to choose the applicable law for their contract.",
+      "a": true,
+      "exp": "Article 3 Rome I; freedom of choice is the primary rule.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Under Rome II, the applicable law for tort is always where the harmful event occurred.",
+      "a": false,
+      "exp": "Article 4(1); it is where the damage *occurs*, but exceptions (e.g., common habitual residence) apply.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The 'Contract Gateway' applies if the contract was made in England.",
+      "a": true,
+      "exp": "PD 6B 3.1(6); a claim can be served out if the contract was made within the jurisdiction.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The 'Tort Gateway' requires the tortious act to be committed wholly in England.",
+      "a": false,
+      "exp": "PD 6B 3.1(9); it is sufficient if damage was sustained within the jurisdiction or the act was committed there.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Rome I applies to questions of evidence and procedure.",
+      "a": false,
+      "exp": "Article 1(3); evidence and procedure are excluded and governed by the *lex fori*.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Under Rome I, a contract for the sale of goods is governed by the buyer's habitual residence absent choice.",
+      "a": false,
+      "exp": "Article 4(1)(a); it is governed by the law of the country where the *seller* has their habitual residence.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Parties can agree to change the applicable law for a tort after the dispute arises.",
+      "a": true,
+      "exp": "Article 14 Rome II; parties can agree on the law after the event causing damage.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A consumer contract is governed by the law of the consumer's habitual residence under Rome I.",
+      "a": true,
+      "exp": "Article 6 Rome I; protects consumers directed by professionals.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Defamation claims are covered by Rome II.",
+      "a": false,
+      "exp": "Article 1(2)(g); non-contractual obligations arising from violations of privacy/rights relating to personality are excluded.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "The 'Manifestly Closer Connection' exception in Rome II is easily established.",
+      "a": false,
+      "exp": "Article 4(3); it is an 'escape clause' applied only in clear cases.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "To serve out of the jurisdiction, the claimant must show a 'serious issue to be tried'.",
+      "a": true,
+      "exp": "The first limb of the test for permission to serve out (merits test).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A 'step in the proceedings' (like asking for disclosure) can amount to submission.",
+      "a": true,
+      "exp": "Any act inconsistent with challenging jurisdiction can constitute submission.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "If D is domiciled in Scotland, the Civil Jurisdiction and Judgments Act 1982 applies.",
+      "a": true,
+      "exp": "The 1982 Act allocates jurisdiction between the parts of the UK (England, Scotland, NI).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Rome I allows different laws to govern different parts of the same contract.",
+      "a": true,
+      "exp": "Article 3(1); the concept of *dépeçage* allows splitting applicable law.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "An anti-suit injunction can be granted to stop proceedings in another EU Member State.",
+      "a": false,
+      "exp": "West Tankers; under the old Brussels regime it was prohibited, but post-Brexit the position is reviving towards allowing them.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Common Habitual Residence overrides the general rule in Rome II.",
+      "a": true,
+      "exp": "Article 4(2); if both parties live in the same country, that country's law applies.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The English court will always decline jurisdiction if there is a foreign lis pendens.",
+      "a": false,
+      "exp": "Under common law, *lis alibi pendens* is a discretionary factor for forum non conveniens, not an automatic bar.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "'Jurisdiction' is the power of the court to hear a case.",
+      "a": true,
+      "exp": "The authority to adjudicate the dispute.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Conflict of Laws' is also known as Private International Law.",
+      "a": true,
+      "exp": "The body of law resolving cross-border disputes.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Domicile' for a company is usually its registered office.",
+      "a": true,
+      "exp": "Alternatively, its central administration or principal place of business.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Service Out' means serving the claim form outside the jurisdiction.",
+      "a": true,
+      "exp": "Service outside England and Wales.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Permission to Serve Out' is sought by application notice.",
+      "a": true,
+      "exp": "Usually an application without notice under CPR 6.36.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Gateway' refers to the grounds in PD 6B.",
+      "a": true,
+      "exp": "The jurisdictional links required to obtain permission to serve out.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Forum Non Conveniens' means 'inappropriate forum'.",
+      "a": true,
+      "exp": "Doctrine allowing courts to stay proceedings if another court is more appropriate.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Spiliada Test' determines the appropriate forum.",
+      "a": true,
+      "exp": "Spiliada Maritime Corp v Cansulex Ltd [1987].",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Submission' means accepting the court's jurisdiction.",
+      "a": true,
+      "exp": "Can be voluntary (e.g., filing a Defence).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Hague Convention 2005' deals with Choice of Court Agreements.",
+      "a": true,
+      "exp": "International treaty on exclusive jurisdiction clauses.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Exclusive Jurisdiction Clause' names one specific court to hear disputes.",
+      "a": true,
+      "exp": "Parties agree to sue only in that named court.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Rome I' governs the law applicable to contractual obligations.",
+      "a": true,
+      "exp": "Regulation (EC) No 593/2008 (retained EU law).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Rome II' governs the law applicable to non-contractual obligations.",
+      "a": true,
+      "exp": "Regulation (EC) No 864/2007 (retained EU law).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Lex Fori' is the law of the court hearing the case.",
+      "a": true,
+      "exp": "The procedural law of the forum (e.g., English procedural rules).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Lex Causae' is the law governing the substance of the case.",
+      "a": true,
+      "exp": "The applicable substantive law determined by conflict rules.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Characteristic Performance' helps determine applicable law.",
+      "a": true,
+      "exp": "Used in Rome I Art 4 (e.g., the service provider in a services contract).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Habitual Residence' is the factual centre of interests.",
+      "a": true,
+      "exp": "Key connecting factor in Rome I and II.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Form N510' is used for service out without permission.",
+      "a": true,
+      "exp": "Statement of grounds for serving out of jurisdiction.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Lis Alibi Pendens' means a suit is pending elsewhere.",
+      "a": true,
+      "exp": "Parallel proceedings in another jurisdiction.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Anti-Suit Injunction' stops a party suing abroad.",
+      "a": true,
+      "exp": "Order restraining foreign proceedings in breach of a jurisdiction clause.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Public Policy' exception allows courts to refuse foreign law.",
+      "a": true,
+      "exp": "Rome I Art 21; if application is manifestly incompatible with public policy.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Mandatory Rules' cannot be derogated from by contract.",
+      "a": true,
+      "exp": "Overriding statutes of the forum (e.g., UCTA 1977).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Necessary or Proper Party' is a gateway for multi-defendant cases.",
+      "a": true,
+      "exp": "Allows joining a foreign defendant to a claim against an English anchor defendant.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Anchor Defendant' is the defendant served within the jurisdiction.",
+      "a": true,
+      "exp": "Used to pull in foreign defendants under the necessary/proper party gateway.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "'Universal Application' means Rome I/II apply to any law.",
+      "a": true,
+      "exp": "The applicable law can be that of a non-EU/non-UK country.",
+      "isTiming": false,
+      "difficulty": 1
+    }
   ],
   "contract": [
     { "q": "Consideration must be sufficient, not adequate.", "a": true, "exp": "Chappell v Nestle (wrappers)." },
