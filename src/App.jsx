@@ -10,7 +10,7 @@ import { db, auth } from './firebase';
 const PREPARED_BANKS = {};            
 const appId = 'sqe-arcade';          
 
-// --- AUDIO ENGINE v28.0 (Master Volume Control) ---
+// --- AUDIO ENGINE v29.0 (Rich Resonance + Master Volume) ---
 class AudioEngine {
   constructor() {
     this.ctx = null;
@@ -23,7 +23,7 @@ class AudioEngine {
     this.timerID = null;
     this.beatCount = 0;
     this.distortionNode = null;
-    this.masterGain = null; // NEW: Master Volume Node
+    this.masterGain = null; 
     
     // Flow Mode State
     this.chordIndex = 0;
@@ -213,23 +213,33 @@ class AudioEngine {
       modulator.frequency.value = freq * 2.0; 
       modulator.type = 'sine';
       
-      modulatorGain.gain.setValueAtTime(80, t); 
-      modulatorGain.gain.exponentialRampToValueAtTime(0.01, t + 0.8); 
+      // RESTORED RESONANCE: Higher modulation index (250) for rich timbre
+      modulatorGain.gain.setValueAtTime(250, t); 
+      modulatorGain.gain.exponentialRampToValueAtTime(0.01, t + 1.2); // Longer metallic tail
 
+      // CONTROLLED VOLUME: Lower amplitude (0.1) despite rich timbre
       carrierGain.gain.setValueAtTime(0, t);
-      carrierGain.gain.linearRampToValueAtTime(0.08, t + 0.05); 
-      carrierGain.gain.exponentialRampToValueAtTime(0.001, t + 3.0);
+      carrierGain.gain.linearRampToValueAtTime(0.1, t + 0.05); 
+      carrierGain.gain.exponentialRampToValueAtTime(0.001, t + 4.0); // Long sustain
 
       modulator.connect(modulatorGain);
       modulatorGain.connect(carrier.frequency);
       
       carrier.connect(carrierGain);
       carrierGain.connect(this.masterGain); // Master
+      
+      // Send to Delay for Space
+      if (this.flowNodes.delayInput) {
+          const send = this.ctx.createGain();
+          send.gain.value = 0.4; 
+          carrierGain.connect(send);
+          send.connect(this.flowNodes.delayInput);
+      }
 
       carrier.start(t);
       modulator.start(t);
-      carrier.stop(t + 3.5);
-      modulator.stop(t + 3.5);
+      carrier.stop(t + 4.5);
+      modulator.stop(t + 4.5);
   }
 
   playChoirEcho(freq, delaySeconds) {
