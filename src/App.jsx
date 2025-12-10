@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useRef, useCallback, memo } from 'react';
 import { Play, Pause, RefreshCw, Check, X, Volume2, VolumeX, Zap, Trophy, Award, Hexagon, Briefcase, Gavel, Home, ScrollText, AlertTriangle, Tag, FastForward, Eye, BrainCircuit, MessageSquare, Clock, ShieldAlert, ArrowRight, Activity, Scale, Landmark, BookOpen, Shield, Layers, Headphones, Music } from 'lucide-react';
 import { initializeApp } from 'firebase/app';
 import { getAuth, signInAnonymously, onAuthStateChanged, signInWithCustomToken } from 'firebase/auth';
@@ -10,7 +10,7 @@ import { db, auth } from './firebase';
 const PREPARED_BANKS = {};            
 const appId = 'sqe-arcade';          
 
-// --- AUDIO ENGINE v29.0 (Rich Resonance + Master Volume) ---
+// --- AUDIO ENGINE v31.0 (Arcade Smooth Fix) ---
 class AudioEngine {
   constructor() {
     this.ctx = null;
@@ -47,9 +47,8 @@ class AudioEngine {
     if (!this.ctx) {
       this.ctx = new (window.AudioContext || window.webkitAudioContext)();
       
-      // Create Master Gain
       this.masterGain = this.ctx.createGain();
-      this.masterGain.gain.value = 0.75; // Default 75%
+      this.masterGain.gain.value = 0.75; 
       this.masterGain.connect(this.ctx.destination);
 
       this.createDistortion();
@@ -60,7 +59,6 @@ class AudioEngine {
 
   setMasterVolume(value) {
       if (this.masterGain) {
-          // Smooth transition to avoid clicks
           this.masterGain.gain.setTargetAtTime(value, this.ctx.currentTime, 0.05);
       }
   }
@@ -87,7 +85,6 @@ class AudioEngine {
       delayL.connect(merger, 0, 0);
       delayR.connect(merger, 0, 1);
       
-      // Connect to Master
       merger.connect(this.masterGain);
       
       this.flowNodes.delayInput = delayL;
@@ -111,7 +108,6 @@ class AudioEngine {
       gain.gain.value = 0.6;
       convolver.connect(gain);
       
-      // Connect to Master
       gain.connect(this.masterGain);
       this.flowNodes.choirBus = convolver;
   }
@@ -150,7 +146,6 @@ class AudioEngine {
       this.currentStreak = s;
   }
 
-  // --- INTERACTION SFX ---
   playInteraction(type) {
       if (!this.ctx) return;
       this.resume();
@@ -164,7 +159,7 @@ class AudioEngine {
           gain.gain.setValueAtTime(0.015, t); 
           gain.gain.exponentialRampToValueAtTime(0.001, t + 0.03);
           osc.connect(gain);
-          gain.connect(this.masterGain); // Master
+          gain.connect(this.masterGain); 
           osc.start(t);
           osc.stop(t + 0.05);
       } else if (type === 'click') {
@@ -176,7 +171,7 @@ class AudioEngine {
           gain.gain.setValueAtTime(0.1, t);
           gain.gain.exponentialRampToValueAtTime(0.001, t + 0.1);
           osc.connect(gain);
-          gain.connect(this.masterGain); // Master
+          gain.connect(this.masterGain); 
           osc.start(t);
           osc.stop(t + 0.1);
       } else if (type === 'wrong') {
@@ -192,13 +187,12 @@ class AudioEngine {
           gain.gain.linearRampToValueAtTime(0, t + 0.4);
           osc.connect(filter);
           filter.connect(gain);
-          gain.connect(this.masterGain); // Master
+          gain.connect(this.masterGain); 
           osc.start(t);
           osc.stop(t + 0.4);
       }
   }
 
-  // --- FLOW MODE: GENERATIVE MELODY ---
   playFMBell(freq, timeOffset = 0) {
       if(!this.ctx) return;
       const t = this.ctx.currentTime + timeOffset;
@@ -213,22 +207,19 @@ class AudioEngine {
       modulator.frequency.value = freq * 2.0; 
       modulator.type = 'sine';
       
-      // RESTORED RESONANCE: Higher modulation index (250) for rich timbre
-      modulatorGain.gain.setValueAtTime(150, t); 
-      modulatorGain.gain.exponentialRampToValueAtTime(0.01, t + 1.2); // Longer metallic tail
+      modulatorGain.gain.setValueAtTime(250, t); 
+      modulatorGain.gain.exponentialRampToValueAtTime(0.01, t + 1.2); 
 
-      // CONTROLLED VOLUME: Lower amplitude (0.1) despite rich timbre
       carrierGain.gain.setValueAtTime(0, t);
       carrierGain.gain.linearRampToValueAtTime(0.1, t + 0.05); 
-      carrierGain.gain.exponentialRampToValueAtTime(0.001, t + 4.0); // Long sustain
+      carrierGain.gain.exponentialRampToValueAtTime(0.001, t + 4.0); 
 
       modulator.connect(modulatorGain);
       modulatorGain.connect(carrier.frequency);
       
       carrier.connect(carrierGain);
-      carrierGain.connect(this.masterGain); // Master
+      carrierGain.connect(this.masterGain); 
       
-      // Send to Delay for Space
       if (this.flowNodes.delayInput) {
           const send = this.ctx.createGain();
           send.gain.value = 0.4; 
@@ -267,7 +258,7 @@ class AudioEngine {
       if (this.flowNodes.choirBus) {
           gain.connect(this.flowNodes.choirBus);
       } else {
-          gain.connect(this.masterGain); // Master
+          gain.connect(this.masterGain); 
       }
       
       osc.start(t);
@@ -294,7 +285,6 @@ class AudioEngine {
       }
   }
 
-  // --- FLOW MODE: EVOLVING PADS ---
   startFlow() {
       if (!this.ctx) return;
       this.stopFlow(); 
@@ -304,7 +294,7 @@ class AudioEngine {
       
       masterGain.gain.setValueAtTime(0, now);
       masterGain.gain.linearRampToValueAtTime(0.5, now + 4); 
-      masterGain.connect(this.masterGain); // Master
+      masterGain.connect(this.masterGain); 
       this.flowNodes.gain = masterGain;
 
       this.updateFlowChord();
@@ -414,17 +404,28 @@ class AudioEngine {
 
     if (this.density >= 2 && (step === 4 || step === 12)) this.playDrum(time, 'snare');
     if (this.density >= 3 && step % 4 === 0) this.playOsc(time, root * 1.5, 'triangle', 0.2, 0.1, 1000); 
+    
     if (this.density >= 5 && step % 2 === 0) {
-       const arp = [root*4, root*6, root*8, root*5];
-       this.playOsc(time, arp[(step/2)%4], 'square', 0.1, 0.05, 2000);
+       let arpVol = 0;
+       if (this.currentStreak >= 20 && this.currentStreak < 30) {
+           arpVol = (this.currentStreak - 20) / 10;
+       } else if (this.currentStreak >= 30) {
+           arpVol = 1.0;
+       }
+       
+       if (arpVol > 0.05) {
+           const arp = [root*4, root*6, root*8, root*5];
+           this.playOsc(time, arp[(step/2)%4], 'square', 0.08 * arpVol, 0.05, 2000);
+       }
     }
+    
     if (this.density >= 6 && step === 0 && this.beatCount % 32 === 0) {
         this.playPad(time, root * 4, 4, -5); 
         this.playPad(time, root * 6, 4, 5); 
     }
     if (this.density >= 7 && step % 2 === 0) this.playDrum(time, 'hat'); 
     
-    // ARCADE FADE FIX
+    // ARCADE FADE FIX: Replaced Sawtooth with Triangle and lowered filter/volume
     if (this.density >= 8) {
         let fadeVol = 0;
         if (this.currentStreak >= 35 && this.currentStreak <= 45) {
@@ -434,7 +435,8 @@ class AudioEngine {
         }
         if (fadeVol > 0.01) {
             const soloNotes = [root*8, root*12, root*10, root*15, root*8, root*6, root*12, root*16];
-            this.playOsc(time, soloNotes[step % 8], 'sawtooth', 0.12 * fadeVol, 0.1, 4000);
+            // FIXED LINE BELOW: 'triangle' instead of 'sawtooth', 0.06 vol, 1500 filter
+            this.playOsc(time, soloNotes[step % 8], 'triangle', 0.06 * fadeVol, 0.1, 1500);
         }
     }
     
@@ -457,7 +459,7 @@ class AudioEngine {
     gain.gain.exponentialRampToValueAtTime(0.001, time + duration);
     osc.connect(filter);
     filter.connect(gain);
-    gain.connect(this.masterGain); // Master
+    gain.connect(this.masterGain); 
     osc.start(time);
     osc.stop(time + duration + 0.5);
   }
@@ -495,14 +497,14 @@ class AudioEngine {
       gain.gain.exponentialRampToValueAtTime(0.01, time + 0.2);
       osc.connect(gain);
     }
-    gain.connect(this.masterGain); // Master
+    gain.connect(this.masterGain); 
     if (type !== 'hat') { osc.start(time); osc.stop(time + 0.5); }
   }
 
   playCinematicStack(time, freq, duration) {
       if (!this.ctx) return;
       const gain = this.ctx.createGain();
-      gain.connect(this.masterGain); // Master
+      gain.connect(this.masterGain); 
       [1, 1.5, 2].forEach((h) => {
           const osc = this.ctx.createOscillator();
           osc.type = 'sawtooth'; 
@@ -537,7 +539,7 @@ class AudioEngine {
       gain.gain.linearRampToValueAtTime(0, time + duration); 
       osc.connect(filter);
       filter.connect(gain);
-      gain.connect(this.masterGain); // Master
+      gain.connect(this.masterGain); 
       osc.start(time);
       osc.stop(time + duration);
   }
@@ -579,8 +581,9 @@ class AudioEngine {
 
 const audio = new AudioEngine();
 
-// --- VISUAL EFFECT v13.2 (Fixed Positioning) ---
-const WormholeEffect = ({ streak, isChronos, isGameOver, failCount }) => {
+// --- VISUAL EFFECT v13.2 (Optimized Fixed Starfield) ---
+// Memoized to prevent unnecessary re-renders
+const WormholeEffect = memo(({ streak, isChronos, isGameOver, failCount }) => {
   const canvasRef = useRef(null);
   const streakRef = useRef(streak); 
 
@@ -594,7 +597,7 @@ const WormholeEffect = ({ streak, isChronos, isGameOver, failCount }) => {
     const ctx = canvas.getContext('2d');
     let animationFrameId;
     let stars = [];
-    const numStars = 300; 
+    const numStars = 200; // Reduced from 300 for performance
 
     const resize = () => {
       canvas.width = window.innerWidth;
@@ -678,6 +681,7 @@ const WormholeEffect = ({ streak, isChronos, isGameOver, failCount }) => {
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       if (currentStreak > 20 && !isNegative) {
+          // Keep nice gradients for the background "nebula" effects
           const grad = ctx.createRadialGradient(canvas.width/2, canvas.height/2, 50, canvas.width/2, canvas.height/2, canvas.width);
           grad.addColorStop(0, "rgba(0,0,0,0)");
           grad.addColorStop(1, "rgba(0,0,0,0.5)");
@@ -733,15 +737,16 @@ const WormholeEffect = ({ streak, isChronos, isGameOver, failCount }) => {
             starColor = `hsl(${baseHue}, ${sat}, ${light})`;
         }
         
-        ctx.strokeStyle = starColor;
+        // PERFORMANCE FIX: Use simple fill instead of gradient
         ctx.fillStyle = starColor;
-        ctx.lineWidth = size;
-
+        
         if (x > 0 && x < canvas.width && y > 0 && y < canvas.height) {
            ctx.beginPath();
            if (warpFactor > 0 && speed > 10) {
                const tailX = x - (x - cx) * (warpFactor * 0.005);
                const tailY = y - (y - cy) * (warpFactor * 0.005);
+               ctx.strokeStyle = starColor;
+               ctx.lineWidth = size;
                ctx.moveTo(tailX, tailY);
                ctx.lineTo(x, y);
                ctx.stroke();
@@ -764,7 +769,7 @@ const WormholeEffect = ({ streak, isChronos, isGameOver, failCount }) => {
 
   // Fixed positioning for starfield
   return <canvas ref={canvasRef} className="fixed inset-0 pointer-events-none z-0 opacity-100" />;
-};
+});
 
 // --- COMPONENTS ---
 
@@ -1358,6 +1363,7 @@ export default function SQEArcade() {
     if (gameState === 'playing') {
       const startTime = Date.now();
       const initialTimeLeft = timeLeft;
+      // TIMER OPTIMIZATION: Updated to 50ms loop to reduce CPU load
       timerRef.current = setInterval(() => {
         const elapsed = (Date.now() - startTime) / 1000;
         const remaining = Math.max(0, initialTimeLeft - elapsed);
@@ -1366,7 +1372,7 @@ export default function SQEArcade() {
           clearInterval(timerRef.current);
           handleAnswer(null); 
         }
-      }, 30);
+      }, 50);
     }
     return () => clearInterval(timerRef.current);
   }, [gameState, currentQIndex]);
