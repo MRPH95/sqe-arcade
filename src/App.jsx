@@ -10,12 +10,12 @@ import { db, auth } from './firebase';
 const PREPARED_BANKS = {};            
 const appId = 'sqe-arcade';          
 
-// --- AUDIO ENGINE v23.0 (Dual Mode: Arcade + Binaural) ---
+// --- AUDIO ENGINE v24.0 (Generative Flow + SFX) ---
 class AudioEngine {
   constructor() {
     this.ctx = null;
     this.isPlaying = false;
-    this.mode = 'arcade'; // 'arcade' or 'focus'
+    this.mode = 'arcade'; // 'arcade' or 'flow'
     this.tempo = 128; 
     this.density = 1; 
     this.nextNoteTime = 0;
@@ -23,11 +23,9 @@ class AudioEngine {
     this.beatCount = 0;
     this.distortionNode = null;
     
-    // Binaural Nodes
-    this.binauralNodes = {
-        leftOsc: null,
-        rightOsc: null,
-        noise: null,
+    // Nodes for Flow Mode (Ambient)
+    this.flowNodes = {
+        pads: [],
         gain: null
     };
   }
@@ -67,10 +65,85 @@ class AudioEngine {
 
   setDensity(level) {
     this.density = Math.min(12, Math.max(1, level));
-    // If in Focus mode, update drone intensity immediately
-    if (this.mode === 'focus' && this.isPlaying) {
-        this.updateBinauralIntensity();
+    if (this.mode === 'flow' && this.isPlaying) {
+        this.updateFlowIntensity();
     }
+  }
+
+  // --- SFX & INTERACTION ---
+  playInteraction(type) {
+      if (!this.ctx) return;
+      this.resume();
+      const t = this.ctx.currentTime;
+      const osc = this.ctx.createOscillator();
+      const gain = this.ctx.createGain();
+      
+      if (type === 'hover') {
+          // Tiny high blip
+          osc.frequency.setValueAtTime(800, t);
+          osc.type = 'triangle';
+          gain.gain.setValueAtTime(0.05, t);
+          gain.gain.exponentialRampToValueAtTime(0.001, t + 0.05);
+          osc.start(t);
+          osc.stop(t + 0.05);
+      } else if (type === 'click') {
+          // Soft mechanical thud
+          osc.frequency.setValueAtTime(150, t);
+          osc.frequency.exponentialRampToValueAtTime(0.01, t + 0.1);
+          osc.type = 'sine';
+          gain.gain.setValueAtTime(0.2, t);
+          gain.gain.exponentialRampToValueAtTime(0.001, t + 0.1);
+          osc.start(t);
+          osc.stop(t + 0.1);
+      } else if (type === 'correct') {
+          // Harmonious Bell (C Major 7th ish)
+          this.playBell(t, 523.25); // C5
+          setTimeout(() => this.playBell(this.ctx.currentTime, 659.25), 50); // E5
+      } else if (type === 'wrong') {
+          // Low "Dud"
+          osc.frequency.setValueAtTime(100, t);
+          osc.frequency.linearRampToValueAtTime(50, t + 0.3);
+          osc.type = 'sawtooth';
+          
+          const filter = this.ctx.createBiquadFilter();
+          filter.type = 'lowpass';
+          filter.frequency.value = 200;
+          
+          gain.gain.setValueAtTime(0.3, t);
+          gain.gain.linearRampToValueAtTime(0, t + 0.3);
+          
+          osc.connect(filter);
+          filter.connect(gain);
+          gain.connect(this.ctx.destination);
+          osc.start(t);
+          osc.stop(t + 0.3);
+          return; // Custom routing for wrong
+      }
+      
+      osc.connect(gain);
+      gain.connect(this.ctx.destination);
+  }
+
+  playBell(time, freq) {
+      const osc = this.ctx.createOscillator();
+      const gain = this.ctx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(freq, time);
+      gain.gain.setValueAtTime(0, time);
+      gain.gain.linearRampToValueAtTime(0.1, time + 0.02);
+      gain.gain.exponentialRampToValueAtTime(0.001, time + 1.5);
+      osc.connect(gain);
+      gain.connect(this.ctx.destination);
+      osc.start(time);
+      osc.stop(time + 1.5);
+  }
+  
+  // Generative Melody for Flow Mode (Pentatonic Scale)
+  playFlowNote() {
+      if (this.mode !== 'flow' || !this.ctx) return;
+      const scale = [261.63, 311.13, 349.23, 392.00, 466.16, 523.25]; // C Minor Pentatonic
+      const note = scale[Math.floor(Math.random() * scale.length)];
+      this.playBell(this.ctx.currentTime, note * (Math.random() > 0.5 ? 1 : 2));
   }
 
   // --- ARCADE MODE METHODS ---
@@ -262,102 +335,64 @@ class AudioEngine {
     }
   }
 
-  // --- FOCUS MODE METHODS (Binaural) ---
-  startBinaural() {
+  // --- FLOW MODE METHODS (Ambient + Generative) ---
+  startFlow() {
       if (!this.ctx) return;
-      this.stopBinaural(); // Clear existing
+      this.stopFlow(); 
 
       const now = this.ctx.currentTime;
-      const baseFreq = 140; // Low soothing D note
-      const beatFreq = 8; // Alpha waves (Focus)
-
-      // Master Gain for Focus Mode
+      // C Minor 9 Pad: C3, Eb3, G3, Bb3, D4
+      const freqs = [130.81, 155.56, 196.00, 233.08, 293.66];
       const masterGain = this.ctx.createGain();
+      
       masterGain.gain.setValueAtTime(0, now);
-      masterGain.gain.linearRampToValueAtTime(0.3, now + 2); // Fade in
+      masterGain.gain.linearRampToValueAtTime(0.25, now + 3); // Slow fade in
       masterGain.connect(this.ctx.destination);
-      this.binauralNodes.gain = masterGain;
+      this.flowNodes.gain = masterGain;
 
-      // Left Oscillator (Base)
-      const oscL = this.ctx.createOscillator();
-      oscL.type = 'sine';
-      oscL.frequency.value = baseFreq;
-      const panL = this.ctx.createStereoPanner();
-      panL.pan.value = -1;
-      oscL.connect(panL);
-      panL.connect(masterGain);
-      oscL.start();
-      this.binauralNodes.leftOsc = oscL;
+      // Create a lush pad stack
+      freqs.forEach((f, i) => {
+          const osc = this.ctx.createOscillator();
+          osc.type = i % 2 === 0 ? 'sine' : 'triangle';
+          osc.frequency.value = f;
+          
+          // Slight detune for "lo-fi" feel
+          osc.detune.value = Math.random() * 10 - 5; 
+          
+          const pan = this.ctx.createStereoPanner();
+          pan.pan.value = (Math.random() * 2) - 1; // Random spread
+          
+          const lfo = this.ctx.createOscillator();
+          lfo.frequency.value = 0.1 + (Math.random() * 0.2); // Slow drift
+          const lfoGain = this.ctx.createGain();
+          lfoGain.gain.value = 10;
+          lfo.connect(lfoGain);
+          lfoGain.connect(osc.detune);
+          lfo.start();
 
-      // Right Oscillator (Base + Alpha)
-      const oscR = this.ctx.createOscillator();
-      oscR.type = 'sine';
-      oscR.frequency.value = baseFreq + beatFreq;
-      const panR = this.ctx.createStereoPanner();
-      panR.pan.value = 1;
-      oscR.connect(panR);
-      panR.connect(masterGain);
-      oscR.start();
-      this.binauralNodes.rightOsc = oscR;
-
-      // Pink Noise Layer (for texture)
-      const bufferSize = this.ctx.sampleRate * 2;
-      const buffer = this.ctx.createBuffer(1, bufferSize, this.ctx.sampleRate);
-      const data = buffer.getChannelData(0);
-      let lastOut = 0;
-      for (let i = 0; i < bufferSize; i++) {
-          const white = Math.random() * 2 - 1;
-          data[i] = (lastOut + (0.02 * white)) / 1.02; 
-          lastOut = data[i];
-          data[i] *= 3.5; 
-      }
-      
-      const noise = this.ctx.createBufferSource();
-      noise.buffer = buffer;
-      noise.loop = true;
-      const noiseFilter = this.ctx.createBiquadFilter();
-      noiseFilter.type = 'lowpass';
-      noiseFilter.frequency.value = 400; // Muffled rain sound
-      const noiseGain = this.ctx.createGain();
-      noiseGain.gain.value = 0.02; // Very quiet background
-      
-      noise.connect(noiseFilter);
-      noiseFilter.connect(noiseGain);
-      noiseGain.connect(masterGain);
-      noise.start();
-      
-      this.binauralNodes.noise = { source: noise, filter: noiseFilter, gain: noiseGain };
-      
-      // Initialize with current density
-      this.updateBinauralIntensity();
+          osc.connect(pan);
+          pan.connect(masterGain);
+          osc.start();
+          this.flowNodes.pads.push({ osc, lfo, pan });
+      });
   }
 
-  updateBinauralIntensity() {
-      if (!this.binauralNodes.noise || !this.ctx) return;
-      const d = this.density;
-      const now = this.ctx.currentTime;
-      
-      // As streak goes up, open the filter slightly and increase volume
-      // This creates a sense of "heightened awareness" without being rhythmic
-      const newFreq = 400 + (d * 100); 
-      const newVol = 0.02 + (d * 0.005);
-
-      this.binauralNodes.noise.filter.frequency.linearRampToValueAtTime(newFreq, now + 1);
-      this.binauralNodes.noise.gain.gain.linearRampToValueAtTime(newVol, now + 1);
+  updateFlowIntensity() {
+      // In Flow mode, intensity just slightly opens the stereo width or brightness
+      // But we keep it calm.
   }
 
-  stopBinaural() {
-      if (this.binauralNodes.leftOsc) {
-          this.binauralNodes.leftOsc.stop();
-          this.binauralNodes.leftOsc = null;
-      }
-      if (this.binauralNodes.rightOsc) {
-          this.binauralNodes.rightOsc.stop();
-          this.binauralNodes.rightOsc = null;
-      }
-      if (this.binauralNodes.noise) {
-          this.binauralNodes.noise.source.stop();
-          this.binauralNodes.noise = null;
+  stopFlow() {
+      if (this.flowNodes.gain) {
+          const now = this.ctx.currentTime;
+          this.flowNodes.gain.gain.linearRampToValueAtTime(0, now + 2); // Fade out
+          setTimeout(() => {
+              this.flowNodes.pads.forEach(n => {
+                  n.osc.stop();
+                  if(n.lfo) n.lfo.stop();
+              });
+              this.flowNodes.pads = [];
+          }, 2100);
       }
   }
 
@@ -374,14 +409,14 @@ class AudioEngine {
         this.nextNoteTime = this.ctx.currentTime + 0.05;
         this.scheduler();
     } else {
-        this.startBinaural();
+        this.startFlow();
     }
   }
 
   stop() {
     this.isPlaying = false;
     window.clearTimeout(this.timerID);
-    this.stopBinaural();
+    this.stopFlow();
   }
 }
 
@@ -589,7 +624,8 @@ const DifficultySelector = ({ current, onSelect }) => (
     ].map((diff) => (
       <button
         key={diff.id}
-        onClick={() => onSelect(diff.id)}
+        onClick={() => { audio.playInteraction('click'); onSelect(diff.id); }}
+        onMouseEnter={() => audio.playInteraction('hover')}
         className={`px-3 py-2 md:px-4 md:py-2 rounded-lg font-mono text-xs md:text-sm font-bold border transition-all ${
           current === diff.id 
             ? 'bg-slate-100 text-slate-900 border-white' 
@@ -611,7 +647,8 @@ const LevelSelector = ({ current, onSelect }) => (
     ].map((lvl) => (
       <button
         key={lvl.id}
-        onClick={() => onSelect(lvl.id)}
+        onClick={() => { audio.playInteraction('click'); onSelect(lvl.id); }}
+        onMouseEnter={() => audio.playInteraction('hover')}
         className={`px-3 py-2 md:px-4 md:py-2 rounded-lg font-mono text-xs md:text-sm font-bold border transition-all ${
           current === lvl.id 
             ? 'bg-slate-100 text-slate-900 border-white' 
@@ -628,16 +665,16 @@ const AudioModeSelector = ({ current, onSelect }) => (
     <div className="flex justify-center mb-6">
        <div className="flex bg-slate-800 p-1 rounded-lg border border-slate-700">
           <button 
-             onClick={() => onSelect('arcade')}
+             onClick={() => { audio.playInteraction('click'); onSelect('arcade'); }}
              className={`flex items-center gap-2 px-4 py-2 rounded font-mono text-xs font-bold transition-all ${current === 'arcade' ? 'bg-cyan-600 text-white' : 'text-slate-400 hover:text-white'}`}
           >
              <Music size={14} /> ARCADE
           </button>
           <button 
-             onClick={() => onSelect('focus')}
-             className={`flex items-center gap-2 px-4 py-2 rounded font-mono text-xs font-bold transition-all ${current === 'focus' ? 'bg-violet-600 text-white' : 'text-slate-400 hover:text-white'}`}
+             onClick={() => { audio.playInteraction('click'); onSelect('flow'); }}
+             className={`flex items-center gap-2 px-4 py-2 rounded font-mono text-xs font-bold transition-all ${current === 'flow' ? 'bg-violet-600 text-white' : 'text-slate-400 hover:text-white'}`}
           >
-             <Headphones size={14} /> FOCUS
+             <Headphones size={14} /> FLOW
           </button>
        </div>
     </div>
@@ -645,7 +682,8 @@ const AudioModeSelector = ({ current, onSelect }) => (
 
 const CategoryCard = ({ id, label, icon: Icon, count, onClick, isSpecial }) => (
   <button 
-    onClick={onClick}
+    onClick={() => { audio.playInteraction('click'); onClick(); }}
+    onMouseEnter={() => audio.playInteraction('hover')}
     className={`relative group border p-4 md:p-6 rounded-xl transition-all duration-200 hover:-translate-y-1 text-left w-full overflow-hidden ${isSpecial ? 'bg-slate-900 border-emerald-500 hover:bg-emerald-950/30' : 'bg-slate-800 hover:bg-slate-700 border-slate-700 hover:border-emerald-400'}`}
   >
     <div className={`absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 rounded-full blur-xl transition-all ${isSpecial ? 'bg-emerald-500/30 group-hover:bg-emerald-400/50' : 'bg-gradient-to-br from-emerald-500/20 to-transparent group-hover:bg-emerald-500/30'}`}></div>
@@ -656,15 +694,12 @@ const CategoryCard = ({ id, label, icon: Icon, count, onClick, isSpecial }) => (
 );
 
 const CategoryGrid = ({ onSelect, data, level }) => {
-  // Updated getCount to filter by level
   const getCount = (key) => {
       if (!data) return "0";
       let qs = [];
       if (key === 'mixed') qs = Object.values(data).flat();
       else if (key === 'timing') qs = Object.values(data).flat().filter(q => q.isTiming);
       else qs = data[key] || [];
-
-      // Filter by level
       const count = qs.filter(q => (parseInt(q.difficulty || 1) <= level)).length;
       return count;
   };
@@ -683,7 +718,6 @@ const CategoryGrid = ({ onSelect, data, level }) => {
           <CategoryCard id="propertyPractice" label="Property Practice" icon={Briefcase} count={getCount('propertyPractice')} onClick={() => onSelect('propertyPractice')} />
           <CategoryCard id="willsAdmin" label="Wills & Admin" icon={ScrollText} count={getCount('willsAdmin')} onClick={() => onSelect('willsAdmin')} />
           <CategoryCard id="trusts" label="Trusts & Equity" icon={BrainCircuit} count={getCount('trusts')} onClick={() => onSelect('trusts')} />
-          
           <div className="col-span-full grid grid-cols-2 gap-3 md:gap-4 mt-2 md:mt-4">
               <CategoryCard id="mixed" label="CHAOS MODE (ALL)" icon={Hexagon} count={getCount('mixed')} onClick={() => onSelect('mixed')} isSpecial={true} />
               <CategoryCard id="timing" label="COUNTING TIME" icon={Clock} count={getCount('timing')} onClick={() => onSelect('timing')} isSpecial={true} />
@@ -692,6 +726,27 @@ const CategoryGrid = ({ onSelect, data, level }) => {
   );
 };
 
+// HELPER: Format Timestamp
+const formatDate = (timestamp) => {
+    if (!timestamp) return '';
+    // If it's a Firestore timestamp
+    if (timestamp.seconds) return new Date(timestamp.seconds * 1000).toLocaleDateString('en-GB', { day: '2-digit', month: '2-digit', year: '2-digit' });
+    return ''; // Fallback
+};
+
+// HELPER: Get Speed Badge
+const getSpeedBadge = (diff) => {
+    if(diff === 'relaxed') return <span className="text-blue-400">RLX</span>;
+    if(diff === 'fast') return <span className="text-rose-400">FST</span>;
+    return <span className="text-emerald-400">STD</span>;
+};
+
+// HELPER: Get Level Badge Short
+const getLevelBadge = (lvl) => {
+    if(lvl === 3) return <span className="text-fuchsia-400">DST</span>;
+    if(lvl === 1) return <span className="text-cyan-400">FND</span>;
+    return <span className="text-indigo-400">MRT</span>;
+};
 
 const Leaderboard = ({ entries }) => (
   <div className="bg-slate-800/80 rounded-xl p-4 border border-slate-700 w-full max-w-md mx-auto h-48 overflow-y-auto custom-scrollbar backdrop-blur-sm">
@@ -704,15 +759,21 @@ const Leaderboard = ({ entries }) => (
           <div className="flex items-center gap-2">
             <span className={`w-5 text-center font-bold ${idx < 3 ? 'text-yellow-400' : 'text-slate-500'}`}>#{idx + 1}</span>
             <div className="flex flex-col">
-               <span className="text-white truncate max-w-[100px]">{entry.name}</span>
-               <div className="flex gap-2 text-[9px] text-slate-400 uppercase">
-                  <span>{entry.mode}</span>
-                  {entry.accuracy && <span className="text-emerald-500">{entry.accuracy}% ACC</span>}
-                  {entry.maxStreak && <span className="text-cyan-500">{entry.maxStreak}x STR</span>}
+               <div className="flex items-center gap-2">
+                   <span className="text-white font-bold truncate max-w-[100px]">{entry.name}</span>
+                   <span className="text-[9px] text-slate-500">{formatDate(entry.timestamp)}</span>
+               </div>
+               <div className="flex gap-2 text-[9px] text-slate-400 uppercase mt-0.5">
+                  <span className="border border-slate-700 px-1 rounded bg-slate-800">{getSpeedBadge(entry.difficulty)}</span>
+                  <span className="border border-slate-700 px-1 rounded bg-slate-800">{getLevelBadge(entry.level)}</span>
+                  {entry.mode && <span>{entry.mode === 'COUNTING TIME' ? 'TIME' : (entry.mode.length > 8 ? entry.mode.slice(0,8)+'...' : entry.mode)}</span>}
                </div>
             </div>
           </div>
-          <span className="text-emerald-400 font-bold">{entry.score.toLocaleString()}</span>
+          <div className="text-right">
+              <span className="block text-emerald-400 font-bold">{entry.score.toLocaleString()}</span>
+              {entry.maxStreak && <span className="text-[9px] text-cyan-500">{entry.maxStreak}x STR</span>}
+          </div>
         </div>
       ))}
       {entries.length === 0 && <div className="text-center text-slate-500 py-8 italic">No data.</div>}
@@ -752,7 +813,7 @@ export default function SQEArcade() {
   const [isMuted, setIsMuted] = useState(false);
   const [difficulty, setDifficulty] = useState('standard');
   const [level, setLevel] = useState(2); 
-  const [audioMode, setAudioMode] = useState('arcade'); // 'arcade' or 'focus'
+  const [audioMode, setAudioMode] = useState('arcade'); // 'arcade' or 'flow'
   const [leaderboard, setLeaderboard] = useState([]);
   const [user, setUser] = useState(null);
   const [userName, setUserName] = useState('');
@@ -869,6 +930,7 @@ export default function SQEArcade() {
   };
 
   const selectCategory = (categoryKey) => {
+    audio.playInteraction('click'); // SFX
     unlockAudio();
     selectCategoryWithState(categoryKey, false); 
   };
@@ -897,7 +959,7 @@ export default function SQEArcade() {
     });
     
     if (filteredQuestions.length === 0) {
-        // Fallback if no questions meet criteria, though with counts on buttons this shouldn't happen often
+        // Fallback if no questions meet criteria
         setActiveQuestions(shuffleArray(questions)); 
     } else {
         setActiveQuestions(shuffleArray(filteredQuestions));
@@ -930,6 +992,7 @@ export default function SQEArcade() {
   };
 
   const togglePause = useCallback(() => {
+    audio.playInteraction('click'); // SFX
     if (gameState === 'playing') {
       setGameState('paused');
     } else if (gameState === 'paused') {
@@ -1009,6 +1072,13 @@ export default function SQEArcade() {
     let newConsecutivePasses = consecutivePasses;
 
     if (isCorrect) {
+      // --- AUDIO GENERATIVE & SFX ---
+      if (audioMode === 'flow') {
+          audio.playFlowNote(); // Play a musical melody note
+      } else {
+          audio.playInteraction('correct'); // Standard chime
+      }
+      
       timeBonus = Math.floor(timeLeft * 1000); 
       const streakBonus = streak * 100;
       const rawScore = 1000 + (timeBonus / 10) + streakBonus;
@@ -1044,6 +1114,9 @@ export default function SQEArcade() {
       else setCommentary(["NICE WORK", "TARGET DOWN", "KEEP GOING", "SOLID"][Math.floor(Math.random()*4)]);
 
     } else {
+      // --- SFX WRONG ---
+      audio.playInteraction('wrong');
+      
       newConsecutiveWrongs = consecutiveWrongs + 1;
       setConsecutiveWrongs(newConsecutiveWrongs);
       setConsecutivePasses(0); 
@@ -1346,7 +1419,7 @@ export default function SQEArcade() {
                     </div>
                   ) : (
                      <div className="text-center mb-6">
-                      <div className="text-rose-500 font-black text-5xl md:text-7xl mb-2">DAMAGE</div>
+                      <div className="text-rose-500 font-black text-5xl md:text-7xl mb-2">INCORRECT</div>
                       {/* Show Health Remaining */}
                       <div className="flex justify-center gap-1 mt-2">
                          {Array.from({length: 10}).map((_, i) => (
