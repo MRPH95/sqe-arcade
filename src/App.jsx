@@ -10,7 +10,7 @@ import { db, auth } from './firebase';
 const PREPARED_BANKS = {};            
 const appId = 'sqe-arcade';          
 
-// --- AUDIO ENGINE v31.0 (Arcade Smooth Fix) ---
+// --- AUDIO ENGINE v32.0 (Sawtooth Fix + Pad Fades) ---
 class AudioEngine {
   constructor() {
     this.ctx = null;
@@ -146,6 +146,7 @@ class AudioEngine {
       this.currentStreak = s;
   }
 
+  // --- INTERACTION SFX ---
   playInteraction(type) {
       if (!this.ctx) return;
       this.resume();
@@ -193,6 +194,7 @@ class AudioEngine {
       }
   }
 
+  // --- FLOW MODE: GENERATIVE MELODY ---
   playFMBell(freq, timeOffset = 0) {
       if(!this.ctx) return;
       const t = this.ctx.currentTime + timeOffset;
@@ -207,9 +209,11 @@ class AudioEngine {
       modulator.frequency.value = freq * 2.0; 
       modulator.type = 'sine';
       
+      // RICH RESONANCE RESTORED
       modulatorGain.gain.setValueAtTime(250, t); 
       modulatorGain.gain.exponentialRampToValueAtTime(0.01, t + 1.2); 
 
+      // VOLUME CONTROLLED
       carrierGain.gain.setValueAtTime(0, t);
       carrierGain.gain.linearRampToValueAtTime(0.1, t + 0.05); 
       carrierGain.gain.exponentialRampToValueAtTime(0.001, t + 4.0); 
@@ -272,11 +276,9 @@ class AudioEngine {
       }
 
       const currentScale = this.chords[this.chordIndex].scale;
-      
       const noteIdx = Math.floor(Math.random() * currentScale.length);
       const note = currentScale[noteIdx];
       this.playFMBell(note, 0);
-      
       this.playChoirEcho(note, 2.0); 
       
       if (this.currentStreak > 30) {
@@ -285,6 +287,7 @@ class AudioEngine {
       }
   }
 
+  // --- FLOW MODE: EVOLVING PADS ---
   startFlow() {
       if (!this.ctx) return;
       this.stopFlow(); 
@@ -399,12 +402,14 @@ class AudioEngine {
     const step = this.beatCount % 16;
     const root = (Math.floor(this.beatCount / 32) % 2 === 0) ? 41.20 : 49.00; 
     
+    // Base Groove
     if (step % 4 === 0) this.playDrum(time, 'kick');
     if (step % 4 === 2 || step % 4 === 3) this.playOsc(time, root, 'triangle', 0.15, 0.4, 300);
 
     if (this.density >= 2 && (step === 4 || step === 12)) this.playDrum(time, 'snare');
     if (this.density >= 3 && step % 4 === 0) this.playOsc(time, root * 1.5, 'triangle', 0.2, 0.1, 1000); 
     
+    // ARPEGGIO FADE IN (Streak 20-30)
     if (this.density >= 5 && step % 2 === 0) {
        let arpVol = 0;
        if (this.currentStreak >= 20 && this.currentStreak < 30) {
@@ -415,17 +420,29 @@ class AudioEngine {
        
        if (arpVol > 0.05) {
            const arp = [root*4, root*6, root*8, root*5];
-           this.playOsc(time, arp[(step/2)%4], 'square', 0.08 * arpVol, 0.05, 2000);
+           // Max Volume reduced to 0.04 (50% quieter)
+           this.playOsc(time, arp[(step/2)%4], 'square', 0.04 * arpVol, 0.05, 2000);
        }
     }
     
+    // PAD FADE IN (Streak 25-35)
     if (this.density >= 6 && step === 0 && this.beatCount % 32 === 0) {
-        this.playPad(time, root * 4, 4, -5); 
-        this.playPad(time, root * 6, 4, 5); 
+        let padVol = 0;
+        if (this.currentStreak >= 25 && this.currentStreak < 35) {
+            padVol = (this.currentStreak - 25) / 10;
+        } else if (this.currentStreak >= 35) {
+            padVol = 1.0;
+        }
+        
+        if (padVol > 0.05) {
+            this.playPad(time, root * 4, 4, -5, 0.1 * padVol); 
+            this.playPad(time, root * 6, 4, 5, 0.1 * padVol); 
+        }
     }
     if (this.density >= 7 && step % 2 === 0) this.playDrum(time, 'hat'); 
     
-    // ARCADE FADE FIX: Replaced Sawtooth with Triangle and lowered filter/volume
+    // DOPPLER SAWTOOTH FADE (Streak 35-45)
+    // RESTORED SAWTOOTH but heavily reduced volume
     if (this.density >= 8) {
         let fadeVol = 0;
         if (this.currentStreak >= 35 && this.currentStreak <= 45) {
@@ -435,8 +452,8 @@ class AudioEngine {
         }
         if (fadeVol > 0.01) {
             const soloNotes = [root*8, root*12, root*10, root*15, root*8, root*6, root*12, root*16];
-            // FIXED LINE BELOW: 'triangle' instead of 'sawtooth', 0.06 vol, 1500 filter
-            this.playOsc(time, soloNotes[step % 8], 'triangle', 0.06 * fadeVol, 0.1, 1500);
+            // SAWTOOTH + 0.04 Max Volume + 2000 Filter
+            this.playOsc(time, soloNotes[step % 8], 'sawtooth', 0.04 * fadeVol, 0.1, 2000);
         }
     }
     
@@ -523,7 +540,8 @@ class AudioEngine {
       gain.gain.linearRampToValueAtTime(0, time + duration + 1.0);
   }
 
-  playPad(time, freq, duration, detune = 0) {
+  // Updated playPad to accept volume override
+  playPad(time, freq, duration, detune = 0, volume = 0.15) {
       if (!this.ctx) return;
       const osc = this.ctx.createOscillator();
       const gain = this.ctx.createGain();
@@ -535,7 +553,7 @@ class AudioEngine {
       filter.frequency.setValueAtTime(200, time);
       filter.frequency.linearRampToValueAtTime(800, time + duration/2);
       gain.gain.setValueAtTime(0, time);
-      gain.gain.linearRampToValueAtTime(0.15, time + 1.5); 
+      gain.gain.linearRampToValueAtTime(volume, time + 1.5); 
       gain.gain.linearRampToValueAtTime(0, time + duration); 
       osc.connect(filter);
       filter.connect(gain);
