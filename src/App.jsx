@@ -10,7 +10,7 @@ import { db, auth } from './firebase';
 const PREPARED_BANKS = {};            
 const appId = 'sqe-arcade';          
 
-// --- AUDIO ENGINE v34.0 (Fixed Volumes / No Fades / Sawtooth) ---
+// --- AUDIO ENGINE v35.0 (Triangle + Fixed Volumes) ---
 class AudioEngine {
   constructor() {
     this.ctx = null;
@@ -209,11 +209,9 @@ class AudioEngine {
       modulator.frequency.value = freq * 2.0; 
       modulator.type = 'sine';
       
-      // RICH RESONANCE RESTORED
       modulatorGain.gain.setValueAtTime(250, t); 
       modulatorGain.gain.exponentialRampToValueAtTime(0.01, t + 1.2); 
 
-      // VOLUME CONTROLLED
       carrierGain.gain.setValueAtTime(0, t);
       carrierGain.gain.linearRampToValueAtTime(0.1, t + 0.05); 
       carrierGain.gain.exponentialRampToValueAtTime(0.001, t + 4.0); 
@@ -412,7 +410,7 @@ class AudioEngine {
     // ARPEGGIO (Streak 20-30) - Fixed Low Volume (No Fade)
     if (this.density >= 5 && step % 2 === 0) {
        const arp = [root*4, root*6, root*8, root*5];
-       // Fixed low volume 0.025 (very safe)
+       // Fixed low volume 0.025
        this.playOsc(time, arp[(step/2)%4], 'square', 0.025, 0.05, 2000);
     }
     
@@ -427,8 +425,8 @@ class AudioEngine {
     // DOPPLER (Streak 35-45) - Fixed Low Volume (No Fade)
     if (this.density >= 8) {
         const soloNotes = [root*8, root*12, root*10, root*15, root*8, root*6, root*12, root*16];
-        // SAWTOOTH + Fixed low vol 0.025 + 2000 Filter
-        this.playOsc(time, soloNotes[step % 8], 'sawtooth', 0.025, 0.1, 2000);
+        // TRIANGLE + Fixed Vol 0.08 + 2000 Filter
+        this.playOsc(time, soloNotes[step % 8], 'triangle', 0.08, 0.1, 2000);
     }
     
     if (this.density >= 11 && step === 0 && this.beatCount % 64 === 0) {
@@ -673,7 +671,6 @@ const WormholeEffect = memo(({ streak, isChronos, isGameOver, failCount }) => {
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       if (currentStreak > 20 && !isNegative) {
-          // Keep nice gradients for the background "nebula" effects
           const grad = ctx.createRadialGradient(canvas.width/2, canvas.height/2, 50, canvas.width/2, canvas.height/2, canvas.width);
           grad.addColorStop(0, "rgba(0,0,0,0)");
           grad.addColorStop(1, "rgba(0,0,0,0.5)");
