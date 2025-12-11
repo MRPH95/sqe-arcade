@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback, memo } from 'react';
-import { Play, Pause, RefreshCw, Check, X, Volume2, VolumeX, Zap, Trophy, Award, Hexagon, Briefcase, Gavel, Home, ScrollText, AlertTriangle, Tag, FastForward, Eye, BrainCircuit, MessageSquare, Clock, ShieldAlert, ArrowRight, Activity, Scale, Landmark, BookOpen, Shield, Layers, Headphones, Music } from 'lucide-react';
+import { Play, Pause, RefreshCw, Check, X, Volume2, VolumeX, Zap, Trophy, Award, Hexagon, Briefcase, Gavel, Home, ScrollText, AlertTriangle, Tag, FastForward, Eye, BrainCircuit, MessageSquare, Clock, ShieldAlert, ArrowRight, Activity, Scale, Landmark, BookOpen, Shield, Layers, Headphones, Music, List, BatteryCharging } from 'lucide-react';
 import { initializeApp } from 'firebase/app';
 import { getAuth, signInAnonymously, onAuthStateChanged, signInWithCustomToken } from 'firebase/auth';
 import { getFirestore, collection, addDoc, query, orderBy, limit, onSnapshot, serverTimestamp } from 'firebase/firestore';
@@ -671,6 +671,7 @@ const WormholeEffect = memo(({ streak, isChronos, isGameOver, failCount }) => {
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       if (currentStreak > 20 && !isNegative) {
+          // Keep nice gradients for the background "nebula" effects
           const grad = ctx.createRadialGradient(canvas.width/2, canvas.height/2, 50, canvas.width/2, canvas.height/2, canvas.width);
           grad.addColorStop(0, "rgba(0,0,0,0)");
           grad.addColorStop(1, "rgba(0,0,0,0.5)");
@@ -963,6 +964,7 @@ export default function SQEArcade() {
   const [level, setLevel] = useState(2); 
   const [audioMode, setAudioMode] = useState('arcade'); // 'arcade' or 'flow'
   const [leaderboard, setLeaderboard] = useState([]);
+  const [historyLog, setHistoryLog] = useState([]); // NEW: Tracks all questions for pause screen
   const [user, setUser] = useState(null);
   const [userName, setUserName] = useState('');
   const [hasSubmitted, setHasSubmitted] = useState(false);
@@ -1144,6 +1146,7 @@ export default function SQEArcade() {
     setCurrentQIndex(0);
     setGameStats({ correct: 0, wrong: 0 });
     setBatchReview([]);
+    setHistoryLog([]); // Reset History Log
     setCommentary(isChronosMode ? "SYNC CHRONOMETER" : "GOOD LUCK AGENT");
     setGameState('playing');
     setTimeLeft(getLimit());
@@ -1225,11 +1228,17 @@ export default function SQEArcade() {
       wrong: prev.wrong + (!isCorrect ? 1 : 0)
     }));
 
-    setBatchReview(prev => [...prev, {
+    // Update Logs
+    const logEntry = {
       q: currentQ.q,
+      userAnswer,
+      correctAnswer: currentQ.a,
       isCorrect,
-      exp: currentQ.exp
-    }]);
+      exp: currentQ.exp,
+      timestamp: Date.now()
+    };
+    setBatchReview(prev => [...prev, logEntry]);
+    setHistoryLog(prev => [logEntry, ...prev]); // Add to full history (newest first)
 
     let newConsecutiveWrongs = consecutiveWrongs;
     let newConsecutivePasses = consecutivePasses;
@@ -1298,7 +1307,8 @@ export default function SQEArcade() {
       pointsEarned: points,
       msBonus: isCorrect ? timeBonus : 0,
       wasStreak: streak > 0,
-      failCount: newConsecutiveWrongs
+      failCount: newConsecutiveWrongs,
+      consecutivePasses: newConsecutivePasses // Pass for repair calc
     });
     
     if (newConsecutiveWrongs >= MAX_FAILS) {
@@ -1389,7 +1399,7 @@ export default function SQEArcade() {
       
       <WormholeEffect streak={gameState === 'playing' ? streak : 0} isChronos={isChronosMode} isGameOver={gameState === 'game_over'} failCount={consecutiveWrongs} />
       
-      {/* HUD */}
+      {/* HUD TOP BAR */}
       <div className="fixed top-0 left-0 right-0 p-2 md:p-4 flex justify-between items-center z-30 bg-slate-900/80 backdrop-blur-md border-b border-white/10">
         <div className="flex items-center gap-2">
           <Zap className={`w-4 h-4 md:w-6 md:h-6 ${gameState === 'playing' ? 'text-yellow-400 animate-pulse' : 'text-slate-500'}`} />
@@ -1397,30 +1407,33 @@ export default function SQEArcade() {
             SQE ARCADE
           </span>
         </div>
-        <div className="flex items-center gap-2 md:gap-8">
-           {gameState === 'playing' && (
-             <div className="flex flex-col items-end">
-                <div className="flex gap-2 md:gap-4">
-                    <div className="hidden sm:flex flex-col items-end">
-                        <span className="text-[8px] md:text-[10px] text-slate-400 uppercase tracking-widest">Streak</span>
-                        <div className={`text-base md:text-xl font-black ${streak > 4 ? 'text-cyan-400 animate-pulse' : 'text-slate-500'}`}>{streak}x</div>
-                    </div>
-                    <div className="flex flex-col items-end">
-                        <span className="text-[8px] md:text-[10px] text-slate-400 uppercase tracking-widest">Integrity</span>
-                        <div className="flex gap-0.5 mt-1 bg-slate-800 p-1 rounded">
-                            {Array.from({ length: 10 }).map((_, i) => (
-                                <div key={i} className={`w-1 md:w-1.5 h-2 md:h-3 rounded-sm transition-all duration-300 ${i < (10 - consecutiveWrongs) ? 'bg-emerald-500 shadow-[0_0_5px_rgba(16,185,129,0.5)]' : 'bg-red-900/50'}`} />
-                            ))}
-                        </div>
-                    </div>
-                </div>
-             </div>
-           )}
-          <div className="font-mono text-lg md:text-xl font-black text-white tabular-nums tracking-widest">
-            {score.toLocaleString()}
-          </div>
+        
+        <div className="flex items-center gap-4">
+           {/* GAME INFO FOR PAUSE/PLAYING (Score) */}
+           <div className="font-mono text-lg md:text-xl font-black text-white tabular-nums tracking-widest hidden md:block">
+              {score.toLocaleString()}
+           </div>
+
+           {/* MUSIC TOGGLE */}
+           <div className="flex bg-slate-800 p-0.5 rounded-lg border border-slate-700">
+              <button 
+                onClick={() => { audio.playInteraction('click'); changeAudioMode('arcade'); }}
+                className={`p-1.5 rounded transition-all ${audioMode === 'arcade' ? 'bg-cyan-600 text-white' : 'text-slate-500 hover:text-white'}`}
+                title="Arcade Mode"
+              >
+                <Music size={14} />
+              </button>
+              <button 
+                onClick={() => { audio.playInteraction('click'); changeAudioMode('flow'); }}
+                className={`p-1.5 rounded transition-all ${audioMode === 'flow' ? 'bg-violet-600 text-white' : 'text-slate-500 hover:text-white'}`}
+                title="Flow Mode"
+              >
+                <Headphones size={14} />
+              </button>
+           </div>
           
-          <div className="flex items-center gap-2">
+           {/* VOLUME CONTROLS */}
+           <div className="flex items-center gap-2">
               <button onClick={toggleMute} className="hover:text-white text-slate-400 transition-colors">
                 {isMuted ? <VolumeX size={16} /> : <Volume2 size={16} className="text-cyan-400" />}
               </button>
@@ -1431,9 +1444,9 @@ export default function SQEArcade() {
                 step="0.01" 
                 value={isMuted ? 0 : volume}
                 onChange={handleVolumeChange}
-                className="w-16 md:w-24 h-1 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-cyan-500"
+                className="w-16 h-1 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-cyan-500"
               />
-          </div>
+           </div>
         </div>
       </div>
 
@@ -1454,7 +1467,6 @@ export default function SQEArcade() {
                 <>
                     <DifficultySelector current={difficulty} onSelect={setDifficulty} />
                     <LevelSelector current={level} onSelect={setLevel} />
-                    <AudioModeSelector current={audioMode} onSelect={changeAudioMode} />
                     
                     {/* PASS THE DATA PROP and LEVEL HERE */}
                     <CategoryGrid 
@@ -1472,25 +1484,55 @@ export default function SQEArcade() {
 
         {/* PAUSE */}
         {gameState === 'paused' && (
-          <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-slate-900/80 backdrop-blur-xl animate-in fade-in">
+          <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-slate-900/95 backdrop-blur-xl animate-in fade-in">
             <h2 className="text-3xl md:text-5xl font-black text-white mb-8 tracking-widest">MISSION PAUSED</h2>
-            <div className="grid grid-cols-3 gap-4 mb-8 w-full max-w-md px-4">
-              <div className="bg-emerald-900/50 p-4 rounded-lg border border-emerald-500/30 text-center">
-                <Check className="w-6 h-6 md:w-8 md:h-8 text-emerald-400 mx-auto mb-2" />
-                <div className="text-xl md:text-2xl font-bold">{gameStats.correct}</div>
-              </div>
-              <div className="bg-rose-900/50 p-4 rounded-lg border border-rose-500/30 text-center">
-                <X className="w-6 h-6 md:w-8 md:h-8 text-rose-400 mx-auto mb-2" />
-                <div className="text-xl md:text-2xl font-bold">{gameStats.wrong}</div>
-              </div>
-              <div className="bg-slate-800 p-4 rounded-lg border border-slate-600 text-center">
-                <Eye className="w-6 h-6 md:w-8 md:h-8 text-cyan-400 mx-auto mb-2" />
-                <div className="text-xl md:text-2xl font-bold">{activeQuestions.length - currentQIndex}</div>
-              </div>
+            
+            {/* PAUSE STATS GRID */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 w-full max-w-4xl px-6">
+                <div className="bg-slate-800 p-4 rounded-xl border border-slate-700">
+                    <div className="text-xs text-slate-400 uppercase tracking-wider mb-1">Score</div>
+                    <div className="text-2xl font-black text-white">{score.toLocaleString()}</div>
+                </div>
+                <div className="bg-slate-800 p-4 rounded-xl border border-slate-700">
+                    <div className="text-xs text-slate-400 uppercase tracking-wider mb-1">Streak</div>
+                    <div className="text-2xl font-black text-cyan-400">{streak}</div>
+                </div>
+                <div className="bg-slate-800 p-4 rounded-xl border border-slate-700">
+                    <div className="text-xs text-slate-400 uppercase tracking-wider mb-1">Accuracy</div>
+                    <div className="text-2xl font-black text-emerald-400">
+                         {Math.round((gameStats.correct / ((gameStats.correct + gameStats.wrong) || 1)) * 100)}%
+                    </div>
+                </div>
+                <div className="bg-slate-800 p-4 rounded-xl border border-slate-700">
+                    <div className="text-xs text-slate-400 uppercase tracking-wider mb-1">Progress</div>
+                    <div className="text-2xl font-black text-white">{currentQIndex + 1} <span className="text-sm text-slate-500">/ {activeQuestions.length}</span></div>
+                </div>
             </div>
-            <button onClick={togglePause} className="px-8 md:px-12 py-3 md:py-4 bg-white text-slate-900 font-bold rounded hover:bg-slate-200 text-lg md:text-xl tracking-widest">RESUME</button>
-            <button onClick={() => setGameState('aborted')} className="mt-6 text-slate-400 hover:text-white text-sm">FINISH & SUBMIT</button>
-            <button onClick={() => setGameState('menu')} className="mt-2 text-rose-400 hover:text-rose-300 text-xs uppercase tracking-widest">ABORT TO MENU</button>
+
+            {/* FULL HISTORY LOG */}
+            <div className="w-full max-w-4xl px-6 mb-8 flex-1 overflow-hidden flex flex-col">
+                <div className="flex items-center gap-2 mb-2 text-slate-400 text-sm font-mono uppercase tracking-widest">
+                    <List size={16} /> Mission Log
+                </div>
+                <div className="flex-1 overflow-y-auto custom-scrollbar bg-black/40 rounded-xl border border-white/10 p-4 space-y-2">
+                    {historyLog.map((log, i) => (
+                        <div key={i} className={`p-3 rounded border-l-2 text-sm flex gap-4 ${log.isCorrect ? 'bg-emerald-950/30 border-emerald-500' : 'bg-rose-950/30 border-rose-500'}`}>
+                            <div className="font-mono text-xs opacity-50">{i + 1}.</div>
+                            <div className="flex-1">
+                                <div className="text-slate-200 font-medium mb-1">{log.q}</div>
+                                <div className="text-xs text-slate-400">You: {log.userAnswer ? 'TRUE' : 'FALSE'} • Correct: {log.correctAnswer ? 'TRUE' : 'FALSE'}</div>
+                            </div>
+                        </div>
+                    ))}
+                    {historyLog.length === 0 && <div className="text-slate-500 italic text-center py-4">No data recorded yet.</div>}
+                </div>
+            </div>
+
+            <div className="flex gap-4">
+                <button onClick={togglePause} className="px-8 py-3 bg-white text-slate-900 font-bold rounded-lg hover:bg-slate-200 tracking-widest">RESUME</button>
+                <button onClick={() => setGameState('aborted')} className="px-8 py-3 bg-slate-800 text-white font-bold rounded-lg hover:bg-slate-700 border border-slate-600">FINISH & SUBMIT</button>
+            </div>
+            <button onClick={() => setGameState('menu')} className="mt-6 text-rose-500 hover:text-rose-400 text-xs uppercase tracking-widest font-bold">ABORT TO MENU</button>
           </div>
         )}
 
@@ -1541,24 +1583,60 @@ export default function SQEArcade() {
         {(gameState === 'playing' || gameState === 'feedback' || gameState === 'game_over_anim') && (
           <div className="w-full relative max-w-3xl mx-auto pt-6 md:pt-10">
             <div className="flex flex-col items-center mb-4 md:mb-6">
-               <div className="flex gap-2">
-                 {/* Category Badge */}
-                 <div className={`flex items-center gap-2 px-4 py-2 rounded-full border shadow-[0_0_20px_rgba(16,185,129,0.2)] backdrop-blur-md transform hover:scale-105 transition-transform ${isChronosMode ? 'bg-emerald-900/90 border-emerald-400' : 'bg-slate-900/90 border-emerald-500/50'}`}>
-                    {isChronosMode ? <Clock className="text-white w-4 h-4 md:w-5 md:h-5 animate-pulse" /> : <Tag className="text-emerald-400 w-4 h-4 md:w-5 md:h-5" />}
-                    <span className="text-xs md:text-lg font-black text-white uppercase tracking-widest">
-                      {isChronosMode ? 'COUNTING TIME' : activeQuestions[currentQIndex]?.category}
+               
+               {/* --- UPDATED GAME HUD --- */}
+               <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3 w-full px-2">
+                 
+                 {/* Category/Level Tags (Existing) */}
+                 <div className={`flex items-center gap-2 px-3 py-1.5 rounded-full border shadow-[0_0_20px_rgba(16,185,129,0.1)] backdrop-blur-md ${isChronosMode ? 'bg-emerald-900/80 border-emerald-400' : 'bg-slate-900/80 border-slate-700'}`}>
+                    {isChronosMode ? <Clock className="text-white w-3 h-3 md:w-4 md:h-4 animate-pulse" /> : <Tag className="text-emerald-400 w-3 h-3 md:w-4 md:h-4" />}
+                    <span className="text-[10px] md:text-sm font-bold text-white uppercase tracking-widest truncate max-w-[120px]">
+                      {isChronosMode ? 'TIME ATTACK' : activeQuestions[currentQIndex]?.category}
                     </span>
                  </div>
                  
-                 {/* Level Badge */}
-                 <div className={`flex items-center gap-1 px-3 py-2 rounded-full border backdrop-blur-md bg-slate-900/90 ${getLevelInfo(activeQuestions[currentQIndex]?.difficulty).color}`}>
+                 <div className={`flex items-center gap-1 px-3 py-1.5 rounded-full border backdrop-blur-md bg-slate-900/80 ${getLevelInfo(activeQuestions[currentQIndex]?.difficulty).color}`}>
                     <Layers className="w-3 h-3 md:w-4 md:h-4" />
-                    <span className="text-xs md:text-base font-black uppercase tracking-widest">
+                    <span className="text-[10px] md:text-sm font-bold uppercase tracking-widest">
                         {getLevelInfo(activeQuestions[currentQIndex]?.difficulty).label}
                     </span>
                  </div>
-               </div>
 
+                 {/* NEW STATS PILLS */}
+                 <div className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-slate-800 border border-slate-700">
+                    <Activity className={`w-3 h-3 ${streak > 4 ? 'text-orange-400' : 'text-slate-400'}`} />
+                    <span className={`text-[10px] md:text-sm font-mono font-bold ${streak > 4 ? 'text-orange-400' : 'text-slate-300'}`}>
+                       {streak}
+                    </span>
+                 </div>
+
+                 <div className="flex items-center gap-3 px-3 py-1.5 rounded-full bg-slate-800 border border-slate-700">
+                     <div className="flex items-center gap-1">
+                        <Check className="w-3 h-3 text-emerald-400" />
+                        <span className="text-[10px] md:text-sm font-mono font-bold text-emerald-400">{gameStats.correct}</span>
+                     </div>
+                     <div className="w-px h-3 bg-slate-600"></div>
+                     <div className="flex items-center gap-1">
+                        <X className="w-3 h-3 text-rose-400" />
+                        <span className="text-[10px] md:text-sm font-mono font-bold text-rose-400">{gameStats.wrong}</span>
+                     </div>
+                 </div>
+
+                 <div className="hidden sm:flex items-center gap-1 px-3 py-1.5 rounded-full bg-slate-800 border border-slate-700">
+                    <span className="text-[10px] md:text-xs font-mono text-slate-400 uppercase tracking-widest">
+                       Q {currentQIndex + 1}/{activeQuestions.length}
+                    </span>
+                 </div>
+
+                 <div className="hidden sm:flex items-center gap-1 px-3 py-1.5 rounded-full bg-slate-800 border border-slate-700">
+                    <span className="text-[10px] md:text-xs font-mono text-slate-400 uppercase tracking-widest">
+                       Batch {(currentQIndex % 10) + 1}/10
+                    </span>
+                 </div>
+
+               </div>
+               
+               {/* Commentary Line */}
                <div className="mt-2 h-6 flex items-center justify-center">
                   {commentary && (
                     <span className="text-xs md:text-sm font-mono font-bold text-cyan-400 tracking-widest animate-pulse flex items-center gap-2">
@@ -1568,6 +1646,7 @@ export default function SQEArcade() {
                </div>
             </div>
 
+            {/* Timer Bar */}
             <div className="w-full h-3 md:h-4 bg-slate-800 mb-6 md:mb-8 overflow-hidden relative border border-slate-700 shadow-inner rounded-full">
                <div className="absolute left-1/3 top-0 bottom-0 w-0.5 bg-slate-900/50 z-10"></div>
                <div className="absolute left-2/3 top-0 bottom-0 w-0.5 bg-slate-900/50 z-10"></div>
@@ -1582,7 +1661,7 @@ export default function SQEArcade() {
 
             <div className={`relative min-h-[300px] md:min-h-[400px] flex items-center justify-center transition-all duration-300 ${gameState === 'paused' ? 'blur-xl opacity-50' : ''}`}>
               
-              {/* FEEDBACK */}
+              {/* FEEDBACK OVERLAY */}
               {gameState === 'feedback' && (
                 <div className={`absolute inset-0 z-40 flex flex-col items-center justify-center rounded-2xl backdrop-blur-xl border-4 shadow-2xl animate-in zoom-in-95 duration-200 ${feedback.correct ? 'bg-emerald-950/90 border-emerald-500' : 'bg-rose-950/90 border-rose-500'}`}>
                   {feedback.correct ? (
@@ -1592,6 +1671,16 @@ export default function SQEArcade() {
                         <span className="text-emerald-200 bg-emerald-900/50 px-2 py-1 rounded">Time: +{feedback.msBonus}ms</span>
                         <span className="text-cyan-200 bg-cyan-900/50 px-2 py-1 rounded">Streak: {streak}x</span>
                       </div>
+                      
+                      {/* REPAIR STATUS (If damaged) */}
+                      {consecutiveWrongs > 0 && (
+                          <div className="mb-4 bg-emerald-900/30 border border-emerald-500/30 px-4 py-2 rounded-full inline-flex items-center gap-2">
+                             <BatteryCharging size={16} className="text-emerald-400 animate-pulse" />
+                             <span className="text-emerald-200 text-xs font-mono uppercase tracking-widest">
+                                Systems Repairing: {Math.max(0, PASS_RESET_COUNT - feedback.consecutivePasses)} more to full
+                             </span>
+                          </div>
+                      )}
                     </div>
                   ) : (
                      <div className="text-center mb-6">
@@ -1603,6 +1692,7 @@ export default function SQEArcade() {
                          ))}
                       </div>
                       <div className="text-rose-300 text-xs md:text-sm font-mono uppercase tracking-widest mt-4">Integrity: {Math.max(0, 10 - feedback.failCount)} / 10</div>
+                      <div className="text-rose-400/50 text-[10px] mt-1 font-mono uppercase">10 Correct Answers to Repair</div>
                     </div>
                   )}
                   
