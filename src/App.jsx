@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback, memo } from 'react';
-import { Play, Pause, RefreshCw, Check, X, Volume2, VolumeX, Zap, Trophy, Award, Hexagon, Briefcase, Gavel, Home, ScrollText, AlertTriangle, Tag, FastForward, Eye, BrainCircuit, MessageSquare, Clock, ShieldAlert, ArrowRight, Activity, Scale, Landmark, BookOpen, Shield, Layers, Headphones, Music, List, BatteryCharging } from 'lucide-react';
+import { Play, Pause, RefreshCw, Check, X, Volume2, VolumeX, Zap, Trophy, Award, Hexagon, Briefcase, Gavel, Home, ScrollText, AlertTriangle, Tag, FastForward, Eye, BrainCircuit, MessageSquare, Clock, ShieldAlert, ArrowRight, Activity, Scale, Landmark, BookOpen, Shield, Layers, Headphones, Music, List, BatteryCharging, Calculator } from 'lucide-react';
 import { initializeApp } from 'firebase/app';
 import { getAuth, signInAnonymously, onAuthStateChanged, signInWithCustomToken } from 'firebase/auth';
 import { getFirestore, collection, addDoc, query, orderBy, limit, onSnapshot, serverTimestamp } from 'firebase/firestore';
@@ -15,7 +15,7 @@ class AudioEngine {
   constructor() {
     this.ctx = null;
     this.isPlaying = false;
-    this.mode = 'arcade'; 
+    this.mode = 'flow'; // CHANGED: Default is now Flow
     this.tempo = 128; 
     this.density = 1;
     this.currentStreak = 0;
@@ -866,6 +866,7 @@ const CategoryGrid = ({ onSelect, data, level }) => {
           <CategoryCard id="propertyPractice" label="Property Practice" icon={Briefcase} count={getCount('propertyPractice')} onClick={() => onSelect('propertyPractice')} />
           <CategoryCard id="willsAdmin" label="Wills & Admin" icon={ScrollText} count={getCount('willsAdmin')} onClick={() => onSelect('willsAdmin')} />
           <CategoryCard id="trusts" label="Trusts & Equity" icon={BrainCircuit} count={getCount('trusts')} onClick={() => onSelect('trusts')} />
+          <CategoryCard id="SolAc" label="Solicitor Accounts" icon={Calculator} count={getCount('SolAc')} onClick={() => onSelect('SolAc')} />
           <div className="col-span-full grid grid-cols-2 gap-3 md:gap-4 mt-2 md:mt-4">
               <CategoryCard id="mixed" label="CHAOS MODE (ALL)" icon={Hexagon} count={getCount('mixed')} onClick={() => onSelect('mixed')} isSpecial={true} />
               <CategoryCard id="timing" label="COUNTING TIME" icon={Clock} count={getCount('timing')} onClick={() => onSelect('timing')} isSpecial={true} />
@@ -962,7 +963,8 @@ export default function SQEArcade() {
   const [volume, setVolume] = useState(0.75); // DEFAULT VOLUME 75%
   const [difficulty, setDifficulty] = useState('standard');
   const [level, setLevel] = useState(2); 
-  const [audioMode, setAudioMode] = useState('arcade'); // 'arcade' or 'flow'
+  // CHANGED: Default audio mode set to 'flow'
+  const [audioMode, setAudioMode] = useState('flow'); // 'arcade' or 'flow'
   const [leaderboard, setLeaderboard] = useState([]);
   const [historyLog, setHistoryLog] = useState([]); // NEW: Tracks all questions for pause screen
   const [user, setUser] = useState(null);
