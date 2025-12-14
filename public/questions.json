@@ -1,4 +1,2806 @@
 {
+  "SolAc": [
+    {
+      "q": "The SRA Accounts Rules require separate client ledgers for each client, identified by name.",
+      "a": true,
+      "exp": "Rule 8.1(a) mandates individual client ledgers identified by name and matter description.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Money received for unpaid disbursements prior to a bill is client money.",
+      "a": true,
+      "exp": "Rule 2.1(d) defines money for unpaid disbursements held pre-bill as client money.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A debit balance on the business side of a client ledger indicates the firm owes the client money.",
+      "a": false,
+      "exp": "A debit balance on the business side means the client owes the firm money (e.g., for a bill).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Interest earned on a general client account belongs to the firm unless accounted for to the client.",
+      "a": true,
+      "exp": "Interest on general client accounts is usually paid to the firm's business account, then accounted to the client as a fair sum (Rule 7.1).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "When splitting a mixed payment cheque, the firm credits the Client Ledger Business Account for the non-client portion.",
+      "a": true,
+      "exp": "The non-client portion goes to the business account, crediting the business side of the client ledger to reduce client debt.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A transfer of funds between two clients requires entries in the cash sheet.",
+      "a": false,
+      "exp": "Inter-client transfers happen within the ledgers (Dr Client A, Cr Client B) and do not affect the bank/cash sheet.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Client money must be paid into a client account promptly.",
+      "a": true,
+      "exp": "Rule 2.3 requires prompt payment of client money into a client account.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "If a bill has been delivered, money held for costs becomes non-client money.",
+      "a": true,
+      "exp": "Rule 2.1(d) implies money held for costs becomes non-client money once a bill is delivered (assuming it's for fees/paid disbursements).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "To withdraw client money for costs, a bill or written notification must be given first.",
+      "a": true,
+      "exp": "Rule 4.3(a) requires a bill or written notification before transferring client money for costs.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A credit entry in the cash sheet (client account) represents money paid out.",
+      "a": true,
+      "exp": "In the firm's cash book, a credit reduces the asset/balance, representing a payment out.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Receipt of a deposit as stakeholder is credited to the seller's client ledger.",
+      "a": false,
+      "exp": "Stakeholder funds are credited to a separate 'Stakeholder' ledger, not the seller's, until completion.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "When paying a disbursement as agent, VAT is recorded separately in the VAT account.",
+      "a": false,
+      "exp": "As agent, the gross amount (including VAT) is debited to the client ledger; VAT is not separated.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Petty cash is client money.",
+      "a": false,
+      "exp": "Petty cash belongs to the firm and is non-client money.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "The SRA must be notified if a firm uses a Third Party Managed Account (TPMA).",
+      "a": true,
+      "exp": "SRA Guidance requires firms to notify the SRA of TPMA use.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A debit balance on the client side of a client ledger is a breach of the rules.",
+      "a": true,
+      "exp": "It means the firm has paid out more than it holds for that client, using other clients' funds.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Reconciliations of client accounts must be done at least every five weeks.",
+      "a": true,
+      "exp": "Rule 8.3 mandates reconciliations at least every five weeks.",
+      "isTiming": true,
+      "difficulty": 1
+    },
+    {
+      "q": "Under the 'Principal' method for disbursements, the firm uses client money to pay the third party.",
+      "a": false,
+      "exp": "As principal, the firm is liable and must use business money (non-client money) to pay.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Accounting records must be retained for at least six years.",
+      "a": true,
+      "exp": "Rule 13.1 sets a minimum retention period of six years for accounting records.",
+      "isTiming": true,
+      "difficulty": 1
+    },
+    {
+      "q": "A transfer from business to client account debits the Client Ledger Business Account.",
+      "a": true,
+      "exp": "Withdrawing from business to pay client account debits the business ledger (increasing client debt/reducing firm cash).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Abatement of a bill requires a debit to the Profit Costs account.",
+      "a": true,
+      "exp": "Abatement reduces revenue, so the Profit Costs account (originally credited) is debited.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Money held in a joint account is subject to all SRA Accounts Rules.",
+      "a": false,
+      "exp": "Rule 9.1 states Part 2 does not apply to joint accounts (except Rules 8.2 and 8.4).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Legal Aid Agency payments for costs must be paid into the client account.",
+      "a": false,
+      "exp": "Rule 2.3(b) exempts Legal Aid payments for costs from the client account requirement.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Writing off a bad debt involves crediting the Client Ledger Business Account.",
+      "a": true,
+      "exp": "Crediting the ledger wipes the debt owed by the client.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "If a cheque is dishonoured, the firm must correct the client account immediately.",
+      "a": true,
+      "exp": "Rule 6.1 requires immediate correction of breaches/shortfalls.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The SRA Accounts Rules do not apply to employees of a firm.",
+      "a": false,
+      "exp": "Rule 1.1 states the rules apply to authorised bodies, managers, AND employees.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Mixed payments can be paid entirely into the client account if the non-client element is transferred promptly.",
+      "a": true,
+      "exp": "Rule 4.2 permits this, provided prompt allocation/transfer occurs.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "VAT on a bill is credited to the VAT Account.",
+      "a": true,
+      "exp": "Recording the bill involves crediting Profit Costs and crediting VAT Account (liability to HMRC).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Client money includes money held as a trustee.",
+      "a": true,
+      "exp": "Rule 2.1(c) includes money held as trustee or holder of a specified office.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "An accountant's report is always required if a firm holds client money.",
+      "a": false,
+      "exp": "Rule 12.2 provides exemptions (e.g., Legal Aid or low average/max balance).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "If a firm holds a deposit as agent, the funds are credited to the stakeholder ledger.",
+      "a": false,
+      "exp": "As agent, funds belong to the seller and are credited to the seller's client ledger.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Transfers between clients require written authority from both parties.",
+      "a": true,
+      "exp": "SRA Guidance states authority is needed from both lender and borrower.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A separate designated client account must include the client's name in its title.",
+      "a": true,
+      "exp": "This distinguishes it from the general client account.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Reimbursement of a paid disbursement from a client is client money.",
+      "a": false,
+      "exp": "It reimburses the firm for a cost already incurred, so it is non-client money.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Withdrawing client money requires a debit to the Cash Sheet Client Account.",
+      "a": false,
+      "exp": "A withdrawal reduces the bank balance, so it is a Credit to the Cash Sheet.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Rule 5.1 allows withdrawal of client money on the SRA's written authorisation.",
+      "a": true,
+      "exp": "Rule 5.1(c) permits withdrawal with SRA authorisation or in prescribed circumstances.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "When a firm acts for a lender without a separate ledger, the lender's bill is debited to the borrower's ledger.",
+      "a": true,
+      "exp": "The borrower usually pays, so the debt is recorded on their ledger.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "If a client pays a bill by transfer from client account, the firm debits the Client Ledger Client Account.",
+      "a": true,
+      "exp": "This withdraws funds from the client side to pay the business side.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Prescribed circumstances for withdrawing residual balances apply to amounts under £500.",
+      "a": true,
+      "exp": "SRA prescribed circumstances for self-authorised withdrawal to charity apply to balances ≤£500.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "The SRA Accounts Rules prohibit using a client account as a banking facility.",
+      "a": true,
+      "exp": "Rule 3.3 strictly forbids providing banking facilities.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A firm must keep a central record of all bills.",
+      "a": true,
+      "exp": "Rule 8.4 mandates a central record of bills/notifications of costs.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Payment of a disbursement as principal requires a debit to the VAT account for the VAT element.",
+      "a": true,
+      "exp": "As principal, VAT is separated and debited to the VAT account (input tax).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Funds in a TPMA are client money.",
+      "a": false,
+      "exp": "Rule 11.1 confirms TPMA funds are not client money as they aren't held by the firm.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Rule 12.2 exemption applies if the average balance is under £10,000 and max is under £250,000.",
+      "a": true,
+      "exp": "Both conditions (average ≤£10k, max ≤£250k) must be met for the exemption.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "Reconciliations must be signed by the COFA or a manager.",
+      "a": true,
+      "exp": "Rule 8.3 requires sign-off by the COFA or a manager.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A transfer from client account to business account requires a credit to the Client Ledger Business Account.",
+      "a": true,
+      "exp": "Crediting the business ledger records the receipt/payment of the debt.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Client money must be returned when there is no longer a proper reason to hold it.",
+      "a": true,
+      "exp": "Rule 2.5 mandates prompt return of funds.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "The standard rate of VAT for legal services is 15%.",
+      "a": false,
+      "exp": "Standard VAT rate is 20%.",
+      "isTiming": true,
+      "difficulty": 1
+    },
+    {
+      "q": "If a firm uses a TPMA, it must obtain regular statements from the provider.",
+      "a": true,
+      "exp": "Rule 11.2 requires regular statements.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "In double entry, a Debit to the Client Ledger Client Account decreases the balance held for the client.",
+      "a": true,
+      "exp": "A debit on the client side represents a withdrawal/reduction of funds.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "When paying a disbursement as agent, the firm debits the Client Ledger Business Account.",
+      "a": false,
+      "exp": "As agent, payment is from client funds, debiting the Client Ledger *Client* Account.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "The SRA Accounts Rules require client money to be kept separate from business money.",
+      "a": true,
+      "exp": "Rule 4.1 mandates the separation of client and business funds.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Funds for unpaid disbursements must always be paid into the client account.",
+      "a": true,
+      "exp": "Rule 2.1(d) classifies funds for unpaid disbursements as client money (pre-bill).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A client account can be used as a banking facility for a client's convenience.",
+      "a": false,
+      "exp": "Rule 3.3 strictly prohibits using the client account as a banking facility.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Interest on a general client account is typically paid into the business account.",
+      "a": true,
+      "exp": "Banks usually pay interest to the business account, after which the firm accounts to the client.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "When paying a disbursement as an agent, the VAT is separated in the ledger.",
+      "a": false,
+      "exp": "Under the agency method, VAT is not separated; the gross amount is recorded.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Transfers between clients require a debit to the transferring client's ledger.",
+      "a": true,
+      "exp": "Debiting the transferring client's ledger reduces their balance.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Mixed payments can be split at the bank at the time of deposit.",
+      "a": true,
+      "exp": "This is a valid method to handle mixed payments under Rule 4.2.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A bill of costs must be delivered before transferring money for fees.",
+      "a": true,
+      "exp": "Rule 4.3(a) requires a bill or written notification before transfer.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Client account reconciliations are required every 5 weeks.",
+      "a": true,
+      "exp": "Rule 8.3 sets the reconciliation frequency at least every five weeks.",
+      "isTiming": true,
+      "difficulty": 1
+    },
+    {
+      "q": "A debit entry in the Cash Sheet Client Account represents money paid in.",
+      "a": true,
+      "exp": "In the firm's cash book, a debit represents an increase in the asset (money received).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Funds held as a stakeholder are credited to the seller's client ledger.",
+      "a": false,
+      "exp": "They are credited to a separate stakeholder ledger until completion.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The 'Principal' method for disbursements requires using business money.",
+      "a": true,
+      "exp": "As principal, the firm is liable and must pay from its own funds (business money).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Petty cash expenses are recorded on the client side of the client ledger.",
+      "a": false,
+      "exp": "Petty cash is business money; expenses are debited to the business side.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A TPMA is considered a type of client account under the Rules.",
+      "a": false,
+      "exp": "TPMA funds are not client money; Rule 11.1 distinguishes them.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A debit balance on the client side of a ledger is a breach.",
+      "a": true,
+      "exp": "It indicates the firm has used other clients' funds.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Reconciliations must be signed off by the COFA or a manager.",
+      "a": true,
+      "exp": "Rule 8.3 mandates sign-off by a manager or COFA.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Under the 'Agency' method, the firm uses client money to pay the disbursement.",
+      "a": true,
+      "exp": "The firm acts on behalf of the client, using client funds.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Accounting records must be kept for 6 years.",
+      "a": true,
+      "exp": "Rule 13.1 mandates a six-year retention period.",
+      "isTiming": true,
+      "difficulty": 1
+    },
+    {
+      "q": "Transferring from business to client account involves debiting the business cash sheet.",
+      "a": false,
+      "exp": "It involves crediting the business cash sheet (money out) and debiting the client cash sheet (money in).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Abating a bill involves debiting the VAT account for the reduction.",
+      "a": true,
+      "exp": "The VAT liability is reduced, so the VAT account is debited.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Joint accounts are fully subject to Part 2 of the Accounts Rules.",
+      "a": false,
+      "exp": "Rule 9.1 exempts joint accounts from most of Part 2.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Legal Aid payments for costs can be paid into the business account.",
+      "a": true,
+      "exp": "Rule 2.3(b) allows this exemption.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Writing off a bad debt requires a debit to the Bad Debts ledger.",
+      "a": true,
+      "exp": "The expense/loss is recorded by debiting Bad Debts.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Immediate replacement of funds is required for dishonoured cheques causing a shortfall.",
+      "a": true,
+      "exp": "Rule 6.1 requires immediate rectification of shortfalls.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Employees are not personally responsible for compliance with the Rules.",
+      "a": false,
+      "exp": "Rule 1.1 states the rules apply to employees as well.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Client money received as cash must be paid into the client account promptly.",
+      "a": true,
+      "exp": "Rule 2.3 applies to all forms of client money, including cash.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "VAT on a bill is a credit to the Profit Costs account.",
+      "a": false,
+      "exp": "VAT is credited to the VAT Account, not Profit Costs.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Money held as a trustee is not client money.",
+      "a": false,
+      "exp": "Rule 2.1(c) explicitly includes trust money as client money.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "An accountant's report is mandatory if client money held exceeds £250,000.",
+      "a": true,
+      "exp": "Exceeding the £250,000 maximum balance removes the exemption (Rule 12.2).",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "Deposits held as agent are credited to the stakeholder ledger.",
+      "a": false,
+      "exp": "As agent, funds belong to the client and are credited to their ledger.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Written authority is needed from both parties for inter-client transfers.",
+      "a": true,
+      "exp": "SRA Guidance mandates written authority from lender and borrower.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Separate designated client accounts do not need the word 'client' in the title.",
+      "a": false,
+      "exp": "All client accounts must include the word 'client' (Rule 3.2).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Reimbursement for a paid disbursement is non-client money.",
+      "a": true,
+      "exp": "It repays the firm, so it belongs to the firm.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Withdrawing client money requires a credit to the Cash Sheet Client Account.",
+      "a": true,
+      "exp": "Crediting the cash sheet reduces the balance.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Withdrawals are permitted on the SRA's written authorisation.",
+      "a": true,
+      "exp": "Rule 5.1(c) allows this.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Lender's fees are typically debited to the borrower's ledger if no separate ledger exists.",
+      "a": true,
+      "exp": "The borrower pays, so the debt sits on their ledger.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Paying a bill from client funds involves debiting the Client Ledger Client Account.",
+      "a": true,
+      "exp": "This withdraws funds from the client side.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Residual balances under £500 can be donated to charity without SRA authorisation.",
+      "a": true,
+      "exp": "Prescribed circumstances allow this self-authorisation.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "Using a client account to hold funds for a non-legal transaction is permitted.",
+      "a": false,
+      "exp": "Rule 3.3 requires a link to regulated services.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A central record of bills must be maintained.",
+      "a": true,
+      "exp": "Rule 8.4 mandates this.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Paying a disbursement as principal debits the VAT account.",
+      "a": true,
+      "exp": "Input tax is recoverable and debited to the VAT account.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "TPMA funds are held by the firm.",
+      "a": false,
+      "exp": "They are held by a third party.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The exemption for accountant's reports applies if the average balance is £10,000 or less.",
+      "a": true,
+      "exp": "Assuming the max balance condition is also met (Rule 12.2).",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "Reconciliations must check the bank statement against the cash book only.",
+      "a": false,
+      "exp": "They must also check against the client ledger total (Rule 8.3).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Crediting the business ledger records a payment by the client.",
+      "a": true,
+      "exp": "It reduces the client's debt to the firm.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Client money must be returned promptly when the matter concludes.",
+      "a": true,
+      "exp": "Rule 2.5 requires prompt return.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "The VAT rate for legal services is 20%.",
+      "a": true,
+      "exp": "Standard rate is 20%.",
+      "isTiming": true,
+      "difficulty": 1
+    },
+    {
+      "q": "Regular statements are required for TPMAs.",
+      "a": true,
+      "exp": "Rule 11.2 mandates this.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A debit to the client ledger client account increases the client's funds.",
+      "a": false,
+      "exp": "A debit reduces the funds (withdrawal).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "As agent, a firm debits the client ledger business account for disbursements.",
+      "a": false,
+      "exp": "As agent, they debit the client ledger *client* account.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Client ledgers must show a clear running balance.",
+      "a": true,
+      "exp": "Rule 8.1(b) and SRA Guidance require maintaining a running total of liabilities to clients.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Money held for a specified office holder appointment is client money.",
+      "a": true,
+      "exp": "Rule 2.1(c) explicitly includes money held as a trustee or specified office holder.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "The SRA Accounts Rules apply to foreign lawyers registered with the SRA.",
+      "a": true,
+      "exp": "The rules apply to all authorised bodies and regulated individuals, including registered foreign lawyers.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Firms must have systems to ensure compliance with the Accounts Rules.",
+      "a": true,
+      "exp": "Rule 1.2 and the introduction require systems and controls appropriate to the firm's nature/volume.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A debit on the Cash Sheet Business Account indicates money paid out.",
+      "a": false,
+      "exp": "In double entry, a debit to a cash/bank asset account represents money *received* (increasing the asset).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Client money can be withheld from a client account if the client agrees in writing.",
+      "a": true,
+      "exp": "Rule 2.3(c) allows an alternative arrangement in writing to hold money outside a client account.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "If a firm uses a TPMA, it must obtain regular statements.",
+      "a": true,
+      "exp": "Rule 11.2 requires regular statements to ensure accurate reflection of transactions.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A credit balance on the business side of a client ledger means the firm owes the client.",
+      "a": true,
+      "exp": "A credit on the business side means the client has overpaid or the firm owes them money (non-client money).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The SRA must authorise all withdrawals from client accounts.",
+      "a": false,
+      "exp": "Withdrawals are permitted for the purpose held or on client instructions (Rule 5.1); SRA authorisation is rare.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Money received for professional disbursements already paid is client money.",
+      "a": false,
+      "exp": "Reimbursement for paid disbursements is non-client money (business money).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A 'mixed payment' must be split between client and business accounts.",
+      "a": true,
+      "exp": "Rule 4.2 requires prompt allocation to the correct accounts.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Firms must keep records of all bills issued.",
+      "a": true,
+      "exp": "Rule 8.4 mandates a central record of all bills/notifications of costs.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Client money includes money held as a stakeholder.",
+      "a": true,
+      "exp": "Rule 2.1(b) includes money held on behalf of a third party (e.g., stakeholder) as client money.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A debit entry in a client ledger (client side) reduces the client's balance.",
+      "a": true,
+      "exp": "Debiting the client side represents a withdrawal, reducing the amount held for the client.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "The SRA Accounts Rules allow firms to use client accounts for banking facilities.",
+      "a": false,
+      "exp": "Rule 3.3 strictly prohibits providing banking facilities; funds must relate to regulated services.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Client account reconciliations must be done every month.",
+      "a": false,
+      "exp": "Rule 8.3 requires reconciliations at least every *five weeks*.",
+      "isTiming": true,
+      "difficulty": 1
+    },
+    {
+      "q": "A separate designated client account is for monies of a specific client.",
+      "a": true,
+      "exp": "It is an account for a single client, referencing them in the title.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Interest must be paid on money held in a TPMA.",
+      "a": false,
+      "exp": "TPMA funds are not client money; Rule 7 (Interest) doesn't apply directly.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Managers are jointly and severally liable for compliance.",
+      "a": true,
+      "exp": "Rule 1.2 confirms joint and several responsibility for managers.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Breaches of the rules must be corrected promptly.",
+      "a": true,
+      "exp": "Rule 6.1 mandates prompt correction upon discovery.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Client money can be withdrawn to pay a charity if the beneficiary cannot be found.",
+      "a": true,
+      "exp": "Rule 5.1(c) allows withdrawal for charity in prescribed circumstances (residual balances).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "If a firm uses the 'Principal' method, they debit the VAT Account when paying the disbursement.",
+      "a": true,
+      "exp": "As principal, input VAT is recoverable, so it is debited to the VAT account.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A transfer from client to business account for costs requires a bill to be delivered first.",
+      "a": true,
+      "exp": "Rule 4.3(a) requires a bill or written notification before transfer.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Accountant's reports are required for all firms holding client money.",
+      "a": false,
+      "exp": "Exemptions exist (Rule 12.2) for low balances or Legal Aid funds.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Client ledgers must include a description of the matter.",
+      "a": true,
+      "exp": "Rule 8.1(a) requires client name and matter description.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A 'Credit' to the Cash Sheet Client Account decreases the bank balance.",
+      "a": true,
+      "exp": "In the cash book, a credit represents a payment out, reducing the asset.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Money received for unpaid disbursements is non-client money.",
+      "a": false,
+      "exp": "Rule 2.1(d) classifies money for *unpaid* disbursements (pre-bill) as client money.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A firm must pay interest if the amount is fair.",
+      "a": true,
+      "exp": "Rule 7.1 requires accounting for a 'fair sum' of interest.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Withdrawals from client account must be supervised.",
+      "a": true,
+      "exp": "Rule 5.2 requires appropriate authorisation and supervision of withdrawals.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Records must be retained for six years.",
+      "a": true,
+      "exp": "Rule 13.1 sets the retention period at six years.",
+      "isTiming": true,
+      "difficulty": 1
+    },
+    {
+      "q": "A client account must be at a bank in England and Wales.",
+      "a": true,
+      "exp": "Rule 3.1 specifies the account must be at a bank/building society in England & Wales.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "If a cheque is dishonoured, the shortfall must be replaced.",
+      "a": true,
+      "exp": "Rule 6.1 requires replacement of any shortfall/improper withdrawal.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "VAT on a bill is a credit to the VAT Account.",
+      "a": true,
+      "exp": "Output tax (VAT charged) is a liability, so it is credited to the VAT account.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Client money must be returned as soon as there is no proper reason to hold it.",
+      "a": true,
+      "exp": "Rule 2.5 mandates prompt return.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A 'mixed payment' can be paid into the business account.",
+      "a": true,
+      "exp": "Rule 4.2 allows mixed payments into either account, provided prompt transfer follows.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The SRA Accounts Rules apply to Third Party Managed Accounts.",
+      "a": false,
+      "exp": "Most rules don't apply; Rule 11.1 governs TPMAs specifically (funds aren't 'client money').",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A firm acts for a lender and borrower; the lender's fees are usually debited to the borrower's ledger.",
+      "a": true,
+      "exp": "Borrowers typically pay lender fees; without a separate ledger, it goes on the borrower's.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Petty cash must be recorded in the client ledger.",
+      "a": false,
+      "exp": "Petty cash is non-client money; expenses are debited to the business side, not client side.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Reconciliations must include a comparison with the client ledger total.",
+      "a": true,
+      "exp": "Rule 8.3 requires reconciling bank statement, cash book, and client ledger total.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A debit balance on the business side of a client ledger is a breach.",
+      "a": false,
+      "exp": "A debit on the business side is normal (client owes firm); a debit on the *client* side is a breach.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A transfer between clients involves a withdrawal from the bank.",
+      "a": false,
+      "exp": "Inter-client transfers are ledger-only adjustments; no cash moves in/out of the bank.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Client money includes money held for paid disbursements.",
+      "a": false,
+      "exp": "Reimbursement for paid disbursements is business money.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The SRA must be notified if a firm holds a residual balance of £400.",
+      "a": false,
+      "exp": "Notification/authorisation is needed for >£500; ≤£500 can be self-authorised.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "Interest on a general client account must be paid to the client.",
+      "a": true,
+      "exp": "Rule 7.1 requires accounting for a 'fair sum' (unless agreed otherwise).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A transfer from client to business account requires a Credit to the Client Ledger Client Account.",
+      "a": false,
+      "exp": "Withdrawing from client account is a Debit to the Client Ledger Client Account.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "The SRA Accounts Rules allow firms to use client accounts for non-legal services.",
+      "a": false,
+      "exp": "Rule 3.3 requires funds to relate to *regulated* services.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Money held in a joint account is client money.",
+      "a": true,
+      "exp": "SRA Guidance confirms joint account funds are client money, though Part 2 rules largely don't apply.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A bill must be delivered before transferring money for disbursements.",
+      "a": false,
+      "exp": "Rule 4.3 applies to 'costs' (fees); disbursements *incurred* can be reimbursed, but best practice often involves a bill/notification.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The business side of the client ledger records non-client money.",
+      "a": true,
+      "exp": "Rule 8.1(a)(ii) allocates non-client money and bills to the business side.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Firms must keep a central record of all bills.",
+      "a": true,
+      "exp": "Rule 8.4 mandates this record.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "The SRA Accounts Rules require separate client ledgers for each client, identified by name.",
+      "a": true,
+      "exp": "Rule 8.1(a) mandates individual client ledgers identified by name and matter description.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Money received for unpaid disbursements prior to a bill is client money.",
+      "a": true,
+      "exp": "Rule 2.1(d) defines money for unpaid disbursements held pre-bill as client money.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A debit balance on the business side of a client ledger indicates the firm owes the client money.",
+      "a": false,
+      "exp": "A debit balance on the business side means the client owes the firm money (e.g., for a bill).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Interest earned on a general client account belongs to the firm unless accounted for to the client.",
+      "a": true,
+      "exp": "Interest on general client accounts is usually paid to the firm's business account, then accounted to the client as a fair sum (Rule 7.1).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "When splitting a mixed payment cheque, the firm credits the Client Ledger Business Account for the non-client portion.",
+      "a": true,
+      "exp": "The non-client portion goes to the business account, crediting the business side of the client ledger to reduce client debt.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A transfer of funds between two clients requires entries in the cash sheet.",
+      "a": false,
+      "exp": "Inter-client transfers happen within the ledgers (Dr Client A, Cr Client B) and do not affect the bank/cash sheet.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Client money must be paid into a client account promptly.",
+      "a": true,
+      "exp": "Rule 2.3 requires prompt payment of client money into a client account.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "If a bill has been delivered, money held for costs becomes non-client money.",
+      "a": true,
+      "exp": "Rule 2.1(d) implies money held for costs becomes non-client money once a bill is delivered (assuming it's for fees/paid disbursements).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "To withdraw client money for costs, a bill or written notification must be given first.",
+      "a": true,
+      "exp": "Rule 4.3(a) requires a bill or written notification before transferring client money for costs.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A credit entry in the cash sheet (client account) represents money paid out.",
+      "a": true,
+      "exp": "In the firm's cash book, a credit reduces the asset/balance, representing a payment out.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Receipt of a deposit as stakeholder is credited to the seller's client ledger.",
+      "a": false,
+      "exp": "Stakeholder funds are credited to a separate 'Stakeholder' ledger, not the seller's, until completion.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "When paying a disbursement as agent, VAT is recorded separately in the VAT account.",
+      "a": false,
+      "exp": "As agent, the gross amount (including VAT) is debited to the client ledger; VAT is not separated.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Petty cash is client money.",
+      "a": false,
+      "exp": "Petty cash belongs to the firm and is non-client money.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "The SRA must be notified if a firm uses a Third Party Managed Account (TPMA).",
+      "a": true,
+      "exp": "SRA Guidance requires firms to notify the SRA of TPMA use.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A debit balance on the client side of a client ledger is a breach of the rules.",
+      "a": true,
+      "exp": "It means the firm has paid out more than it holds for that client, using other clients' funds.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Reconciliations of client accounts must be done at least every five weeks.",
+      "a": true,
+      "exp": "Rule 8.3 mandates reconciliations at least every five weeks.",
+      "isTiming": true,
+      "difficulty": 1
+    },
+    {
+      "q": "Under the 'Principal' method for disbursements, the firm uses client money to pay the third party.",
+      "a": false,
+      "exp": "As principal, the firm is liable and must use business money (non-client money) to pay.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Accounting records must be retained for at least six years.",
+      "a": true,
+      "exp": "Rule 13.1 sets a minimum retention period of six years for accounting records.",
+      "isTiming": true,
+      "difficulty": 1
+    },
+    {
+      "q": "A transfer from business to client account debits the Client Ledger Business Account.",
+      "a": true,
+      "exp": "Withdrawing from business to pay client account debits the business ledger (increasing client debt/reducing firm cash).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Abatement of a bill requires a debit to the Profit Costs account.",
+      "a": true,
+      "exp": "Abatement reduces revenue, so the Profit Costs account (originally credited) is debited.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Money held in a joint account is subject to all SRA Accounts Rules.",
+      "a": false,
+      "exp": "Rule 9.1 states Part 2 does not apply to joint accounts (except Rules 8.2 and 8.4).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Legal Aid Agency payments for costs must be paid into the client account.",
+      "a": false,
+      "exp": "Rule 2.3(b) exempts Legal Aid payments for costs from the client account requirement.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Writing off a bad debt involves crediting the Client Ledger Business Account.",
+      "a": true,
+      "exp": "Crediting the ledger wipes the debt owed by the client.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "If a cheque is dishonoured, the firm must correct the client account immediately.",
+      "a": true,
+      "exp": "Rule 6.1 requires immediate correction of breaches/shortfalls.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The SRA Accounts Rules do not apply to employees of a firm.",
+      "a": false,
+      "exp": "Rule 1.1 states the rules apply to authorised bodies, managers, AND employees.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Mixed payments can be paid entirely into the client account if the non-client element is transferred promptly.",
+      "a": true,
+      "exp": "Rule 4.2 permits this, provided prompt allocation/transfer occurs.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "VAT on a bill is credited to the VAT Account.",
+      "a": true,
+      "exp": "Recording the bill involves crediting Profit Costs and crediting VAT Account (liability to HMRC).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Client money includes money held as a trustee.",
+      "a": true,
+      "exp": "Rule 2.1(c) includes money held as trustee or holder of a specified office.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "An accountant's report is always required if a firm holds client money.",
+      "a": false,
+      "exp": "Rule 12.2 provides exemptions (e.g., Legal Aid or low average/max balance).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "If a firm holds a deposit as agent, the funds are credited to the stakeholder ledger.",
+      "a": false,
+      "exp": "As agent, funds belong to the seller and are credited to the seller's client ledger.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Transfers between clients require written authority from both parties.",
+      "a": true,
+      "exp": "SRA Guidance states authority is needed from both lender and borrower.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A separate designated client account must include the client's name in its title.",
+      "a": true,
+      "exp": "This distinguishes it from the general client account.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Reimbursement of a paid disbursement from a client is client money.",
+      "a": false,
+      "exp": "It reimburses the firm for a cost already incurred, so it is non-client money.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Withdrawing client money requires a debit to the Cash Sheet Client Account.",
+      "a": false,
+      "exp": "A withdrawal reduces the bank balance, so it is a Credit to the Cash Sheet.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Rule 5.1 allows withdrawal of client money on the SRA's written authorisation.",
+      "a": true,
+      "exp": "Rule 5.1(c) permits withdrawal with SRA authorisation or in prescribed circumstances.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "When a firm acts for a lender without a separate ledger, the lender's bill is debited to the borrower's ledger.",
+      "a": true,
+      "exp": "The borrower usually pays, so the debt is recorded on their ledger.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "If a client pays a bill by transfer from client account, the firm debits the Client Ledger Client Account.",
+      "a": true,
+      "exp": "This withdraws funds from the client side to pay the business side.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Prescribed circumstances for withdrawing residual balances apply to amounts under £500.",
+      "a": true,
+      "exp": "SRA prescribed circumstances for self-authorised withdrawal to charity apply to balances ≤£500.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "The SRA Accounts Rules prohibit using a client account as a banking facility.",
+      "a": true,
+      "exp": "Rule 3.3 strictly forbids providing banking facilities.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A firm must keep a central record of all bills.",
+      "a": true,
+      "exp": "Rule 8.4 mandates a central record of bills/notifications of costs.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Payment of a disbursement as principal requires a debit to the VAT account for the VAT element.",
+      "a": true,
+      "exp": "As principal, VAT is separated and debited to the VAT account (input tax).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Funds in a TPMA are client money.",
+      "a": false,
+      "exp": "Rule 11.1 confirms TPMA funds are not client money as they aren't held by the firm.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Rule 12.2 exemption applies if the average balance is under £10,000 and max is under £250,000.",
+      "a": true,
+      "exp": "Both conditions (average ≤£10k, max ≤£250k) must be met for the exemption.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "Reconciliations must be signed by the COFA or a manager.",
+      "a": true,
+      "exp": "Rule 8.3 requires sign-off by the COFA or a manager.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A transfer from client account to business account requires a credit to the Client Ledger Business Account.",
+      "a": true,
+      "exp": "Crediting the business ledger records the receipt/payment of the debt.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Client money must be returned when there is no longer a proper reason to hold it.",
+      "a": true,
+      "exp": "Rule 2.5 mandates prompt return of funds.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "The standard rate of VAT for legal services is 15%.",
+      "a": false,
+      "exp": "Standard VAT rate is 20%.",
+      "isTiming": true,
+      "difficulty": 1
+    },
+    {
+      "q": "If a firm uses a TPMA, it must obtain regular statements from the provider.",
+      "a": true,
+      "exp": "Rule 11.2 requires regular statements.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "In double entry, a Debit to the Client Ledger Client Account decreases the balance held for the client.",
+      "a": true,
+      "exp": "A debit on the client side represents a withdrawal/reduction of funds.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "When paying a disbursement as agent, the firm debits the Client Ledger Business Account.",
+      "a": false,
+      "exp": "As agent, payment is from client funds, debiting the Client Ledger *Client* Account.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Client ledgers must show a clear running balance.",
+      "a": true,
+      "exp": "Rule 8.1(b) and SRA Guidance require maintaining a running total of liabilities to clients.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Money held for a specified office holder appointment is client money.",
+      "a": true,
+      "exp": "Rule 2.1(c) explicitly includes money held as a trustee or specified office holder.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "The SRA Accounts Rules apply to foreign lawyers registered with the SRA.",
+      "a": true,
+      "exp": "The rules apply to all authorised bodies and regulated individuals, including registered foreign lawyers.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Firms must have systems to ensure compliance with the Accounts Rules.",
+      "a": true,
+      "exp": "Rule 1.2 and the introduction require systems and controls appropriate to the firm's nature/volume.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A debit on the Cash Sheet Business Account indicates money paid out.",
+      "a": false,
+      "exp": "In double entry, a debit to a cash/bank asset account represents money *received* (increasing the asset).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Client money can be withheld from a client account if the client agrees in writing.",
+      "a": true,
+      "exp": "Rule 2.3(c) allows an alternative arrangement in writing to hold money outside a client account.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "If a firm uses a TPMA, it must obtain regular statements.",
+      "a": true,
+      "exp": "Rule 11.2 requires regular statements to ensure accurate reflection of transactions.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A credit balance on the business side of a client ledger means the firm owes the client.",
+      "a": true,
+      "exp": "A credit on the business side means the client has overpaid or the firm owes them money (non-client money).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The SRA must authorise all withdrawals from client accounts.",
+      "a": false,
+      "exp": "Withdrawals are permitted for the purpose held or on client instructions (Rule 5.1); SRA authorisation is rare.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Money received for professional disbursements already paid is client money.",
+      "a": false,
+      "exp": "Reimbursement for paid disbursements is non-client money (business money).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A 'mixed payment' must be split between client and business accounts.",
+      "a": true,
+      "exp": "Rule 4.2 requires prompt allocation to the correct accounts.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Firms must keep records of all bills issued.",
+      "a": true,
+      "exp": "Rule 8.4 mandates a central record of all bills/notifications of costs.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Client money includes money held as a stakeholder.",
+      "a": true,
+      "exp": "Rule 2.1(b) includes money held on behalf of a third party (e.g., stakeholder) as client money.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A debit entry in a client ledger (client side) reduces the client's balance.",
+      "a": true,
+      "exp": "Debiting the client side represents a withdrawal, reducing the amount held for the client.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "The SRA Accounts Rules allow firms to use client accounts for banking facilities.",
+      "a": false,
+      "exp": "Rule 3.3 strictly prohibits providing banking facilities; funds must relate to regulated services.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Client account reconciliations must be done every month.",
+      "a": false,
+      "exp": "Rule 8.3 requires reconciliations at least every *five weeks*.",
+      "isTiming": true,
+      "difficulty": 1
+    },
+    {
+      "q": "A separate designated client account is for monies of a specific client.",
+      "a": true,
+      "exp": "It is an account for a single client, referencing them in the title.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Interest must be paid on money held in a TPMA.",
+      "a": false,
+      "exp": "TPMA funds are not client money; Rule 7 (Interest) doesn't apply directly.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Managers are jointly and severally liable for compliance.",
+      "a": true,
+      "exp": "Rule 1.2 confirms joint and several responsibility for managers.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Breaches of the rules must be corrected promptly.",
+      "a": true,
+      "exp": "Rule 6.1 mandates prompt correction upon discovery.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Client money can be withdrawn to pay a charity if the beneficiary cannot be found.",
+      "a": true,
+      "exp": "Rule 5.1(c) allows withdrawal for charity in prescribed circumstances (residual balances).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "If a firm uses the 'Principal' method, they debit the VAT Account when paying the disbursement.",
+      "a": true,
+      "exp": "As principal, input VAT is recoverable, so it is debited to the VAT account.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A transfer from client to business account for costs requires a bill to be delivered first.",
+      "a": true,
+      "exp": "Rule 4.3(a) requires a bill or written notification before transfer.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Accountant's reports are required for all firms holding client money.",
+      "a": false,
+      "exp": "Exemptions exist (Rule 12.2) for low balances or Legal Aid funds.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Client ledgers must include a description of the matter.",
+      "a": true,
+      "exp": "Rule 8.1(a) requires client name and matter description.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A 'Credit' to the Cash Sheet Client Account decreases the bank balance.",
+      "a": true,
+      "exp": "In the cash book, a credit represents a payment out, reducing the asset.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Money received for unpaid disbursements is non-client money.",
+      "a": false,
+      "exp": "Rule 2.1(d) classifies money for *unpaid* disbursements (pre-bill) as client money.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A firm must pay interest if the amount is fair.",
+      "a": true,
+      "exp": "Rule 7.1 requires accounting for a 'fair sum' of interest.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Withdrawals from client account must be supervised.",
+      "a": true,
+      "exp": "Rule 5.2 requires appropriate authorisation and supervision of withdrawals.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Records must be retained for six years.",
+      "a": true,
+      "exp": "Rule 13.1 sets the retention period at six years.",
+      "isTiming": true,
+      "difficulty": 1
+    },
+    {
+      "q": "A client account must be at a bank in England and Wales.",
+      "a": true,
+      "exp": "Rule 3.1 specifies the account must be at a bank/building society in England & Wales.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "If a cheque is dishonoured, the shortfall must be replaced.",
+      "a": true,
+      "exp": "Rule 6.1 requires replacement of any shortfall/improper withdrawal.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "VAT on a bill is a credit to the VAT Account.",
+      "a": true,
+      "exp": "Output tax (VAT charged) is a liability, so it is credited to the VAT account.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Client money must be returned as soon as there is no proper reason to hold it.",
+      "a": true,
+      "exp": "Rule 2.5 mandates prompt return.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A 'mixed payment' can be paid into the business account.",
+      "a": true,
+      "exp": "Rule 4.2 allows mixed payments into either account, provided prompt transfer follows.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The SRA Accounts Rules apply to Third Party Managed Accounts.",
+      "a": false,
+      "exp": "Most rules don't apply; Rule 11.1 governs TPMAs specifically (funds aren't 'client money').",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A firm acts for a lender and borrower; the lender's fees are usually debited to the borrower's ledger.",
+      "a": true,
+      "exp": "Borrowers typically pay lender fees; without a separate ledger, it goes on the borrower's.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Petty cash must be recorded in the client ledger.",
+      "a": false,
+      "exp": "Petty cash is non-client money; expenses are debited to the business side, not client side.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Reconciliations must include a comparison with the client ledger total.",
+      "a": true,
+      "exp": "Rule 8.3 requires reconciling bank statement, cash book, and client ledger total.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A debit balance on the business side of a client ledger is a breach.",
+      "a": false,
+      "exp": "A debit on the business side is normal (client owes firm); a debit on the *client* side is a breach.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A transfer between clients involves a withdrawal from the bank.",
+      "a": false,
+      "exp": "Inter-client transfers are ledger-only adjustments; no cash moves in/out of the bank.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Client money includes money held for paid disbursements.",
+      "a": false,
+      "exp": "Reimbursement for paid disbursements is business money.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The SRA must be notified if a firm holds a residual balance of £400.",
+      "a": false,
+      "exp": "Notification/authorisation is needed for >£500; ≤£500 can be self-authorised.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "Interest on a general client account must be paid to the client.",
+      "a": true,
+      "exp": "Rule 7.1 requires accounting for a 'fair sum' (unless agreed otherwise).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A transfer from client to business account requires a Credit to the Client Ledger Client Account.",
+      "a": false,
+      "exp": "Withdrawing from client account is a Debit to the Client Ledger Client Account.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "The SRA Accounts Rules allow firms to use client accounts for non-legal services.",
+      "a": false,
+      "exp": "Rule 3.3 requires funds to relate to *regulated* services.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Money held in a joint account is client money.",
+      "a": true,
+      "exp": "SRA Guidance confirms joint account funds are client money, though Part 2 rules largely don't apply.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A bill must be delivered before transferring money for disbursements.",
+      "a": false,
+      "exp": "Rule 4.3 applies to 'costs' (fees); disbursements *incurred* can be reimbursed, but best practice often involves a bill/notification.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The business side of the client ledger records non-client money.",
+      "a": true,
+      "exp": "Rule 8.1(a)(ii) allocates non-client money and bills to the business side.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Firms must keep a central record of all bills.",
+      "a": true,
+      "exp": "Rule 8.4 mandates this record.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "The SRA Accounts Rules require separate client ledgers for each client, identified by name.",
+      "a": true,
+      "exp": "Rule 8.1(a) mandates individual client ledgers identified by name and matter description.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Money received for unpaid disbursements prior to a bill is client money.",
+      "a": true,
+      "exp": "Rule 2.1(d) defines money for unpaid disbursements held pre-bill as client money.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A debit balance on the business side of a client ledger indicates the firm owes the client money.",
+      "a": false,
+      "exp": "A debit balance on the business side means the client owes the firm money (e.g., for a bill).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Interest earned on a general client account belongs to the firm unless accounted for to the client.",
+      "a": true,
+      "exp": "Interest on general client accounts is usually paid to the firm's business account, then accounted to the client as a fair sum (Rule 7.1).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "When splitting a mixed payment cheque, the firm credits the Client Ledger Business Account for the non-client portion.",
+      "a": true,
+      "exp": "The non-client portion goes to the business account, crediting the business side of the client ledger to reduce client debt.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A transfer of funds between two clients requires entries in the cash sheet.",
+      "a": false,
+      "exp": "Inter-client transfers happen within the ledgers (Dr Client A, Cr Client B) and do not affect the bank/cash sheet.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Client money must be paid into a client account promptly.",
+      "a": true,
+      "exp": "Rule 2.3 requires prompt payment of client money into a client account.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "If a bill has been delivered, money held for costs becomes non-client money.",
+      "a": true,
+      "exp": "Rule 2.1(d) implies money held for costs becomes non-client money once a bill is delivered (assuming it's for fees/paid disbursements).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "To withdraw client money for costs, a bill or written notification must be given first.",
+      "a": true,
+      "exp": "Rule 4.3(a) requires a bill or written notification before transferring client money for costs.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A credit entry in the cash sheet (client account) represents money paid out.",
+      "a": true,
+      "exp": "In the firm's cash book, a credit reduces the asset/balance, representing a payment out.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Receipt of a deposit as stakeholder is credited to the seller's client ledger.",
+      "a": false,
+      "exp": "Stakeholder funds are credited to a separate 'Stakeholder' ledger, not the seller's, until completion.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "When paying a disbursement as agent, VAT is recorded separately in the VAT account.",
+      "a": false,
+      "exp": "As agent, the gross amount (including VAT) is debited to the client ledger; VAT is not separated.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Petty cash is client money.",
+      "a": false,
+      "exp": "Petty cash belongs to the firm and is non-client money.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "The SRA must be notified if a firm uses a Third Party Managed Account (TPMA).",
+      "a": true,
+      "exp": "SRA Guidance requires firms to notify the SRA of TPMA use.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A debit balance on the client side of a client ledger is a breach of the rules.",
+      "a": true,
+      "exp": "It means the firm has paid out more than it holds for that client, using other clients' funds.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Reconciliations of client accounts must be done at least every five weeks.",
+      "a": true,
+      "exp": "Rule 8.3 mandates reconciliations at least every five weeks.",
+      "isTiming": true,
+      "difficulty": 1
+    },
+    {
+      "q": "Under the 'Principal' method for disbursements, the firm uses client money to pay the third party.",
+      "a": false,
+      "exp": "As principal, the firm is liable and must use business money (non-client money) to pay.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Accounting records must be retained for at least six years.",
+      "a": true,
+      "exp": "Rule 13.1 sets a minimum retention period of six years for accounting records.",
+      "isTiming": true,
+      "difficulty": 1
+    },
+    {
+      "q": "A transfer from business to client account debits the Client Ledger Business Account.",
+      "a": true,
+      "exp": "Withdrawing from business to pay client account debits the business ledger (increasing client debt/reducing firm cash).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Abatement of a bill requires a debit to the Profit Costs account.",
+      "a": true,
+      "exp": "Abatement reduces revenue, so the Profit Costs account (originally credited) is debited.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Money held in a joint account is subject to all SRA Accounts Rules.",
+      "a": false,
+      "exp": "Rule 9.1 states Part 2 does not apply to joint accounts (except Rules 8.2 and 8.4).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Legal Aid Agency payments for costs must be paid into the client account.",
+      "a": false,
+      "exp": "Rule 2.3(b) exempts Legal Aid payments for costs from the client account requirement.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Writing off a bad debt involves crediting the Client Ledger Business Account.",
+      "a": true,
+      "exp": "Crediting the ledger wipes the debt owed by the client.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "If a cheque is dishonoured, the firm must correct the client account immediately.",
+      "a": true,
+      "exp": "Rule 6.1 requires immediate correction of breaches/shortfalls.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The SRA Accounts Rules do not apply to employees of a firm.",
+      "a": false,
+      "exp": "Rule 1.1 states the rules apply to authorised bodies, managers, AND employees.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Mixed payments can be paid entirely into the client account if the non-client element is transferred promptly.",
+      "a": true,
+      "exp": "Rule 4.2 permits this, provided prompt allocation/transfer occurs.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "VAT on a bill is credited to the VAT Account.",
+      "a": true,
+      "exp": "Recording the bill involves crediting Profit Costs and crediting VAT Account (liability to HMRC).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Client money includes money held as a trustee.",
+      "a": true,
+      "exp": "Rule 2.1(c) includes money held as trustee or holder of a specified office.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "An accountant's report is always required if a firm holds client money.",
+      "a": false,
+      "exp": "Rule 12.2 provides exemptions (e.g., Legal Aid or low average/max balance).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "If a firm holds a deposit as agent, the funds are credited to the stakeholder ledger.",
+      "a": false,
+      "exp": "As agent, funds belong to the seller and are credited to the seller's client ledger.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Transfers between clients require written authority from both parties.",
+      "a": true,
+      "exp": "SRA Guidance states authority is needed from both lender and borrower.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A separate designated client account must include the client's name in its title.",
+      "a": true,
+      "exp": "This distinguishes it from the general client account.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Reimbursement of a paid disbursement from a client is client money.",
+      "a": false,
+      "exp": "It reimburses the firm for a cost already incurred, so it is non-client money.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Withdrawing client money requires a debit to the Cash Sheet Client Account.",
+      "a": false,
+      "exp": "A withdrawal reduces the bank balance, so it is a Credit to the Cash Sheet.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Rule 5.1 allows withdrawal of client money on the SRA's written authorisation.",
+      "a": true,
+      "exp": "Rule 5.1(c) permits withdrawal with SRA authorisation or in prescribed circumstances.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "When a firm acts for a lender without a separate ledger, the lender's bill is debited to the borrower's ledger.",
+      "a": true,
+      "exp": "The borrower usually pays, so the debt is recorded on their ledger.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "If a client pays a bill by transfer from client account, the firm debits the Client Ledger Client Account.",
+      "a": true,
+      "exp": "This withdraws funds from the client side to pay the business side.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Prescribed circumstances for withdrawing residual balances apply to amounts under £500.",
+      "a": true,
+      "exp": "SRA prescribed circumstances for self-authorised withdrawal to charity apply to balances ≤£500.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "The SRA Accounts Rules prohibit using a client account as a banking facility.",
+      "a": true,
+      "exp": "Rule 3.3 strictly forbids providing banking facilities.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A firm must keep a central record of all bills.",
+      "a": true,
+      "exp": "Rule 8.4 mandates a central record of bills/notifications of costs.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Payment of a disbursement as principal requires a debit to the VAT account for the VAT element.",
+      "a": true,
+      "exp": "As principal, VAT is separated and debited to the VAT account (input tax).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Funds in a TPMA are client money.",
+      "a": false,
+      "exp": "Rule 11.1 confirms TPMA funds are not client money as they aren't held by the firm.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Rule 12.2 exemption applies if the average balance is under £10,000 and max is under £250,000.",
+      "a": true,
+      "exp": "Both conditions (average ≤£10k, max ≤£250k) must be met for the exemption.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "Reconciliations must be signed by the COFA or a manager.",
+      "a": true,
+      "exp": "Rule 8.3 requires sign-off by the COFA or a manager.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A transfer from client account to business account requires a credit to the Client Ledger Business Account.",
+      "a": true,
+      "exp": "Crediting the business ledger records the receipt/payment of the debt.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Client money must be returned when there is no longer a proper reason to hold it.",
+      "a": true,
+      "exp": "Rule 2.5 mandates prompt return of funds.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "The standard rate of VAT for legal services is 15%.",
+      "a": false,
+      "exp": "Standard VAT rate is 20%.",
+      "isTiming": true,
+      "difficulty": 1
+    },
+    {
+      "q": "If a firm uses a TPMA, it must obtain regular statements from the provider.",
+      "a": true,
+      "exp": "Rule 11.2 requires regular statements.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "In double entry, a Debit to the Client Ledger Client Account decreases the balance held for the client.",
+      "a": true,
+      "exp": "A debit on the client side represents a withdrawal/reduction of funds.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "When paying a disbursement as agent, the firm debits the Client Ledger Business Account.",
+      "a": false,
+      "exp": "As agent, payment is from client funds, debiting the Client Ledger *Client* Account.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A transfer of funds between two clients requires a withdrawal from the client bank account.",
+      "a": false,
+      "exp": "Inter-client transfers are ledger entries only (Dr Client A, Cr Client B) and do not affect the bank balance.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "When 'splitting' a mixed cheque at the bank, the firm records a debit to the Cash Sheet Business Account for the non-client element.",
+      "a": true,
+      "exp": "Splitting involves paying the non-client portion directly into the business account, requiring a debit to that cash sheet.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "If a firm uses petty cash for a client expense, it must credit the Cash Sheet Petty Cash account.",
+      "a": true,
+      "exp": "Money leaving the petty cash pot is recorded as a credit to the Cash Sheet Petty Cash.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "To pay a bill from client funds under Rule 4.3, the firm must first debit the Client Ledger (Business side) to record the bill.",
+      "a": true,
+      "exp": "The bill must be recorded (Dr Client Ledger Business) before the transfer from client account (Cr Client Ledger Client) can settle it.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "When a client reimburses petty cash, the money must be paid into the petty cash box immediately.",
+      "a": false,
+      "exp": "Petty cash reimbursement is non-client money and must be paid into the business bank account, not the cash box.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "If a firm acts for a lender and borrower, mortgage funds are client money under Rule 2.1(a).",
+      "a": true,
+      "exp": "Mortgage funds received are held for the lender (a client/third party) and fall under the definition of client money.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Upon completion of a property purchase, the deposit held as stakeholder is transferred to the seller's ledger.",
+      "a": true,
+      "exp": "At completion, the stakeholding ends and the funds belong to the seller, requiring a transfer to their ledger.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Paying Stamp Duty Land Tax (SDLT) is a withdrawal of client money for the purpose for which it is held.",
+      "a": true,
+      "exp": "Rule 5.1(a) permits withdrawals for the purpose for which the money is held, such as paying SDLT.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "If a bill includes anticipated disbursements, the money for them must be transferred to the business account immediately.",
+      "a": false,
+      "exp": "SRA guidance expects money for anticipated disbursements to remain in the client account until they are actually paid.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A debit balance on the client side of a client ledger indicates the firm has breached the rules.",
+      "a": true,
+      "exp": "A debit balance on the client side means the firm has paid out more than it holds for that client (using other clients' money).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "When transferring costs from a lender's ledger to a borrower's ledger, the firm Debits the Lender's Business Ledger.",
+      "a": false,
+      "exp": "The firm Credits the Lender's Business Ledger (clearing their debt) and Debits the Borrower's Business Ledger (assigning the debt).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "If a client sends £500 for costs and £200 for a bill, the entire £700 can be paid into the client account.",
+      "a": true,
+      "exp": "Rule 4.2 allows mixed payments into the client account, provided the non-client element (£200) is transferred promptly.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A firm must obtain an accountant's report if the maximum client balance exceeds £250,000.",
+      "a": true,
+      "exp": "Rule 12.2(b) exemption requires the maximum balance to be £250,000 or less; exceeding this triggers the report requirement.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "When paying a disbursement as principal, the VAT is debited to the Client Ledger (Business side).",
+      "a": false,
+      "exp": "As principal, VAT is debited to the VAT account initially, not the client ledger (until billed).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Before transferring funds between clients, the firm must obtain written authority from the lender only.",
+      "a": false,
+      "exp": "SRA Guidance states written authority should be obtained from *both* the lender and the borrower.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The SRA must be notified if a firm holds a residual balance of £600.",
+      "a": true,
+      "exp": "Prescribed circumstances for self-authorised withdrawal only apply to balances of £500 or less.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "A transfer from business to client account requires a Debit to the Client Ledger Business Account.",
+      "a": true,
+      "exp": "Withdrawing from business account to pay client account is a Debit to the Client Ledger Business Account.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "If a firm uses a TPMA, they are exempt from keeping accounting records for those funds.",
+      "a": false,
+      "exp": "Rule 11.2 requires firms to obtain regular statements and ensure they accurately reflect transactions.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A credit entry in the Cash Sheet Client Account represents money flowing out of the bank.",
+      "a": true,
+      "exp": "In the cash sheet (firm's view of the bank), a Credit entry reduces the balance (payment out).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "If a solicitor is a signatory on a client's own account, they must reconcile the account every 5 weeks.",
+      "a": true,
+      "exp": "Rule 10.1(b) applies Rule 8.3 (reconciliations) to the operation of a client's own account.",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "When issuing a bill, the VAT element is Credited to the VAT Account.",
+      "a": true,
+      "exp": "The firm creates a liability to HMRC (or records output tax), so the VAT Account is Credited.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Money held for the Legal Aid Agency for costs must be paid into the client account.",
+      "a": false,
+      "exp": "Rule 2.3(b) provides an exemption for payments from the Legal Aid Agency for costs; they can go to the business account.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "If a client pays a bill by cheque, this is considered client money.",
+      "a": false,
+      "exp": "Rule 2.1(d) excludes money received for fees *after* a bill is delivered; it is non-client money.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A firm can transfer money for costs from the client account before delivering a bill if the client agrees orally.",
+      "a": false,
+      "exp": "Rule 4.3(a) explicitly requires a bill or *written* notification of costs before any transfer.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "When a firm pays a disbursement as agent, the client's business ledger is debited.",
+      "a": false,
+      "exp": "As agent, the payment is usually made from client funds, debiting the *Client Ledger Client Account*.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Rule 2.1 defines client money.",
+      "a": true,
+      "exp": "Rule 2.1 is the primary definition clause for client money in the SRA Accounts Rules.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Accounting records must be updated chronologically.",
+      "a": true,
+      "exp": "Rule 8.1 requires accurate, contemporaneous, and chronological records.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "The SRA Accounts Rules apply to employees of authorised bodies.",
+      "a": true,
+      "exp": "Rule 1.1 confirms the rules apply to authorised bodies, managers, and employees.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A client account must include the word 'client' in its title.",
+      "a": true,
+      "exp": "Rule 3.2(b) mandates the inclusion of the word 'client' to distinguish it from office accounts.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Client money must be returned to the client promptly when there is no proper reason to hold it.",
+      "a": true,
+      "exp": "Rule 2.5 mandates the prompt return of client money when no longer needed.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Reconciliations must be signed off by a COFA or manager.",
+      "a": true,
+      "exp": "Rule 8.3 requires the reconciliation record to be signed off by the COFA or a manager.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A 'mixed payment' consists of client money and money belonging to the firm.",
+      "a": true,
+      "exp": "SRA Glossary defines a mixed payment as one including both client money and non-client money.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Records of bills must be kept for at least six years.",
+      "a": true,
+      "exp": "Rule 13.1 applies the six-year retention period to all accounting records, including bills.",
+      "isTiming": true,
+      "difficulty": 1
+    },
+    {
+      "q": "Petty cash is considered non-client money.",
+      "a": true,
+      "exp": "Petty cash belongs to the firm and does not fall under the Rule 2.1 definition of client money.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "VAT is charged at 20% on profit costs.",
+      "a": true,
+      "exp": "Standard rate VAT for legal services is currently 20%.",
+      "isTiming": true,
+      "difficulty": 1
+    },
+    {
+      "q": "Rule 4.1 requires client money to be kept separate from business money.",
+      "a": true,
+      "exp": "Rule 4.1 is the fundamental rule requiring separation of client and firm money.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A 'disbursement' includes general office overheads like telephone calls.",
+      "a": false,
+      "exp": "The SRA Glossary definition of disbursements excludes office expenses like postage and telephone calls.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Firms must obtain bank statements at least every five weeks.",
+      "a": true,
+      "exp": "Rule 8.2 requires statements to be obtained at least every five weeks for reconciliation.",
+      "isTiming": true,
+      "difficulty": 1
+    },
+    {
+      "q": "A 'stakeholder' holds money for one party only.",
+      "a": false,
+      "exp": "A stakeholder holds money (usually a deposit) on trust for *both* parties until a specific event.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Accountant's reports are mandatory for all firms regardless of the amount of client money held.",
+      "a": false,
+      "exp": "Rule 12.2 provides exemptions based on the source (Legal Aid) or amount (Average/Max balance) of funds.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Client ledgers must include the client's name.",
+      "a": true,
+      "exp": "Rule 8.1(a) requires client ledgers to be identified by the client's name and matter description.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A 'Credit' entry in a client ledger (client side) increases the client's balance.",
+      "a": true,
+      "exp": "Money received for a client is Credited to their ledger, increasing the amount held.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "The SRA Accounts Rules allow the use of a client account to pass money through for non-legal matters.",
+      "a": false,
+      "exp": "Rule 3.3 prohibits using the client account for banking facilities; funds must relate to regulated services.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Interest must be calculated and paid on money held in a joint account.",
+      "a": false,
+      "exp": "Part 2 rules (including Rule 7 on interest) generally do not apply to joint accounts (Rule 9.1).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The 'Cash Sheet' is a record of transactions passing through the bank account.",
+      "a": true,
+      "exp": "Rule 8.1(c) requires a cash book (cash sheet) showing a running total of transactions through the account.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Client money includes money held for unpaid disbursements before a bill is delivered.",
+      "a": true,
+      "exp": "Rule 2.1(d) includes unpaid disbursements as client money if held prior to delivery of a bill.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A 'separate designated client account' is a general client account holding pooled funds.",
+      "a": false,
+      "exp": "A separate designated account is for a specific client; a general account holds pooled funds.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Firms must account for interest on money held in a Third Party Managed Account.",
+      "a": false,
+      "exp": "Money in a TPMA is not client money; Rule 7 (Interest) does not apply to it.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Breaches of the Accounts Rules must be corrected promptly.",
+      "a": true,
+      "exp": "Rule 6.1 requires prompt correction of any breaches upon discovery.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "The Business Ledger records money the client owes to the firm.",
+      "a": true,
+      "exp": "The business side of the client ledger records bills and non-client money, showing the client's debt.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "If a solicitor holds a deposit as a stakeholder, the receipt is credited to the seller's client ledger.",
+      "a": false,
+      "exp": "Money held as a stakeholder is credited to a separate 'stakeholder' ledger, not the seller's client ledger, until completion.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "When paying a disbursement as an agent using client money, the firm must record a debit in the VAT account.",
+      "a": false,
+      "exp": "As an agent, no separate VAT entry is made; the gross amount is debited to the client ledger (client side).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A transfer of funds between two clients of the same firm requires entries in the cash sheet.",
+      "a": false,
+      "exp": "Inter-client transfers occur only within the ledgers (Dr Client A, Cr Client B) and do not impact the cash sheet.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "If a client pays a bill of costs using non-client money, the entry is Credit Client Ledger (Business side).",
+      "a": true,
+      "exp": "Receipt of non-client money (bill payment) is credited to the business side of the client ledger to reduce the debt.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Under Rule 4.3, a firm must deliver a bill of costs before transferring client money to the business account to pay that bill.",
+      "a": true,
+      "exp": "Rule 4.3(a) requires a bill or written notification of costs be given prior to any transfer for costs.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Money held in a Third Party Managed Account (TPMA) is defined as client money under Rule 2.1.",
+      "a": false,
+      "exp": "Rule 11.1(a) clarifies that money in a TPMA is not held or received by the firm and is therefore not client money.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A mixed payment paid into the client account must have the non-client element transferred out promptly.",
+      "a": true,
+      "exp": "Rule 4.2 requires prompt allocation of funds to the correct account, meaning non-client money must be moved.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "When a bill is abated, the firm must Debit the Profit Costs account.",
+      "a": true,
+      "exp": "Abatement reduces the income recorded, so the Profit Costs account (originally credited) is debited.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Writing off a bad debt requires a Debit to the Bad Debts account and a Credit to the Client Ledger (Business side).",
+      "a": true,
+      "exp": "Crediting the client ledger wipes the debt owed by the client; the balancing debit is to the Bad Debt account.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "If a solicitor acts as an agent for a seller, the deposit received is credited directly to the seller's client ledger.",
+      "a": true,
+      "exp": "Unlike stakeholder funds, agent funds belong to the client immediately and are credited to their ledger.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Interest earned on a general client account must be paid into the client account directly by the bank.",
+      "a": false,
+      "exp": "Interest on a general account is usually paid to the business account, then the firm accounts to the client for a fair sum.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "When paying a disbursement as principal, the firm debits the Client Ledger (Business side) for the net amount.",
+      "a": true,
+      "exp": "As principal, the net cost is debited to the client's business ledger and VAT is recorded separately in the VAT account.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A firm may withdraw client money for a purpose other than that for which it was held without written instructions.",
+      "a": false,
+      "exp": "Rule 5.1(a)-(b) requires withdrawal only for the specific purpose or upon receipt of instructions.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "If a cheque from a client is dishonoured, the firm must immediately correct any resulting shortfall in the client account.",
+      "a": true,
+      "exp": "Rule 6.1 requires immediate rectification of any shortfall/breach upon discovery.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "When a lender client has a separate ledger, mortgage funds are first credited to the lender's ledger.",
+      "a": true,
+      "exp": "If a separate ledger exists, funds are credited there first, then transferred to the borrower upon completion.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The SRA requires firms to obtain an accountant's report if the average client account balance exceeds £10,000.",
+      "a": true,
+      "exp": "Rule 12.2(b) exemptions only apply if the average is ≤£10,000 AND the maximum is ≤£250,000.",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "Petty cash payments on behalf of a client are recorded as a Debit in the Client Ledger (Client side).",
+      "a": false,
+      "exp": "Petty cash is non-client money; payments are debited to the Client Ledger (Business side).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "If a firm uses the 'Agency' method for a disbursement, they must separate the VAT element in the ledger.",
+      "a": false,
+      "exp": "Under the Agency method, VAT is not separated; the gross amount is recorded in the client ledger.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A client pays a bill of £1,200 (£1,000 + VAT) by transfer from client account. The entry in the Cash Sheet (Client) is a Debit.",
+      "a": false,
+      "exp": "Withdrawing money from the client account is a Credit entry in the Cash Sheet (Client).",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "The SRA Accounts Rules allow a client account to be used as a banking facility for clients.",
+      "a": false,
+      "exp": "Rule 3.3 strictly prohibits using the client account as a banking facility.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A firm acts for a lender without a separate ledger. The bill to the lender is debited to the borrower's business ledger.",
+      "a": true,
+      "exp": "Without a separate lender ledger, the borrower covers the fees, so the debt is recorded on the borrower's ledger.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "When transferring funds between clients, the firm must obtain written authority from both parties.",
+      "a": true,
+      "exp": "SRA Guidance requires written authority from both the lender and borrower for inter-client loans/transfers.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Under the 'Principal' method, the VAT on a disbursement is charged to the client only when the firm issues its own bill.",
+      "a": true,
+      "exp": "The VAT sits in the VAT account until the firm bills the client, at which point it moves to the client ledger.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "If a firm ceases to hold client money, the SRA can still require a final accountant's report.",
+      "a": true,
+      "exp": "Rule 12.4 allows the SRA to require a report when a firm ceases to operate a client account.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A withdrawal from a separate designated client account requires four ledger entries in total.",
+      "a": false,
+      "exp": "It requires two entries: Debit Client Ledger (Designated), Credit Cash Sheet (Designated). Transfers require four.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Client money includes money held as a trustee.",
+      "a": true,
+      "exp": "Rule 2.1(c) defines money held as a trustee or holder of a specified office as client money.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A 'mixed payment' contains both client money and non-client money.",
+      "a": true,
+      "exp": "SRA Glossary and Rule 4.2 define a mixed payment as one including both client and non-client money.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "The SRA Accounts Rules apply only to the managers of an authorised body.",
+      "a": false,
+      "exp": "Rule 1.1 states the rules apply to authorised bodies, their managers, AND employees.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Accounting records must be retained for at least five years.",
+      "a": false,
+      "exp": "Rule 13.1 requires accounting records to be stored and retained for at least six years.",
+      "isTiming": true,
+      "difficulty": 1
+    },
+    {
+      "q": "Reconciliations of the client account must be carried out at least every five weeks.",
+      "a": true,
+      "exp": "Rule 8.3 mandates reconciliations be completed at least every five weeks.",
+      "isTiming": true,
+      "difficulty": 1
+    },
+    {
+      "q": "Managers of an authorised body are jointly and severally responsible for compliance with the Rules.",
+      "a": true,
+      "exp": "Rule 1.2 states managers are jointly and severally responsible for compliance.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Money held in a joint account is considered client money under Part 2 of the Rules.",
+      "a": false,
+      "exp": "Rule 9.1 states Part 2 (Client Money) does not apply to joint accounts (except 8.2 and 8.4).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A 'disbursement' includes office expenses such as postage and courier fees.",
+      "a": false,
+      "exp": "The SRA Glossary definition explicitly excludes office expenses like postage from being disbursements.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "The standard rate of VAT charged on legal services is 20%.",
+      "a": true,
+      "exp": "Legal services are subject to the standard VAT rate of 20%.",
+      "isTiming": true,
+      "difficulty": 1
+    },
+    {
+      "q": "Client money must be paid into a client account immediately.",
+      "a": false,
+      "exp": "Rule 2.3 requires client money to be paid in 'promptly', not immediately.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Rule 8.4 requires a central record of all bills of costs.",
+      "a": true,
+      "exp": "Rule 8.4 mandates a readily accessible central record of all bills given.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Money received for paid disbursements is classified as client money.",
+      "a": false,
+      "exp": "Rule 2.1(d) only includes *unpaid* disbursements; reimbursement for paid ones is non-client money.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "An accountant's report must be obtained within six months of the end of the accounting period.",
+      "a": true,
+      "exp": "Rule 12.1(a) sets the deadline at six months after the accounting period ends.",
+      "isTiming": true,
+      "difficulty": 1
+    },
+    {
+      "q": "The SRA must be notified if a firm uses a Third Party Managed Account (TPMA).",
+      "a": true,
+      "exp": "SRA Guidance requires firms to notify the SRA if they use a TPMA.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Rule 7.1 requires firms to pay a 'commercial rate' of interest.",
+      "a": false,
+      "exp": "Rule 7.1 requires accounting for a 'fair sum' of interest, not necessarily a commercial rate.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A client account name must include the name of the authorised body and the word 'client'.",
+      "a": true,
+      "exp": "Rule 3.2 requires the account name to include the body's name and the word 'client'.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "If a client account reconciliation shows a difference, it must be resolved promptly.",
+      "a": true,
+      "exp": "Rule 8.3 requires differences shown by reconciliation to be promptly investigated and resolved.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Firms are required to have a separate client ledger for every client.",
+      "a": true,
+      "exp": "Rule 8.1(a) requires records in client ledgers identified by the client's name.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "In double entry book-keeping, a Debit (DR) entry signifies money coming into a bank account.",
+      "a": true,
+      "exp": "For the cash sheet (bank record), a Debit represents money received/paid in.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Legal Aid Agency payments for costs must always be paid into the client account.",
+      "a": false,
+      "exp": "Rule 2.3(b) provides an exception for Legal Aid Agency payments for costs.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The SRA can disqualify an accountant from preparing reports.",
+      "a": true,
+      "exp": "Rule 12.6 allows the SRA to disqualify an accountant for misconduct or lack of care.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A debit balance on a client ledger (client side) indicates a breach of the rules.",
+      "a": true,
+      "exp": "A debit balance means more money was paid out than held, implying other clients' money was used.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Rule 12.1 requires an accountant's report even if the firm never held client money.",
+      "a": false,
+      "exp": "Rule 12.1 only applies if the firm has held or received client money (or operated joint/client own accounts).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Firms must account for interest to clients even if the amount is negligible, unless agreed otherwise.",
+      "a": false,
+      "exp": "While Rule 7.1 requires a fair sum, Rule 7.2 allows written agreements to alter this (often setting de minimis limits).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The SRA Accounts Rules 2019 replaced the Solicitors Accounts Rules 2011.",
+      "a": true,
+      "exp": "The context implies the current rules discussed are the SRA Accounts Rules (effective 2019).",
+      "isTiming": false,
+      "difficulty": 1
+    }
+  ],
   "business": [
     { "q": "A sole trader must register with Companies House.", "a": false, "exp": "Only with HMRC." },
     { "q": "Partners in a general partnership are jointly and severally liable.", "a": true, "exp": "Unlimited liability for firm debts." },
