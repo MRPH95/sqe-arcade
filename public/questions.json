@@ -10998,7 +10998,3507 @@
     { "q": "Accord & Satisfaction settles a debt.", "a": true, "exp": "Pinnel's Case exceptions." },
     { "q": "Privity: Contract cannot burden third party.", "a": true, "exp": "Dunlop v Selfridge." },
     { "q": "Cooling off (Distance Sales): 14 days.", "a": true, "exp": "Consumer cancellation right.", "isTiming": true },
-    { "q": "Limitation for Deed: 12 years.", "a": true, "exp": "Specialty contract.", "isTiming": true }
+    { "q": "Limitation for Deed: 12 years.", "a": true, "exp": "Specialty contract.", "isTiming": true },
+    {
+      "q": "An advertisement selling 'Bramblefinch cocks, 25s each' is a binding offer.",
+      "a": false,
+      "exp": "Advertisements are generally invitations to treat, not offers (Partridge v Crittenden).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Displaying a flick-knife in a shop window constitutes a legal offer.",
+      "a": false,
+      "exp": "Goods on display are invitations to treat, not offers (Fisher v Bell).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "In an auction without reserve, the auctioneer offers to sell to the highest bidder.",
+      "a": true,
+      "exp": "This creates a collateral unilateral contract to sell to the highest bidder (Barry v Davies).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A bidder can withdraw their bid before the auctioneer's hammer falls.",
+      "a": true,
+      "exp": "A bid is an offer which can be revoked prior to acceptance (Payne v Cave).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A counter-offer automatically destroys the original offer.",
+      "a": true,
+      "exp": "A counter-offer acts as a rejection of the original offer (Hyde v Wrench).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A request for further information operates as a rejection of the offer.",
+      "a": false,
+      "exp": "A mere inquiry does not terminate the original offer (Stevenson, Jacques & Co v McLean).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Revocation of an offer is effective from the moment it is posted.",
+      "a": false,
+      "exp": "Revocation must be communicated to the offeree to be effective (Byrne v Van Tienhoven).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "An offeror can revoke a unilateral offer after performance has begun.",
+      "a": false,
+      "exp": "There is an implied promise not to revoke once performance commences (Errington v Errington).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Acceptance by post is effective when the letter is received.",
+      "a": false,
+      "exp": "Under the postal rule, acceptance is effective upon posting (Adams v Lindsell).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The postal rule applies if the letter is incorrectly addressed.",
+      "a": false,
+      "exp": "The postal rule does not apply if the offeree is careless with the address (Korbetis).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Silence by the offeree can constitute valid acceptance if the offeror agrees.",
+      "a": false,
+      "exp": "An offeror cannot impose an obligation to reject to avoid being bound (Felthouse v Bindley).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Acceptance by email is effective only when the offeror reads it.",
+      "a": false,
+      "exp": "It is effective when it arrives on the server/is accessible (Thomas v BPE Solicitors).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "An offer made to the 'world at large' cannot be a binding contract.",
+      "a": false,
+      "exp": "Unilateral offers can be made to the world and accepted by performance (Carlill).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "If a mandatory mode of acceptance is prescribed, no other mode will suffice.",
+      "a": true,
+      "exp": "Clear mandatory instructions must be followed for valid acceptance (Manchester Diocesan).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "If a mode is not mandatory, a less advantageous mode is still valid.",
+      "a": false,
+      "exp": "The alternative mode must be no less advantageous to the offeror (Tinn v Hoffman).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Third-party communication of revocation is invalid.",
+      "a": false,
+      "exp": "Revocation is effective if communicated by a reliable third party (Dickinson v Dodds).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "An agreement to negotiate in the future is a detailed binding contract.",
+      "a": false,
+      "exp": "Agreements to agree are generally too uncertain to be enforced (Walford v Miles).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "In a 'battle of forms', the 'first shot' usually prevails.",
+      "a": false,
+      "exp": "The 'last shot' fired before performance usually wins (Butler Machine Tool v Ex-Cell-O).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Death of the offeree terminates the offer.",
+      "a": true,
+      "exp": "An offer is personal and cannot be accepted by the offeree's estate (Reynolds v Atherton).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "An offer stating it is open for 6 weeks cannot be revoked earlier.",
+      "a": false,
+      "exp": "It can be revoked unless consideration was paid to keep it open (Routledge v Grant).",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "A statement that one 'may be prepared to sell' is a valid offer.",
+      "a": false,
+      "exp": "This indicates a lack of intention to be bound, making it an ITT (Gibson v MCC).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Acceptance must always be communicated to the offeror.",
+      "a": false,
+      "exp": "Unilateral contracts waive the requirement for communication of acceptance (Carlill).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Cross-offers made simultaneously create a binding contract.",
+      "a": false,
+      "exp": "Cross-offers do not constitute acceptance of each other (Tinn v Hoffman).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Vague terms can never be cured by previous dealings.",
+      "a": false,
+      "exp": "Courts may use previous dealings to clarify vague terms (Hillas v Arcos).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A tender stating 'highest bid will be accepted' is a unilateral offer.",
+      "a": true,
+      "exp": "This commitment converts an invitation to tender into a binding offer (Harvela Investments).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "An offeror is the person to whom the offer is made.",
+      "a": false,
+      "exp": "The offeror makes the offer; the offeree receives it.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "An invitation to treat is a binding promise.",
+      "a": false,
+      "exp": "An invitation to treat is merely an invitation to negotiate.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A bilateral contract involves promises exchanged by both parties.",
+      "a": true,
+      "exp": "Bilateral contracts are formed by an exchange of promises.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "In unilateral contracts, only one party makes a promise.",
+      "a": true,
+      "exp": "The promisor binds themselves to perform if the act is done.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "The objective test looks at the actual intent in a man's mind.",
+      "a": false,
+      "exp": "It looks at what a reasonable person would infer from words/conduct (Smith v Hughes).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Acceptance must be a 'mirror image' of the offer.",
+      "a": true,
+      "exp": "Acceptance must match the offer terms exactly to be valid.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Silence is the standard method of acceptance in contract law.",
+      "a": false,
+      "exp": "Silence does not generally amount to acceptance (Felthouse v Bindley).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A 'mere puff' is a legally binding statement.",
+      "a": false,
+      "exp": "Puffs are exaggerated sales talk with no legal effect.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "An auctioneer's request for bids is an offer.",
+      "a": false,
+      "exp": "It is an invitation to treat; the bid is the offer (Payne v Cave).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Revocation is the withdrawal of an offer.",
+      "a": true,
+      "exp": "Revocation terminates the power of acceptance.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Lapse of time can terminate an offer.",
+      "a": true,
+      "exp": "Offers lapse after a fixed period or a reasonable time.",
+      "isTiming": true,
+      "difficulty": 1
+    },
+    {
+      "q": "Rejection terminates an offer immediately.",
+      "a": true,
+      "exp": "Once rejected, an offer is dead and cannot be accepted later.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Consideration must move from the promisee.",
+      "a": true,
+      "exp": "A person cannot enforce a promise unless they provided consideration for it.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "The 'fall of the hammer' signals acceptance in an auction.",
+      "a": true,
+      "exp": "This is the statutory moment of acceptance (s.57 Sale of Goods Act 1979).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Domestic agreements are presumed to be legally binding.",
+      "a": false,
+      "exp": "Social/domestic agreements are presumed to lack legal intent (Balfour v Balfour).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Commercial agreements are presumed to have legal intent.",
+      "a": true,
+      "exp": "There is a strong presumption of legal intent in business contexts (Esso Petroleum).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A contract void ab initio has no legal effect from the start.",
+      "a": true,
+      "exp": "It is treated as if it never existed.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Certainty of terms is required for a binding contract.",
+      "a": true,
+      "exp": "Vague or incomplete terms may render a contract unenforceable (Scammell v Ouston).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "The postal rule is an exception to the communication rule.",
+      "a": true,
+      "exp": "It allows acceptance without actual receipt by the offeror.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Instantaneous communication includes email and telephone.",
+      "a": true,
+      "exp": "These are treated as face-to-face, requiring actual receipt (Entores).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A valid offer must be clear and certain.",
+      "a": true,
+      "exp": "Ambiguity prevents the formation of a binding contract.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "An option contract keeps an offer open indefinitely without consideration.",
+      "a": false,
+      "exp": "Consideration is required to make a promise to keep an offer open binding.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Acceptance leads to a binding agreement.",
+      "a": true,
+      "exp": "Offer plus acceptance equals agreement.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "The offeree is the person making the proposal.",
+      "a": false,
+      "exp": "The offeree is the recipient; the offeror makes the proposal.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A tender is usually an invitation to treat.",
+      "a": true,
+      "exp": "Requests for tenders are invitations to negotiate, not offers (Spencer v Harding).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Performing an existing contractual duty is generally valid consideration for a new promise.",
+      "a": false,
+      "exp": "Performance of an existing duty is not good consideration (Stilk v Myrick).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Exceeding an existing contractual obligation constitutes good consideration.",
+      "a": true,
+      "exp": "Going above and beyond existing duties is valid consideration (Hartley v Ponsonby).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Factual consideration can be found if a party obtains a 'practical benefit'.",
+      "a": true,
+      "exp": "Practical benefit can be good consideration in varying contracts (Williams v Roffey Bros).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "The 'practical benefit' principle in Williams v Roffey applies to promises to accept less debt.",
+      "a": false,
+      "exp": "Williams v Roffey is limited to goods/services; part payment of debt is governed by Foakes v Beer (Re Selectmove).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Past consideration is valid if the act was done at the promisor's request.",
+      "a": true,
+      "exp": "It is valid if requested and there was an understanding of reward (Pao On v Lau Yiu Long).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A moral obligation to pay is sufficient to create a binding contract.",
+      "a": false,
+      "exp": "Moral obligation alone is not good consideration (Eastwood v Kenyon).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Performance of a public duty is never good consideration.",
+      "a": false,
+      "exp": "It can be consideration if the performance exceeds the statutory duty (Harris v Sheffield United).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Performance of a duty owed to a third party is good consideration.",
+      "a": true,
+      "exp": "Performance of a pre-existing duty to a third party is valid consideration (Scotson v Pegg).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Part payment of a debt on the due date satisfies the whole debt.",
+      "a": false,
+      "exp": "Part payment is not satisfaction for the whole; the creditor can sue for the rest (Foakes v Beer).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Payment of a lesser sum can be satisfaction if made before the due date.",
+      "a": true,
+      "exp": "Early payment is fresh consideration and creates a binding variation (Pinnel's Case).",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "Promissory estoppel can be used as a cause of action to sue a defendant.",
+      "a": false,
+      "exp": "Promissory estoppel is a shield, not a sword (Combe v Combe).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Promissory estoppel permanently extinguishes rights in all cases.",
+      "a": false,
+      "exp": "It is generally suspensory; rights can be resumed on reasonable notice (Tool Metal v Tungsten).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A debtor must have acted equitably to rely on promissory estoppel.",
+      "a": true,
+      "exp": "He who comes to equity must come with clean hands (D & C Builders v Rees).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Agreements between spouses living together are presumed to be legally binding.",
+      "a": false,
+      "exp": "Domestic agreements are presumed to lack intention to create legal relations (Balfour v Balfour).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Separating couples are presumed to intend legal relations in their agreements.",
+      "a": true,
+      "exp": "The presumption against ICLR is rebutted when the relationship has broken down (Merritt v Merritt).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A 'letter of comfort' is always a binding guarantee.",
+      "a": false,
+      "exp": "It depends on wording; often they are policy statements without legal intent (Kleinwort Benson).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Chocolate wrappers can be part of valid consideration.",
+      "a": true,
+      "exp": "Consideration need not be adequate, only sufficient (Chappell & Co v Nestle).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Stopping complaining is valid consideration for a release from debt.",
+      "a": false,
+      "exp": "Ceasing to complain is not of economic value/sufficient consideration (White v Bluett).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A contract for 'necessaries' binds a minor to pay the full contract price.",
+      "a": false,
+      "exp": "The minor is liable only for a 'reasonable price', not necessarily the contract price (s.3 SGA 1979).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A fancy waistcoat can be a 'necessary' for a minor.",
+      "a": true,
+      "exp": "Goods suitable to the minor's station in life can be necessaries (Nash v Inman).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A trading contract is binding on a minor if it is for their benefit.",
+      "a": false,
+      "exp": "Trading contracts are not binding on minors, even if beneficial (Cowern v Nield).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Employment contracts bind a minor if they are beneficial overall.",
+      "a": true,
+      "exp": "Contracts for service/apprenticeship are binding if beneficial (Proform Sports v Proactive Sports).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Mental incapacity automatically voids a contract.",
+      "a": false,
+      "exp": "It is voidable only if the other party knew of the incapacity (Imperial Loan Co v Stone).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Intoxicated persons must pay a reasonable price for necessaries.",
+      "a": true,
+      "exp": "Statutory rule under s.3 Sale of Goods Act 1979 (Matthews v Baxter).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Consideration must move from the promisee.",
+      "a": true,
+      "exp": "A person cannot enforce a promise unless they provided the consideration (Tweddle v Atkinson).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Consideration is the price for which a promise is bought.",
+      "a": true,
+      "exp": "Classic definition adopted by the House of Lords in Dunlop v Selfridge.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Executory consideration involves promises to be performed in the future.",
+      "a": true,
+      "exp": "It is a promise exchanged for a promise (e.g., pay later).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Executed consideration means the act is already done.",
+      "a": true,
+      "exp": "Consideration is executed when the required act is performed (e.g., Carlill).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Past consideration is generally not good consideration.",
+      "a": true,
+      "exp": "Acts done before a promise is made cannot support that promise (Re McArdle).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Consideration must be adequate to the value of the promise.",
+      "a": false,
+      "exp": "Consideration need not be adequate, but must be sufficient (Thomas v Thomas).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Consideration must be sufficient.",
+      "a": true,
+      "exp": "It must have some value in the eyes of the law.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A deed requires consideration to be enforceable.",
+      "a": false,
+      "exp": "Contracts made by deed do not require consideration.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Promissory estoppel is an equitable doctrine.",
+      "a": true,
+      "exp": "It derives from equity and is discretionary.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Promissory estoppel requires reliance by the promisee.",
+      "a": true,
+      "exp": "The promisee must have altered their position in reliance on the promise (High Trees).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Commercial agreements are presumed to have legal intent.",
+      "a": true,
+      "exp": "There is a strong presumption of ICLR in business contexts (Esso Petroleum).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "The presumption of ICLR in commerce is rebuttable.",
+      "a": true,
+      "exp": "It can be rebutted by clear words like 'subject to contract' (Rose & Frank v Crompton).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Social agreements are presumed to be legally binding.",
+      "a": false,
+      "exp": "They are presumed not to be binding (Jones v Padavatton).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A contract with a minor for a luxury item is valid.",
+      "a": false,
+      "exp": "It is generally unenforceable against the minor.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Capacity refers to the legal ability to enter a contract.",
+      "a": true,
+      "exp": "Certain groups (minors, intoxicated) have restricted capacity.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A minor is a person under the age of 21.",
+      "a": false,
+      "exp": "A minor is a person under the age of 18 (Family Law Reform Act 1969).",
+      "isTiming": true,
+      "difficulty": 1
+    },
+    {
+      "q": "Necessaries include food, clothing, and lodging.",
+      "a": true,
+      "exp": "They are goods suitable to the condition in life of the minor.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A variation of contract requires new consideration.",
+      "a": true,
+      "exp": "Variations are new contracts and require agreement and consideration.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Duress can render a contract voidable.",
+      "a": true,
+      "exp": "Contracts entered under duress can be set aside.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Consideration must be of economic value.",
+      "a": true,
+      "exp": "It must be 'sufficient' in the eyes of the law (White v Bluett).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "The promisee is the person who receives the promise.",
+      "a": true,
+      "exp": "The promisor makes the promise; the promisee receives it.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A 'subject to contract' clause prevents immediate binding effect.",
+      "a": true,
+      "exp": "It indicates no ICLR until formal contracts are exchanged.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Gratuitous promises are generally enforceable in contract law.",
+      "a": false,
+      "exp": "Promises without consideration are generally not binding.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Detrimental reliance is necessary for promissory estoppel.",
+      "a": true,
+      "exp": "The promisee must have suffered some detriment or altered position.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Ratification allows a minor to validate a contract at 18.",
+      "a": true,
+      "exp": "They can choose to be bound by the contract upon reaching adulthood.",
+      "isTiming": true,
+      "difficulty": 1
+    },
+    {
+      "q": "Consideration is required for a unilateral contract.",
+      "a": true,
+      "exp": "Performance of the act constitutes the consideration.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Duress to the person renders a contract void ab initio.",
+      "a": false,
+      "exp": "Duress makes a contract voidable, not void (Pao On v Lau Yiu Long).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "For duress to the person, the threat must be the sole reason for contracting.",
+      "a": false,
+      "exp": "It need only be 'a' cause, not the sole cause (Barton v Armstrong).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A threat to seize goods can constitute duress.",
+      "a": true,
+      "exp": "Duress to goods is a recognised category of duress (The Siboen and The Sibotre).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "In economic duress, the victim must have had no practical choice but to agree.",
+      "a": true,
+      "exp": "Lack of practical choice is a key element of economic duress (DSND Subsea).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Pressure must be illegitimate to amount to economic duress.",
+      "a": true,
+      "exp": "Illegitimacy of pressure is an essential ingredient (DSND Subsea).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A threat to breach a contract is always illegitimate pressure.",
+      "a": false,
+      "exp": "It may be legitimate if justified, though usually illegitimate (DSND Subsea v Petroleum Geo Services).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Protesting at the time of the alleged duress supports a claim.",
+      "a": true,
+      "exp": "Protest is a key evidential factor in establishing duress (Pao On v Lau Yiu Long).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Failing to take independent legal advice is irrelevant to economic duress.",
+      "a": false,
+      "exp": "Absence of independent advice suggests compulsion (Pao On v Lau Yiu Long).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Economic duress requires the pressure to be a 'significant cause' of the contract.",
+      "a": true,
+      "exp": "It must be a significant cause inducing the claimant (DSND Subsea).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "The 'but for' test applies to causation in economic duress claims.",
+      "a": true,
+      "exp": "The agreement would not have been entered into 'but for' the duress (Huyton SA v Peter Cremer).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Bad faith is a factor in determining if pressure is illegitimate.",
+      "a": true,
+      "exp": "The court considers if the pressure was applied in good or bad faith (DSND Subsea).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Refusal to pay a debt unless a new contract is signed can be economic duress.",
+      "a": true,
+      "exp": "Threatening not to pay can amount to illegitimate pressure (D & C Builders v Rees).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A contract entered under duress can be affirmed by lapse of time.",
+      "a": true,
+      "exp": "Delay in taking action can amount to affirmation (North Ocean Shipping v Hyundai).",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "Affirmation bars the remedy of rescission.",
+      "a": true,
+      "exp": "Once affirmed, the right to rescind is lost (The Atlantic Baron).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Practical benefit as consideration validates a contract obtained by duress.",
+      "a": false,
+      "exp": "Even if consideration exists, duress renders the contract voidable (Williams v Roffey).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A threat to commit a crime is always illegitimate pressure.",
+      "a": true,
+      "exp": "Unlawful threats are inherently illegitimate.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Undue influence requires proof of actual coercion in all cases.",
+      "a": false,
+      "exp": "Presumed undue influence does not require proof of actual coercion.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A bank is put on inquiry if a wife guarantees her husband's business debts.",
+      "a": true,
+      "exp": "A non-commercial relationship and a transaction not to her benefit puts the bank on inquiry (RBS v Etridge).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Solicitors must advise the surety face-to-face without the debtor present.",
+      "a": true,
+      "exp": "This is a core requirement to ensure independent advice (RBS v Etridge).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A bank acts reasonably if it relies on a solicitor's confirmation of advice.",
+      "a": true,
+      "exp": "The bank is entitled to assume the solicitor has done their job (RBS v Etridge).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Undue influence cannot be pleaded if the transaction was to the victim's benefit.",
+      "a": false,
+      "exp": "Disadvantage is evidence, but not a strict requirement for actual undue influence (CIBC v Pitt).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A lapse of 8 months is too short to constitute affirmation.",
+      "a": false,
+      "exp": "Affirmation depends on facts; 8 months was sufficient to affirm in The Atlantic Baron.",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "Constructive notice applies if a bank knows facts indicating a risk of undue influence.",
+      "a": true,
+      "exp": "The bank is fixed with notice if it ignores the risk (Barclays Bank v O'Brien).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Commercial pressure is never sufficient for economic duress.",
+      "a": false,
+      "exp": "It can be if it crosses the line into illegitimacy and leaves no choice.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Duress is a common law doctrine, while undue influence is equitable.",
+      "a": true,
+      "exp": "Duress originated in common law; undue influence in equity.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Rescission restores parties to their pre-contractual position.",
+      "a": true,
+      "exp": "This is the definition of restitutio in integrum.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Duress renders a contract void.",
+      "a": false,
+      "exp": "It renders the contract voidable.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Undue influence involves the abuse of a position of trust.",
+      "a": true,
+      "exp": "It prevents free exercise of independent will (RBS v Etridge).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A solicitor and client relationship gives rise to a presumption of undue influence.",
+      "a": true,
+      "exp": "It is a Class 2A relationship where influence is presumed.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A husband and wife relationship gives rise to a presumption of undue influence.",
+      "a": false,
+      "exp": "There is no automatic presumption; influence must be proved (Class 2B).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A parent and child relationship gives rise to a presumption of undue influence.",
+      "a": true,
+      "exp": "It is a Class 2A relationship.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Actual undue influence requires a relationship of trust and confidence.",
+      "a": false,
+      "exp": "Actual undue influence implies overt pressure, not necessarily a special relationship.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "He who comes to equity must come with clean hands.",
+      "a": true,
+      "exp": "Equitable remedies like rescission are discretionary and require clean hands.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Delay defeats equity.",
+      "a": true,
+      "exp": "Laches (delay) can bar a claim for equitable relief.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Economic duress is a threat to a person's physical safety.",
+      "a": false,
+      "exp": "That is duress to the person; economic duress targets financial interests.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "The victim of duress must be a company.",
+      "a": false,
+      "exp": "Individuals can also suffer economic duress.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Voidable means valid until set aside.",
+      "a": true,
+      "exp": "The contract exists until the innocent party elects to rescind.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Duress to goods involves seizing or damaging property.",
+      "a": true,
+      "exp": "Or threatening to do so (The Siboen and The Sibotre).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Illegitimate pressure is a requirement for undue influence.",
+      "a": false,
+      "exp": "Illegitimate pressure is the test for duress; undue influence focuses on abuse of trust.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A doctor has a presumed influence over their patient.",
+      "a": true,
+      "exp": "Class 2A relationship.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Damages are the primary remedy for duress.",
+      "a": false,
+      "exp": "The primary remedy is rescission, though damages may be available in tort.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A contract is voidable if entered into under undue influence.",
+      "a": true,
+      "exp": "Undue influence renders a contract voidable, not void.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Third-party undue influence can affect a bank's security.",
+      "a": true,
+      "exp": "If the bank has notice (actual or constructive) of the influence.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Independent legal advice can rebut a presumption of undue influence.",
+      "a": true,
+      "exp": "It shows the party exercised free will.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Duress requires the pressure to be the only reason for entering the contract.",
+      "a": false,
+      "exp": "It must be a significant cause, not necessarily the only one.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Consideration is not required for a variation if duress is present.",
+      "a": false,
+      "exp": "Consideration is still required; duress is a separate vitiating factor.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Duress is judged objectively.",
+      "a": false,
+      "exp": "The test includes subjective elements (did this person feel coerced?).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A guarantee is a promise to pay someone else's debt.",
+      "a": true,
+      "exp": "Common context for undue influence cases.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Constructive notice means knowing facts that would make a reasonable person inquire.",
+      "a": true,
+      "exp": "It imputes knowledge where a party should have made inquiries.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Duress can be applied by a third party.",
+      "a": true,
+      "exp": "If the contracting party knows of the duress, the contract is affected.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A statement made 3 months before contracting is likely a binding term.",
+      "a": false,
+      "exp": "A long interval suggests a representation, not a term (Routledge v McKay).",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "If a private seller makes a false statement to a car dealer, it is likely a representation.",
+      "a": true,
+      "exp": "The dealer has greater skill, so the seller's statement is less likely a term (Oscar Chess v Williams).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A statement made by an expert dealer to a private buyer is likely a term.",
+      "a": true,
+      "exp": "The dealer's special knowledge implies an intention to be bound (Dick Bentley v Harold Smith).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Signing a contract binds a party even if they did not read the terms.",
+      "a": true,
+      "exp": "Signature incorporates terms regardless of reading, absent fraud/misrep (L'Estrange v Graucob).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "An onerous term requires 'red hand' notice to be incorporated.",
+      "a": true,
+      "exp": "Unusual or onerous terms require specific attention to be drawn to them (Interfoto v Stiletto).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Terms on a ticket given after the contract is formed are effective.",
+      "a": false,
+      "exp": "Notice must be given before or at the time of contracting (Olley v Marlborough Court).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A 'course of dealing' requires only one previous transaction.",
+      "a": false,
+      "exp": "It requires a consistent and regular course of dealing (McCutcheon v MacBrayne).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "The 'Officious Bystander' test is used to imply terms in law.",
+      "a": false,
+      "exp": "It is used to imply terms in fact, based on presumed intention (Shirlaw v Southern Foundries).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Terms implied by custom require the custom to be notorious and reasonable.",
+      "a": true,
+      "exp": "The custom must be generally known in the trade and reasonable (Cunliffe-Owen).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Section 14(2) SGA 1979 applies to private sales between individuals.",
+      "a": false,
+      "exp": "S.14(2) only applies where the seller sells 'in the course of a business'.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Goods are of satisfactory quality if they are fit for all common purposes.",
+      "a": true,
+      "exp": "This is a key aspect of satisfactory quality under s.14(2B) SGA 1979.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A buyer must expressly state their purpose to rely on s.14(3) SGA 1979.",
+      "a": false,
+      "exp": "Reliance can be inferred if the purpose is the normal one (Priest v Last).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Breach of a condition always entitles the innocent party to terminate.",
+      "a": true,
+      "exp": "Conditions go to the root of the contract; breach allows repudiation (Poussard v Spiers).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Breach of a warranty allows the innocent party to terminate the contract.",
+      "a": false,
+      "exp": "Breach of warranty allows only damages, not termination (Bettini v Gye).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "An innominate term is classified by the consequences of the breach.",
+      "a": true,
+      "exp": "The right to terminate depends on whether the breach deprives the party of substantially the whole benefit (Hong Kong Fir).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Using a curing light for polymerisation is a 'particular purpose' under s.14(3).",
+      "a": true,
+      "exp": "If the buyer makes this specific purpose known, the goods must be fit for it.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A 'time is of the essence' clause makes time a condition.",
+      "a": true,
+      "exp": "Breach of a time stipulation where it is 'of the essence' allows termination.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "The 'Business Efficacy' test implies terms necessary to make the contract work.",
+      "a": true,
+      "exp": "The term must be necessary to give the transaction business efficacy (The Moorcock).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Section 13 SGA 1979 applies only to goods sold by description.",
+      "a": true,
+      "exp": "It implies that goods will correspond with their description.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A slight defect in goods allows a business buyer to reject them under SGA 1979.",
+      "a": false,
+      "exp": "Rejection is not allowed if the breach is so slight it would be unreasonable (s.15A SGA 1979).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "The Consumer Rights Act 2015 applies to contracts between two limited companies.",
+      "a": false,
+      "exp": "B2B contracts are governed by SGA 1979/SGSA 1982, not CRA 2015.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "An 'entire agreement' clause prevents liability for misrepresentation.",
+      "a": false,
+      "exp": "It generally excludes collateral warranties but not necessarily misrepresentation claims.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Under s.13 SGSA 1982, a service must be performed with reasonable care.",
+      "a": true,
+      "exp": "This is the statutory implied term for the supply of services.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "If a contract is silent on price, a reasonable price is implied.",
+      "a": true,
+      "exp": "S.8 SGA 1979 and s.15 SGSA 1982 imply a reasonable price.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "In a sale by sample, the bulk must correspond with the sample in quality.",
+      "a": true,
+      "exp": "This is the requirement under s.15 SGA 1979.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A representation is a term of the contract.",
+      "a": false,
+      "exp": "Representations induce the contract but do not form part of its obligations.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Express terms can be oral or written.",
+      "a": true,
+      "exp": "A contract can be formed of both oral and written terms.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Implied terms are agreed explicitly by the parties.",
+      "a": false,
+      "exp": "Implied terms are inserted by the court or statute, not the parties.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "The 'Parol Evidence Rule' generally prevents adding oral terms to a written contract.",
+      "a": true,
+      "exp": "Extrinsic evidence cannot usually vary a written document (Jacobs v Batavia).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A condition goes to the root of the contract.",
+      "a": true,
+      "exp": "It is a major term of the contract.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A warranty is a minor term of the contract.",
+      "a": true,
+      "exp": "Breach of warranty does not justify termination.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "SGA 1979 stands for Sale of Goods Act 1979.",
+      "a": true,
+      "exp": "It is the primary statute for B2B sale of goods.",
+      "isTiming": true,
+      "difficulty": 1
+    },
+    {
+      "q": "SGSA 1982 stands for Supply of Goods and Services Act 1982.",
+      "a": true,
+      "exp": "It covers contracts for services and transfer of goods.",
+      "isTiming": true,
+      "difficulty": 1
+    },
+    {
+      "q": "Section 12 SGA 1979 implies a term regarding title.",
+      "a": true,
+      "exp": "The seller must have the right to sell the goods.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Merchantable quality is the current statutory test.",
+      "a": false,
+      "exp": "The test is now 'satisfactory quality' (since 1994 amendments).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Fitness for purpose is covered by s.14(3) SGA 1979.",
+      "a": true,
+      "exp": "Goods must be fit for the particular purpose made known.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Mere puffs have no legal effect.",
+      "a": true,
+      "exp": "They are exaggerated sales talk not intended to be binding.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Incorporation by notice requires reasonable steps to notify.",
+      "a": true,
+      "exp": "The party must take reasonable steps to bring terms to the other's attention.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A signature is a formal mark of agreement.",
+      "a": true,
+      "exp": "It generally signifies assent to the document's terms.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Caveat Emptor means 'Buyer Beware'.",
+      "a": true,
+      "exp": "It is the starting principle, though modified by statutory implied terms.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Innominate terms are also called intermediate terms.",
+      "a": true,
+      "exp": "They lie between conditions and warranties.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A collateral contract is a separate contract sitting alongside the main one.",
+      "a": true,
+      "exp": "It can be used to enforce a promise that induced the main contract.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Terms implied in law are based on policy.",
+      "a": true,
+      "exp": "They apply to all contracts of a certain type (e.g., landlord/tenant).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Freedom of contract allows parties to agree any terms.",
+      "a": true,
+      "exp": "Subject to statutory controls (like UCTA) and illegality.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Boilerplate clauses are standard terms at the end of a contract.",
+      "a": true,
+      "exp": "They deal with general mechanics like jurisdiction and entire agreement.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Section 14(2) SGA implies goods must be durable.",
+      "a": true,
+      "exp": "Durability is listed as an aspect of satisfactory quality.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Repudiation ends the primary obligations of the contract.",
+      "a": true,
+      "exp": "It releases parties from future performance.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Damages are the only remedy for breach of warranty.",
+      "a": true,
+      "exp": "The contract must continue; the innocent party cannot terminate.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "The Red Hand Rule relates to onerous clauses.",
+      "a": true,
+      "exp": "They need to be printed in red ink or otherwise highlighted (Spurling v Bradshaw).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Business efficacy is a test for implied terms.",
+      "a": true,
+      "exp": "It asks if the term is needed to make the business arrangement work.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A clause excluding liability for death caused by negligence is void in business contracts.",
+      "a": true,
+      "exp": "Under s.2(1) UCTA 1977, liability for death/personal injury from negligence cannot be excluded.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "In a B2B contract, a clause excluding liability for property damage caused by negligence is automatically void.",
+      "a": false,
+      "exp": "It is valid if it satisfies the requirement of reasonableness (s.2(2) UCTA 1977).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "The contra proferentem rule applies strongly to clauses in negotiated commercial contracts.",
+      "a": false,
+      "exp": "It has a very limited role where parties are of equal bargaining power (Persimmon Homes).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "To exclude liability for negligence, the word 'negligence' must always be used.",
+      "a": false,
+      "exp": "Synonyms can work if clear, though using 'negligence' is the safest route (Canada Steamship).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A clause excluding 'all liability for any loss' covers negligence.",
+      "a": false,
+      "exp": "General words are usually insufficient to exclude negligence under Canada Steamship rules.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "UCTA 1977 applies to contracts between a trader and a consumer.",
+      "a": false,
+      "exp": "Consumer contracts are governed by the Consumer Rights Act 2015, not UCTA.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Under UCTA, a party dealing on their written standard terms must prove the terms are reasonable.",
+      "a": true,
+      "exp": "S.3 UCTA imposes the reasonableness test when dealing on written standard terms.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "The burden of proving a term is reasonable under UCTA lies on the party challenging it.",
+      "a": false,
+      "exp": "The burden is on the party relying on the term to show it is reasonable (s.11(5) UCTA).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A term excluding s.12 SGA 1979 (title) in a B2B contract is valid if reasonable.",
+      "a": false,
+      "exp": "Liability under s.12 SGA 1979 cannot be excluded at all (s.6(1) UCTA).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A clause limiting liability to the contract price is more likely to be reasonable than a total exclusion.",
+      "a": true,
+      "exp": "Limitation clauses are viewed more favourably than total exclusions (St Albans v ICL).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Under the CRA 2015, a trader can exclude liability for satisfactory quality (s.9) if the price is reduced.",
+      "a": false,
+      "exp": "Liability for s.9 cannot be excluded or restricted in consumer contracts (s.31 CRA).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A 'grey list' term in a consumer contract is automatically void.",
+      "a": false,
+      "exp": "It is presumed unfair/assessable for fairness, but not automatically void (Part 1, Sch 2 CRA).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Core terms specifying the price in a consumer contract are never assessable for fairness.",
+      "a": false,
+      "exp": "They are assessable if not transparent and prominent (s.62(4) CRA).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A notice excluding liability for death on a funfair ticket is valid if prominent.",
+      "a": false,
+      "exp": "A trader cannot exclude liability for death/injury caused by negligence (s.65 CRA).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Insurance contracts are fully subject to the unfair terms provisions of UCTA.",
+      "a": false,
+      "exp": "Insurance contracts are largely excluded from UCTA's scope (Sch 1 UCTA).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Reasonableness under UCTA is judged at the time of the breach.",
+      "a": false,
+      "exp": "It is judged at the time the contract was made (s.11(1) UCTA).",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "If a term is found unfair under the CRA 2015, the whole contract is void.",
+      "a": false,
+      "exp": "The contract continues so far as practicable without the unfair term (s.67 CRA).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A clause allowing a trader to unilaterally change the price is likely unfair under CRA.",
+      "a": true,
+      "exp": "This is on the 'grey list' of potentially unfair terms (Sch 2, Para 14 CRA).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A limitation clause in a B2B contract must consider the resources of the party relying on it.",
+      "a": true,
+      "exp": "Resources and insurance availability are factors in assessing limitation clauses (s.11(4) UCTA).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A third party can never rely on an exclusion clause in a contract they didn't sign.",
+      "a": false,
+      "exp": "They may rely on it via the Contracts (Rights of Third Parties) Act 1999 or agency.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Ambiguity in a consumer notice is resolved in favour of the consumer.",
+      "a": true,
+      "exp": "S.69 CRA 2015 requires the interpretation most favourable to the consumer.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A business buying goods for use in the office is a 'consumer' under UCTA.",
+      "a": false,
+      "exp": "UCTA no longer defines 'consumer'; it applies to 'business liability'. CRA defines consumer.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "In Canada Steamship, the court held that negligence was successfully excluded.",
+      "a": false,
+      "exp": "The clause was construed to cover strict liability, not negligence, so negligence was not excluded.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "An oral statement overriding a written exclusion clause is ineffective.",
+      "a": false,
+      "exp": "An oral promise can override a written condition (Couchman v Hill).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Excluding liability for 'consequential loss' excludes loss of profit.",
+      "a": false,
+      "exp": "Loss of profit is often a direct loss, not consequential (Hotel Services v Hilton).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Exemption clauses include both exclusion and limitation clauses.",
+      "a": true,
+      "exp": "They attempt to exclude or restrict liability.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Contra proferentem means interpreting against the party relying on the clause.",
+      "a": true,
+      "exp": "Ambiguities are resolved against the drafter/proferens.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "UCTA stands for Unfair Contract Terms Act.",
+      "a": true,
+      "exp": "The 1977 Act regulating business exemption clauses.",
+      "isTiming": true,
+      "difficulty": 1
+    },
+    {
+      "q": "CRA 2015 stands for Consumer Rights Act.",
+      "a": true,
+      "exp": "The 2015 Act regulating consumer contracts.",
+      "isTiming": true,
+      "difficulty": 1
+    },
+    {
+      "q": "Incorporation must occur before or at the time of contracting.",
+      "a": true,
+      "exp": "A clause introduced after formation is ineffective (Olley v Marlborough Court).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "UCTA applies to international supply contracts.",
+      "a": false,
+      "exp": "International supply contracts are generally exempt from UCTA (s.26).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A consumer is an individual acting outside their trade or profession.",
+      "a": true,
+      "exp": "Definition of consumer under s.2(3) CRA 2015.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Good faith is a requirement for terms under the CRA 2015.",
+      "a": true,
+      "exp": "Unfair terms are those causing imbalance contrary to good faith (s.62 CRA).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Schedule 2 of UCTA provides guidelines for reasonableness.",
+      "a": true,
+      "exp": "It lists factors like bargaining power and inducements.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Negligence under UCTA includes breach of the duty of reasonable care.",
+      "a": true,
+      "exp": "Defined in s.1 UCTA to include contractual and tortious negligence.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A trader is a person acting for purposes relating to their trade.",
+      "a": true,
+      "exp": "Definition of trader under s.2(2) CRA 2015.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Exclusion clauses are strictly construed.",
+      "a": true,
+      "exp": "Courts interpret them narrowly to protect the weaker party.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A limitation clause sets a maximum financial cap on liability.",
+      "a": true,
+      "exp": "It limits damages to a specific amount.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "UCTA s.6(1A) allows exclusion of implied terms if reasonable.",
+      "a": true,
+      "exp": "In B2B contracts, s.13-15 SGA can be excluded if reasonable.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Transparency requires terms to be in plain and intelligible language.",
+      "a": true,
+      "exp": "Requirement under s.68 CRA 2015.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A fundamental breach can never be excluded.",
+      "a": false,
+      "exp": "It can be excluded if the clause is clear and reasonable (Photo Production v Securicor).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Business liability is required for UCTA to apply.",
+      "a": true,
+      "exp": "UCTA generally applies only to business liability (s.1(3)).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A 'red hand' clause is one that is particularly onerous.",
+      "a": true,
+      "exp": "It requires special notice to be incorporated (Spurling v Bradshaw).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "The Canada Steamship test is a guide, not a statute.",
+      "a": true,
+      "exp": "It is a common law rule of construction for negligence clauses.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Unfair terms in consumer contracts are not binding.",
+      "a": true,
+      "exp": "S.62(1) CRA states unfair terms are not binding on the consumer.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Price reduction is a remedy for unfair terms.",
+      "a": false,
+      "exp": "The remedy is that the term is not binding; price reduction is for goods/services breach.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "S.11(2) UCTA refers to Schedule 2 guidelines.",
+      "a": true,
+      "exp": "Specifically for ss.6 and 7, but used generally.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "The CRA 2015 replaced the Unfair Terms in Consumer Contracts Regulations 1999.",
+      "a": true,
+      "exp": "It consolidated unfair terms legislation.",
+      "isTiming": true,
+      "difficulty": 1
+    },
+    {
+      "q": "An indemnity clause requires one party to reimburse the other.",
+      "a": true,
+      "exp": "UCTA s.4 regulates indemnities in consumer cases (valid if reasonable).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Relative bargaining power is irrelevant to reasonableness.",
+      "a": false,
+      "exp": "It is a primary factor in the Schedule 2 guidelines.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A statement of opinion by an expert to a layperson is likely a statement of fact.",
+      "a": true,
+      "exp": "It implies the expert knows facts justifying the opinion (Smith v Land & House Property Corp).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Silence generally constitutes an actionable misrepresentation.",
+      "a": false,
+      "exp": "There is no general duty of disclosure in English contract law (Keates v Cadogan).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A true statement that becomes false before the contract is concluded need not be corrected.",
+      "a": false,
+      "exp": "There is a continuing duty to correct the statement if circumstances change (With v O'Flanagan).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A statement of future intention can never be a misrepresentation of fact.",
+      "a": false,
+      "exp": "It is a misrepresentation of fact if the maker did not actually hold that intention (Edgington v Fitzmaurice).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "In fraudulent misrepresentation, the claimant must prove the defendant acted dishonestly.",
+      "a": true,
+      "exp": "The burden of proving fraud (Derry v Peek) lies on the claimant.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Under s.2(1) Misrepresentation Act 1967, the burden of proof is on the claimant to prove negligence.",
+      "a": false,
+      "exp": "The burden reverses: the defendant must prove they had reasonable grounds to believe the statement was true.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Damages for negligent misrepresentation under s.2(1) MA 1967 are assessed on the 'tort of deceit' measure.",
+      "a": true,
+      "exp": "The defendant is liable for all direct consequences, foreseeability is irrelevant (Royscot Trust v Rogerson).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A 'half-truth' that conveys a misleading impression is actionable.",
+      "a": true,
+      "exp": "Technically true statements can be misrepresentations if they omit vital qualifying facts (Notts Patent Brick v Butler).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The remedy of rescission is available for all types of misrepresentation.",
+      "a": true,
+      "exp": "Rescission is the primary remedy for fraudulent, negligent, and innocent misrepresentation.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Affirmation of the contract occurs if the innocent party discovers the truth but continues with the contract.",
+      "a": true,
+      "exp": "Continuing with the contract after discovering the truth bars rescission (Long v Lloyd).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Lapse of time is a bar to rescission in cases of fraudulent misrepresentation.",
+      "a": false,
+      "exp": "Time only runs from the discovery of the fraud in fraudulent cases.",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "In innocent misrepresentation, lapse of time runs from the date of the contract.",
+      "a": true,
+      "exp": "Rescission may be barred by delay even if the truth was not discovered (Leaf v International Galleries).",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "The court has discretion to award damages in lieu of rescission for fraudulent misrepresentation.",
+      "a": false,
+      "exp": "S.2(2) MA 1967 discretion applies only to negligent and innocent misrepresentation, not fraudulent.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "If restitution is impossible (restitutio in integrum), the right to rescind is lost.",
+      "a": true,
+      "exp": "Parties must be capable of being restored to their pre-contractual position (Clarke v Dickson).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A statement made to a third party can never induce the claimant.",
+      "a": false,
+      "exp": "It is actionable if the maker intended it to be passed to the claimant (Pilmore v Hood).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Inducement requires the misrepresentation to be the sole reason for entering the contract.",
+      "a": false,
+      "exp": "It need only be 'a' reason, not the sole reason (Edgington v Fitzmaurice).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "If the claimant checks the statement and relies entirely on their own survey, there is no inducement.",
+      "a": true,
+      "exp": "They relied on their own investigation, not the misrepresentation (Attwood v Small).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Contributory negligence is a defence to a claim for fraudulent misrepresentation.",
+      "a": false,
+      "exp": "The victim's negligence is no defence to fraud (Standard Chartered Bank v Pakistan National Shipping).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Damages under s.2(1) MA 1967 can be reduced for contributory negligence.",
+      "a": true,
+      "exp": "Reductions are permitted under the Law Reform (Contributory Negligence) Act 1945 (Gran Gelato v Richcliff).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "An 'entire agreement' clause automatically excludes liability for misrepresentation.",
+      "a": false,
+      "exp": "It must clearly state non-reliance on representations to be effective (AXA Sun Life v Campbell Martin).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A non-reliance clause is subject to the reasonableness test under UCTA 1977.",
+      "a": true,
+      "exp": "S.3 MA 1967 applies the UCTA reasonableness test to misrepresentation exclusion clauses.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A statement that 'sales are up 20%' is a mere puff.",
+      "a": false,
+      "exp": "It is a specific, verifiable statement of fact, not a puff.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A seller of land describing a tenant as 'most desirable' when they are in arrears is a misrepresentation.",
+      "a": true,
+      "exp": "This is a statement of fact that nothing has occurred to make the tenant undesirable (Smith v Land & House).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "The misrepresentation must be 'material' for inducement to be inferred.",
+      "a": true,
+      "exp": "If the statement is material, inducement is presumed; if not, the claimant must prove it.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Section 2(2) damages are calculated to compensate for lost profit.",
+      "a": false,
+      "exp": "S.2(2) damages are awarded 'in lieu of rescission' to compensate for the loss of the right to rescind.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Misrepresentation renders a contract void ab initio.",
+      "a": false,
+      "exp": "It renders the contract voidable, not void.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A representation is a statement of fact inducing the contract.",
+      "a": true,
+      "exp": "It leads the party to enter the contract but is not a term.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Uberrimae fidei contracts require full disclosure of material facts.",
+      "a": true,
+      "exp": "Contracts of utmost good faith (e.g., insurance) require disclosure.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Fraud requires proof that the statement was made knowingly or recklessly.",
+      "a": true,
+      "exp": "Definition from Derry v Peek.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Caveat emptor means 'let the seller beware'.",
+      "a": false,
+      "exp": "It means 'let the buyer beware'.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Mere puffs have no legal effect.",
+      "a": true,
+      "exp": "Exaggerated sales talk is not binding.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Innocent misrepresentation means the maker believed the statement was true.",
+      "a": true,
+      "exp": "And had reasonable grounds for that belief.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Rescission restores the parties to their pre-contractual position.",
+      "a": true,
+      "exp": "This is the aim of rescission (restitutio in integrum).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "An indemnity covers all losses flowing from the contract.",
+      "a": false,
+      "exp": "It covers only expenses necessarily incurred in complying with contract obligations (Whittington v Seale-Hayne).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The Misrepresentation Act was passed in 1967.",
+      "a": true,
+      "exp": "It reformed the common law rules.",
+      "isTiming": true,
+      "difficulty": 1
+    },
+    {
+      "q": "Silence regarding a defect is usually a misrepresentation.",
+      "a": false,
+      "exp": "Generally, there is no duty to speak.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A statement of law can now be a misrepresentation.",
+      "a": true,
+      "exp": "Since Kleinwort Benson v Lincoln City Council, mistakes of law are actionable.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The claimant must be aware of the statement for it to be actionable.",
+      "a": true,
+      "exp": "A statement cannot induce a contract if the claimant didn't know about it (Horsfall v Thomas).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Negligent misstatement at common law requires a 'special relationship'.",
+      "a": true,
+      "exp": "Under Hedley Byrne v Heller, a duty of care must exist.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "S.2(1) MA 1967 applies only if the parties have entered a contract.",
+      "a": true,
+      "exp": "The representation must induce a contract between the representor and representee.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Liability for fraud can be excluded by a clear contractual term.",
+      "a": false,
+      "exp": "Liability for fraud cannot be excluded (s.3 MA 1967 / Thomas Witter v TBP).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Rescission is an equitable remedy.",
+      "a": true,
+      "exp": "It is discretionary and subject to equitable bars.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A voidable contract is valid until set aside.",
+      "a": true,
+      "exp": "It is binding until the innocent party elects to rescind.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "If a third party acquires rights in the goods, rescission is barred.",
+      "a": true,
+      "exp": "Rights acquired by a bona fide third party for value prevent rescission.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Innocent misrepresentation allows for damages as of right.",
+      "a": false,
+      "exp": "Damages for innocent misrepresentation are discretionary under s.2(2).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Derry v Peek defined negligent misrepresentation.",
+      "a": false,
+      "exp": "It defined fraudulent misrepresentation.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A statement of fact must be unambiguous.",
+      "a": true,
+      "exp": "Ambiguity is resolved in favor of the maker if they had an honest belief.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Fiduciary relationships impose a duty of disclosure.",
+      "a": true,
+      "exp": "e.g., solicitor-client or trustee-beneficiary.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "The 'fiction of fraud' applies to s.2(1) MA 1967.",
+      "a": true,
+      "exp": "The defendant is liable 'as if' the representation were fraudulent.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Misrepresentation requires a positive statement or conduct.",
+      "a": true,
+      "exp": "Mere silence is usually insufficient.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A common mistake as to the quality of the subject matter renders a contract void.",
+      "a": false,
+      "exp": "Mistake as to quality is rarely fundamental enough to void the contract (Bell v Lever Bros).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "In a 'mutual mistake', the parties are at cross-purposes and no agreement exists.",
+      "a": true,
+      "exp": "If valid acceptance cannot be identified due to ambiguity, the contract is void (Raffles v Wichelhaus).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A contract is void for unilateral mistake if the non-mistaken party had constructive knowledge.",
+      "a": true,
+      "exp": "If the other party knew or ought to have known of the mistake, it is void (Hartog v Colin & Shields).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "In face-to-face transactions, there is a presumption the seller intends to deal with the person present.",
+      "a": true,
+      "exp": "This presumption makes it hard to establish mistake of identity (Lewis v Averay).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Mistake as to attributes (creditworthiness) renders a contract void.",
+      "a": false,
+      "exp": "It renders the contract voidable for misrepresentation, not void for mistake (Lewis v Averay).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A written contract where the rogue assumes a false name is likely void for mistake.",
+      "a": true,
+      "exp": "In written contracts, the intention is to deal with the person named (Cundy v Lindsay).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "The Contracts (Rights of Third Parties) Act 1999 abolishes the doctrine of privity.",
+      "a": false,
+      "exp": "It creates a statutory exception; the doctrine remains for cases outside the Act.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "A third party can enforce a term if the contract expressly provides for it.",
+      "a": true,
+      "exp": "This is the first limb of enforceability under s.1(1)(a) C(RTP)A 1999.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "If a contract purports to confer a benefit, the third party can always enforce it.",
+      "a": false,
+      "exp": "Enforcement is denied if the parties did not intend the third party to enforce it (s.1(2) C(RTP)A 1999).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A third party need not be in existence when the contract is formed to enforce it.",
+      "a": true,
+      "exp": "They must be identified by class/description but need not exist yet (s.1(3) C(RTP)A 1999).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "The 'Avraamides' case established that a third party must be expressly identified.",
+      "a": true,
+      "exp": "Identification by 'clients' or similar vague terms may be insufficient (Avraamides v Colwill).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Under s.1(1)(b), a third party right is presumed unless the contract proves otherwise.",
+      "a": true,
+      "exp": "There is a rebuttable presumption of enforceability if a benefit is conferred (Nisshin Shipping).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A third party can be identified by a class or description.",
+      "a": true,
+      "exp": "S.1(3) allows identification by name, as a member of a class, or answering a description.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Parties can never rescind a contract once a third party has relied on it.",
+      "a": false,
+      "exp": "They can if the contract contains an express term allowing variation/rescission (s.2(3) C(RTP)A).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Agency allows a principal to sue on a contract made by their agent.",
+      "a": true,
+      "exp": "The principal is treated as a party to the contract.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A collateral contract can allow a third party to sue for breach of warranty.",
+      "a": true,
+      "exp": "A promise given to induce a party to enter a main contract is enforceable (Shanklin Pier v Detel).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Damages for a third party's loss are generally recoverable by the contracting party.",
+      "a": false,
+      "exp": "Generally, a party can only recover their own loss (The Albazero), with narrow exceptions.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Jackson v Horizon Holidays allows recovery for a family's loss in holiday contracts.",
+      "a": true,
+      "exp": "This is a special category where the contracting party can recover for the group.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Illegality always renders a contract unenforceable.",
+      "a": false,
+      "exp": "The court has discretion based on public policy and proportionality (Patel v Mirza).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The 'reliance principle' (Tinsley v Milligan) is the current test for illegality.",
+      "a": false,
+      "exp": "It was overruled by the 'range of factors' approach in Patel v Mirza.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Proportionality is a key factor in the Patel v Mirza illegality test.",
+      "a": true,
+      "exp": "Denial of the claim must be a proportionate response to the illegality.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A contract to commit a crime is void.",
+      "a": false,
+      "exp": "It is unenforceable for illegality, not necessarily 'void' in the same sense as mistake.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Restitution of money paid under an illegal contract is never allowed.",
+      "a": false,
+      "exp": "Restitution is possible if it does not enforce the illegal arrangement (Patel v Mirza).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A solicitor's negligence claim can be barred by the client's illegality.",
+      "a": true,
+      "exp": "If the claim is closely connected to the client's criminal act (Gray v Thames Trains).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Rectification is a remedy for common mistake where the written document is wrong.",
+      "a": true,
+      "exp": "It corrects the document to reflect the true prior agreement (Joscelyne v Nissen).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Privity of contract means only parties can sue or be sued.",
+      "a": true,
+      "exp": "The fundamental rule established in Dunlop v Selfridge.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A contract cannot impose a burden on a third party.",
+      "a": true,
+      "exp": "Privity prevents obligations being enforced against non-parties.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Void ab initio means of no legal effect from the beginning.",
+      "a": true,
+      "exp": "Standard definition of a void contract.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Common mistake requires both parties to make the same mistake.",
+      "a": true,
+      "exp": "They share the same erroneous belief.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Unilateral mistake involves only one mistaken party.",
+      "a": true,
+      "exp": "The other party knows or ought to know of the mistake.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Non est factum means 'it is not my deed'.",
+      "a": true,
+      "exp": "A defence for signing a document fundamentally different from what was intended.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Res extincta refers to mistake as to the existence of the subject matter.",
+      "a": true,
+      "exp": "e.g., the corn had already fermented and been disposed of (Couturier v Hastie).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Res sua refers to mistake as to ownership.",
+      "a": true,
+      "exp": "Buying something you already own (Cooper v Phibbs).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "The C(RTP)A 1999 applies to employment contracts.",
+      "a": false,
+      "exp": "Employment contracts are excluded from the Act.",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "Consideration must move from the promisee.",
+      "a": true,
+      "exp": "A third party cannot sue at common law because they provide no consideration.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Specific performance can be ordered to benefit a third party.",
+      "a": true,
+      "exp": "If the contracting party sues for it (Beswick v Beswick).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Assignment transfers the burden of a contract.",
+      "a": false,
+      "exp": "Assignment transfers rights (benefits), not burdens (obligations).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Novation transfers both rights and obligations.",
+      "a": true,
+      "exp": "It involves creating a new contract replacing the old one.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Mistake of law can render a contract void.",
+      "a": true,
+      "exp": "Since Kleinwort Benson, mistakes of law are actionable.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "The 'Great Peace' test applies to common mistake.",
+      "a": true,
+      "exp": "It set out the strict requirements for common mistake in equity.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A contract for the sale of non-existent goods is void.",
+      "a": true,
+      "exp": "Section 6 Sale of Goods Act 1979 (perished goods).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Equity can provide relief for mistake where common law does not.",
+      "a": false,
+      "exp": "Great Peace Shipping abolished the equitable jurisdiction to rescind for common mistake.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The third party must be named in the contract to sue under C(RTP)A.",
+      "a": false,
+      "exp": "They can be identified by class or description.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A 'Himalaya' clause extends protection to third parties.",
+      "a": true,
+      "exp": "Often used in shipping to protect stevedores/agents.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Illegality can be raised as a defence.",
+      "a": true,
+      "exp": "Ex turpi causa non oritur actio (no action arises from a disgraceful cause).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "The 'trio of considerations' comes from Patel v Mirza.",
+      "a": true,
+      "exp": "Purpose of prohibition, public policy, and proportionality.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Public policy can void a contract even if not illegal by statute.",
+      "a": true,
+      "exp": "e.g., contracts prejudicial to the administration of justice.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Severance can remove an illegal part of a contract.",
+      "a": true,
+      "exp": "The 'blue pencil' test allows valid parts to remain if the illegal part is removed.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Mistake negates consent.",
+      "a": true,
+      "exp": "It prevents the formation of a true agreement.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Privity is a distinct principle from consideration.",
+      "a": true,
+      "exp": "Though closely related, they are separate legal doctrines.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "The 'entire obligations' rule prevents payment for partial performance.",
+      "a": true,
+      "exp": "Under Cutter v Powell, strict performance is required before any payment is due.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Substantial performance allows a claim for the price less the cost of cure.",
+      "a": true,
+      "exp": "If the work is substantially complete, the price is payable minus remedy costs (Hoenig v Isaacs).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A heating system that does not heat the house constitutes substantial performance.",
+      "a": false,
+      "exp": "If the primary purpose is failed, it is not substantial performance (Bolton v Mahadeva).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Acceptance of partial performance requires a genuine choice to accept or reject.",
+      "a": true,
+      "exp": "A party cannot be forced to accept partial work (Sumpter v Hedges).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Wrongful prevention of performance allows the innocent party to claim on a quantum meruit.",
+      "a": true,
+      "exp": "If prevented from finishing, they can claim for the value of work done (Planché v Colburn).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A 'condition precedent' must occur before a contract comes into existence.",
+      "a": false,
+      "exp": "It suspends the *obligations*, but a binding agreement may already exist (Pym v Campbell).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Repudiatory breach automatically terminates the contract.",
+      "a": false,
+      "exp": "It gives the innocent party a right of election to affirm or terminate (White & Carter v McGregor).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Affirmation of a contract can be inferred from conduct.",
+      "a": true,
+      "exp": "Continuing with performance or demanding performance indicates affirmation (The Kanchenjunga).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Once affirmed, a contract cannot be terminated for the same breach.",
+      "a": true,
+      "exp": "Affirmation is irrevocable unless a fresh breach occurs.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Anticipatory breach allows immediate termination before performance is due.",
+      "a": true,
+      "exp": "The innocent party need not wait for the due date to sue (Hochster v De La Tour).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Frustration renders a contract void ab initio.",
+      "a": false,
+      "exp": "It discharges the contract as to the future; it is not void from the start.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "An increase in expense is a valid ground for frustration.",
+      "a": false,
+      "exp": "Mere hardship or bad bargain is not frustration (Davis Contractors v Fareham UDC).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Self-induced frustration allows the party to rely on the frustrating event.",
+      "a": false,
+      "exp": "A party cannot rely on frustration if their own act caused it (The Super Servant Two).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A force majeure clause generally excludes the doctrine of frustration.",
+      "a": true,
+      "exp": "If the parties have allocated the risk, the doctrine of frustration does not apply.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Under s.1(2) LR(FC)A 1943, the payee acts as an insurer for expenses.",
+      "a": false,
+      "exp": "The court has discretion to allow retention of expenses, but not exceeding the sum paid/payable.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Under s.1(2) LR(FC)A 1943, expenses can be recovered even if no money was paid/payable.",
+      "a": false,
+      "exp": "Expenses can only be retained out of money paid or payable before the event.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Section 1(3) LR(FC)A 1943 values the benefit of the services performed.",
+      "a": false,
+      "exp": "It values the 'end product' benefit received by the other party (BP v Hunt).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "If the 'benefit' is destroyed by the frustrating event, the s.1(3) award may be nil.",
+      "a": true,
+      "exp": "The court assesses the benefit after the event; if destroyed, value may be zero (BP v Hunt).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Custom-made goods (like boots) are always a 'valuable benefit' under s.1(3).",
+      "a": false,
+      "exp": "If they are useless to the recipient post-frustration, there may be no benefit.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "The court must award the full value of the benefit under s.1(3).",
+      "a": false,
+      "exp": "The court awards a 'just sum', which cannot exceed the value of the benefit.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Breach of warranty entitles the innocent party to terminate.",
+      "a": false,
+      "exp": "It entitles them only to damages; the contract must continue.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A 'divisible contract' allows payment for parts completed.",
+      "a": true,
+      "exp": "If obligations are separate (e.g., per month), payment is due for each completed part.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Frustration applies if the event was foreseeable.",
+      "a": false,
+      "exp": "If the event was foreseeable, the parties should have provided for it.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A contract for personal services is frustrated by the death of the performer.",
+      "a": true,
+      "exp": "Death or incapacity in personal service contracts frustrates the agreement (Condor v The Barron Knights).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The closure of the Suez Canal frustrated shipping contracts in Tsakiroglou.",
+      "a": false,
+      "exp": "A longer route was possible, so performance was not 'radically different' (Tsakiroglou v Noblee Thorl).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Discharge by performance requires exact and precise performance.",
+      "a": true,
+      "exp": "The general rule is that performance must match contract terms exactly (Re Moore & Landauer).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Tender of performance is equivalent to actual performance.",
+      "a": true,
+      "exp": "If performance is rejected, the tenderer is discharged from liability (Startup v Macdonald).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Time is always of the essence in commercial contracts.",
+      "a": false,
+      "exp": "It is not automatic unless stipulated, implied, or notice is given.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A contract can be discharged by agreement.",
+      "a": true,
+      "exp": "Parties can agree to release each other (bilateral discharge) or use a deed.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Accord and satisfaction requires consideration.",
+      "a": true,
+      "exp": "To release a party from obligations, new consideration (satisfaction) is needed.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Frustration occurs when performance becomes impossible.",
+      "a": true,
+      "exp": "Impossibility is a classic ground for frustration (Taylor v Caldwell).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Illegality can frustrate a contract.",
+      "a": true,
+      "exp": "Supervening illegality (e.g., wartime trading ban) frustrates the contract (Fibrosa).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Frustration discharges past obligations.",
+      "a": false,
+      "exp": "At common law, rights accrued before the event remain (Chandler v Webster) - modified by statute.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The Law Reform (Frustrated Contracts) Act 1943 applies to insurance contracts.",
+      "a": false,
+      "exp": "Section 2(5) excludes insurance contracts from the Act.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Repudiation is a serious breach of contract.",
+      "a": true,
+      "exp": "It involves a breach of condition or refusal to perform.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Damages are the only remedy for frustration.",
+      "a": false,
+      "exp": "Frustration results in automatic discharge; LR(FC)A 1943 provides restitutionary remedies.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Section 1(2) LR(FC)A deals with money paid before discharge.",
+      "a": true,
+      "exp": "It allows recovery of money paid prior to the frustrating event.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Section 1(3) LR(FC)A deals with non-monetary benefits.",
+      "a": true,
+      "exp": "It allows the court to award a 'just sum' for valuable benefits conferred.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A waiver involves giving up legal rights.",
+      "a": true,
+      "exp": "A party may waive their right to strict performance.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "The de minimis rule ignores microscopic deviations.",
+      "a": true,
+      "exp": "The law does not concern itself with trifles (Arcos v Ronaasen).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Quantum meruit means 'as much as he has earned'.",
+      "a": true,
+      "exp": "A remedy for the value of work done where no price is fixed.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "An innocent party must mitigate loss after accepting a repudiation.",
+      "a": true,
+      "exp": "The duty to mitigate arises once the contract is terminated.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Frustration is automatic.",
+      "a": true,
+      "exp": "It operates by law, regardless of the parties' wishes (Hirji Mulji).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "The destruction of the subject matter frustrates the contract.",
+      "a": true,
+      "exp": "As seen in Taylor v Caldwell (burning down of the music hall).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Commercial purpose must be completely destroyed for frustration.",
+      "a": true,
+      "exp": "The non-occurrence of an event must destroy the foundation of the contract (Krell v Henry).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Herne Bay Steamboat v Hutton was a case of frustration.",
+      "a": false,
+      "exp": "The contract was not frustrated as part of the purpose (seeing the fleet) remained.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Severable contracts can be discharged in part.",
+      "a": true,
+      "exp": "Obligations are independent; breach of one does not necessarily discharge the whole.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Affirmation requires knowledge of the breach and the right to terminate.",
+      "a": true,
+      "exp": "The innocent party must know the facts giving rise to the right to elect.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A contract is discharged by expiry at the end of a fixed term.",
+      "a": true,
+      "exp": "The contract ends automatically according to its own terms.",
+      "isTiming": true,
+      "difficulty": 1
+    },
+    {
+      "q": "Breach of an innominate term always leads to discharge.",
+      "a": false,
+      "exp": "Only if the breach deprives the party of substantially the whole benefit (Hong Kong Fir).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "The 'expectation interest' aims to put the claimant in the position as if the contract was performed.",
+      "a": true,
+      "exp": "This is the primary measure of damages in contract law (Robinson v Harman).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Reliance damages aim to put the claimant in the position they were in before the contract was made.",
+      "a": true,
+      "exp": "It recovers wasted expenditure incurred in reliance on the contract (Anglia TV v Reed).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A claimant can recover both expectation loss (gross profit) and reliance loss (expenses) for the same breach.",
+      "a": false,
+      "exp": "This would lead to double recovery; they must choose one or the other (Anglia TV v Reed).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "In Ruxley Electronics v Forsyth, the court awarded the full 'cost of cure' to rebuild the pool.",
+      "a": false,
+      "exp": "Cost of cure was refused as wholly disproportionate; 'loss of amenity' was awarded instead.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Loss of amenity is available where the value of the property is unaffected but enjoyment is reduced.",
+      "a": true,
+      "exp": "It compensates for the loss of subjective consumer surplus (Ruxley Electronics).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Damages for mental distress are generally recoverable in commercial contracts.",
+      "a": false,
+      "exp": "General rule is no recovery for distress/anguish (Addis v Gramophone Co).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Mental distress damages are recoverable if the contract's object is pleasure or relaxation.",
+      "a": true,
+      "exp": "This is the exception for 'holiday' type cases (Jarvis v Swan Tours).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Loss of a chance is recoverable even if the chance was less than 50%.",
+      "a": true,
+      "exp": "The court assesses the value of the lost chance, e.g., 25% of the prize (Chaplin v Hicks).",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "To recover 'loss of chance', the chance must depend on the actions of a third party.",
+      "a": true,
+      "exp": "If it depends on the defendant, it is a standard causation issue, not loss of chance.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Factual causation is usually decided by the 'but for' test.",
+      "a": true,
+      "exp": "The loss would not have occurred 'but for' the breach (Galoo v Bright Grahame Murray).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "An intervening act (novus actus interveniens) breaks the chain of causation.",
+      "a": true,
+      "exp": "A new event can remove the defendant's liability for subsequent loss (Lambert v Lewis).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Under Hadley v Baxendale Limb 1, losses must arise naturally from the breach.",
+      "a": true,
+      "exp": "They must be in the usual course of things.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Under Hadley Limb 2, the specific loss must be in the actual knowledge of the defendant.",
+      "a": false,
+      "exp": "It requires actual knowledge OR that it should have been in their reasonable contemplation.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "In Victoria Laundry, the claimant recovered the loss of the lucrative government contract.",
+      "a": false,
+      "exp": "It was too remote as the defendant did not know of this special contract (Limb 2 failed).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "The 'Achilleas' test looks at whether the defendant assumed responsibility for the loss.",
+      "a": true,
+      "exp": "This is an alternative approach where the standard Hadley test leads to unquantifiable liability.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "The duty to mitigate requires the claimant to do everything possible to reduce loss.",
+      "a": false,
+      "exp": "They need only take 'reasonable steps' to mitigate (British Westinghouse).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "If mitigation increases the loss, the defendant is liable for the increased amount.",
+      "a": true,
+      "exp": "Reasonable attempts to mitigate that fail are recoverable expenses.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Benefits gained from mitigation must be accounted for (reducing damages).",
+      "a": true,
+      "exp": "Avoided loss is deducted from the damages award (British Westinghouse).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Contributory negligence is always a defence in contract law.",
+      "a": false,
+      "exp": "It applies only if the breach is also a tort (negligence) (Vesta v Butcher).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Under the CRA 2015, the short-term right to reject goods lasts for 14 days.",
+      "a": false,
+      "exp": "The short-term right to reject is 30 days (s.22 CRA 2015).",
+      "isTiming": true,
+      "difficulty": 2
+    },
+    {
+      "q": "A consumer can demand a price reduction for a failed service under CRA 2015.",
+      "a": true,
+      "exp": "If repeat performance is impossible or not done in reasonable time (s.56 CRA).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Under CRA 2015, a trader has multiple attempts to repair goods before the consumer can reject.",
+      "a": false,
+      "exp": "The trader generally has one opportunity to repair/replace before the final right to reject arises (s.24).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "The claimant must prove the defendant failed to mitigate.",
+      "a": false,
+      "exp": "The burden of proof is on the defendant to show the claimant failed to mitigate.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Nominal damages are awarded when no actual loss is proven.",
+      "a": true,
+      "exp": "They acknowledge the legal right but award a token sum (e.g., £1).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Loss of reputation is recoverable in an unfair dismissal claim.",
+      "a": false,
+      "exp": "Generally not recoverable (Addis), except in limited 'stigma' cases (Malik).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Damages are the primary remedy for breach of contract.",
+      "a": true,
+      "exp": "They are available of right; specific performance is discretionary.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "The aim of damages is to punish the contract breaker.",
+      "a": false,
+      "exp": "The aim is compensation, not punishment.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Remoteness limits the recoverability of damages.",
+      "a": true,
+      "exp": "Losses that are too remote are not recoverable.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Mitigation acts as a limit on recoverable damages.",
+      "a": true,
+      "exp": "A party cannot recover for losses they could have reasonably avoided.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "The 'market rule' is often used to calculate expectation loss in sale of goods.",
+      "a": true,
+      "exp": "Difference between contract price and market price at the time of breach (s.50/51 SGA 1979).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Pecuniary loss refers to financial loss.",
+      "a": true,
+      "exp": "e.g., loss of profit, cost of repair.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Non-pecuniary loss includes pain and suffering.",
+      "a": true,
+      "exp": "Losses not directly measurable in money.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Restitutionary damages aim to strip the defendant of their gain.",
+      "a": true,
+      "exp": "Available in exceptional cases (AG v Blake).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Liquidated damages are a pre-estimate of loss agreed in the contract.",
+      "a": true,
+      "exp": "Fixed sum payable upon breach.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A penalty clause is enforceable in English law.",
+      "a": false,
+      "exp": "Penalty clauses are generally unenforceable.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Specific performance is a common law remedy.",
+      "a": false,
+      "exp": "It is an equitable remedy.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Injunctions can be prohibitory or mandatory.",
+      "a": true,
+      "exp": "Stopping an act or compelling an act.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Causation requires a link between breach and loss.",
+      "a": true,
+      "exp": "The breach must cause the loss.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "The 'But For' test is used for legal causation.",
+      "a": false,
+      "exp": "It is used for factual causation.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A 'bad bargain' allows a claimant to claim reliance loss to escape the contract.",
+      "a": false,
+      "exp": "The cap on reliance loss prevents escaping a bad bargain (C & P Haulage).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Cost of cure is a method of calculating expectation loss.",
+      "a": true,
+      "exp": "The cost to put the defect right.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Difference in value is a method of calculating expectation loss.",
+      "a": true,
+      "exp": "Value expected minus value received.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "The Consumer Rights Act 2015 applies to B2B contracts.",
+      "a": false,
+      "exp": "It applies to Trader-Consumer contracts (B2C).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Digital content is covered by the Consumer Rights Act 2015.",
+      "a": true,
+      "exp": "It is a distinct category of contract under the Act.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Repeat performance is a remedy for faulty goods.",
+      "a": false,
+      "exp": "It is a remedy for faulty services; goods get repair/replace.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "The burden of proving the loss lies on the claimant.",
+      "a": true,
+      "exp": "He who asserts must prove.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Reasonable contemplation is an objective test.",
+      "a": true,
+      "exp": "What a reasonable person would realize.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Loss of enjoyment is a non-pecuniary loss.",
+      "a": true,
+      "exp": "Subjective loss of pleasure.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Damages are calculated at the date of breach.",
+      "a": true,
+      "exp": "Generally assessed at the time the breach occurred.",
+      "isTiming": true,
+      "difficulty": 1
+    },
+    {
+      "q": "A claimant can recover for losses that were unforeseeable.",
+      "a": false,
+      "exp": "Remoteness rules prevent recovery for unforeseeable losses.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "The penalty rule applies to primary obligations in a contract.",
+      "a": false,
+      "exp": "The rule only applies to secondary obligations triggered by a breach (Cavendish v Makdessi).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A clause allowing a price reduction for early payment is subject to the penalty rule.",
+      "a": false,
+      "exp": "This is a primary obligation (price adjustment mechanism), not a secondary one triggered by breach.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A clause requires the party alleging it is a penalty to prove it.",
+      "a": true,
+      "exp": "The burden of proof lies on the party seeking to strike down the clause.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A parking fine of £85 can be enforceable even if the land owner suffers no loss.",
+      "a": true,
+      "exp": "Deterrence can be a legitimate interest if not extravagant (ParkingEye v Beavis).",
+      "isTiming": true,
+      "difficulty": 3
+    },
+    {
+      "q": "A clause is a penalty if the detriment is 'extravagant and unconscionable'.",
+      "a": true,
+      "exp": "This is the true test for a penalty under Cavendish v Makdessi.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Specific performance is available for contracts of personal service.",
+      "a": false,
+      "exp": "Courts will not compel individuals to work (De Francesco v Barnum).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Specific performance is generally granted for the sale of unique land.",
+      "a": true,
+      "exp": "Land is considered unique, so damages are inadequate (Adderley v Dixon).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Specific performance is available even if damages are an adequate remedy.",
+      "a": false,
+      "exp": "It is only available if damages are not an appropriate/adequate remedy.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A prohibitory injunction is used to enforce a positive contractual term.",
+      "a": false,
+      "exp": "Prohibitory injunctions enforce negative terms (restraining a party from doing something).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "An injunction to stop a former employee using a stolen database is likely to be granted.",
+      "a": true,
+      "exp": "Damages would be difficult to quantify and reputation damage is irreparable.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A guarantee must be in writing and signed to be enforceable.",
+      "a": true,
+      "exp": "Requirement under s.4 Statute of Frauds 1677.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "An indemnity must be in writing to be enforceable.",
+      "a": false,
+      "exp": "Indemnities are not covered by the Statute of Frauds 1677.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "If the main contract is varied, a guarantor is usually discharged.",
+      "a": true,
+      "exp": "A guarantee is a secondary obligation dependent on the specific underlying contract.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "If the main contract is varied, an indemnity holder is discharged.",
+      "a": false,
+      "exp": "An indemnity is a primary independent obligation and usually remains in force.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "If the principal debtor's obligation ceases, the guarantor remains liable.",
+      "a": false,
+      "exp": "The guarantee is co-extensive; if the debt vanishes, so does the guarantee.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "The 'clean hands' doctrine applies to claims for liquidated damages.",
+      "a": false,
+      "exp": "Liquidated damages are a common law remedy; 'clean hands' applies to equity.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Delay in seeking an injunction can defeat the claim.",
+      "a": true,
+      "exp": "Delay defeats equity (Laches).",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A clause stripping an employee of shares upon breach is always a penalty.",
+      "a": false,
+      "exp": "Not if it protects a legitimate commercial interest and is proportionate (Makdessi).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "Liquidated damages clauses avoid the need to prove the actual amount of loss.",
+      "a": true,
+      "exp": "The claimant claims the fixed sum agreed, not unliquidated damages.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A court order requiring a party to pull down a wall is a prohibitory injunction.",
+      "a": false,
+      "exp": "This is a mandatory injunction (requiring a positive act).",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "An indemnity can arise in a two-party context.",
+      "a": true,
+      "exp": "One party can indemnify the other against specific losses/liabilities.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Breach of a specific performance order is a contempt of court.",
+      "a": true,
+      "exp": "Failure to obey a court order carries criminal/quasi-criminal sanctions.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "Mutuality of remedy is a factor in granting specific performance.",
+      "a": true,
+      "exp": "Courts rarely grant SP to one party if they could not grant it to the other.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A guarantee covers the debt only if the principal debtor defaults.",
+      "a": true,
+      "exp": "It is a promise to pay *if* the principal does not.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "In Makdessi, the price adjustment clauses were found to be penalties.",
+      "a": false,
+      "exp": "They were primary obligations adjusting the price, so the rule did not apply.",
+      "isTiming": false,
+      "difficulty": 3
+    },
+    {
+      "q": "A liquidated damages clause fixes the sum payable on breach.",
+      "a": true,
+      "exp": "It provides certainty by stipulating the damages in advance.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A penalty clause is unenforceable.",
+      "a": true,
+      "exp": "If a clause is a penalty, the court will not uphold it.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Specific performance is an equitable remedy.",
+      "a": true,
+      "exp": "It derives from the Courts of Equity, not the Common Law.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Damages are a discretionary remedy.",
+      "a": false,
+      "exp": "Damages are available as of right for breach of contract.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A guarantee is a primary obligation.",
+      "a": false,
+      "exp": "It is a secondary obligation supported by the primary debt.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "An indemnity is a primary obligation.",
+      "a": true,
+      "exp": "The indemnifier promises to pay regardless of the principal's default.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Cavendish Square Holding BV v Makdessi is the leading case on penalties.",
+      "a": true,
+      "exp": "It restated the law, replacing the strict Dunlop test.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "The 'legitimate interest' test comes from Dunlop v New Garage.",
+      "a": false,
+      "exp": "Dunlop focused on 'genuine pre-estimate of loss'; Makdessi introduced legitimate interest.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A negative term is a term requiring a party not to do something.",
+      "a": true,
+      "exp": "e.g., 'Do not work for a competitor'.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A positive term requires a party to perform an act.",
+      "a": true,
+      "exp": "e.g., 'Paint the house'.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Equitable remedies are available 'as of right'.",
+      "a": false,
+      "exp": "They are discretionary.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Contempt of court can result from disobeying an injunction.",
+      "a": true,
+      "exp": "It is the sanction for breaching a court order.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A guarantee must be supported by consideration (or deed).",
+      "a": true,
+      "exp": "Like all contracts, it requires consideration unless in a deed.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "The Statute of Frauds 1677 requires guarantees to be evidenced in writing.",
+      "a": true,
+      "exp": "Section 4 imposes this formality.",
+      "isTiming": true,
+      "difficulty": 1
+    },
+    {
+      "q": "Loss of reputation can be a legitimate interest.",
+      "a": true,
+      "exp": "Protecting brand value can justify a liquidated damages clause.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Unconscionable means unreasonably excessive.",
+      "a": true,
+      "exp": "In the context of penalties, it means out of all proportion.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Specific performance puts the parties in the position as if the contract was performed.",
+      "a": true,
+      "exp": "It compels the actual performance promised.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "An interim injunction is granted before the full trial.",
+      "a": true,
+      "exp": "It preserves the status quo pending the final hearing.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "American Cyanamid sets the guidelines for interim injunctions.",
+      "a": true,
+      "exp": "It established the 'balance of convenience' test.",
+      "isTiming": false,
+      "difficulty": 2
+    },
+    {
+      "q": "A 'secondary obligation' arises upon breach of contract.",
+      "a": true,
+      "exp": "e.g., the obligation to pay damages.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Specific performance is rarely granted for sale of goods.",
+      "a": true,
+      "exp": "Because damages allow the buyer to purchase substitutes (unless goods are unique).",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "Laches is a doctrine regarding delay.",
+      "a": true,
+      "exp": "It prevents equitable relief if there is unreasonable delay.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "A 'guarantor' is also known as a 'surety'.",
+      "a": true,
+      "exp": "The terms are generally interchangeable in this context.",
+      "isTiming": false,
+      "difficulty": 1
+    },
+    {
+      "q": "ParkingEye v Beavis involved a penalty charge of £85.",
+      "a": true,
+      "exp": "The court held it was not a penalty despite exceeding the direct loss.",
+      "isTiming": true,
+      "difficulty": 1
+    },
+    {
+      "q": "Restitutionary damages are the norm for breach of contract.",
+      "a": false,
+      "exp": "Compensatory damages are the norm; restitution is exceptional.",
+      "isTiming": false,
+      "difficulty": 1
+    }
   ],
   "tort": [
     { "q": "Caparo test establishes Duty of Care.", "a": true, "exp": "Proximity/Foreseeability/Fairness." },
