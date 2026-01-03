@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback, memo } from 'react';
-import { Play, Pause, RefreshCw, Check, X, Volume2, VolumeX, Zap, Trophy, Award, Hexagon, Briefcase, Gavel, Home, ScrollText, AlertTriangle, Tag, FastForward, Eye, BrainCircuit, MessageSquare, Clock, ShieldAlert, ArrowRight, Activity, Scale, Landmark, BookOpen, Shield, Layers, Headphones, Music, List, BatteryCharging, Calculator } from 'lucide-react';
+import { Play, Pause, RefreshCw, Check, X, Volume2, VolumeX, Zap, Trophy, Award, Hexagon, Briefcase, Gavel, Home, ScrollText, AlertTriangle, Tag, FastForward, Eye, BrainCircuit, MessageSquare, Clock, ShieldAlert, ArrowRight, Activity, Scale, Landmark, BookOpen, Shield, Layers, Headphones, Music, List, BatteryCharging, Calculator, Download } from 'lucide-react';
 import { initializeApp } from 'firebase/app';
 import { getAuth, signInAnonymously, onAuthStateChanged, signInWithCustomToken } from 'firebase/auth';
 import { getFirestore, collection, addDoc, query, orderBy, limit, onSnapshot, serverTimestamp } from 'firebase/firestore';
@@ -1396,6 +1396,61 @@ export default function SQEArcade() {
     return 'bg-rose-600 animate-pulse shadow-[0_0_20px_rgba(225,29,72,0.8)]';
   };
 
+  // --- REPORT GENERATOR ---
+  const handleDownloadReport = () => {
+    if (historyLog.length === 0) return;
+
+    // 1. Construct Filename
+    // Format: Timestamp_Count_Topic_Difficulty_Time.txt
+    const now = new Date();
+    const dateStr = now.toISOString().split('T')[0];
+    const timeStr = now.toTimeString().split(' ')[0].replace(/:/g, '-');
+    const cleanTopic = (currentCategory || 'MIXED').replace(/[^a-zA-Z0-9]/g, '');
+    const cleanDiff = difficulty.toUpperCase();
+    const qCount = historyLog.length;
+    
+    const filename = `SQE_REPORT_${dateStr}_${cleanTopic}_Lvl${level}_${cleanDiff}_${qCount}Qs.txt`;
+
+    // 2. Construct Content
+    let content = `SQE ARCADE // TACTICAL AUDIT REPORT\n`;
+    content += `=================================================\n`;
+    content += `DATE:       ${now.toLocaleString()}\n`;
+    content += `TOPIC:      ${currentCategory || 'Standard/Mixed'}\n`;
+    content += `LEVEL:      ${level}\n`;
+    content += `SPEED:      ${difficulty.toUpperCase()} (${CONFIG[difficulty].time}s)\n`;
+    content += `QUESTIONS:  ${qCount}\n`;
+    content += `SCORE:      ${score.toLocaleString()}\n`;
+    content += `ACCURACY:   ${Math.round((gameStats.correct / ((gameStats.correct + gameStats.wrong) || 1)) * 100)}%\n`;
+    content += `MAX STREAK: ${maxStreak}\n`;
+    content += `=================================================\n\n`;
+    content += `MISSION LOG DETAILS\n`;
+    content += `-------------------------------------------------\n`;
+
+    // Reverse history log so it reads Question 1 to End (historyLog is usually newest first)
+    [...historyLog].reverse().forEach((item, index) => {
+        const status = item.isCorrect ? "PASSED" : "FAILED";
+        content += `\n[Q${index + 1}] STATUS: ${status}\n`;
+        content += `QUERY: ${item.q}\n`;
+        content += `YOUR DATA: ${item.userAnswer ? 'TRUE' : 'FALSE'}\n`;
+        content += `REQUIRED:  ${item.correctAnswer ? 'TRUE' : 'FALSE'}\n`;
+        content += `ANALYSIS:  ${item.exp}\n`;
+        content += `-------------------------------------------------\n`;
+    });
+
+    // 3. Trigger Download
+    const blob = new window.Blob([content], { type: 'text/plain' });
+    const url = window.URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.setAttribute('download', filename);
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    
+    // Optional: SFX
+    audio.playInteraction('click');
+  };
+
   return (
     <div className={`min-h-screen bg-slate-950 text-white font-sans flex flex-col items-center justify-center relative overflow-hidden selection:bg-rose-500 transition-all duration-300 ${timeLeft < 1.5 && gameState === 'playing' ? 'shadow-[inset_0_0_100px_rgba(220,38,38,0.5)]' : ''}`}>
       
@@ -1773,7 +1828,7 @@ export default function SQEArcade() {
               <p className="text-slate-400 text-sm">Final Audit Report</p>
             </div>
             
-            <div className="grid grid-cols-2 gap-4 max-w-xl mx-auto mb-8">
+            <div className="grid grid-cols-2 gap-4 max-w-xl mx-auto mb-4">
                <div className="bg-slate-800 p-4 rounded-lg">
                   <div className="text-slate-400 text-xs uppercase">Score</div>
                   <div className="text-2xl md:text-3xl font-black text-emerald-400">{score.toLocaleString()}</div>
@@ -1783,6 +1838,18 @@ export default function SQEArcade() {
                   <div className="text-2xl md:text-3xl font-black text-cyan-400">{maxStreak}</div>
                </div>
             </div>
+
+            {/* --- NEW DOWNLOAD BUTTON --- */}
+            {historyLog.length > 0 && (
+                <div className="flex justify-center mb-6">
+                    <button 
+                        onClick={handleDownloadReport}
+                        className="flex items-center gap-2 px-6 py-2 bg-slate-800 hover:bg-slate-700 text-cyan-400 border border-cyan-500/30 rounded-lg text-sm font-mono uppercase tracking-widest transition-all hover:scale-105"
+                    >
+                        <Download size={16} /> Download Full Report
+                    </button>
+                </div>
+            )}
 
             {/* SECTOR COMPLETE OPTIONS - Show for End OR Aborted */}
             {(gameState === 'end' || gameState === 'aborted') && (
